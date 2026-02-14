@@ -1,7 +1,7 @@
 # Second-Quantization
 All about the method of Second Quantization and its applications in fields 
 
-present in Chinese
+present in Chinese, as a code backup
 
 Covering Schwinger Keyldsh formalism until now, with scattering theory and introduction of QED next.
 
