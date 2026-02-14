@@ -7790,40 +7790,42 @@ $$\begin{aligned}&\mel**{2}{\hat{\psi}^\dagger(x^{}_1)\hat{\psi}^\dagger(x^{}_2)
 \subsection{量子涨落的热力学分析}\label{ha--yyub*}
 \noindent 回到第\ref{lujingjjf}节的统计理论中，我们通过分析得出，路径积分实际上就是正则系综的配分函数$Z$。又因为在统计含义下，配分函数定义了自由能$F$，由此就可以得到相应的热力学关系，这一节我们来具体分析。当然还是需要强调，之前已经证明了在统计层面场是零温的，因此这里的热力学量主要是由涨落定义的。\\
 \\
-首先我们先明确此处的自由能。由\textsl{Wick}旋转可知，\textsl{Boltzmann}系数$\beta$在路径积分中被替换为$i\mathfrak T/\hbar$，所以我们按定义(\ref{.,../iUbH})写出自由能
-\begin{equation}\exp(-\frac{i}{\hbar}F)=\bigintsss\exp{\frac{i}{\hbar}S[\vb{q}(x)]}\mathscr D\vb{q}(x)=Z\implies F=i\hbar\ln Z\leftrightarrow -\frac{1}{\beta}\ln Z.\end{equation}
-当然这是在无外场或者外源下的自由能，若考虑外场$\vb{J}$则配分泛函就变为生成泛函$Z(\vb{J})$，我们得到外场下自由能为
-\begin{equation}\exp(-\frac{i}{\hbar}F[\vb{J}(x)])=\bigintsss\exp{\frac{i}{\hbar}\qty(S[\vb{q}(x)]-\int\vb{J}(x)\cdot\vb{q}(x)\dd\Omega)}\mathscr D\vb{q}(x)=Z[\vb{J}(x)],\label{wuwuw198}\end{equation}
+首先我们先明确此处的自由能。我们知道\textsl{Wick}旋转将$\beta$变为$i\mathfrak T/\hbar$，不失一般性的令$\mathfrak T=-1$，我们按定义(\ref{.,../iUbH})写出自由能
+\begin{equation}\exp(\frac{i}{\hbar}F)=\bigintsss\exp{\frac{i}{\hbar}S[\vb{q}(x)]}\mathscr D\vb{q}(x)=Z\implies F=-i\hbar\ln Z\leftrightarrow -\frac{1}{\beta}\ln Z.\end{equation}
+这里取$\mathfrak T=-1$主要是为了让自由能$F$和作用量$S$的符号相同，读者当然也可以尝试其余的定义。当然这是在无外场或者外源下的自由能，若考虑外场$\vb{J}$则配分泛函就变为生成泛函$Z(\vb{J})$，我们得到外场下自由能为
+\begin{equation}\exp(\frac{i}{\hbar}F[\vb{J}(x)])=\bigintsss\exp{\frac{i}{\hbar}\qty(S[\vb{q}(x)]-\int\vb{J}(x)\cdot\vb{q}(x)\dd\Omega)}\mathscr D\vb{q}(x)=Z[\vb{J}(x)],\label{wuwuw198}\end{equation}
 不难发现，这里对于自由能的定义，和\textsl{LG}泛函(\ref{LGGG})是完全一致的，其是作为有效配分函数$Z^{}_L(\eta)$的自由能，这种类比说明路径积分量子化本质就是平均场。基于自由能和熵的关系$F\propto-S$，外场关于自由能的热力学共轭量由式(\ref{23mn,})定义为
-$$\vb{Y}=\pdv{F}{\vb{J}}=i\hbar\frac{1}{Z(\vb{J})}\pdv{Z}{\vb{J}}=-\hbar^2\frac{\displaystyle\bigintsss\vb{q}\exp{\frac{i}{\hbar}\qty(S(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\mathscr D\vb{q}}{\displaystyle\bigintsss\exp{\frac{i}{\hbar}\qty(S(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\mathscr D\vb{q}}.$$
+$$\vb{Y}=\pdv{F}{\vb{J}}=-i\hbar\frac{1}{Z(\vb{J})}\pdv{Z}{\vb{J}}=\frac{-\displaystyle\bigintsss\vb{q}\exp{\frac{i}{\hbar}\qty(S(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\mathscr D\vb{q}}{\displaystyle\bigintsss\exp{\frac{i}{\hbar}\qty(S(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\mathscr D\vb{q}}.$$
 根据式(\ref{guiluji99})可见，这就是位形算符$\hat{\vb{q}}$关于真空态的均值$\expval{\hat{\vb{q}}}$，当然这是在外场下的均值，因此也必然依赖于外场。我们将这个关系简记为
-\begin{equation}\expval{\hat{\vb{q}}}^{}_{\vb{J}}=-\frac{1}{\hbar^2}\pdv{F}{\vb{J}}=\frac{-i}{\hbar Z(\vb{J})}\pdv{\vb{J}}\bigintsss\exp{\frac{i}{\hbar}\tilde S\qty(\vb{q};\vb{J})}\mathscr D\vb{q}.\label{Eo-++..312351/jb}\end{equation}
-同时根据\textsl{Ising}定理(\ref{isIngdd})或者\textsl{LG}泛函(\ref{LGGG})，自由能对外场导数的就是系统的序参量$-\eta$，所以我们得到量子涨落系统的矢量序参量为
-\begin{equation}\bm{\eta}(\vb{J},x)=\hbar^2\expval{\hat{\vb{q}}}^{}_{\vb{J}}(\vb{r},t).\end{equation}
-比如我们考虑一个实标量场$\vb{q}=\psi$，则序参量写作$\eta(\vb{r},t)=\hbar^2\mel**{0}{\hat{\psi}}{0}^{}_{\vb{J}}$，也就是位形算符的真空均值。\\
+\begin{equation}\expval{\hat{\vb{q}}}^{}_{\vb{J}}=-\pdv{F}{\vb{J}}=\frac{i\hbar}{Z(\vb{J})}\pdv{\vb{J}}\bigintsss\exp{\frac{i}{\hbar}\tilde S\qty(\vb{q};\vb{J})}\mathscr D\vb{q}.\label{Eo-++..312351/jb}\end{equation}
+同时根据\textsl{LG}泛函(\ref{LGGG})，自由能密度$f\propto-h\eta$对外场$h$的导数就是系统的序参量$-\eta$，所以我们得到量子涨落系统的矢量序参量为
+\begin{equation}\bm{\eta}(\vb{J},x)=\expval{\hat{\vb{q}}}^{}_{\vb{J}}(\vb{r},t).\end{equation}
+比如我们考虑一个实标量场$\vb{q}=\psi$，则序参量写作$\eta(\vb{r},t)=\mel**{0}{\hat{\psi}}{0}^{}_{\vb{J}}$，也就是位形算符的真空均值。\\
 \\
 既然这里类比了\textsl{Landau}理论，那我们不妨更进一步，探索上述结论和磁系统之间的对应。关于磁系统的热力学分析请参考第\ref{citong11}节，这里由于我们考虑的是无介质的，所以相关的为$\vb{M}-\vb{\mathfrak H}$系，其中$\vb{\mathfrak H}$是真空外磁场。记时空中的自由能密度为$f=\pdv*{F}{\Omega}$，按照式(\ref{ensemble})我们写出类比
-$$f\qty(\vb{J})=f(\vb{\mathfrak H})\Longleftrightarrow\vb{J}=\vb{\mathfrak H},\quad\vb{d}f=-\hbar^2\expval{\hat{\vb{q}}}^{}_{\vb{J}}\cdot\vb{dJ}\Longleftrightarrow\hbar^2\expval{\hat{\vb{q}}}^{}_{\vb{J}}=\bm{\eta}\rightarrow\vb{M}.$$
+$$f\qty(\vb{J})=f(\vb{\mathfrak H})\Longleftrightarrow\vb{J}=\vb{\mathfrak H},\quad\vb{d}f=-\expval{\hat{\vb{q}}}^{}_{\vb{J}}\cdot\vb{dJ}\Longleftrightarrow\expval{\hat{\vb{q}}}^{}_{\vb{J}}=\bm{\eta}\rightarrow\vb{M}.$$
 这里需要将$\vb{H}$替换为$-\vb{M}$，因为处于真空。可见在量子系统中外源$\vb{J}$对应外磁场$\vb{\mathfrak H}$，而和外磁场共轭的量是系统的磁矩，并且这个磁矩依赖于外磁场。当然此处应理解为粒子云的内禀磁矩，具体细节请参考第\ref{oiuhgf}节中的恒定磁场部分。由式(\ref{ensemble})以及相关类比，我们写出自由焓密度$g$为
-$$g=g\qty(\expval{\hat{\vb{q}}}^{}_{\vb{J}})=f+\hbar^2\expval{\hat{\vb{q}}}^{}_{\vb{J}}\cdot\vb{J}\Longleftrightarrow g=f+\vb{M}\cdot\vb{\mathfrak H},$$
+$$g=g\qty(\expval{\hat{\vb{q}}}^{}_{\vb{J}})=f+\expval{\hat{\vb{q}}}^{}_{\vb{J}}\cdot\vb{J}\Longleftrightarrow g=f+\vb{M}\cdot\vb{\mathfrak H},$$
 从而系统由于量子涨落的总自由焓为
-\begin{equation}G\qty(\bm{\eta})=\int g(\bm{\eta})\dd\Omega=F\qty(\vb{J})+\hbar^2\int\vb{J}\cdot\expval{\hat{\vb{q}}}^{}_{\vb{J}}\dd\Omega=F\qty(\vb{J})+\int\vb{J}\cdot\bm{\eta}\dd\Omega.\label{bufang}\end{equation}
+\begin{equation}G\qty(\bm{\eta})=\int g(\bm{\eta})\dd\Omega=F\qty(\vb{J})+\int\vb{J}\cdot\expval{\hat{\vb{q}}}^{}_{\vb{J}}\dd\Omega=F\qty(\vb{J})+\int\vb{J}\cdot\bm{\eta}\dd\Omega.\label{bufang}\end{equation}
 我们不妨来验证这个定义的正确性，计算其关于序参量的导数，再次强调其也和外场有关
 \begin{equation}\pdv{g}{\bm{\eta}}=\pdv{f}{\bm{\eta}}+\bm{\eta}\cdot\pdv{\vb{J}}{\bm{\eta}}+\vb{J}=\qty(\pdv{f}{\vb{J}}+\bm{\eta})\pdv{\vb{J}}{\bm{\eta}}+\vb{J}=\vb{J}\implies\vb{d}g=\vb{J}\cdot\vb{d}\bm{\eta}\Longleftrightarrow\vb{d}g=\vb{\mathfrak H}\cdot\vb{dM},\label{Fr-Jgv-..nhg}\end{equation}
 符合式(\ref{ensemble})的结论。由此磁系统的各个热力学量，都可以在量子系统中找到一个相应的类比量，我们以\textsl{Ising}模型为例总结
 $$\begin{matrix}\text{磁\textsl{Ising}系统}&\quad&\quad&\text{量子系统}\\ \hline\vb{r}&&&x=(\vb{r},t)\\ \vb{S}(\vb{r})&&&\vb{q}(\vb{r},t)\\ \vb{H}&&&\vb{J}\\ Z(\vb{H})&&&Z(\vb{J})\\F\qty(\vb{H})&&&F\qty(\vb{J})\\ \expval{\vb{M}}&&&\bm{\eta}=\hbar^2\expval{\hat{\vb{q}}}^{}_{\vb{J}}\\G\qty(\vb{M})&&&G\qty(\bm{\eta})\end{matrix}$$
-一般在量子系统中，此处定义的自由焓称为\textbf{有效作用量 \textit{Effective action}}，定义为$\Gamma=G\qty(\bm{\eta})$，因为它和\textsl{LG}泛函(\ref{LGGG})的性质是一样的。如果我们在定义(\ref{wuwuw198})中按照式(\ref{bufang})替换$F$为$\Gamma$，则有
-\begin{equation}\exp{-\frac{i}{\hbar}\qty(\Gamma(\bm{\eta})-\int\vb{J}\cdot\bm{\eta}\dd\Omega)}=\bigintsss\exp{\frac{i}{\hbar}\qty(S[\vb{q}(x)]-\int\vb{J}(x)\cdot\vb{q}(x)\dd\Omega)}\mathscr D\vb{q}(x).\label{ChoYUf}\end{equation}
+一般在量子系统中，此处定义的自由焓称为\textbf{有效作用量 \textit{Effective action}}，定义为
+\begin{equation}\Gamma\qty(\bm{\eta})=G\qty(\bm{\eta}),\end{equation}
+因为它和\textsl{LG}泛函(\ref{LGGG})的性质是一样的。如果我们在定义(\ref{wuwuw198})中按照式(\ref{bufang})替换$F$为$\Gamma$，则有
+\begin{equation}\exp{\frac{i}{\hbar}\qty(\Gamma(\bm{\eta})-\int\vb{J}\cdot\bm{\eta}\dd\Omega)}=\bigintsss\exp{\frac{i}{\hbar}\qty(S[\vb{q}(x)]-\int\vb{J}(x)\cdot\vb{q}(x)\dd\Omega)}\mathscr D\vb{q}(x).\label{ChoYUf}\end{equation}
 可见若场是经典的，也就是$\hbar\to0$，则取准经典近似到零级给出
-\begin{equation}\exp{-\frac{i}{\hbar}\qty(\Gamma(\bm{\eta})-\int\vb{J}\cdot\bm{\eta}\dd\Omega)}\approx\exp{\frac{i}{\hbar}\qty(S^{}_{\text{min}}(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\implies\Gamma(\bm{\eta})\approx-S^{}_{\text{min}}(\vb{q}),\label{CG;P1Y[]f}\end{equation}
-和作用量类似。注意在此定义下，$\Gamma$和$S$之间差了一个负号，因此很多文献也会取定义$\Gamma=-G$，这样给出$\Gamma\approx S$，后续我们仍采用$\Gamma=G$。于是后续动力学分析完全可以按照\textsl{LG}理论的思路，涨落可以额外单独处理，这就是统计场论的雏形。\\
+\begin{equation}\exp{\frac{i}{\hbar}\qty(\Gamma(\bm{\eta})-\int\vb{J}\cdot\bm{\eta}\dd\Omega)}\approx\exp{\frac{i}{\hbar}\qty(S^{}_{\text{min}}(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\implies\Gamma(\bm{\eta})\approx S^{}_{\text{min}}(\vb{q}),\label{CG;P1Y[]f}\end{equation}
+和作用量相同，因而称为有效作用量。于是后续动力学分析完全可以按照\textsl{LG}理论的思路，涨落可以额外单独处理，这就是统计场论的雏形。\\
 \\
 虽然我们通过路径积分间接定义了有效作用量，但由于序参量并不显含于积分中，因此我们希望能给出$\Gamma$的显含解析式。以下推导参考\cite{L3p} \S 11.4。式(\ref{ChoYUf})确定了其间接表达式，根据\textsl{LG}理论的一般逻辑，我们从非涨落的经典场方程开始，不是一般性的这里假设\textit{Lagrangian}和位形梯度无关，则场方程给出
 $$\pdv{\Lambda}{\vb{q}}(x)=\vb{J}(x),\quad\vb{q}=\qty(q^i) .$$
 下面我们在真空均值$\bm{\eta}$附近，用摄动法求解，记\textit{Lagrangian}关于序参量的显函数为$\Lambda^{}_1$，对应的外场定义为
 \begin{equation}\eval{\pdv{\Lambda^{}_1}{\vb{q}}}^{}_{\vb{q}=\bm{\eta}}=\vb{J}^{}_1.\end{equation}
 取各量的线性扰动$\Lambda=\Lambda^{}_1+\delta\Lambda,\ \vb{J}=\vb{J}^{}_1+\delta\vb{J}$，我们重新写出自由能表达式
-$$\exp(-\frac{i}{\hbar}F)=\bigintsss\mathscr D\vb{q}\exp{\frac{i}{\hbar}\int\qty[\Lambda^{}_1(\vb{q})-\vb{J}^{}_1\cdot\vb{q}]\dd\Omega}\exp{\frac{i}{\hbar}\int\qty[\delta\Lambda(\vb{q})-\vb{q}\cdot\delta\vb{J}]\dd\Omega}.$$
+$$\exp(\frac{i}{\hbar}F)=\bigintsss\mathscr D\vb{q}\exp{\frac{i}{\hbar}\int\qty[\Lambda^{}_1(\vb{q})-\vb{J}^{}_1\cdot\vb{q}]\dd\Omega}\exp{\frac{i}{\hbar}\int\qty[\delta\Lambda(\vb{q})-\vb{q}\cdot\delta\vb{J}]\dd\Omega}.$$
 暂时不考虑后面的扰动项，我们同样对位形取线性扰动$\vb{q}=\bm{\eta}+\bm{\epsilon}$，令$\bm{\eta}$已知，并将$\Lambda^{}_1$对$\bm{\eta}$依此扰动展开，则指数的第一部分给出
 $$\begin{aligned}\bigintsss\qty[\Lambda^{}_1(\vb{q})-\vb{J}^{}_1\cdot\vb{q}]\dd\Omega=&\bigintsss\qty[\Lambda^{}_1(\bm{\eta})-\vb{J}^{}_1\cdot\bm{\eta}]\dd\Omega+\bigintsss\qty(\eval{\pdv{\Lambda^{}_1}{\vb{q}}}^{}_{\vb{q}=\bm{\eta}}-\vb{J}^{}_1)\cdot\bm{\epsilon}\dd\Omega\\&+\frac{1}{2}\bigintsss\eval{\pdv{\Lambda^{}_1}{q^i(x)}{q^j(y)}}^{}_{\vb{q}=\bm{\eta}}\epsilon^{}_i(x)\epsilon^{}_j(y)\dd\Omega^{}_x\dd\Omega^{}_y\\&+\frac{1}{3!}\bigintsss\eval{\frac{\partial^3\Lambda^{}_1}{\partial q^i(x)\partial q^j(y)\partial q^k(z)}}^{}_{\vb{q}=\bm{\eta}}\epsilon^{}_i(x)\epsilon^{}_j(y)\epsilon^{}_k(z)\dd\Omega^{}_x\dd\Omega^{}_y\dd\Omega^{}_z+\cdots.\end{aligned}$$
 考虑到非扰定义式，不难看到一阶项为零，精确到二阶我们得到指数为
@@ -7841,9 +7843,9 @@ $$\begin{aligned}Z(\vb{J})=&\exp{\frac{i}{\hbar}\int\qty[\Lambda^{}_1-\vb{J}^{}_
 方便起见，我们将微扰的积分写作$I(\vb{J};\bm{\eta})$，于是总配分函数给出
 \begin{equation}Z(\vb{J})=\exp{\frac{i}{\hbar}\int\Bigl(\Lambda(\bm{\eta})-\vb{J}\cdot\bm{\eta}\Bigr)\dd\Omega}\sqrt{\frac{2i\pi\hbar}{\abs{\mathscr H^{\bm{\eta}}_{ij}(\Lambda^{}_1)}}}I(\vb{J};\bm{\eta}),\label{ha-55002ub*}\end{equation}
 相应的自由能为
-\begin{equation}F=i\hbar\ln Z=-\int\qty[\Lambda(\bm{\eta})-\vb{J}\cdot\bm{\eta}]\dd\Omega+\frac{i\hbar}{2}\qty{\ln(2i\pi\hbar)-\ln\abs{\mathscr H^{\bm{\eta}}_{ij}(\Lambda^{}_1)}}+i\hbar\ln I.\end{equation}
+\begin{equation}F=-i\hbar\ln Z=\int\qty[\Lambda(\bm{\eta})-\vb{J}\cdot\bm{\eta}]\dd\Omega-\frac{i\hbar}{2}\qty{\ln(2i\pi\hbar)-\ln\abs{\mathscr H^{\bm{\eta}}_{ij}(\Lambda^{}_1)}}-i\hbar\ln I.\end{equation}
 忽略这里的常数和函数$I$后，我们根据式(\ref{bufang})得到有效作用量为
-\begin{equation}\Gamma(\bm{\eta})=F+\int\vb{J}\cdot\bm{\eta}\dd\Omega=-\int\Lambda(\bm{\eta})\dd\Omega+\frac{i\hbar}{2}\ln\abs{\mathscr H^{\bm{\eta}}_{ij}(\Lambda^{}_1)}.\label{shizhendisttSs}\end{equation}
+\begin{equation}\Gamma(\bm{\eta})=F+\int\vb{J}\cdot\bm{\eta}\dd\Omega=\int\Lambda(\bm{\eta})\dd\Omega+\frac{i\hbar}{2}\ln\abs{\mathscr H^{\bm{\eta}}_{ij}(\Lambda^{}_1)}.\label{shizhendisttSs}\end{equation}
 可见$\Gamma$只和序参量有关，这正是我们所需要的。并且在形式上，第一项是经典演化路径的作用量，因此在最低阶近似中，\textsl{Hessian}的行列式起到了表征涨落的角色，这和第\ref{lujingjjf}节中的表述一致。\\
 \\
 根据\textsl{Landau}理论，热力学场中的热力学函数应取到极值，特别的对于自由能和自由焓应取到极小。在现在的记号下，这意味着对于有效作用量$\Gamma$满足
@@ -7855,25 +7857,25 @@ $$G(\bm{\eta})=\Gamma(\bm{\eta})=\int g(\bm{\eta})\dd\Omega=V\mathfrak Tg(\bm{\e
 可见对于稳定点，这实际上就是自由能密度，此方程的每个解都是无外场下平移不变的。典型的有效势如图 \ref{gN665D-*-*/HFB}所示，其中相互作用由$\bm{\eta}^4$表示，我们后面会分析。根据有效势极小原理，方程存在一个亚稳态解$\bm{\eta}^{me}_*$，对于经典场其会自发的演化到稳定态，而量子场则通过量子隧穿衰变得到。同时局部极大值应通过\textsl{Maxwell}构造消去，这里就具体展开了。\\
 \\
 现在我们讨论自由能和有效作用量下的多点函数表述，以波函数场为例。按照式(\ref{utile11})，我们代入自由能定义得到
-$$\begin{aligned}C(1,2)&=-\hbar^2\eval{\qty(\frac{1}{Z\qty(J,J^*)}\pdv{Z\qty(J,J^*)}{J^*_1}{J^{}_2})}_{J=J^*=0}\\&=-\hbar^2\eval{\qty{\exp(\frac{i}{\hbar}F\qty(J,J^*))\pdv{J^*_1}\pdv{J^{}_2}\exp(-\frac{i}{\hbar}F\qty(J,J^*))}}_{J=J^*=0}.\end{aligned}$$
-在计算了指数函数的导数后，我们得到
-\begin{equation}C(1,2)=\expval{\mathbb T\qty{\hat{\psi}^{\dagger}_1\hat{\psi}^{}_2}}=\eval{\pdv{F\qty(J,J^*)}{J^*_1}{J^{}_2}}_{J=J^*=0}.\label{DFu1hyu}\end{equation}
+$$\begin{aligned}C(1,2)&=-\hbar^2\eval{\qty(\frac{1}{Z\qty(J,J^*)}\pdv{Z\qty(J,J^*)}{J^*_1}{J^{}_2})}_{J=J^*=0}\\&=-\hbar^2\eval{\qty{\exp(-\frac{i}{\hbar}F\qty(J,J^*))\pdv{J^*_1}\pdv{J^{}_2}\exp(\frac{i}{\hbar}F\qty(J,J^*))}}_{J=J^*=0}.\end{aligned}$$
+在计算了指数函数的导数后，注意到一阶导在无外场时为零，我们得到
+\begin{equation}C(1,2)=\expval{\mathbb T\qty{\hat{\psi}^{\dagger}_1\hat{\psi}^{}_2}}=-i\hbar\eval{\pdv{F\qty(J,J^*)}{J^*_1}{J^{}_2}}_{J=J^*=0}.\label{DFu1hyu}\end{equation}
 类似的推广到多点函数，我们得到
-\begin{equation}D(1,2,\ldots,2n)=\expval{\mathbb T\qty{\hat{\psi}^{\dagger}_1\hat{\psi}^{\dagger}_2\cdots\hat{\psi}^{}_{2n}}}=\eval{\pdv{J^*_1}\pdv{J^*_2}\cdots\pdv{J^{}_{2n}}F\qty(J,J^*)}_{J=J^*=0}.\end{equation}
+\begin{equation}D(1,2,\ldots,2n)=\expval{\mathbb T\qty{\hat{\psi}^{\dagger}_1\hat{\psi}^{\dagger}_2\cdots\hat{\psi}^{}_{2n}}}=-i\hbar\eval{\pdv{J^*_1}\pdv{J^*_2}\cdots\pdv{J^{}_{2n}}F\qty(J,J^*)}_{J=J^*=0}.\end{equation}
 也就是说在某种意义上，自由能也是生成函数，并且其在形式上是自动归一化的。对于波函数场，相应的序参量是两个复函数
-\begin{equation}\eta(\vb{r},t)=\hbar^2\expval{\hat{\psi}}^{}_J=\hbar^2\mel**{1}{\hat{\psi}}{1}^{}_J,\quad\eta^*(\vb{r},t)=\hbar^2\expval{\hat{\psi}^\dagger}^{}_J.\end{equation}
+\begin{equation}\eta(\vb{r},t)=\expval{\hat{\psi}}^{}_J=\mel**{1}{\hat{\psi}}{1}^{}_J,\quad\eta^*(\vb{r},t)=\expval{\hat{\psi}^\dagger}^{}_J.\label{iNDfsf--[[]g]]5}\end{equation}
 按照式(\ref{Eo-++..312351/jb})，我们写出序参量和自由能关系
-\begin{equation}\eta=\frac{-i\hbar^2}{\hbar}\frac{1}{Z\qty(J,J^*)}\pdv{Z\qty(J,J^*)}{J}=-\pdv{F}{J},\quad \eta^*=-\pdv{F}{J^*},\end{equation}
+\begin{equation}\eta=i\hbar\frac{1}{Z\qty(J,J^*)}\pdv{Z\qty(J,J^*)}{J}=-\pdv{F}{J},\quad \eta^*=-\pdv{F}{J^*},\end{equation}
 带入式(\ref{DFu1hyu})中，我们得到以序参量表示的两点函数
-$$C(1,2)=\eval{\pdv{J^*_1}\qty(\pdv{F}{J^{}_2})}_{J=J^*=0}=-\eval{\pdv{\eta^{}_2}{J^*_1}}_{J=J^*=0}=-\eval{\pdv{\eta^{*}_1}{J^{}_2}}_{J=J^*=0}.$$
-在\textsl{Landau}理论下，这就是局部磁化率(\ref{fjSFHGDHbsh})，也就是关联函数，符合定义。当然其和局部磁化率$\chi$的表述差了一个负号，这是由虚数导致的。现在我们定义磁化率的倒数$\displaystyle\pdv{J}{\eta}$为
-\begin{equation}\bigintsss C(1,3)\eval{\pdv{J^{}_2}{\eta^{*}_3}}_{\eta=\eta^*=0}\dd\Omega^{}_3=\delta^{}_{12},\end{equation}
+$$C(1,2)=-i\hbar\eval{\pdv{J^*_1}\qty(\pdv{F}{J^{}_2})}_{J=J^*=0}=i\hbar\eval{\pdv{\eta^{}_2}{J^*_1}}_{J=J^*=0}=i\hbar\eval{\pdv{\eta^{*}_1}{J^{}_2}}_{J=J^*=0}.$$
+在\textsl{Landau}理论下，这就是局部磁化率(\ref{fjSFHGDHbsh})，也就是关联函数，符合定义，当然其和局部磁化率$\chi$的表述差了一个复常数$i\hbar$。现在我们定义磁化率的倒数$\displaystyle\pdv{J}{\eta}$为
+\begin{equation}\bigintsss C(1,3)\eval{\pdv{J^{}_2}{\eta^{*}_3}}_{\eta=\eta^*=0}\dd\Omega^{}_3=i\hbar\delta^{}_{12},\end{equation}
 此时有效作用量为$\Gamma\qty(\eta,\eta^*)$，对倒数代入式(\ref{Fr-Jgv-..nhg})的结论，我们得到
-$$\delta^{}_{12}=\bigintsss C(1,3)\eval{\pdv{\Gamma\qty(\eta,\eta^*)}{\eta^{*}_3}{\eta^{}_2}}_{\eta=\eta^*=0}\dd\Omega^{}_3.$$
+$$\delta^{}_{12}=\frac{1}{i\hbar}\bigintsss C(1,3)\eval{\pdv{\Gamma\qty(\eta,\eta^*)}{\eta^{*}_3}{\eta^{}_2}}_{\eta=\eta^*=0}\dd\Omega^{}_3.$$
 也就是说，有效作用量关于序参量的二阶导，是磁化率的倒数。我们已经知道$\Gamma\propto S$，因此这个二阶导其实类似于\textsl{Landau}理论中的$\varphi(1,2)=\pdv*{\Lambda}{x^{}_1}{x^{}_2}$，其和关联函数的关系由式(\ref{ppo dnxc b})确定，能清楚的看到两者呈倒数关系。不妨将其记为\textsl{Hessian}形式
-$$\mathscr H^{}_\Gamma(2,3)=\eval{\pdv{\Gamma\qty(\eta,\eta^*)}{\eta^{*}_3}{\eta^{}_2}}_{\eta=\eta^*=0},$$
+\begin{equation}i\hbar\mathscr H^{}_\Gamma(2,3)=\eval{\pdv{\Gamma\qty(\eta,\eta^*)}{\eta^{*}_3}{\eta^{}_2}}_{\eta=\eta^*=0},\label{BNM,P;Phb98++}\end{equation}
 我们就得到它和传播子的\textbf{互易关系 \textit{Reciprocal Relation}}
-\begin{equation}\int C(1,3)\mathscr H^{}_\Gamma(2,3)\dd\Omega^{}_3=\delta^{}_{12}\Longleftrightarrow \mathscr H^{}_\Gamma(1,2)=\frac{1}{C(1,2)},\quad C(1,2)=\frac{1}{\mathscr H^{}_\Gamma(1,2)}.\label{Recihb98++}\end{equation}
+\begin{equation}\int C(1,3)\mathscr H^{}_\Gamma(3,2)\dd\Omega^{}_3=\delta^{}_{12}\Longleftrightarrow \mathscr H^{}_\Gamma(1,2)=\frac{i\hbar}{C(1,2)},\quad C(1,2)=\frac{i\hbar}{\mathscr H^{}_\Gamma(1,2)}.\label{Recihb98++}\end{equation}
 这本质上是正则变换的二阶体现。对于多点函数，可以利用\textsl{Wick}定理化为传播子的乘积，再通过互易关系表示为$\mathscr H^{}_\Gamma$的函数，这里就不具体计算了，读者可自行尝试。\\
 \\
 上述的推导是一个笼统的介绍，我们利用路径积分，将\textsl{LG}理论推广至量子层面，进而给出量子系统的热力学函数。关于更加精确的结果，我们需要利用微扰的\textsl{Feynman}图确定，这里就不展开了，具体结论可以参考第\ref{0cbcx778dy550r8}节。并且方程(\ref{RE+-H*//-/UH})在\textsl{LG}框架下已经展现出一个重要的特性：自发对称性破缺，我们会在第\ref{VYgx00..34}节中详细探讨这个问题。
@@ -7997,7 +7999,7 @@ $$0=\bigintsss\dd\Omega^{}_x\delta\psi(x)\int\mathscr D\psi\exp{iS\qty(\psi)}\Bi
 我们看到对于$x\neq x^{}_k$的点，多点关联函数符合场方程，而在点$x^{}_k$处非零，给出场的接触项，从而演化方程就是场方程的所有接触项之和。不难看到$i$的出处，事实上这就是\textsl{Wick}旋转，不妨以\textsl{KG}场为例，对时间取\textsl{Wick}旋转(\ref{wickHT})我们得到$\delta$函数
 $$\delta^{}_{x1}=\delta^3(\vb{r}^{}_x-\vb{r}^{}_1)\delta(-i\tau+i\tau^{}_1)=-i\delta^3(\vb{r}^{}_x-\vb{r}^{}_1)\delta(\tau-\tau^{}_1)=-i\delta^{E}_{x1},$$
 以及\textit{d'Alembertian}变为$-\partial^2_\tau-\bm{\Delta}=-\square^{}_E$，则\textsl{SD}方程给出
-\begin{equation}\square^{}_E\mel**{0}{\mathbb T\qty{\hat{\psi}(x)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{0}=-\sum_k\delta^{E}_{kx}\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_1\cdots\hat{\psi}^{}_{k-1}\hat{\psi}^{}_{k+1}\cdots\hat{\psi}^{}_n}}{0},\end{equation}
+\begin{equation}\square^{}_E\mel**{0}{\mathbb T\qty{\hat{\psi}(x)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{0}=-\sum_k\delta^{E}_{kx}\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_1\cdots\hat{\psi}^{}_{k-1}\hat{\psi}^{}_{k+1}\cdots\hat{\psi}^{}_n}}{0},\label{WocFHQQ245276}\end{equation}
 若考虑两点函数则\textsl{Feynman}传播子给出$\square^{}_ED^{}_F(x,1)=-\delta^{E}_{k1}$，也就是标准的\textsl{Green}函数方程。因此$i$的出现是时空到伪时空转化的直接结果，保证了量子化在相对论体系下的合理性。\\
 \\
 利用\textsl{SD}方程，我们可以很容易的证明\textsl{Wick}定理。假设场的\textsl{EL}导数对位形的作用记为
@@ -8548,7 +8550,7 @@ $$\tau: \qty[0,1]\to S^1_\tau,\quad \tau(u)=u\beta,$$
 这里对场位形不加上\textsl{Matsubara}记号，于是我们得到温度\textsl{Green}函数
 $$C^M\qty(\tau^{}_1,\tau^{}_2)=\frac{1}{Z(\beta)}\eval{\qty(\pdv{Z(J;\beta)}{J\qty(\tau^{}_1)}{J\qty(\tau^{}_2)})}_{J=0}=\frac{1}{Z}\int\mathscr D\psi(\tau)\psi(\tau^{}_1)\psi(\tau^{}_2)\exp(-S^{}_E[\psi]),$$
 以及温度多点函数
-$$C^M\qty(\tau^{}_1,\tau^{}_2,\ldots)=\frac{1}{Z(0)}\eval{\qty(\pdv{(-J)\qty(\tau^{}_1)}\pdv{(-J)\qty(\tau^{}_2)}\cdots)Z(J;\beta)}_{J=0}.$$
+$$C^M\qty(\tau^{}_1,\tau^{}_2,\ldots)=\frac{1}{Z(0)}\eval{\qty(\pdv{j\qty(\tau^{}_1)}\pdv{j\qty(\tau^{}_2)}\cdots)Z(J;\beta)}_{J=0}.$$
 而如果我们同样从宏观运动方程讨论，按照式(\ref{gJiGVa-cc})平移得到场位形
 $$\psi^{}_f\qty(\tau^{}_x)=\psi-\psi^{}_0=\psi\qty(\tau^{}_x)-\int_0^\beta\dd\tau^{}_y\int G\qty(\tau^{}_x,\tau^{}_y)J^{}_y\dd V^{}_y,$$
 则做类似的计算，我们从式(\ref{sehuirzwz})得到热\textsl{KG}场的生成函数
@@ -8598,7 +8600,7 @@ $$t(0)=t^{}_i=t(1),\quad\vb{r}(0)=\vb{r}(1),\quad H^{}_0=0.$$
 但热场中$H^{}_0\neq0$，现在若假设真实时间$t\in\mathbb C$，则按照\textsl{Wick}旋转我们可以将统计部分写作
 $$-\beta H^{}_0=-iH^{}_0(-i\beta)=-iH^{}_0(t^{}_i-i\beta-t^{}_i)=-i\int_{t^{}_i}^{t^{}_i-i\beta} H^{}_0\dd t.$$
 另一方面，如果我们将\textit{Hamiltonian}定义为一个分段函数
-\begin{equation}H=\begin{cases}H^{}_0=const,\quad -\infty<t\leq 0;&\\ H=const,\quad 0<t<\infty,\end{cases}\end{equation}
+\begin{equation}H=\begin{cases}H^{}_0=const,\quad -\infty<t\leq 0;&\\ H=const,\quad 0<t<\infty,\end{cases}\label{CsIhgHDB}\end{equation}
 则初态的平衡统计部分可以作为守恒能量，利用\textsl{HJ}定理纳入作用量积分中，给出
 \begin{equation}S=\int_{t^{}_i}^{t^{}_i-i\beta}\dd t \int\dd V\Lambda[\psi(\gamma)].\end{equation}
 当然现在依然有$\vb{r}(0)=\vb{r}(1)$，因而我们不妨只考察时间部分，根据定义$t(u)\in \mathbb C$是复平面中的曲线，不妨按一般的复数记号记为$z(u)$，其两个端点为
@@ -8633,7 +8635,7 @@ $$\Im z=S^1_\beta=-\mathfrak T-i\epsilon\longrightarrow-\mathfrak T-i\beta\sim-\
 \\
 将上述两个虚时圆记为$\mathcal P^{}_2=S^1_\epsilon$，$\mathcal P^{}_4=S^1_\beta$，则整个回路按参数$u$的增加定义为
 \begin{equation}z(u)=\mathcal P^{}_1+\mathcal P^{}_3+\mathcal P^{}_2+\mathcal P^{}_4.\end{equation}
-按照上述构造方法定义的复时间回路$z(u)$称为\textbf{\textsl{Konstantinov-Perel}路径}，复\textsl{Green}函数$G(z)$在其上是处处解析的，复平面上展示为图 \ref{weGBNNM..,te}
+按照上述构造方法定义的复时间回路$z(u)$称为\textbf{\textsl{Konstantinov-Perel}路径}，复\textsl{Green}函数$G(z)$在其上是处处解析的，复平面上展示为图 \ref{weGBNNM..,te}。
 \begin{center}\tikz{\tikzset{mid arrow/.style={postaction={decorate,decoration={markings,mark=at position #1 with{\arrow{Stealth}}}}},mid arrow/.default=0.5}\def\phi{3.5}\def\sigmaOffset{-.7}\def\betaOffset{-2.5}\def\eps{0.01}\draw[->,>=Stealth,gray,thin](-\phi-1,0)--(\phi+1,0)node[right,black]{$\Re z=t$};\draw[->,>=Stealth,gray,thin](0,\betaOffset-0.5)--(0,1.0)node[below right,black]{$\Im z=\tau$};\draw[mid arrow,thick](-\phi,\eps)--(\phi,\eps)node[above left,midway]{$\mathcal P^{}_1$};\filldraw(-\phi,\eps)circle(1.2pt)node[above,black]{$-\mathfrak T$};\filldraw(\phi,\eps)circle(1.2pt)node[above,black] {$\mathfrak T$};\draw[mid arrow=0.7,thick](\phi,\eps)--(\phi,\sigmaOffset)node[right,midway,font=\small]{$\mathcal P^{}_3$};\filldraw(\phi,\sigmaOffset)circle(1.2pt) node[below, black]{$\mathfrak T-i\epsilon$};\draw[mid arrow,thick](\phi,\sigmaOffset)--(-\phi,\sigmaOffset)node[below right,midway]{$\mathcal P^{}_2$};\filldraw(-\phi,\sigmaOffset)circle(1.2pt) node[above,black]{$-\mathfrak T-i\epsilon$};\draw[mid arrow,thick](-\phi,\sigmaOffset)--(-\phi,\betaOffset)node[right,midway,font=\small]{$\mathcal P^{}_4$};\filldraw(-\phi,\betaOffset)circle(1.2pt)node[below,black]{$-\mathfrak T-i\beta$};\draw[mid arrow,bend left=60,dashed] (-\phi,\betaOffset)to node[left,midway]{$S^1_\beta$}(-\phi,\eps);}\captionof{figure}{\textsl{Konstantinov-Perel}路径$z(u)$的构造。}\label{weGBNNM..,te}\end{center}
 从图中可以看到，$\mathcal P^{}_3$和$\mathcal P^{}_4$这两条是纯虚路径，对应平衡态的虚时圆，它们不会给出任何关于非平衡演化的信息。因此在具体计算时，通常会省略这两个分支，在等价关系下我们得到商空间
 \begin{equation}z(u)/\sim=\mathcal P^{}_1+\qty(\mathcal P^{}_3=\expval{\mathfrak T})+\mathcal P^{}_2+\qty(\mathcal P^{}_4=\expval{-\mathfrak T})=\mathcal P^{}_1+\mathcal P^{}_2.\end{equation}
@@ -8711,7 +8713,7 @@ $$C^{-+}(x,y)=\frac{-1}{Z^{}_{SK}(0;\beta)}\eval{\pdv{Z^{}_{SK}\qty(J^{}_+,J^{}_
 \begin{equation}\vb{C}^K(x,y)=\mqty(\expval{\mathbb T\qty{\hat{\psi}^{}_+(x)\hat{\psi}^{}_+(y)}}&\expval{\hat{\psi}^{}_-(y)\hat{\psi}^{}_+\qty(x)}\\ \expval{\hat{\psi}^{}_-(x)\hat{\psi}^{}_+\qty(y)}&\expval{\tilde{\mathbb T}\qty{\hat{\psi}^{}_-(x)\hat{\psi}^{}_-(y)}}).\label{Yfs[['L908}\end{equation}
 这样我们在记号上就明确了每一个分量，并且分量指标也可以轻松的确定，第$n$个正负号由第$n$个坐标所对应的场位形正负号给出，比如矩阵元$C^{21}(x,y)=C^{-+}\qty(x^{}_-,y^{}_+)$。按照这个定义，我们可以得到两个\textsl{Wightman}函数之间的关系
 \begin{equation}C^{-+}(x,y)=\expval{\hat{\psi}^{}_-(x)\hat{\psi}^{}_+(y)}=C^{+-}(y,x).\label{g++FSG-++++hfs}\end{equation}
-也就是说，若变量和符号同时对换，则\textsl{Wightman}函数不变，这是容易证明的，留给读者自行分析。应当说明的是由式(\ref{8*/SFG/*---})已经看到，路径排序天然的就对$\psi^{}_{\pm}$定义了排序，我们在形式上定义
+也就是说，若变量和符号同时对换，则\textsl{Wightman}函数不变，这是容易证明的，留给读者自行分析。应当说明的是由式(\ref{8*/SFG/*---})已经看到，路径排序天然的就对$\psi^{}_{\pm}$定义了排序，我们在形式上定义规则
 \begin{equation}\expval{\mathbb P\qty{\hat{\psi}^{}_+(x)\hat{\psi}^{}_-(y)}}=\expval{\mathbb P\qty{\hat{\psi}^{}_-(y)\hat{\psi}^{}_+(x)}}=\expval{\hat{\psi}^{}_-(y)\hat{\psi}^{}_+(x)},\label{D-*..[];fb}\end{equation}
 也就是说混合位形算符自动按负号在左排列，这和正规序是不同的。在该记号下，我们也可以将时间方向指标从体元中提出，回到时间积分的分解式(\ref{ni--/*HGT++../})，按照\textsl{Riemanna}积分的定义对$\psi$积分
 $$\oint_{t(\sim)}\psi\dd t=\int_{\mathcal P^{}_1}\psi\dd t^{}_++\int_{\mathcal P^{}_2}\psi\dd t^{}_-=\int_{\mathbb R}\psi^{}_+\dd t+\int_{-\mathbb R}\psi^{}_-\dd t=\int_{\mathbb R}\psi^{}_+\dd t-\int_{\mathbb R}\psi^{}_-\dd t.$$
@@ -8922,14 +8924,14 @@ $$C^{++}(t,\vb{r})=\bigintsss\qty(\frac{\dd p}{2\pi})^3e^{i\vb{p}\cdot\vb{r}}\qt
 这当然可以从复标量位形的时空\textsl{Green}函数得到，具体请参考\cite{Ld3k} \S92，这里就不展示了。注意到\textsl{Green}函数并非在整个复平面解析，因为涉及到$\delta$函数，\textsl{Wightman}函数也是一样的。因此\textsl{Keldysh}张量不能直接通过\textsl{Matsubara}函数解析延拓得到，这是很合理的，我们从\textsl{CTP}的推导中就已经能看到。\\
 \\
 现在我们不妨计算式(\ref{wuH[]//Ohyugi].,/;'})的三个函数的动量表象，根据定义可以直接从现有结论中得到
-\begin{equation}\begin{aligned}D^{}_R(p)&=C^{++}(p)-C^{+-}(p)=\frac{i}{p^2-m^2+i\epsilon}-2\pi\theta\qty(p^0)\delta\qty(p^2-m^2);\\ D^{}_A(p)&=C^{++}(p)-C^{-+}(p)=\frac{i}{p^2-m^2-i\epsilon}-2\pi\theta\qty(-p^0)\delta\qty(p^2-m^2);\\D^{}_S(p)&=C^{++}(p)+C^{--}(p)=2\pi\qty[1+2\expval{n\qty(p^0)}]\delta\qty(p^2-m^2).\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}D^{}_R(p)&=C^{++}(p)-C^{+-}(p)=\frac{i}{p^2-m^2+i\epsilon}-2\pi\theta\qty(p^0)\delta\qty(p^2-m^2);\\ D^{}_A(p)&=C^{++}(p)-C^{-+}(p)=\frac{i}{p^2-m^2-i\epsilon}-2\pi\theta\qty(-p^0)\delta\qty(p^2-m^2);\\D^{}_S(p)&=C^{++}(p)+C^{--}(p)=2\pi\qty[1+2\expval{n\qty(p^0)}]\delta\qty(p^2-m^2).\end{aligned}\label{afCVN[[[09g}\end{equation}
 注意到$D^{}_R(p)$和$D^{}_A(p)$和温度无关，因为不包含占有数，这是由于它们定义为玻色场的对易子，而玻色对易性和温度无关。同时还可以证明，根据解析性分析得到
 $$\Im D^{}_R(p)=\Im C^{++}(p)=C^<(p)+C^>(p),$$
 这一点在后续的耗散理论中非常重要，目前不做详细解释，只是简单带过。对于这三个函数的具体计算，我们就不展开了，读者可自行验证。\\
 \\
 我们现在要解决的问题，就是\textsl{SK}理论中的热\textsl{Wick}定理。但是不难想到，这一定会比零温场，以及热平衡场更加复杂，因为一个位形可以有两种状态选择。以实标量场的四点函数为例，在路径排序下写作
 \begin{equation}D(1,2,3,4)=\expval{\mathbb P\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4}}.\end{equation}
-如果我们打开，考虑到每个位形可以分为$\psi^{}_{\pm}$两个，则上式一共有$2^4=16$种配置，同时还要注意路径排序的约束：正向支算符永远在负向支算符右侧。鉴于正负支算符对易，我们列出几种配置，方便起见记正负支位形为$\hat{\psi}^{\pm}_1=1^{\pm}$，按式(\ref{D-*..[];fb})的记号写出
+如果我们打开，考虑到每个位形可以分为$\psi^{}_{\pm}$两个，则上式一共有$2^4=16$种配置，同时还要注意路径排序的约束：正向支算符永远在负向支算符右侧。鉴于正负支算符对易，我们列出几种配置，方便起见记正负支位形为$\hat{\psi}^{\pm}_1=1^{\pm}$，按式(\ref{D-*..[];fb})的规则写出
 $$\begin{aligned}&\expval{\mathbb P\qty{1^+2^+3^+4^+}},\quad\expval{\mathbb P\qty{1^-2^+3^+4^+}},\quad\expval{\mathbb P\qty{1^+2^-3^+4^+}}=\expval{\mathbb P\qty{2^-1^+3^+4^+}},\\&\expval{\mathbb P\qty{1^-2^+3^+4^-}}=\expval{\mathbb P\qty{1^-4^-2^+3^+}},\quad\expval{\mathbb P\qty{1^-2^-3^-4^-}},\quad\cdots\cdots.\end{aligned}$$
 若按照生成函数计算，则这$16$个配置构成一个二维四阶张量，在张量积表示下其构成一个四维矩阵。这里我们不全部计算，只挑选几个代表性的分量具体说明，其余的只需按照算法做推广即可。先计算全正分支，根据定义(\ref{itGjjF0O--98})我们得到
 \begin{equation}D^{++++}(1,2,3,4)=\expval{\mathbb T\qty{1^+2^+3^+4^+}}.\end{equation}
@@ -8941,7 +8943,7 @@ $$\begin{aligned}&\expval{\mathbb P\qty{1^+2^+3^+4^+}},\quad\expval{\mathbb P\qt
 \begin{equation}D^{----}(1,2,3,4)=C^{--}_{12}C^{--}_{34}+C^{--}_{13}C^{--}_{24}+C^{--}_{23}C^{--}_{14}.\end{equation}
 也就是说在同一分支上，多点函数的热\textsl{Wick}定理和\textsl{BdD}定理是完全一致的，我们只需要按照零温\textsl{Wick}定理打开编时乘积，再对\textsl{Gree}函数带入\textsl{Keyldsh}矩阵对角元即可。\\
 \\
-当然在实际应用中，更加重要的混合分量，因为这是平衡态和零温场无法描述的，下面默认采用式(\ref{D-*..[];fb})的负号在左排序。从单个反向支出发，我们写出
+当然在实际应用中，更加重要的混合分量，因为这是平衡态和零温场无法描述的，下面默认采用规则(\ref{D-*..[];fb})的负号在左排序。从单个反向支出发，我们写出
 \begin{equation}D^{-+++}(1,2,3,4)=\expval{\mathbb P\qty{1^-2^+3^+4^+}}\end{equation}
 基于$\mathcal P^{}_1$和$\mathcal P^{}_2$两个分支上算符的独立性，我们对路径排序做这样的处理：反向支上的算符$\hat{\psi}^-_1$可以从路径排序中提出，剩下三个在正向支上的算符取时序乘积，在上述热\textsl{Wick}定理下写作
 \begin{equation}D^{-+++}(1,2,3,4)=\expval{1^-\circ\mathbb T\qty{2^+3^+4^+}}=\expval{1^-\circ\mathcal N\qty{2^+3^+4^++\text{所有可能的缩并}}}.\end{equation}
@@ -9937,7 +9939,7 @@ $$\tr(\frac{\lambda}{\square+m^2})^u=\frac{2 g^{}_{sym}(u)}{(u-1)\times(u-1)!}\q
 这个系数就是式(\ref{zhtuijiwang})的系数，在第\ref{ecvgsddy550r8}节中我们会证明这一点。可以想到，这是一个闭合的\textsl{Born}修正，它也同样是一个圈图，方便起见我们省略坐标记号
 \begin{equation}\tr(\frac{\lambda}{\square+m^2})^u=\frac{2}{(u-1)!}\times\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\r}{1.6}\begin{feynman}[inline=1.base]\vertex[dot](1)at(90:\r){};\vertex[dot](2)at(120:\r){};\vertex[dot](3)at(150:\r){};\vertex[dot](4)at(180:\r){};\vertex[dot](5)at(210:\r){};\vertex[dot](6)at(240:\r){};\vertex[dot](u)at(60:\r){};\vertex[dot](v)at(30:\r){};\vertex[label={[rotate=90]$\cdots$}](k)at(0:\r+.2){};\node[label={[rotate=60]$\cdots$}](p)at(-30:\r+.2){};\node[label={[rotate=30]$\cdots$}](o)at(-60:\r+.2){};\node[label={[rotate=0]$\cdots$}](o)at(-90:\r+.2){};\diagram*{(v)--(u)--(1)--(2)--(3)--(4)--(5)--(6)};\end{feynman}}\label{liangundauy}\end{equation}
 这就是泛函行列式的计算方法，称为\textbf{u顶点单圈修正 \textit{u-Vertices 1-loop Correction}}，是\textsl{Feynman}图的一个十分重要的应用，我们后续在重整化理论中会反复看到它。当然需要强调的是，这里的“单圈修正”是一种技术上的定义，不要和通常的粒子单圈修正搞混。
-\subsubsection{实标量场的动量Feynman规则}
+\subsubsection{实标量场的动量Feynman规则}\label{acrF55][][pp[}
 \noindent 上面我们介绍了相互作用传播子展开的空间\textsl{Feynman}图，但我们知道二次量子化更多的是以动量计算，因此这里我们来考察动量\textsl{Feynman}图。\\
 \\
 仍然从自由场的传播子开始，回顾到\textsl{KG}场的\textsl{Feynman}传播子由式(\ref{feynch})确定为
@@ -10078,7 +10080,7 @@ $$K^{(1)}_{\alpha}=\frac{1}{\qty(l^{}_1-1)!}\qty(B^{}_1)^{l^{}_1-1}\frac{1}{l^{}
 \begin{equation}B^{}_i(x,y)=\tikz[baseline=-0.5ex]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:x](a){};\vertex[right=1cm of a,coordinate](b){};\diagram*{(a)--(b)};\end{feynman}}+B^{(r)}_i+\tikz[baseline=-0.5ex]{\begin{feynman}[inline=a.base]\vertex[coordinate](a){};\vertex[dot,right=1cm of a,label=below:y](b){};\diagram*{(a)--(b)};\end{feynman}}.\label{...D.dgf46//rr}\end{equation}
 这是一个连通图，以后简称为\textbf{外点连通图 \textit{Connected diagram with external points}}。再算上分母修正贡献(\ref{dFFG-*-**/*///ge})，我们得到精确的相互作用传播子
 \begin{equation}\begin{aligned}C(x,y)&=\frac{1}{\exp(W)}\frac{1}{Z^{}_{KG}}\int\mathscr D\psi e^{iS(\psi)}\psi(x)\psi(y)=\qty(\sum_iB^{}_i(x,y))\times\frac{\exp(W)}{\exp(W)}\\&=\text{Sum of all connected diagram with two external points}.\end{aligned}\label{SdggSDGSGegug}\end{equation}
-也就是说在考虑分母修正后，相互作用传播子只由外点连通图确定，和其余的图无关。这正是我们在第\ref{BuHYU/////gFc0pi}节中从\textsl{SD}方程所得到的，因为这才是粒子动力学性质的体现，其剔除了所有作为媒介的场的涨落效应。\\
+也就是说在考虑分母修正后，相互作用传播子只由外点连通图确定，和其余的图无关。这正是我们在第\ref{BuHYU/////gFc0pi}节中从\textsl{SD}方程所得到的，因为这才是粒子动力学性质的体现，其剔除了所有作为媒介的场的涨落效应，我们称之为\textbf{全连通传播子}。\\
 \\
 这个结论可以推广到多点关联函数，但是要注意，此时外点可能无法完全构成连通图，这可以从分组缩并看出：从$2n+2$个外点中提出两个构成传播子，这是一个外点连通图，则剩下的$2n$个外点自然构成若干不连通的直线。所以在计算时要注意，式(\ref{SdggSDGSGegug})的结论不完全正确，但是如果将外点分组处理，那么可以容易的从传播子式(\ref{SdggSDGSGegug})过渡到多点函数，毕竟$\exp(W)$作为分子和分母的因子是不变的。\\
 \\
@@ -10087,32 +10089,30 @@ $$K^{(1)}_{\alpha}=\frac{1}{\qty(l^{}_1-1)!}\qty(B^{}_1)^{l^{}_1-1}\frac{1}{l^{}
 \noindent 在第\ref{ha--yyub*}节中，我们通过将生成函数$Z(\vb{J})$和有效配分函数$Z^{}_L$对应，得到零温场的序参量$\bm{\eta}$，以及和\textsl{LG}泛函对应的有效作用量$\Gamma(\bm{\eta})$。通过摄动我们计算了近似式，并简单的讨论了相关的多点函数表述，现在来讨论精确的有效作用量的性质，方便起见下面只考察实标量场。\\
 \\
 由于这里引入了外场$J$，因此我们首先需要将式(\ref{SdggSDGSGegug})和外场适配。由于真空泡泡是通过相互作用得到的，因此看起来外场只和自由生成函数有关，不妨猜想外场归结到自由场上$Z(J)=Z^{}_{KG}(J)\exp(W)$，于是相互作用传播子写作
-$$\begin{aligned}C(x,y)&=\frac{1}{Z(0)}\eval{\pdv{Z(J)}{J^{}_x}{J^{}_y}}_{J=0}=\frac{1}{Z^{}_{KG}(0)\exp(W)}\eval{\pdv{J^{}_x}\pdv{J^{}_y}Z^{}_{KG}(J)\exp(W)}_{J=0}\\&=\frac{1}{Z^{}_{KG}(0)}\eval{\pdv{Z^{}_{KG}(J)}{J^{}_x}{J^{}_y}}_{J=0}=D^{}_F(x,y).\end{aligned}$$
+$$\begin{aligned}C(x,y)&=\frac{-1}{Z(0)}\eval{\pdv{Z(J)}{J^{}_x}{J^{}_y}}_{J=0}=\frac{-1}{Z^{}_{KG}(0)\exp(W)}\eval{\pdv{J^{}_x}\pdv{J^{}_y}Z^{}_{KG}(J)\exp(W)}_{J=0}\\&=\frac{-1}{Z^{}_{KG}(0)}\eval{\pdv{Z^{}_{KG}(J)}{J^{}_x}{J^{}_y}}_{J=0}=D^{}_F(x,y).\end{aligned}$$
 这个等式是不可能成立的，所以这个假设是不成立的。其实原因也显而易见：外场项本身也可以看作相互作用，它对于真空泡泡和$W$也有贡献。我们不妨将和记为$W(J)$，则正确的关系为
 \begin{equation}Z(J)=Z^{}_{KG}(0)\exp[W(J)].\label{GDQERQPDhu}\end{equation}
 按照定义(\ref{wuwuw198})，我们计算自由能为
-\begin{equation}F(J)=i\ln Z(J)=F^{}_0+iW(J),\quad F^{}_0=i\ln Z^{}_{KG}(0),\end{equation}
+\begin{equation}F(J)=-i\ln Z(J)=F^{}_0-iW(J),\quad F^{}_0=-i\ln Z^{}_{KG}(0),\end{equation}
 可见连通图和就是自由能，而自由场的路径积分则确定了基态。利用式(\ref{DFu1hyu})计算精确的相互作用传播子，并带入式(\ref{SdggSDGSGegug})的结果得到
-\begin{equation}C(x,y)=i\eval{\pdv{W(J)}{J(x)}{J(y)}}_{J=0}=\mqty{\text{Sum of all connected diagram}\\ \text{with two external points}}.\label{889/dfg-*-/FFG}\end{equation}
+\begin{equation}C(x,y)=-\eval{\pdv{W(J)}{J(x)}{J(y)}}_{J=0}=\mqty{\text{Sum of all connected diagram}\\ \text{with two external points}}.\label{889/dfg-*-/FFG}\end{equation}
 按照接外点的连通图的构造(\ref{...D.dgf46//rr})，我们可以用一个简洁的空间图表示
-\begin{equation}-iC(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,label=below:x](a){};\vertex[right=1.5cm of a,blob](c){};\vertex[right=1.5cm of c,dot,label=below:y](b){};\diagram*{(a)--(c)--(b)};\end{feynman}},\quad\tikz[baseline=-.5ex]{\begin{feynman}\vertex[blob](c){};\diagram*{(c)};\end{feynman}}=\sum_iB^{(r)}_i=\mqty(\text{Sum of all reduced}\\ \text{connected diagrams}).\end{equation}
+\begin{equation}C(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,label=below:x](a){};\vertex[right=1.5cm of a,blob](c){};\vertex[right=1.5cm of c,dot,label=below:y](b){};\diagram*{(a)--(c)--(b)};\end{feynman}},\quad\tikz[baseline=-.5ex]{\begin{feynman}\vertex[blob](c){};\diagram*{(c)};\end{feynman}}=\sum_iB^{(r)}_i=\mqty(\text{Sum of all reduced}\\ \text{connected diagrams}).\end{equation}
 不妨将其记为
 \begin{equation}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,label=below:x](a){};\vertex[right=1.5cm of a,blob](c){};\vertex[right=1.5cm of c,dot,label=below:y](b){};\diagram*{(a)--(c)--(b)};\end{feynman}}=\expval{\hat{\psi}^{}_x\hat{\psi}^{}_y}_{\text{conn}}=\mathfrak C(x,y),\end{equation}
-代表连通的两点函数，这是真实粒子动力学的描述。从而式(\ref{889/dfg-*-/FFG})就解释为，$W(J)$是连通关联函数的生成函数，比如可以验证对于四点函数有
+代表全连通传播子，这是真实粒子动力学的描述。从而式(\ref{889/dfg-*-/FFG})就解释为，$W(J)$是连通关联函数的生成函数，比如可以验证对于四点函数有
 $$\expval{\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4}_{\text{conn}}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:1](a){};\vertex[below right=1cm of a,blob](c){};\vertex[below right=1cm of c,dot,label=below:4](b){};\vertex[below left=1cm of c,dot,label=below:2](d){};\vertex[above right=1cm of c,dot,label=below:3](e){};\diagram*{(a)--(c)--(b),(e)--(c)--(d)};\end{feynman}}=\pdv{J^{}_1}\pdv{J^{}_2}\pdv{J^{}_3}\pdv{J^{}_4}W(J).$$
 这个的证明可以在\cite{L3p} \S11.5中找到，此处就不展开了。但$W$依旧非常复杂，其作为生成函数这一点并不足以让我们完全分析出其代数和拓扑结构，所以我们需要进一步讨论。\\
 \\
-回到互易关系(\ref{Recihb98++})，通过计算我们看到$\Gamma$的二阶导$\mathscr H^{}_\Gamma$和传播子$C$互为倒数，因此可以利用这个关系得到一些新的性质。当然这里的传播子按定义是连通的$\mathfrak C$，我们不妨重新写出等式
-\begin{equation}\int\mathscr H^{}_\Gamma(x,z)\mathfrak C(z,y)\dd\Omega^{}_z=\delta^{}_{xy},\quad\mathscr H^{}_\Gamma(x,y)=\eval{\pdv{\Gamma\qty(\eta)}{\eta^{}_x}{\eta^{}_y}}_{\eta=0}.\label{FgDF785ergf}\end{equation}
-序参量按定义为$\eta=\mel**{0}{\hat{\psi}}{0}^{}_{J}$，这是实标量场位形在外场下的真空均值。为了计算此二阶导，我们通过微扰来处理，将连通传播子按相互作用系数$\lambda$的幂展开为
+回到互易关系(\ref{Recihb98++})，通过计算我们看到$\Gamma$的二阶导$\mathscr H^{}_\Gamma$和传播子$C$互为倒数，因此可以利用这个关系得到一些新的性质。当然这里的传播子按定义是全连通的$\mathfrak C$，我们不妨重新写出等式
+\begin{equation}\int\mathscr H^{}_\Gamma(x,z)\mathfrak C(z,y)\dd\Omega^{}_z=\delta^{}_{xy},\quad\mathscr H^{}_\Gamma(x,y)=-i\eval{\pdv{\Gamma\qty(\eta)}{\eta^{}_x}{\eta^{}_y}}_{\eta=0}.\label{FgDF785ergf}\end{equation}
+序参量按定义为$\eta=\mel**{0}{\hat{\psi}}{0}^{}_{J}$，这是实标量场位形在外场下的真空均值，\textsl{Hessian}的定义参考式(\ref{BNM,P;Phb98++})。为了计算此二阶导，我们通过微扰来处理，将连通传播子按相互作用系数$\lambda$的幂展开为
 $$\mathfrak C(x,y)=\mathfrak C^{(0)}(x,y)+\mathfrak C^{(1)}(x,y)+\cdots=D^{}_F(x,y)+\mathfrak C^{(res)}(x,y).$$
 其中$\mathfrak C^{(0)}=D^{}_F$是不难证明的，零级近似就是$B^{(r)}_i=0$，因而这就是两个时空点直连，给出\textsl{Feynman}传播子。这里我们将所有高阶修正都纳入剩余项中，后续会看到这种处理方式并不会导致信息的丢失，带入互易式(\ref{FgDF785ergf})得到
 $$\int\mathscr H^{}_\Gamma(x,z)\qty{D^{}_F(z,y)+\mathfrak C^{(res)}(z,y)}\dd\Omega^{}_z=\delta^{}_{xy}.$$
 稍作整理，将$\mathfrak C^{(res)}$放到右侧，并将$D^{}_F$在形式上看作算符$\hat{D}^{}_F$，我们得到
 \begin{equation}\int\hat{D}^{}_F(x,z)\mathscr H^{}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}-\int\mathfrak C^{(res)}(x,z)\mathscr H^{}_\Gamma(z,y)\dd\Omega^{}_z=M(x,y).\end{equation}
-这个方程的解不难通过\textsl{Green}函数法得到，算符$\hat{D}^{}_F$的\textsl{Green}函数$G$为其自身的倒数
-$$\int\hat{D}^{}_F(x,z)G(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\implies G(x,y)=\frac{1}{\hat{D}^{}_F(x,y)}=D^{-1}_F(x,y).$$
-则我们得到
+这个方程的解不难通过\textsl{Green}函数法得到，记算符$\hat{D}^{}_F$的\textsl{Green}函数为其倒数$D^{-1}_F(x,y)$，则我们得到
 $$\mathscr H^{}_\Gamma(x,y)=\int D^{-1}_F(x,z)M(z,y)\dd\Omega^{}_z=D^{-1}_F(x,y)-\int D^{-1}_F(x,z)\mathfrak C^{(res)}(z,m)\mathscr H^{}_\Gamma(m,y)\dd\Omega^{}_m\dd\Omega^{}_z.$$
 这是一个典型的\textsl{LS}方程，可以通过反复回代嵌套得到\textsl{Born}级数，但这里我们不具体展开，因为这并非我们关注的重点。\\
 \\
@@ -10121,10 +10121,12 @@ $$\mathscr H^{}_\Gamma(x,y)=\int D^{-1}_F(x,z)M(z,y)\dd\Omega^{}_z=D^{-1}_F(x,y)
 也就是连通传播子的零级近似倒数和$\Gamma$二阶导的差。若我们直接采取记号$\mathscr H^{}_\Gamma=\mathfrak C^{-1}$，则$\Sigma$满足
 \begin{equation}\Sigma=\qty(\mathfrak C^{(0)})^{-1}-\mathfrak C^{-1}=\mathscr H^{(0)}_\Gamma-\mathscr H^{}_\Gamma.\label{KouG-*-*-*-//DYVG}\end{equation}
 其物理含义暂且不表，我们现在仅将这个等式当作$\Sigma$的定义。将此等式回代入互易关系(\ref{FgDF785ergf})，现在按微扰展开的是$\mathscr H^{}_\Gamma$，我们得到
-$$\int\qty(D^{-1}_F(x,y)-\Sigma(x,z))\mathfrak C(z,y)\dd\Omega^{}_z=\delta^{}_{xy}.$$
-重新整理，将$\Sigma$移到右侧，并将$D^{-1}_F$在形式上看作算符$\hat{D}^{-1}_F$，我们得到
-\begin{equation}\int\hat{D}^{-1}_F(x,z)\mathfrak C(z,y)\dd\Omega^{}_z=\delta^{}_{xy}+\int\Sigma(x,z)\mathfrak C(z,y)\dd\Omega^{}_z=Y(x,y).\label{EWdfb880.}\end{equation}
-再次使用\textsl{Green}函数法，注意$\hat{D}^{-1}_F$的\textsl{Green}函数为$D^{}_F$，从而得到关于$\mathfrak C$的\textsl{LS}方程
+$$\int\qty(D^{-1}_F(x,z)-\Sigma(x,z))\mathfrak C(z,y)\dd\Omega^{}_z=\delta^{}_{xy}.$$
+将$\Sigma$移到右侧，并将$D^{-1}_F$在形式上看作算符$\hat{D}^{-1}_F$，根据定义其满足归一化，和\textsl{SD}方程(\ref{th841++s})对比得到
+$$\int\hat{D}^{-1}_F(x,z)D^{}_F(z,y)\dd\Omega^{}_z=\delta^{}_{xy}=i\square D^{}_F(x,y)\implies \hat{D}^{-1}_F=i\square,$$
+我们得到
+\begin{equation}\int\hat{D}^{-1}_F(x,z)\mathfrak C(z,y)\dd\Omega^{}_z=i\square\mathfrak C(x,y)=\delta^{}_{xy}+\int\Sigma(x,z)\mathfrak C(z,y)\dd\Omega^{}_z=Y(x,y).\label{EWdfb880.}\end{equation}
+再次使用\textsl{Green}函数法，从\textsl{SD}方程(\ref{th841++s})得到$i\square$的\textsl{Green}函数为$D^{}_F(x,y)$，从而得到关于$\mathfrak C$的\textsl{LS}方程
 \begin{equation}\mathfrak C(x,y)=\int D^{}_F(x,z)Y(z,y)\dd\Omega^{}_z=D^{}_F(x,y)+\int D^{}_F(x,z)\Sigma(z,m)\mathfrak C(m,y)\dd\Omega^{}_m\dd\Omega^{}_z.\end{equation}
 这个方程以及其微分方程(\ref{EWdfb880.})统称为\textbf{\textsl{Dyson}方程}，这里我们写出其\textsl{Born}级数解
 \begin{equation}\begin{aligned}\mathfrak C(x,y)=&D^{}_F(x,y)+\int D^{}_F(x,z)\Sigma(z,m)D^{}_F(m,y)\dd\Omega^{}_m\dd\Omega^{}_z\\&+\int D^{}_F(x,z)\Sigma(z,m)D^{}_F(m,l)\Sigma(l,k)D^{}_F(k,l)\dd\Omega^{}_l\dd\Omega^{}_k\dd\Omega^{}_m\dd\Omega^{}_z\\&+\cdots\cdots,\end{aligned}\end{equation}
@@ -10258,13 +10260,13 @@ $$F(\beta;J)=-\ln Z(\beta;J)=F^{}_0-W^M(\beta;J).$$
 \begin{equation}\Gamma^M(\beta;\eta)=F(J)+\int_0^\beta J(\tau)\eta(\tau)\dd\tau=\Gamma^M_0(\beta;\eta)-W^M(\beta;J)+\int_0^\beta J(\tau)\eta(\tau)\dd\tau,\end{equation}
 于是在准经典近似下不难得到$\Gamma^M(\beta;\eta)\approx S^{}_E=\beta H$，这就是标准的正则分布，并且满足
 $$\pdv{\Gamma^M}{\eta}=\qty(\pdv{F}{J}+\eta)\pdv{J}{\eta}+J=J.$$
-这和零温场的结论是一样的。通过类似的计算，我们得到$\mathfrak C^M(x,y)=\displaystyle\eval{\pdv{W^M(\beta;J)}{J(x)}{J(y)}}^{}_{J=0}$，于是在有限温度场中$W^M(\beta;J)$同样是连通关联函数的生成函数。做进一步计算，将$\Gamma$关于$\eta$的二阶导记为$\mathscr H^M_{\Gamma}$，我们就重新得到互易关系
-\begin{equation}\int\dd\Omega^{}_z \mathfrak C^M(x,z)\mathscr H^M_{\Gamma}(z,y)=\delta^{}_{xz},\quad \mathscr H^M_{\Gamma}(x,y)=\eval{\pdv{\Gamma^M}{\eta(x)}{\eta(y)}}^{}_{\eta=0}.\end{equation}
+这和零温场的结论是一样的。通过类似的计算，我们得到$\mathfrak C^M(x,y)=\displaystyle\eval{\pdv{W^M(\beta;J)}{J(x)}{J(y)}}^{}_{J=0}$，于是在有限温度场中$W^M(\beta;J)$同样是连通关联函数的生成函数。做进一步计算，将$\Gamma$关于$\eta$的二阶导按式(\ref{BNM,P;Phb98++})记为$\mathscr H^M_\Gamma$，我们就重新得到互易关系
+\begin{equation}\int\dd\Omega^{}_z \mathfrak C^M(x,z)\mathscr H^M_\Gamma(z,y)=\delta^{}_{xy},\quad \mathscr H^M_\Gamma(x,y)=-\eval{\pdv{\Gamma^M}{\eta(x)}{\eta(y)}}^{}_{\eta=0}.\end{equation}
 在此基础上，按照式(\ref{KouG-*-*-*-//DYVG})在微扰展开下引入$\Sigma$函数
 \begin{equation}\Sigma^M=\qty(\mathfrak C^{M(0)})^{-1}-\qty(\mathfrak C^M)^{-1}=\mathscr H^{M(0)}_\Gamma-\mathscr H^M_\Gamma,\end{equation}
-我们就得到平衡热场的\textsl{Dyson}方程\textsl{BD}级数
-\begin{equation}\mathfrak C^M(x,y)=D^M_F(x,y)+\int D^M_F(x,z)\Sigma^M(z,m)\mathfrak C^M(m,y)\dd\Omega^{}_m\dd\Omega^{}_z,\end{equation}
-以及其\textsl{BD}级数解
+我们就得到平衡热场的\textsl{Dyson}方程，注意在\textsl{Eculidean}表述下，传播子的\textsl{SD}方程按照式(\ref{WocFHQQ245276})为$-\square^{}_E D^M_F(x,y)=\delta^E_{xy}$，因而我们得到
+\begin{equation}\begin{cases}&-\square^{}_E\mathfrak C^M(x,y)=\delta^{}_{xy}+\displaystyle\int\Sigma^M(x,m)\mathfrak C^M(m,y)\dd\Omega^{}_m,\\&\mathfrak C^M(x,y)=D^M_F(x,y)+\displaystyle\int D^M_F(x,z)\Sigma^M(z,m)\mathfrak C^M(m,y)\dd\Omega^{}_m\dd\Omega^{}_z,\end{cases}\end{equation}
+以及其核形式的\textsl{BD}级数解
 \begin{equation}\mathfrak C^M=D^M_F+D^M_F\Sigma^M D^M_F+D^M_F\Sigma^M D^M_F\Sigma^M D^M_F+\cdots.\end{equation}
 关于平衡热场的单粒子不可约这里就不再赘述了，因为上面的结论在形式上均和零温场相同，所以读者只需要参考第\ref{1pL//-..][rG}节的内容即可。当然因为热浴的加入，在计算$\Sigma^M$以及相关的\textit{1PI}时和零温场还是有很大区别的，这一点在具体应用时再详细介绍。
 \subsubsection{闭合时间回路的微扰}
@@ -10275,82 +10277,178 @@ $$Z^{}_{SK}=\bigintsss\exp(i\int\qty{\Lambda\qty[\psi^{}_+(t,\vb{r})]-\Lambda\qt
 对每个分支位形的\textit{Lagrangian}带入式(\ref{dgU[[''hui/67})，回路作用量(\ref{DfPMBQE+--*-/ug})的相互作用形式给出
 \begin{equation}\begin{aligned}S&=\int\qty(\Lambda^{}_{KG}\qty[\psi^{}_+(t,\vb{r})]+\Lambda^{}_{\text{int}}\qty[\psi^{}_+(t,\vb{r})]-\Lambda\qty[\psi^{}_-(t,\vb{r})]-\Lambda^{}_{\text{int}}\qty[\psi^{}_-(t,\vb{r})])\dd\Omega\\&=S^+_{KG}-S^-_{KG}+\int\Lambda^{}_{\text{int}}\qty[\psi^{}_+(t,\vb{r})]\dd\Omega-\int\Lambda^{}_{\text{int}}\qty[\psi^{}_-(t,\vb{r})]\dd\Omega.\end{aligned}\end{equation}
 将自由场部分记为$S^+_{KG}-S^-_{KG}=S^{}_{KG}$，我们得到相互作用路径积分
-\begin{equation}Z^{}_{SK}=\bigintsss\exp(iS^{}_{KG}\qty(\psi^{}_+,\psi^{}_-)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\psi^{}_+\mathscr D\psi^{}_-.\end{equation}
+\begin{equation}Z^{}_{SK}=\bigintsss\exp(iS^{}_{KG}\qty(\psi^{}_+,\psi^{}_-)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\psi^{}_+\mathscr D\psi^{}_-.\label{Zdv-/edfs/*..+}\end{equation}
 在此基础上按照式(\ref{wuGGFDFG++//})引入\textsl{SK}泛函，我们就得到相互作用\textsl{Keyldsh}矩阵
 \begin{equation}\vb{C}^{lm}(x,y)=\frac{\displaystyle\bigintsss\psi^{}_l(x)\psi^{}_m(y)\exp(iS^{}_{KG}\qty(\bm{\psi}^K)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\bm{\psi}^K}{\displaystyle\bigintsss\exp(iS^{}_{KG}\qty(\bm{\psi}^K)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\bm{\psi}^K}.\end{equation}
 其中$l,m=\pm=1,2$对应正负支，$\bm{\psi}^K$是由式(\ref{9357asGREUFUIkv-*-})定义的\textsl{Keyldsh}矢量。在二次量子化算符下引入相互作用绘景，根据式(\ref{Mnvyu[[],,fuh67})我们将上式用路径排序的均值给出
 \begin{equation}\vb{C}^K(x,y)=\frac{\displaystyle\expval{\mathbb P\qty{\hat{\bm{\psi}}^K_I(x)\hat{\bm{\psi}}^K_I(y)\exp(i\int\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_+)-\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)}}}{\displaystyle\expval{\mathbb P\qty{\exp(i\int\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_+)-\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)}}}.\label{xiF981/*-27890an}\end{equation}
 这个同样也是容易证明的，可以从\textsl{CTP}的算符化结论直接得到，或者由于位形$\psi^{}_{\pm}$在各自的支路上和零温场位形性质相同，因此从分量的角度，这就是零温场传播子的直接推广。类似的我们写出相互作用多点函数
-\begin{equation}\vb{C}^K(1,2,\ldots,n)=\frac{\displaystyle\bigintsss\bm{\psi}^K_1\bm{\psi}^K_2\cdots\bm{\psi}^K_n\exp(iS^{}_{KG}\qty(\bm{\psi}^K)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\bm{\psi}^K}{\displaystyle\bigintsss\exp(iS^{}_{KG}\qty(\bm{\psi}^K)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\bm{\psi}^K},\end{equation}
+\begin{equation}\vb{C}^K(1,2,\ldots,n)=\frac{\displaystyle\bigintsss\bm{\psi}^K_1\bm{\psi}^K_2\cdots\bm{\psi}^K_n\exp(iS^{}_{KG}\qty(\bm{\psi}^K)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\bm{\psi}^K}{\displaystyle\bigintsss\exp(iS^{}_{KG}\qty(\bm{\psi}^K)+i\int\qty{\Lambda^{}_{\text{int}}\qty(\psi^{}_+)-\Lambda^{}_{\text{int}}\qty(\psi^{}_-)}\dd\Omega)\mathscr D\bm{\psi}^K},\label{NBhjl[[][[r}\end{equation}
 其路径排序的算符均值形式就不写了，不难想到这应该是零温场多点函数(\ref{HFghx98//F///*})的直接推广。关于相互作用绘景这里也不做过多赘述，本质和零温场是一样的，读者可自行写出。\\
 \\
-为了具体分析相互作用\textsl{Keyldsh}矩阵(\ref{xiF981/*-27890an})，我们按微扰展开，记其零级近似为$\vb{G}$，定义为
-\begin{equation}G^{}_{lm}(x,y)=C^{K;(0)}_{lm}(x,y)=\expval{\mathbb P\qty{\hat{\psi}^l_I(x)\hat{\psi}^m_I(y)}}.\end{equation}
+为了具体分析相互作用\textsl{Keyldsh}矩阵(\ref{xiF981/*-27890an})，我们按微扰展开，记其零级近似为$\vb{G}^K_{KG}$，定义为
+\begin{equation}G^{lm}_{KG}(x,y)=C^{lm;(0)}(x,y)=\expval{\mathbb P\qty{\hat{\psi}^l_I(x)\hat{\psi}^m_I(y)}}.\end{equation}
 其路径积分就是自由场的结论(\ref{Mnvyu[[],,fuh67})，具体打开就是\textsl{Keyldsh}矩阵(\ref{Yfs[['L908})。不失一般性的，我们依旧暂时令分母恒为零级近似，并取平方相互作用$\Lambda^{}_{\text{int}}\qty(\psi^{}_{\pm})=\lambda\psi^2_{\pm}$，此时式(\ref{xiF981/*-27890an})写作
 \begin{equation}C^{}_{lm}(x,y)=\sum_n\frac{1}{n!}\expval{\mathbb P\qty{\hat{\psi}^l_I(x)\hat{\psi}^m_I(y)\qty(i\lambda\bigintsss\qty[\qty(\hat{\psi}^+_I)^2-\qty(\hat{\psi}^-_I)^2]\dd\Omega)^n}}.\end{equation}
 应当强调的是，虽然我们对\textsl{CTP}的正反向分支分别定义了两个位形，但它们描述的是同一个场，因此相互作用系数$\lambda$必然对两个位形是一样的，也就是$\lambda^{}_{\pm}=\lambda$。我们先计算一级修正，取$n=1$得到
 \begin{equation}\begin{aligned}C^{(1)}_{lm}(x,y)&=i\lambda\int\expval{\mathbb P\qty{\hat{\psi}^l_I(x)\hat{\psi}^m_I(y)\qty(\hat{\psi}^+_I(z)\hat{\psi}^+_I(z)-\hat{\psi}^-_I(z)\hat{\psi}^-_I(z))}}\dd\Omega^{}_z\\&=i\lambda\int\qty{\expval{\mathbb P\qty{\hat{\psi}^l_I(x)\hat{\psi}^m_I(y)\hat{\psi}^+_I(z)\hat{\psi}^+_I(z)}}-\expval{\mathbb P\qty{\hat{\psi}^l_I(x)\hat{\psi}^m_I(y)\hat{\psi}^-_I(z)\hat{\psi}^-_I(z)}}}\dd\Omega^{}_z.\end{aligned}\end{equation}
-注意到在\textsl{SK}形式中，传播子的一级修正会给出两项的差，这是非平衡场和平衡场之间的不同点，因为回路的两个支路的贡献是独立的。现在我们按具体分量计算，注意路径排序$\mathbb P$应使用式(\ref{D-*..[];fb})定义的性质，在打开时需要注意负号算符天然处于左侧，比如对于$l=m=+$得到
+注意到在\textsl{SK}形式中，传播子的一级修正会给出两项的差，这是非平衡场和平衡场之间的不同点，因为回路的两个支路的贡献是独立的。现在我们按具体分量计算，注意路径排序$\mathbb P$应使用式(\ref{D-*..[];fb})定义的规则，在打开时需要注意负号算符天然处于左侧，比如对于$l=m=+$得到
 $$C^{(1)}_{++}(x,y)=i\lambda\int\qty{\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(y)\hat{\psi}^+_I(z)\hat{\psi}^+_I(z)}}-\expval{\mathbb P\qty{\hat{\psi}^-_I(z)\hat{\psi}^-_I(z)\hat{\psi}^+_I(x)\hat{\psi}^+_I(y)}}}\dd\Omega^{}_z.$$
 按照\textsl{SK}形式中的热\textsl{Wick}定理(\ref{FFsgwet++G})，我们展开上式
 $$\begin{aligned}C^{(1)}_{++}(x,y)=i\lambda\bigintsss\Bigg(&\wick[offset=1.2em]{\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}+\wick[offset=1.2em]{\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}\\&-\wick[offset=1.2em]{\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)}-\wick[offset=1.2em]{\c2{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)}\Bigg)\dd\Omega^{}_z.\end{aligned}$$
 参考缩并矩阵(\ref{NfHFytt1=0})，我们得到最终结果
-\begin{equation}\begin{aligned}C^{(1)}_{++}(x,y)=i\lambda\int\Big(&G^{++}(x,y)G^{++}(z,z)+G^{++}(x,z)G^{++}(z,y)\\&-G^{--}(z,z)G^{++}(x,y)-G^{+-}(x,z)G^{-+}(z,y)\Big)\dd\Omega^{}_z.\end{aligned}\label{PIdc;F++///fu}\end{equation}
-注意$G^{++}(z,z)\neq G^{--}(z,z)$，因为这两个$z$位于不同的支路。类似的我们写出其余三个分量的一级修正
-\begin{equation}\begin{aligned}&\begin{aligned}C^{(1)}_{--}(x,y)=i\lambda\int\Big(&G^{--}(x,y)G^{++}(z,z)+G^{-+}(x,z)G^{+-}(z,y)\\&-G^{--}(x,y)G^{--}(z,z)-G^{--}(x,z)G^{--}(z,y)\Big)\dd\Omega^{}_z;\end{aligned}\\&\begin{aligned}C^{(1)}_{-+}(x,y)=i\lambda\int\Big(&G^{-+}(x,y)G^{++}(z,z)+G^{-+}(x,z)G^{++}(z,y)\\&-G^{--}(z,z)G^{-+}(x,y)-G^{--}(x,z)G^{-+}(z,y)\Big)\dd\Omega^{}_z;\end{aligned}\\&\begin{aligned}C^{(1)}_{+-}(x,y)=i\lambda\int\Big(&G^{+-}(x,y)G^{++}(z,z)+G^{-+}(y,z)G^{++}(z,x)\\&-G^{+-}(x,y)G^{--}(z,z)-G^{--}(y,z)G^{-+}(z,x)\Big)\dd\Omega^{}_z.\end{aligned}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}C^{(1)}_{++}(x,y)=i\lambda\int\Big(&G^{++}_{KG}(x,y)G^{++}_{KG}(z,z)+G^{++}_{KG}(x,z)G^{++}_{KG}(z,y)\\&-G^{--}_{KG}(z,z)G^{++}_{KG}(x,y)-G^{+-}_{KG}(x,z)G^{-+}_{KG}(z,y)\Big)\dd\Omega^{}_z.\end{aligned}\label{PIdc;F++///fu}\end{equation}
+注意$G^{++}_{KG}(z,z)\neq G^{--}_{KG}(z,z)$，因为这两个$z$位于不同的支路。类似的我们写出其余三个分量的一级修正
+\begin{equation}\begin{aligned}&\begin{aligned}C^{(1)}_{--}(x,y)=i\lambda\int\Big(&G^{--}_{KG}(x,y)G^{++}_{KG}(z,z)+G^{-+}_{KG}(x,z)G^{+-}_{KG}(z,y)\\&-G^{--}_{KG}(x,y)G^{--}_{KG}(z,z)-G^{--}_{KG}(x,z)G^{--}_{KG}(z,y)\Big)\dd\Omega^{}_z;\end{aligned}\\&\begin{aligned}C^{(1)}_{-+}(x,y)=i\lambda\int\Big(&G^{-+}_{KG}(x,y)G^{++}_{KG}(z,z)+G^{-+}_{KG}(x,z)G^{++}_{KG}(z,y)\\&-G^{--}_{KG}(z,z)G^{-+}_{KG}(x,y)-G^{--}_{KG}(x,z)G^{-+}_{KG}(z,y)\Big)\dd\Omega^{}_z;\end{aligned}\\&\begin{aligned}C^{(1)}_{+-}(x,y)=i\lambda\int\Big(&G^{+-}_{KG}(x,y)G^{++}_{KG}(z,z)+G^{-+}_{KG}(y,z)G^{++}_{KG}(z,x)\\&-G^{+-}_{KG}(x,y)G^{--}_{KG}(z,z)-G^{--}_{KG}(y,z)G^{-+}_{KG}(z,x)\Big)\dd\Omega^{}_z.\end{aligned}\end{aligned}\end{equation}
 这三个展开式请读者自行计算，我们就不赘述了。当然由于式(\ref{g++FSG-++++hfs})，涉及到的\textsl{Wightman}函数对换变量顺序不会对最终结果造成影响，只需要按照记号定义相应的更改正负号顺序即可。\\
 \\
-现在我们来考察其矩阵表述，整体可以分为两部分：相互作用$\pm\qty(\hat{\psi}^{\pm}_I)^2$自身的缩并，以及和$\hat{\psi}^{\pm}_I(x,y)$的混合缩并。先看独立缩并，外部位形缩并给出自由\textsl{Keyldsh}矩阵$\wick[offset=1.2em]{\c{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)}=\vb{G}(x,y)$，相互作用缩并给出$G^{++}(z,z)$和$-G^{--}(z,z)$。注意反向支带负号，为了考虑到这点我们写出
-$$\bm{\Sigma}^{}_-\vb{G}(z,z)=\mqty(1&0\\0&-1)\times\mqty(G^{++}&G^{+-}\\G^{-+}&G^{--})(z,z)=\mqty(G^{++}&G^{+-}\\-G^{-+}&-G^{--})(z,z),\quad \bm{\Sigma}^{}_-=\mqty(1&0\\0&-1).$$
-其中$\bm{\Sigma}^{}_-$是在\textsl{Bogoliubov}变换(\ref{LbDu--o})中引入的伪幺正度规，在形式上也等于第三个\textsl{Pauli}矩阵$\bm{\Sigma}^{}_-=\hat{\sigma}^{}_3$。现在探讨这一部分的结构，对于$\vb{C}^K(x,y)$中的每一个固定分量，均需要乘上$\qty(\hat{\psi}^+_I)^2-\qty(\hat{\psi}^-_I)^2$的缩并，利用上面引入的矩阵给出
-$$G^{++}(z,z)-G^{--}(z,z)=\tr\mqty(G^{++}&0\\0&-G^{--})(z,z)=\tr(\bm{\Sigma}^{}_-\vb{G})(z,z),$$
+现在我们来考察其矩阵表述，整体可以分为两部分：相互作用$\pm\qty(\hat{\psi}^{\pm}_I)^2$自身的缩并，以及和$\hat{\psi}^{\pm}_I(x,y)$的混合缩并。先看独立缩并，外部位形缩并给出自由\textsl{Keyldsh}矩阵$\wick[offset=1.2em]{\c{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)}=\vb{G}^K_{KG}(x,y)$，相互作用缩并给出$G^{++}_{KG}(z,z)$和$-G^{--}_{KG}(z,z)$。注意反向支带负号，为了考虑到这点我们写出
+$$\bm{\Sigma}^{}_-\vb{G}^K_{KG}(z,z)=\mqty(1&0\\0&-1)\times\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(z,z)=\mqty(G^{++}_{KG}&G^{+-}_{KG}\\-G^{-+}_{KG}&-G^{--}_{KG})(z,z),\quad \bm{\Sigma}^{}_-=\mqty(1&0\\0&-1).$$
+其中$\bm{\Sigma}^{}_-$是在\textsl{Bogoliubov}变换(\ref{LbDu--o})中引入的伪幺正度规，在形式上也等于第三个\textsl{Pauli}矩阵$\bm{\Sigma}^{}_-=\hat{\sigma}^{}_3$，其引入的必要性参见第\ref{=0=-0FSJGDHRE}节。现在探讨这一部分的结构，对于$\vb{C}^K(x,y)$中的每一个固定分量，均需要乘上$\qty(\hat{\psi}^+_I)^2-\qty(\hat{\psi}^-_I)^2$的缩并，利用上面引入的矩阵给出
+$$G^{++}_{KG}(z,z)-G^{--}_{KG}(z,z)=\tr\mqty(G^{++}_{KG}&0\\0&-G^{--}_{KG})(z,z)=\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z),$$
 因此第一项的缩并给出
-\begin{equation}\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)}\qty(\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}-\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)})=\vb{G}(x,y)\tr(\bm{\Sigma}^{}_-\vb{G})(z,z).\end{equation}
-现在处理第二部分的混合缩并，在固定$\hat{\psi}^{\pm}_I(z)$的符号后，其和$\hat{\psi}^{\pm}_I(x)$以及$\hat{\psi}^{\pm}_I(y)$的缩并只能同时得到$\vb{G}$中的单行或单列，比如$\hat{\psi}^+_I(z)$只能产生$\vb{G}(x,z)$的第一列和$\vb{G}(z,y)$的第一行，$\hat{\psi}^-_I(z)$只能产生$\vb{G}(x,z)$的第二列和$\vb{G}(z,y)$的第二行。对反向支带上负号，我们得到缩并的乘积
-$$\begin{aligned}&\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}=\mqty(G^{++}&0\\G^{-+}&0)(x,z)\times\mqty(G^{++}&G^{+-}\\0&0)(z,y),\\ -&\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)}=-\mqty(0&G^{+-}\\0&G^{--})(x,z)\times\mqty(0&0\\G^{-+}&G^{--})(z,y).\end{aligned}$$
+\begin{equation}\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)}\qty(\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}-\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)})=\vb{G}^K_{KG}(x,y)\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z).\end{equation}
+现在处理第二部分，在固定$\hat{\psi}^{\pm}_I(z)$的符号后，其和$\hat{\psi}^{\pm}_I(x)$以及$\hat{\psi}^{\pm}_I(y)$的缩并只能同时得到$\vb{G}^K_{KG}$中的单行或单列，比如$\hat{\psi}^+_I(z)$只能产生$\vb{G}^K_{KG}(x,z)$的第一列和$\vb{G}^K_{KG}(z,y)$的第一行，$\hat{\psi}^-_I(z)$只能产生$\vb{G}^K_{KG}(x,z)$的第二列和$\vb{G}^K_{KG}(z,y)$的第二行。对反向支带上负号，我们得到缩并的乘积
+$$\begin{aligned}&\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}=\mqty(G^{++}_{KG}&0\\G^{-+}_{KG}&0)(x,z)\times\mqty(G^{++}_{KG}&G^{+-}_{KG}\\0&0)(z,y),\\ -&\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)}=-\mqty(0&G^{+-}_{KG}\\0&G^{--}_{KG})(x,z)\times\mqty(0&0\\G^{-+}_{KG}&G^{--}_{KG})(z,y).\end{aligned}$$
 混合缩并是这两个等式的和，为了用统一的矩阵表示，注意到矩阵的筛选性
-$$\mqty(G^{++}&G^{+-}\\0&0)=\mqty(1&0\\0&0)\times\mqty(G^{++}&G^{+-}\\G^{-+}&G^{--}),\quad\mqty(0&0\\-G^{-+}&-G^{--})=\mqty(0&0\\0&-1)\times\mqty(G^{++}&G^{+-}\\G^{-+}&G^{--}),$$
+$$\mqty(G^{++}_{KG}&G^{+-}_{KG}\\0&0)=\mqty(1&0\\0&0)\times\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG}),\quad\mqty(0&0\\-G^{-+}_{KG}&-G^{--}_{KG})=\mqty(0&0\\0&-1)\times\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG}),$$
 对换矩阵则分别给出两列，因此利用矩阵等式的线性性我们得到混合缩并
-\begin{equation}\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}-\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)}=\vb{G}(x,z)\times\bm{\Sigma}^{}_-\times\vb{G}(z,y).\end{equation}
+\begin{equation}\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}-\wick[offset=1.2em]{\c2{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c1{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)\c1{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c2{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)}=\vb{G}^K_{KG}(x,z)\hat{\sigma}^{}_3\vb{G}^K_{KG}(z,y).\end{equation}
 于是一级修正由这两部分的和给出，在矩阵形式下写作
-\begin{equation}\vb{C}^{K;(1)}(x,y)=i\lambda\int\qty{\vb{G}(x,y)\tr(\bm{\Sigma}^{}_-\vb{G})(z,z)+\vb{G}(x,z)\times\bm{\Sigma}^{}_-\times\vb{G}(z,y)}\dd\Omega^{}_z.\label{jhDF[][]-gfd}\end{equation}
+\begin{equation}\vb{C}^{K;(1)}(x,y)=i\lambda\int\qty{\vb{G}^K_{KG}(x,y)\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z)+\vb{G}^K_{KG}(x,z)\hat{\sigma}^{}_3\vb{G}^K_{KG}(z,y)}\dd\Omega^{}_z.\label{jhDF[][]-gfd}\end{equation}
 就此我们重新回到代数表述，所有的内容都可以按照矩阵形式计算，这相比每个分量单独计算是极为方便的。更高阶的修正这里就不给出了，读者可以按照相同的思路，直接得到相应的矩阵方程。\\
 \\
 作为矩阵的应用，我们来计算$D^{}_R$，$D^{}_A$和$D^{}_S$的一级修正。在\textsl{Keldysh}旋转(\ref{Keg--FG+.+*})下，\textsl{Keldysh}矩阵变换为由式(\ref{a++..dSGHdg})确定的矩阵$\vb{D}$，其三个分量就是所要求的三个传播子。于是对式(\ref{jhDF[][]-gfd})做\textsl{Keldysh}旋转，我们得到
-$$\vb{Q}^{-1}\vb{C}^{K;(1)}(x,y)\vb{Q}=\mqty(0&D^{(1)}_A\\D^{(1)}_R&D^{(1)}_S)=i\lambda\int\vb{Q}^{-1}\qty{\vb{G}(x,y)\tr(\bm{\Sigma}^{}_-\vb{G})(z,z)+\vb{G}(x,z)\bm{\Sigma}^{}_-\vb{G}(z,y)}\vb{Q}\dd\Omega^{}_z.$$
-第一部分由于迹的标量性，因此变换只对$\vb{G}(x,y)$进行，由于其只是自由场\textsl{Keldysh}矩阵，因而我们得到结果为$\vb{Q}^{-1}\vb{G}\vb{Q}=\vb{D}^{(0)}$。当然迹也应用$\vb{D}^{(0)}$的分量表示，带入式(\ref{wuH[]//Ohyugi].,/;'})的定义我们写出
-\begin{equation}\tr(\bm{\Sigma}^{}_-\vb{G})=G^{++}-G^{--}=D^{(0)}_A+D^{(0)}_R,\end{equation}
+$$\begin{aligned}&\vb{Q}^{-1}\vb{C}^{K;(1)}(x,y)\vb{Q}=\mqty(0&D^{(1)}_A\\D^{(1)}_R&D^{(1)}_S)\\&=i\lambda\int\vb{Q}^{-1}\qty{\vb{G}^K_{KG}(x,y)\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z)+\vb{G}^K_{KG}(x,z)\hat{\sigma}^{}_3\vb{G}^K_{KG}(z,y)}\vb{Q}\dd\Omega^{}_z.\end{aligned}$$
+第一部分由于迹的标量性，因此变换只对$\vb{G}^K_{KG}(x,y)$进行，由于其只是自由场\textsl{Keldysh}矩阵，因而我们得到结果为$\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}=\vb{D}^{(0)}$。当然迹也应用$\vb{D}^{(0)}$的分量表示，带入式(\ref{wuH[]//Ohyugi].,/;'})的定义我们写出
+\begin{equation}\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})=G^{++}_{KG}-G^{--}_{KG}=D^{(0)}_A+D^{(0)}_R,\label{Soruy97867576k}\end{equation}
 也就是$\vb{D}^{(0)}$的斜对角和，这一点请读者用代数法证明，于是第一部分给出$\vb{D}^{(0)}\qty(D^{(0)}_A+D^{(0)}_R)$。第二部分略微复杂，由于变换是幺正的$\vb{Q}^{-1}\vb{Q}=\vb{I}$，我们不妨在$\bm{\Sigma}^{}_-$两侧各插入单位矩阵$\vb{I}$，于是这就变为
-$$\vb{Q}^{-1}\vb{G}\bm{\Sigma}^{}_-\vb{G}\vb{Q}=\qty{\vb{Q}^{-1}\vb{G}\vb{Q}}\qty{\vb{Q}^{-1}\bm{\Sigma}^{}_-\vb{Q}}\qty{\vb{Q}^{-1}\vb{G}\vb{Q}}=\vb{D}^{(0)}\vb{Q}^{-1}\bm{\Sigma}^{}_-\vb{Q}\vb{D}^{(0)},$$
-也就是归结为$\bm{\Sigma}^{}_-$的\textsl{Keldysh}变换。这不难计算
-$$\vb{Q}^{-1}\bm{\Sigma}^{}_-\vb{Q}=\frac{1}{2}\mqty(1&-1\\1&1)\mqty(1&0\\0&-1)\mqty(1&1\\-1&1)=\mqty(0&1\\1&0)=\hat{\sigma}^{}_1,$$
+$$\vb{Q}^{-1}\vb{G}^K_{KG}\hat{\sigma}^{}_3\vb{G}^K_{KG}\vb{Q}=\qty{\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}}\qty{\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}}\qty{\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}}=\vb{D}^{(0)}\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}\vb{D}^{(0)},$$
+也就是归结为$\hat{\sigma}^{}_3$的\textsl{Keldysh}变换。这不难计算
+$$\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}=\frac{1}{2}\mqty(1&-1\\1&1)\mqty(1&0\\0&-1)\mqty(1&1\\-1&1)=\mqty(0&1\\1&0)=\hat{\sigma}^{}_1,$$
 其将第三个\textsl{Pauli}矩阵变换为第一个\textsl{Pauli}矩阵。因此最终我们得到这三个传播子的一级修正为
 \begin{equation}\mqty(0&D^{(1)}_A\\D^{(1)}_R&D^{(1)}_S)(x,y)=i\lambda\int\qty{\vb{D}^{(0)}(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+\vb{D}^{(0)}(x,z)\hat{\sigma}^{}_1\vb{D}^{(0)}(z,y)}\dd\Omega^{}_z,\end{equation}
 具体打开得到
-\begin{equation}\begin{cases}D^{(1)}_S(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_S(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_S(z,y)+D^{(0)}_S(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_R(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_R(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_R(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_A(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_A(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_A(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z.\end{cases}\end{equation}
-可以看到对于一级修正，\textsl{Schwinger}传播子$D^{(1)}_S$的混合缩并同时涉及到另外两个传播子，该现象的物理含义我们在后面会解答。\\
+\begin{equation}\begin{cases}D^{(1)}_S(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_S(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_S(z,y)+D^{(0)}_S(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_R(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_R(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_R(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_A(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_A(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_A(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z.\end{cases}\label{JIngdtaioffu}\end{equation}
+可以看到对于一级修正，\textsl{Schwinger}传播子$D^{(1)}_S$的混合缩并同时涉及到另外两个传播子，该现象的物理含义我们在后面会解答。但需要注意一个非常重要的点，比如对于$D^{(1)}_R(x,y)$按式(\ref{Soruy97867576k})转换回$\vb{G}^K_{KG}(x,y)$具体打开$D^{(0)}_R(x,z)D^{(0)}_R(z,y)$得到
+$$\begin{aligned}D^{(0)}_R(x,z)D^{(0)}_R(z,y)=&G^{++}_{KG}(x,z)G^{++}_{KG}(z,y)-G^{++}_{KG}(x,z)G^{+-}_{KG}(z,y)\\&-G^{+-}_{KG}(x,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,z)G^{+-}_{KG}(z,y),\end{aligned}$$
+最后两项中内点$z$的符号均为$z^-\to z^+$，这是不允许的，因为内点应该是同一个时空点。这就说明在具体计算时，我们不应该打开$D^{}_R$，而是将其当作一个普通的传播子计算。为了和\textsl{Keyldsh}矩阵$\vb{C}(x,y)$区分，我们将使用$D^{}_{R,A,S}$作为基本传播子的体系称为\textbf{推迟—提前基准 \textit{Retarded-Advanced Basis}}，简称为\textbf{RA}基准，而将\textsl{Keyldsh}矩阵称为\textbf{回路基准 \textit{Contour basis}}，因为其直接建立在\textsl{CTP}上。\\
 \\
 在上述讨论的基础上，我们来考察\textsl{SK}形式的\textsl{Feynman}规则，先从自由场开始。方便起见，我们仍采用第\ref{Wea]]]907lsfGF}节的记号，将分支号直接归结到变量上，比如$\psi^{\pm}(x)=x^{\pm}$。以式(\ref{Csh***..5654do})为例，将自由传播子的空间\textsl{Feynman}图定义为
-\begin{equation}G^{--}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{+-}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{-+}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}},\end{equation}
+\begin{equation}G^{--}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{+-}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{-+}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}},\end{equation}
 则四点函数就写作
 $$\begin{aligned}D^{--++}(1,2,3,4)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$1^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$2^-$](b){};\diagram*{(a)--(b)};\vertex[below=1cm of a,dot,scale=.5,label=below:$3^+$](c){};\vertex[right=1cm of c,dot,scale=.5,label=below:$4^+$](d){};\diagram*{(c)--(d)};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=left:$1^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=right:$2^-$](b){};\diagram*{(a)--(c)};\vertex[below=1cm of a,dot,scale=.5,label=left:$3^+$](c){};\vertex[right=1cm of c,dot,scale=.5,label=right:$4^+$](d){};\diagram*{(b)--(d)};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=left:$1^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=right:$2^-$](b){};\diagram*{(a)--(d)};\vertex[below=1cm of a,dot,scale=.5,label=below:$3^+$](c){};\vertex[right=1cm of c,dot,scale=.5,label=below:$4^+$](d){};\diagram*{(c)--(b)};\end{feynman}}.\end{aligned}$$
 整体来看和零温场类似，但是要注意变量所处的分支。这一点在微扰中尤为重要，比如我们画出$C^{++}$的一级修正(\ref{PIdc;F++///fu})的图，同样的令内点为圈图
 \begin{equation}C^{(1)}_{++}(x,y)=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})-\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^-$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^+$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$y^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}-\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^-$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$y^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}\end{equation}
 再比如另一个分量
 $$C^{(1)}_{+-}(x,y)=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})-\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^-$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$y^-$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^+$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$x^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}-\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$y^-$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^-$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$x^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}$$
-所以\textsl{SK}形式的空间\textsl{Feynman}规则和零温场的相同，只不过相应的空间点需要注意符号。为此我们可以增加一条规则：外点的符号即所处支路应和所求分量相对应。动量\textsl{Feynman}规则也是如此，虽然不涉及空间点，但在端点处还是应当标注所处支路。假设时间轴指向右，那么由(\ref{DR[][];;;,;lkpoik})我们得到
-\begin{equation}\begin{aligned}&G^<(p)=G^{+-}(p)=2\pi\qty{\expval{n\qty(p^0)}+\theta\qty(-p^0)}\delta\qty(p^2-m^2)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate,label=below:$+$](a){};\vertex[right=2cm of a,coordinate,label=below:$-$](b){};\vertex[right=.9cm of a,label=below:$p$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}},\\& G^>(p)=G^{-+}(p)=2\pi\qty{\expval{n\qty(p^0)}+\theta\qty(p^0)}\delta\qty(p^2-m^2)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate,label=below:$-$](a){};\vertex[right=2cm of a,coordinate,label=below:$+$](b){};\vertex[right=.9cm of a,label=below:$p$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}}.\end{aligned}\end{equation}
-通过\textsl{Feynman}图我们可以清晰的看到$G^<(p)$中$-p^0$的来源：两者本质上就是相反的，因此可以通过$\theta$函数来区分。$G^{++}(p)$和$G^{--}(p)$同理，这里就不画了，具体值请参考第\ref{Wea]]]907lsfGF}节。其动量\textsl{Feynman}规则也和零温场相同，只需要注意乘积还应考虑到占有数的补偿，这里就不再赘述了。\\
+所以\textsl{SK}形式的空间\textsl{Feynman}规则和零温场的相同，只不过相应的空间点需要注意符号。为此我们可以在第\ref{ecui0r8//6}节的基础上增加两条规则：
+\begin{enumerate}[\quad 7.]\item 多点函数对应外点的符号，即所处支路应和所求多点函数的分量相对应。\end{enumerate}\vspace{-9pt}\begin{enumerate}[\quad 8.]\item 连接不同路径的内点符号相同，因为内点作为积分变量应代表同一个时空点。\end{enumerate}
+因为其根据\textsl{Keyldsh}矩阵建立，因此根据前文将此八条空间\textsl{Feynman}规则其称为\textbf{回路规则}。现在我们考察$D^{}_{S,A,R}$的一级修正图，由于前文中所述的内点问题，我们需要直接在$D^{(0)}_{S,A,R}$上建立\textsl{Feynman}图，称为\textbf{\textsl{RA}规则}，零级图按照式(\ref{wuH[]//Ohyugi].,/;'})不妨定义为
+\begin{equation}\begin{aligned}D^{(0)}_R(x,y)&=\theta\qty(x^0-y^0)\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=2cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(b)--[fermion](a)};\end{feynman}}
+\\D^{(0)}_A(x,y)&=-\theta\qty(y^0-x^0)\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=2cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--[fermion](b)};\end{feynman}}
+\\D^{(0)}_S(x,y)&=\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}_+}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=2cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(b)--[with arrow=.7](a)--[with arrow=.7](b)};\end{feynman}}.\end{aligned}\end{equation}
+这里箭头代表时间的流向，注意和动量方向区分。于是我们得到式(\ref{JIngdtaioffu})的图形式，在\textsl{RA}规则下给出
+\begin{equation}\begin{aligned}D^{(1)}_S(x,y)&=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--[with arrow=.7](b)--[with arrow=.7](a)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left,fermion](b)--[half left,fermion](a)};\end{feynman}})+\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--[with arrow=.7](b)--[with arrow=.7](a)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half right,fermion](b)--[half right,fermion](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$](b){};\vertex[right=1cm of b,dot,scale=.5,label=below:$y$](c){};\diagram*{(b)--[with arrow=.7](c)--[with arrow=.7](b)--[fermion](a)};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$](b){};\vertex[right=1cm of b,dot,scale=.5,label=below:$y$](c){};\diagram*{(b)--[with arrow=.7](a)--[with arrow=.7](b)--[fermion](c)};\end{feynman}}\\ D^{(1)}_R(x,y)&=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(b)--[fermion](a)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left,fermion](b)--[half left,fermion](a)};\end{feynman}})+\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(b)--[fermion](a)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half right,fermion](b)--[half right,fermion](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$](b){};\vertex[right=1cm of b,dot,scale=.5,label=below:$y$](c){};\diagram*{(c)--[fermion](b)--[fermion](a)};\end{feynman}}\\ D^{(1)}_A(x,y)&=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--[fermion](b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left,fermion](b)--[half left,fermion](a)};\end{feynman}})+\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--[fermion](b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half right,fermion](b)--[half right,fermion](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$](b){};\vertex[right=1cm of b,dot,scale=.5,label=below:$y$](c){};\diagram*{(a)--[fermion](b)--[fermion](c)};\end{feynman}}.\end{aligned}\end{equation}
+这样就使得这三个传播子的图展开和普通传播子相同。动量\textsl{Feynman}规则也是如此，虽然不涉及空间点，但在端点处还是应当标注所处支路。假设时间轴指向右，那么由(\ref{DR[][];;;,;lkpoik})我们得到
+\begin{equation}\begin{aligned}&G^<(p)=G^{+-}_{KG}(p)=2\pi\qty{\expval{n\qty(p^0)}+\theta\qty(-p^0)}\delta\qty(p^2-m^2)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate,label=below:$+$](a){};\vertex[right=2cm of a,coordinate,label=below:$-$](b){};\vertex[right=.9cm of a,label=below:$p$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}},\\& G^>(p)=G^{-+}_{KG}(p)=2\pi\qty{\expval{n\qty(p^0)}+\theta\qty(p^0)}\delta\qty(p^2-m^2)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate,label=below:$-$](a){};\vertex[right=2cm of a,coordinate,label=below:$+$](b){};\vertex[right=.9cm of a,label=below:$p$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}}.\end{aligned}\end{equation}
+通过动量图我们可以清晰的看到$G^<(p)$中$-p^0$的来源：两者本质上就是相反的，因此可以通过$\theta$函数来区分。$G^{++}_{KG}(p)$和$G^{--}_{KG}(p)$同理，这里就不画了，具体值请参考第\ref{Wea]]]907lsfGF}节。其动量回路\textsl{Feynman}规则也和零温场相同，这里就不再赘述了。对于\textsl{RA}基准也是如此，为了和空间图区分我们添加加动量符号，比如
+\begin{equation}\begin{aligned}D^{}_R(p)&=\frac{i}{p^2-m^2+i\epsilon}-2\pi\theta\qty(p^0)\delta\qty(p^2-m^2)=\tikz[baseline=-.5em]{\begin{feynman}\vertex[coordinate](a){};\vertex[right=2cm of a,coordinate](b){};\diagram*{(b)--[fermion,momentum'=\(p\)](a)};\end{feynman}};\\ D^{}_A(p)&=\frac{i}{p^2-m^2-i\epsilon}-2\pi\theta\qty(-p^0)\delta\qty(p^2-m^2)=\tikz[baseline=-.5em]{\begin{feynman}\vertex[coordinate](a){};\vertex[right=2cm of a,coordinate](b){};\diagram*{(a)--[fermion,momentum'=\(p\)](b)};\end{feynman}};\\D^{}_S(p)&=2\pi\qty[1+2\expval{n\qty(p^0)}]\delta\qty(p^2-m^2)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[right=2cm of a,coordinate](b){};\diagram*{(a)--[with arrow=.7,momentum'=\(p\)](b)--[with arrow=.7,momentum'](a)};\end{feynman}}.\end{aligned}\end{equation}
+这样就确定了\textsl{RA}图的动量\textsl{Feynman}规则，进一步的我们就不再给出了，留给读者按照第\ref{acrF55][][pp[}节中的零温场规则自行画出一级修正。\\
 \\
-值得一提的是，\textsl{SK}形式同样适用于平衡热场，也就是\textsl{Matsubara}形式。
+值得一提的是，\textsl{SK}形式同样适用于平衡热场，也就是\textsl{Matsubara}形式。在第\ref{oeERgYGGG-*-*-/}节推导\textsl{CTP}时我们使用了分段\textit{Hamiltonian}(\ref{CsIhgHDB})，在$t=0$时刻$\hat{H}$存在间断，使得热场的演化是非平衡的。但若我们令$\hat{H}$恒定，则\textsl{SK}形式就退化为\textsl{Matsubara}形式，具体的表现就在于，对于图 \ref{weGBNNM..,te}的\textsl{KP}路径中$\mathcal P^{}_1$和$\mathcal P^{}_2$实部相同的对应点，都可以定义一个整体虚时圆$\mathcal P^{}_4$，从而可以认为$\mathcal P^{}_3=\mathcal P^{}_4=S^1_\tau$，这样就回到了平衡热场理论。
+\subsubsection{Schwinger-Keyldsh形式的Dyson方程}\label{=0=-0FSJGDHRE}
+\noindent 上面我们分析了传播子分母的展开，现在让我们重点分析分母，也就是热路径积分自身的展开。在零温场中我们通过第\ref{ecvgsddy550r8}节以及第\ref{1pL//-..][rG}节的分析，确定了连通图和作为\textit{1PI}和的生成函数，以及全连通传播子的\textsl{BD}级数。类似的理论也可以在平衡热场中找到，我们现在要做的就是考察非平衡热场是否也有同样的联通结构。\\
+\\
+相互作用热路径积分由式(\ref{Zdv-/edfs/*..+})确定，这里我们令热多点函数(\ref{NBhjl[[][[r})的分母取零级近似，并记自由场的热路径积分为$Z^{(0)}_{SK}$，则按照通常的处理，我们展开相互作用的指数相得到
+\begin{equation}Z^{}_{SK}(0)=Z^{(0)}_{SK}(0)\qty{1+\sum_{n=1}\frac{1}{n!}\expval{\mathbb P\qty{\qty(i\int\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_+)-\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_-)\dd\Omega)^n}}}.\end{equation}
+由于在\textsl{CTP}表示中涉及两个相互作用部分，因而在高阶修正中会出现多个耦合项，使得图的结构复杂化。当然有一个点是肯定的，那就是这些图只有内点，因此将多点函数展开后，每个非连通图也必然是由若干不同结构的圈图构成的，这和平衡场一样。比如对于平方相互作用$\Lambda^{}_{\text{int}}=\lambda\psi^2$，我们得到一级修正
+$$\frac{Z^{(1)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=i\lambda\int\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)-\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)}}\dd\Omega^{}_x.$$
+由于路径排序$\mathbb P$是线性的，所以该比值就写作
+$$\begin{aligned}\frac{Z^{(1)}_{SK}(0)}{Z^{(0)}_{SK}(0)}&=i\lambda\int\qty(\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)}}-\expval{\mathbb P\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)}})\dd\Omega^{}_x\\&=i\lambda\int\qty(\expval{\mathbb T\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)}}-\expval{\tilde{\mathbb T}\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)}})\dd\Omega^{}_x\\&=i\lambda\int\qty(G^{++}_{KG}(x,x)-G^{--}_{KG}(x,x))\dd\Omega^{}_x.\end{aligned}$$
+在回路规则下，图给出
+\begin{equation}\frac{Z^{(1)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=i\lambda\int\qty(G^{++}_{KG}(x,x)-G^{--}_{KG}(x,x))\dd\Omega^{}_x=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}-\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}.\end{equation}
+也就是两个单点圈图的差，其中内点所处的真实时间相同，但支路不同。二级修正为
+$$\frac{Z^{(2)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=\frac{-\lambda^2}{2}\int\expval{\mathbb P\qty{\qty(\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)-\hat{\psi}^-_I(x)\hat{\psi}^-_I(x))\qty(\hat{\psi}^+_I(y)\hat{\psi}^+_I(y)-\hat{\psi}^-_I(y)\hat{\psi}^-_I(y))}}\dd\Omega^{}_x\dd\Omega^{}_y.$$
+这就变复杂了，因为涉及混合缩并，具体按规则(\ref{D-*..[];fb})展开得到
+$$\begin{aligned}\frac{Z^{(2)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=\frac{-\lambda^2}{2}\int\Big(&\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)\hat{\psi}^+_I(y)\hat{\psi}^+_I(y)}}-\expval{\mathbb P\qty{\hat{\psi}^-_I(y)\hat{\psi}^-_I(y)\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)}}\\&-\expval{\mathbb P\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)\hat{\psi}^+_I(y)\hat{\psi}^+_I(y)}}+\expval{\mathbb P\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)\hat{\psi}^-_I(y)\hat{\psi}^-_I(y)}}\Big)\dd\Omega^2.\end{aligned}$$
+相应的空间回路图就不完整的写了，这里只展示四个全连通的部分
+$$\frac{Z^{(2)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=2\tikz[baseline=1em]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above=1cm of a,dot,scale=.5,label=above:$y^+$](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}-2\tikz[baseline=1em]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above=1cm of a,dot,scale=.5,label=above:$y^-$](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}-2\tikz[baseline=1em]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[above=1cm of a,dot,scale=.5,label=above:$y^+$](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}+2\tikz[baseline=1em]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[above=1cm of a,dot,scale=.5,label=above:$y^-$](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}+\cdots.$$
+这里所展示的是所有四个零级\textsl{Keyldsh}传播子，分别是$G^{++}_{KG}(x,y)$，$G^{+-}_{KG}(x,y)$，$G^{-+}_{KG}(x,y)$和$G^{--}_{KG}(x,y)$，它们在二级近似下都出现了。\\
+\\
+在此基础上，我们来分析任意相互作用的图结构。在回路规则下，非平衡场和平衡热场一样均由热浴泡泡构成，而符号的介入只是增加了每种热浴泡泡的内点种类，但圈图本身并没有改变。值得强调的是，在平方相互作用中我们已经看到，全连通图涉及所有四个\textsl{Keyldsh}传播子。这是显然的，比如对角项$G^{++}_{KG}$和$G^{--}_{KG}$的连通性对应同一支路上不同时空点之间的耦合，而\textsl{Wightman}函数的连通性是由回路规则的内点约束自然确定的，因为若其不连通则只可能是单点圈组合$G^{+-}_{KG}(x,x)G^{+-}_{KG}(y,y)$，这样一来内点符号在两侧就不匹配了，和回路规则冲突。\\
+\\
+于是对于非平衡场而言，任意相互作用的图结构和平衡热场以及零温场完全一样，虽然相对于平衡热场其多出三种热浴泡泡，但热路径积分的展开式必然遍历所有四种热浴泡泡以及它们的各种连通组合，并且相应的符号也只是作为内禀连接系数。所以经过和第\ref{ecvgsddy550r8}节中相同的组合表述，我们同样得到非连通图的指数化，定义为
+\begin{equation}Z^{}_{SK}(0)=Z^{(0)}_{SK}(0)\exp(W^{}_{SK}).\label{*-/*/-++.372485=}\end{equation}
+其中$W^{}_{SK}$代表\textsl{SK}形式中四个\textsl{Keyldsh}传播子对应的热浴泡泡的连通图和，并包含了\textsl{Wightman}函数对应的符号。事实上式(\ref{dFFG-*-**/*///ge})在数学上是恒成立的，而具体物理含义则需要通过图的组合论确定，此处的结论(\ref{*-/*/-++.372485=})也是如此。所以我们完全可以先按照指数化定义$W^{}_{SK}$，再解释其为连通图和。在外场中我们按照式(\ref{wuGGFDFG++//})引入\textsl{SK}泛函
+$$Z^{}_{SK}\qty(J^{}_+,J^{}_-;\beta)=\bigintsss\exp{iS\qty(\psi^{}_+,\psi^{}_-)-i\int J^{}_+\psi^{}_+\dd\Omega-i\int J^{}_-\psi^{}_-\dd\Omega}\mathscr D\psi^{}_+\mathscr D\psi^{}_-,$$
+于是按照式(\ref{GDQERQPDhu})我们得到连通图的和为
+\begin{equation}Z^{}_{SK}\qty(J^{}_+,J^{}_-;\beta)=Z^{(0)}_{SK}(0)\exp[W^{}_{SK}\qty(J^{}_+,J^{}_-;\beta)].\end{equation}
+按照标准程序计算传播子，这里依旧记符号的指标为$l,m=\pm$，同样的一阶导在无外场时为零
+$$C^{lm}(x,y)=-\frac{1}{Z^{}_{SK}\qty(0;\beta)}\eval{\pdv{Z^{}_{SK}\qty(J^{}_+,J^{}_-;\beta)}{J^{}_l(x)}{J^{}_m(y)}}_{\vb{J}^K=0}=-\eval{\pdv{W^{}_{SK}\qty(J^{}_+,J^{}_-;\beta)}{J^{}_l(x)}{J^{}_m(y)}}_{\vb{J}^K=0},$$
+根据同样的理由，这四个传播子应该是全连通的，也就是式(\ref{889/dfg-*-/FFG})的矩阵形式，称为\textbf{全连通\textsl{Keyldsh}矩阵}，记为$\bm{\mathfrak C}^K$。我们将其具体写出
+\begin{equation}\bm{\mathfrak C}^K(x,y)=\mqty(\mathfrak C^{++}&\mathfrak C^{+-}\\ \mathfrak C^{-+}&\mathfrak C^{--})(x,y)=\eval{\pdv{W^{}_{SK}\qty(\vb{J}^K;\beta)}{\vb{J}^K(x)}{\vb{J}^K(y)}}_{\vb{J}^K=0}=\mqty{\text{Sum of all connected diagram}\\ \text{with two external points}}.\label{rGvnqer13*/*}\end{equation}
+这个矩阵是可逆的，请读者自行证明。这样我们通过定性分析，完成了非平衡热场的非连通图的指数化，以及相应的全连通传播子的计算。可以看到在本质上，这些结论是纯数学的，所以它们在物理含义上也是类似的。\\
+\\
+现在来处理\textsl{LG}热力学结构，按照式(\ref{wuwuw198})我们引入自由能
+\begin{equation}\exp(iF[\vb{J}^K(x)])=Z^{}_{SK}[\vb{J}^K(x);\beta],\end{equation}
+从而其和连通图的的关系为$F\qty(\vb{J}^K)=F^{}_0-iW^{}_{SK}\qty(\vb{J}^K;\beta)$。可以想到在形式上，实标量\textsl{SK}形式和波函数场是类似的，因此我们可以直接从式(\ref{iNDfsf--[[]g]]5})写出序参量
+\begin{equation}\eta^{}_+=\expval{\hat{\psi}^{}_+}^{}_J=-\pdv{F(\vb{J}^K)}{J^{}_+},\quad\eta^{}_-=\expval{\hat{\psi}^{}_-}^{}_J=-\pdv{F(\vb{J}^K)}{J^{}_-}\implies\bm{\eta}^K=\mqty(\eta^{}_+\\ \eta^{}_-)=-\pdv{F(\vb{J}^K)}{\vb{J}^K}.\label{Xuc][POI[-}\end{equation}
+其中$\bm{\eta}^K$是\textsl{Keyldsh}矢量形式的序参量，读者可以自行按照式(\ref{Eo-++..312351/jb})计算，这里就不赘述了。相应的有效作用量记为$\Gamma^{}_{SK}$，按定义其为系统的自由焓，根据式(\ref{bufang})我们直接写出
+\begin{equation}\Gamma^{}_{SK}\qty(\bm{\eta}^K)=F\qty(\vb{J}^K)+\int\vb{J}^K\cdot\bm{\eta}^K\dd\Omega=F\qty(\vb{J}^K)+\int\qty(J^{}_+\eta^{}_++J^{}_-\eta^{}_-)\dd\Omega,\end{equation}
+其满足自由焓恒等式
+\begin{equation}\pdv{\Gamma^{}_{SK}\qty(\bm{\eta}^K)}{\bm{\eta}^K}=\vb{J}^K\implies\pdv{\Gamma^{}_{SK}}{\eta^{}_+}=J^{}_+,\quad\pdv{\Gamma^{}_{SK}}{\eta^{}_-}=J^{}_-.\label{[qer]D[fdfg0]}\end{equation}
+在此基础上我们来计算\textsl{SK}形式的互易关系，将全连通\textsl{Keyldsh}矩阵(\ref{rGvnqer13*/*})用自由能$F$表示，并带入序参量(\ref{Xuc][POI[-})得到
+$$\bm{\mathfrak C}^K(x,y)=-i\eval{\pdv{F\qty(\vb{J}^K)}{\vb{J}^K(x)}{\vb{J}^K(y)}}_{\vb{J}^K=0}=i\eval{\pdv{\bm{\eta}^K(x)}{\vb{J}^K(y)}}_{\vb{J}^K=0}\implies\mathfrak C^K_{lm}(x,y)=i\eval{\pdv{\eta^{}_l(x)}{J^{}_m(y)}}_{J^l=0}.$$
+现在我们引入该磁化率的倒数，但这里需要注意其定义。在实标量\textsl{KG}场中场算符为$-\square$，将自由场方程组(\ref{dudu98786786665})以矩阵形式写作
+$$-\square\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(x,y)=\mqty(1&0\\0&-1)i\delta^{}_{xy},$$
+或者用第三个\textsl{Pauli}矩阵给出更普遍的形式
+\begin{equation}-\square\vb{G}^K_{KG}(x,y)=i\hat{\sigma}^{}_3\delta^{}_{xy}\Longleftrightarrow -\square G^{lm}_{KG}(x,y)=i\delta^{}_{xy}\hat{\sigma}^{lm}_3.\label{Scb08456**}\end{equation}
+也就是说，自由传播子的倒数为$\qty(\vb{G}^K_{KG})^{-1}\propto i\hat{\sigma}^{}_3$，它必须和$\hat{\sigma}^{}_3$相关。这是很明显的，因为\textsl{CTP}作用量写作$\Lambda\qty(\psi^{}_+)-\Lambda\qty(\psi^{}_-)$，其正向支和反向支差一个负号，$\hat{\sigma}^{}_3$的引入正是为了平衡符号。因此该磁化率的倒数应定义为
+\begin{equation}-i\sum_n\bigintsss\mathfrak C^K_{ln}(x,z)\eval{\pdv{J^{}_n(z)}{\eta^{}_m(y)}}_{\eta^{}_l=0}\dd\Omega^{}_z=-i\sum_n\bigintsss\mathfrak C^K_{ln}(x,z)\eval{\pdv{\Gamma^{}_{SK}\qty(\bm{\eta}^K)}{\eta^{}_n(z)}{\eta^{}_m(y)}}_{\eta^{}_l=0}\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3,\end{equation}
+其中第一个等号，我们对外场带入了式(\ref{[qer]D[fdfg0]})，最后的$\hat{\sigma}^{lm}_3$正是正反支以及耦合为零的体现。同样的我们按照式(\ref{BNM,P;Phb98++})引入有效作用量的\textsl{Hessian}，注意这是一个标准的二维矩阵的矩阵元
+\begin{equation}\mathscr H^{lm}_\Gamma(x,y)=-i\eval{\pdv{\Gamma\qty(\bm{\eta}^K)}{\eta^{}_l(x)}{\eta^{}_m(y)}}_{\eta^{}_l=0},\end{equation}
+从而\textsl{SK}形式的互易关系写作
+\begin{equation}\sum_{n=\pm}\int\mathfrak C^{ln}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3\Longleftrightarrow\int\bm{\mathfrak C}^K(x,z)\mathscr H^K_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{}_3.\label{h4367//..2310Fy}\end{equation}
+其中$\mathscr H^K_\Gamma$是二维\textsl{Hessian}矩阵。这个等式就是逆矩阵的标准定义，从而零温场的结论(\ref{Recihb98++})在非平衡热场中就体现为全连通\textsl{Keyldsh}矩阵的逆。\\
+\\
+有了互易关系之后，我们就可以来处理\textsl{Dyson}方程和\textsl{BD}级数了。不妨按照第\ref{1pL//-..][rG}节重新推导，依旧按照微扰将全连通\textsl{Keyldsh}张量展开为自由场和其余的和，方便起见下面的推导以矩阵元为主
+$$\mathfrak C^{lm}(x,y)=G^{lm}_{KG}(x,y)+\mathfrak C^{(res)}_{lm}(x,y),$$
+从而互易关系(\ref{h4367//..2310Fy})给出
+$$\sum_n\int G^{ln}_{KG}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3-\sum_n\int \mathfrak C^{(res)}_{ln}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z.$$
+暂且将自由场\textsl{Keyldsh}矩阵的逆矩阵记为$\qty(\vb{G}^K_{KG})^{-1}$，其满足$\hat{\sigma}^{}_3$归一化
+\begin{equation}\sum_nC^{-1}_{ln}C^{nm}=\hat{\sigma}^{lm}_3,\label{FH--..3514==[}\end{equation}
+根据互易关系(\ref{h4367//..2310Fy})这是\textsl{Hessian}的零级近似$\mathscr H^{K(0)}_\Gamma=\qty(\vb{G}^K_{KG})^{-1}$，且容易验证$\hat{\sigma}^{}_3$为\textsl{Keyldsh}张量的度规
+\begin{equation}\sum_n\hat{\sigma}^{ln}C^{nm}_3=C^{lm},\quad \sum_n\hat{\sigma}^{ln}_3C^{-1}_{nm}=C^{-1}_{lm}.\end{equation}
+则我们得到\textsl{Hessian}为
+\begin{equation}\mathscr H^{lm}_\Gamma(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\sum_{n,k}\int\qty(G^{lk}_{KG})^{-1}(x,1)\mathfrak C^{(res)}_{kn}(1,2)\mathscr H^{nm}_\Gamma(2,y)\dd\Omega^{}_1\dd\Omega^{}_2.\end{equation}
+这是一个典型的\textsl{LS}方程，同样将第二项记为$\Sigma$，但此时这是一个二维矩阵的矩阵元$\Sigma^{lm}$，定义为
+\begin{equation}\Sigma^{lm}(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\mathscr H^{lm}_\Gamma(x,y)\implies \bm{\Sigma}^K=\mathscr H^{K(0)}_\Gamma-\mathscr H^K_\Gamma.\end{equation}
+回代入互易关系我们得到
+$$\sum_n\int\qty(G^{ln}_{KG})^{-1}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3+\sum_{n}\int\Sigma^{ln}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z,$$
+根据\textsl{SD}方程(\ref{Scb08456**})和归一化(\ref{FH--..3514==[})容易解得$\qty(\vb{G}^{K}_{KG})^{-1}=i\square$，其\textsl{Green}函数为$\vb{G}^{K}_{KG}$，我们就重新得到\textsl{Dyson}方程
+\begin{equation}\mathfrak C^{lm}(x,y)=G^{lm}_{KG}(x,y)+\sum_{n,k}\int G^{lk}_{KG}(x,c)\Sigma^{kn}(c,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z\dd\Omega^{}_c,\end{equation}
+以及相应的\textsl{BD}级数解
+\begin{equation}\begin{aligned}\mathfrak C^{lm}_{KG}&(x,y)=G^{lm}_{KG}(x,y)+\sum_{n,k}\int G^{lk}_{KG}(x,c)\Sigma^{kn}(c,z)G^{nm}_{KG}(z,y)\dd\Omega^{}_z\dd\Omega^{}_c\\&+\sum_{n^{}_1,n^{}_2,n^{}_3,n^{}_4}\int G^{ln^{}_1}_{KG}(x,a)\Sigma^{n^{}_1n^{}_2}(a,b)G^{n^{}_2n^{}_3}_{KG}(b,c)\Sigma^{n^{}_3n^{}_4}(c,d)G^{n^{}_4m}_{KG}(d,y)\dd\Omega^4\\&+\cdots.\end{aligned}\end{equation}
+当然更好的选择是矩阵形式，积分用核形式化简
+\begin{equation}\begin{aligned}&\text{\textsl{Dyson}方程：}i\square\bm{\mathfrak C}^K=\hat{\sigma}^{}_3+\vb{\Sigma}^K\bm{\mathfrak C}^K,\quad\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\bm{\mathfrak C}^K,\\&\text{\textsl{BD}级数：}\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}+\cdots.\end{aligned}\label{Yat623457}\end{equation}
+关于$\vb{\Sigma}^K$的图含义，以及\textsl{SK}形式的\textit{1PI}这里就不再重新计算了，根据之前的结论可知，这些都可以直接从第\ref{1pL//-..][rG}节直接得到。但需要说明的是，目前为止我们一直都处于回路规则中，并非\textsl{RA}规则，因此这里的\textit{1PI}是回路图，式(\ref{UGYU[0274378][})现在写为
+\begin{equation}\Sigma^{lm}(x,y)=\text{Sum of all contour \textit{1PI} with two external legs},\quad \forall l,m=\pm.\end{equation}
+也就是不可拆分的回路热浴泡泡和，这些和中包含所有可能的顶点种类，以及相应的符号。\\
+\\
+现在我们来讨论$\bm{\Sigma}^K$的代数性质，首先注意到式(\ref{Yat623457})的\textsl{Dyson}方程，如果我们将算符$\qty(G^{lm}_{KG})^{-1}$作用到右侧的\textsl{LS}方程，并和左侧的微分方程对比得到
+$$i\square\bm{\mathfrak C}^K=\hat{\sigma}^{}_3+\hat{\sigma}^{}_3\vb{\Sigma}^K\bm{\mathfrak C}^K=\hat{\sigma}^{}_3+\vb{\Sigma}^K\bm{\mathfrak C}^K,$$
+这里已经带入了\textsl{SD}方程(\ref{Scb08456**})$i\square\vb{G}^K_{KG}=\hat{\sigma}^{}_3$。于是我们看到$\vb{\Sigma}^K=\hat{\sigma}^{}_3\vb{\Sigma}^K$，将指标具体写出为
+\begin{equation}\sum_n\hat{\sigma}^{ln}_3\Sigma^{nm}=\Sigma^{lm},\end{equation}
+也就是说$\bm{\Sigma}^K$同样以$\hat{\sigma}^{}_3$为度规。这并不是一个显而易见的性质，
 
 
 
 
 
 
-\subsubsection{Schwinger-Keyldsh形式的Dyson方程}
-\noindent 这里我们以\textbf{\textsl{Boltzmann}动理方程 \textit{Boltzmann Kinetic Equation}}作为收尾，推导参考自\cite{Ld3k}\S 95。
+\subsubsection{Boltzmann动理方程引入}
+\noindent 现在让我们回到波函数场，以\textbf{\textsl{Boltzmann}动理方程 \textit{Boltzmann Kinetic Equation}}作为收尾，推导参考自\cite{Ld3k}\S 95。
 
 
 
