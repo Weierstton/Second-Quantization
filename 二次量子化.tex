@@ -234,21 +234,21 @@ $$\comm{\hat{a}}{\hat{a}^{\dagger}}=\hat{\vb{I}},\quad \comm{\hat{a}}{\hat{a}}=\
 式(\ref{Bogoliubov2})称为\textbf{\textsl{Bogoliubov}条件}，满足该条件并形如式(\ref{Bogoliubov1})的线性变换称为\textbf{\textsl{Bogoliubov}变换}(\textsl{\rusa{Н. Н. Боголюбов}}，1958)，是二次量子化理论中，乃至近代物理中最核心的变换之一，和\textsl{Unruh}效应，\textsl{Hawking}辐射，核物理中的配对效应等都相关。\\
 \\
 如果我们将产生和湮没算符对看作是一个向量的两个分量，则我们可以将\textsl{Bogoliubov}变换写为矩阵形式
-\begin{equation}\vb{R}(\hat{a})=\pmqty{\hat{a}\\ \hat{a}^{\dagger}}\implies\vb{R}(\hat{b})=\pmqty{\hat{b}\\ \hat{b}^{\dagger}}=\bm{\Gamma}\pmqty{\hat{a}\\ \hat{a}^{\dagger}},\quad \bm{\Gamma}=\pmqty{u&v\\ v^*&u^*},\label{Bobov564}\end{equation}
-其中$\bm{\Gamma}$称为\textbf{\textsl{Bogoliubov}变换矩阵}，并且变换关系(\ref{Bogoliubov2})写为
-\begin{equation}\abs{\bm{\Gamma}}=\abs{u}^2-\abs{v}^2=1.\label{pyaozeh}\end{equation}
-满足这样条件的矩阵$\bm{\Gamma}$称为\textbf{伪幺正性的 \textit{Pesudo-unitary}}，所有类似的矩阵的集合称为\textbf{伪幺正群}，记为$PSU(2)$，因为一般的特殊幺正群$SU(2)$满足\textbf{幺正条件}
+\begin{equation}\vb{R}(\hat{a})=\pmqty{\hat{a}\\ \hat{a}^{\dagger}}\implies\vb{R}(\hat{b})=\pmqty{\hat{b}\\ \hat{b}^{\dagger}}=\vb{\Gamma}\pmqty{\hat{a}\\ \hat{a}^{\dagger}},\quad \vb{\Gamma}=\pmqty{u&v\\ v^*&u^*},\label{Bobov564}\end{equation}
+其中$\vb{\Gamma}$称为\textbf{\textsl{Bogoliubov}变换矩阵}，并且变换关系(\ref{Bogoliubov2})写为
+\begin{equation}\abs{\vb{\Gamma}}=\abs{u}^2-\abs{v}^2=1.\label{pyaozeh}\end{equation}
+满足这样条件的矩阵$\vb{\Gamma}$称为\textbf{伪幺正性的 \textit{Pesudo-unitary}}，所有类似的矩阵的集合称为\textbf{伪幺正群}，记为$PSU(2)$，因为一般的特殊幺正群$SU(2)$满足\textbf{幺正条件}
 \begin{equation}\abs{u}^2+\abs{v}^2=1.\label{yaozz343}\end{equation}
 依此结论，我们具体计算$\vb{U}$的转置共轭会得到
-\begin{equation}\bm{\Gamma}^{\dagger}=\pmqty{u^*&v\\ v^*&u}\implies\bm{\Gamma}\bm{\Sigma}\bm{\Gamma}^{\dagger}=\pmqty{\abs{u}^2-\abs{v}^2&uv-vu\\ v^*u^*-u^*v^*&\abs{v}^2-\abs{u}^2}=\bm{\Sigma},\quad \bm{\Sigma}=\pmqty{1&0\\0&-1}.\label{Bogoliubov3}\end{equation}
-称$\bm{\Sigma}$为\textbf{伪幺正度规 \textit{Pseudo-unitary Metric}}，其是$PSU(2)$的单位元，对于$SU(2)$的单位元就是单位矩阵$\vb{I}$。在谐振子系统下我们看到，\textit{Hamiltonian}算符的初始形式(\ref{RFGHBFc})可以在目前的矩阵下写为
+\begin{equation}\vb{\Gamma}^{\dagger}=\pmqty{u^*&v\\ v^*&u}\implies\vb{\Gamma}\vb{\Sigma}\vb{\Gamma}^{\dagger}=\pmqty{\abs{u}^2-\abs{v}^2&uv-vu\\ v^*u^*-u^*v^*&\abs{v}^2-\abs{u}^2}=\vb{\Sigma},\quad \vb{\Sigma}=\pmqty{1&0\\0&-1}.\label{Bogoliubov3}\end{equation}
+称$\vb{\Sigma}$为\textbf{伪幺正度规 \textit{Pseudo-unitary Metric}}，其是$PSU(2)$的单位元，对于$SU(2)$的单位元就是单位矩阵$\vb{I}$。在谐振子系统下我们看到，\textit{Hamiltonian}算符的初始形式(\ref{RFGHBFc})可以在目前的矩阵下写为
 \begin{equation}\hat{H}=\hbar\omega\dfrac{\hat{a}^{\dagger}\hat{a}+\hat{a}\hat{a}^{\dagger}}{2}=\frac{1}{2}E\vb{R}^{\dagger}(\hat{a})\vb{R}(\hat{a})=\frac{1}{2}E\vb{R}^*(\hat{a})\cdot\vb{R}(\hat{a}),\label{duibinmb}\end{equation}
 这就是对角化形式。但是一般\textit{Hamiltonian}算符并非直接就是对角化的，我们用矩阵写为
 \begin{equation}\hat{H}=\vb{R}^{\dagger}(\hat{a})\vb{Y}\vb{R}(\hat{a})=E\vb{R}^*\qty(\hat{b})\cdot\vb{R}\qty(\hat{b}),\label{Bogoliubov4}\end{equation}
 其中$\vb{Y}$就是双线性型$f(\hat{a}^{\dagger},\hat{a})$的二次型，称为系统的\textbf{\textit{Hamiltonian}二次型}，于是带入\textsl{Bogoliubov}变换得到
-$$E\vb{R}^{\dagger}\qty(\hat{b})\vb{R}\qty(\hat{b})=E\vb{R}^{\dagger}(\hat{a})\bm{\Gamma}^{\dagger}\bm{\Gamma}\vb{R}(\hat{a})=\vb{R}^{\dagger}(\hat{a})\vb{Y}\vb{R}(\hat{a}),$$
+$$E\vb{R}^{\dagger}\qty(\hat{b})\vb{R}\qty(\hat{b})=E\vb{R}^{\dagger}(\hat{a})\vb{\Gamma}^{\dagger}\vb{\Gamma}\vb{R}(\hat{a})=\vb{R}^{\dagger}(\hat{a})\vb{Y}\vb{R}(\hat{a}),$$
 这里要注意$\vb{R}^{\dagger}$的转置性会导致乘积的转置顺序相反，于是我们得到对角化条件为
-\begin{equation}E\bm{\Gamma}^{\dagger}\bm{\Gamma}=E\pmqty{\abs{u}^2+\abs{v}^2&2u^*v\\2v^*u&\abs{v}^2+\abs{u}^2}=\vb{Y}=\pmqty{Y^{}_{11}&Y^{}_{12}\\ Y^{}_{21}&Y^{}_{22}}.\label{Boo7mv-*v}\end{equation}
+\begin{equation}E\vb{\Gamma}^{\dagger}\vb{\Gamma}=E\pmqty{\abs{u}^2+\abs{v}^2&2u^*v\\2v^*u&\abs{v}^2+\abs{u}^2}=\vb{Y}=\pmqty{Y^{}_{11}&Y^{}_{12}\\ Y^{}_{21}&Y^{}_{22}}.\label{Boo7mv-*v}\end{equation}
 这一结论称为\textbf{\textsl{Bogoliubov}方程}，不难发现它就是对角化定理，$E$是双重简并的本征值。对于具体的二次型，只要带入式(\ref{Bogoliubov2})求出具体的参数$r$，再将变换后的算符在占有数表象下，替换为占有数算符
 $$\hat{b}^{\dagger}\hat{b}=\hat{n}$$
 即可。对于谐振子模型，不难解得$r=0$。当然我们这里只涉及到单能级，多能级跃迁的变换，以及连续谱形式在后续会介绍。需要强调的是，\textsl{Bogoliubov}变换后的二次量子化算符不一定和原粒子有关，因为其改变了占有数，这在后续具体的应用中会看到。\\
@@ -411,15 +411,15 @@ $$\comm{\hat{d}^{}_i}{\hat{d}^{}_k} = \comm{\hat{d}^{\dagger}_i}{\hat{d}^{\dagge
 如果我们以矩阵$\vb{u},\vb{v}$来表示的话，则我们得到
 \begin{equation}\vb{u}\vb{u}^{\dagger}-\vb{v}\vb{v}^{\dagger}=\vb{I},\quad \vb{u}\vb{v}^T-\vb{v}\vb{u}^T=\vb{v}^*\vb{u}^{\dagger}-\vb{u}^*\vb{v}^{\dagger}=\vb{0}.\end{equation}
 这些公式可以被认为是式(\ref{Bogoliubov2})的矩阵扩充，换成数的话只需要取$u^{}_{11}=u,v^{}_{11}=v$即可。如果我们同样将这四个系数$u^{ij},v^{ij},u^{*ij},v^{*ij}$合并到一个矩阵内，我们可以给出\textsl{Bogoliubov}变换矩阵的分块形式
-\begin{equation}\bm{\Gamma}=\begin{pNiceArray}{c:c}[margin]\vb{u}&\vb{v}\\ \cdashline{1-2} \vb{v}^*&\vb{u}^*\end{pNiceArray},\quad \bm{\Gamma}^{\dagger}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{\dagger}&\vb{v}^{T}\\ \hdashline \vb{v}^{\dagger}&\vb{u}^{T}\end{pNiceArray},\label{fenkuai}\end{equation}
-于是玻色对易关系和\textsl{Bogoliubov}条件就给定了$\bm{\Gamma}$的性质，注意到$\vb{u}^*\vb{v}^T=\vb{u}\vb{v}^{\dagger}$，则我们得到
-\begin{equation}\bm{\Gamma}\bm{\Sigma}\bm{\Gamma}^{\dagger}=\pmqty{\vb{u}\vb{u}^{\dagger}-\vb{v}\vb{v}^{\dagger}&\vb{u}\vb{v}^T-\vb{v}\vb{u}^T\\\vb{v}^*\vb{u}^{\dagger}-\vb{u}^*\vb{v}^{\dagger}&\vb{v}\vb{v}^{\dagger}-\vb{u}\vb{u}^{\dagger}}=\bm{\Sigma},\end{equation}
-其中$\bm{\Sigma}$是伪幺正度规。于是我们再次得到了式(\ref{Bogoliubov3})的伪幺正性，这事实上就保持了系统的玻色对易，因此我们总结到
+\begin{equation}\vb{\Gamma}=\begin{pNiceArray}{c:c}[margin]\vb{u}&\vb{v}\\ \cdashline{1-2} \vb{v}^*&\vb{u}^*\end{pNiceArray},\quad \vb{\Gamma}^{\dagger}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{\dagger}&\vb{v}^{T}\\ \hdashline \vb{v}^{\dagger}&\vb{u}^{T}\end{pNiceArray},\label{fenkuai}\end{equation}
+于是玻色对易关系和\textsl{Bogoliubov}条件就给定了$\vb{\Gamma}$的性质，注意到$\vb{u}^*\vb{v}^T=\vb{u}\vb{v}^{\dagger}$，则我们得到
+\begin{equation}\vb{\Gamma}\vb{\Sigma}\vb{\Gamma}^{\dagger}=\pmqty{\vb{u}\vb{u}^{\dagger}-\vb{v}\vb{v}^{\dagger}&\vb{u}\vb{v}^T-\vb{v}\vb{u}^T\\\vb{v}^*\vb{u}^{\dagger}-\vb{u}^*\vb{v}^{\dagger}&\vb{v}\vb{v}^{\dagger}-\vb{u}\vb{u}^{\dagger}}=\vb{\Sigma},\end{equation}
+其中$\vb{\Sigma}$是伪幺正度规。于是我们再次得到了式(\ref{Bogoliubov3})的伪幺正性，这事实上就保持了系统的玻色对易，因此我们总结到
 \begin{center}\emph{对于玻色子系统的二次量子化，\textsl{Bogoliubov}变换矩阵一定是伪幺正性的。}\end{center}
 同样的我们可以给出\textsl{Bogoliubov}变换的矩阵形式，定义各类算符矢量
 \begin{equation}\hat{\vb{c}}=\pmqty{\hat{c}^{}_1\\ \hat{c}^{}_2\\ \vdots},\quad \hat{\vb{c}}^{\dagger}=\pmqty{\hat{c}^{\dagger}_1\\ \hat{c}^{\dagger}_2\\ \vdots},\quad \vb{R}\qty(\hat{\vb{c}})=\pmqty{\hat{\vb{c}}\\ \hdashline\hat{\vb{c}}^{\dagger}},\end{equation}
 则\textsl{Bogoliubov}变换为
-\begin{equation}\vb{R}\qty(\hat{\vb{d}})=\bm{\Gamma}\vb{R}\qty(\hat{\vb{c}}).\end{equation}
+\begin{equation}\vb{R}\qty(\hat{\vb{d}})=\vb{\Gamma}\vb{R}\qty(\hat{\vb{c}}).\end{equation}
 如果我们参考式(\ref{Bogoliubov2})的参数形式，可以给定参数矩阵$\vb{r}=(r^{}_{ab})$，使得系数在实数域$\mathbb R$内的形式为
 \begin{equation}\vb{u}=\sqrt{\frac{1}{d}}\cosh(\vb{r})\Longleftrightarrow u^{}_{ij}=\sqrt{\frac{1}{d}}\cosh(r^{}_{ij}),\quad \vb{v}=\sqrt{\frac{1}{d}}\sinh(\vb{r})\Longleftrightarrow v_{ij}=\sqrt{\frac{1}{d}}\sinh(r^{}_{ij}),\end{equation}
 其中$d=\dim(\vb{u})=\dim(\vb{v})$是系数矩阵的维数，前面的系数为归一化，读者可自行验证。\\
@@ -433,7 +433,7 @@ $$\hat{H}^{}_i=E^{}_i\hat{N}^{}_i=E^{}_i\hat{d}^{\dagger}_i\hat{d}^{}_i=\frac{1}
 这里请读者自行验证上述对角化的正确性。当然对于一般的\textit{Hamiltonian}算符，我们仍可以用其二次型$\vb{Y}$来表示$\vb{R}(\hat{\vb{c}})$下的形式
 \begin{equation}\hat{H}=\vb{R}^{\dagger}(\hat{\vb{c}})\vb{Y}\vb{R}(\hat{\vb{c}})+\hat{H}^0,\end{equation}
 则略去常数项后，玻色子系统的\textsl{Bogoliubov}方程为
-\begin{equation}\vb{Y}=\bm{\Gamma}^{\dagger}\mathbb E\bm{\Gamma}.\end{equation}
+\begin{equation}\vb{Y}=\vb{\Gamma}^{\dagger}\mathbb E\vb{\Gamma}.\end{equation}
 可以看到其在单能级化为式(\ref{Boo7mv-*v})的形式，因此这里的结论也是单能级的矩阵扩充。当然最后我们不要忘记，对应的能级仍然需要在占有数表象下求解。
 
 \subsection{波函数算符和密度矩阵}\label{98ujo}
@@ -642,47 +642,47 @@ $$\begin{aligned}f^{(1)}_{ik}(-1)^{\sum(i+1,k-1)}\ket{1^{}_i,0^{}_k}&=f^{(1)}_{i
 这是显而易见的，但是由于算符的反对易性会使得\textsl{Bogoliubov}变换产生变化。我们依旧从单能级出发，此时系统的\textit{Hamiltonian}算符为
 $$\hat{H}=E\hat{a}^{\dagger}\hat{a}=\frac{1}{2}E\qty(\hat{a}^{\dagger}\hat{a}-\hat{a}\hat{a}^{\dagger}+\hat{\vb{I}}).$$
 对比玻色子系统的形式(\ref{duibinmb})，我们发现算符在对易后从加号变为减号，也就是
-\begin{equation}\text{玻色子：}\hat{H}\propto\hat{a}^{\dagger}\hat{a}\ \textbf{+}\ \hat{a}\hat{a}^{\dagger}=\vb{R}^{\dagger}(\hat{a})\vb{R}(\hat{a})\rightarrow\text{费米子：}\hat{H}\propto\hat{a}^{\dagger}\hat{a}\ \textbf{-}\ \hat{a}\hat{a}^{\dagger}=\qty{\vb{R}^{\dagger}(\hat{a})\bm{\Sigma}}\vb{R}(\hat{a}).\end{equation}
-其中$\bm{\Sigma}=\pmqty{1&0\\0&-1}$就是伪幺正度规，这事实上就是反对易性的体现，因为加号最终只会给出$\hat{\vb{I}}$。\\
+\begin{equation}\text{玻色子：}\hat{H}\propto\hat{a}^{\dagger}\hat{a}\ \textbf{+}\ \hat{a}\hat{a}^{\dagger}=\vb{R}^{\dagger}(\hat{a})\vb{R}(\hat{a})\rightarrow\text{费米子：}\hat{H}\propto\hat{a}^{\dagger}\hat{a}\ \textbf{-}\ \hat{a}\hat{a}^{\dagger}=\qty{\vb{R}^{\dagger}(\hat{a})\vb{\Sigma}}\vb{R}(\hat{a}).\end{equation}
+其中$\vb{\Sigma}=\pmqty{1&0\\0&-1}$就是伪幺正度规，这事实上就是反对易性的体现，因为加号最终只会给出$\hat{\vb{I}}$。\\
 \\
-同样的我们引入\textsl{Bogoliubov}变换矩阵$\bm{\Gamma}$，给出矩阵形式
-\begin{equation}\vb{R}\qty(\hat{b})=\pmqty{\hat{b}\\ \hat{b}^{\dagger}}=\bm{\Gamma}\pmqty{\hat{a}\\ \hat{a}^{\dagger}},\quad \bm{\Gamma}=\pmqty{u&v\\ v^*&u^*},\end{equation}
+同样的我们引入\textsl{Bogoliubov}变换矩阵$\vb{\Gamma}$，给出矩阵形式
+\begin{equation}\vb{R}\qty(\hat{b})=\pmqty{\hat{b}\\ \hat{b}^{\dagger}}=\vb{\Gamma}\pmqty{\hat{a}\\ \hat{a}^{\dagger}},\quad \vb{\Gamma}=\pmqty{u&v\\ v^*&u^*},\end{equation}
 并且我们要求$\qty{\hat{b},\hat{b}^{\dagger}}$满足费米反对易关系
 $$\hat{b}\hat{b}^{\dagger}+\hat{b}^{\dagger}\hat{b}=\hat{\vb{I}},\quad \hat{b}\hat{b}=\hat{b}^{\dagger}\hat{b}^{\dagger}=\vb{0}.$$
 于是我们带入求得\textsl{Bogoliubov}条件为
 \begin{equation}\abs{u}^2+\abs{v}^2=1,\quad uv=u^*v^*=0\implies\begin{cases}\displaystyle u=e^{i\theta^{}_1},&\\ \displaystyle v=0\end{cases}\quad\text{或者}\quad\begin{cases}u=0,&\\ v=e^{i\theta^{}_2}\end{cases}.\label{unhommep}\end{equation}
-其中第一条就是幺正条件(\ref{yaozz343})。对比式(\ref{Bogoliubov2})不难发现，等式从双曲关系变为了三角关系，从而变换矩阵$\bm{\Gamma}$从伪幺正矩阵$PSU(2)$变为特殊幺正矩阵$SU(2)$。但同时又因为自身的反对易性要求$uv=0$，进而导致$\bm{\Gamma}$只能为对角型或斜对角型。因此我们总结其转置共轭为
-\begin{equation}\bm{\Gamma}^{\dagger}\bm{\Gamma}=\pmqty{\abs{u}^2+\abs{v}^2&uv+vu\\ v^*u^*+u^*v^*&\abs{v}^2+\abs{u}^2}=\vb{I}\implies\bm{\Gamma}^{\dagger}=\bm{\Gamma}^{-1},\end{equation}
+其中第一条就是幺正条件(\ref{yaozz343})。对比式(\ref{Bogoliubov2})不难发现，等式从双曲关系变为了三角关系，从而变换矩阵$\vb{\Gamma}$从伪幺正矩阵$PSU(2)$变为特殊幺正矩阵$SU(2)$。但同时又因为自身的反对易性要求$uv=0$，进而导致$\vb{\Gamma}$只能为对角型或斜对角型。因此我们总结其转置共轭为
+\begin{equation}\vb{\Gamma}^{\dagger}\vb{\Gamma}=\pmqty{\abs{u}^2+\abs{v}^2&uv+vu\\ v^*u^*+u^*v^*&\abs{v}^2+\abs{u}^2}=\vb{I}\implies\vb{\Gamma}^{\dagger}=\vb{\Gamma}^{-1},\end{equation}
 这就是特殊幺正矩阵的性质。如果我们希望得到非对角的\textsl{Bogoliubov}变换矩阵，也就是$uv\neq0$，则根据幺正条件不难想到，只需令其为矩阵的行列式
-$$\abs{\bm{\Gamma}}=\abs{u}^2+\abs{v}^2=1$$
+$$\abs{\vb{\Gamma}}=\abs{u}^2+\abs{v}^2=1$$
 即可，这样一来我们就和玻色子的伪幺正条件(\ref{pyaozeh})合并为\textbf{旋转群约束}
-\begin{equation}\abs{\bm{\Gamma}}=1,\end{equation}
+\begin{equation}\abs{\vb{\Gamma}}=1,\end{equation}
 也就是行列式为$1$。同时不难解得此时的矩阵形式，按照\textbf{正规幺正矩阵}的写法为
-\begin{equation}\bm{\Gamma}=\pmqty{u&-v\\ v^*&u^*}.\label{feipp}\end{equation}
+\begin{equation}\vb{\Gamma}=\pmqty{u&-v\\ v^*&u^*}.\label{feipp}\end{equation}
 这是我们后续最常采用的费米\textsl{Bogoliubov}变换矩阵，此时费米反对易条件自动满足，请读者自行验证。同样引入\textit{Hamiltonian}算符的一般二次型$\vb{Y}$，使得算符为
-\begin{equation}\hat{H}=\qty(\vb{R}^{\dagger}(\hat{a})\bm{\Sigma})\vb{Y}\vb{R}(\hat{a})=E\qty(\vb{R}^{\dagger}\qty(\hat{b})\bm{\Sigma})\vb{R}\qty(\hat{b}),\end{equation}
-这里应该将$\vb{R}^{\dagger}\bm{\Sigma}$看作一个整体以保证反对易性，带入变换矩阵解得\textsl{Bogoliubov}方程为
-\begin{equation}E\bm{\Gamma}^{\dagger}\bm{\Sigma}\bm{\Gamma}=\bm{\Sigma}\vb{Y}.\end{equation}
-当然我们注意到$\bm{\Sigma}^2=\vb{I}$，因此和玻色子系统相同的形式为
-\begin{equation}E\bm{\Sigma}\bm{\Gamma}^{\dagger}\bm{\Sigma}\bm{\Gamma}=\vb{Y}.\end{equation}
+\begin{equation}\hat{H}=\qty(\vb{R}^{\dagger}(\hat{a})\vb{\Sigma})\vb{Y}\vb{R}(\hat{a})=E\qty(\vb{R}^{\dagger}\qty(\hat{b})\vb{\Sigma})\vb{R}\qty(\hat{b}),\end{equation}
+这里应该将$\vb{R}^{\dagger}\vb{\Sigma}$看作一个整体以保证反对易性，带入变换矩阵解得\textsl{Bogoliubov}方程为
+\begin{equation}E\vb{\Gamma}^{\dagger}\vb{\Sigma}\vb{\Gamma}=\vb{\Sigma}\vb{Y}.\end{equation}
+当然我们注意到$\vb{\Sigma}^2=\vb{I}$，因此和玻色子系统相同的形式为
+\begin{equation}E\vb{\Sigma}\vb{\Gamma}^{\dagger}\vb{\Sigma}\vb{\Gamma}=\vb{Y}.\end{equation}
 事实上，如果我们记
-$$\vb{I}=\bm{\Sigma}_+=\pmqty{1&0\\0&1},\quad \bm{\Sigma}=\bm{\Sigma}^{}_-=\pmqty{1&0\\0&-1},$$
+$$\vb{I}=\vb{\Sigma}_+=\pmqty{1&0\\0&1},\quad \vb{\Sigma}=\vb{\Sigma}^{}_-=\pmqty{1&0\\0&-1},$$
 则两个\textsl{Bogoliubov}方程可以整合为
-\begin{equation}E\bm{\Sigma}^{}_{\pm}\bm{\Gamma}^{\dagger}\bm{\Sigma}^{}_{\pm}\bm{\Gamma}=\vb{Y},\label{LbDu--o}\end{equation}
+\begin{equation}E\vb{\Sigma}^{}_{\pm}\vb{\Gamma}^{\dagger}\vb{\Sigma}^{}_{\pm}\vb{\Gamma}=\vb{Y},\label{LbDu--o}\end{equation}
 其中玻色子取$+$，费米子取$-$，这就是单能级方程的统一形式。\\
 \\
 现在我们将其推广至跃迁情况，同样的以矩阵形式定义\textsl{Bogoliubov}变换为
-\begin{equation}\vb{R}\qty(\hat{\vb{d}})=\bm{\Gamma}\vb{R}\qty(\hat{\vb{c}}),\quad \bm{\Gamma}=\begin{pNiceArray}{c:c}[margin]\vb{u}&\vb{v}\\ \hdashline \vb{v}^*&\vb{u}^*\end{pNiceArray},\label{feipp2}\end{equation}
+\begin{equation}\vb{R}\qty(\hat{\vb{d}})=\vb{\Gamma}\vb{R}\qty(\hat{\vb{c}}),\quad \vb{\Gamma}=\begin{pNiceArray}{c:c}[margin]\vb{u}&\vb{v}\\ \hdashline \vb{v}^*&\vb{u}^*\end{pNiceArray},\label{feipp2}\end{equation}
 则通过上述单能级情况类比不难想到，我们只需要将玻色对易下的减号全部改为加号即可，也就是
 \begin{itemize}\item 费米自反对易关系：\begin{equation}u^{ij}v_{kj}+v^{ij}u^{}_{kj}=0,\quad u^{*ij}v^*_{kj}+v^{*ij}u^*_{kj}=0,\end{equation}\item \textsl{Bogoliubov}条件：\begin{equation}u^{ij}u^*_{kj}+v^{ij}v^*_{kj}=\delta^i_k.\end{equation}\end{itemize}
-于是$\bm{\Gamma}$的性质按照上述结论写为
-\begin{equation}\bm{\Gamma}\bm{\Gamma}^{\dagger}=\pmqty{\vb{u}\vb{u}^{\dagger}+\vb{v}\vb{v}^{\dagger}&\vb{u}\vb{v}^T+\vb{v}\vb{u}^T\\ \vb{v}^*\vb{u}^{\dagger}+\vb{u}^*\vb{v}^{\dagger}&\vb{v}\vb{v}^{\dagger}+\vb{u}\vb{u}^{\dagger}}=\vb{I},\label{yaozhennmbb}\end{equation}
+于是$\vb{\Gamma}$的性质按照上述结论写为
+\begin{equation}\vb{\Gamma}\vb{\Gamma}^{\dagger}=\pmqty{\vb{u}\vb{u}^{\dagger}+\vb{v}\vb{v}^{\dagger}&\vb{u}\vb{v}^T+\vb{v}\vb{u}^T\\ \vb{v}^*\vb{u}^{\dagger}+\vb{u}^*\vb{v}^{\dagger}&\vb{v}\vb{v}^{\dagger}+\vb{u}\vb{u}^{\dagger}}=\vb{I},\label{yaozhennmbb}\end{equation}
 也就是幺正性质。如果我们采用正规幺正矩阵(\ref{feipp})的形式定义
-\begin{equation}\bm{\Gamma}=\begin{pNiceArray}{c:c}[margin]\vb{u}&-\vb{v}\\ \hdashline \vb{v}^*&\vb{u}^*\end{pNiceArray},\label{feipp1}\end{equation}
+\begin{equation}\vb{\Gamma}=\begin{pNiceArray}{c:c}[margin]\vb{u}&-\vb{v}\\ \hdashline \vb{v}^*&\vb{u}^*\end{pNiceArray},\label{feipp1}\end{equation}
 则不难想到，此时自反对易条件给出$u^{ij}v_{kj}-v^{ij}u^{}_{kj}=0$恒成立，也就是自动满足，其余内容不变。再计算\textit{Hamiltonian}算符的对角化，参考单能级的\textit{Hamiltonian}算符形式，我们引入二次型$\vb{A}$和系统的能量主值矩阵$\mathbb E$给出
-\begin{equation}\hat{H}=\vb{R}^{\dagger}(\hat{\vb{c}})\qty{\bm{\Sigma}\vb{Y}}\vb{R}(\hat{\vb{c}})=\qty{\vb{R}^{\dagger}\qty(\hat{\vb{d}})\bm{\Sigma}}\mathbb E\vb{R}\qty(\hat{\vb{d}}).\end{equation}
+\begin{equation}\hat{H}=\vb{R}^{\dagger}(\hat{\vb{c}})\qty{\vb{\Sigma}\vb{Y}}\vb{R}(\hat{\vb{c}})=\qty{\vb{R}^{\dagger}\qty(\hat{\vb{d}})\vb{\Sigma}}\mathbb E\vb{R}\qty(\hat{\vb{d}}).\end{equation}
 因此我们自然的得到\textsl{Bogoliubov}方程为
-\begin{equation}\qty(\bm{\Gamma}^{\dagger}\bm{\Sigma})\mathbb E\bm{\Gamma}=\bm{\Sigma}\vb{Y}\Longleftrightarrow\qty(\bm{\Sigma}\bm{\Gamma}^{\dagger})\qty(\bm{\Sigma}\mathbb E)\bm{\Gamma}=\vb{Y}.\end{equation}
+\begin{equation}\qty(\vb{\Gamma}^{\dagger}\vb{\Sigma})\mathbb E\vb{\Gamma}=\vb{\Sigma}\vb{Y}\Longleftrightarrow\qty(\vb{\Sigma}\vb{\Gamma}^{\dagger})\qty(\vb{\Sigma}\mathbb E)\vb{\Gamma}=\vb{Y}.\end{equation}
 具体细节我们就不再重复了，读者可自行证明。\\
 \\
 我们看到\textsl{Bogoliubov}变换由于反对易性使得其和玻色子系统不同，和粒子数算符相关的所有算符自然的也应相对应的改变。比如波函数算符
@@ -834,7 +834,7 @@ $$\frac{\vb{f}}{\sum\mathscr E}=t\frac{\sum\vb{p}}{\sum\mathscr E}-\frac{\sum\ma
 \\
 我们先来介绍场的\textsl{Lagrange}表述。\textbf{场 \textit{Field}}$\mathscr S$是建立在$\mathscr M$上的一个物理实体，由场位形$\bm{\psi}^w \in \mathscr T^r_{\ s}(\mathscr M)$描述，后续我们统一将其集合记为$\bm{\psi}=\qty{\bm{\psi}^w}$。注意这里的角标$w$只是不同的位形，并不是位形分量，即张量指标，比如可以取
 $$\bm{\psi}=\qty{\bm{\psi}^1,\bm{\psi}^2},\quad \bm{\psi}^1=A^{}_{\mu}\omega^{\mu},\quad \bm{\psi}^2=C^{\nu\gamma}\omega^{}_{\nu\gamma},\quad w=1/2.$$
-注意这里每个张量的各分量$\psi^{}_{\mu}$才是位形变量，但是方便起见仍然让它形式上满足\textsl{Einstein}求和约定，也就是说$\bm{\psi}^w\psi^{}_w=\delta_{wx}\bm{\psi}^w\bm{\psi}^x$。位形空间记为$\mathscr C=\qty{\bm{\psi}^w}\equiv\psi$。场是四维的，因而根据流形上的积分理论，我们自然有场的作用量
+注意这里每个张量的各分量$\psi^{}_{\mu}$才是位形变量，但是方便起见仍然让它形式上满足\textsl{Einstein}求和约定，也就是说$\bm{\psi}^w\bm{\psi}^{}_w=\delta_{wx}\bm{\psi}^w\bm{\psi}^x$。位形空间记为$\mathscr C=\qty{\bm{\psi}^w}\equiv\psi$。场是四维的，因而根据流形上的积分理论，我们自然有场的作用量
 \begin{equation}S^{}_f(\bm{\psi})=\int_{\mathscr S}\Lambda\qty(\bm{\psi},\partial^{}_{\mu}\bm{\psi})\dd\Omega=\int_{\mathscr S}\Lambda\dd{V}\dd{t},\end{equation}
 其中$\Lambda\qty(\bm{\psi},\partial^{}_{\mu}\bm{\psi})$称为场的\textbf{\textit{Lagrangian}密度}，是定义在位形空间的切丛$\mathscr{TC}$上的泛函$\Lambda\in C^\infty(\mathscr{TC})$，下文中一般省略密度。类似粒子的作用量，场的作用量可以写作
 \begin{equation}S=\int_{\mathscr S}\qty(T-U)\dd\Omega,\quad \Lambda=T-U,\label{zhongji878--}\end{equation}
@@ -1687,24 +1687,24 @@ $$T^{}_{\mu}(y)=\beta_{\mu}^iT^{}_i(x),\quad \beta_{\mu}^i=\pdv{x^i}{y^{\mu}},$$
 $$\hat{d}^{}_{\vb{k}}=\sum_{\vb{k}'}u^{}_{\vb{k}\vb{k}'}\hat{c}^{}_{\vb{k}'}+v^{}_{\vb{k}\vb{k}'}\hat{c}^{\dagger}_{\vb{k}'},\quad \hat{d}^{\dagger}_{\vb{k}}=\sum_{\vb{k}'}u^*_{\vb{k}\vb{k}'}\hat{c}^{\dagger}_{\vb{k}'}+v^*_{\vb{k}\vb{k}'}\hat{\vb{c}}^{}_{\vb{k}'},$$
 \emph{方便起见，这里我们省略了极化}。当然我们这里依旧是以离散谱的方法来处理连续谱问题，但是在连续谱下求和应理解为积分，并且系数$u^{}_{\vb{k}\vb{k}'}$在根据电磁波场的统计应该理解为和\textsl{Dirac} $\delta$函数$\delta(\vb{k}-\vb{k}')$相关，所以在积分后得到
 $$\sum_{\vb{k}'}u^{}_{\vb{k}\vb{k}'}\hat{c}^{}_{\vb{k}'}\rightarrow\bigintsss u(\vb{k},\vb{k}')\delta(\vb{k}-\vb{k}')\hat{c}^{}_{\vb{k}'}\qty(\dfrac{\dd{k}}{2\pi})^3=u(\vb{k})\hat{c}^{}_{\vb{k}}=u^{}_{\vb{k}}\hat{c}^{}_{\vb{k}},$$
-系数$v^{}_{\vb{k}\vb{k}'}$也是一样，请读者自行计算。因此事实上在动量表象下，光子系统的\textsl{Bogoliubov}变换矩阵$\bm{\Gamma}$并不需要以多能级模型下由式(\ref{fenkuai})控制的分块矩阵的形式表示，而只需要从单能级式(\ref{Bobov564})的纯数值形式，以动量代替能级号即可。所以\textsl{Bogoliubov}变换写为
+系数$v^{}_{\vb{k}\vb{k}'}$也是一样，请读者自行计算。因此事实上在动量表象下，光子系统的\textsl{Bogoliubov}变换矩阵$\vb{\Gamma}$并不需要以多能级模型下由式(\ref{fenkuai})控制的分块矩阵的形式表示，而只需要从单能级式(\ref{Bobov564})的纯数值形式，以动量代替能级号即可。所以\textsl{Bogoliubov}变换写为
 \begin{equation}\hat{d}^{}_{\vb{k}}=u^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}+v^{}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}},\quad \hat{d}^{\dagger}_{\vb{k}}=u^*_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}+v^*_{\vb{k}}\hat{c}^{}_{\vb{k}},\label{bogoga}\end{equation}
 类似的引入动量表象下的算符向量和\textsl{Bogoliubov}变换矩阵为
-\begin{equation}\vb{R}^{}_{\vb{k}}(\hat{c})=\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{\dagger}_{\vb{k}}},\quad \bm{\Gamma}^{}_{\vb{k}}=\pmqty{u^{}_{\vb{k}}&v^{}_{\vb{k}}\\ v^*_{\vb{k}}&u^*_{\vb{k}}},\end{equation}
+\begin{equation}\vb{R}^{}_{\vb{k}}(\hat{c})=\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{\dagger}_{\vb{k}}},\quad \vb{\Gamma}^{}_{\vb{k}}=\pmqty{u^{}_{\vb{k}}&v^{}_{\vb{k}}\\ v^*_{\vb{k}}&u^*_{\vb{k}}},\end{equation}
 则连续谱形式的\textsl{Bogoliubov}变换写为
-\begin{equation}\vb{R}^{}_{\vb{k}}\qty(\hat{d})=\pmqty{\hat{d}^{}_{\vb{k}}\\ \hat{d}^{\dagger}_{\vb{k}}}=\bm{\Gamma}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}(\hat{c}).\end{equation}
+\begin{equation}\vb{R}^{}_{\vb{k}}\qty(\hat{d})=\pmqty{\hat{d}^{}_{\vb{k}}\\ \hat{d}^{\dagger}_{\vb{k}}}=\vb{\Gamma}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}(\hat{c}).\end{equation}
 同时我们要求新算符$\qty{\hat{d}^{}_{\vb{k}},\hat{d}^{\dagger}_{\vb{k}}}$满足式(\ref{ddduim})的对易关系
 \begin{equation}\comm{\hat{d}^{}_{\vb{k}}}{\hat{d}^{\dagger}_{\vb{k}}}=\hat{\vb{I}},\quad \comm{\hat{d}^{}_{\vb{k}}}{\hat{d}^{}_{\vb{k}'}}=\comm{\hat{d}^{}_{\vb{k}}}{\hat{d}^{}_{\vb{k}'}}=\vb{0}\end{equation}
 简单计算后不难得到系数满足的\textsl{Bogoliubov}条件为
 \begin{equation}u^{}_{\vb{k}}u^*_{\vb{k}}-v^{}_{\vb{k}}v^*_{\vb{k}}=\abs{u^{}_{\vb{k}}}^2-\abs{v^{}_{\vb{k}}}^2=1,\end{equation}
-也就是说我们再次得到了$\bm{\Gamma}^{}_{\vb{k}}$的伪幺正性
-\begin{equation}\bm{\Gamma}^{\dagger}_{\vb{k}}\bm{\Sigma}\bm{\Gamma}^{}_{\vb{k}}=\bm{\Sigma},\end{equation}
-$\bm{\Sigma}$是伪幺正度规。同样的，\textsl{Bogoliubov}条件也可以写为参数形式
+也就是说我们再次得到了$\vb{\Gamma}^{}_{\vb{k}}$的伪幺正性
+\begin{equation}\vb{\Gamma}^{\dagger}_{\vb{k}}\vb{\Sigma}\vb{\Gamma}^{}_{\vb{k}}=\vb{\Sigma},\end{equation}
+$\vb{\Sigma}$是伪幺正度规。同样的，\textsl{Bogoliubov}条件也可以写为参数形式
 \begin{equation}u^{}_{\vb{k}}=\exp(i\theta^{}_1)\cosh r^{}_{\vb{k}},\quad v^{}_{\vb{k}}=\exp(i\theta^{}_2)\sinh r^{}_{\vb{k}}.\end{equation}
 系统的\textsl{Bogoliubov}方程就不详细推导了，按式(\ref{guangzifi})引入系统的\textit{Hamiltonian}二次型$\vb{Y}^{}_{\vb{k}\alpha}$为
 \begin{equation}\hat{H}=\sum\limits_{\vb{k}\alpha}\vb{R}(\hat{c})^{\dagger}_{\vb{k}\alpha}\vb{Y}^{}_{\vb{k}\alpha}\vb{R}(\hat{c})^{}_{\vb{k}\alpha}=\sum\limits_{\vb{k}\alpha}E^{}_{\vb{k}\alpha}\vb{R}(\hat{d})^{\dagger}_{\vb{k}\alpha}\vb{R}(\hat{d})^{}_{\vb{k}\alpha},\end{equation}
 这里我们将极化也考虑了进来，则\textsl{Bogoliubov}方程为
-\begin{equation}E^{}_{\vb{k}\alpha}\bm{\Gamma}^{\dagger}_{\vb{k}\alpha}\bm{\Gamma}^{}_{\vb{k}\alpha}=\vb{Y}^{}_{\vb{k}\alpha}.\end{equation}
+\begin{equation}E^{}_{\vb{k}\alpha}\vb{\Gamma}^{\dagger}_{\vb{k}\alpha}\vb{\Gamma}^{}_{\vb{k}\alpha}=\vb{Y}^{}_{\vb{k}\alpha}.\end{equation}
 于是我们只需求出具体的参数$r^{}_{\vb{k}\alpha}$即可解出\textit{Hamiltonian}的对角化，关于光子场的参数请读者自行计算。而由于光子场充当了相对论性的谐振子模型，所以后文中所有在动量表象下的\textsl{Bogoliubov}变换都可以按照此模型来表述。\\
 \\
 我们这里还可以讨论单独针对时间的情况，若将式(\ref{posdfn})的关系写为线性变换
@@ -2113,12 +2113,12 @@ $$\text{粒子：}\qty{\hat{c}^{}_{\vb{p}},\hat{c}^{\dagger}_{\vb{p}}},\quad \te
 这和第\ref{uguygy90}节中描述的光子场单套算符$\qty{\hat{c}^{}_{\vb{p}},\hat{c}^{\dagger}_{\vb{p}}}$并不完全一样。但是因为我们依旧处于动量表象下，所以其变换模型在这里是适用的。当然我们之前提到，光子场的\textsl{Bogoliubov}变换继承自单能级模型，以动量$\vb{p}$作为能级号。对于\textsl{KG}场，我们实际上有两个动量$\vb{p}$和$-\vb{p}$，分别对应粒子和反粒子，因此若我们将其看作两个能级的话，则\textsl{KG}场的\textsl{Bogoliubov}变换完全可以继承自玻色多能级模型(\ref{Bogoliubov111})，当然此处是双能级，$i=\{1,2\}$。于是我们引入算符矢量
 \begin{equation}\hat{\vb{a}}^{}_{\vb{p}}=\pmqty{\hat{c}^{}_1\\ \hat{c}^{}_2}=\pmqty{\hat{c}^{}_{\vb{p}}\\ \hat{d}^{}_{\vb{p}}},\quad \hat{\vb{a}}^{\dagger}_{\vb{p}}=\pmqty{\hat{c}^{\dagger}_1\\ \hat{c}^{\dagger}_2}=\pmqty{\hat{c}^{\dagger}_{\vb{p}}\\ \hat{d}^{\dagger}_{\vb{p}}},\quad \vb{R}^{}_{\vb{p}}(\hat{\vb{a}})=\pmqty{\hat{\vb{a}}^{}_{\vb{p}}\\ \hat{\vb{a}}^{\dagger}_{\vb{p}}},\end{equation}
 则我们自然的可以用分块的\textsl{Bogoliubov}变换矩阵给出变换式
-\begin{equation}\bm{\Gamma}^{}_{\vb{p}}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{}_{\vb{p}}&\vb{v}^{}_{\vb{p}}\\ \hdashline \vb{v}^*_{\vb{p}}&\vb{u}^*_{\vb{p}}\end{pNiceArray},\quad \dim\qty(\vb{u}^{}_{\vb{p}})=2\implies\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{b}})=\bm{\Gamma}\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{a}}).\label{Bogohh))}\end{equation}
+\begin{equation}\vb{\Gamma}^{}_{\vb{p}}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{}_{\vb{p}}&\vb{v}^{}_{\vb{p}}\\ \hdashline \vb{v}^*_{\vb{p}}&\vb{u}^*_{\vb{p}}\end{pNiceArray},\quad \dim\qty(\vb{u}^{}_{\vb{p}})=2\implies\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{b}})=\vb{\Gamma}\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{a}}).\label{Bogohh))}\end{equation}
 若我们记其中的矩阵以及变换后的算符为
 \begin{equation}\vb{u}^{}_{\vb{p}}=\pmqty{u^{11}_{\vb{p}}&u^{12}_{\vb{p}}\\ u^{21}_{\vb{p}}&u^{22}_{\vb{p}}},\quad \hat{\vb{b}}^{}_{\vb{p}}=\pmqty{\hat{a}^{}_{\vb{p}}\\ \hat{b}^{}_{\vb{p}}},\quad \hat{\vb{b}}^{\dagger}_{\vb{p}}=\pmqty{\hat{a}^{\dagger}_{\vb{p}}\\ \hat{b}^{\dagger}_{\vb{p}}},\end{equation}
 则矩阵形式的具体展为(不全部列出)
 \begin{equation}\begin{aligned}&\hat{a}^{}_{\vb{p}}=u^{11}_{\vb{p}}\hat{c}^{}_{\vb{p}}+u^{12}_{\vb{p}}\hat{d}^{}_{\vb{p}}+v^{11}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+v^{12}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}},\\ &\hat{a}^{\dagger}_{\vb{p}}=v^{*11}_{\vb{p}}\hat{c}^{}_{\vb{p}}+v^{*12}_{\vb{p}}\hat{d}^{}_{\vb{p}}+u^{*11}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+u^{*12}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}}.\end{aligned}\end{equation}
-这里请读者补全$\hat{b}^{}_{\vb{p}}$。在此模型下，我们来讨论$\bm{\Gamma}^{}_{\vb{p}}$应满足的\textsl{Bogoliubov}条件，以及相应的\textsl{Bogoliubov}方程，当然我们必然是在\textsl{KG}场模型下进行的。\\
+这里请读者补全$\hat{b}^{}_{\vb{p}}$。在此模型下，我们来讨论$\vb{\Gamma}^{}_{\vb{p}}$应满足的\textsl{Bogoliubov}条件，以及相应的\textsl{Bogoliubov}方程，当然我们必然是在\textsl{KG}场模型下进行的。\\
 \\
 首先我们注意到，除去\textsl{KG}场的玻色对易性，相对论性的二次量子化的特点是粒子和反粒子算符都参与了位形算符。所以对于新的算符，我们同样要求它们保持位形算符不变。为此我们将式(\ref{ooppgj})的分量进一步缩减到只出现粒子数算符的形式
 \begin{equation}\hat{\psi}^{}_{\vb{p}}=\dfrac{1}{\sqrt{2E^{}_{\vb{p}}}}\qty(\hat{c}^{}_{\vb{p}}e^{-ix^{\mu}p^{}_{\mu}}+\hat{d}^{\dagger}_{\vb{p}}e^{ix^{\mu}p^{}_{\mu}})=F^{}_{\vb{p}}\hat{c}^{}_{\vb{p}}+G^{}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}},\end{equation}
@@ -2131,11 +2131,11 @@ $$\comm{\hat{a}^{}_{\vb{p}}}{\hat{b}^{}_{\vb{p}}}\equiv0,\quad \cdots,\quad \com
 以保持系统性质。简单计算后我们得到系数关系为
 \begin{itemize}\item 玻色自对易关系：\begin{equation}\sum_ju^{ij}_{\vb{p}}v^{kj}_{\vb{p}}-v^{ij}_{\vb{p}}u^{kj}_{\vb{p}}=0,\quad \sum_jv^{*ij}_{\vb{p}}u^{*kj}_{\vb{p}}-u^{*ij}_{\vb{p}}v^{*kj}_{\vb{p}}=0,\quad \cdots.\end{equation}\item \textsl{Bogoliubov}条件：\begin{equation}\sum_ju^{ij}_{\vb{p}}u^{*kj}_{\vb{p}}-v^{ij}_{\vb{p}}v^{*kj}_{\vb{p}}=\delta^{ik},\quad \cdots.\end{equation}\end{itemize}
 最终我们能够重新得到\textsl{Bogoliubov}变换矩阵的伪幺正性
-\begin{equation}\bm{\Gamma}^{\dagger}_{\vb{p}}\bm{\Sigma}\bm{\Gamma}^{}_{\vb{p}}=\bm{\Sigma}.\label{cadeoo}\end{equation}
+\begin{equation}\vb{\Gamma}^{\dagger}_{\vb{p}}\vb{\Sigma}\vb{\Gamma}^{}_{\vb{p}}=\vb{\Sigma}.\label{cadeoo}\end{equation}
 对于系统的\textit{Hamiltonian}算符，我们引入动量表象下的能量主值矩阵$\mathbb{E}^{}_{\vb{p}}$以及其二次型$\vb{Y}^{}_{\vb{p}}$，则算符写为
 \begin{equation}\hat{H}=\sum_{\vb{p}}\vb{R}^{\dagger}_{\vb{p}}\qty(\hat{\vb{b}})\mathbb{E}^{}_{\vb{p}}\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{b}})=\sum_{\vb{p}}\vb{R}^{\dagger}_{\vb{p}}(\hat{\vb{a}})\vb{Y}^{}_{\vb{p}}\vb{R}^{}_{\vb{p}}(\hat{\vb{a}}),\end{equation}
 玻色子系统的\textsl{Bogoliubov}方程为
-\begin{equation}\vb{Y}^{}_{\vb{p}}=\bm{\Gamma}^{\dagger}_{\vb{p}}\mathbb{E}^{}_{\vb{p}}\bm{\Gamma}^{}_{\vb{p}}.\label{boghh66}\end{equation}
+\begin{equation}\vb{Y}^{}_{\vb{p}}=\vb{\Gamma}^{\dagger}_{\vb{p}}\mathbb{E}^{}_{\vb{p}}\vb{\Gamma}^{}_{\vb{p}}.\label{boghh66}\end{equation}
 这些结论和离散谱的形式完全一致，只不过在连续谱下需要以动量表征能级。当然目前我们只考虑自由玻色子，所以\textit{Hamiltonian}是自然对角化的。当然我们依旧需要强调，\textsl{Bogoliubov}变换前后的算符不一定描述相同的粒子，因为对应能量的改变会导致占有数的改变，而占有数和算符直接相关，所以变换实际上也对应到了新粒子上。\\
 \\
 最后我们补充一下光子的情况。在光子的二次量子化过程中，我们只使用了一套二次量子化算符。这并非判断上的失误，这其实是光子独有的属性。对于光子，二次量子化算符最终写作式(\ref{wllls})，只用了一套算符$\hat{c},\hat{c}^{\dagger}$，这表明对于光子而言，其粒子和反粒子是相同的。我们称这一类粒子为\textbf{真中性粒子 \textit{True Netural Particle}}，用以区别粒子和反粒子对组成的\textbf{电中性粒子系统}。因为少了一套算符，所以对于其\textit{Lagrangian}相当于只取\textsl{KG}场的一半，即
@@ -2445,14 +2445,14 @@ $$\hat{d}^{}_{\vb{p}}\rightarrow\hat{c}^{}_{-\vb{p}},\quad \hat{d}^{\dagger}_{-\
 当然系统的算符矢量在形式上还是双能级形式的，这里写为
 $$\hat{\vb{a}}^{}_{\vb{p}\alpha}=\pmqty{\hat{c}^{}_{\vb{p}\alpha}\\ \hat{c}^{}_{-\vb{p}\alpha}},\quad \hat{\vb{a}}^{\dagger}_{\vb{p}\alpha}=\pmqty{\hat{c}^{\dagger}_{\vb{p}\alpha}\\ \hat{c}^{\dagger}_{-\vb{p}\alpha}},\quad \vb{R}^{}_{\vb{p}\alpha}(\hat{\vb{a}})=\pmqty{\hat{\vb{a}}^{}_{\vb{p}\alpha}\\ \hat{\vb{a}}^{\dagger}_{\vb{p}\alpha}}=\pmqty{\hat{c}^{}_{\vb{p}\alpha}\\ \hat{c}^{}_{-\vb{p}\alpha}\\ \hat{c}^{\dagger}_{\vb{p}\alpha}\\ \hat{c}^{\dagger}_{-\vb{p}\alpha}},$$
 但系统的\textsl{Bogoliubov}变换矩阵可以写为非常简易的形式
-\begin{equation}\bm{\Gamma}^{}_{\vb{p}\alpha}=\qty(\begin{array}{cc:cc}u^{}_{\vb{p}\alpha}&0&0&v^{}_{\vb{p}\alpha}\\0&u^{}_{\vb{p}\alpha}&v^{}_{\vb{p}\alpha}&0\\ \hdashline0&v^{*}_{\vb{p}\alpha}&u^{*}_{\vb{p}\alpha}&0\\v^{*}_{\vb{p}\alpha}&0&0&u^{*}_{\vb{p}\alpha}\end{array}),\label{chaoliu3}\end{equation}
+\begin{equation}\vb{\Gamma}^{}_{\vb{p}\alpha}=\qty(\begin{array}{cc:cc}u^{}_{\vb{p}\alpha}&0&0&v^{}_{\vb{p}\alpha}\\0&u^{}_{\vb{p}\alpha}&v^{}_{\vb{p}\alpha}&0\\ \hdashline0&v^{*}_{\vb{p}\alpha}&u^{*}_{\vb{p}\alpha}&0\\v^{*}_{\vb{p}\alpha}&0&0&u^{*}_{\vb{p}\alpha}\end{array}),\label{chaoliu3}\end{equation}
 也就是说系数矩阵$\vb{u}^{}_{\vb{p}\alpha}$是对角的，$\vb{v}^{}_{\vb{p}\alpha}$是斜对角的。其余内容均和光子场一样，这里不再说明。\\
 \\
 我们也可以写成更简洁的形式，注意到\textsl{Bogoliubov}变换矩阵的对角性使得变换必定只涉及相对的产生和湮灭算符，我们定义\textbf{\textsl{Nambu}基}为
 \begin{equation}\Psi^{}_{\vb{k}}=\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}},\quad \Psi^{\dagger}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k}} & \hat{c}^{}_{-\vb{k}}},\label{namnpp1}\end{equation}
 则\textsl{Bogoliubov}变换写为
-\begin{equation}\pmqty{\hat{b}_{\vb{k}}\\ \hat{b}^{\dagger}_{-\vb{k}}}=\pmqty{u^{}_{\vb{k}}&v^{}_{\vb{k}}\\ v_{\vb{k}}^*&u_{\vb{k}}^*}\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}}=\tilde{\bm{\Gamma}}\Psi^{}_{\vb{k}}.\label{namnpp2}\end{equation}
-可以证明这和式(\ref{chaoliu1})是吻合的，事实上$\tilde{\bm{\Gamma}}$是普通\textsl{Bogoliubov}变换矩阵(\ref{chaoliu3})的不可约形式，相当于只取了中间的一块。这样一来\textsl{Bogoliubov}变换就完全和单能级模型是一样的，此时\textit{Hamiltonian}算符的二次型给出
+\begin{equation}\pmqty{\hat{b}_{\vb{k}}\\ \hat{b}^{\dagger}_{-\vb{k}}}=\pmqty{u^{}_{\vb{k}}&v^{}_{\vb{k}}\\ v_{\vb{k}}^*&u_{\vb{k}}^*}\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}}=\tilde{\vb{\Gamma}}\Psi^{}_{\vb{k}}.\label{namnpp2}\end{equation}
+可以证明这和式(\ref{chaoliu1})是吻合的，事实上$\tilde{\vb{\Gamma}}$是普通\textsl{Bogoliubov}变换矩阵(\ref{chaoliu3})的不可约形式，相当于只取了中间的一块。这样一来\textsl{Bogoliubov}变换就完全和单能级模型是一样的，此时\textit{Hamiltonian}算符的二次型给出
 \begin{equation}\hat{H}=\sum_{\vb{k}}\Psi^{\dagger}_{\vb{k}}\tilde{\vb{Y}}\Psi^{}_{\vb{k}},\end{equation}
 不难想到$\tilde{\vb{Y}}$是能量二次型$\vb{Y}$的不可约形式，其余内容均不变。在这样的表述下，电中性系统的\textsl{Bogoliubov}变换和真中性系统的\textsl{Bogoliubov}变换形式上保持一致，比如光子场，从而能量$E^{}_{\vb{p}}$就是$\tilde{\vb{Y}}$的双重简并本征值。这种针对电中性系统的纯单能级变换模型称为\textbf{\textsl{Nambu}形式}，它可以极大的简化我们的运算。\\
 \\
@@ -2831,9 +2831,9 @@ $$\overline{\bm{\zeta}}=\qty(\iota^{}_{1},\iota^{}_{2},\delta^{\dt{1}},\delta^{\
 \begin{equation}\begin{cases}\hat{\vb{p}}^{\alpha\dt{\beta}}\bm{\xi}^{}_{\dt{\beta}}=0,&\\ \hat{\vb{p}}^{}_{\alpha\dt{\beta}}\bm{\chi}^{\alpha}=0.\end{cases}\label{NVV86KKp}\end{equation}
 类比玻色子，不难看出其对应了光子，因而这是\textsl{Dirac}场的真中性粒子。按照真中性粒子的处理的核心思想，对于\textsl{Dirac}场我们猜想为：\textbf{用单个四维旋量替换双旋量}。比如我们取带点旋量$\xi^{}_{\dt{\alpha}}$，则相对论方程写为
 \begin{equation}\hat{\vb{p}}^{\alpha\dt{\beta}}\bm{\xi}^{}_{\dt{\beta}}=0\Longleftrightarrow\qty(\hat{p}^0+\hat{\vb{p}}\cdot\hat{\bm{\sigma}})\bm{\xi}=0,\label{4RH8j}\end{equation}
-我们称之为\textbf{\textsl{Weyl}方程}。对于共轭形式，当然这里就没有\textsl{Dirac}共轭旋量了，因为不涉及$\gamma$矩阵，这里就是普通的共轭四维旋量$\bm{\xi}^*_{\dt{\alpha}}=\bm{\Sigma}^{}_{\alpha}$。基于双旋量共轭的变换式(\ref{S6tBv9})，其会对换指标的带点性，我们得到上述方程的共轭式为
-\begin{equation}{\qty(\hat{\vb{p}}^{\alpha\dt{\beta}}\bm{\xi}^{}_{\dt{\beta}})}^*=\hat{\vb{p}}^{\dt{\alpha}\beta}\bm{\Sigma}^{}_{\beta}=0\Longleftrightarrow\hat{\vb{p}}^{}_{\dt{\alpha}\beta}\bm{\Sigma}^{\beta}=\qty(\hat{p}^0-\hat{\vb{p}}\cdot\hat{\bm{\sigma}})\bm{\Sigma}=0.\end{equation}
-为了符合方程组(\ref{jpou760})对于$m=0$的结论(\ref{NVV86KKp})，我们自然的得出$\bm{\Sigma}^{\alpha}=\bm{\chi}^{\alpha}$，从而
+我们称之为\textbf{\textsl{Weyl}方程}。对于共轭形式，当然这里就没有\textsl{Dirac}共轭旋量了，因为不涉及$\gamma$矩阵，这里就是普通的共轭四维旋量$\bm{\xi}^*_{\dt{\alpha}}=\vb{\Sigma}^{}_{\alpha}$。基于双旋量共轭的变换式(\ref{S6tBv9})，其会对换指标的带点性，我们得到上述方程的共轭式为
+\begin{equation}{\qty(\hat{\vb{p}}^{\alpha\dt{\beta}}\bm{\xi}^{}_{\dt{\beta}})}^*=\hat{\vb{p}}^{\dt{\alpha}\beta}\vb{\Sigma}^{}_{\beta}=0\Longleftrightarrow\hat{\vb{p}}^{}_{\dt{\alpha}\beta}\vb{\Sigma}^{\beta}=\qty(\hat{p}^0-\hat{\vb{p}}\cdot\hat{\bm{\sigma}})\vb{\Sigma}=0.\end{equation}
+为了符合方程组(\ref{jpou760})对于$m=0$的结论(\ref{NVV86KKp})，我们自然的得出$\vb{\Sigma}^{\alpha}=\bm{\chi}^{\alpha}$，从而
 $$\bm{\xi}^*_{\dt{\alpha}}=\bm{\chi}^{}_{\alpha},$$
 也就是说两者必然是共轭的关系。我们当然也可以以此构造双旋量，但是因为分量之间并不互相独立，所以只需要一个四维旋量就足够，这也印证了我们的想法。
 
@@ -3128,26 +3128,26 @@ $$f^{}_{FD}(E^{}_{\vb{p}})=\frac{1}{e^{\beta(E^{}_{\vb{p}}-\mu)}+1},\quad \mu(T=
 也就是说零质量费米子的\textsl{Dirac}场是电中性的，这符合中微子的描述，并且在理论上我们得到反中微子的存在。因而在费米子系统中和光子相对应的是中微子$\nu$，它们都没质量，且中微子不带电。当然目前在实验上我们还无法精准的测量中微子的质量，我们只能根据$\beta$衰变知道它相比于电子更轻，因此我们在理论上默认它就是零质量的。\\
 \\
 最后我们简单的谈一下\textsl{Dirac}场的\textsl{Bogoliubov}变换。由于\textsl{Dirac}场是费米性的，并且涉及到粒子和反粒子两套二次量子化算符，所以其必然对应了双能级的费米反对易变换。类似的我们引入算符矢量以及分块的\textsl{Bogoliubov}变换矩阵，这里采用正规幺正形式(\ref{feipp1})
-\begin{equation}\hat{\vb{a}}^{}_{\vb{p}}=\pmqty{\hat{c}^{}_{\vb{p}}\\ \hat{d}^{}_{\vb{p}}},\quad \hat{\vb{a}}^{\dagger}_{\vb{p}}=\pmqty{\hat{c}^{\dagger}_{\vb{p}}\\ \hat{d}^{\dagger}_{\vb{p}}},\quad \vb{R}^{}_{\vb{p}}(\hat{\vb{a}})=\pmqty{\hat{\vb{a}}^{}_{\vb{p}}\\ \hat{\vb{a}}^{\dagger}_{\vb{p}}},\quad \bm{\Gamma}^{}_{\vb{p}}=\pmqty{\vb{u}^{}_{\vb{p}}&-\vb{v}^{}_{\vb{p}}\\ \vb{v}^*_{\vb{p}}&\vb{u}^*_{\vb{p}}},\label{o}\end{equation}
-则按照玻色场的结论(\ref{cadeoo})推广，此处的变换矩阵$\bm{\Gamma}^{}_{\vb{p}}$必然满足由离散谱的式(\ref{yaozhennmbb})所控制的幺正条件，也就是
-\begin{equation}\bm{\Gamma}^{}_{\vb{p}}\bm{\Gamma}^{\dagger}_{\vb{p}}=\vb{I}.\end{equation}
+\begin{equation}\hat{\vb{a}}^{}_{\vb{p}}=\pmqty{\hat{c}^{}_{\vb{p}}\\ \hat{d}^{}_{\vb{p}}},\quad \hat{\vb{a}}^{\dagger}_{\vb{p}}=\pmqty{\hat{c}^{\dagger}_{\vb{p}}\\ \hat{d}^{\dagger}_{\vb{p}}},\quad \vb{R}^{}_{\vb{p}}(\hat{\vb{a}})=\pmqty{\hat{\vb{a}}^{}_{\vb{p}}\\ \hat{\vb{a}}^{\dagger}_{\vb{p}}},\quad \vb{\Gamma}^{}_{\vb{p}}=\pmqty{\vb{u}^{}_{\vb{p}}&-\vb{v}^{}_{\vb{p}}\\ \vb{v}^*_{\vb{p}}&\vb{u}^*_{\vb{p}}},\label{o}\end{equation}
+则按照玻色场的结论(\ref{cadeoo})推广，此处的变换矩阵$\vb{\Gamma}^{}_{\vb{p}}$必然满足由离散谱的式(\ref{yaozhennmbb})所控制的幺正条件，也就是
+\begin{equation}\vb{\Gamma}^{}_{\vb{p}}\vb{\Gamma}^{\dagger}_{\vb{p}}=\vb{I}.\end{equation}
 对于\textit{Hamiltonian}算符的对角化，按照惯例我们引入二次型$\vb{Y}^{}_{\vb{p}}$和系统的能量主值矩阵$\mathbb{E}^{}_{\vb{p}}$给出
-\begin{equation}\hat{H}=\sum_{\vb{p}}\vb{R}^{\dagger}_{\vb{p}}(\hat{\vb{a}})\qty(\bm{\Sigma}\vb{Y}^{}_{\vb{p}})\vb{R}^{}_{\vb{p}}(\hat{\vb{a}})=\sum_{\vb{p}}\qty(\vb{R}^{\dagger}_{\vb{p}}\qty(\hat{\vb{b}})\bm{\Sigma})\mathbb{E}^{}_{\vb{p}}\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{b}}),\end{equation}
+\begin{equation}\hat{H}=\sum_{\vb{p}}\vb{R}^{\dagger}_{\vb{p}}(\hat{\vb{a}})\qty(\vb{\Sigma}\vb{Y}^{}_{\vb{p}})\vb{R}^{}_{\vb{p}}(\hat{\vb{a}})=\sum_{\vb{p}}\qty(\vb{R}^{\dagger}_{\vb{p}}\qty(\hat{\vb{b}})\vb{\Sigma})\mathbb{E}^{}_{\vb{p}}\vb{R}^{}_{\vb{p}}\qty(\hat{\vb{b}}),\end{equation}
 则我们自然的得到\textsl{Bogoliubov}方程为
-\begin{equation}\qty(\bm{\Gamma}^{\dagger}_{\vb{p}}\bm{\Sigma})\mathbb{E}^{}_{\vb{p}}\bm{\Gamma}^{}_{\vb{p}}=\bm{\Sigma}\vb{Y}^{}_{\vb{p}}\Longleftrightarrow\qty(\bm{\Sigma}\bm{\Gamma}^{\dagger}_{\vb{p}})\qty(\bm{\Sigma}\mathbb{E}^{}_{\vb{p}})\bm{\Gamma}^{}_{\vb{p}}=\vb{Y}^{}_{\vb{p}}.\end{equation}
+\begin{equation}\qty(\vb{\Gamma}^{\dagger}_{\vb{p}}\vb{\Sigma})\mathbb{E}^{}_{\vb{p}}\vb{\Gamma}^{}_{\vb{p}}=\vb{\Sigma}\vb{Y}^{}_{\vb{p}}\Longleftrightarrow\qty(\vb{\Sigma}\vb{\Gamma}^{\dagger}_{\vb{p}})\qty(\vb{\Sigma}\mathbb{E}^{}_{\vb{p}})\vb{\Gamma}^{}_{\vb{p}}=\vb{Y}^{}_{\vb{p}}.\end{equation}
 这些内容都是可以从离散谱的结论，类比玻色子场的思路类比而来的，具体细节就不详细展示了。并且需要强调的是，中微子的\textsl{Bogoliubov}也遵循上述模式，因为其并非真中性粒子。\\
 \\
 当然对于电中性费米子，我们从\textsl{Proca}场的内容可以立马写出相应的正规幺正\textsl{Bogoliubov}变换为
 \begin{equation}\hat{b}^{}_{\vb{p}}=u^{}_{\vb{p}}\hat{c}^{}_{\vb{p}}-v^{}_{\vb{p}}\hat{c}^{\dagger}_{-\vb{p}},\quad \hat{b}^{\dagger}_{\vb{p}}=u^{*}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+v^{*}_{\vb{p}}\hat{c}^{}_{-\vb{p}},\end{equation}
 相应的\textsl{Bogoliubov}变换矩阵按式(\ref{chaoliu3})写为
-\begin{equation}\bm{\Gamma}^{}_{\vb{p}}=\qty(\begin{array}{cc:cc}u^{}_{\vb{p}}&0&0&-v^{}_{\vb{p}}\\0&u^{}_{\vb{p}}&-v^{}_{\vb{p}}&0\\ \hdashline0&v^{*}_{\vb{p}}&u^{*}_{\vb{p}}&0\\v^{*}_{\vb{p}}&0&0&u^{*}_{\vb{p}}\end{array}),\label{ffp11}\end{equation}
+\begin{equation}\vb{\Gamma}^{}_{\vb{p}}=\qty(\begin{array}{cc:cc}u^{}_{\vb{p}}&0&0&-v^{}_{\vb{p}}\\0&u^{}_{\vb{p}}&-v^{}_{\vb{p}}&0\\ \hdashline0&v^{*}_{\vb{p}}&u^{*}_{\vb{p}}&0\\v^{*}_{\vb{p}}&0&0&u^{*}_{\vb{p}}\end{array}),\label{ffp11}\end{equation}
 并且从式(\ref{unhommep})不难得到\textsl{Bogoliubov}条件为
 \begin{equation}\abs{u^{}_{\vb{p}}}^2+\abs{v^{}_{\vb{p}}}^2=1.\label{nkk}\end{equation}
 从而变换矩阵满足幺正条件
-\begin{equation}\bm{\Gamma}^{\dagger}_{\vb{p}}\bm{\Gamma}^{}_{\vb{p}}=\vb{I}\implies\bm{\Gamma}^{\dagger}_{\vb{p}}=\bm{\Gamma}^{-1}_{\vb{p}},\end{equation}
+\begin{equation}\vb{\Gamma}^{\dagger}_{\vb{p}}\vb{\Gamma}^{}_{\vb{p}}=\vb{I}\implies\vb{\Gamma}^{\dagger}_{\vb{p}}=\vb{\Gamma}^{-1}_{\vb{p}},\end{equation}
 并且算上玻色子场的方程(\ref{boghh66})，系统的\textsl{Bogoliubov}方程可以整体整合为
-\begin{equation}E^{}_{\vb{p}}\bm{\Sigma}^{}_{\pm}\bm{\Gamma}^{\dagger}_{\vb{p}}\bm{\Sigma}^{}_{\pm}\bm{\Gamma}^{}_{\vb{p}}=\vb{Y}^{}_{\vb{p}},\end{equation}
-其中$\bm{\Sigma}^{}_{+}=\vb{I}$，矩阵$\vb{Y}^{}_{\vb{p}}$为二次型。同样的这些内容可以全部从离散谱中改造而来，并且适用于所有的费米子系统。同样的类似玻色子系统的\textsl{Nambu}形式，我们按照式(\ref{namnpp1})和式(\ref{namnpp2})定义单能级化的幺正\textsl{Bogoliubov}变换为
+\begin{equation}E^{}_{\vb{p}}\vb{\Sigma}^{}_{\pm}\vb{\Gamma}^{\dagger}_{\vb{p}}\vb{\Sigma}^{}_{\pm}\vb{\Gamma}^{}_{\vb{p}}=\vb{Y}^{}_{\vb{p}},\end{equation}
+其中$\vb{\Sigma}^{}_{+}=\vb{I}$，矩阵$\vb{Y}^{}_{\vb{p}}$为二次型。同样的这些内容可以全部从离散谱中改造而来，并且适用于所有的费米子系统。同样的类似玻色子系统的\textsl{Nambu}形式，我们按照式(\ref{namnpp1})和式(\ref{namnpp2})定义单能级化的幺正\textsl{Bogoliubov}变换为
 \begin{equation}\pmqty{\hat{b}^{}_{\vb{k}}\\ \hat{b}^{\dagger}_{-\vb{k}}}=\pmqty{u^{}_{\vb{k}}&-v^{}_{\vb{k}}\\ v^*_{\vb{k}}&u^*_{\vb{k}}}\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}},\label{namnpp3}\end{equation}
 相较于式(\ref{namnpp2})这里只是改了$v^{}_{\vb{k}}$的符号，也是正规幺正性的体现。其余内容也均不变，请读者自行写出\textsl{Nambu}基和变换形式，这里就不过多展开了。\\
 \\
@@ -3256,14 +3256,14 @@ $$\slashed{\vb{p}}^2=\bm{\gamma}^A\vb{p}^{}_A\bm{\gamma}^B\vb{p}^{}_B=\dfrac{1}{
 当然一般我们会略去上角标的负号，也就是总体写为$\bm{\rho}=\dfrac{1}{2}\qty(\slashed{\vb{p}}\pm m)$，其中加减号分别对应正反粒子。\\
 \\
 其次是部分极化态，我们选择从各项同性解出发做变换
-\begin{equation}\bm{\rho}=\dfrac{1}{2}\qty(\slashed{\vb{p}}+m)\bm{\Sigma},\label{55YGHBI}\end{equation}
-其中$\bm{\Sigma}$是辅助矩阵，满足$\bm{\Sigma}(\bm{\zeta}=\vb{0})=\vb{I}^{}_4$。对于它可能的表达式，因为它在各项同性下为单位矩阵，因而一定和极化矢量有关，类似于动量形式，我们也能得到类似的关系$\bm{\Sigma}\propto\slashed{\vb{e}}=\bm{\gamma}^A\vb{e}^{}_A$。并且在极端相对论$m=0$下，式(\ref{55YGHBI})应该化为中微子式(\ref{56RF467})，给出
-$$\bm{\rho}(m=0)=\dfrac{1}{2}\slashed{\vb{p}}\bm{\Sigma}=\dfrac{1}{2}\qty(\vb{I}^{}_4+\gamma^5)\slashed{\vb{p}},$$
-所以$\bm{\Sigma}\propto\gamma^5$。对比两式，我们不难提出一个表达式的形式
-$$\bm{\Sigma}=\vb{I}^{}_4+D\gamma^5\slashed{\vb{e}},$$
+\begin{equation}\bm{\rho}=\dfrac{1}{2}\qty(\slashed{\vb{p}}+m)\vb{\Sigma},\label{55YGHBI}\end{equation}
+其中$\vb{\Sigma}$是辅助矩阵，满足$\vb{\Sigma}(\bm{\zeta}=\vb{0})=\vb{I}^{}_4$。对于它可能的表达式，因为它在各项同性下为单位矩阵，因而一定和极化矢量有关，类似于动量形式，我们也能得到类似的关系$\vb{\Sigma}\propto\slashed{\vb{e}}=\bm{\gamma}^A\vb{e}^{}_A$。并且在极端相对论$m=0$下，式(\ref{55YGHBI})应该化为中微子式(\ref{56RF467})，给出
+$$\bm{\rho}(m=0)=\dfrac{1}{2}\slashed{\vb{p}}\vb{\Sigma}=\dfrac{1}{2}\qty(\vb{I}^{}_4+\gamma^5)\slashed{\vb{p}},$$
+所以$\vb{\Sigma}\propto\gamma^5$。对比两式，我们不难提出一个表达式的形式
+$$\vb{\Sigma}=\vb{I}^{}_4+D\gamma^5\slashed{\vb{e}},$$
 其中$D$是相应的归一化常数。将极化矩阵带入自旋均值式(\ref{KKJGB7})可以计算出该常数$D=-1$，这里我们不给出过程了，于是我们得到最终的形式为
 \begin{equation}\bm{\rho}=\dfrac{1}{2}\qty(\slashed{\vb{p}}+m)\qty(\vb{I}^{}_4-\gamma^5\slashed{\vb{e}}),\end{equation}
-明显$\bm{\Sigma}$和动量无关，因此算上反粒子我们给出(\textsl{L.Michel}，\textsl{A.S.Wightman}，1955)
+明显$\vb{\Sigma}$和动量无关，因此算上反粒子我们给出(\textsl{L.Michel}，\textsl{A.S.Wightman}，1955)
 \begin{equation}\bm{\rho}=\dfrac{1}{2}\qty(\slashed{\vb{p}}\pm m)\qty(\vb{I}^{}_4-\gamma^5\slashed{\vb{e}}).\end{equation}
 最后我们来讨论一下非相对论极限，按照相对论这就是在粒子的静止参考系下讨论，当然也可以认为是低速近似。此时我们有$\vb{p}^A=(m,\vb{0})$，$\vb{e}^A=(0,\bm{\zeta}^a)$，于是我们得到
 \begin{equation}\bm{\rho}=\dfrac{m}{2}\qty(\gamma^0\pm1)\qty(1-\gamma^5\bm{\gamma}\cdot\bm{\zeta}),\end{equation}
@@ -4781,7 +4781,7 @@ $$\hat{c}^4_{\vb{k}}(1,2)=\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}\
 $$\hat{H}^{}_{\vb{k}}=\vb{R}^{\dagger}_{\vb{k}}\vb{Y}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k}}&\hat{c}^{\dagger}_{-\vb{k}}&\hat{c}^{}_{\vb{k}}&\hat{c}^{}_{-\vb{k}}}\vb{Y}^{}_{\vb{k}}\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{}_{-\vb{k}}\\ \hat{c}^{\dagger}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}},$$
 对比式(\ref{cd - -'':})求出其中$\vb{k}\neq\vb{0}$的部分的为
 $$\vb{Y}^{}_{\vb{k}\neq\vb{0}}=\pmqty{0&0&0&\dfrac{NU^{}_0}{2V}\\0&0&\dfrac{NU^{}_0}{2V}&0\\0&\dfrac{NU^{}_0}{2V}&\omega(\vb{k})+\dfrac{NU^{}_0}{V}&0\\ \dfrac{NU^{}_0}{2V}&0&0&\omega(\vb{k})+\dfrac{NU^{}_0}{V}}.$$
-于是带入玻色子的\textsl{Bogoliubov}方程$\vb{Y}^{}_{\vb{k}}=E(\vb{k})\bm{\Gamma}^{\dagger}_{\vb{k}}\bm{\Gamma}^{}_{\vb{k}}$，我们求得最终的结果为
+于是带入玻色子的\textsl{Bogoliubov}方程$\vb{Y}^{}_{\vb{k}}=E(\vb{k})\vb{\Gamma}^{\dagger}_{\vb{k}}\vb{\Gamma}^{}_{\vb{k}}$，我们求得最终的结果为
 \begin{equation}E(\vb{k}\neq\vb{0})=\sqrt{\omega(\vb{k})^2+\frac{2NU^{}_0}{V}\omega(\vb{k})}.\end{equation}
 同时我们解得凝聚态的能量为
 \begin{equation}E^{}_0=\frac{N^2U^{}_0}{2V}+\frac{1}{2}\sum\limits_{\vb{k}\neq\vb{0}}\qty(E(\vb{k})-\omega(\vb{k})-\frac{NU^{}_0}{V}),\label{jitaine}\end{equation}
@@ -6118,15 +6118,15 @@ $$\hat{a}^{\dagger}_{\vb{0}\sigma}=\hat{a}^{}_{\vb{0}\sigma}=a^{}_{\vb{0},\sigma
 这和不相容原理冲突，并体现为费米反对易性的失效。因而我们暂且不对算符取低速微扰并精确到二次项，在无法数值化基态的情况下，取微扰并不能有效的使得算符线性化，所以我们这里不能用\textsl{Nambu}形式(\ref{namnpp3})。后面我们会从平均场的思想重新考虑这一近似。\\
 \\
 为了求解式(\ref{goddamn})的能级，在不做微扰近似的前提下，我们考虑直接使用费米子的\textsl{Bogoliubov}变换。虽然粒子数算符一直都是$\hat{c}$，没有改变其粒子来源，但是在计入自旋符号后，我们依旧可以在形式上采用粒子—反粒子的双能级模型，将$\sigma=1$对应粒子算符$\hat{c}=\hat{c}^{}_{,+}$，$\sigma=-1$对应反粒子算符$\hat{d}=\hat{c}^{}_{,-}$。于是，我们使用第\ref{DFBGRW99}节引入的连续谱费米子\textsl{Bogoliubov}变换(\ref{o})，以矩阵形式表述为
-\begin{equation}\begin{aligned}\hat{\vb{a}}^{}_{\vb{k},+}=&\pmqty{\hat{a}^{}_{\vb{k}}\\ \hat{d}^{}_{\vb{k}}}=\pmqty{\hat{a}^{}_{\vb{k},+}\\ \hat{a}^{}_{\vb{k},-}},\quad \hat{\vb{a}}^{\dagger}_{\vb{k}}=\pmqty{\hat{a}^{\dagger}_{\vb{k},+}\\ \hat{a}^{\dagger}_{\vb{k},-}},\quad \vb{R}^{}_{\vb{k}}(\hat{\vb{b}})=\pmqty{\hat{\vb{a}}^{}_{\vb{k}}\\ \hat{\vb{a}}^{\dagger}_{\vb{k}}},\quad \bm{\Gamma}^{}_{\vb{k}}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{}_{\vb{k}}&-\vb{v}^{}_{\vb{k}}\\ \hdashline \vb{v}^*_{\vb{k}}&\vb{u}^*_{\vb{k}}\end{pNiceArray},\\ \\&\implies\vb{R}^{}_{\vb{k}}(\hat{\vb{c}})=\pmqty{\hat{\vb{c}}^{}_{\vb{k}}\\ \hat{\vb{c}}^{\dagger}_{\vb{k}}}=\bm{\Gamma}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}(\hat{\vb{a}}),\quad \hat{\vb{c}}^{}_{\vb{k}}=\pmqty{\hat{c}^{}_{\vb{k},+}\\ \hat{c}^{}_{\vb{k},-}},\quad \hat{\vb{b}}^{\dagger}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k},+}\\ \hat{c}^{\dagger}_{\vb{k},-}}.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\hat{\vb{a}}^{}_{\vb{k},+}=&\pmqty{\hat{a}^{}_{\vb{k}}\\ \hat{d}^{}_{\vb{k}}}=\pmqty{\hat{a}^{}_{\vb{k},+}\\ \hat{a}^{}_{\vb{k},-}},\quad \hat{\vb{a}}^{\dagger}_{\vb{k}}=\pmqty{\hat{a}^{\dagger}_{\vb{k},+}\\ \hat{a}^{\dagger}_{\vb{k},-}},\quad \vb{R}^{}_{\vb{k}}(\hat{\vb{b}})=\pmqty{\hat{\vb{a}}^{}_{\vb{k}}\\ \hat{\vb{a}}^{\dagger}_{\vb{k}}},\quad \vb{\Gamma}^{}_{\vb{k}}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{}_{\vb{k}}&-\vb{v}^{}_{\vb{k}}\\ \hdashline \vb{v}^*_{\vb{k}}&\vb{u}^*_{\vb{k}}\end{pNiceArray},\\ \\&\implies\vb{R}^{}_{\vb{k}}(\hat{\vb{c}})=\pmqty{\hat{\vb{c}}^{}_{\vb{k}}\\ \hat{\vb{c}}^{\dagger}_{\vb{k}}}=\vb{\Gamma}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}(\hat{\vb{a}}),\quad \hat{\vb{c}}^{}_{\vb{k}}=\pmqty{\hat{c}^{}_{\vb{k},+}\\ \hat{c}^{}_{\vb{k},-}},\quad \hat{\vb{b}}^{\dagger}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k},+}\\ \hat{c}^{\dagger}_{\vb{k},-}}.\end{aligned}\end{equation}
 其中$\hat{c}$是准粒子的粒子数算符。但因为系统依旧是电中性的(算符不变，并非指完全电中性)，所以系统的正规\textsl{Bogoliubov}变换矩阵的形式依旧由式(\ref{ffp11})控制，这里不需要计入自旋
-$$\bm{\Gamma}^{}_{\vb{k}}=\qty(\begin{array}{cc:cc}u^{}_{\vb{k}}&0&0&-v^{}_{\vb{k}}\\0&u^{}_{\vb{k}}&-v^{}_{\vb{k}}&0\\ \hdashline0&v^{*}_{\vb{k}}&u^{*}_{\vb{k}}&0\\v^{*}_{\vb{k}}&0&0&u^{*}_{\vb{k}}\end{array}),$$
+$$\vb{\Gamma}^{}_{\vb{k}}=\qty(\begin{array}{cc:cc}u^{}_{\vb{k}}&0&0&-v^{}_{\vb{k}}\\0&u^{}_{\vb{k}}&-v^{}_{\vb{k}}&0\\ \hdashline0&v^{*}_{\vb{k}}&u^{*}_{\vb{k}}&0\\v^{*}_{\vb{k}}&0&0&u^{*}_{\vb{k}}\end{array}),$$
 也就是说子矩阵$\vb{u}^{}_{\vb{k}}$是对角的，$\vb{v}^{}_{\vb{k}}$是斜对角的。于是我们具体将变换写出为
 \begin{equation}\begin{aligned}&\hat{c}^{}_{\vb{k},+}=u^{}_{\vb{k}}\hat{a}^{}_{\vb{k},+}-v^{}_{\vb{k}}\hat{a}^{\dagger}_{\vb{k},-},\\&\hat{c}^{\dagger}_{\vb{k},-}=u^*_{\vb{k}}\hat{a}^{\dagger}_{\vb{k},-}+v^{*}_{\vb{k}}\hat{a}^{}_{\vb{k},+}.\end{aligned}\end{equation}
 剩余的两个请读者自行补全，同时\textsl{Bogoliubov}条件由式(\ref{nkk})给出，也就是费米反对易下的幺正性。注意如果这里使用的是非正规的变换矩阵(\ref{feipp2})，则我们会从自反对易性得到额外条件
 $$u^{}_{\vb{k}}v^{}_{\vb{k}}=u^{*}_{\vb{k}}v^{*}_{\vb{k}}=0,$$
 也就是其中一个系数强制为$0$的平凡解，这是我们不需要的。由于\textit{Hamiltonian}算符并非二次型，所以我们这里无法直接得出其二次型$\vb{Y}$，自然的我们就不能使用通常的\textsl{Bogoliubov}方程确定变换。那么最简单的方法便是从原式直接求解，带入逆变换
-$$\vb{R}^{}_{\vb{k}}(\hat{\vb{a}})=\bm{\Gamma}^{-1}_{\vb{k}}\vb{R}^{}_{\vb{k}}\qty(\hat{\vb{c}}),$$
+$$\vb{R}^{}_{\vb{k}}(\hat{\vb{a}})=\vb{\Gamma}^{-1}_{\vb{k}}\vb{R}^{}_{\vb{k}}\qty(\hat{\vb{c}}),$$
 我们得到式(\ref{goddamn})写为
 \begin{equation}\begin{aligned}\hat{H}^{\textit{eff}}=&2\sum\limits_{\vb{k}}\phi(\vb{k})v^2_{\vb{k}}+\sum\limits_{\vb{k}}\phi(\vb{k})\qty(u^2_{\vb{k}}-v^2_{\vb{k}})\qty(\hat{c}^{\dagger}_{\vb{k},+}\hat{c}^{}_{\vb{k},+}+\hat{c}^{\dagger}_{\vb{k},-}\hat{c}^{}_{\vb{k},-})\\&+2\sum\limits_{\vb{k}}\phi(\vb{k})u^{}_{\vb{k}}v^{}_{\vb{k}}\qty(\hat{c}^{\dagger}_{\vb{k},+}\hat{c}^{\dagger}_{-\vb{k},-}+\hat{c}^{}_{-\vb{k},-}\hat{c}^{}_{\vb{k},+})+\frac{U^{}_0}{V}\sum\limits_{\vb{k},\vb{k}'}\hat{B}^{\dagger}_{\vb{k}'}\hat{B}^{}_{\vb{k}},\end{aligned}\label{frte|}\end{equation}
 其中我们适当的选择使得系数$u^{}_{\vb{k}},v^{}_{\vb{k}}\in\mathbb R$，注意如果我们不采用正规幺正形式则这是不可能取到的，同时相互作用的部分为
@@ -7952,7 +7952,7 @@ $$\square^{}_x\psi\qty(x^a)=0,\quad \square=\pdv[2]{x_0}-\bm{\Delta}^{}_x.$$
 \begin{equation}D^{}_R(a,b)=i\bigintsss \frac{1}{p^2}e^{-ip(a-b)}\qty(\frac{\dd p}{2\pi})^4\implies\square^{}_aD^{}_R(a,b)=-i\delta^4(a-b),\end{equation}
 其中$\delta^4$的定义参考式(\ref{dxgng6678})。因此我们看到，$D^{}_R(a,b)$是\textsl{FKG}方程的\textsl{Green}函数，从而的确是一个场的传播子，并且因为\textsl{Heaviside}函数使得$a^0>b^0$，所以我们称这个量为\textbf{\textsl{KG}推迟\textsl{Green}函数 \textit{Retarded Green Function}}。对于非零质量粒子，情况也是一样的，我们得到
 \begin{equation}\qty(\square^{}_a+m^2)D^{}_R(a,b)=-i\delta^4(a-b).\label{mofarg}\end{equation}
-关于推迟和提前的性质，请参考第\ref{DFgg//1}节中的推迟势说明，这里不做展开。同时不难总结\textsl{KG}推迟传播子和\textsl{Feynman}传播子之间的关系：对\textsl{KG}传播子的分母加上编时项$i\epsilon$即得到\textsl{Feynman}传播子。并且我们能够清楚看到$i\epsilon$的来源，根据相对论我们知道
+关于推迟和超前的性质，请参考第\ref{DFgg//1}节中的推迟势说明，这里不做展开。同时不难总结\textsl{KG}推迟传播子和\textsl{Feynman}传播子之间的关系：对\textsl{KG}传播子的分母加上编时项$i\epsilon$即得到\textsl{Feynman}传播子。并且我们能够清楚看到$i\epsilon$的来源，根据相对论我们知道
 $$p^2=m^2\implies \qty(\square^{}_a+m^2)^{}_p=0,$$
 也就是说方程(\ref{mofarg})在动量表象下是不可逆的。所以编时项$i\epsilon$的加入，本质上是为了解决该奇异性，而这个奇异性在前面也就体现为$\exp{-i\qty(E^{}_{\vb{p}}\pm\omega)\infty}$这一项的出现。在这个含义下，我们回看第\ref{kapdjcn-*-/-+}节中的结果，方程(\ref{congbeiyg--})的解可以写为
 $$G(\omega,\vb{p})=\lim_{\epsilon\to 0}\frac{1}{\omega-E^{\textit{eff}}(\vb{p})+i\epsilon}\implies G(t,\vb{r})=\lim_{\epsilon\to 0}\int\frac{1}{\omega-E^{\textit{eff}}(\vb{p})+i\epsilon}\frac{\dd\omega\dd^3\vb{p}}{(2\pi)^4}.$$
@@ -8783,7 +8783,7 @@ $$\begin{aligned}D^{}_R(x,y)&=C^{++}(x,y)-\theta\qty(y^0-x^0)\expval{\hat{\psi}(
 \begin{equation}D^{}_R(x,y)=C^{++}(x,y)-C^<(x,y)=C^{++}(x,y)-C^{+-}(x,y)=C^{-+}(x,y)-C^{--}(x,y).\end{equation}
 由于现在推迟\textsl{Green}函数并不和因果性关联，因此我们不妨引入一个时间相反的函数，称为\textbf{超前\textsl{Green}函数 \textit{Advanced Green Function}}，本质就是将$D^{}_R$的时间参数对换定义(\textsl{\rusa{Л. Д. Ландау}}，1958)
 \begin{equation}D^{}_A(x,y)=-\theta\qty(y^0-x^0)\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}}.\end{equation}
-若我们按照因果性理解，这个函数确定了结果的前因，其和$D^{}_R$相反。对于超前的解释参考第\ref{DFgg//1}中的超前势，这里不解释。做类似的计算，我们得到
+若我们按照因果性理解，这个函数确定了结果的前因，其和$D^{}_R$相反。对于超前的解释参考第\ref{DFgg//1}节中的超前势，这里不解释。做类似的计算，我们得到
 $$D^{}_A(x,y)=C^{++}-\theta\qty(x^0-y^0)\expval{\hat{\psi}(x)\hat{\psi}(y)}-\theta\qty(y^0-x^0)\expval{\hat{\psi}(x)\hat{\psi}(y)}=C^{++}(x,y)-C^>(x,y).$$
 于是其按照归一化写出
 \begin{equation}D^{}_A(x,y)=C^{++}(x,y)-C^>(x,y)=C^{++}(x,y)-C^{-+}(x,y)=C^{+-}(x,y)-C^{--}(x,y).\end{equation}
@@ -8850,10 +8850,10 @@ $$\bm{\psi}^K=\psi^{}_+\vb{e}^{}_++\psi^{}_-\vb{e}^{}_-,\quad \mathbb R^2=\text{
 按照一般的习惯，记对应的\textsl{Keldysh}矢量分量为$\bm{\psi}^K=\psi^{}_q\vb{e}^{}_q+\psi^{}_{cl}\vb{e}^{}_{cl}$，令$\psi^{}_q$为第一个分量，则我们得到
 \begin{equation}\mqty(\psi^{}_{q}\\ \psi^{}_{cl})=\vb{Q}^T\mqty(\psi^{}_+\\ \psi^{}_-)\implies \psi^{}_{cl}=\frac{1}{\sqrt{2}}\qty(\psi^{}_++\psi^{}_-),\quad\psi^{}_{q}=\frac{1}{\sqrt{2}}\qty(\psi^{}_+-\psi^{}_-).\label{haRT455++64sFFG}\end{equation}
 于是我们计算\textsl{Keldysh}张量的变换
-$$\vb{D}=\vb{Q}^{-1}\vb{C}^K\vb{Q}=\frac{1}{2}\mqty(C^{++}+C^{--}-C^{+-}-C^{-+}&C^{+-}+C^{++}-C^{-+}-C^{--}\\ C^{-+}-C^{--}+C^{++}-C^{+-}&C^{++}+C^{+-}+C^{--}+C^{-+}).$$
+$$\vb{D}^K=\vb{Q}^{-1}\vb{C}^K\vb{Q}=\frac{1}{2}\mqty(C^{++}+C^{--}-C^{+-}-C^{-+}&C^{+-}+C^{++}-C^{-+}-C^{--}\\ C^{-+}-C^{--}+C^{++}-C^{+-}&C^{++}+C^{+-}+C^{--}+C^{-+}).$$
 按照前文中引入的三个热\textsl{Green}函数(\ref{wuH[]//Ohyugi].,/;'})，我们不难根据\textsl{Keldysh}归一化识别出每一项：$D^{11}=0$，$D^{12}=2\qty(C^{++}-C^{-+})=2D^{}_A$是超前\textsl{Green}函数，$D^{21}=2\qty(C^{++}-C^{+-})=2D^{}_R$是推迟\textsl{Green}函数，$D^{22}=2\qty(C^{++}+C^{--})=2D^{}_S$是\textsl{Schwinger}传播子。于是我们总结得到变换结果为
-\begin{equation}\vb{D}=\mqty(0&D^{}_A\\D^{}_R&D^{}_S).\label{a++..dSGHdg}\end{equation}
-我们看到其迹为$\tr(\vb{D})=D^{}_S=\tr(\vb{C}^K)$不变，符合共轭类的定义。因此在\textsl{Keldysh}旋转下，系统自然的从\textsl{Keldysh}张量导出这三个函数，所以只需要计算出$\vb{C}^K$就能完全了解一个热系统的演化。\\
+\begin{equation}\vb{D}^K=\mqty(0&D^{}_A\\D^{}_R&D^{}_S).\label{a++..dSGHdg}\end{equation}
+我们看到其迹为$\tr(\vb{D}^K)=D^{}_S=\tr(\vb{C}^K)$不变，符合共轭类的定义。因此在\textsl{Keldysh}旋转下，系统自然的从\textsl{Keldysh}张量导出这三个函数，所以只需要计算出$\vb{C}^K$就能完全了解一个热系统的演化。\\
 \\
 最后来看这个旋转的物理含义，方便起见我们省略时空坐标。反解正反分支位形
 $$\mqty(\psi^{}_{+}\\ \psi^{}_{-})=\vb{Q}\mqty(\psi^{}_{q}\\ \psi^{}_{cl})\implies\psi^{}_+=\frac{1}{\sqrt{2}}\qty(\psi^{}_{cl}+\psi^{}_q),\quad\psi^{}_-=\frac{1}{\sqrt{2}}\qty(\psi^{}_{cl}-\psi^{}_q),$$
@@ -8864,11 +8864,11 @@ $$C^{-+,+-}=\frac{1}{2}\expval{\qty(\hat{\psi}^{}_{cl}\pm\hat{\psi}^{}_q)\qty(\h
 注意这里没有编时或路径乘积。为了计算这两个均值，我们从生成函数(\ref{sgeFCAFC;'p[opk7YT67})出发，在\textsl{Keldysh}旋转下外场同样给出
 $$\vb{J}^K=J^{}_q\vb{e}^{}_q+J^{}_{cl}\vb{e}^{}_{cl},\quad J^{}_{cl}=\frac{1}{\sqrt{2}}\qty(J^{}_++J^{}_-),\quad J^{}_{q}=\frac{1}{\sqrt{2}}\qty(J^{}_+-J^{}_-).$$
 生成函数在形式上是关于外场的，以\textsl{Keldysh}张量为度规的二次型，在正交变换下现在写作
-\begin{equation}\ln(\frac{Z^{}_{SK}\qty(\vb{J}^K;\beta)}{Z^{}_{SK}(0)})=\int \vb{J}^K\vb{D}\vb{J}^K\dd\Omega^2=\int\qty{J^{2}_qD^{11}+J^{}_{cl}J^{}_{q}\qty(D^{12}+D^{21})+J^{2}_{cl}D^{22}}\dd\Omega^2.\end{equation}
+\begin{equation}\ln(\frac{Z^{}_{SK}\qty(\vb{J}^K;\beta)}{Z^{}_{SK}(0)})=\int \vb{J}^K\vb{D}^K\vb{J}^K\dd\Omega^2=\int\qty{J^{2}_qD^{11}+J^{}_{cl}J^{}_{q}\qty(D^{12}+D^{21})+J^{2}_{cl}D^{22}}\dd\Omega^2.\end{equation}
 我们知道外场可以通过式(\ref{erTG-*-*-///egb})变为位形，于是在目前的坐标系下，第一个主对角元\textsl{Green}函数给出
 \begin{equation}D^{11}(x,y)=\frac{1}{Z^{}_{SK}(0)}\eval{\qty(\pdv{J^{}_{q}})^2Z^{}_{SK}\qty(\vb{J}^K;\beta)}_{J^{}_q=0}=\expval{\mathbb P\qty{\hat{\psi}^{}_q(x)\hat{\psi}^{}_q(y)}}=0.\label{UGIGYDIOOIIO++--**//+++}\end{equation}
 也就是说，无论处于什么分支，我们都有$\expval{\hat{\psi}^{}_q\hat{\psi}^{}_q}=0$，因而将式(\ref{][;,;,[]98ud})带入\textsl{Wightman}函数的\textsl{SD}方程(\ref{weSRT22--vs})中得到
-\begin{equation}2\hat{\mathcal D}C^{-+,+-}=\hat{\mathcal D}\expval{\hat{\psi}^{}_{cl}\hat{\psi}^{}_{cl}}=0.\end{equation}
+\begin{equation}2\hat{\mathcal D}C^{-+,+-}=\hat{\mathcal D}\expval{\hat{\psi}^{}_{cl}\hat{\psi}^{}_{cl}}=0.\label{Klier5542}\end{equation}
 这说明位形$\psi^{}_{cl}$没有接触项，它和满足最小作用量原理的经典场位形是一致的，代表了经典场 \textit{Classical Field}。相反$\psi^{}_q$关于自身的任意\textsl{Green}函数均为零，相较于经典场，这明显确定了量子涨落，因此代表了量子场 \textit{Quantum Field}。可见\textsl{Keldysh}旋转将场分解为经典和量子两部分，其中量子场作为涨落自身没有任何关联性，而经典场确定了系统的动力学性质，其和量子场的耦合确定了关于经典动力学的涨落。这一点在非平衡物理中有根本性的应用。剩下的不难证明有
 \begin{equation}\begin{aligned}D^{22}(x,y)&=\expval{\mathbb P\qty{\hat{\psi}^{}_{cl}(x)\hat{\psi}^{}_{cl}(y)}}=D^{}_S(x,y),\\ D^{12}(x,y)&=\expval{\mathbb P\qty{\hat{\psi}^{}_q(x)\hat{\psi}^{}_{cl}(y)}}=D^{}_A(x,y),\\ D^{21}(x,y)&=\expval{\mathbb P\qty{\hat{\psi}^{}_{cl}(x)\hat{\psi}^{}_q(y)}}=D^{}_R(x,y).\end{aligned}\label{fgHHug++-+659-*-*-*-*++}\end{equation}
 从而我们可以完全的将\textsl{Keldysh}张量用这三个函数，以及$\psi^{}_{\pm}$位形表示，在下面的\textsl{Wick}定理叙述中有重要的作用。
@@ -10175,7 +10175,7 @@ $$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,label
 \subsection{有限温度实标量场的微扰}
 \noindent 在上文中我们系统性的介绍了零温场的微扰理论，并通过\textsl{Born}级数引入了\textsl{Feynman}图这一具象的工具。现在我们将上述的微扰理论应用到有限温度场中，讨论热态如何在微扰下演化。不失一般性的，这里我们只考察实标量场$\psi$，其自由场设定为\textsl{KG}场。
 \subsubsection{平衡热场的微扰}\label{ty78/**/y99r}
-\noindent 对于平衡热场的微扰而言，我们重点要处理的就是\textsl{Dyson}级数，因为根据\textsl{BdD}定理，平衡热场的\textsl{Wick}展开和零温场是完全一致的。所以在确定了\textsl{Dyson}级数之后，我们只需要按照上文中相同的思路，处理微扰问题即可。\\
+\noindent 对于平衡热场的微扰而言，我们重点要处理的就是\textsl{Dyson}级数，因为根据\textsl{BdD}定理，平衡热场的\textsl{Wick}展开和零温场是完全一致的。所以在确定了\textsl{Dyson}级数之后，我们只需要按照上文中相同的思路，处理微扰问题即可(\textsl{Robert L. Mills}，1962)。\\
 \\
 首先要处理的是相互作用绘景，我们现在希望其能和\textsl{Matsubara}绘景相适配。根据第\ref{InterfbPoiiu+94}节我们知道，在零温场中相互作用绘景就是自由场的\textsl{Heisenberg}绘景，所以自然的在平衡热场中，相互作用绘景就是自由场的\textsl{Matsubara}绘景。基于这个结论，我们将第\ref{InterfbPoiiu+94}节的内容按定义(\ref{Marhtb67676724353})改写为
 \begin{equation}\hat{\psi}^M_I(\tau,\vb{r})=\exp(\tau\hat{H}^{}_0)\hat{\psi}(\vb{r})\exp(-\tau\hat{H}^{}_0),\end{equation}
@@ -10192,7 +10192,7 @@ $$S=S^{}_{KG}+\int^\beta_0\Lambda^{}_{\text{int}}[\psi(\tau)]\dd\tau,\quad \beta
 或者按照式(\ref{UHGg][...''[})，用算符均值的形式写作
 \begin{equation}C^M(x,y)=\frac{\displaystyle\expval{\mathbb T^M\qty{\hat{\psi}^M_I(x)\hat{\psi}^M_I(y)\exp(-\int^\beta_0\hat{\Lambda}^E_{\text{int}}\qty(\hat{\psi}^M_I)\dd\tau)}}}{\displaystyle\expval{\mathbb T^M\qty{\exp(-\int^\beta_0\hat{\Lambda}^E_{\text{int}}\qty(\hat{\psi}^M_I)\dd\tau)}}}.\end{equation}
 这是容易证明的，因为在$S^1_\tau$上虚时间$\tau$被理解为弧长，这和真实时间$t$的取值完全一样，因而直接将时序$\mathbb T$替换成$\mathbb T^M$没有任何问题，比如参考\cite{L2} \S38。类似的我们得到热相互作用多点函数
-\begin{equation}C^M(1,2,\ldots,n)=\frac{\displaystyle\bigintsss\exp(-S^E_{KG})\exp(-\int^\beta_0\Lambda^E_{\text{int}}\dd\tau)\psi\qty(\tau^{}_1)\psi\qty(\tau^{}_2)\cdots\psi\qty(\tau^{}_n)\mathscr D\psi(\tau)}{\displaystyle\bigintsss\exp(-S^E_{KG})\exp(-\int^\beta_0\Lambda^E_{\text{int}}\dd\tau)\mathscr D\psi(\tau)}.\label{YI-**//=-nsvf}\end{equation}
+\begin{equation}C^M(1,2,\ldots,n)=\frac{\displaystyle\bigointsss\exp(-S^E_{KG})\exp(-\int^\beta_0\Lambda^E_{\text{int}}\dd\tau)\psi\qty(\tau^{}_1)\psi\qty(\tau^{}_2)\cdots\psi\qty(\tau^{}_n)\mathscr D\psi(\tau)}{\displaystyle\bigointsss\exp(-S^E_{KG})\exp(-\int^\beta_0\Lambda^E_{\text{int}}\dd\tau)\mathscr D\psi(\tau)}.\label{YI-**//=-nsvf}\end{equation}
 可见平衡热场和零温场的结论在形式上是完全一致的，于是任务就变为：计算零温微扰理论在\textsl{BdD}定理下，关于热态的适配修正。\\
 \\
 不妨从计算温度\textsl{Green}函数的各阶修正开始，零级近似自然就是自由场的温度\textsl{Green}函数，写作
@@ -10303,8 +10303,8 @@ $$\begin{aligned}C^{(1)}_{++}(x,y)=i\lambda\bigintsss\Bigg(&\wick[offset=1.2em]{
 这三个展开式请读者自行计算，我们就不赘述了。当然由于式(\ref{g++FSG-++++hfs})，涉及到的\textsl{Wightman}函数对换变量顺序不会对最终结果造成影响，只需要按照记号定义相应的更改正负号顺序即可。\\
 \\
 现在我们来考察其矩阵表述，整体可以分为两部分：相互作用$\pm\qty(\hat{\psi}^{\pm}_I)^2$自身的缩并，以及和$\hat{\psi}^{\pm}_I(x,y)$的混合缩并。先看独立缩并，外部位形缩并给出自由\textsl{Keyldsh}矩阵$\wick[offset=1.2em]{\c{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(x)\c{\hat{\bm{\psi}}}\vphantom{\hat{\bm{\psi}}}^K_I(y)}=\vb{G}^K_{KG}(x,y)$，相互作用缩并给出$G^{++}_{KG}(z,z)$和$-G^{--}_{KG}(z,z)$。注意反向支带负号，为了考虑到这点我们写出
-$$\bm{\Sigma}^{}_-\vb{G}^K_{KG}(z,z)=\mqty(1&0\\0&-1)\times\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(z,z)=\mqty(G^{++}_{KG}&G^{+-}_{KG}\\-G^{-+}_{KG}&-G^{--}_{KG})(z,z),\quad \bm{\Sigma}^{}_-=\mqty(1&0\\0&-1).$$
-其中$\bm{\Sigma}^{}_-$是在\textsl{Bogoliubov}变换(\ref{LbDu--o})中引入的伪幺正度规，在形式上也等于第三个\textsl{Pauli}矩阵$\bm{\Sigma}^{}_-=\hat{\sigma}^{}_3$，其引入的必要性参见第\ref{=0=-0FSJGDHRE}节。现在探讨这一部分的结构，对于$\vb{C}^K(x,y)$中的每一个固定分量，均需要乘上$\qty(\hat{\psi}^+_I)^2-\qty(\hat{\psi}^-_I)^2$的缩并，利用上面引入的矩阵给出
+$$\vb{\Sigma}^{}_-\vb{G}^K_{KG}(z,z)=\mqty(1&0\\0&-1)\times\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(z,z)=\mqty(G^{++}_{KG}&G^{+-}_{KG}\\-G^{-+}_{KG}&-G^{--}_{KG})(z,z),\quad \vb{\Sigma}^{}_-=\mqty(1&0\\0&-1).$$
+其中$\vb{\Sigma}^{}_-$是在\textsl{Bogoliubov}变换(\ref{LbDu--o})中引入的伪幺正度规，在形式上也等于第三个\textsl{Pauli}矩阵$\vb{\Sigma}^{}_-=\hat{\sigma}^{}_3$，其引入的必要性参见第\ref{=0=-0FSJGDHRE}节。现在探讨这一部分的结构，对于$\vb{C}^K(x,y)$中的每一个固定分量，均需要乘上$\qty(\hat{\psi}^+_I)^2-\qty(\hat{\psi}^-_I)^2$的缩并，利用上面引入的矩阵给出
 $$G^{++}_{KG}(z,z)-G^{--}_{KG}(z,z)=\tr\mqty(G^{++}_{KG}&0\\0&-G^{--}_{KG})(z,z)=\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z),$$
 因此第一项的缩并给出
 \begin{equation}\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(x)\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(y)}\qty(\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)\c{\hat{\psi}}\vphantom{\hat{\psi}}^+_I(z)}-\wick[offset=1.2em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)\c{\hat{\psi}}\vphantom{\hat{\psi}}^-_I(z)})=\vb{G}^K_{KG}(x,y)\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z).\end{equation}
@@ -10318,21 +10318,21 @@ $$\mqty(G^{++}_{KG}&G^{+-}_{KG}\\0&0)=\mqty(1&0\\0&0)\times\mqty(G^{++}_{KG}&G^{
 \begin{equation}\vb{C}^{K;(1)}(x,y)=i\lambda\int\qty{\vb{G}^K_{KG}(x,y)\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z)+\vb{G}^K_{KG}(x,z)\hat{\sigma}^{}_3\vb{G}^K_{KG}(z,y)}\dd\Omega^{}_z.\label{jhDF[][]-gfd}\end{equation}
 就此我们重新回到代数表述，所有的内容都可以按照矩阵形式计算，这相比每个分量单独计算是极为方便的。更高阶的修正这里就不给出了，读者可以按照相同的思路，直接得到相应的矩阵方程。\\
 \\
-作为矩阵的应用，我们来计算$D^{}_R$，$D^{}_A$和$D^{}_S$的一级修正。在\textsl{Keldysh}旋转(\ref{Keg--FG+.+*})下，\textsl{Keldysh}矩阵变换为由式(\ref{a++..dSGHdg})确定的矩阵$\vb{D}$，其三个分量就是所要求的三个传播子。于是对式(\ref{jhDF[][]-gfd})做\textsl{Keldysh}旋转，我们得到
+作为矩阵的应用，我们来计算$D^{}_R$，$D^{}_A$和$D^{}_S$的一级修正。在\textsl{Keldysh}旋转(\ref{Keg--FG+.+*})下，\textsl{Keldysh}矩阵变换为由式(\ref{a++..dSGHdg})确定的矩阵$\vb{D}^K$，其三个分量就是所要求的三个传播子。于是对式(\ref{jhDF[][]-gfd})做\textsl{Keldysh}旋转，我们得到
 $$\begin{aligned}&\vb{Q}^{-1}\vb{C}^{K;(1)}(x,y)\vb{Q}=\mqty(0&D^{(1)}_A\\D^{(1)}_R&D^{(1)}_S)\\&=i\lambda\int\vb{Q}^{-1}\qty{\vb{G}^K_{KG}(x,y)\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})(z,z)+\vb{G}^K_{KG}(x,z)\hat{\sigma}^{}_3\vb{G}^K_{KG}(z,y)}\vb{Q}\dd\Omega^{}_z.\end{aligned}$$
-第一部分由于迹的标量性，因此变换只对$\vb{G}^K_{KG}(x,y)$进行，由于其只是自由场\textsl{Keldysh}矩阵，因而我们得到结果为$\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}=\vb{D}^{(0)}$。当然迹也应用$\vb{D}^{(0)}$的分量表示，带入式(\ref{wuH[]//Ohyugi].,/;'})的定义我们写出
+第一部分由于迹的标量性，因此变换只对$\vb{G}^K_{KG}(x,y)$进行，由于其只是自由场\textsl{Keldysh}矩阵，因而我们得到结果为$\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}=\vb{D}^{K(0)}$。当然迹也应用$\vb{D}^{K(0)}$的分量表示，带入式(\ref{wuH[]//Ohyugi].,/;'})的定义我们写出
 \begin{equation}\tr(\hat{\sigma}^{}_3\vb{G}^K_{KG})=G^{++}_{KG}-G^{--}_{KG}=D^{(0)}_A+D^{(0)}_R,\label{Soruy97867576k}\end{equation}
-也就是$\vb{D}^{(0)}$的斜对角和，这一点请读者用代数法证明，于是第一部分给出$\vb{D}^{(0)}\qty(D^{(0)}_A+D^{(0)}_R)$。第二部分略微复杂，由于变换是幺正的$\vb{Q}^{-1}\vb{Q}=\vb{I}$，我们不妨在$\bm{\Sigma}^{}_-$两侧各插入单位矩阵$\vb{I}$，于是这就变为
-$$\vb{Q}^{-1}\vb{G}^K_{KG}\hat{\sigma}^{}_3\vb{G}^K_{KG}\vb{Q}=\qty{\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}}\qty{\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}}\qty{\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}}=\vb{D}^{(0)}\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}\vb{D}^{(0)},$$
+也就是$\vb{D}^{K(0)}$的斜对角和，这一点请读者用代数法证明，于是第一部分给出$\vb{D}^{K(0)}\qty(D^{(0)}_A+D^{(0)}_R)$。第二部分略微复杂，由于变换是幺正的$\vb{Q}^{-1}\vb{Q}=\vb{I}$，我们不妨在$\vb{\Sigma}^{}_-$两侧各插入单位矩阵$\vb{I}$，于是这就变为
+$$\vb{Q}^{-1}\vb{G}^K_{KG}\hat{\sigma}^{}_3\vb{G}^K_{KG}\vb{Q}=\qty{\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}}\qty{\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}}\qty{\vb{Q}^{-1}\vb{G}^K_{KG}\vb{Q}}=\vb{D}^{K(0)}\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}\vb{D}^{K(0)},$$
 也就是归结为$\hat{\sigma}^{}_3$的\textsl{Keldysh}变换。这不难计算
 $$\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}=\frac{1}{2}\mqty(1&-1\\1&1)\mqty(1&0\\0&-1)\mqty(1&1\\-1&1)=\mqty(0&1\\1&0)=\hat{\sigma}^{}_1,$$
 其将第三个\textsl{Pauli}矩阵变换为第一个\textsl{Pauli}矩阵。因此最终我们得到这三个传播子的一级修正为
-\begin{equation}\mqty(0&D^{(1)}_A\\D^{(1)}_R&D^{(1)}_S)(x,y)=i\lambda\int\qty{\vb{D}^{(0)}(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+\vb{D}^{(0)}(x,z)\hat{\sigma}^{}_1\vb{D}^{(0)}(z,y)}\dd\Omega^{}_z,\end{equation}
+\begin{equation}\mqty(0&D^{(1)}_A\\ D^{(1)}_R&D^{(1)}_S)(x,y)=i\lambda\int\qty{\vb{D}^{K(0)}(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+\vb{D}^{K(0)}(x,z)\hat{\sigma}^{}_1\vb{D}^{K(0)}(z,y)}\dd\Omega^{}_z,\end{equation}
 具体打开得到
 \begin{equation}\begin{cases}D^{(1)}_S(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_S(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_S(z,y)+D^{(0)}_S(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_R(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_R(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_R(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_A(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_A(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_A(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z.\end{cases}\label{JIngdtaioffu}\end{equation}
 可以看到对于一级修正，\textsl{Schwinger}传播子$D^{(1)}_S$的混合缩并同时涉及到另外两个传播子，该现象的物理含义我们在后面会解答。但需要注意一个非常重要的点，比如对于$D^{(1)}_R(x,y)$按式(\ref{Soruy97867576k})转换回$\vb{G}^K_{KG}(x,y)$具体打开$D^{(0)}_R(x,z)D^{(0)}_R(z,y)$得到
 $$\begin{aligned}D^{(0)}_R(x,z)D^{(0)}_R(z,y)=&G^{++}_{KG}(x,z)G^{++}_{KG}(z,y)-G^{++}_{KG}(x,z)G^{+-}_{KG}(z,y)\\&-G^{+-}_{KG}(x,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,z)G^{+-}_{KG}(z,y),\end{aligned}$$
-最后两项中内点$z$的符号均为$z^-\to z^+$，这是不允许的，因为内点应该是同一个时空点。这就说明在具体计算时，我们不应该打开$D^{}_R$，而是将其当作一个普通的传播子计算。为了和\textsl{Keyldsh}矩阵$\vb{C}(x,y)$区分，我们将使用$D^{}_{R,A,S}$作为基本传播子的体系称为\textbf{推迟—提前基准 \textit{Retarded-Advanced Basis}}，简称为\textbf{RA}基准，而将\textsl{Keyldsh}矩阵称为\textbf{回路基准 \textit{Contour basis}}，因为其直接建立在\textsl{CTP}上。\\
+最后两项中内点$z$的符号均为$z^-\to z^+$，这是不允许的，因为内点应该是同一个时空点。这就说明在具体计算时，我们不应该打开$D^{}_R$，而是将其当作一个普通的传播子计算。为了和\textsl{Keyldsh}矩阵$\vb{C}(x,y)$区分，我们将使用$D^{}_{R,A,S}$作为基本传播子的体系称为\textbf{推迟—超前基准 \textit{Retarded-Advanced Basis}}，简称为\textbf{RA}基准，而将\textsl{Keyldsh}矩阵称为\textbf{回路基准 \textit{Contour basis}}，因为其直接建立在\textsl{CTP}上。\\
 \\
 在上述讨论的基础上，我们来考察\textsl{SK}形式的\textsl{Feynman}规则，先从自由场开始。方便起见，我们仍采用第\ref{Wea]]]907lsfGF}节的记号，将分支号直接归结到变量上，比如$\psi^{\pm}(x)=x^{\pm}$。以式(\ref{Csh***..5654do})为例，将自由传播子的空间\textsl{Feynman}图定义为
 \begin{equation}G^{--}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{+-}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{-+}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}},\end{equation}
@@ -10400,55 +10400,71 @@ $$C^{lm}(x,y)=-\frac{1}{Z^{}_{SK}\qty(0;\beta)}\eval{\pdv{Z^{}_{SK}\qty(J^{}_+,J
 \begin{equation}\pdv{\Gamma^{}_{SK}\qty(\bm{\eta}^K)}{\bm{\eta}^K}=\vb{J}^K\implies\pdv{\Gamma^{}_{SK}}{\eta^{}_+}=J^{}_+,\quad\pdv{\Gamma^{}_{SK}}{\eta^{}_-}=J^{}_-.\label{[qer]D[fdfg0]}\end{equation}
 在此基础上我们来计算\textsl{SK}形式的互易关系，将全连通\textsl{Keyldsh}矩阵(\ref{rGvnqer13*/*})用自由能$F$表示，并带入序参量(\ref{Xuc][POI[-})得到
 $$\bm{\mathfrak C}^K(x,y)=-i\eval{\pdv{F\qty(\vb{J}^K)}{\vb{J}^K(x)}{\vb{J}^K(y)}}_{\vb{J}^K=0}=i\eval{\pdv{\bm{\eta}^K(x)}{\vb{J}^K(y)}}_{\vb{J}^K=0}\implies\mathfrak C^K_{lm}(x,y)=i\eval{\pdv{\eta^{}_l(x)}{J^{}_m(y)}}_{J^l=0}.$$
-现在我们引入该磁化率的倒数，但这里需要注意其定义。在实标量\textsl{KG}场中场算符为$-\square$，将自由场方程组(\ref{dudu98786786665})以矩阵形式写作
-$$-\square\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(x,y)=\mqty(1&0\\0&-1)i\delta^{}_{xy},$$
-或者用第三个\textsl{Pauli}矩阵给出更普遍的形式
-\begin{equation}-\square\vb{G}^K_{KG}(x,y)=i\hat{\sigma}^{}_3\delta^{}_{xy}\Longleftrightarrow -\square G^{lm}_{KG}(x,y)=i\delta^{}_{xy}\hat{\sigma}^{lm}_3.\label{Scb08456**}\end{equation}
-也就是说，自由传播子的倒数为$\qty(\vb{G}^K_{KG})^{-1}\propto i\hat{\sigma}^{}_3$，它必须和$\hat{\sigma}^{}_3$相关。这是很明显的，因为\textsl{CTP}作用量写作$\Lambda\qty(\psi^{}_+)-\Lambda\qty(\psi^{}_-)$，其正向支和反向支差一个负号，$\hat{\sigma}^{}_3$的引入正是为了平衡符号。因此该磁化率的倒数应定义为
-\begin{equation}-i\sum_n\bigintsss\mathfrak C^K_{ln}(x,z)\eval{\pdv{J^{}_n(z)}{\eta^{}_m(y)}}_{\eta^{}_l=0}\dd\Omega^{}_z=-i\sum_n\bigintsss\mathfrak C^K_{ln}(x,z)\eval{\pdv{\Gamma^{}_{SK}\qty(\bm{\eta}^K)}{\eta^{}_n(z)}{\eta^{}_m(y)}}_{\eta^{}_l=0}\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3,\end{equation}
-其中第一个等号，我们对外场带入了式(\ref{[qer]D[fdfg0]})，最后的$\hat{\sigma}^{lm}_3$正是正反支以及耦合为零的体现。同样的我们按照式(\ref{BNM,P;Phb98++})引入有效作用量的\textsl{Hessian}，注意这是一个标准的二维矩阵的矩阵元
+现在我们引入该磁化率的倒数
+\begin{equation}-i\sum_n\bigintsss\mathfrak C^K_{ln}(x,z)\eval{\pdv{J^{}_n(z)}{\eta^{}_m(y)}}_{\eta^{}_l=0}\dd\Omega^{}_z=-i\sum_n\bigintsss\mathfrak C^K_{ln}(x,z)\eval{\pdv{\Gamma^{}_{SK}\qty(\bm{\eta}^K)}{\eta^{}_n(z)}{\eta^{}_m(y)}}_{\eta^{}_l=0}\dd\Omega^{}_z=\delta^{}_{xy}\delta^{lm},\end{equation}
+其中第一个等号，我们对外场带入了式(\ref{[qer]D[fdfg0]})。同样的我们按照式(\ref{BNM,P;Phb98++})引入有效作用量的\textsl{Hessian}，注意这是一个标准的二维矩阵的矩阵元
 \begin{equation}\mathscr H^{lm}_\Gamma(x,y)=-i\eval{\pdv{\Gamma\qty(\bm{\eta}^K)}{\eta^{}_l(x)}{\eta^{}_m(y)}}_{\eta^{}_l=0},\end{equation}
 从而\textsl{SK}形式的互易关系写作
-\begin{equation}\sum_{n=\pm}\int\mathfrak C^{ln}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3\Longleftrightarrow\int\bm{\mathfrak C}^K(x,z)\mathscr H^K_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{}_3.\label{h4367//..2310Fy}\end{equation}
+\begin{equation}\sum_{n=\pm}\int\mathfrak C^{ln}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\delta^{lm}_3\Longleftrightarrow\int\bm{\mathfrak C}^K(x,z)\mathscr H^K_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\vb{I}^{}_2.\label{h4367//..2310Fy}\end{equation}
 其中$\mathscr H^K_\Gamma$是二维\textsl{Hessian}矩阵。这个等式就是逆矩阵的标准定义，从而零温场的结论(\ref{Recihb98++})在非平衡热场中就体现为全连通\textsl{Keyldsh}矩阵的逆。\\
 \\
 有了互易关系之后，我们就可以来处理\textsl{Dyson}方程和\textsl{BD}级数了。不妨按照第\ref{1pL//-..][rG}节重新推导，依旧按照微扰将全连通\textsl{Keyldsh}张量展开为自由场和其余的和，方便起见下面的推导以矩阵元为主
 $$\mathfrak C^{lm}(x,y)=G^{lm}_{KG}(x,y)+\mathfrak C^{(res)}_{lm}(x,y),$$
 从而互易关系(\ref{h4367//..2310Fy})给出
-$$\sum_n\int G^{ln}_{KG}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3-\sum_n\int \mathfrak C^{(res)}_{ln}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z.$$
-暂且将自由场\textsl{Keyldsh}矩阵的逆矩阵记为$\qty(\vb{G}^K_{KG})^{-1}$，其满足$\hat{\sigma}^{}_3$归一化
-\begin{equation}\sum_nC^{-1}_{ln}C^{nm}=\hat{\sigma}^{lm}_3,\label{FH--..3514==[}\end{equation}
-根据互易关系(\ref{h4367//..2310Fy})这是\textsl{Hessian}的零级近似$\mathscr H^{K(0)}_\Gamma=\qty(\vb{G}^K_{KG})^{-1}$，且容易验证$\hat{\sigma}^{}_3$为\textsl{Keyldsh}张量的度规
-\begin{equation}\sum_n\hat{\sigma}^{ln}C^{nm}_3=C^{lm},\quad \sum_n\hat{\sigma}^{ln}_3C^{-1}_{nm}=C^{-1}_{lm}.\end{equation}
-则我们得到\textsl{Hessian}为
+$$\sum_n\int G^{ln}_{KG}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\delta^{lm}-\sum_n\int \mathfrak C^{(res)}_{ln}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z.$$
+暂且将自由场\textsl{Keyldsh}矩阵的逆矩阵记为$\qty(\vb{G}^K_{KG})^{-1}=\mathscr H^{K(0)}_\Gamma$，满足正常的归一化$\qty(\vb{G}^K_{KG})^{-1}\vb{G}^K_{KG}=\vb{I}$，则我们得到\textsl{Hessian}为
 \begin{equation}\mathscr H^{lm}_\Gamma(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\sum_{n,k}\int\qty(G^{lk}_{KG})^{-1}(x,1)\mathfrak C^{(res)}_{kn}(1,2)\mathscr H^{nm}_\Gamma(2,y)\dd\Omega^{}_1\dd\Omega^{}_2.\end{equation}
 这是一个典型的\textsl{LS}方程，同样将第二项记为$\Sigma$，但此时这是一个二维矩阵的矩阵元$\Sigma^{lm}$，定义为
-\begin{equation}\Sigma^{lm}(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\mathscr H^{lm}_\Gamma(x,y)\implies \bm{\Sigma}^K=\mathscr H^{K(0)}_\Gamma-\mathscr H^K_\Gamma.\end{equation}
+\begin{equation}\Sigma^{lm}(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\mathscr H^{lm}_\Gamma(x,y)\implies \vb{\Sigma}^K=\mathscr H^{K(0)}_\Gamma-\mathscr H^K_\Gamma=\mqty(\Sigma^{++}&\Sigma^{+-}\\ \Sigma^{-+}&\Sigma^{--}).\label{Pouicu89788/}\end{equation}
 回代入互易关系我们得到
-$$\sum_n\int\qty(G^{ln}_{KG})^{-1}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\hat{\sigma}^{lm}_3+\sum_{n}\int\Sigma^{ln}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z,$$
-根据\textsl{SD}方程(\ref{Scb08456**})和归一化(\ref{FH--..3514==[})容易解得$\qty(\vb{G}^{K}_{KG})^{-1}=i\square$，其\textsl{Green}函数为$\vb{G}^{K}_{KG}$，我们就重新得到\textsl{Dyson}方程
+$$\sum_n\int\qty(G^{ln}_{KG})^{-1}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\delta^{lm}+\sum_n\int\Sigma^{ln}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z,$$
+但在计算$\qty(\vb{G}^{K}_{KG})^{-1}$时需要注意\textsl{CTP}约束。在实标量\textsl{KG}场中场算符为$-\square$，将自由\textsl{SD}方程组(\ref{dudu98786786665})以矩阵形式写作
+$$-\square\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(x,y)=\mqty(1&0\\0&-1)i\delta^{}_{xy},$$
+或者用第三个\textsl{Pauli}矩阵给出更普遍的形式
+\begin{equation}-\square\vb{G}^K_{KG}(x,y)=i\hat{\sigma}^{}_3\delta^{}_{xy}\Longleftrightarrow -\square G^{lm}_{KG}(x,y)=i\delta^{}_{xy}\hat{\sigma}^{lm}_3.\label{Scb08456**}\end{equation}
+也就是说$\hat{\sigma}^{}_3$充当了\textsl{CTP}形式的背景度规，这是很明显的，因为\textsl{CTP}作用量写作$\Lambda\qty(\psi^{}_+)-\Lambda\qty(\psi^{}_-)$，其正向支和反向支差一个负号，$\hat{\sigma}^{}_3$的引入正是为了平衡符号。再考虑到$\qty(\hat{\sigma}^{}_3)^2=\vb{I}$，将归一化带入方程(\ref{Scb08456**})和容易解得
+\begin{equation}\qty(\vb{G}^{K}_{KG})^{-1}=\mathscr H^{K(0)}_\Gamma=i\hat{\sigma}^{}_3\square,\end{equation}
+其\textsl{Green}函数为$\vb{G}^K_{KG}$，我们就重新得到\textsl{Dyson}方程
 \begin{equation}\mathfrak C^{lm}(x,y)=G^{lm}_{KG}(x,y)+\sum_{n,k}\int G^{lk}_{KG}(x,c)\Sigma^{kn}(c,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z\dd\Omega^{}_c,\end{equation}
 以及相应的\textsl{BD}级数解
-\begin{equation}\begin{aligned}\mathfrak C^{lm}_{KG}&(x,y)=G^{lm}_{KG}(x,y)+\sum_{n,k}\int G^{lk}_{KG}(x,c)\Sigma^{kn}(c,z)G^{nm}_{KG}(z,y)\dd\Omega^{}_z\dd\Omega^{}_c\\&+\sum_{n^{}_1,n^{}_2,n^{}_3,n^{}_4}\int G^{ln^{}_1}_{KG}(x,a)\Sigma^{n^{}_1n^{}_2}(a,b)G^{n^{}_2n^{}_3}_{KG}(b,c)\Sigma^{n^{}_3n^{}_4}(c,d)G^{n^{}_4m}_{KG}(d,y)\dd\Omega^4\\&+\cdots.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\mathfrak C^{lm}&(x,y)=G^{lm}_{KG}(x,y)+\sum_{n,k}\int G^{lk}_{KG}(x,c)\Sigma^{kn}(c,z)G^{nm}_{KG}(z,y)\dd\Omega^{}_z\dd\Omega^{}_c\\&+\sum_{n^{}_1,n^{}_2,n^{}_3,n^{}_4}\int G^{ln^{}_1}_{KG}(x,a)\Sigma^{n^{}_1n^{}_2}(a,b)G^{n^{}_2n^{}_3}_{KG}(b,c)\Sigma^{n^{}_3n^{}_4}(c,d)G^{n^{}_4m}_{KG}(d,y)\dd\Omega^4\\&+\cdots.\end{aligned}\end{equation}
+为了直观的展示结果，这里具体的写出分量$\mathfrak C^{++}$，对\textsl{BD}级数取到一级近似
+$$\begin{aligned}\mathfrak C^{++}(x,y)=&G^{++}_{KG}(x,y)+\int \Big\{G^{++}_{KG}(x,c)\Sigma^{++}(c,z)G^{++}_{KG}(z,y)+G^{++}_{KG}(x,c)\Sigma^{+-}(c,z)G^{-+}_{KG}(z,y)\\&+G^{+-}_{KG}(x,c)\Sigma^{-+}(c,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,c)\Sigma^{--}(c,z)G^{-+}_{KG}(z,y)\Big\}\dd\Omega^{}_z\dd\Omega^{}_c.\end{aligned}$$
 当然更好的选择是矩阵形式，积分用核形式化简
-\begin{equation}\begin{aligned}&\text{\textsl{Dyson}方程：}i\square\bm{\mathfrak C}^K=\hat{\sigma}^{}_3+\vb{\Sigma}^K\bm{\mathfrak C}^K,\quad\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\bm{\mathfrak C}^K,\\&\text{\textsl{BD}级数：}\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}+\cdots.\end{aligned}\label{Yat623457}\end{equation}
+\begin{equation}\begin{aligned}&\text{\textsl{Dyson}方程：}i\hat{\sigma}^{}_3\square\bm{\mathfrak C}^K=\vb{I}+\vb{\Sigma}^K\bm{\mathfrak C}^K,\quad\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\bm{\mathfrak C}^K,\\&\text{\textsl{BD}级数：}\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}+\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}\vb{\Sigma}^K\vb{G}^K_{KG}+\cdots.\end{aligned}\label{Yat623457}\end{equation}
 关于$\vb{\Sigma}^K$的图含义，以及\textsl{SK}形式的\textit{1PI}这里就不再重新计算了，根据之前的结论可知，这些都可以直接从第\ref{1pL//-..][rG}节直接得到。但需要说明的是，目前为止我们一直都处于回路规则中，并非\textsl{RA}规则，因此这里的\textit{1PI}是回路图，式(\ref{UGYU[0274378][})现在写为
 \begin{equation}\Sigma^{lm}(x,y)=\text{Sum of all contour \textit{1PI} with two external legs},\quad \forall l,m=\pm.\end{equation}
 也就是不可拆分的回路热浴泡泡和，这些和中包含所有可能的顶点种类，以及相应的符号。\\
 \\
-现在我们来讨论$\bm{\Sigma}^K$的代数性质，首先注意到式(\ref{Yat623457})的\textsl{Dyson}方程，如果我们将算符$\qty(G^{lm}_{KG})^{-1}$作用到右侧的\textsl{LS}方程，并和左侧的微分方程对比得到
-$$i\square\bm{\mathfrak C}^K=\hat{\sigma}^{}_3+\hat{\sigma}^{}_3\vb{\Sigma}^K\bm{\mathfrak C}^K=\hat{\sigma}^{}_3+\vb{\Sigma}^K\bm{\mathfrak C}^K,$$
-这里已经带入了\textsl{SD}方程(\ref{Scb08456**})$i\square\vb{G}^K_{KG}=\hat{\sigma}^{}_3$。于是我们看到$\vb{\Sigma}^K=\hat{\sigma}^{}_3\vb{\Sigma}^K$，将指标具体写出为
-\begin{equation}\sum_n\hat{\sigma}^{ln}_3\Sigma^{nm}=\Sigma^{lm},\end{equation}
-也就是说$\bm{\Sigma}^K$同样以$\hat{\sigma}^{}_3$为度规。这并不是一个显而易见的性质，
-
-
-
-
-
-
+现在我们来讨论$\vb{\Sigma}^K$的代数性质，在矩阵形式下，我们同样可以对$\vb{\Sigma}^K$取\textsl{Keldysh}旋转(\ref{Keg--FG+.+*})，我们得到
+$$\vb{\Psi}^K=\vb{Q}^{-1}\vb{\Sigma}^K\vb{Q}=\frac{1}{2}\mqty(\Sigma^{++}+\Sigma^{--}-\Sigma^{+-}-\Sigma^{-+}&\Sigma^{+-}+\Sigma^{++}-\Sigma^{-+}-\Sigma^{--}\\ \Sigma^{-+}-\Sigma^{--}+\Sigma^{++}-\Sigma^{+-}&\Sigma^{++}+\Sigma^{+-}+\Sigma^{--}+\Sigma^{-+}).$$
+根据定义(\ref{Pouicu89788/})$\vb{\Sigma}^K$是全连通\textsl{Keyldsh}矩阵的逆和其零级近似逆的差，而\textsl{Keyldsh}矩阵只有三个独立分量，因此我们期待$\vb{\Sigma}^K$的分量之间同样也是线性相关的。为此我们从\textsl{Keldysh}归一化(\ref{egdnfl;'[][[]eg})出发，首先可以证明对于全连通传播子依然满足
+\begin{equation}\mathfrak C^{++}(x,y)+\mathfrak C^{--}(x,y)=\mathfrak C^{-+}(x,y)+\mathfrak C^{+-}(x,y),\end{equation}
+因为传播子的定义没变。现在对两侧均作用算符$i\square$，并带入\textsl{Dyson}方程(\ref{Yat623457})得到
+$$i\square\qty(\mathfrak C^{++}+\mathfrak C^{--})=\sum_l\Sigma^{1l}\mathfrak C^{l1}-\sum_m\Sigma^{2m}\mathfrak C^{m2}=i\square\qty(\mathfrak C^{+-}+\mathfrak C^{-+})=\sum_l\Sigma^{1l}\mathfrak C^{l2}-\sum_m\Sigma^{2m}\mathfrak C^{m1}.$$
+写出具体分量形式，并合并同类项得到
+$$\qty(\Sigma^{++}+\Sigma^{-+})\qty(\mathfrak C^{++}-\mathfrak C^{+-})+\qty(\Sigma^{--}+\Sigma^{+-})\qty(\mathfrak C^{-+}-\mathfrak C^{--})=0.$$
+对比\textsl{Keldysh}归一化，只有当两侧$\mathfrak C$系数之和为零该式才成立，因此我们得到
+\begin{equation}\Sigma^{++}+\Sigma^{-+}+\Sigma^{--}+\Sigma^{+-}=0.\end{equation}
+这称为\textbf{\textsl{Schwinger}归一化}，由此矩阵$\vb{\Psi}^K$变为
+$$\vb{\Psi}^K=\mqty(\Sigma^{++}+\Sigma^{--}&\Sigma^{+-}+\Sigma^{++}\\ \Sigma^{++}+\Sigma^{-+}&0).$$
+类似的我们定义相应的延迟，超前和\textsl{Schwinger}分量
+\begin{equation}\Psi^{}_D=\Sigma^{++}+\Sigma^{+-},\quad\Psi^{}_A=\Sigma^{++}+\Sigma^{-+},\quad\Psi^{}_S=\Sigma^{++}+\Sigma^{--},\end{equation}
+也就是将$D^{}_A$和$D^{}_R$中的符号变化，我们得到变换后的结果
+\begin{equation}\vb{\Psi}^K=\mqty(\Psi^{}_S&\Psi^{}_R\\ \Psi^{}_A&0).\end{equation}
+对比\textsl{Keyldsh}矩阵的变换(\ref{a++..dSGHdg})，我们看到零出现在另一个对角元上，并且推迟和超前分量被转置，这正是逆矩阵的表现。进一步我们变换\textsl{Dyson}方程，方便起见记全连通\textsl{Keyldsh}矩阵的变换为
+$$\bm{\mathfrak C}^K\stackrel{\vb{Q}}{\sim}\bm{\mathfrak D}^K=\mqty(0&\mathfrak D^{}_A\\ \mathfrak D^{}_R&\mathfrak D^{}_S),\quad \vb{G}^K_{KG}\stackrel{\vb{Q}}{\sim}\vb{D}^{K(0)},$$
+并注意到上文中计算过的$\hat{\sigma}^{}_3\stackrel{\vb{Q}}{\sim}\hat{\sigma}^{}_1$，我们得到
+\begin{equation}i\square\bm{\mathfrak C}^K=\hat{\sigma}^{}_1+\hat{\sigma}^{}_1\vb{\Psi}^K\bm{\mathfrak D}^K,\quad\bm{\mathfrak D}=\vb{D}^{K(0)}+\vb{D}^{K(0)}\vb{\Psi}^K\bm{\mathfrak D}^K.\end{equation}
+具体分量形式为：微分方程
+\begin{equation}i\square\mathfrak D^{}_R=1+\Psi^{}_R\mathfrak D^{}_R,\quad i\square\mathfrak D^{}_A=1+\Psi^{}_A\mathfrak D^{}_A,\quad i\square\mathfrak D^{}_S=\Psi^{}_S\mathfrak D^{}_A+\Psi^{}_R\mathfrak D^{}_S,\end{equation}
+\textsl{LS}方程形式
+\begin{equation}\begin{aligned}\mathfrak D^{}_R&=D^{(0)}_R+D^{(0)}_R\Psi^{}_R\mathfrak D^{}_R,\quad\mathfrak D^{}_A=D^{(0)}_A+D^{(0)}_A\Psi^{}_A \mathfrak D^{}_A,\\ \mathfrak D^{}_S&=D^{(0)}_S+D^{(0)}_R \Psi^{}_R\mathfrak D^{}_S+\qty(D^{(0)}_R\Psi^{}_S+D^{(0)}_S\Psi^{}_A)\mathfrak D^{}_A.\end{aligned}\end{equation}
+对于\textsl{Schwinger}分量其微分方程相较于\textsl{LS}方程缩为两项，这是因为由于式(\ref{Klier5542})的性质$\square D^{(0)}_S=0$，其对应经典场的分布因而遵循场方程。所以$\mathfrak D^{}_S$的方程应该和经典宏观场的方程对应，这正是量子场中宏观统计效应的体现。在物理学中这被称为\textbf{涌现 \textit{Emergence}}，是现代物理中最重要的理论之一，我们后续在重整化和引力场中会大量的看到。
 \subsubsection{Boltzmann动理方程引入}
-\noindent 现在让我们回到波函数场，以\textbf{\textsl{Boltzmann}动理方程 \textit{Boltzmann Kinetic Equation}}作为收尾，推导参考自\cite{Ld3k}\S 95。
+\noindent 作为涌现理论的一个强有利的证明，让我们以实标量场的\textbf{\textsl{Boltzmann}动理方程 \textit{Boltzmann Kinetic Equation}}作为收尾，复现经典的动理学结论。对于波函数场的推导请参考\cite{Ld3k}\S 95，后面我们将会看到如何从相对论性场过渡到波函数场。\\
+\\
+首先介绍一下宏观低速下的\textsl{Boltzmann}动理方程。
 
 
 
@@ -11275,12 +11291,12 @@ $$\sigma^{\mu=\nu}=0,\quad\bm{\sigma}^{a0}=-\bm{\sigma}^{0a}=\frac{1}{2}\qty(\co
 利用$\gamma$矩阵和\textsl{Pauli}矩阵的定义(\ref{pauuui})不难算出
 $$\bm{\gamma}^a\bm{\gamma}^0=-\bm{\alpha}^a,\comm{\bm{\sigma}^a}{\bm{\sigma}^b}=-i\epsilon^{abc}\bm{\sigma}^{}_c,$$
 其中$\epsilon^{abc}$是三维置换张量。为了方便表述，我们引入三维矩阵，
-\begin{equation}\bm{\Sigma}^{a}_{\bm{\sigma}}=\pmqty{\bm{\sigma}^a&0\\0&\bm{\sigma}^a}=-\bm{\alpha}^a\gamma^5,\end{equation}
-则我们不难看到$\comm{\bm{\sigma}^a}{\bm{\sigma}^b}=-i{\epsilon^{ab}}_c\bm{\Sigma}^{c}_{\bm{\sigma}}$，于是我们得到$\bm{\sigma}^{AB}=\qty(\bm{\alpha},-i\bm{\Sigma})$。因此最终我们总结得到二阶方程(\ref{bbg2OOI})展开为
-\begin{equation}\qty{\hat{\mathfrak{D}}^A\hat{\mathfrak{D}}^{}_A-m^2c^2+\frac{e\hbar}{c}\bm{\Sigma}^{}_{\bm{\sigma}}\cdot\vb{H}-\frac{ie\hbar}{c}\bm{\alpha}\cdot\vb{E}}\bm{\psi}=0,\end{equation}
+\begin{equation}\vb{\Sigma}^{a}_{\bm{\sigma}}=\pmqty{\bm{\sigma}^a&0\\0&\bm{\sigma}^a}=-\bm{\alpha}^a\gamma^5,\end{equation}
+则我们不难看到$\comm{\bm{\sigma}^a}{\bm{\sigma}^b}=-i{\epsilon^{ab}}_c\vb{\Sigma}^{c}_{\bm{\sigma}}$，于是我们得到$\bm{\sigma}^{AB}=\qty(\bm{\alpha},-i\vb{\Sigma})$。因此最终我们总结得到二阶方程(\ref{bbg2OOI})展开为
+\begin{equation}\qty{\hat{\mathfrak{D}}^A\hat{\mathfrak{D}}^{}_A-m^2c^2+\frac{e\hbar}{c}\vb{\Sigma}^{}_{\bm{\sigma}}\cdot\vb{H}-\frac{ie\hbar}{c}\bm{\alpha}\cdot\vb{E}}\bm{\psi}=0,\end{equation}
 或者带入四维势$\vb{A}^A=\qty(\varphi,\vb{A}^a)$和$\hat{\vb{P}}^A=i\hbar\partial^A$得到
-\begin{equation}\qty{\qty(\frac{i\hbar}{c}\partial^{}_t-\frac{e}{c}\varphi)^2-\abs{i\hbar\grad+\frac{e}{c}\vb{A}}^2-m^2c^2+\frac{e\hbar}{2c}\bm{\Sigma}^{}_{\bm{\sigma}}\cdot\vb{H}-\frac{ie\hbar}{c}\bm{\alpha}\cdot\vb{E}}\bm{\psi}=0.\label{xiaohua}\end{equation}
-如果我们对比方程(\ref{sFRvb.})可以看到，至少在这多出的两项中，磁场项$\bm{\Sigma}^{}_{\bm{\sigma}}\cdot\vb{H}$和旋转有关，类似自旋磁矩项$\bm{\mu}\cdot\vb{H}$。我们后续会看到，算上电场后其实这两项的确反映了粒子的自旋，在量子电动力学中有重要的作用。\\
+\begin{equation}\qty{\qty(\frac{i\hbar}{c}\partial^{}_t-\frac{e}{c}\varphi)^2-\abs{i\hbar\grad+\frac{e}{c}\vb{A}}^2-m^2c^2+\frac{e\hbar}{2c}\vb{\Sigma}^{}_{\bm{\sigma}}\cdot\vb{H}-\frac{ie\hbar}{c}\bm{\alpha}\cdot\vb{E}}\bm{\psi}=0.\label{xiaohua}\end{equation}
+如果我们对比方程(\ref{sFRvb.})可以看到，至少在这多出的两项中，磁场项$\vb{\Sigma}^{}_{\bm{\sigma}}\cdot\vb{H}$和旋转有关，类似自旋磁矩项$\bm{\mu}\cdot\vb{H}$。我们后续会看到，算上电场后其实这两项的确反映了粒子的自旋，在量子电动力学中有重要的作用。\\
 \\
 现在我们来讨论方程的解。前面提到二阶方程相比正规波动方程会导致多余解，这些解和线性\textsl{Dirac}方程解的关系为：若$\bm{\zeta}$是二阶方程(\ref{bbg2OOI})的任意解，则线性方程(\ref{no2s1})的解$\bm{\psi}$定义为
 \begin{equation}\bm{\psi}=\qty(\hat{\slashed{\mathfrak{D}}}+mc)\bm{\zeta}.\label{yinirue}\end{equation}
@@ -12283,6 +12299,8 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \section{连续介质力学补充}\label{Y6TY.,.,''}
 
 \section{湍流的统计场论}\label{Y6TY--,mh}
+
+\section{Feynman图的拓扑结构}
 \section{黑洞热力学}\label{Y,<>,.,''}
 
 \section{共形场论和全息原理}
