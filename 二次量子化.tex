@@ -46,8 +46,8 @@
 \\
 本文主要以前苏联科学院朗道院士(\textsl{\rusa{Лев Давидович Ландау}})和利弗席兹院士(\textsl{\rusa{Евг\'eний Мих\'aйлович Лифшиц}})的著作《理论物理学教材十卷》(\textbf{\rusa{Курс теоретической физики Ландау и Лифшица}})作为基础，因此对于本文中的定义和概念统一参考了书中的记号体系，详情请参考[\ref{jihaocankaoll}]。对于几何记号，本文记点$p\in \mathscr M$的领域系为$\mathscr N(p)$。并且本文不打算涉及过多群论和表示论的内容，这一块会单独展开，因此涉及到旋量的内容本文会从直观的物理角度来分析，顺带稍微涉猎一点群表示论。\\
 \\
-这里特别感谢好友周环\_pericyclic提供的数学、物理和\LaTeX 方面的指导，感谢好友猴子老板在连续介质力学和热力学方面的指导，同时感谢\textsl{Deepseek}和\textsl{Gemini}的绘图，计算和纠错支持。
-\begin{itemize}\item Bilibili：\href{https://b23.tv/QD1m62B}{[周环\_pericyclic的个人空间-Bilibili]}；\item Bilibili：\href{https://b23.tv/8xZFuM7}{[猴子老板的个人空间-Bilibili]}；\item 周环\_pericyclic《理论力学》下载：\href{https://pan.baidu.com/s/53uvZApTkLBq0au8aotMj4A}{理论物理学教材}；\item DeepSeek-V3. (2025). [Large language model]. Retrieved from \url{https://www.deepseek.com}；\item Google. (2025). Gemini 3 Flash [Large language model]. Retrieved from \url{https://gemini.google.com}.\\ \end{itemize}
+这里特别感谢好友周环\_pericyclic提供的数学、物理和\LaTeX 方面的指导，感谢好友猴子老板在连续介质力学和热力学方面的指导，同时感谢\textsl{Gemini}，\textsl{Grok}和\textsl{Deepseek}的绘图，计算和纠错支持。
+\begin{itemize}\item Bilibili：\href{https://b23.tv/QD1m62B}{[周环\_pericyclic的个人空间-Bilibili]}；\item Bilibili：\href{https://b23.tv/8xZFuM7}{[猴子老板的个人空间-Bilibili]}；\item 周环\_pericyclic《理论力学》下载：\href{https://pan.baidu.com/s/53uvZApTkLBq0au8aotMj4A}{理论物理学教材}；\item Google. (2025). Gemini 3 Flash [Large language model]. Retrieved from \url{https://gemini.google.com}；\item DeepSeek-V3. (2025). [Large language model]. Retrieved from \url{https://www.deepseek.com}；\item xAI. (2026). Grok 4 [Large language model]. https://grok.x.ai\\ \end{itemize}
 这里再附上自己收集到的一些素材，基本上覆盖了本文的参考文献。
 \begin{itemize}\item 朗道十卷：\href{https://pan.baidu.com/s/153xmRgodedqctx3DpWfWQA?pwd=1234}{[理论物理学教材十卷]}；\item 场论书籍下载：\href{https://pan.baidu.com/s/59zMyZMHqXvQXYZTH4xBI2Q}{[场论资料整理]}。\\ \end{itemize}
 \emph{需要说明的是，本文中所有的“请读者自行计算/证明”等都可以当作习题，可以加强对于二次量子化方法的理解。}\\
@@ -483,7 +483,7 @@ $$f(x,y)=\int\psi^*(\xi,x)\hat{f}(y)\psi(\xi,y)\dd\xi,$$
 $$\expval{f}=\sum_nf^{}_{nn}=\sum_yf(y,y)=\int\qty[\psi^*(\xi,x)\hat{f}(y)\psi(\xi,y)]^{}_{y=x}\dd\xi\dd{y}.$$
 因为$\hat{f}$只作用于参数$y$上，并且矩阵元的积分和参数$x,y$无关，所以我们可以将矩阵元写为
 $$f(x,y)=\int\psi^*(\xi,x)\qty[\hat{f}(y)\psi(\xi,y)]\dd\xi=\hat{f}(y)\int\psi^*(\xi,x)\psi(\xi,y)\dd\xi,$$
-其中第三个等式应该这么理解：积分只针对系统参数$\xi$，而$\hat{f}$和$\xi$无关，因此可以从积分中提出。基于这个含义，我们定义系统的\textbf{密度矩阵 \textit{Density Matrix}}为(\textsl{J.von Neumann},\ \textsl{\rusa{Л. Д. Ландау}},\ \textsl{F.Bloch},1927)
+其中第三个等式应该这么理解：积分只针对系统参数$\xi$，而$\hat{f}$和$\xi$无关，因此可以从积分中提出。基于这个含义，我们定义系统的\textbf{密度矩阵 \textit{Density Matrix}}为(\textsl{J.von Neumann}，\textsl{\rusa{Л. Д. Ландау}}，\textsl{F. Bloch}，1927)
 \begin{equation}\vb{w}(x,y)=\int\psi^*(\xi,x)\psi(\xi,y)\dd\xi=\int\braket{y}{\psi(\xi)}\braket{\psi(\xi)}{x}\dd\xi\implies\hat{\vb{w}}=\int\dyad{\psi(\xi)}{\psi(\xi)}\dd\xi,\label{speer}\end{equation}
 于是算符$\hat{f}(x)$的矩阵表示为
 \begin{equation}f(x,y)=\hat{f}(y)\vb{w}(x,y),\quad \expval{f}=\int\qty[\hat{f}\vb{w}(x,y)]^{}_{x=y}\dd{x}=\tr(\hat{f}\hat{\vb{w}}).\label{spe4er}\end{equation}
@@ -9069,7 +9069,7 @@ $$\comm{\hat{p}^{}_i}{\hat{p}^{}_j}=\comm{\hat{q}^i}{\hat{q}^j}=0,\quad \comm{\h
 \begin{equation}\hat{\vb{A}}=\alpha^{}_i\hat{q}^i,\quad \hat{\vb{B}}=\beta^i\hat{p}^{}_i.\quad\hat{U}(\bm{\alpha})=\exp(i\alpha^{}_j\hat{q}^j) .\end{equation}
 将辛形式带入对易子(\ref{98///..202})，注意现在基的缩并“度规”为$\delta^{}_{ij}$，我们就得到
 \begin{equation}\hat{U}(\bm{\alpha})\hat{U}(\bm{\beta})\hat{U}^{-1}(\bm{\alpha})\hat{U}^{-1}(\bm{\beta})=\exp(i\alpha^{}_j\beta^j).\label{9...wert.}\end{equation}
-因此对于一个任意的算符空间，只要其生成元满足对易结构(\ref{hERf///-[]})，它就同构与量子化相空间$\hat{\Phi}$，可以看作为\textsl{Dirac}量子化的推广。\\
+因此对于一个任意的算符空间，只要其生成元满足对易结构(\ref{hERf///-[]})，它就同构于量子化相空间$\hat{\Phi}$，可以看作为\textsl{Dirac}量子化的推广。\\
 \\
 基于上述构造，我们最初的多项式假设(\ref{Cviy734588})就变略显多余，因为多项式假设只能处理有限阶多项式，事实上多项式完全可以看作指数映射的展开。方便起见回到一维，我们完全可以用幺正算符$\hat{U}(\alpha)$和$\hat{U}(\beta)$替换，这里$\alpha$和$\beta$是连续实变量，将函数$f$的量子化定义为
 \begin{equation}\hat{f}\qty(\hat{q},\hat{p})=\int_{\Phi^*}\xi(\alpha,\beta)\exp(i\beta\hat{p}+i\alpha\hat{q})\dd\alpha\dd\beta,\quad \forall\xi\in C^\infty\qty(\Phi^*).\label{Wty56-..-}\end{equation}
@@ -9107,19 +9107,19 @@ $$\xi(\alpha,\beta)\propto\int\hat{f}\qty(\hat{q},\hat{p})\exp(-i\alpha\hat{q}-i
 \begin{equation}\exp(\vb{A})\exp(\vb{B})=\exp(\vb{A}+\vb{B}+\frac{1}{2}\comm{\vb{A}}{\vb{B}}+\frac{1}{12}\comm{\vb{A}}{\comm{\vb{A}}{\vb{B}}}+\frac{1}{12}\comm{\vb{B}}{\comm{\vb{A}}{\vb{B}}}+\cdots).\end{equation}
 这个定理就不证明了，我们将其用于量子化相空间中，取算符$\vb{A}=i\alpha\hat{q}$，$\vb{B}=-i\beta\hat{p}$，由于$\comm{\hat{q}}{\hat{p}}=i\hbar$是一个常数，因此高阶对易子均为零。从而我们得到幺正矩阵的乘积
 \begin{equation}\exp(-i\alpha\hat{q})\exp(-i\beta\hat{p})=\hat{U}(\alpha)\hat{U}(\beta)=\exp(-i\alpha\hat{q}-i\beta\hat{p}-\frac{\alpha\beta}{2}\comm{\hat{q}}{\hat{p}}).\end{equation}
-这称为\textbf{\textsl{Weyl}关系}，可以通过展开指数映射并计算每一项乘积得到，请读者使用此等式证明结论(\ref{9...wert.})。将算符$\exp(-i\alpha\hat{q}-i\beta\hat{p})/2\pi$左作用到\textsl{Weyl}变换，我们得到
-$$\begin{aligned}\frac{1}{2\pi}\exp(-i\alpha\hat{q}-i\beta\hat{p})&\hat{f}\qty(\hat{q},\hat{p})=\frac{1}{2\pi}\int_{\Phi^*}\xi(a,b)\exp(-i\alpha\hat{q}-i\beta\hat{p})\exp(ib\hat{p}+ia\hat{q})\dd a\dd b\\&=\frac{1}{2\pi}\int_{\Phi^*}\xi(a,b)\exp(i\qty(a-\alpha)\hat{q}+i(b-\beta)\hat{p}+\frac{1}{2}\comm{\alpha\hat{q}+\beta\hat{p}}{b\hat{p}+a\hat{q}})\dd a\dd b\\&=\frac{1}{2\pi}\int_{\Phi^*}\xi(a,b)\exp(\frac{b\alpha-a\beta}{2}i\hbar)\exp(i\qty(a-\alpha)\hat{q}+i(b-\beta)\hat{p})\dd a\dd b.\end{aligned}$$
+这称为\textbf{\textsl{Weyl}关系}，可以通过展开指数映射并计算每一项乘积得到，请读者使用此等式证明结论(\ref{9...wert.})。将算符$\exp(-i\alpha\hat{q}-i\beta\hat{p})$左作用到\textsl{Weyl}变换，我们得到
+$$\begin{aligned}\exp(-i\alpha\hat{q}-i\beta\hat{p})&\hat{f}\qty(\hat{q},\hat{p})=\int_{\Phi^*}\xi(a,b)\exp(-i\alpha\hat{q}-i\beta\hat{p})\exp(ib\hat{p}+ia\hat{q})\dd a\dd b\\&=\int_{\Phi^*}\xi(a,b)\exp(i\qty(a-\alpha)\hat{q}+i(b-\beta)\hat{p}+\frac{1}{2}\comm{\alpha\hat{q}+\beta\hat{p}}{b\hat{p}+a\hat{q}})\dd a\dd b\\&=\int_{\Phi^*}\xi(a,b)\exp(\frac{b\alpha-a\beta}{2}i\hbar)\exp(i\qty(a-\alpha)\hat{q}+i(b-\beta)\hat{p})\dd a\dd b.\end{aligned}$$
 对两边求迹，使用幺正算符的一个熟知的结论
-\begin{equation}\tr{\exp(ia\hat{q}+ib\hat{p})}=2\pi\delta(a)\delta(b),\end{equation}
+\begin{equation}\tr{\exp(ia\hat{q}+ib\hat{p})}=\delta(a)\delta(b),\end{equation}
 可以用特征标理论证明，我们就得到
-$$\tr{\exp(-i\alpha\hat{q}-i\beta\hat{p})\hat{f}}=\frac{1}{2\pi}\int_{\Phi^*}\xi(a,b)\exp(\frac{b\alpha-a\beta}{2}i\hbar)2\pi\delta(a-\alpha)\delta(b-\beta)\dd a\dd b.$$
+$$\tr{\exp(-i\alpha\hat{q}-i\beta\hat{p})\hat{f}}=\int_{\Phi^*}\xi(a,b)\exp(\frac{b\alpha-a\beta}{2}i\hbar)2\pi\delta(a-\alpha)\delta(b-\beta)\dd a\dd b.$$
 于是我们最终得到对偶空间上的积分核为
-\begin{equation}\xi(\alpha,\beta)=\tr{\exp(-i\alpha\hat{q}-i\beta\hat{p})\hat{f}\qty(\hat{q},\hat{p})}\in C^\infty\qty(\Phi^*).\end{equation}
+\begin{equation}\xi(\alpha,\beta)=\tr{\exp(-i\alpha\hat{q}-i\beta\hat{p})\hat{f}\qty(\hat{q},\hat{p})}\in C^\infty\qty(\Phi^*).\label{SPO--45../}\end{equation}
 这说明积分核并不是简单的对算符做逆\textsl{Fourier}变换，而是有严格的数学定义。实际上这个结论对于幺正变换是普遍的，比如我们同样可以求出在正则幺正变换下，\textsl{Weyl}符号$f^{}_W$的表达式
 \begin{equation}f^{}_W(r,k)=\tr{\exp(-\frac{i}{\hbar}\qty(k\hat{q}+r\hat{p}))\hat{f}\qty(\hat{q},\hat{p})}\in C^\infty\qty(\Phi),\label{Fv234/+//.25}\end{equation}
 请读者自行证明。可以看到上述推导只涉及了基础的算符性质，因此在群论下我们可以得到更为广泛的结论，这里不做展开。\\
 \\
-为了回到原经典函数$f$，我们还需要对$\xi$做一次\textsl{Fourier}变换，但是在算符迹的形式下不好处理。为此我们考虑将迹展开为可计算的积分形式，不妨在坐标表象下计算。记算符$\hat{q}$的一维坐标本征态为$\ket{x}$，满足$\hat{q}\ket{x}=x\ket{x}$，则迹按定义写作
+为了回到原经典函数$f$，我们还需要对$\xi$做一次\textsl{Fourier}变换，但是在算符迹的形式下不好处理。为此我们考虑将迹展开为可计算的积分形式，不妨在坐标表象下计算。记算符$\hat{q}$的一维坐标本征态为$\ket{x}$，满足$\hat{q}\ket{x}=x\ket{x}$，则迹(\ref{SPO--45../})按定义写作
 $$\xi(\alpha,\beta)=\int\tr{\dyad{x}{x}\exp(-i\alpha\hat{q}-i\beta\hat{p})\hat{f}}\dd x=\int\dd x\mel**{x}{\exp(-i\alpha\hat{q}-i\beta\hat{p})\hat{f}}{x},$$
 再次使用\textsl{Weyl}关系，拆成便于处理的两个幺正算符的积，并将动量算符放在左侧
 \begin{equation}\xi(\alpha,\beta)=\int\dd x\exp(\frac{\hbar\alpha\beta}{2i})\mel**{x}{\exp(-i\beta\hat{p})\exp(-i\alpha\hat{q})\hat{f}}{x}.\label{Scv4567//}\end{equation}
@@ -9134,13 +9134,13 @@ $$\bra{x}\hat{q}\exp(-i\beta\hat{p})=x\bra{x}\exp(-i\beta\hat{p})=\hbar\beta\bra
 可见算符$\hat{q}$对这样一个对偶态的本征性为
 \begin{equation}\qty{\bra{x}\exp(-i\beta\hat{p})}\hat{q}=\qty(x-\hbar\beta)\bra{x}\exp(-i\beta\hat{p})=\bra{x-\hbar\beta}\hat{q}\implies\bra{x-\hbar\beta}=\bra{x}\exp(-i\beta\hat{p}).\end{equation}
 这就是熟知的平移算符$\exp(-ir\hat{p}/\hbar)$，它将态从位置$x$平移到$x-r$处。将其回带入迹(\ref{Scv4567//})中
-$$\xi(\alpha,\beta)=\int\dd x\exp(\frac{\hbar\alpha\beta}{2i})\mel**{x-\hbar\beta}{\exp(-i\alpha\hat{q})\hat{f}}{x}=\int\dd x\exp(\frac{\hbar\alpha\beta}{2i}-i\alpha(x-\hbar\beta))\mel**{x-\hbar\beta}{\hat{f}}{x}.$$
+$$\begin{aligned}\xi(\alpha,\beta)&=\int\dd x\exp(\frac{\hbar\alpha\beta}{2i})\mel**{x-\hbar\beta}{\exp(-i\alpha\hat{q})\hat{f}}{x}\\&=\int\dd x\exp(\frac{\hbar\alpha\beta}{2i}-i\alpha(x-\hbar\beta))\mel**{x-\hbar\beta}{\hat{f}}{x}.\end{aligned}$$
 这样一来我们就得到一个可积分的表达式，其\textsl{Fourier}变换给出精确的原函数
 $$\begin{aligned}f(p,q)=&\bigintsss\dd x\dd\alpha\dd\beta\exp(\frac{i\hbar\alpha\beta}{2}-i\alpha x+i\alpha q+i\beta p)\mel**{x-\hbar\beta}{\hat{f}}{x}\\=&\bigintsss\dd x\dd\alpha\dd\beta\exp{i\alpha\qty(\frac{\hbar\beta}{2}+q-x)+i\beta p}\mel**{x-\hbar\beta}{\hat{f}}{x}.\end{aligned}$$
 对$\alpha$和$x$积分给出替换$x=q+\hbar\beta/2$，我们就得到
-\begin{equation}f(p,q)=\bigintsss\exp(i\beta p)\mel**{q-\frac{\hbar\beta}{2}}{\hat{f}}{q+\frac{\hbar\beta}{2}}\dd\beta=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{\hat{f}}{q-\frac{\eta}{2}}\dd\eta.\label{V0OPp]]]}\end{equation}
-后一项是原结果的共轭，因为$f(p,q)\in\mathbb R$是实函数，满足$f=f^*$。类似的我们可以求得动量表象中的结果
-\begin{equation}f(p,q)=\bigintsss\exp(\frac{i\gamma q}{\hbar})\mel**{p+\frac{\gamma}{2}}{\hat{f}}{p-\frac{\gamma}{2}}\dd\gamma.\end{equation}
+\begin{equation}f(p,q)=\bigintsss\exp(i\beta p)\mel**{q-\frac{\hbar\beta}{2}}{\hat{f}}{q+\frac{\hbar\beta}{2}}\dd\beta=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{f}}{q+\frac{\eta}{2}}\dd\eta.\label{V0OPp]]]}\end{equation}
+类似的我们可以求得动量表象中的结果
+\begin{equation}f(p,q)=\bigintsss\exp(\frac{i\gamma q}{\hbar})\mel**{p-\frac{\gamma}{2}}{\hat{f}}{p+\frac{\gamma}{2}}\dd\gamma.\end{equation}
 根据定义这是\textsl{Weyl}逆变换，称为\textbf{\textsl{Wigner}变换}(\textsl{Eugene P. Wigner}，1932)，记为$\mathscr W$，对于量子化相空间中的任意算符有
 \begin{equation}\mathscr W\qty[\hat{f}]=f(p,q)\in C^\infty(\Phi).\end{equation}
 它和\textsl{Weyl}变换共同确定了经典相空间函数$f$和量子化相空间算符$\hat{f}$之间的变换，合称为\textsl{Weyl-Wigner}变换。\\
@@ -9150,13 +9150,13 @@ $$f(p,q)=\int \tr{\exp(-\frac{i}{\hbar}\qty(k\hat{q}+r\hat{p}))\hat{f}}\exp(\fra
 这是微分算符的符号的一种定义。这里用一个图表示\textsl{Weyl-Wigner}变换
 \begin{center}\tikz{\def\d{5}\def\l{2}\def\a{1}\def\h{1}\node[left](f)at(-\d,0){$\begin{array}{c}\text{经典函数}\\ f(p,q)\end{array}$};\node[below](xi)at(-\a,-\l){$\begin{array}{c}\text{积分核}\\ \xi(\alpha,\beta)\end{array}$};\node[above](fw)at(-\a,\l){$\begin{array}{c}\text{\textsl{Weyl}符号}\\ f^{}_W(r,k)\end{array}$};\node[right](hf)at(\d,0){$\begin{array}{c}\text{正则算符}\\ \hat{f}\qty(\hat{q},\hat{p})\end{array}$};\draw[<->,thick,>=Stealth](f)--node[midway,below,sloped]{\textsl{Fourier}变换}(xi);\draw[<->,thick,>=Stealth](f)--node[midway,above,sloped]{正则幺正变换}(fw);\draw[->,thick,>=Stealth]([yshift=\h cm]xi)--([yshift=\h cm]hf)node[midway,below,sloped]{\textsl{Weyl}变换};\draw[->,thick,>=Stealth](hf)--(f)node[midway,below,sloped]{\textsl{Wigner}变换};\draw[->,thick,>=Stealth]([yshift=\h cm]fw)--([yshift=\h cm]hf)node[midway,above,sloped]{\textsl{Weyl}变换};draw[dotted,thick](xi)--(fw);\draw[dashed,thick](f)--(hf);\node[rotate=-90]at(\d-3,0){\textsl{WW}变换};\node at(-\a,\l/2){现代\textsl{GM}表示};\node at(-\a,-\l/2-.5){经典\textsl{Weyl}表示};}\end{center}
 现在我们来讨论\textsl{WW}变换的性质，比如对于单位算符$\hat{f}=\hat{\vb{I}}$其\textsl{Wigner}变换为
-$$\mathscr W\qty[\hat{\vb{I}}]=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{\hat{\vb{I}}}{q-\frac{\eta}{2}}\dd\eta=\bigintsss\exp(-\frac{i\eta p}{\hbar})\delta\qty(q+\frac{\eta}{2}-q+\frac{\eta}{2})\dd\eta=1.$$
+$$\mathscr W\qty[\hat{\vb{I}}]=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{\vb{I}}}{q+\frac{\eta}{2}}\dd\eta=\bigintsss\exp(-\frac{i\eta p}{\hbar})\delta\qty(q+\frac{\eta}{2}-q+\frac{\eta}{2})\dd\eta=1.$$
 符合我们的一般认知。若一个算符只和位形有关$\hat{f}(q)$，则其\textsl{Wigner}变换为
-$$\mathscr W\qty[\hat{f}(q)]=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{\hat{f}(q)}{q-\frac{\eta}{2}}\dd\eta=\bigintsss\exp(-\frac{i\eta p}{\hbar})\delta\qty(\eta)f\qty(q-\frac{\eta}{2})\dd\eta=f(q),$$
+$$\mathscr W\qty[\hat{f}(q)]=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{f}(q)}{q+\frac{\eta}{2}}\dd\eta=\bigintsss\exp(-\frac{i\eta p}{\hbar})\delta\qty(-\eta)f\qty(q-\frac{\eta}{2})\dd\eta=f(q),$$
 也就是在式(\ref{V0OPp]]]})中去掉动量$p$，符合定义，对于$\hat{f}(p)$也是一样的结果。若取$\alpha=\beta=0$，也就是省略算符变换得到$\xi(0,0)=\tr(\hat{f})$，而根据定义(\ref{Nbm,==-98})我们知道$\xi(0,0)=\displaystyle\int f\dd p\dd q$，因此得到一个等式
 \begin{equation}\tr(\hat{f})=\int f\dd p\dd q=\int\mel**{q}{\hat{f}}{q}\dd q.\end{equation}
 其中最后一步也可以通过\textsl{Wigner}变换(\ref{V0OPp]]]})得到。类似的我们还可以计算两个经典函数乘积的结果，取$f,g\in C^\infty(\Phi)$，带入\textsl{Wigner}变换(\ref{V0OPp]]]})并对相空间取体积分得到
-$$\begin{aligned}\int fg\dd p\dd q&=\bigintsss\exp(\frac{\eta+\zeta}{i\hbar}p)\mel**{q+\frac{\eta}{2}}{\hat{f}}{q-\frac{\eta}{2}}\mel**{q+\frac{\zeta}{2}}{\hat{g}}{q-\frac{\zeta}{2}}\dd\eta\dd\zeta\dd p\dd q\\&=\hbar\bigintsss\mel**{q+\frac{\eta}{2}}{\hat{f}}{q-\frac{\eta}{2}}\mel**{q-\frac{\eta}{2}}{\hat{g}}{q+\frac{\eta}{2}}\dd\eta\dd q.\end{aligned}$$
+$$\begin{aligned}\int fg\dd p\dd q&=\bigintsss\exp(\frac{\eta+\zeta}{i\hbar}p)\mel**{q-\frac{\eta}{2}}{\hat{f}}{q+\frac{\eta}{2}}\mel**{q+\frac{\zeta}{2}}{\hat{g}}{q-\frac{\zeta}{2}}\dd\eta\dd\zeta\dd p\dd q\\&=\hbar\bigintsss\mel**{q+\frac{\eta}{2}}{\hat{f}}{q-\frac{\eta}{2}}\mel**{q-\frac{\eta}{2}}{\hat{g}}{q+\frac{\eta}{2}}\dd\eta\dd q.\end{aligned}$$
 做线性变量代换$x=q+\eta/2$，$y=q-\eta/2$，我们就容易的得到
 \begin{equation}\int fg\dd p\dd q=\hbar\int\mel**{x}{\hat{f}}{y}\mel**{y}{\hat{g}}{x}\dd x\dd y=\hbar\tr(\hat{f}\hat{g}).\label{W13*++}\end{equation}
 可见\textsl{Wigner}变换能够很大程度上，简化我们在相空间上的计算，这也正是统计物理所需要的。由于它是直接确定了$f$和$\hat{f}$之间的关联，因此\textsl{Wigner}变换是我们后续主要的讨论对象。\\
@@ -9164,23 +9164,25 @@ $$\begin{aligned}\int fg\dd p\dd q&=\bigintsss\exp(\frac{\eta+\zeta}{i\hbar}p)\m
 现在我们考察一个特殊的算符，密度矩阵$\hat{\vb{w}}$。先考察纯态$\ket{\psi}$，根据定义(\ref{speer})我们写出
 $$\hat{\vb{w}}=\dyad{\psi}{\psi}.$$
 在坐标表象中$\psi(q)=\braket{q}{\psi}$，因此其\textsl{Wigner}变换为
-$$\begin{aligned}\int\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{\hat{\vb{w}}}{q-\frac{\eta}{2}}\dd\eta&=\int\exp(-\frac{i\eta p}{\hbar})\braket{q+\frac{\eta}{2}}{\psi}\braket{\psi}{q-\frac{\eta}{2}}\dd\eta\\&=\int\exp(-\frac{i\eta p}{\hbar})\psi^*\qty(q+\frac{\eta}{2}) \psi\qty(q-\frac{\eta}{2})\dd\eta=\mathscr W\qty[\hat{\vb{w}}].\end{aligned}$$
+$$\begin{aligned}\int\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{\vb{w}}}{q+\frac{\eta}{2}}\dd\eta&=\int\exp(-\frac{i\eta p}{\hbar})\braket{q-\frac{\eta}{2}}{\psi}\braket{\psi}{q+\frac{\eta}{2}}\dd\eta\\&=\int\exp(-\frac{i\eta p}{\hbar})\psi^*\qty(q+\frac{\eta}{2}) \psi\qty(q-\frac{\eta}{2})\dd\eta=\mathscr W\qty[\hat{\vb{w}}].\end{aligned}$$
 这是一个定义在$\Phi$上的函数，我们称为\textbf{\textsl{Wigner}函数}，记为$\mathcal W(p,q)\in C^\infty(\Phi)$，我们同时写出其两种表象下的形式
-\begin{equation}\mathcal W(p,q)=\int\exp(\frac{\eta p}{i\hbar})\psi^*\qty(q+\frac{\eta}{2}) \psi\qty(q-\frac{\eta}{2})\dd\eta=\int\exp(\frac{i\gamma q}{\hbar})\psi^*\qty(p+\frac{\gamma}{2})\psi\qty(p-\frac{\gamma}{2})\dd\gamma.\label{8987////0051-}\end{equation}
+\begin{equation}\mathcal W(p,q)=\int\exp(\frac{\eta p}{i\hbar})\psi^*\qty(q+\frac{\eta}{2})\psi\qty(q-\frac{\eta}{2})\dd\eta=\int\exp(\frac{i\gamma q}{\hbar})\psi^*\qty(p+\frac{\gamma}{2})\psi\qty(p-\frac{\gamma}{2})\dd\gamma.\label{8987////0051-}\end{equation}
 它和式(\ref{speer})在形式上只相差一个相位，在坐标表象按照式(\ref{speer})的记号我们得到\textsl{Wigner}函数和原密度矩阵$\vb{w}(x,y)$之间的关联为
-\begin{equation}\mathcal W(p,q)=\int\exp(\frac{\eta p}{i\hbar}) \vb{w}\qty(q+\frac{\eta}{2},q-\frac{\eta}{2})\dd\eta.\label{MercibYd}\end{equation}
+\begin{equation}\mathcal W(p,q)=\int\exp(\frac{\eta p}{i\hbar})\vb{w}\qty(q+\frac{\eta}{2},q-\frac{\eta}{2})\dd\eta.\label{MercibYd}\end{equation}
 同时其物理含义也是明显的
 \begin{equation}x=q+\frac{\eta}{2},\quad y=q-\frac{\eta}{2}\implies q=\frac{x+y}{2},\quad \eta=x-y,\end{equation}
 其中$q$对应两点的中心位置，而$\eta$则是相对位置。所以\textsl{Wigner}函数的物理含义就比较明显了，它将两点纯坐标函数分解为中心运动和相对运动的耦合，然后通过\textsl{Fourier}变换加入相位，最后对相对运动积分得到一个总体的运动趋势，得到一个经典的相空间函数。再次基础上我们就可以重新理解算符的均值，比如对于算符$\hat{f}$，其均值根据定义(\ref{spe4er})为
 \begin{equation}\expval{\hat{f}}=\tr(\hat{f}\hat{\vb{w}})=\frac{1}{\hbar}\int f\mathcal W\dd p\dd q=\frac{1}{\hbar}\int \mathscr W\qty[\hat{f}]\mathcal W\dd p\dd q.\end{equation}
 其中用到了前面的等式(\ref{W13*++})。容易证明$W$在相空间上有归一化
 \begin{equation}\int\mathcal W(p,q)\dd p\dd q=\tr(\hat{\vb{w}}),\quad \int\mathcal W^2(p,q)\dd p\dd q=\tr(\hat{\vb{w}}^2)=\hbar^{-1},\end{equation}
-而在统计物理中系综概率的归一化同样是在相空间之上，因此$\mathcal W$可以看作一种概率分布，但是其平方归一化的结果为$\hbar^{-1}\neq 1$，因而称为\textbf{\textsl{Wigner}准概率分布}。我们也可以从$\mathcal W$反解出系统的统计量，比如密度矩阵通过反演(\ref{MercibYd})变换为
+而在统计物理中系综概率的归一化同样是在相空间之上，因此$\mathcal W$可以看作一种概率分布，但是其平方归一化的结果为$\hbar^{-1}\neq 1$，因而称为\textbf{\textsl{Wigner}准概率分布}。基于此可以计算对于两个不同的纯态$\ket{\psi}$和$\ket{\phi}$，我们有
+\begin{equation}\abs{\braket{\psi}{\phi}}^2=\frac{1}{\hbar}\int \mathcal W(\psi)\mathcal W(\psi)\dd p\dd q.\end{equation}
+证明可以通过取$\hat{f}=\dyad{\psi}{\psi}$，以及密度矩阵$\hat{\vb{w}}=\dyad{\phi}{\phi}$得到。我们也可以从$\mathcal W$反解出系统的统计量，比如密度矩阵通过反演(\ref{MercibYd})变换为
 \begin{equation}\vb{w}(x,y)=\bigintsss\exp(-\frac{\eta p}{i\hbar})\mathcal W(p,q)\dd p=\bigintsss\exp(-\frac{p}{i\hbar}(x-y))\mathcal W\qty(p,\frac{x+y}{2})\dd p,\end{equation}
 以及相应的波函数
 \begin{equation}\psi(x)=\frac{1}{\psi^*(0)}\int \exp(\frac{ixp}{\hbar})\mathcal W\qty(\frac{x}{2},q)\dd p,\quad \abs{\psi(x)}^2=\vb{w}(x=y)=\int\mathcal W\qty(x,q)\dd p.\end{equation}
 这样我们就量子化了经典统计物理量，而这仅仅是建立在\textsl{Weyl}变换所对应的对易性之上的。同样的我们可以计算动量分量，比如计算概率密度$\abs{\psi(p)}^2$，参考位形表象我们应该计算动量表象对$q$的积分
-\begin{equation}\int\mathcal W\qty(p,q)\dd q=\int\exp(\frac{i\gamma q}{\hbar})\mel**{p+\frac{\gamma}{2}}{\hat{\vb{w}}}{p-\frac{\gamma}{2}}\dd\gamma\dd q=\abs{\braket{p}{\psi}}^2=\abs{\psi(p)}^2,\end{equation}
+\begin{equation}\int\mathcal W\qty(p,q)\dd q=\int\exp(\frac{i\gamma q}{\hbar})\mel**{p-\frac{\gamma}{2}}{\hat{\vb{w}}}{p+\frac{\gamma}{2}}\dd\gamma\dd q=\abs{\braket{p}{\psi}}^2=\abs{\psi(p)}^2,\end{equation}
 这正是我们想要的。也就是说，\textsl{Wigner}变换的动量分量，只需要对位形$q$积分即可，再通过前面的结论就可以极大的简化运算。因此\textsl{Wigner}变换是处理经典和量子之间过渡的完美工具。\\
 \\
 基于这个性质，我们可以计算统计物理的基础：熵，这里用算符形式的\textsl{von Neumann}熵(\ref{BB//35--...})是最方便的
@@ -9188,41 +9190,130 @@ $$S=-\tr{\hat{\vb{w}}\ln(\hat{\vb{w}})}=-\frac{1}{\hbar}\int \mathscr W\qty[\ln(
 我们需要处理的是$\ln(\hat{\vb{w}})$的\textsl{Wigner}变换，但这里就出现了定义问题：对于纯态$\ln(\hat{\vb{w}})$是不定的，因为其谱$\text{Sp}\qty(\hat{\vb{w}})=\qty{0,1}$是无法取对数的。为此不妨直接考察正则系综，此时统计矩阵由式(\ref{1SG,L;fh})确定，我们得到
 $$\ln(\hat{\vb{w}})=-\beta\hat{H}-\ln Z,\quad Z=\tr{\exp(-\beta\hat{H})}=\int \exp(-\beta H)\dd p\dd q.$$
 此于$\ln Z$只是一个常数，因此$\ln(\hat{\vb{w}})$的\textsl{Wigner}变换为
-\begin{equation}\mathscr W\qty[\ln(\hat{\vb{w}})]=-\beta\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{\hat{H}}{q-\frac{\eta}{2}}\dd\eta-\ln Z=-\beta H-\ln Z=\ln{\frac{\exp(-\beta H)}{Z}}.\end{equation}
+\begin{equation}\mathscr W\qty[\ln(\hat{\vb{w}})]=-\beta\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{H}}{q+\frac{\eta}{2}}\dd\eta-\ln Z=-\beta H-\ln Z=\ln{\frac{\exp(-\beta H)}{Z}}.\end{equation}
 这说明其\textsl{Wigner}变换为自身的经典函数，所以正则系综的熵为
 $$S=-\frac{1}{\hbar}\int\mathcal W\ln(\frac{1}{Z}\exp(-\beta H))\dd p\dd q.$$
 相应的可以想到，巨正则系综的熵为
 $$S=-\frac{1}{\hbar}\int\mathcal W\ln(\frac{1}{\Xi}\exp(-\beta H+\beta \mu N))\dd p\dd q.$$
 如果我们按照正常的过程计算是较为复杂的，而\textsl{Wigner}变换可以直接给出结果。其余的内容就不给出了，关于谐振子的计算，请参考\cite{Fgbn88}的第\RomanNumeralCaps{4}部分。由此在动量表象下，可以得到\textsl{Planck}分布。
-\subsubsection{Wigner函数的演化和Moyal括号}
+\subsubsection{量子化相空间的演化方程和Moyal括号}
 \noindent 上面我们介绍了\textsl{Wigner}变换，但有一个问题却没有涉及，那就是演化方程的\textsl{Wigner}变换。对于\textsl{Weyl}变换而言，其演化方程是天然附带的，这是由辛结构保证的，作为\textsl{Weyl}变换的逆变换我们自然想知道\textsl{Wigner}变换的演化方程。\\
 \\
-对于任意的\textsl{Heisengerg}绘景算符$\hat{f}(t)$，其演化方程由式(\ref{Fut+++.331gs})确定，这一点我们也在第\ref{Fli9--fRR}节的量子化相空间中有过确认。为了回到经典相空间，我们需要对方程两边同时做\textsl{Wigner}变换给出
+对于任意的\textsl{Heisenberg}绘景算符$\hat{f}(t)$，其演化方程由式(\ref{Fut+++.331gs})确定，这一点我们也在第\ref{Fli9--fRR}节的量子化相空间中有过确认。为了回到经典相空间，我们需要对方程两边同时做\textsl{Wigner}变换给出
 $$\mathscr W\qty[\dv{\hat{f}}{t}]=\mathscr W\qty[\pdv{\hat{f}}{t}+\frac{1}{i\hbar}\comm{\hat{f}}{\hat{H}}].$$
 此时系统沿曲线$\gamma(t)=(q(t),p(t))\subset\Phi$在相空间中演化。先计算左侧，带入式(\ref{V0OPp]]]})得到
-$$\mathscr W\qty[\dv{\hat{f}}{t}]=\bigintsss\exp(-\frac{i\eta p(t)}{\hbar})\mel**{q(t)+\frac{\eta}{2}}{\dv{\hat{f}}{t}}{q(t)-\frac{\eta}{2}}\dd\eta.$$
-注意在\textsl{Heisengerg}绘景中基矢显含时间，它保持态$\ket{\psi}$不变而改变基矢$\ket{q(t)}$，这样一来我们就无法将导数$\dv*{t}$从均值中提出。现在来看右侧，涉及两个算符的线性组合
-$$\mathscr W\qty[a\hat{f}+b\hat{g}]=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{a\hat{f}+b\hat{g}}{q-\frac{\eta}{2}}\dd\eta.$$
-由于混合积是线性的，因此可以将算符的求和拆开算，对常系数用之前的结论$\mathscr W\qty[\hat{\vb{I}}]=1$以及式(\ref{W13*++})给出
+$$\mathscr W\qty[\dv{\hat{f}}{t}]=\bigintsss\exp(-\frac{i\eta p(t)}{\hbar})\mel**{q(t)-\frac{\eta}{2}}{\dv{\hat{f}}{t}}{q(t)+\frac{\eta}{2}}\dd\eta.$$
+注意在\textsl{Heisenberg}绘景中基矢显含时间，它保持态$\ket{\psi}$不变而改变基矢$\ket{q(t)}$，这样一来我们就无法将导数$\dv*{t}$从均值中提出。现在来看右侧，涉及两个算符的线性组合
+$$\mathscr W\qty[a\hat{f}+b\hat{g}]=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{a\hat{f}+b\hat{g}}{q+\frac{\eta}{2}}\dd\eta.$$
+由于混合积是线性的，因此可以将算符的求和拆开算，对常系数用结论$\mathscr W\qty[\hat{\vb{I}}]=1$以及式(\ref{W13*++})给出
 \begin{equation}\mathscr W\qty[a\hat{f}+b\hat{g}]=a\mathscr W\qty[\hat{f}]+b\mathscr W\qty[\hat{g}]= af+bag.\end{equation}
 于是右侧就分离为$\mathscr W\qty[\pdv*{\hat{f}}{t}]$，因为偏导数只针对算符，和基矢无关，因此我们得到
 $$\mathscr W\qty[\pdv{\hat{f}}{t}+\frac{1}{i\hbar}\comm{\hat{f}}{\hat{H}}]=\pdv{t}\mathscr W\qty[\hat{f}]+\mathscr W\qty[\frac{1}{i\hbar}\comm{\hat{f}}{\hat{H}}]=\pdv{f}{t}+\frac{1}{i\hbar}\mathscr W\qty(\comm{\hat{f}}{\hat{H}}).$$
-展开对易子和差，\textsl{Heisengerg}绘景中的演化方程在相空间中写作
-\begin{equation}\mathscr W\qty[\dv{\hat{f}}{t}]=\pdv{f}{t}+\frac{1}{i\hbar}\mathscr W\qty[\hat{f}\hat{H}]-\frac{1}{i\hbar}\mathscr W\qty[\hat{H}\hat{f}].\end{equation}
+展开对易子并提出差，\textsl{Heisenberg}绘景中的演化方程在相空间中写作
+\begin{equation}\mathscr W\qty[\dv{\hat{f}}{t}]=\pdv{f}{t}+\frac{1}{i\hbar}\mathscr W\qty[\hat{f}\hat{H}]-\frac{1}{i\hbar}\mathscr W\qty[\hat{H}\hat{f}].\label{Ete45--**}\end{equation}
 这里出现了双算符乘积的\textsl{Wigner}变换，为此我们需要详细的分析一下。\\
 \\
 对于两个定义在量子化相空间上的算符$\hat{A}$和$\hat{B}$，我们直接将其乘积$\hat{A}\hat{B}$带入定义式(\ref{V0OPp]]]})得到
-$$\mathscr W\qty[\hat{A}\hat{B}](p,q)=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q+\frac{\eta}{2}}{\hat{A}\hat{B}}{q-\frac{\eta}{2}}\dd\eta.$$
-不妨以正则坐标为例，取$\hat{A}=\hat{q}$和$\hat{B}=\hat{p}$，我们得到
-$$\mathscr W\qty[\hat{q}\hat{p}](p,q)=\mathscr W\qty[\hat{p}\hat{q}+i\hbar](p,q)=\mathscr W\qty[\hat{p}\hat{q}](p,q)+i\hbar,$$
+$$\mathscr W\qty[\hat{A}\hat{B}](p,q)=\bigintsss\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{A}\hat{B}}{q+\frac{\eta}{2}}\dd\eta.$$
+由于这个计算较为复杂，因此我们不妨看一个特例，取$\hat{A}=\hat{q}$和$\hat{B}=\hat{p}$，则我们得到
+$$\mathscr W\qty[\hat{q}\hat{p}](p,q)=\mathscr W\qty[\hat{p}\hat{q}+i\hbar](p,q),$$
+也就是说
+\begin{equation}\mathscr W\qty[\hat{q}\hat{p}](p,q)-\mathscr W\qty[\hat{p}\hat{q}](p,q)=i\hbar\neq0.\end{equation}
+这说明其不对易$\mathscr W\qty[\hat{A}\hat{B}]\neq\mathscr W\qty[\hat{B}\hat{A}]$，也就是说至少在代数层面
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}]\neq	A(p,q)B(p,q).\end{equation}
+为此我们不妨重新按照定义式计算，按照\textsl{Weyl}变换(\ref{Wty56-..-})写出两个算符的乘积，方便起见后续记经典相空间函数$A(p,q)$的\textsl{Fourier}分量为$\xi^{}_A$，则我们得到
+$$\hat{A}\qty(\hat{q},\hat{p})\hat{B}\qty(\hat{q},\hat{p})=\int_{\Phi^*}\xi^{}_A(a,b)\exp(ib\hat{p}+ia\hat{q})\dd a\dd b\int_{\Phi^*}\xi^{}_B(m,n)\exp(in\hat{p}+im\hat{q})\dd m\dd n.$$
+做代换$a+m=\alpha$和$b+n=\beta$，保留变量$a$和$b$并注意\textsl{Weyl}关系得到
+$$\begin{aligned}\hat{A}\hat{B}\qty(\hat{q},\hat{p})&=\int_{\Phi^*}\xi^{}_A(a,b)\xi^{}_B(\alpha-a,\beta-b)\exp(ib\hat{p}+ia\hat{q})\exp(i(\beta-b)\hat{p}+i(\alpha-a)\hat{q})\dd a\dd b\dd\alpha\dd\beta\\&=\int_{\Phi^*}\dd\alpha\dd\beta\int\dd a\dd b\xi^{}_A(a,b)\xi^{}_B(\alpha-a,\beta-b)\exp{-i\hbar\frac{a(\beta-b)-b(\alpha-a)}{2}}\exp(i\beta\hat{p}+i\alpha\hat{q}).\end{aligned}$$
+对$a$和$b$的积分给出乘积$\hat{A}\hat{B}$整体的\textsl{Weyl}变换，将乘积的分量记为$\xi^{}_{AB}$给出
+$$\hat{A}\hat{B}=\int_{\Phi^*}\xi^{}_{AB}(\alpha,\beta)\exp(i\beta\hat{p}+i\alpha\hat{q})\dd\alpha\dd\beta,$$
+则我们得到乘积的分量和分量的乘积之间的关系
+\begin{equation}\xi^{}_{AB}(\alpha,\beta)=\int\xi^{}_A(a,b)\xi^{}_B(\alpha-a,\beta-b)\exp(\frac{i\hbar}{2}\qty(b\alpha-a\beta))\dd a\dd b.\end{equation}
+这就意味着在第\ref{dgdsfgsdf}节所确定的通常\textsl{Fourier}卷积，在\textsl{Weyl}变换中会多出一个相位，这是由于非对易算符的\textsl{Weyl}关系所导致的。根据定义，所要求的函数$\mathscr W\qty[\hat{A}\hat{B}](p,q)$是该积分核的\textsl{Fourier}变换，我们就得到
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}](p,q)=\int\xi^{}_A(a,b)\xi^{}_B(\alpha-a,\beta-b)\exp(\frac{i\hbar}{2}\qty(b\alpha-a\beta))\exp(i\alpha q+i\beta p)\dd a\dd b\dd\alpha\dd\beta.\end{equation}
+可见所有的问题都是由于这个额外的相位导致的，这是乘积的\textsl{Wigner}变换不对易的源头。当然这是必须的，因为相空间上的函数乘积关于辛结构表现为\textsl{Poisson}括号，这也是我们所期望的。\\
+\\
+为了解决这个问题，我们不妨将此额外相位展开，以便用多项式做简单的计算
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}](p,q)=\sum_l\frac{1}{l!}\int\xi^{}_A(a,b)\xi^{}_B(\alpha-a,\beta-b)\qty(\frac{i\hbar}{2}\qty(b\alpha-a\beta))^l\exp(i\alpha q+i\beta p)\dd a\dd b\dd\alpha\dd\beta.\label{Cvhusf//}\end{equation}
+取$l=0$就是普通卷积$\xi^{}_A\circledast\xi^{}_B(\alpha,\beta)$的\textsl{Fourier}变换，给出
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}]^{(l=0)}=\int\xi^{}_A\circledast\xi^{}_B(\alpha,\beta)\exp(i\alpha q+i\beta p)\dd\alpha\dd\beta=AB.\end{equation}
+对于$l=1$我们重新引入变量$m$和$n$
+$$\mathscr W\qty[\hat{A}\hat{B}]^{(l=1)}=\frac{i\hbar}{2}\int\qty(bm-an)\xi^{}_A(a,b)\exp(ibp+iaq)\xi^{}_B(m,n)\exp(inp+imq)\dd a\dd b\dd m\dd n.$$
+此时系数的来源就比较清楚了，不妨写出乘积$AB$的变换
+$$AB=\iint_{\Phi^*}\xi^{}_A(a,b)\exp(ibp+iaq)\xi^{}_B(m,n)\exp(inp+imq)\dd a\dd b\dd m\dd n=\int \varPi(a,b,m,n)\dd^2\Phi^*,$$
+省略积分号外的常系数可以看到
+$$i^2\int bm\varPi(a,b,m,n)\dd^2\Phi^*\implies-\pdv{A}{p}\pdv{B}{q},\quad i^2\int an\varPi(a,b,m,n)\dd^2\Phi^*\implies-\pdv{B}{p}\pdv{A}{q}.$$
+所以我们得到
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}]^{(l=1)}=\frac{i\hbar}{2}\qty(\pdv{A}{q}\pdv{B}{p}-\pdv{A}{p}\pdv{B}{q})=\frac{i\hbar}{2}\pb{A}{B}.\end{equation}
+其中我们已经用\textsl{Poisson}括号替换了括号内的等式，也就是说在一级修正下这是\textsl{Poisson}括号。类似的我们计算$l=2$的情况
+$$\mathscr W\qty[\hat{A}\hat{B}]^{(l=2)}=\frac{1}{2}\qty(\frac{i\hbar}{2})^2\int\qty(bm-an)^2\varPi(a,b,m,n)\dd^2\Phi^*,$$
+这里涉及到平方项和双混合积，很明显这直接用偏导替换，但要注意由于$\varPi$只积分一次因此幂的提升只能由高阶导得到，给出
+$$\begin{aligned}&i^4\int(bm)^2\varPi(a,b,m,n)\dd^2\Phi^*\implies\pdv[2]{A}{p}\pdv[2]{B}{q},\quad i^4\int(an)^2\varPi(a,b,m,n)\dd^2\Phi^*\implies\pdv[2]{A}{q}\pdv[2]{B}{p},\\&2i^4\int(bman)\varPi(a,b,m,n)\dd^2\Phi^*\implies2\pdv{A}{p}\pdv{B}{q}\pdv{A}{q}\pdv{B}{p},\end{aligned}$$
+因此给出
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}]^{(l=2)}=\frac{1}{2}\qty(\frac{i\hbar}{2})^2\qty(\pdv[2]{A}{p}\pdv[2]{B}{q}-2\pdv{A}{p}\pdv{B}{q}\pdv{A}{q}\pdv{B}{p}+\pdv[2]{A}{q}\pdv[2]{B}{p}).\end{equation}
+为了化简记号，我们参考前文中的\textsl{Dirac}方程(\ref{BFGFs})的记号，引入带箭头的左右导数$\overleftrightarrow{\partial}$为
+\begin{equation}A\overleftarrow{\pdv{q}}=\pdv{A}{q}=\overrightarrow{\pdv{q}}A,\quad A\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}B=\pdv{A}{q}\pdv{B}{p}\end{equation}
+则按照微分算子理论，这个等式还可以写为
+\begin{equation}\begin{aligned}\mathscr W\qty[\hat{A}\hat{B}]^{(l=2)}&=\frac{1}{2}\qty(\frac{i\hbar}{2})^2A\qty(\overleftarrow{\pdv[2]{q}}\overrightarrow{\pdv[2]{p}}-2\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}}\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}+\overleftarrow{\pdv[2]{p}}\overrightarrow{\pdv[2]{q}})B\\&=\frac{1}{2}\qty(\frac{i\hbar}{2})^2A\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})^2B.\end{aligned}\end{equation}
+按照这个记号，一阶近似可以写作
+$$\mathscr W\qty[\hat{A}\hat{B}]^{(l=0)}=A\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})^0B,\quad \mathscr W\qty[\hat{A}\hat{B}]^{(l=1)}=\qty(\frac{i\hbar}{2})A\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})B,$$
+从而读者可以自行通过归纳法验证，对于第$l\geq0$项其形式为
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}]^{(l\geq 0)}=\frac{1}{l!}\qty(\frac{i\hbar}{2})^lA\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})^lB.\end{equation}
+于是我们就得到式(\ref{Cvhusf//})的结果
+\begin{equation}\mathscr W\qty[\hat{A}\hat{B}](p,q)=\sum_{l=0}\frac{1}{l!}\qty(\frac{i\hbar}{2})^lA\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})^lB,\end{equation}
+可以证明这是一个收敛的微分算子级数，且趋向于一个指数映射。一般在物理上将此左右算符的指数映射称为\textbf{\textsl{Moyal}星积}$\ \star\ $(\textsl{José E. Moyal}，1940)，记为
+\begin{equation}\begin{aligned}&\star=\exp{\frac{i\hbar}{2}\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})},\quad A=\mathscr W\qty[\hat{A}],\quad B=\mathscr W\qty[\hat{B}].\\&\mathscr W\qty[\hat{A}\hat{B}]=A\star B=\mathscr W\qty[\hat{A}]\exp{\frac{i\hbar}{2}\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})}\mathscr W\qty[\hat{B}],\end{aligned}\end{equation}
+关于此收敛性这里不做过多叙述，读者可以参考\cite{Curt//..ht}\S 0.10的说明，当然在形式上这必然趋向于指数函数。\\
+\\
+当然我们也可以写出\textsl{Moyal}星积的积分形式，只需要利用$A(p+v,q+u)$的展开，并和$B$的展开做适当的乘积就能得到
+\begin{equation}A\star B=\frac{1}{\hbar^2\pi^2}\int A(u,v)B(r,k)\exp(\frac{2}{i\hbar}(p(u-r)+v(r-x)+k(x-u)))\dd u\dd v\dd r\dd k.\end{equation}
+这是卷积的形式，证明依旧请参考\cite{Curt//..ht}\S 0.10。进一步的，将两个函数的\textsl{Moyal}星积的反对称化称为\textbf{\textsl{Moyal}括号}，记为$\pb{\ }{\ }^{}_M$，定义为
+\begin{equation}\forall A,B\in C^\infty(\Phi),\quad \pb{A}{B}^{}_M=\frac{A\star B-B\star A}{i\hbar}=\frac{1}{i\hbar}\qty(\mathscr W\qty[\hat{A}\hat{B}]-\mathscr W\qty[\hat{B}\hat{A}])=\frac{1}{i\hbar}\mathscr W\qty(\comm{\hat{A}}{\hat{B}}).\label{baifFr35}\end{equation}
+这是\textsl{Poisson}括号在\textsl{WW}变换下的推广，其是算符非对易性的直接体现。这样演化方程(\ref{Ete45--**})就可以写作
+\begin{equation}\mathscr W\qty[\dv{\hat{f}}{t}]=\pdv{f}{t}+\pb{f}{H}^{}_M,\end{equation}
+在形式上和相空间\textsl{Liouville}方程是一样的，称为\textbf{\textsl{Moyal}方程}。考察$\hbar\to 0$的准经典近似，对\textsl{Moyal}星积展开到零阶有
+$$A\star B=AB+o(\hbar),\quad\pb{A}{B}^{}_M=\frac{1}{i\hbar}(AB-BA+o(\hbar))\approx0.$$
+也就是说其零阶没有贡献。展开到一阶有
+\begin{equation}A\star B=AB+\frac{i\hbar}{2}\pb{A}{B}+o\qty(\hbar^2),\quad \pb{A}{B}^{}_M=\frac{1}{i\hbar}\frac{i\hbar}{2}\qty(\pb{A}{B}-\pb{B}{A}+o\qty(\hbar^2))=\pb{A}{B},\end{equation}
+这被称为\textbf{梯度近似 \textsl{Gradient Approximation}}，是准经典近似的一级修正。此时\textsl{Wigner}变换中的相位区域零可以忽略，且态变化也可忽略，从而全导数可以提出，因此准经典近似下的演化方程为
+\begin{equation}\dv{t}\mathscr W\qty[\hat{f}]=\dv{f}{t}=\pdv{f}{t}+\pb{f}{H}.\end{equation}
+这就是宏观\textsl{Hamilton}体系中的\textsl{Liouville}方程，为最低阶准经典近似的结果，而完整的量子运动方程则由\textsl{Moyal}括号确定。\\
+\\
+现在我们来探讨\textsl{Moyal}星积和括号的性质。首先星积是双线性的，这很明显，因此\textsl{Moyal}括号也是双线性的
+\begin{equation}\forall A,B\in C^\infty(\Phi),\quad\forall a,b\in\mathbb R,\quad aA\star bB=abA\star B,\quad \pb{aA}{bB}^{}_M=ab\pb{A}{B}^{}_M.\end{equation}
+其次是结合律，考虑三个算符$\hat{A},\ \hat{B}$和$\hat{C}$，它们的\textsl{Wigner}变换为
+$$\begin{aligned}\mathscr W\qty[\hat{A}\hat{B}\hat{C}]&=\mathscr W\qty[\qty(\hat{A}\hat{B})\hat{C}]=\mathscr W\qty[\hat{A}\hat{B}]\star\mathscr W\qty[\hat{C}]=\qty(\mathscr W\qty[\hat{A}]\star\mathscr W\qty[\hat{B}])\star\mathscr W\qty[\hat{C}]\\&=\mathscr W\qty[\hat{A}\qty(\hat{B}\hat{C})]=\mathscr W\qty[\hat{A}]\star\mathscr W\qty[\hat{B}\hat{C}]=\mathscr W\qty[\hat{A}]\star\qty(\mathscr W\qty[\hat{B}]\star\mathscr W\qty[\hat{C}]).\end{aligned}$$
+因此\textsl{Moyal}星积满足结合律
+\begin{equation}\forall A,B,C\in C^\infty(\Phi),\quad (A\star B)\star C=A\star (B\star C)=A\star B\star C.\end{equation}
+现在计算\textsl{Moyal}括号的嵌套，比如式(\ref{baifFr35})给出
+$$\mathscr W\qty(\comm{\hat{A}}{\comm{\hat{B}}{\hat{C}}})=i\hbar\pb{A}{\mathscr W\qty(\comm{\hat{B}}{\hat{C}})}^{}_M=-\hbar^2\pb{A}{\pb{B}{C}^{}_M}^{}_M.$$
+再考虑到$\mathscr W[0]=0$，则\textsl{Lie}括号的\textsl{Jacobi}恒等式$\comm{\hat{A}}{\comm{\hat{B}}{\hat{C}}}+\comm{\hat{C}}{\comm{\hat{A}}{\hat{B}}}+\comm{\hat{B}}{\comm{\hat{C}}{\hat{A}}}=0$就变为
+\begin{equation}\pb{A}{\pb{B}{C}^{}_M}^{}_M+\pb{C}{\pb{A}{B}^{}_M}^{}_M+\pb{B}{\pb{C}{A}^{}_M}^{}_M=0.\end{equation}
+也就是说\textsl{Moyal}括号也满足\textsl{Jacobi}恒等式，和\textsl{Poisson}括号一样。对星积取相空间体积分得到
+$$\int A\star B\dd p\dd q=\sum\frac{1}{l!}\qty(\frac{i\hbar}{2})^l\int A\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})^lB\dd p\dd q,$$
+由于\textsl{Poisson}括号是散度为零，因此根据边界条件其为零，高阶项也类似，这样上式就剩下零阶$\sim\hbar^0=1$，根据式(\ref{W13*++})我们得到
+\begin{equation}\int A\star B\dd p\dd q=\int AB\dd p\dd q=\tr(\hat{A}\hat{B}).\end{equation}
+这些结果可以看作\textsl{Poisson}括号和辛结构的直接推广，但它们的出发点仅仅是基础的算符对易关系，这使得其应用场景可以衍生到二次量子化领域。\\
+\\
+最后让我们回到密度矩阵，来讨论\textsl{Moyal}星积对\textsl{Wigner}函数的作用。考虑两个纯态$\ket{\psi}$和$\ket{\phi}$，取两个算符为密度矩阵$\hat{A}=\dyad{\psi}{\psi}$和$\hat{B}=\dyad{\phi}{\phi}$得到
+$$\mathscr W\qty[\dyad{\psi}{\psi}\dyad{\phi}{\phi}]=\mathscr W\qty[\braket{\psi}{\phi}\dyad{\psi}{\phi}]=\braket{\psi}{\phi}\mathscr W\qty[\dyad{\psi}{\phi}],$$
+用星积就写作
+\begin{equation}\mathcal W(\psi)\star\mathcal W(\phi)=\braket{\psi}{\phi}\mathscr W\qty[\dyad{\psi}{\phi}].\end{equation}
+也就是说，两个纯态\textsl{Wigner}函数的星积正比于它们的混合算符的\textsl{Wigner}变换，比例系数为混合振幅。如果两个态正交则$\mathcal W(\psi)\star\mathcal W(\phi)=0$。现在考虑能量表象，设$\ket{\psi}$是$\hat{H}$的本征纯态，本征值为$E$，则我们计算$H$和$\mathcal W$的星积
+\begin{equation}H\star\mathcal W=\mathscr W\qty[\hat{H}\dyad{\psi}{\psi}]=\mathscr W\qty[E\dyad{\psi}{\psi}]=E\mathcal W.\end{equation}
+这说明\textsl{Wigner}函数在形式上，体现为星积在能量表象中的本征函数，称为\textbf{星本征函数}。对于混合态也类似，取能级态$\ket{n}$我们写出
+$$\mathscr W\qty[\hat{H}\sum_n\lambda^{}_n\dyad{n}{n}]=\mathscr W\qty[\sum_n\lambda^{}_nE^{}_n\dyad{n}{n}]=\sum_n\lambda^{}_nE^{}_n\mathcal W^{}_n,$$
+其中$\mathcal W^{}_n=\mathscr W\qty[\dyad{n}{n}]$为$\ket{n}$的\textsl{Wigner}函数。现在考虑演化方程，算符$\hat{\vb{w}}$的演化由\textsl{von Neumann}方程(\ref{vonNeumann1})控制，注意左侧偏导只和算符有关，对两边取\textsl{Wigner}变换得到
+\begin{equation}\mathscr W\qty[\pdv{\hat{\vb{w}}}{t}]=\pdv{\mathcal W}{t}=\frac{1}{i\hbar}\mathscr W\qty(\comm{\hat{H}}{\hat{\vb{w}}})=\pb{H}{\mathcal W}^{}_M.\end{equation}
+这就是\textsl{Wigner}函数的\textsl{Moyal}方程。现在考察准经典近似，对于\textsl{Moyal}括号展开到一阶
+$$\pb{H}{\mathcal W}^{}_M=\pb{H}{\mathcal W}+o(\hbar)=\pdv{H}{q}\pdv{\mathcal W}{p}-\pdv{H}{p}\pdv{\mathcal W}{q},$$
+带入经典能量$H=p^2/2m+U(q)$则\textsl{Moyal}方程给出
+\begin{equation}\pdv{\mathcal W}{t}=\pdv{U}{q}\pdv{\mathcal W}{p}-\frac{p}{m}\pdv{\mathcal W}{q}.\end{equation}
+带入\textsl{Wigner}函数的定义式(\ref{8987////0051-})，我们可以从上式重新得到\textsl{Schrödinger}方程，推导可以参考\cite{Fgbn88} \S\RomanNumeralCaps{5}。\\
+\\
+关于更多深层的细节和定义，请参考\cite{VnmI--*}和\cite{Curt//..ht}，这里我们就不做过多的叙述了。
 
-
-
-
-
-\subsubsection{相空间上的相对论性两点函数}
-
-
+\subsubsection{相空间上的二次量子化}
 
 
 
@@ -12619,13 +12710,14 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \bibitem{Bishop1980TensorAO} Bishop, Richard L.; Goldberg, Samuel I. (1980). Tensor Analysis on Manifolds. (1th ed.). Dover Publication Inc, Nwe York. ISBN 978-0486-64039-6.
 \bibitem{L6hh} Davidson, Sacha.; Gambino, Paolo.; Laine, Mikko.; Neubert, Matthias.; Salomon, Christophe. (2020). Effective Field Theory in Particle Physics and Cosmology: Lecture Notes of the Les Houches Summer School: Volume 108, July 2017. Oxford University Press. ISBN 978-0-198-85574-3
 \bibitem{PTCP5a} Domb, Cyril.; Green, Melville S. (1976). Phase Transitions and Critical Phenomena Vol. 5a. (1st ed.). Academic Press INC. ISBN 978-0-122-20305-4.
-\bibitem{xURFgmm} Weyl, Hermann. (1930). Quantenmechanik und Gruppentheorie. (2st ed.). \\ Translated by Robertson Howard P. (1950). Zeitschrift für Physik. ISSN 0044-3328. \url{https://doi.org/10.1007/BF02055756}. 
+\bibitem{xURFgmm} Weyl, Hermann. (1930). Quantenmechanik und Gruppentheorie. (2nd ed.). \\ Translated by Robertson Howard P. (1950). Zeitschrift für Physik. ISSN 0044-3328. \url{https://doi.org/10.1007/BF02055756}. 
 \bibitem{eC..25a} Das, Ashok K. (1997). Finite Temperature Field Theory. (1st ed.). World Scientific New York. ISBN 978-981-02-2856-9, 978-981-4498-23-4.
 \bibitem{KhabOU09} Kapusta, Joseph I.; Gale, Charles. (2011). Finite-temperature field theory: Principles and applications. (1st ed.). Cambridge University Press. Cambridge Monographs on Mathematical Physics. ISBN 978-0-521-17322-3, 978-0-521-82082-0, 978-0-511-22280-1.
 \bibitem{therFUrc} Bellac, Michel Le. (2011). Thermal Field Theory. (1st ed.). Cambridge University Press. Cambridge Monographs on Mathematical Physics. ISBN 978-0-511-88506-8, 978-0-521-65477-7.
 \bibitem{Fgbn88} William B. Case. \emph{Wigner functions and Weyl transforms for pedestrians.} 2008. Am. J. Physics. 1 October; 76 (10): 937–946. \url{https://doi.org/10.1119/1.2957889}.
 \bibitem{VVB6--.78} Leaf, Boris. \emph{Weyl Transformation and the Classical Limit of Quantum Mechanics}. 1968. J. Mathematical Physics. January; 9 (1); 65-72. ISSN 0022-2488; \url{https://doi.org/10.1063/1.1664478}.
 \bibitem{VnmI--*} Rundle, Russell; Everitt, Mark. \emph{Overview of the Phase Space Formulation of Quantum Mechanics with Application to Quantum Technologies}. 2021/04/01. Advanced Quantum Technologies. Vol 4. \url{https://doi.org/10.1002/qute.202100016}.
+\bibitem{Curt//..ht} Curtright, Thomas; Fairlie, David; Zachos, Cosmas. (2016). A Concise Treatise on Quantum Mechanics in Phase Space. (1st ed.). World Scientific Publishing Co Pte Ltd. ISBN-13: 978-9-814-52043-0.
 \bibitem{Cvqe12} Rammer, J. (2007). Quantum Field Theory of Non-equilibrium States. Cambridge: Cambridge University Press. ISBN 978-0-511-61895-6.
 \bibitem{Lbnlp} Philippe, Francesco.; Pierre, Mathieu.; David, Sénéchal. (1996). Conformal Field Theory. (1st ed.). Springer-Verlag New York, Inc. ISBN 978-0-387-94785-3.\end{thebibliography}\endgroup
 \end{document}
