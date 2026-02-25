@@ -93,21 +93,21 @@
 可是因为这里涉及算符，所以明显不能直接按照数的方法来计算，需要考虑到算符之间的非对易性。因而我们可以几乎肯定的说，这里的拆分必定是错误的。\\
 \\
 但这不失为一个良好的开始，我们定义两个算符如下：
-\begin{equation}\hat{a}^{}_{\pm}=\dfrac{1}{\sqrt{2m}}(\hat p\pm im\omega \hat x).\end{equation}
+\begin{equation}\hat{a}^{}_{\pm}=\dfrac{1}{\sqrt{2m}}\qty(\hat p\pm im\omega \hat x).\end{equation}
 简单计算其对易子为：
-\begin{equation}\comm{\hat{a}^{}_+}{\hat{a}^{}_-}=\dfrac{2im\omega(\hat x\hat p-\hat p\hat x)}{2m}=i\comm{\hat x}{\hat p}=-\hbar\omega\hat{\vb{I}},\label{fg}\end{equation}
+\begin{equation}\comm{\hat{a}^{}_+}{\hat{a}^{}_-}=\dfrac{2im\omega\qty(\hat x\hat p-\hat p\hat x)}{2m}=i\comm{\hat x}{\hat p}=-\hbar\omega\hat{\vb{I}},\label{fg}\end{equation}
 可见两者是不对易的，因此我们必然有
-\begin{equation}\hat{H}\neq\dfrac{1}{2m}(\hat p+im\omega \hat x)(\hat p-im\omega \hat x)=\hat{a}^{}_+\hat{a}^{}_-,\end{equation}
+\begin{equation}\hat{H}\neq\dfrac{1}{2m}\qty(\hat p+im\omega \hat x)\qty(\hat p-im\omega \hat x)=\hat{a}^{}_+\hat{a}^{}_-,\end{equation}
 否则其对易子应该严格等于0，是一对对称的算符。\\
 \\
 为了后续表述方便，这里我们新设定两个算符$\hat{a},\hat b$，使得它们的对易子相较于前文中的对易子(\ref{fg})给出
 \begin{equation}\comm{\hat{a}}{\hat{b}}=\dfrac{-\comm{\hat{a}^{}_+}{\hat{a}^{}_-}}{\hbar\omega}=\hat{\vb{I}}.\end{equation}
 容易验证，这里的算符与上述$\hat{a}^{}_{\pm}$的对应关系为：
-\begin{equation}\begin{aligned}&\hat{a}=\dfrac{\hat{a}^{}_-}{\sqrt{\hbar\omega}}=\dfrac{1}{\sqrt{2m\hbar\omega}}(\hat p-im\omega\hat x),\\ &\hat{b}=\dfrac{\hat{a}^{}_+}{\sqrt{\hbar\omega}}=\dfrac{1}{\sqrt{2m\hbar\omega}}(\hat p+im\omega\hat{x}).\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}&\hat{a}=\dfrac{\hat{a}^{}_-}{\sqrt{\hbar\omega}}=\dfrac{1}{\sqrt{2m\hbar\omega}}(\hat p-im\omega\hat x),\\ &\hat{b}=\dfrac{\hat{a}^{}_+}{\sqrt{\hbar\omega}}=\dfrac{1}{\sqrt{2m\hbar\omega}}\qty(\hat p+im\omega\hat{x}).\end{aligned}\end{equation}
 由于在坐标表述下，$\hat x$和$\hat p$均是\textit{Hermitian}，因此他们的线性组合也应该是\textit{Hermitian}，也就是说此处我们有关系
 \begin{equation}\hat{b}=\hat{a}^{\dagger},\end{equation}
 这是很容易验证的，可以直接计算或者通过算符的线性组合理论得出。因而在不引起歧义的情况下，后续我们就直接采用记号：
-\begin{equation}\begin{aligned}&\hat{a}=\dfrac{1}{\sqrt{2m\hbar\omega}}(\hat p-im\omega \hat x)\\&\hat{a}^{\dagger}=\dfrac{1}{\sqrt{2m\hbar\omega}}(\hat p+im\omega\hat x),\label{jingdianjihao}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}&\hat{a}=\dfrac{1}{\sqrt{2m\hbar\omega}}\qty(\hat p-im\omega \hat x)\\&\hat{a}^{\dagger}=\dfrac{1}{\sqrt{2m\hbar\omega}}\qty(\hat p+im\omega\hat x),\label{jingdianjihao}\end{aligned}\end{equation}
 从而对于两个波函数$\ket{\psi},\ket{\phi}$，我们有
 \begin{equation}\mel**{\psi}{\hat{a}}{\phi}=\mel**{\phi}{\hat{a}^{\dagger}}{\psi}.\end{equation}
 这就代表了这两个算符对应了真实的物理量，在之后我们会看到它们的物理含义。\\
@@ -466,7 +466,7 @@ $$\hat F^{(1)}=\sum\limits_{ik}\hat{c}^{\dagger}_i\hat{c}^{}_k \int \psi^{*}_i\h
 单粒子的势能算符可以表示为
 \begin{equation}\hat{U}^{(1)}=\int\hat{\psi}^{\dagger}\hat{U}^{(1)}\hat{\psi}\dd\xi,\end{equation}
 由此\textit{Hamiltonian}算符为
-\begin{equation}\begin{aligned}\hat{H}&=\hat{H}^{(1)}+\hat{U}^{(2)}+\cdots\\=&\int\hat{\psi}^{\dagger}(\xi)\qty(-\dfrac{\hbar^2}{2m}\bm{\Delta}+\hat{U}^{(1)})\hat{\psi}(\xi)\dd\xi\\&+\dfrac{1}{2}\int\hat{\psi}^{\dagger}(\xi)\hat{\psi}^{\dagger}(\eta)\hat{U}^{(2)}\hat{\psi}(\eta)\hat{\psi}(\xi)\dd\xi\dd\eta+\cdots.\end{aligned}\label{rgth894*--}\end{equation}
+\begin{equation}\begin{aligned}\hat{H}=&\hat{H}^{(1)}+\hat{U}^{(2)}+\cdots=&\int\hat{\psi}^{\dagger}(\xi)\qty(-\dfrac{\hbar^2}{2m}\bm{\Delta}+\hat{U}^{(1)})\hat{\psi}(\xi)\dd\xi\\&+\dfrac{1}{2}\int\hat{\psi}^{\dagger}(\xi)\hat{\psi}^{\dagger}(\eta)\hat{U}^{(2)}\hat{\psi}(\eta)\hat{\psi}(\xi)\dd\xi\dd\eta+\cdots.\end{aligned}\label{rgth894*--}\end{equation}
 可以看到，这样的表示和通常意义上的算符均值$\expval{\hat{H}^{(1)}}=\mel**{\psi}{\hat{H}^{(1)}}{\psi}$在形式上是一致的，因此可以按物理概念取类比。我们知道$\rho(\xi)=\psi^{*}(\xi)\psi(\xi)$代表概率密度，而$\hat{c}^{\dagger}_i\hat{c}^{}_i=\hat{N}^{}_i$是占有数算符，$\psi^{*}_i(\xi)\hat N^{}_i\psi^{}_i(\xi)$是占有数密度，自然的可以定义\textbf{粒子数密度算符}
 \begin{equation}\hat{\rho}^{}_N(\xi)=\hat{\psi}^{\dagger}(\xi)\hat{\psi}(\xi),\label{zyss}\end{equation} 
 使得
@@ -524,9 +524,9 @@ $$\hat{\bm{\zeta}}(x,y=x)=\int\hat{\psi}^{\dagger}(\xi,x)\hat{\psi}(\xi,x)\dd\xi
 从而均值为
 \begin{equation}\expval{\hat{F}^{(1)}}=\int\qty[\hat{f}^{(1)}\hat{\vb{w}}(x,y)]^{}_{x=y}\dd{x}=\tr(\hat{f}\hat{\vb{w}}).\end{equation}
 当然对于单粒子还可以进一步简化，因为此时参数$x$只对应一个粒子$a$，所以粒子数密度和占有数密度相同，归一化取为$Nn^{(a)}_x=1$。并且如果我们只考察这个粒子，则系统处于纯态，于是我们定义单粒子的\textbf{约化密度矩阵算符}为
-\begin{equation}\hat{\bm{\zeta}}^{(a)}(x,y)=\frac{1}{N}\hat{\psi}^{\dagger}_a(x)\hat{\psi}^{}_a(y)=\frac{1}{N}\hat{\bm{\zeta}}(x,y).\end{equation}
+\begin{equation}\hat{\bm{\zeta}}^{(a)}(x,y)=\frac{1}{N}\hat{\psi}^{\dagger}_a(x)\hat{\psi}^{}_a(y)=\frac{1}{N}\hat{\bm{\zeta}}(x,y).\label{djishang}\end{equation}
 但需要强调的是$\hat{\bm{\zeta}}^{(a)}\neq\hat{\vb{w}}$，因为对$\xi$的积分包含了系统的统计信息$a^{}_{mn}$，这一点是纯态$\hat{\bm{\zeta}}^{(a)}$无法涵盖的。对占有数态取均值就给出单粒子约化密度矩阵，注意这里的均值要算上分布$\hat{\vb{w}}$的迹
-\begin{equation}\zeta^{(a)}(x,y)=\frac{1}{N}\expval{\hat{\psi}^{\dagger}_a(x)\hat{\psi}^{}_a(y)}=\frac{1}{N}\tr(\hat{\bm{\zeta}}^{(a)}\hat{\vb{w}}).\label{djishang}\end{equation}
+\begin{equation}\zeta^{(a)}(x,y)=\frac{1}{N}\expval{\hat{\psi}^{\dagger}_a(x)\hat{\psi}^{}_a(y)}=\frac{1}{N}\tr(\hat{\bm{\zeta}}^{(a)}\hat{\vb{w}}).\end{equation}
 从而得到算符$\hat{F}^{(1)}$的均值以单个粒子的密度矩阵算符表述为
 \begin{equation}\expval{\hat{F}^{(1)}}=\sum_a\int\qty[\hat{f}^{(1)}\hat{\bm{\zeta}}^{(a)}(x,y)]^{}_{x=y}\dd{x}.\label{mtt2]}\end{equation}
 当然后续在不影响理解的前提下，我们依旧省略粒子号$a$，密度矩阵统一写为均值形式
@@ -775,7 +775,7 @@ $$ T^{}_p(\mathscr M)\simeq\mathbb R^2\Longleftrightarrow u^0=t,\quad \abs{\vb{u
 对于一个粒子，它在时空中的轨迹称为\textbf{世界线 \textit{Worldline}}，记为$\gamma(\tau)$，其中$\tau$是粒子的\textbf{固有时 \textit{Proper time}}。固有时是粒子的自有属性，它是相对粒子静止的测量时间，局部坐标系给出$p=(\tau,0,0,0)$，那么由间隔给出
 \begin{equation}\dd{s}^2=\dd{t}^2-\dd{r}^2=\dd\tau^2=\dd{t}^2\qty(1-v^2),\end{equation}
 其中$v=\dv*{r}{t}$是粒子的空间速度。粒子的\textbf{四维速度}由世界线的切向量确定，归一化后为
-\begin{equation}u^{\mu}=\dv{x^{\mu}}{s}\qty(\frac{1}{\sqrt{1-v^2}},\frac{\vb{v}}{c\sqrt{1-v^2}}),\quad u^{\mu}u^{}_{\mu}=1,\label{sizhiqq}\end{equation}
+\begin{equation}u^{\mu}=\dv{x^{\mu}}{s}\qty(\frac{1}{\sqrt{1-v^2}},\frac{\vb{v}}{\sqrt{1-v^2}}),\quad u^{\mu}u^{}_{\mu}=1,\label{sizhiqq}\end{equation}
 其中$\vb{v}$是粒子的三维空间速度。\textbf{四维加速度}为
 \begin{equation}w^{\mu}=\qty(w^0,\vb{w})=\dv[2]{x^{\mu}}{s}=\dv{u^{\mu}}{s},\end{equation}
 其和速度正交$w^{\mu}u^{}_{\mu}=0$。\textbf{四维动量}为
@@ -824,8 +824,8 @@ $$\frac{\vb{f}}{\sum\mathscr E}=t\frac{\sum\vb{p}}{\sum\mathscr E}-\frac{\sum\ma
 \begin{equation}\vb{R}^{}_m=\frac{\sum\mathscr E\vb{r}}{\sum\mathscr E},\label{Pietro}\end{equation}
 其按照速度
 \begin{equation}\vb{v}^{}_m=\frac{\sum\vb{p}}{\sum\mathscr E}\end{equation}
-做匀速运动。这个点称为系统的\textbf{惯性中心}，而$\vb{v}^{}_m$是系统整体的运动速度，类似波的群速度。在静止参考系下，取近似$\mathscr E\approx mc^2$，我们得到惯性中心为
-\begin{equation}\vb{R}^{}_m=\frac{\sum mc^2\vb{r}}{\sum mc^2}=\frac{\sum m\vb{r}}{\sum m},\end{equation}
+做匀速运动。这个点称为系统的\textbf{惯性中心}，而$\vb{v}^{}_m$是系统整体的运动速度，类似波的群速度。在静止参考系下，取近似$\mathscr E\approx m$，我们得到惯性中心为
+\begin{equation}\vb{R}^{}_m=\frac{\sum m\vb{r}}{\sum m},\end{equation}
 这就是经典的系统质心矢径。当然需要强调的是，质心定义式对于任意系统均有效，而式(\ref{Pietro})只对无相互作用的粒子系统有效。
 
 \subsection{经典宏观场论和电磁场}\label{jingdian}
@@ -1012,7 +1012,7 @@ $$H=P^{0}_{\textit{pf}}=H^{}_p+e\varphi=p^{0}_{p}+eA^0\implies p^{0}_{p}=P^{0}_{
 \begin{equation}j^{\mu}=0,\quad \partial^{}_{\nu}F^{\mu\nu}=\partial^{\mu}\partial^{}_{\nu}A^{\nu}-\partial^{}_{\nu}\partial^{\nu}A^{\mu}=0.\label{popiu}\end{equation}
 由于电磁场规范性的存在，我们可以选取特定的规范函数$f(x^{\mu})$来简化方程，这里我们使用的规范称为\textbf{洛伦兹规范 \textit{Lorentz Gauge}}
 \begin{equation}\partial^{}_{\nu}A^{\nu}=\partial^{}_{t}\varphi-\div\vb{A}=0.\end{equation}
-带入式(\ref{popiu})可以得到\textbf{波动方程 \textit{d'Alembert}}，这里我们重点关注空间形式
+带入式(\ref{popiu})可以得到\textbf{波动方程 \textit{d'Alembert Equation}}，这里我们重点关注空间形式
 \begin{equation}\partial^{}_{\nu}\partial^{\nu}\vb{A}=\square\vb{A}=(\partial^2_t-\bm{\Delta}^{}_r)\vb{A}=0,\end{equation}
 其中$\square=\partial^2_t-\bm{\Delta}^{}_r$是\textit{d'Alembertian}，$r=\abs{\vb{r}}$为矢径模长。这个就是传统的无边界的波动方程。\\
 \\
@@ -1836,7 +1836,7 @@ $$\rho'_{\mu\nu}=\qty(e^{}_{\mu}+fk^{}_{\mu})\qty(e^{*}_{\nu}+f^*k^{}_{\nu})=\rh
 当然本文关注的是二次量子化，所以在这方面不会做过多的介绍，具体内容请参考第\ref{VYTVC34}节。本质上，弯曲时空下的量子场论是建立在广义相对论的辛几何表述下的量子化理论，而在前文中，对于电磁波场我们所考虑的依旧是\textsl{Riemann}几何体系，这就是问题的根源，这里我们暂时不展开。这一块就被称为\textbf{超越标准模型 \textit{Beyond Standard Model, BSM}}，其中还包括了弦理论和圈量子理论，这两个都是关于引力的统一理论。\\
 \\
 本文后续会将光子的二次量子化理论推广到任意的玻色子体系的费米子体系，来讨论狭义相对论下粒子的产生和湮灭，反粒子的引入，\textsl{CPT}定理以及一些简单的关于二次量子化算符的应用。\newpage
-\section{相对论性自由玻色子}
+\section{相对论性自由玻色子}\label{Dvb4-*9..}
 \noindent 前面我们讨论了相对论下的谐振子模型，也就是光子的二次量子化以及它的一些应用，现在我们来推广这一理论到任意的粒子。按照老规矩，我们首先来研究和光子处于同一类的粒子：玻色子系统的二次量子化。方便起见，下文中的粒子均指代自由粒子，目前不考虑外场的影响。鉴于光子理论是在动量表象下进行的，后文依旧默认在动量表象下处理。\\
 \\
 值得指出的是，我们所研究的粒子个数应该是无限多的，这就导致了系统的自由度是无限大的，从而我们可以使用场的形式来描述粒子，当然这只是形式上的。但是这并不妨碍我们从场的理论来研究，我们已经熟悉电磁场的量子化，那对于任意场的量子化只要按照相同的思路来就没有问题，因此以场作为研究对象是我们的首选。后续我们在形式上取$\hbar=1$，并且取离散谱的空间-波矢变换。
@@ -1856,7 +1856,7 @@ $$\rho'_{\mu\nu}=\qty(e^{}_{\mu}+fk^{}_{\mu})\qty(e^{*}_{\nu}+f^*k^{}_{\nu})=\rh
 四维动量的表达式为$p^{\mu}=mu^{\mu}$，变为算符后它应该用态$\psi$和$\vb{v}$给出相对论方程组：
 \begin{equation}\begin{cases}\displaystyle \hat{p}^{\mu}=m\hat{u}^{\mu},&\\ \displaystyle \hat{u}^{\mu}\psi=u^{\mu}\psi=v^{\mu}.\end{cases}\implies\begin{cases}\hat{p}^{\mu}\psi=mv^{\mu},&\\ \hat{p}^{\mu}v^{}_{\mu}=m\hat{u}^{\mu}u^{}_{\mu}\psi=m\psi,\end{cases}\label{wdnlmaa}\end{equation}
 这里用到了性质$u^{\mu}u^{}_{\mu}=1$，具体细节请自行验算。从而将一式带入二式得到四维动量方程用算符形式给出为
-\begin{equation}\eta^{}_{\mu\nu}\hat{p}^{\mu}\hat{p}^{\nu}=-\partial^{}_{\mu}\partial^{\mu}=-\qty(\partial_t^2-\bm{\Delta})=-\square=m^2\hat{I}.\end{equation}
+\begin{equation}\eta^{}_{\mu\nu}\hat{p}^{\mu}\hat{p}^{\nu}=-\partial^{}_{\mu}\partial^{\mu}=-\qty(\partial_t^2-\bm{\Delta})=-\square=m^2\hat{I}.\label{Wdfgafws}\end{equation}
 带入态函数$\psi$，我们就得到了著名的\textbf{\textsl{\rusa{Фок}-Klein-Gordon}方程}(1926，1927)：
 \begin{equation}\qty(\partial^{}_{\mu}\partial^{\mu}+m^2)\psi=\qty(\square+m^2)\psi=0.\label{fkge}\end{equation}
 由该方程描述的场理论被称为\textbf{\textsl{Klein-Gordon(KG)}场}。值得一提的是，若我们将标量$\psi$理解为粒子的作用量$S$，则\textsl{FKG}方程就等价为\textsl{HJ}方程，也就是式(\ref{RFGBN98})。这是毫不意外的，因为一次量子化就是建立在\textsl{Hamilton}表述下的，而\textsl{HJ}方程是\textsl{Hamilton}表述的核心方程之一，事实上\textsl{Schrödinger}方程就是从光的\textsl{HJ}方程如此演化而来的。\\
@@ -5899,7 +5899,7 @@ $$\hat{\rho}^{}_{\vb{0}}\ket{\vb{0}}=n^{}_0\ket{\vb{0}},$$
 这里乘以$N$是$\zeta$的归一化系数，并且一般而言$\zeta^{(1)}(t,\vb{r}^{}_1,\vb{r}^{}_2)$只是$\vb{r}=\vb{r}^{}_1-\vb{r}^{}_2$的函数，事实上这是波函数算符的关联函数。带入算符定义式(\ref{sufdsp})，并考虑到式(\ref{feicee})以及式(\ref{wefoloi})的性质，我们得到
 \begin{equation}N\zeta^{(1)}(t,\vb{r}^{}_1,\vb{r}^{}_2)=n^{}_0+N\zeta'^{(1)}((t,\vb{r}^{}_1,\vb{r}^{}_2),\label{feiningjj}\end{equation}
 其中$\zeta'^{(1)}$是非凝聚态部分，在长距离下趋于各向同性，因此一般的有
-\begin{equation}\lim_{r\to\infty}\zeta'^{(1)}((\vb{r})=0.\end{equation}
+\begin{equation}\lim_{r\to\infty}\zeta'^{(1)}(\vb{r})=0.\end{equation}
 而此时我们看到，密度矩阵并不渐进到$0$，而是有
 \begin{equation}\lim\limits_{\abs{\vb{r}}\to\infty}\zeta^{(1)}(\vb{r})=\frac{n^{}_0}{N},\label{ibibdidu}\end{equation}
 这说明在超流相中，液体是\textbf{长程有序的 \textit{Long Range Order}}，也就是在远场极限下分布依旧强相关，这说明超流相是较低对称性相，普通相没有这种有序性从而是高对称相，根据\textsl{Landau}理论可知超流体的相变必然是二级相变(\textsl{\rusa{В. Л. Гинзбург}}，\textsl{\rusa{Л. Д. Ландау}}，1950)。而这种长程有序性也就意味着，值$\Xi$和空间有关，无论流体是否均匀，并且由于流动使得系统并非完全的平衡态，所以$\Xi$一般也和时间有关，再根据归一化条件$\abs{\Xi}^2=n^{}_0$我们给出
@@ -7517,7 +7517,7 @@ $$\begin{aligned}&\mel**{1}{\mathbb T\qty{\hat{\psi}^{\dagger}(\vb{r}^{}_1,t^{}_
 \\
 当然需要强调的是，此处通过单粒子占有数态$\ket{1}$定义两点函数只表示，系统每次只有一个粒子在发生变化，波函数算符$\hat{\psi}$是针对该粒子而言的。但是若系统中存在$N$个粒子，每个粒子独立变化，也就是自由波函数场，那么我们同样可以定义两点函数为
 \begin{equation}C\qty[\vb{r}^{}_1\qty(t^{}_1),\vb{r}^{}_2\qty(t^{}_2)]=\frac{1}{N}\mel**{N}{\mathbb T\qty{\hat{\psi}^{\dagger}(\vb{r}^{}_1,t^{}_1)\hat{\psi}(\vb{r}^{}_2,t^{}_2)}}{N}.\label{djmm,dfg--g}\end{equation}
-这实际上才是最符合密度矩阵(\ref{djishang})的定义，这里的我们只是取$N=1$化简了而已。多点关联函数以此类推，这里就不赘述了。\\
+这实际上才是最符合密度矩阵(\ref{midujzz})的定义，这里的我们只是取$N=1$化简了而已。多点关联函数以此类推，这里就不赘述了。\\
 \\
 从粒子过渡到场会略微复杂一点，因为场的位形算符同时包含湮灭和产生算符。并且对于场自身而言，其没有粒子存在，也就是处于真空态，所以多点关联函数也是针对$\ket{0}$的。当然在形式上是类似的，比如对于实标量场$\psi\in C^{\infty}(\mathbb R)$我们有两点函数
 \begin{equation}C(a,b)=\mel**{0}{\mathbb T\qty{\hat{\psi}(a)\hat{\psi}(b)}}{0}=\expval{\mathbb T\qty{\hat{\psi}(a)\hat{\psi}(b)}}_0.\label{fsgw33}\end{equation}
@@ -7603,10 +7603,10 @@ $$\begin{aligned}N'(\vb{p})&=\lim_{t\to 0^+}\int G(\omega,\vb{k})\exp(i\vb{k}\cd
 \\
 现在我们定性分析$G(\omega,\vb{p})$，详细的定量计算放在第\ref{UHYB..**}节中，因为其\textsl{Green}函数本身的性质已经足够丰富。我们先考察\textsl{Schrödinger}方程，考虑到现在的\textit{Hamiltonian}为$\hat{H}^{\textit{eff}}=\hat{H}-\mu\hat{N}$，所以写出
 \begin{equation}i\pdv{t}=\hat{H}^{\textit{eff}}=\hat{H}-\mu\hat{N}.\end{equation}
-于是，非凝聚体的两点函数$G(t,\vb{r})$满足方程
-$$\qty(i\pdv{t}-\hat{H}+\mu\hat{N})G(t,\vb{r})=\delta(t)\delta^3(\vb{r}).$$
+于是，非凝聚体的两点函数$G(t,\vb{r})$根据式(\ref{dxgng6678})可知满足方程
+$$\qty(i\pdv{t}-\hat{H}+\mu\hat{N})G(t,\vb{r})=i\delta(t)\delta^3(\vb{r}).$$
 这里我们暂时不给出$\hat{H}$的表达式，记动量表象下的原\textit{Hamiltonian}为$\hat{H}^{}_{\vb{p}}$，则\textsl{Fourier}变换满足方程
-\begin{equation}\qty(\omega-\hat{H}^{}_{\vb{p}}+\mu\hat{N})G(\omega,\vb{p})=1,\label{congbeiyg--}\end{equation}
+\begin{equation}\qty(\omega-\hat{H}^{}_{\vb{p}}+\mu\hat{N})G(\omega,\vb{p})=i,\label{congbeiyg--}\end{equation}
 其中$\omega$是$\hat{H}^{\textit{eff}}$的频率，记重整化的能量为$E^{\textit{eff}}_{\vb{p}}(N)=\expval{\hat{H}^{\textit{eff}}_{\vb{p}}}$，原能量为$E^{}_{\vb{p}}(N)=\expval{\hat{H}^{}_{\vb{p}}}$，则色散律给出
 \begin{equation}\omega(\vb{p})=E^{\textit{eff}}_{\vb{p}}(N)=E^{}_{\vb{p}}(N)-\mu N,\quad \omega(\vb{0})=0.\label{SHE--IA/7}\end{equation}
 据此不难看到，方程(\ref{congbeiyg--})的算符给出
@@ -9094,7 +9094,7 @@ $$\pdv{\hat{f}}{\hat{q}}=\frac{1}{\hbar}\comm{\int_{\Phi^*}\xi(\alpha,\beta)\exp
 当然我们也完全可以不依赖于对偶空间$\Phi^*$过渡，直接从相空间$\Phi$定义。为此我们引入经典函数$f$的\textbf{\textsl{Weyl}符号}$f^{}_W\in C^\infty(\Phi)$，定义为
 \begin{equation}f^{}_W(r,k)=\int_{\Phi}f(q,p)\exp(-\frac{i}{\hbar}\qty(rp+kq))\dd p\dd q.\end{equation}
 由于$f$和$f^{}_W$都是相空间$\Phi$上的函数，因此这个变换本质上是一个正则变换，但这是在函数层面以类\textsl{Fourier}变换实现的，称为\textbf{正则幺正变换}。在群论角度这是辛群的表示，我们不做展开，后续依旧称为正则变换。于是我们可以将式(\ref{Wty56-..-})中的$\xi$替换为\textsl{Weyl}符号，得到\textbf{\textsl{Weyl}变换的\textsl{Groenewold-Moyal}表示}
-\begin{equation}\begin{aligned}\hat{f}&\qty(\hat{q},\hat{p})=\frac{1}{2\pi\hbar}\int_{\Phi}f^{}_W(r,k)\exp(\frac{i}{\hbar}\qty(r\hat{p}+k\hat{q}))\dd r\dd k\\&=\frac{1}{2\pi\hbar}\int_{\Phi}\exp(-\frac{i}{\hbar}\qty(rp+kq))f(q,p)\exp(\frac{i}{\hbar}\qty(r\hat{p}+k\hat{q}))\dd p\dd q\dd r\dd k.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\hat{f}&\qty(\hat{q},\hat{p})=\frac{1}{2\pi\hbar}\int_{\Phi}f^{}_W(r,k)\exp(\frac{i}{\hbar}\qty(r\hat{p}+k\hat{q}))\dd r\dd k\\&=\frac{1}{2\pi\hbar}\int_{\Phi}\exp(-\frac{i}{\hbar}\qty(rp+kq))f(q,p)\exp(\frac{i}{\hbar}\qty(r\hat{p}+k\hat{q}))\dd p\dd q\dd r\dd k.\end{aligned}\label{Shuangr}\end{equation}
 同样的这里用一个过程图表示
 \begin{center}\tikz{\def\d{5}\draw[->,thick,>=Stealth](-\d,0)node[left]{$\begin{array}{c}\text{经典函数}\\ f(p,q)\end{array}$}to node[above,midway]{\textsl{Canonical}\ \text{Transform}}(-1,0);\draw[->,thick,>=Stealth](1,0)node[left=.15]{$\begin{array}{c}\text{\textsl{Weyl}符号}\\ f^{}_W(r,k)\end{array}$}to node[below,midway]{\textsl{Weyl}\ \text{Transform}}(\d,0)node[right]{$\begin{array}{c}\text{正则算符}\\ \hat{f}\qty(\hat{q}(t),\hat{p}(t))\end{array}$};}\end{center}
 这是现代物理中最常用的\textsl{Weyl}变换形式，我们可以直接在相空间上处理，而不需要处理对偶空间$\Phi^*$，这会极大的简化计算过程。为了区分两者，我们将涉及$\Phi^*$的变换称为\textbf{经典\textsl{Weyl}表示}，关于\textsl{GM}表示的一些处理的细节，读者可以参考\cite{VVB6--.78}的第二部分。
@@ -9169,16 +9169,18 @@ $$\begin{aligned}\int\exp(-\frac{i\eta p}{\hbar})\mel**{q-\frac{\eta}{2}}{\hat{\
 \begin{equation}\mathcal W(p,q)=\int\exp(\frac{\eta p}{i\hbar})\psi^*\qty(q+\frac{\eta}{2})\psi\qty(q-\frac{\eta}{2})\dd\eta=\int\exp(\frac{i\gamma q}{\hbar})\psi^*\qty(p+\frac{\gamma}{2})\psi\qty(p-\frac{\gamma}{2})\dd\gamma.\label{8987////0051-}\end{equation}
 它和式(\ref{speer})在形式上只相差一个相位，在坐标表象按照式(\ref{speer})的记号我们得到\textsl{Wigner}函数和原密度矩阵$\vb{w}(x,y)$之间的关联为
 \begin{equation}\mathcal W(p,q)=\int\exp(\frac{\eta p}{i\hbar})\vb{w}\qty(q+\frac{\eta}{2},q-\frac{\eta}{2})\dd\eta.\label{MercibYd}\end{equation}
-同时其物理含义也是明显的
-\begin{equation}x=q+\frac{\eta}{2},\quad y=q-\frac{\eta}{2}\implies q=\frac{x+y}{2},\quad \eta=x-y,\end{equation}
-其中$q$对应两点的中心位置，而$\eta$则是相对位置。所以\textsl{Wigner}函数的物理含义就比较明显了，它将两点纯坐标函数分解为中心运动和相对运动的耦合，然后通过\textsl{Fourier}变换加入相位，最后对相对运动积分得到一个总体的运动趋势，得到一个经典的相空间函数。再次基础上我们就可以重新理解算符的均值，比如对于算符$\hat{f}$，其均值根据定义(\ref{spe4er})为
+同时其物理含义也是明显的，解释为变量代换
+\begin{equation}x=q+\frac{\eta}{2},\quad y=q-\frac{\eta}{2}\implies q=\frac{x+y}{2},\quad \eta=x-y,\label{Bifn756R==-}\end{equation}
+其中$q$对应两点的中心位置，而$\eta$则是相对位置。所以\textsl{Wigner}函数的物理含义就比较明显了，它将两点纯坐标函数分解为中心运动和相对运动的耦合，然后通过\textsl{Fourier}变换加入相位，最后对相对运动积分得到一个总体的运动趋势，得到一个经典的相空间函数。从而我们约定\textsl{Wigner}变换对于任意空间函数$Y(x,y)$的作用为变量代换
+\begin{equation}\mathscr W\qty[Y(x,y)]=\mathscr W\qty[\hat{Y}(x,y)]=\int\exp(\frac{\eta p}{i\hbar})Y\qty(q+\frac{\eta}{2},q-\frac{\eta}{2})\dd\eta=\mathcal Y(p,q).\label{Laf92++**}\end{equation}
+在此基础上我们就可以重新理解算符的均值，比如对于算符$\hat{f}$，其均值根据定义(\ref{spe4er})为
 \begin{equation}\expval{\hat{f}}=\tr(\hat{f}\hat{\vb{w}})=\frac{1}{\hbar}\int f\mathcal W\dd p\dd q=\frac{1}{\hbar}\int \mathscr W\qty[\hat{f}]\mathcal W\dd p\dd q.\end{equation}
 其中用到了前面的等式(\ref{W13*++})。容易证明$W$在相空间上有归一化
 \begin{equation}\int\mathcal W(p,q)\dd p\dd q=\tr(\hat{\vb{w}}),\quad \int\mathcal W^2(p,q)\dd p\dd q=\tr(\hat{\vb{w}}^2)=\hbar^{-1},\end{equation}
 而在统计物理中系综概率的归一化同样是在相空间之上，因此$\mathcal W$可以看作一种概率分布，但是其平方归一化的结果为$\hbar^{-1}\neq 1$，因而称为\textbf{\textsl{Wigner}准概率分布}。基于此可以计算对于两个不同的纯态$\ket{\psi}$和$\ket{\phi}$，我们有
 \begin{equation}\abs{\braket{\psi}{\phi}}^2=\frac{1}{\hbar}\int \mathcal W(\psi)\mathcal W(\psi)\dd p\dd q.\end{equation}
 证明可以通过取$\hat{f}=\dyad{\psi}{\psi}$，以及密度矩阵$\hat{\vb{w}}=\dyad{\phi}{\phi}$得到。我们也可以从$\mathcal W$反解出系统的统计量，比如密度矩阵通过反演(\ref{MercibYd})变换为
-\begin{equation}\vb{w}(x,y)=\bigintsss\exp(-\frac{\eta p}{i\hbar})\mathcal W(p,q)\dd p=\bigintsss\exp(-\frac{p}{i\hbar}(x-y))\mathcal W\qty(p,\frac{x+y}{2})\dd p,\end{equation}
+\begin{equation}\vb{w}(x,y)=\bigintsss\exp(-\frac{\eta p}{i\hbar})\mathcal W(p,q)\dd p=\bigintsss\exp(-\frac{p}{i\hbar}(x-y))\mathcal W\qty(p,\frac{x+y}{2})\dd p,\label{chOdy//;L..}\end{equation}
 以及相应的波函数
 \begin{equation}\psi(x)=\frac{1}{\psi^*(0)}\int \exp(\frac{ixp}{\hbar})\mathcal W\qty(\frac{x}{2},q)\dd p,\quad \abs{\psi(x)}^2=\vb{w}(x=y)=\int\mathcal W\qty(x,q)\dd p.\end{equation}
 这样我们就量子化了经典统计物理量，而这仅仅是建立在\textsl{Weyl}变换所对应的对易性之上的。同样的我们可以计算动量分量，比如计算概率密度$\abs{\psi(p)}^2$，参考位形表象我们应该计算动量表象对$q$的积分
@@ -9196,7 +9198,7 @@ $$S=-\frac{1}{\hbar}\int\mathcal W\ln(\frac{1}{Z}\exp(-\beta H))\dd p\dd q.$$
 相应的可以想到，巨正则系综的熵为
 $$S=-\frac{1}{\hbar}\int\mathcal W\ln(\frac{1}{\Xi}\exp(-\beta H+\beta \mu N))\dd p\dd q.$$
 如果我们按照正常的过程计算是较为复杂的，而\textsl{Wigner}变换可以直接给出结果。其余的内容就不给出了，关于谐振子的计算，请参考\cite{Fgbn88}的第\RomanNumeralCaps{4}部分。由此在动量表象下，可以得到\textsl{Planck}分布。
-\subsubsection{量子化相空间的演化方程和Moyal括号}
+\subsubsection{量子化相空间的演化方程和Moyal括号}\label{Zhdit76//}
 \noindent 上面我们介绍了\textsl{Wigner}变换，但有一个问题却没有涉及，那就是演化方程的\textsl{Wigner}变换。对于\textsl{Weyl}变换而言，其演化方程是天然附带的，这是由辛结构保证的，作为\textsl{Weyl}变换的逆变换我们自然想知道\textsl{Wigner}变换的演化方程。\\
 \\
 对于任意的\textsl{Heisenberg}绘景算符$\hat{f}(t)$，其演化方程由式(\ref{Fut+++.331gs})确定，这一点我们也在第\ref{Fli9--fRR}节的量子化相空间中有过确认。为了回到经典相空间，我们需要对方程两边同时做\textsl{Wigner}变换给出
@@ -9262,7 +9264,7 @@ $$\mathscr W\qty[\hat{A}\hat{B}]^{(l=0)}=A\qty(\overleftarrow{\pdv{q}}\overright
 于是我们就得到式(\ref{Cvhusf//})的结果
 \begin{equation}\mathscr W\qty[\hat{A}\hat{B}](p,q)=\sum_{l=0}\frac{1}{l!}\qty(\frac{i\hbar}{2})^lA\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})^lB,\end{equation}
 可以证明这是一个收敛的微分算子级数，且趋向于一个指数映射。一般在物理上将此左右算符的指数映射称为\textbf{\textsl{Moyal}星积}$\ \star\ $(\textsl{José E. Moyal}，1940)，记为
-\begin{equation}\begin{aligned}&\star=\exp{\frac{i\hbar}{2}\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})},\quad A=\mathscr W\qty[\hat{A}],\quad B=\mathscr W\qty[\hat{B}].\\&\mathscr W\qty[\hat{A}\hat{B}]=A\star B=\mathscr W\qty[\hat{A}]\exp{\frac{i\hbar}{2}\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})}\mathscr W\qty[\hat{B}],\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}&\star=\exp{\frac{i\hbar}{2}\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})},\quad A=\mathscr W\qty[\hat{A}],\quad B=\mathscr W\qty[\hat{B}].\\&\mathscr W\qty[\hat{A}\hat{B}]=A\star B=\mathscr W\qty[\hat{A}]\exp{\frac{i\hbar}{2}\qty(\overleftarrow{\pdv{q}}\overrightarrow{\pdv{p}}-\overleftarrow{\pdv{p}}\overrightarrow{\pdv{q}})}\mathscr W\qty[\hat{B}],\end{aligned}\label{Mofv,,897/06.}\end{equation}
 关于此收敛性这里不做过多叙述，读者可以参考\cite{Curt//..ht}\S 0.10的说明，当然在形式上这必然趋向于指数函数。\\
 \\
 当然我们也可以写出\textsl{Moyal}星积的积分形式，只需要利用$A(p+v,q+u)$的展开，并和$B$的展开做适当的乘积就能得到
@@ -9303,7 +9305,9 @@ $$\mathscr W\qty[\dyad{\psi}{\psi}\dyad{\phi}{\phi}]=\mathscr W\qty[\braket{\psi
 \begin{equation}H\star\mathcal W=\mathscr W\qty[\hat{H}\dyad{\psi}{\psi}]=\mathscr W\qty[E\dyad{\psi}{\psi}]=E\mathcal W.\end{equation}
 这说明\textsl{Wigner}函数在形式上，体现为星积在能量表象中的本征函数，称为\textbf{星本征函数}。对于混合态也类似，取能级态$\ket{n}$我们写出
 $$\mathscr W\qty[\hat{H}\sum_n\lambda^{}_n\dyad{n}{n}]=\mathscr W\qty[\sum_n\lambda^{}_nE^{}_n\dyad{n}{n}]=\sum_n\lambda^{}_nE^{}_n\mathcal W^{}_n,$$
-其中$\mathcal W^{}_n=\mathscr W\qty[\dyad{n}{n}]$为$\ket{n}$的\textsl{Wigner}函数。现在考虑演化方程，算符$\hat{\vb{w}}$的演化由\textsl{von Neumann}方程(\ref{vonNeumann1})控制，注意左侧偏导只和算符有关，对两边取\textsl{Wigner}变换得到
+其中$\mathcal W^{}_n=\mathscr W\qty[\dyad{n}{n}]$为$\ket{n}$的\textsl{Wigner}函数。现在考虑演化，含时\textsl{Wigner}函数根据$\hat{\vb{w}}(t)=\dyad{\psi(t)}{\psi(t)}$不难从式(\ref{8987////0051-})得到
+\begin{equation}\mathcal W(t)=\int\exp(\frac{\eta p(t)}{i\hbar})\psi^*\qty(q(t)+\frac{\eta}{2},t)\psi\qty(q(t)-\frac{\eta}{2},t)\dd\eta.\end{equation}
+算符$\hat{\vb{w}}$的演化由\textsl{von Neumann}方程(\ref{vonNeumann1})控制，注意左侧偏导只和算符有关，对两边取\textsl{Wigner}变换得到
 \begin{equation}\mathscr W\qty[\pdv{\hat{\vb{w}}}{t}]=\pdv{\mathcal W}{t}=\frac{1}{i\hbar}\mathscr W\qty(\comm{\hat{H}}{\hat{\vb{w}}})=\pb{H}{\mathcal W}^{}_M.\end{equation}
 这就是\textsl{Wigner}函数的\textsl{Moyal}方程。现在考察准经典近似，对于\textsl{Moyal}括号展开到一阶
 $$\pb{H}{\mathcal W}^{}_M=\pb{H}{\mathcal W}+o(\hbar)=\pdv{H}{q}\pdv{\mathcal W}{p}-\pdv{H}{p}\pdv{\mathcal W}{q},$$
@@ -9311,18 +9315,112 @@ $$\pb{H}{\mathcal W}^{}_M=\pb{H}{\mathcal W}+o(\hbar)=\pdv{H}{q}\pdv{\mathcal W}
 \begin{equation}\pdv{\mathcal W}{t}=\pdv{U}{q}\pdv{\mathcal W}{p}-\frac{p}{m}\pdv{\mathcal W}{q}.\end{equation}
 带入\textsl{Wigner}函数的定义式(\ref{8987////0051-})，我们可以从上式重新得到\textsl{Schrödinger}方程，推导可以参考\cite{Fgbn88} \S\RomanNumeralCaps{5}。\\
 \\
-关于更多深层的细节和定义，请参考\cite{VnmI--*}和\cite{Curt//..ht}，这里我们就不做过多的叙述了。
+关于更多深层的细节和定义，以及\textsl{Moyal}星积和\textsl{Moyal}括号的性质，请参考\cite{VnmI--*}和\cite{Curt//..ht}，这里我们就不做过多的叙述了。
+\subsubsection{相空间中的两点关联函数}
+\noindent 上面系统性的介绍了相空间的正则量子化，并得到了\textsl{WW}变换，其只依赖于假设$\comm{\hat{q}}{\hat{p}}=i\hbar$。为了完整的得到相空间上的统计性质，我们需要将其推广至二次量子化，用占有数态重新表述\textsl{WW}变换，从而得到场的相空间统计。\\
+\\
+我们从对易性开始，在占有数态中基础算符是占有数算符$\qty{\hat{a},\hat{a}^\dagger}$，对于玻色子其对易性由式(\ref{com})控制，注意已经归一化了。为了回到相空间，我们需要将它们表述为正则坐标算符。一个简单的方法便是参考一维谐振子模型，利用式(\ref{jingdianjihao})我们写出
+$$\hat{p}=\sqrt{\dfrac{\hbar}{2}}\qty(\hat{a}^\dagger+\hat{a}),\quad \hat{q}=-i\sqrt{\dfrac{\hbar}{2}}\qty(\hat{a}^\dagger-\hat{a}).$$
+此时正则坐标是$a$的参数$q(a),\ p(a)$，于是\textsl{Weyl}变换就给出
+\begin{equation}\hat{f}\qty(\hat{a},\hat{a}^\dagger)=\int_{\Phi^*}\xi(\alpha,\beta)\exp(\sqrt{\dfrac{\hbar}{2}}\qty{\hat{a}^\dagger(\alpha+i\beta)+\hat{a}(i\beta-\alpha)})\dd\alpha\dd\beta.\end{equation}
+注意现在$\hat{f}$是一个二次量子化算符，如果我们引入变量
+$$u=\sqrt{\dfrac{\hbar}{2}}(i\beta-\alpha),\quad v=\sqrt{\dfrac{\hbar}{2}}(i\beta+\alpha)\implies \dd u\dd v=i\hbar\dd\alpha\dd\beta,$$
+容易证明$(u,v)$构成了一个局部正则系，因而我们就得到
+\begin{equation}\hat{f}\qty(\hat{a},\hat{a}^\dagger)=\frac{1}{i\hbar}\int_{\Phi} f^{}_W(u,v)\exp(v\hat{a}^\dagger+u\hat{a})\dd u\dd v.\end{equation}
+也就是说通过此变换，我们就得到\textsl{GM}表示(\ref{Shuangr+})，因此在二次量子化理论中一般多使用\textsl{Weyl}符号。比如我们可以计算其对真空态的作用，用\textsl{Weyl}关系分离指数算符，不难得到
+$$\begin{aligned}\hat{f}\qty(\hat{a},\hat{a}^\dagger)\ket{0}&=\frac{1}{i\hbar}\int_{\Phi} f^{}_W(u,v)\exp(\frac{uv}{2})\exp(v\hat{a}^\dagger)\exp(u\hat{a})\ket{0}\dd u\dd v\\&=\frac{1}{i\hbar}\sum_{N=0}\int_{\Phi}f^{}_W(u,v)\exp(\frac{uv}{2})\frac{v^N}{\sqrt{N!}}\ket{N}\dd u\dd v.\end{aligned}$$
+于是我们得到其关于真空的均值
+\begin{equation}\mel**{0}{\hat{f}\qty(\hat{a},\hat{a}^\dagger)}{0}=\frac{1}{i\hbar}\int_{\Phi}f^{}_W(u,v)\exp(\frac{uv}{2})\dd u\dd v.\end{equation}
+当然这样的重构显然不利于计算，因为其只适用于玻色子，我们无法直观的给出费米子体系的描述。为此不妨直接从场出发，对于波函数场\textsl{Lagrangian}由式(\ref{wuwuwu77})确定
+$$\Lambda\qty(\psi,\psi^*)=\psi^*\qty(i\hbar\pdv{t}-\hat{H})\psi\implies \varpi=\pdv{\Lambda}{\dt{\psi}}=i\hbar\psi^*,\quad \varpi^*=\pdv{\Lambda}{\dt{\psi}^*}=0.$$
+从而正则坐标为$(\psi,\psi^*;i\psi^*,0)$，这是一个四维相空间，但存在一个约束：$\varpi^*=0$。关于此约束问题我们暂时不考虑，但需要说明的是它改变了相空间的几何结构，使得\textsl{Weyl}量子化不再成立，因为缺少必要的对易关系。在相对论性场中情况有所好转，比如对于实\textsl{KG}场
+$$\Lambda(\psi,\grad\psi)=\frac{1}{2}\abs{\grad\psi}^2\implies \varpi=\pdv{\Lambda}{\qty(\partial^{}_t\psi)}=\partial^{}_t\psi,$$
+这样\textsl{Weyl}变换就给出
+$$\hat{f}\qty(\hat{\psi},\partial^{}_t\hat{\psi})=\bigintsss_{\Phi^*}\xi(\alpha,\beta)\exp(i\int\qty(\alpha\hat{\psi}+\beta\partial^{}_t\hat{\psi})\dd V)\dd\alpha\dd\beta.$$
+类似的打开指数映射就可以得到其关于真空的均值，这里就不推导了。这样我们就量子化了玻色场的相空间，可以证明所得结果与第\ref{Dvb4-*9..}节所述内容一致，这里不做展开。对于费米场而言只需要采用双线性型的\textsl{Lagrangian}就不会存在约束问题，因此整体来说上述思路对相对论性零温场均有效，注意目前我们只考察零温的纯真空态。\\
+\\
+虽然\textsl{Weyl}变换确定了量子化规则，但是其形式导致并不实用，对于具体函数的计算仍应使用\textsl{Wigner}变换。对于波函数场，虽然由于约束使得我们无法直接定义\textsl{Weyl}变换，但仍能定义\textsl{Wigner}变换，因为按照定义式(\ref{V0OPp]]]})它不涉及具体的正则量子化。对于相对论性场没有任何定义上的问题，但是涉及到变量的\textsl{Wigner}变换时需要额外小心，因为根据第\ref{jingdian}节的说明，此时相空间是建立$3+1$分解的在类空超曲面上的，所以\textsl{Wigner}变换是一个局部的协变变换。方便起见，下面我们采用自然单位制$\hbar=1$。\\
+\\
+我们从含$N$个粒子的零温波函数场入手，在二次量子化表述下，密度矩阵应该使用单粒子约化密度矩阵$\vb{w}\to\zeta(x,y)$，\textsl{Wigner}函数由约化密度矩阵算符(\ref{djishang})的\textsl{Wigner}变换得到
+$$\mathcal W(p,q,t)=\mathscr W\qty[\hat{\bm{\zeta}}]=\frac{1}{N}\mathscr W\qty[\hat{\psi}^{\dagger}(x,t)\hat{\psi}(y,t)].$$
+由于场算符默认处于\textsl{Heisenberg}绘景，因而\textsl{Wigner}函数是自动含时的。由于我们此处已经使用了波函数，所以\textsl{Wigner}变换就是坐标变换(\ref{Bifn756R==-})得到积分形式(\ref{8987////0051-})，当然$\vb{w}(x,y)$需要用均值(\ref{midujzz})替换得到
+\begin{equation}\mathcal W(p,q,t)=\frac{1}{N}\int\exp(\frac{\eta p}{i\hbar})\expval{\hat{\psi}^{\dagger}\qty(q+\frac{\eta}{2},t)\hat{\psi}\qty(q-\frac{\eta}{2},t)}\dd\eta.\end{equation}
+我们知道约化密度矩阵和传播子之间由式(\ref{duzirahznzhe665})确定，带入上式我们得到确定时刻传播子\textsl{Wigner}变换，不妨直接写为三维空间形式
+\begin{equation}\mathcal W(\vb{p},\vb{r},t)=\frac{1}{N}\int\exp(-i\bm{\eta}\cdot\vb{p})C\qty(\vb{r}+\frac{\bm{\eta}}{2},t^{}_1=t+0;\vb{r}-\frac{\bm{\eta}}{2},t)\dd^3\bm{\eta}.\end{equation}
+在形式上时间的正向微增，以及坐标变换(\ref{Bifn756R==-})的对称性，使得我们可以将时间也做类似的变换。定义
+\begin{equation}t^{}_1=t+\frac{\eta^0}{2},\quad t^{}_2=t-\frac{\eta^0}{2}\implies t^{}_1>t^{}_2,\end{equation}
+则约化密度矩阵可以写作
+\begin{equation}\mathcal W(\vb{p},\vb{r},t)=\frac{1}{N}\lim\limits_{\eta^0\to0}\int\exp(-i\bm{\eta}\cdot\vb{p}+i\eta^0p^0)C\qty(\vb{r}+\frac{\bm{\eta}}{2},t+\frac{\eta^0}{2};\vb{r}-\frac{\bm{\eta}}{2},t-\frac{\eta^0}{2})\dd^3\bm{\eta}.\end{equation}
+如果我们考虑四维变量
+$$\eta=\qty(\eta^0,\bm{\eta}),\quad x=(t,\vb{r}),\quad p=\qty(p^0,\vb{p}),$$
+则按照约定(\ref{Laf92++**})，两点关联函数的\textsl{Wigner}变换就写作
+\begin{equation}\mathscr W[C(x,y)]=\mathcal C\qty(p,x)=\frac{1}{N}\int\exp(ip\eta)C\qty(x+\frac{\eta}{2},x-\frac{\eta}{2})\dd^4\bm{\eta},\quad p\eta=p^0\eta^0-\bm{\eta}\cdot\vb{p}.\end{equation}
+为了回到\textsl{Wigner}函数，我们需要去除$p^0$的\textsl{Fourier}变换，为此我们参考式(\ref{chOdy//;L..})，\textsl{Wigner}函数对$p$的积分可以回到密度矩阵，那么这里只需要对$p^0$积分即可
+\begin{equation}\mathcal W(\vb{p},\vb{r},t)=\int\mathcal C\qty(p,x)\dd p^0,\quad \bm{\zeta}(\vb{r},t)=\int\mathcal W(\vb{p},\vb{r},t)\dd^3\vb{p}=\int\mathcal C\qty(p,x)\dd^4p.\end{equation}
+可见我们不需要再取极限$\eta^0\to0$，而是全部都依靠积分在两个函数之间实现变换，这是便于计算的。注意到上面我们已经使用了四维协变矢量，因此这些结论完全可以应用在相对论性零温场中，比如\textsl{KG}场的\textsl{Feynman}传播子的\textsl{Wigner}变换为
+$$\mathcal D^{}_F\qty(p,x)=\int\exp(ip\eta)D^{}_F\qty(x+\frac{\eta}{2},x-\frac{\eta}{2})\dd^4\bm{\eta}.$$
+带入$D^{}_F(a,b)$的具体表达式(\ref{feynch})，当然动量不能和$p$相同，我们就得到
+\begin{equation}\mathcal D^{}_F\qty(p,x)=i\bigintsss\frac{\exp(ip\eta-ik\eta)}{k^2-m^2+i0}\qty(\frac{\dd k}{2\pi})^4\dd^4\bm{\eta}=\frac{i}{p^2-m^2+i0}=D^{}_F(p).\end{equation}
+也就是说在真空零温场中，\textsl{Feynman}传播子的\textsl{Wigner}变换给出其动量分量，其和中心坐标$x=(a+b)/2$无关，这体现了真空的平移不变性和均匀性。其余的相对论性场这里就不再赘述了，可以想到最终的结果都是相应的动量分量。\\
+\\
+现在我们来考察自由场传播子的演化方程。仍以零温波函数场入手，其\textsl{Green}方程由式(\ref{dxgng6678})确定，对两边同时做\textsl{Wigner}变换给出
+$$\mathscr W\qty[\qty{i\pdv{a^0}-\hat{H}(\vb{a})}C(a.b)]=i\mathscr W\qty[\delta^4(a-b)].$$
+其中传播子$C$和$\delta$函数的变换遵循约定(\ref{Laf92++**})。在此约定下，方程左侧就是两个算符乘积的\textsl{Wigner}变换，从而根据星积的定义(\ref{Mofv,,897/06.})我们得到\textsl{Moyal}方程
+\begin{equation}\mathscr W\qty[i\pdv{a^0}-\hat{H}(\vb{a})]\star\mathcal C(p,x)=i\mathscr W\qty[\delta^4(a-b)].\end{equation}
+需要说明的是，由于目前的处理均在四维时空中进行，所以正则坐标现在是四维时空坐标$\qty(\qty(x^\mu),\qty(p^{}_\mu))$，这是一个\emph{扩充相空间}，于是星积就写作
+\begin{equation}\star=\exp{\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})}.\end{equation}
+读者也可以按照第\ref{Zhdit76//}节的思路，重新对时空函数推导，例如\textsl{Weyl}变换现在写作
+$$\hat{f}\qty(\hat{x}^\mu,\hat{p}^{}_\mu)=\int\xi(\alpha^{}_\mu,\beta^\mu)\exp(i\alpha^{}_\mu\hat{x}^\mu+i\beta^\mu\hat{p}^{}_\mu)\dd^4\bm{\alpha}\dd^4\bm{\beta},$$
+算符$\hat{x}^\mu$和$\hat{p}^{}_\mu$满足四维对易性
+\begin{equation}\comm{\hat{x}^\mu}{\hat{p}^{}_\nu}=i\hbar\delta^\mu_\nu.\end{equation}
+这很容易验证，随后带入四维\textsl{Weyl}关系并打开对易指数就能得到最终的结果，和上述最小协变代换是一致的。现在来计算每一项，右侧是$\delta$函数的\textsl{Wigner}变换，我们根据约定计算
+\begin{equation}\mathscr W\qty[\delta^4(a-b)]=\int\exp(i\eta p)\delta^4\qty(x+\frac{\eta}{2}-x+\frac{\eta}{2})\dd^4\eta=1.\label{Nadv97//0/*.}\end{equation}
+也就是说$\delta$函数的\textsl{Wigner}变换给出$1$，和\textsl{Fourier}变换相同。对于左侧的算符变换，由于线性性可以拆成两项，第一项的时间导数由于和态无关因而可以提出，我们得到
+$$\mathscr W\qty[i\pdv{f}{a^0}]=i\pdv{a^0}\mathscr W\qty[f(a,b)],\quad\forall f\in C^\infty\qty(\mathbb R^2).$$
+因此在形式上我们总结
+\begin{equation}\mathscr W\qty[i\pdv{t}]=i\pdv{t}.\end{equation}
+对于$\hat{H}$的变换，鉴于这里考察自由场，所以我们不妨只考虑动能项$\hat{H}=\hat{p}^2/2m$。为了计算这个量我们采用动量表象，暂时回到一维运动
+$$\mathscr W\qty[\hat{H}]=\frac{1}{2m}\mathscr W\qty[\hat{p}^2]=\frac{1}{2m}\int\exp(i\gamma q)\mel**{p+\frac{\gamma}{2}}{\hat{p}^2}{p-\frac{\gamma}{2}}\dd\gamma.$$
+这里无论是只作用于一侧的态，或是两侧同时作用，虽然所得系数不同，但最终一定是关于$\delta(\gamma)$的积分，必然给出$p^2/2m$，读者也可以用星积$\mathscr W\qty[\hat{p}^2]=\mathscr W\qty[\hat{p}]\star\mathscr W\qty[\hat{p}]$验证。回到三维，我们就自然得到
+\begin{equation}\mathscr W\qty[\hat{H}]=\frac{1}{2m}\mathscr W\qty[\hat{\vb{p}}^2]=\frac{\abs{\vb{p}}^2}{2m}.\end{equation}
+于是\textsl{Moyal}方程就写作
+\begin{equation}\qty(i\pdv{a^0}-\frac{\abs{\vb{p}}^2}{2m})\star\mathcal C(p,x)=i.\end{equation}
+进一步的我们打开星积，不失一般性的我们考察梯度近似，展开到一阶得到
+$$\begin{aligned}i&=\qty(i\pdv{a^0}-\frac{\abs{\vb{p}}^2}{2m})\qty{1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})}\mathcal C(p,x)\\&=\qty(i\pdv{a^0}-\frac{\abs{\vb{p}}^2}{2m})\mathcal C+\frac{i}{2}\frac{\vb{p}^{}_a}{m}\cdot\pdv{\mathcal C}{\vb{r}}+\frac{i}{2}\qty{i\pdv{a^0}\pdv{t}-\frac{\vb{p}^{}_a}{m}\cdot\dv{\vb{p}}{t}}\pdv{\mathcal C}{p^0}.\end{aligned}$$
+引入外场作用力$\dv*{\vb{p}}{t}=\vb{F}$，方程就写为
+\begin{equation}\pdv{a^0}\mathcal C+\frac{1}{2}\frac{\vb{p}^{}_a}{m}\cdot\pdv{\mathcal C}{\vb{r}}+i\frac{\abs{\vb{p}}^2}{2m}\mathcal C+\qty{i\pdv{a^0}\pdv{t}-\frac{\vb{p}}{m}\cdot\vb{F}^{}_a}\pdv{\mathcal C}{p^0}=1.\end{equation}
+这就是传播子的\textsl{Moyal}方程的具体形式，但需要强调，目前我们只处理了关于坐标$a=\qty(a^0,\vb{a})$的方程，而传播子的\textsl{Wigner}变换是同时对两个坐标进行的，所以这就是为什么会出现形如$\displaystyle\pdv{a^0}\pdv{t}$的项，且外力只和点$a$的动量耦合。这意味着只有这一个方程是不够的，关于这个问题我们放在下面处理。\\
+\\
+作为相对论性场的应用，我们来处理无质量\textsl{KG}场传播子。对于零温场其运动方程由\textsl{SD}方程(\ref{th841++s})控制，依旧两边取\textsl{Wigner}变换给出\textsl{Moyal}方程
+$$\mathscr W\qty[\square^{}_aD^{}_F]=-i\mathscr W\qty[\delta^4\qty(a-b)].$$
+利用结论(\ref{Nadv97//0/*.})，并取准经典近似的梯度近似，我们知道方程可以写为
+\begin{equation}\mathscr W\qty[\square^{}_a]\qty{1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})}\mathcal D^{}_F=-i.\end{equation}
+现在的目标是计算\textit{d'Alembertian}的\textsl{Wigner}变换，直接处理是较为麻烦的，因为涉及到对坐标的二阶导。但我们知道\textit{d'Alembertian}可以用动量算符表示，带入式(\ref{Wdfgafws})得到
+$$\mathscr W\qty[\square]=\mathscr W\qty[-\hat{p}^\mu\hat{p}^{}_\mu]=-\mathscr W\qty[\hat{p}^\mu]\star\mathscr W\qty[\hat{p}^{}_\mu].$$
+从三维结论可以直接写出$\mathscr W\qty[\hat{p}^\mu]=p^\mu$，而星积只有零级近似非零
+$$p^\mu\exp{\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})}p^{}_\mu=p^\mu\qty(1+\sum_{l=1}\frac{1}{l!}\qty{\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})}^l)p^{}_\mu=p^2,$$
+从而我们得到
+\begin{equation}\mathscr W\qty[\square^{}_a]=-p^2_a.\end{equation}
+于是\textsl{Moyal}方程给出
+$$p^2_a\qty{1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})}\mathcal D^{}_F=i,$$
+打开算符给出
+\begin{equation}ip^2_a\mathcal D^{}_F+\frac{1}{2}\pdv{p^2_a}{p^{}_\mu}\pdv{\mathcal D^{}_F}{x^\mu}+1=0.\end{equation}
+在相对论性场中单坐标求导的问题就显而易见了，方程只含$a$点的动量，使得我们无法对总动量求导。为了获得总动量，我们需要关于点$b$的方程，这不难从接触项$\delta^4\qty(a-b)$看到，$a$和$b$符号相反使得其\textsl{Moyal}方程是点$a$的共轭
+\begin{equation}\mathscr W\qty[\square^{}_b]\star\mathcal D^{}_F=-p^2_b\star \mathcal D^{}_F=i.\end{equation}
+用$b$的方程减去$a$的方程，我们得到
+$$-p^2_b\star \mathcal D^{}_F-p^2_a\star \mathcal D^{}_F=-\qty(p^2_a+p^2_b)\star\mathcal D^{}_F=-p^2\star\mathcal D^{}_F=0,$$
+这样我们就可以计算$\overleftarrow{\pdv*{p^{}_\mu}}$了，最终方程给出
+\begin{equation}p^2\qty(1-\frac{i}{2}\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}})\mathcal D^{}_F=p^2\mathcal D^{}_F-ip^\mu\pdv{\mathcal D^{}_F}{x^\mu}=0.\end{equation}
+这是一个复方程，其等于零当且仅当实部和虚部都严格为零，于是我们得到
+\begin{equation}p^2\mathcal D^{}_F=p^\mu\pdv{x^\mu}\mathcal D^{}_F=0.\end{equation}
+事实上实部的方程也可以通过$b$方程加$a$方程得到，请读者自行验证，且我们自然的得到色散率$p^2=0$。从虚部方程我们得到一个信息：无质量实标量场的\textsl{Feynman}传播子沿粒子世界线为常数，从而粒子沿直线运动，这符合我们的认知。\\
+\\
+以上就是关于在四维时空中，零温场的两点关联函数的\textsl{WW}变换以及一些基本的性质。对于有限温度场，其表述也是一样的，比如对于平衡场而言，其在形式上和零温场是完全一致的，因此可以直接套用上面的结论，比如热\textsl{Feynman}传播子必然满足
+$$p^2\mathcal D^M_F=p^\mu\pdv{x^\mu}\mathcal D^M_F=0.$$
+对于非平衡场也是一样的，\textsl{Keyldsh}矩阵的每个分量都对应一个相应的\textsl{SD}方程，所以实际上我们能立马从式(\ref{weSRT22--vs})写出
+$$p^2\bm{\mathcal C}=p^\mu\pdv{x^\mu}\bm{\mathcal C}=0.$$
+具体的运动方程这里就不推导了，读者可自行计算，应用请参考第\ref{Boejhfg988+}节。对于相对论性量子化相空间的\textsl{WW}变换，以及一些细节的证明请参考第\ref{haergong}节，这里我们就不加证明的，直接使用从三维空间过渡到四维时空的结论。关于\textsl{Wigner}函数的更多细节，比如其传播子和路径积分的形式，请参考\cite{Curt//..ht}，其中详细介绍了\textsl{Wigner}函数在统计层面的应用。\clearpage
 
-\subsubsection{相空间上的二次量子化}
-
-
-
-
-
-
-
-
-\clearpage
 \section{量子微扰论}\label{DFVO))//}
 \noindent 在之前的叙述中，我们不止一次的提及“微扰”这个概念，比如电磁波是电磁场的微扰，相变中外场对系统的微扰等。一般来讲在物理上，\textbf{微扰 \textit{Pertubation}}指的是系统的已知演化在小增量下的变化，通常用于求解复杂系统的演化方程。比如已知系统参量$y$的演化方程为$\hat{\mathcal{D}}^{}_0y^{}_0=h^{}_0$，小增量定义为
 $$\hat{\mathcal{D}}(\epsilon)=\sum_{n=0}\epsilon^n\hat{\mathcal{D}}^{}_n,\quad h=\sum_{n=0}\epsilon^nh^{}_n,\quad \epsilon\sim o(1),$$
