@@ -40,9 +40,9 @@
 \\
 第二部分为量子场论引入，本文从量子微扰论开始，通过矩阵论建立基本的微扰模型，并在\textsl{Lippmann-Schwinger}方程的基础上，对含时微扰引入相互作用绘景，并介绍其二次量子化形式。在此基础上引入相互作用场的多点函数，引入\textsl{Feynman}图用以处理相互作用下的传播子。随后本文系统性的介绍了电磁辐射，为量子电动力学做宏观基础的铺垫。\\
 \\
-来到量子场论，从外场中的电子的\textsl{Dirac}方程开始，逐步构造相对论下的量子电动力学，并重点关注电磁波和粒子的耦合系统。并在微扰理论下重新回顾相变，给出超流体和超导体的\textsl{Green}函数机制，以及对应的粒子模型，并简单的介绍重整化群理论。最后本文总结上述的内容，引入标准粒子模型，并利用\textsl{Landau}二级相变理论具体分析\textsl{Higgs}机制。\\
+来到量子场论，从外场中的电子的\textsl{Dirac}方程开始，逐步构造相对论下的量子电动力学，并重点关注电磁波和粒子的耦合系统。并在微扰理论下重新回顾相变，给出超流体和超导体的\textsl{Green}函数机制，以及对应的粒子模型。随后本文总结上述的内容，引入标准粒子模型，并利用\textsl{Landau}二级相变理论具体分析\textsl{Higgs}机制。其次我们详细的介绍平衡场中的响应和耗散，介绍传播子在宏观层面的物理性质，以及量子系统的涌现性质，配合重整化群理论。\\
 \\
-第三部分是引力论以及其量子化，本文通过微分几何将狭义相对论推广为广义相对论，以较为系统性的介绍\textsl{Riemann}几何和辛几何开始，并证明前文中涉及到的几何公式。随后利用变分法建立\textsl{Einstein}场方程，并进一步给出引力场的\textsl{Hamilton}表述。其次是以广义相对论为基础，建立基本的现代宇宙学模型，同时分析引力波对背景宇宙的扰动现象。最后本文按照类似的思路讨论引力场的二次量子化，引入引力子的概念，并使用二次量子化简单的涉及暴涨宇宙学。\\
+第三部分是作为收尾的引力论以及其量子化，本文通过微分几何将狭义相对论推广为广义相对论，以较为系统性的介绍\textsl{Riemann}几何和辛几何开始，并证明前文中涉及到的几何公式。随后利用变分法建立\textsl{Einstein}场方程，并进一步给出引力场的\textsl{Hamilton}表述。其次是以广义相对论为基础，建立基本的现代宇宙学模型，同时分析引力波对背景宇宙的扰动现象。最后本文将对前面的所有内容做一个总结，从引力场的二次量子化入手探讨引力子的概念，通过热场动力学揭露非惯性系中粒子的自产生，以及弯曲时空下的量子场论引入和量子黑洞物理。\\
 \\
 本文主要以前苏联科学院朗道院士(\textsl{\rusa{Лев Давидович Ландау}})和利弗席兹院士(\textsl{\rusa{Евг\'eний Мих\'aйлович Лифшиц}})的著作《理论物理学教材十卷》(\textbf{\rusa{Курс теоретической физики Ландау и Лифшица}})作为基础，因此对于本文中的定义和概念统一参考了书中的记号体系，详情请参考[\ref{jihaocankaoll}]。对于几何记号，本文记点$p\in \mathscr M$的领域系为$\mathscr N(p)$。并且本文不打算涉及过多群论和表示论的内容，这一块会单独展开，因此涉及到旋量的内容本文会从直观的物理角度来分析，顺带稍微涉猎一点群表示论。\\
 \\
@@ -4531,393 +4531,6 @@ $$\begin{cases}3\times1=\qty{1^{}_1,1^{}_2,1^{}_3},&\\2\times-1=\qty{-1^{}_1,-1^
 \begin{center}\emph{二级自发相变是系统自发对称性破缺的直接体现。\textit{Symmetry Breaking}}\end{center}
 后续我们会看到更多的关于相变的内容，包括但不限于\textsl{vdW}气体的固液二级相变，\textsl{Ginzburg-Landau}超导体二级相变，黑洞相变，\textsl{Higgs}机制，原初宇宙相变等。但它们的核心都是一样的，即对称性的破缺。这里只是一些基础的概念引入，以及统计物理在相变方面的一个基本应用。
 
-\subsection{各项同性介质中的声子}\label{ihuh3244ru..}
-\noindent 在上文中我们通过引入晶格理论介绍了铁磁—顺磁相变的\textsl{Ising}模型，同时我们特别指出，对于\textsl{Ising}模型我们取为静止晶格，每个格点上的粒子保持静止补动。但这明显不符合常理，我们知道电子系统在$T\to 0$时仍然有能量$E^{}_F$，这是由不相容原理导致的。既然其有能量那必然有运动，换句话来说就是运动是绝对的。方便起见，我们这里依旧采用自然单位制$c=1$。\\
-\\
-现在的问题就是如何来量化晶格的运动，因为晶格由格点构成，所以晶格的运动是各个格点上粒子运动的总和。由于在介质中，粒子之间的相互作用主要是由\textsl{LJ}势(\ref{JLJKHB///})控制，而\textsl{LJ}势有明显的吸引与排斥区，所以不难分析出格点的运动是周期性的。周期运动中最简单的莫过于简谐振动，因此我们来研究晶格的谐振子性质。
-\subsubsection{晶格的简谐振动}
-\noindent 这里我们从一维晶格入手，研究其中一个格点，这里我们假设其相邻的两个格点静止。
-\begin{center}\tikz{\pgfmathsetmacro{\d}{3}\draw[](0,)--(4*\d,);\shade[ball color=black](0,)circle(3pt);\shade[ball color=black](4*\d,)circle(3pt);\shade[ball color=black](2*\d,)circle(3pt);\node[draw,inner sep=2pt,dotted,circle,ultra thick]at(0.8*\d,){};\node[right,scale=1,above]at(0.4*\d,){Replusion U};\node[draw,inner sep=2pt,dotted,circle,ultra thick]at(2.8*\d,){};\node[right,above]at(2.4*\d,){Replusion U};\node[left=1,above]at(1.8*\d,){Attraction U};}\captionof{figure}{一维原胞中心格点关于两个相邻格点的势}\end{center}
-可以看到，左侧位置处原子必然被左侧的格点排斥，而会被右侧格点吸引，反之亦然。于是中心格点会在其相邻格点之间震荡，这对于每一个格点都是如此。当然震荡运动总有平衡位置，对于\textsl{LJ}势为$U^{}_{min}=U(r^{}_e)$。现在我们在格点$i$平衡点附近展开，得到
-\begin{equation}\begin{aligned}&\eval{\dv{U^{}_i}{r}}_{r^{}_e}=0\implies r^{}_e=2^{1/6}r^{}_0,\quad x^{}_i=r^{}_i-r^{}_e\implies\\&U^{}_i(x^{}_i)=U^{}_i(x^{}_i=0)+\frac{1}{2}\eval{\dv[2]{U}{r}}_{r^{}_e}x_i^2=-\dfrac{a}{4}+\dfrac{9a}{r_e^2}x_i^2=E^{}_0+\frac{1}{2}k^{}_ix_i^2.\end{aligned}\end{equation}
-此处$x$代表关于平衡点的偏离。于是我们看到，若在平衡点附近做微运动的话，那么运动必然是谐振动，所以每个格点可以理解为一个谐振子。当然和\textsl{S-S}耦合能的理解一样，若我们考虑整个晶格，则必然要考虑到不同粒子间势能参数$a,r^{}_0$的差异，这就导致弹性系数$k^{}_i$事实上和周围其余格点相关，写为$k^{}_i=k^{}_i(r,r')$。这样的振动形式称为\textbf{各项异性谐振子}，它可以用来描述高度各项异性的晶体，特别是当相邻格点处$k$的变化很大的时候。\\
-\\
-为了研究晶格的谐振子模型，我们先从宏观角度分析微振动。假设我们考察$n$维欧式空间$\mathbb R^n$，则单个原子自由度为$2n$，其中有$n$个旋转自由度，若有$N$个原子则自由度为$2nN$。但是振动属于平动，所以我们需要减去旋转自由度，得到$n$和$nN$。记原子的相对平衡点的位移为$\vb{r}=x^a\in\mathscr T^1_{\ 0}(\mathbb R^n)$，对于势能$U$我们在$0$处展开到二阶得到
-\begin{equation}U(\vb{r})=U(\vb{0})+\partial^{}_{\vb{r}}U(\vb{0})\vb{r}+\frac{1}{2}\mathscr H^{}_{\vb{0}}U(\vb{r},\vb{r}),\quad \mathscr H^{}_{\vb{0}}U^{}_{ab}(\vb{r},\vb{r})=\partial^{}_a\partial^{}_bU(\vb{0})x^ax^b.\end{equation}
-其中$\mathscr H^{}_{\vb{0}}U^{}_{ab}=k^{}_{ab}\in\mathscr T^0_{\ 2}(\mathbb R^n)$称为势能$U$在$\vb{r}=\vb{0}$处的\textbf{\textsl{Hesse}矩阵}，是二阶导数的二阶张量形式，我们会在\textsl{Riemann}几何中详细讨论。于是在经典力学体系下，系统的\textit{Lagrangian}为
-\begin{equation}L=E^{}_k-U=\frac{1}{2}\qty(m^{}_{ij}\dt{x}^i\dt{x}^j-k^{}_{ij}x^ix^j)=\mathcal B(\dt{\vb{r}})-\mathcal B(\vb{r}),\end{equation}
-其中$m^{}_{ab}$是质量张量，对应质量各向异性的原子系统，若是各向同性的则就是$m\delta^{}_{ab}$。不难看到这是典型的波动\textit{Lagrangian}，由两个\textsl{Laplace}核构成，在形式上和\textsl{Proca}场是一样的，所以我们得到\textsl{E-L}方程和相应的解为
-\begin{equation}m^{}_{ij}\ddt{x}^j+k^{}_{ij}x^j=0,\quad \vb{r}=\vb{C}\exp(i\omega t).\end{equation}
-这里的$\vb{C}$按定义就是极化矢量，给出振动的大小和方向。将解回代入波动方程得到
-\begin{equation}m^{}_{ij}\omega^2C^j=k^{}_{ij}C^j.\end{equation}
-这是一个典型的本征值方程，其主值为$\omega$，满足代数方程
-\begin{equation}\abs{m^{}_{ij}\omega^2-k^{}_{ij}}=0,\quad 1\leq i,j\leq n.\end{equation}
-最终我们得到主值的谱为$\text{Sp}=\qty{\omega^{}_{\mu}\vert1\leq\mu\leq n}$，一共有$n$个主值，对应$n$个主向量$\qty{\vb{C}^{}_{\mu}\vert1\leq\mu\leq n}$，当然不排除简并的可能性。\\
-\\
-在没有简并的情况下，主向量互相正交，则我们也可以将两个系数张量取主轴分解得到
-\begin{equation}m^{}_{ij}=\sum_{\mu}m^{}_{\mu}\xi^{}_{i\mu}\xi^{}_{j\mu},\quad k^{}_{ij}=\sum_{\mu}m^{}_{\mu}\omega^{}_{\mu}\xi^{}_{i\mu}\xi^{}_{j\mu}.\end{equation}
-其中$\bm{\xi}^{}_{\mu}$是单位主向量，满足$\abs{\bm{\xi}_{\mu}}=1$，$m^{}_{\mu}$是质量张量的主值，证明请参考第\ref{uoyu}节中关于偏振张量$\rho^{}_{ij}$的描述。此时\textit{Lagrangian}为
-$$L=\frac{1}{2}\qty(m^{}_{ij}\dt{x}^i\dt{x}^j-k^{}_{ij}x^ix^j)=\frac{1}{2}\sum_{\mu}m^{}_{\mu}\qty(\xi^{}_{i\mu}\dt{x}^i\xi^{}_{j\mu}\dt{x}^j-\omega^{}_{\mu}\xi^{}_{i\mu}x^i\xi^{}_{j\mu}x^j).$$
-由于$\bm{\xi}^{}_{\mu}$和时间无关，所以我们必然有$\xi^{}_{i\mu}\dt{x}^i=\dfrac{d}{dt}\qty(x^i\xi^{}_{i\mu})$，从而我们定义\textbf{简正坐标 \textit{Normal Coordinate}}如下
-\begin{equation}\Theta^{}_{\mu}(t)=\xi^{}_{i\mu}x^i(t)=C^i\xi^{}_{i\mu}\exp(i\omega^{}_{\mu}t),\quad \ddt{\Theta^{}_{\mu}}+\omega^2_{\mu}\Theta^{}_{\mu}=0,\end{equation}
-则系统的\textit{Lagrangian}可以写为
-\begin{equation}L=\sum_{\mu}\frac{m^{}_{\mu}}{2}\qty(\dt{\Theta}_{\mu}^2-\omega^2_{\mu}\Theta^{}_{\mu}),\end{equation}
-不难看到此时振动分解为若干个单自由度振动的和，称为\textbf{简正振动 \textit{Normal Oscillation}}。在此情况下，我们给出相应的能量为
-\begin{equation}E=\sum_{\mu}\frac{m^{}_{\mu}}{2}\qty(\dt{\Theta}_{\mu}^2+\omega^2_{\mu}\Theta^2_{\mu}),\label{bnOihb ))}\end{equation}
-而系统的正则量子化给出谐振子模型为
-\begin{equation}\hat{H}=\sum_{\mu}\frac{1}{2}\qty(\frac{\hat{p}_{\mu}^2}{m^{}_{\mu}}+\omega^2_{\mu}\hat{\Theta}^2_{\mu}),\quad E^{}_{n}=\sum_{\mu}\omega^{}_{\mu}\qty(\frac{1}{2}+n^{}_{\mu}).\end{equation}
-对于$N$个原子的系统，它们各自的相对位移为${x^a}^{}_{\kappa}$，其中$\kappa$是原子编号，则我们可以将其看作一个$N$维系统，于是按单粒子定义我们推广得到\textsl{Hesse}矩阵为
-$$\mathscr H^{}_{\vb{0}}{U^{}_{ab}}^{\kappa\gamma}=\pdv{U}{{x^a}^{}_{\kappa}}{{x^a}^{}_{\gamma}}={\Lambda^{}_{ij}}^{\kappa\gamma},$$
-可以看到其和粒子号有关，且$\kappa$也是哑标，从而系统的\textit{Lagrangian}写为
-\begin{equation}L=\frac{1}{2}\qty(\sum_{\kappa}{m^{}_{ij}}^{\kappa}{\dt{x}^i}_{\kappa}{\dt{x}^j}_{\kappa}-\sum\limits_{\kappa\gamma}{\Lambda^{}_{ij}}^{\kappa\gamma}{x^i}_{\kappa}{x^j}_{\gamma}).\label{dabi7,.76**5}\end{equation}
-关于系统的\textsl{E-L}方程就不给出了，请读者自行推导，并给出系统的简正坐标及其正则量子化。值得一提的是，简正振动在分子系统的计算中很有用，这里我们暂时不展开。\\
-\\
-现在我们从类似的角度分析三维晶格的振动，具体的几何细节请参考\cite{L6f}。因为晶格由相同的原胞构成，所以我们可以用某一原胞的任意格点作为晶格的原点，但应注意到格点是周期规律分布的，\textbf{所以坐标应取为整数}。记原胞的基矢量为$\qty{\vb{a}^{}_1,\vb{a}^{}_2,\vb{a}^{}_3}$，注意它们不是单位化的，模长$a^{}_1,a^{}_2,a^{}_3$代表了原胞的边长。在此坐标系下，原胞中每个原子的坐标可以用三个整数$(n^1,n^2,n^3)$表示，则矢径可写为
-\begin{equation}\vb{r}^{}_{\vb{n}}=n^i\vb{a}^{}_i=\vb{n}\vb{a},\quad \vb{n}=(n^1,n^2,n^3)\in\mathbb Z^3.\end{equation}
-这样的晶格坐标系称为\textbf{正晶格系 \textit{Direct Lattice}}，这里我们给出一维正晶格系中边长为$a$的示意图
-\begin{center}\tikz{\pgfmathsetmacro{\d}{1.5}\draw[](-4*\d,)--(4*\d,);\shade[ball color=black](0,)circle(3pt);\node[draw,inner sep=2pt,circle]at(2*\d,){};\node[draw,inner sep=2pt,circle]at(-4*\d,){};\draw[->,thick,blue](0,)--(2*\d,)node[red,above]{$a$};\draw[->,thick,green!50!black](0,)--(-4*\d,)node[red,above]{$-2a$};\node[mydarkblue,above]at(\d,){$\vb{r}^{}_{n=1}=\vb{a}$};\node[mydarkblue,above]at(-2*\d,){$\vb{r}^{}_{n=-2}=-2\vb{a}$};}\captionof{figure}{一维正晶格系的示意图，原胞边长为$a$}\end{center}
-不难看到矢径在晶格平移下不变，也就是
-\begin{equation}\forall\vb{r}^{}_{\vb{n}},\vb{R}\in\mathscr T^1_{\ 0}(DL),\quad \forall\vb{n}\in\mathbb Z^3,\quad \vb{r}^{}_{\vb{n}}+\vb{R}=\vb{r}^{}_{\vb{n}'}\in \mathscr T^1_{\ 0}(DL),\end{equation}
-这是晶格周期分布的数学表达式，且在\textsl{Ising}模型中所谓的相邻格点也就是满足$n^1+n^2+n^3=1$的格点。现在我们重点研究单个原胞，假设每个原胞包含$N$个原子，仍记各原子的相对位移为
-$${\vb{x}^a}^{}_{\kappa}(\vb{n}),\quad 1\leq\kappa\leq N,$$
-则晶格系统的\textit{Lagrangian}应该写为式(\ref{dabi7,.76**5})的形式。但前面提到，晶格的振动是各项异性的，各项异性弹性系数$\Lambda^{\kappa\gamma}_{ij}$和周围格点均相关，具体来讲是和相对位置$\vb{r}^{}_{\vb{n}}-\vb{r}^{}_{\vb{n}'}\propto\vb{n}-\vb{n}'$有关，因而晶格的\textit{Lagrangian}应该写为
-\begin{equation}L=\frac{1}{2}\qty(\sum\limits_{\vb{n}}{m^{}_{ab}}^{\kappa}{\dt{\vb{x}}^a}_{\kappa}(\vb{n}){\dt{\vb{x}}^b}_{\kappa}(\vb{n})-\sum\limits_{\vb{n}\vb{n}'}{\Lambda^{}_{ab}}^{\kappa\gamma}(\vb{n}-\vb{n}'){\vb{x}^a}^{}_{\kappa}(\vb{n}){\vb{x}^b}^{}_{\gamma}(\vb{n}')).\end{equation}
-注意这里要对整数坐标求和，因为粒子的平衡点在空间上是固定的。由晶格的对称性和平移不变性我们得到各项异性弹性系数满足关系
-\begin{equation}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n})={\Lambda^{}_{ji}}^{\gamma\kappa}(-\vb{n}),\quad \sum\limits_{\kappa\vb{n}}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n})=0.\end{equation}
-关于由晶格的旋转不变性所导致的系数关系这里不列出的，读者可自行推导。相应的\textsl{E-L}方程为
-\begin{equation}{m^{}_{ij}}^{\kappa}\ddt{x}^{j\kappa}(\vb{n})+\sum\limits_{\vb{n}'}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n}-\vb{n}'){x^j}_{\gamma}(\vb{n}')=0.\end{equation}
-值得指出的是，虽然此方程并非标准的波动方程，其不包含对空间的二阶导，但是因为最终的相对位移和空间坐标有关，所以我们依旧可以取解为单色平面波的叠加，写作
-\begin{equation}\vb{x}^{}_{\kappa}(\vb{n})=\vb{C}^{}_{\kappa}(\vb{k})\exp{i(\vb{k}\cdot\vb{r}^{}_{\vb{n}}-\omega t)}.\end{equation}
-其中$\vb{C}^{}_{\kappa}$是极化矢量，其和波的传播方向也就是波矢有关。可以看到波矢$\vb{k}$的引入和正晶格系矢径$\vb{r}^{}_{\vb{n}}$满足空间—波矢变换，但是因为方程的非波动性导致$\vb{k}$和$\omega$之间的关系必然不是自由粒子那样的$\omega=\abs{\vb{k}}$这么简单，我们需要重新求解。\\
-\\
-使用老办法，将解回带入方程中得到
-$$\omega^2{m^{}_{ij}}^{\kappa}C^{j\kappa}(\vb{k})\exp(i\vb{k}\cdot\vb{r}^{}_{\vb{n}})=\sum\limits_{\vb{n}'}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n}-\vb{n}'){C^j}_{\gamma}(\vb{k})\exp(i\vb{k}\cdot\vb{r}^{}_{\vb{n}'}),$$
-我们不难从中识别出空间—波矢变换项
-\begin{equation}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{k})=\sum\limits_{\vb{n}'}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n}-\vb{n}')\exp{-i\vb{k}\cdot\qty(\vb{r}^{}_{\vb{n}}-\vb{r}^{}_{\vb{n}'})},\end{equation}
-这是关于各项异性弹性系数的离散\textsl{Fourier}分量，于是我们得到波矢分量方程为
-\begin{equation}\omega^2{m^{}_{ij}}^{\kappa}C^{j\kappa}(\vb{k})={C^j}^{}_{\gamma}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{k}).\label{gfbv yu}\end{equation}
-这就是明显的本征值方程，其能给出非零主向量$\vb{C}^a_{\gamma}$的等价条件是代数方程
-\begin{equation}\abs{{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{k})-\omega^2{m^{}_{ij}}^{\kappa}\delta^{\kappa\gamma}}=0,\quad 1\leq i,j\leq3,\quad 1\leq\kappa,\gamma\leq N.\end{equation}
-不难看到该矩阵的秩是$3N$，也就是对应了$3N$个极化方向，称为\textbf{振动谱支 \textit{Branches}}，则对于有$l$个原胞的晶格的总本征谱为
-\begin{equation}\text{Sp}=\qty{\omega^{}_{\mu}=\omega^{}_{\mu}(\vb{k})\mid 1\leq\mu\leq 3Nl},\quad \omega^{}_{\mu}(\vb{k})=\omega^{}_{\mu}(-\vb{k}).\end{equation}
-$\omega^{}_{\mu}(\vb{k})$的偶函数性很容易证明，因为${\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n})$是偶函数，所以其\textsl{Fourier}分量也是偶函数，则按照代数方程必然得到本征值是偶函数。关于角频率的形式这里不具体分析，其和材料的弹性性质有关，我们放在附录\ref{Y6TY.,.,''}中。这里我们只引用后续会涉及到的结果：对于波长$\lambda\gg \abs{\vb{a}}$的波，我们有$\omega^{}_{\mu}=kf\qty(\dfrac{\vb{k}}{k})$，在连续介质中共有三支，这种类型的支称为\textbf{声学波}，对于的称为\textbf{光学波}，它们确定了谐振子的两种相互作用模式，这里不展开了。\\
-\\
-现在我们来讨论正晶格系下波矢的形式。我们知道正晶格系中矢径的系数是整数，而相位$\vb{k}\cdot\vb{r}^{}_{\vb{n}}\in \mathbb R$也就意味着波矢和矢径是对偶的。如果我们从\textsl{de Broglie}动量$\vb{p}=\hbar\vb{k}$出发就很容易看到，因为共轭动量和矢径是对偶的。于是我们可以在晶格基上定义其对偶基
-\begin{equation}\qty{\vb{b}^1,\vb{b}^2,\vb{b}^3},\quad \vb{b}^c(\vb{a}^{}_d)=\expval{\vb{b}^c,\vb{a}^{}_d}=\delta^c_d.\end{equation}
-因为$a^{}_i$是原胞的各边长，我们必然得到$b^i$的值就是原胞边长的倒数，从而波矢可以表示为
-\begin{equation}\vb{k}=q^{}_1\vb{b}^1+q^{}_2\vb{b}^2+q^{}_3\vb{b}^3=\vb{q}\vb{b},\quad \vb{q}=(q^{}_1,q^{}_2,q^{}_3).\end{equation}
-现在我们来讨论$\vb{q}$的取值。对于相位我们得到
-$$\vb{k}\cdot\vb{r}^{}_{\vb{n}}=q^{}_1n^1+q^{}_2n^2+q^{}_3n^3=\vb{k}'\cdot\vb{r}^{}_{\vb{n}'}={n'}^1+{n'}^2+{n'}^3,$$
-因为$\vb{n}^a,\vb{n}'^a\in\mathbb Z^3$，所以我们必然得出
-\begin{equation}\vb{q}\in\mathbb Z^3,\quad q^{}_i\in\mathbb Z.\end{equation}
-也就是说，波矢的分量也是整数，从而由对偶基$\qty{\vb{b}^1,\vb{b}^2,\vb{b}^3}$构成的空间也是网格式的，称为\textbf{倒晶格系 \textit{Reciprocal Lattices}}。并且由晶格的平移不变性我们得到波矢满足
-\begin{equation}\forall\vb{k},\vb{W}\in\mathscr T^1_{\ 0}(RL),\quad \vb{k}+\vb{W}=\vb{k}'\in\mathscr T^1_{\ 0}(RL)\implies\omega^{}_{\mu}(\vb{k}+\vb{W})=\omega^{}_{\mu}(\vb{k}').\end{equation}
-一般在晶体学中用的比较多的是倒晶格系，通过倒晶格系的\textsl{Bravais}定理可以得到一系列的结论，这里就不展开了。倒晶格系的离散性事实上是正晶格系正则量子化的直接结果，比如对于正晶格系我们采用无限维势阱模型
-$$-\frac{1}{2m}\bm{\Delta}\psi=E\psi,\quad \vb{r}^{}_{\vb{n}}\leq\vb{r}\leq\vb{r}^{}_{\vb{n}+\vb{1}}.$$
-这是量子力学的最基本模型，我们得到波矢为$k^{}_{iq}=\dfrac{q\pi}{a^{}_i}=qb^i$，也就是倒晶格系。所以我们看到，晶格的量子化是自然的结果，而其谐振子模型也自然也可以取二次量子化。这样的二次量子化结果就是\textbf{声子 \textit{Phonon}}，其对应的粒子场称为\textbf{声子场}，在1930年由两位苏联物理学家\textsl{\rusa{И. Е. Тамм}}和\textsl{\rusa{Я. И. Френкель}}提出，是凝聚态物理最重要的概念之一。
-\subsubsection{晶格谐振子的二次量子化}
-\noindent 关于上述晶格简谐振动的二次量子化应该和谐振子的思路是一致的，但是我们这里要解决一个问题：此处的二次量子化是否应该采用相对论性的？也就是说，晶格的简谐振动是类似于经典谐振子还是\textsl{Proca}场，亦或者是光子场。\\
-\\
-这个问题很容易解答，因为晶格的三维简谐振动是由三维矢量
-$$\vb{x}^{}_{\kappa}(\vb{n},t)=\vb{C}^{}_{\kappa}(\vb{k})\exp{i(\vb{k}\cdot\vb{r}-\omega t)}$$
-描述的，其和时间有关，因此我们得到晶格的简谐振动和$s=1$的相对论性玻色子场是一致的。但我们知道在相对论下，$s=1$的粒子有\textsl{Proca}场和真中性场比如光子$\gamma$，而两者的二次量子化是有较大的区别的。这也是很好解答的，我们知道晶格的波矢一定是倒晶格系中的矢径，所以无论晶格如何振动，波矢一定在同一个倒晶格系中，因此反波矢并不会导致新粒子的产生，也就不需要两套独立的二次量子化算符。因此晶格的简谐振动应该匹配电磁波场的二次量子化，从而我们知道声子的性质应该和光子是类似的。\\
-\\
-于是我们完全采用光子场的二次量子化思路，按照第\ref{fSVvv!!f}节的内容，我们给出各格点的相对位移$\bm{\psi}_s^a$的表达式
-\begin{equation}\bm{\psi}_{\kappa}^a(\vb{n},t)=D\sum\limits_{\mu=1}^{3N}\sum\limits_{\vb{k}}\qty(a_{\vb{k}\mu}(t){\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}+a^{*}_{\vb{k}\mu}(t){\vb{e}^{a*}}_{\kappa(\mu)}e^{-i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}),\label{xiang **}\end{equation}
-其中$\qty{a^{}_{\vb{k}(\mu)}(t),a^*_{\vb{k}(\mu)}(t)}$是叠加系数，$\vb{e}^{a}_{s(\mu)}$是极化矢量，$\mu$是相应的简正指标，$D$是归一化系数。我们知道此处色散关系$\omega^{}_{\mu}=\omega^{}_{\mu}(\vb{k})$无法表示成类似电磁波的$\omega=k$的简单形式，自然极化矢量也不会简单的满足式(\ref{XBJKF5B})的归一化。但是作为矢量，其归一化的形式应该是类似的，所以我们来计算内积，对本征方程(\ref{gfbv yu})取简正极化矢量内积得到
-$$\begin{aligned}&\sum_{\kappa}\omega^2_{(\mu)}{m^{}_{ij}}^{\kappa}{e^{j\kappa}}^{}_{(\mu)}{e^{i*}}_{\kappa(\nu)}=\sum_{\kappa}{e^j}^{}_{\gamma(\mu)}{\Lambda^{}_{ij}}^{\kappa\gamma}e^{i*}_{\kappa(\nu)},\\&\sum_{\kappa}\omega^2_{(\nu)}{m^{}_{ij}}^{\kappa}{e^{i*}}_{\kappa(\nu)}{e^{j\kappa}}^{}_{(\mu)}=\sum_{\kappa}{e^{i*}}^{}_{\kappa(\nu)}{\Lambda^{}_{ij}}^{\kappa\gamma}{e^j}^{}_{\gamma(\mu)}.\end{aligned}$$
-上下两式相减得到
-$$\sum_{\kappa}\qty(\omega^2_{(\mu)}-\omega^2_{(\nu)}){m^{}_{ij}}^{\kappa}{e^{i*}}^{}_{\kappa(\nu)}{e^{j\kappa}}^{}_{(\mu)}=0.$$
-对于非简并谱，也就是$\omega^2_{(\mu)}\neq\omega^2_{(\nu)}\Longleftrightarrow\mu\neq\nu$，我们得到正交关系
-\begin{equation}\sum_{\kappa}{m^{}_{ij}}^{\kappa}{e^{i*}}_{\kappa(\nu)}{e^{j\kappa}}_{(\mu)}=0,\quad \mu\neq\nu.\end{equation}
-可以看到极化矢量依旧满足本征矢量的正交性公式，但是其度规是质量张量。不难想到我们可以将其推广为归一化条件，但是因为系数质量的原因我们给出
-\begin{equation}\sum_{\kappa}\frac{{m^{}_{ij}}^{\kappa}}{m}{e^{i*}}_{\kappa(\nu)}{e^{j\kappa}}^{}_{(\mu)}=\delta^{}_{\mu\nu},\quad 3m^2=\sum_{\kappa}{m^{ij}}_{\kappa}{m^{}_{ij}}^{\kappa}.\end{equation}
-其中$m$是晶格系统总质量，由质量张量的积确定。同时根据晶格的平移不变性我们立马能推出结论
-\begin{equation}{\vb{e}^{a}}^{}_{\kappa(\mu)}(-\vb{k})={\vb{e}^{a*}}^{}_{\kappa(\mu)}(\vb{k}).\end{equation}
-在相对位移式(\ref{xiang **})中我们看到，叠加系数关于时间的形式为
-$$a^{}_{\vb{k}(\mu)}(t)\propto\exp{-i\omega^{}_{\mu}(\vb{k})t},\quad \ddt{a}^{}_{\vb{k}\mu}+\omega^2(\vb{k})a_{\vb{k}\mu}=0,$$
-不难发现这就是晶格的简正坐标，满足单自由度振动的形式。仍然记质量主值为$m^{}_{\mu}$，则能量按式(\ref{bnOihb ))})可以算得
-\begin{equation}E=\sum\limits_{\vb{k}\mu}\frac{m^{}_{\mu}}{2}\qty(\abs{\dt{a}^{}_{\vb{k}\mu}}^2+\omega^2_{\mu}\abs{a^{}_{\vb{k}\mu}}^2)=\sum_{\mu}m^{}_{\mu}\omega^2_{\mu}\abs{a^{}_{\vb{k}\mu}}^2,\end{equation}
-不难发现这是符合式(\ref{IUN09<>)0})的形式的，只不过对于电磁场质量没有意义，因此用体积代替。类似的我们按式(\ref{fenliangshi})定义位形分量$Q^{}_{\vb{k}\mu}$和广义动量分量$P^{}_{\vb{k}\mu}$为
-\begin{equation}\begin{aligned}&Q^{}_{\vb{k}\mu}=\sqrt{m^{}_{\mu}}\qty(a^{}_{\vb{k}\mu}+a^{*}_{\vb{k}\mu}),\\&P^{}_{\vb{k}\mu}=-i\omega^{}_k\sqrt{m^{}_{\mu}}\qty(a^{}_{\vb{k}\mu}-a^{*}_{\vb{k}\mu})=\dt{Q}^{}_{\vb{k}\mu},\end{aligned}\end{equation}
-则系统的总\textit{Hamiltonian}为
-\begin{equation}H=\frac{1}{2}\sum\limits_{\vb{k}\mu}\qty(P_{\vb{k}\mu}^2+\omega_{\mu}^2(\vb{k})Q^2_{\vb{k}\mu}).\end{equation}
-上述的这些内容都可以视作电磁场在晶格中的改版，两者在形式上基本是完全一致的，只不过由于非相对论近似我们需要使用简正形式表示，但其余都是照搬第\ref{j!upy!!}节的表述并做相应的改变即可。\\
-\\
-在做完了准备工作之后，我们就可以完全按照第\ref{fSVvv!!f}节的形式进行二次量子化，具体细节的处理就不重复了。定义声子的简正二次量子化算符如下：
-\begin{equation}\begin{aligned}&\hat{c}^{\dagger}_{\vb{k}\mu}=\sqrt{\dfrac{\omega^{}_{\mu}(\vb{k})}{2\pi}}\hat{a}^{\dagger}_{\vb{k}\mu}=\dfrac{-i}{\sqrt{2\omega^{}_{\mu}(\vb{k})}}\qty(\hat{P}^{}_{\vb{k}\mu}+i\omega^{}_{\mu}(\vb{k})\hat{Q}^{}_{\vb{k}\mu}),\\&\hat{c}^{}_{\vb{k}\mu}=\sqrt{\dfrac{\omega^{}_{\mu}(\vb{k})}{2\pi\hbar}}\hat{a}^{}_{\vb{k}\mu}=\dfrac{i}{\sqrt{2\hbar\omega^{}_{\mu}(\vb{k})}}\qty(\hat{P}^{}_{\vb{k}\mu}-i\omega(\vb{k})\hat{Q}^{}_{\vb{k}\mu}),\end{aligned}\end{equation}
-则它们的对易子是归一化的，和式(\ref{ddduim})一致
-\begin{equation}\comm{\hat{c}^{}_{\vb{k}\mu}}{\hat{c}^{\dagger}_{\vb{k}\mu}}=\dfrac{\omega(\vb{k})}{2\pi}\comm{\hat{a}^{}_{\vb{k}\mu}}{\hat{a}^{\dagger}_{\vb{k}\mu}}=\hat{\vb{I}}.\end{equation}
-用定义式反解出动量和位形带入\textit{Hamiltonian}，我们得到算符
-\begin{equation}\hat{H}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(\hat{c}^{\dagger}_{\vb{k}\mu}\hat{c}^{}_{\vb{k}\mu}+\dfrac{1}{2}\hat{\vb{I}}),\end{equation}
-则引入占有数算符$\hat{N}^{}_{\vb{k}\mu}$和占有数态$\ket{n^{}_{\vb{k}\mu}}$为
-\begin{equation}\hat{N}^{}_{\vb{k}\mu}=\hat{c}^{\dagger}_{\vb{k}\mu}\hat{c}^{}_{\vb{k}\mu},\quad \hat{N}^{}_{\vb{k}\mu}\ket{n^{}_{\vb{k}\mu}}=n^{}_{\vb{k}\mu}\ket{n^{}_{\vb{k}\mu}},\end{equation}
-我们可得简正产生—湮灭算符的矩阵元为
-$$\mel**{n^{}_{\vb{k}\mu}-1}{\hat{\vb{c}}^{}_{\vb{k}\mu}}{n^{}_{\vb{k}\mu}}=\mel**{n^{}_{\vb{k}\mu}}{\hat{\vb{c}}^{\dagger}_{\vb{k}\mu}}{n^{}_{\vb{k}\mu}-1}=\sqrt{n^{}_{\vb{k}\mu}},$$
-以及系统的总能量为
-\begin{equation}\hat{H}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(\hat{N}^{}_{\vb{k}\mu}+\dfrac{1}{2}\hat{\vb{I}})\implies E^{}_n=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(n^{}_{\vb{k}\mu}+\dfrac{1}{2}).\label{taipi880}\end{equation}
-需要注意的是，这里我们不能用重整化排除真空能$E^{}_0=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})/2$，因为波矢$\vb{k}$必须是倒晶格系\textsl{RL}中的矢量，根据定义它是有限的，因此$E^{}_0$是收敛的值。同时由于在电磁场中$P^{}_{\vb{k}\mu}\propto\sqrt{V}$，所以这里我们这里将体积替换为总原子数
-$$N=\sum\limits_{\vb{k}\mu}n^{}_{\vb{k}\mu}=\sum\limits_{\vb{k}\mu}\mel**{n^{}_{\vb{k}\mu}}{\hat{N}^{}_{\vb{k}\mu}}{n^{}_{\vb{k}\mu}},$$
-得到单个粒子的相对位移算符为
-\begin{equation}\hat{\bm{\psi}}_{\kappa}^a(\vb{n},t)=\sum\limits_{\vb{k}\mu}\sqrt{\dfrac{\omega^{}_{\mu}(\vb{k})}{2\pi N}}\qty(\hat{c}^{}_{\vb{k}\mu}(t){\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}+\hat{c}^{\dagger}_{\vb{k}\mu}(t){\vb{e}^{*a}}_{\kappa(\mu)}e^{-i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}),\end{equation}
-从而相对位移的归一化系数为$D=\sqrt{\dfrac{1}{N}}$。需要强调的是，这里我们依旧采用了自然单位制$c=1$，但是由于晶格是介质内的系统，而声学波在介质内的传播相较于真空中传播会有所改变，所以我们最终需要带上介质内的声速给出$\omega^{}_{\mu}(\vb{k})\sim c^{}_{\mu}\vb{k}$，这在超流体中是需要注意的。\\
-\\
-现在让我们来讨论声子的动力学。首先我们注意到，因为上述内容和电磁波场完全一致，而光子是无质量的，所以声子也是无质量的，$m=0$。但因为声子只是晶格振动的抽象表现，并不完全等同于实体的粒子场，因此一般称声子为\textbf{准粒子 \textit{Quasi-Particle}}，其动量为\textbf{准动量}，可以由此定义准粒子的\textbf{等效质量}为
-\begin{equation}m^*=\frac{\vb{p}}{\vb{u}}=\frac{k}{u^{}_g},\quad u^{}_g=\dv{\omega(k)}{k},\end{equation}
-其中$u^{}_g$是声子的群速度。同时我们也看到，声子是电中性粒子，但是否为真中性还需要进一步考察。其次根据正晶格系的平移不变性，类似电磁矢量式简记
-$${\vb{A}^a}^{}_{\kappa,\vb{k}\mu}({\vb{n}})=\sqrt{\dfrac{1}{N}}{\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}},$$
-则我们得到单向平面声子波的平移不变性
-\begin{equation}\forall\vb{R}\in\mathscr T^1_{\ 0}(DL),\quad \vb{x}_{\kappa}^a(\vb{r}^{}_{\vb{n}}+\vb{R},t)=\sum\limits_{\vb{k}\mu}C^{}_{\vb{k}\mu}{\vb{A}^a}^{}_{\kappa,\vb{k}(\mu)}e^{i\vb{R}\cdot\vb{k}}=\sum\limits_{\vb{k}\mu}e^{i\vb{R}\cdot\vb{k}}\vb{x}_{\kappa(\mu)}^a(\vb{n},t),\end{equation}
-也就是说准粒子的波也是空间周期性的，在各方向上周期为原胞边长$a^{}_1,a^{}_2,a^{}_3$。事实上，如果我们只看沿指定动量$\vb{k}$的位移分量，那么我们可以得到一个标量波
-$$\psi^{}_{\vb{k}}(\vb{n})=\sqrt{\dfrac{1}{N}}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}},\quad \psi^{}_{\vb{k}}(\vb{r}^{}_{\vb{n}}+\vb{R},t)=e^{i\vb{R}\cdot\vb{k}}\psi^{}_{\vb{k}}(\vb{n},t).$$
-这里我们略去了粒子编号$\kappa$和分支号$\mu$，默认只考虑单个声子的一个分支。类比电磁波场可以看到，标量波$\psi^{}_{\vb{k}}$和波函数$\ket{\vb{k}}$是十分类似的，只不过它的空间变量是离散的$\vb{n}$。由于此处我们处于非相对论环境，所以我们可以不在旋量表象下讨论，将$\psi^{}_{\vb{k}}$就看作是动量表象下的粒子波函数，相应的定态\textsl{Schrödinger}方程写为
-$$\hat{H}\ket{\vb{k}}=\qty(\frac{\hat{\vb{p}}^2}{2m^*}+\hat{U}(\vb{r}))\ket{\vb{k}}=E^{}_{\vb{k}}\ket{\vb{k}}\implies E^{}_{\vb{k}}=\frac{\abs{\vb{k}}^2}{2m^*}+\mel**{\vb{k}}{\hat{U}}{\vb{k}}.$$	
-虽然声子没有质量，但是我们这里将其等效为一般的粒子处理，因此这里的$m^*$就是等效粒子质量。为了更好的理解势能项，我们将波函数的空间周期性条件写为如下形式
-\begin{equation}\ket{\vb{k}}(\vb{n})=e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}u^{}_{\vb{k}}(\vb{n}),\quad u^{}_{\vb{k}}(\vb{r}^{}_{\vb{n}})=u^{}_{\vb{k}}(\vb{r}^{}_{\vb{n}}+\vb{R}),\quad \forall\vb{R}\in\mathscr T^1_{\ 0}(DL).\label{Blockh}\end{equation}
-于是势能项给出
-$$\mel**{\vb{k}}{\hat{U}}{\vb{k}}=\int_{DL}u^*_{\vb{k}}\hat{U}(\vb{r})u^{}_{\vb{k}}\dd{V}.$$
-通过周期律不难看到，上式积分收敛当且仅当势能也是周期性的，即$U(\vb{r}^{}_{\vb{n}})=U(\vb{r}^{}_{\vb{n}}+\vb{R})$，否则积分会一直加上增量导致发散。因此我们得到，\textbf{晶格的势能场是周期性的，其中的粒子波函数也是周期性的，其周期律表示为式}(\ref{Blockh})。这一结论称为\textbf{\textsl{Bloch}定理}(\textsl{Felix Bloch}，1929)，是固体物理的开端，一般而言该定理适用于电子，但是不难发现在等效下它也适用于准粒子。现在若我们将振动分支纳入考量，得到能量为
-\begin{equation}\ket{\vb{k}}^{}_{\mu}(\vb{n},t)=De^{i(\vb{k}\cdot\vb{r}^{}_{\vb{n}}-\omega^{}_{\mu}t)},\quad E^{}_{\vb{k}\mu}=\frac{\abs{\vb{k}}^2}{2m}+\int_{DL}u^*_{\vb{k}\mu}\hat{U}u^{}_{\vb{k}\mu}\dd{V}.\end{equation}
-同时我们已经证明，对于不同的分支$\mu\neq\nu$有正交性，此处的正交性应该表述为
-$$\braket{\vb{k}\mu}{\vb{k}\nu}=\delta^{}_{\mu\nu}.$$
-于是我们看到，在\textsl{Bloch}定理下，能量由两个量子化控制：动量和分支，并且不同分支对应不同的能量。当然因为在动量表象中能量的主要指标依旧是动量，所以不同分支划分了不同的能级区域，在同一个区域中能级由动量划分。这样的划分称为\textbf{能带 \textit{Energy Band}}，是周期势能的直接结果，可以从量子力学导出，这里不展开。\\
-\\
-当然我们需要强调，在每一个能带中能量是按\textsl{RL}量子化的，而\textsl{RL}是\textsl{DL}的对偶，所以事实上这里的动量一定是准动量，其和非介质中粒子的动量的性质是不同的。晶格中的能带就构成了声子的基本动力学背景，当然这一性质适用的场景远不止固体。
-\subsubsection{相互作用的二次量子化计算}
-\noindent 这里我们来进一步分析此势能。由于势能的周期性，我们必然得到势能是偶函数，因为前文中的原点选择是任意的格点，而周期性意味着原点的选择不会影响到势能的形式，这是偶函数的性质。于是在单粒子势能关于相对位移的展开式中，只能出现偶数次项，即
-$$U(\vb{r})=U(\vb{0})+\frac{1}{2}\partial^{}_a\partial^{}_bU(\vb{0})x^ax^b+\frac{1}{4!}\partial^{}_a\partial^{}_b\partial^{}_c\partial^{}_dU(\vb{0})x^ax^bx^cx^d+\cdots,$$
-其中一次项的消失是平衡位置的定义，其余奇数次项的消失目前仅是偶函数的要求。现在我们具体分析偶数次项，精确到四次项给出方程
-$$m^{}_{ij}\ddt{x}^j+k^{}_{ij}x^j+\frac{1}{6}\mathscr{D}^{}_{ijkl}x^jx^kx^l=0,\quad \mathscr{D}_{ijkl}=\partial^{}_i\partial^{}_j\partial^{}_k\partial^{}_lU(\vb{0}).$$
-现在我们假设$\mathscr{D}_{ijkl}$是一个小项，则解依旧保持形式$x^i=C^i\exp(i\omega t)$，带入得到代数方程
-$$\abs{m^{}_{ij}\omega^2-k'_{ij}}=0,\quad k'_{ij}=k^{}_{ij}+\frac{1}{6}\mathscr{D}^{}_{ijkl}x^kx^l.$$
-我们必然得到主值会有偏离，并且该偏离和$x^kx^l$相关。这是谐振型相互作用的标志，因此我们看到在二次项之后的展开式代表了粒子之间的相互作用。而这就导致了一个问题：在相对论性的二次量子化中，我们目前没有涉及相互作用的描述，所有的模型全部是针对自由粒子而言的。事实上，我们在第\ref{bbboh}节和第\ref{FEIMIN}节中已经推导出了任意算符的二次量子化表示(\ref{final})和(\ref{make2})等，在动量表象下写为
-\begin{equation}\begin{aligned}&\text{单粒子}:\hat{\vb{p}}\ket{\vb{k}}=\vb{p}\ket{\vb{k}}\implies\hat{F}^{(1)}=\sum\limits_{\vb{k}\vb{k}'}f^{(1)}_{\vb{k}'\vb{k}}\hat{c}^{\dagger}_{\vb{k}'}\hat{c}^{}_{\vb{k}},\quad f^{(1)}_{\vb{k}'\vb{k}}=\mel**{\vb{k}'}{\hat{f}^{(1)}}{\vb{k}};\\&\text{双粒子}:\ket{\vb{k}^{}_1,\vb{k}^{}_2}\implies\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k}}\mel**{\vb{k}'_1,\vb{k}'_2}{\hat{f}^{(2)}}{\vb{k}^{}_1,\vb{k}^{}_2}{\hat{c}^{\dagger}}_{\vb{k}'_1}{\hat{c}^{\dagger}}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1};\\&\text{三粒子}:\ket{\vb{k}^{}_1,\vb{k}^{}_2,\vb{k}^{}_3}\implies\hat{F}^{(3)}=\sum\limits_{\forall\vb{k}}\frac{\mel**{\vb{k}'_1,\vb{k}'_2,\vb{k}'_3}{\hat{f}^{(3)}}{\vb{k}^{}_1,\vb{k}^{}_2,\vb{k}^{}_3}}{6}{\hat{c}^{\dagger}}_{\vb{k}'_1}{\hat{c}^{\dagger}}^{}_{\vb{k}'_2}{\hat{c}^{\dagger}}_{\vb{k}'_3}\hat{c}^{}_{\vb{k}^{}_3}\hat{c}^{}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1};\\&\ldots\ldots\end{aligned}\label{pucaohsh}\end{equation}
-可以看到，式中并没有直接体现适用范围的限制条件，其无论系统是否为相对论性的均成立，只不过在相对论下矩阵元还应在旋量表象下计算。这里我们处于非相对论环境，因此只需要计算通常的矩阵元即可，同时我们也可以解答奇数次项消失的原因：相互作用必然涉及多个粒子，而在二次量子化下算符必然是偶数次的。可以证明，对于单声子我们有
-$$\hat{F}^{(1)}=\hat{H}^{(1)}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(\hat{N}^{}_{\vb{k}\mu}+\dfrac{1}{2}\hat{\vb{I}}),\quad H^{(1)}_{\vb{k}'\vb{k}\mu}=\omega^{}_{\mu}(\vb{k})\delta^{}_{\vb{k}'\vb{k}}.$$
-这是声子场唯一的一级算符，也就是式(\ref{taipi880})。不失一般性的，我们这里重点讨论双声子系统，并且我们假定此相互作用修正$\hat{F}^{(2)}$是粒子间的碰撞导致的。记碰撞前后两粒子的动量为$\qty{\vb{k}^{}_1,\vb{k}^{}_2}\rightarrow\qty{\vb{k}'_1,\vb{k}'_2}$，这里动量我们用波矢表示，则碰撞要求动量守恒写为
-\begin{equation}\vb{k}^{}_1+\vb{k}^{}_2=\vb{k}'_1+\vb{k}'_2.\end{equation}
-同时我们记单个粒子碰撞前后的动量差为
-\begin{equation}\vb{W}=\vb{k}'_2-\vb{k}^{}_2=-\qty(\vb{k}'_1-\vb{k}^{}_1),\label{Laue66}\end{equation}
-则不难知道$\vb{W}\in\mathscr T^1_{\ 0}(RL)$，因为$\vb{k}^{}_i,\vb{k}'_i\in\mathscr T^1_{\ 0}(RL)$。当然此等式对于任意的入射和散射动量均成立，只要求$\vb{W}$是倒晶格系的矢量，晶格中碰撞运动这一性质称为\textbf{\textsl{Laue}方程}，是晶体学中的基础方程，我们不展开这一方面。由于式(\ref{pucaohsh})对于费米子系统和玻色子系统的形式均一样，因此我们不妨都讨论一下。当然我们知道声子是玻色子，所以我们后续重点关注玻色子的势能二次量子化算符。\\
-\\
-先考察自由费米气体系统，在第\ref{145ggvo}节中我们指出，费米子系统的矩阵元和自旋有关，方便起见我们依旧只讨论$s=\dfrac{1}{2}$的费米子，仍以$\sigma^{}_i=\pm1$标记极化。并且我们假设算符$\hat{F}$和自旋无关，也就是$\sigma=\sigma'$，同样的令粒子$1$在前，我们得到二级近似算符为
-\begin{equation}\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k},\sigma}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}'_1\sigma^{}_1,\vb{k}'_2\sigma^{}_2}\hat{c}^{\dagger}_{\vb{k}^{}_1\sigma^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2\sigma^{}_2}\hat{c}^{}_{\vb{k}'_2\sigma^{}_2}\hat{c}^{}_{\vb{k}'_1\sigma^{}_1}.\end{equation}
-之前我们通过离散谱的形式已经得出结论(\ref{xinjai--9})，这里也是类似的，只需要将离散能级号变为连续动量谱即可，我们取记号变换
-$$i\rightarrow\vb{k}^{}_1,\quad j\rightarrow\vb{k}^{}_2,\quad k\rightarrow\vb{k}'_1,\quad l\rightarrow\vb{k}'_2,$$
-并且舍弃$i=j\Longleftrightarrow\vb{k}^{}_1=\vb{k}^{}_2$的非碰撞情况后，我们得到二次量子化算符的主轴形式为
-\begin{equation}\begin{aligned}\hat{F}^{(2)}=&\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \\qty{\sigma^{}_i}}}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1,\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2,\sigma^{}_2}\\&-\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \sigma^{}_1=\sigma^{}_2=\sigma}}\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}\hat{N}^{}_{\vb{k}^{}_1,\sigma}\hat{N}^{}_{\vb{k}^{}_2,\sigma}.\end{aligned}\end{equation}
-现在我们取按体积归一化的动量表象的波函数为
-\begin{equation}\ket{\vb{k}^{}_i}=A\exp(i\vb{k}^{}_i\cdot\vb{r}^{}_i),\quad A=\sqrt{\frac{1}{V}},\end{equation}
-并且我们假设算符只是粒子间相对位置的函数，对于两个粒子形如$\hat{f}^{(2)}=\hat{f}^{(2)}(\vb{r}^{}_2-\vb{r}^{}_1=\vb{r})$，则其特征方程为
-$$\hat{f}^{(2)}\ket{\vb{k}^{}_i}=f^{(2)}\ket{\vb{k}^{}_i}.$$
-由此我们得到相应的矩阵元为
-\begin{equation}\begin{aligned}&\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}=A^4\int e^{-i\vb{k}^{}_i\cdot\vb{r}^{}_i}f^{(2)}e^{i\vb{k}^{}_i\cdot\vb{r}^{}_i}\dd{V}^{}_1\dd{V}^{}_2=\frac{1}{V}\int f^{(2)}(\vb{r})\dd^3\vb{r},\\&\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}=A^4\int e^{-i\vb{k}^{}_1\cdot\vb{r}^{}_1}f^{(2)}e^{i\vb{k}^{}_2\cdot\vb{r}^{}_2}\dd{V}^{}_1\dd{V}^{}_2=\frac{1}{V}\int f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r},\label{i><>in u}\end{aligned}\end{equation}
-其中关于体元的处理和\textsl{vdW}气体的方法是类似的，可以参考式(\ref{tiji ]]''})的思路。同时根据统计的一般原理，利用式(\ref{minang77})将动量谱的求和化为积分，对于双粒子我们带入式(\ref{minang66})给出
-\begin{equation}\sum\limits_{\vb{k}^{}_1,\vb{k}^{}_2}f(\vb{k}^{}_1,\vb{k}^{}_2)=\int f(\vb{k}^{}_1,\vb{k}^{}_2)\aleph(\vb{k}^{}_1)\aleph(\vb{k}^{}_2)\dd^3\vb{k}^{}_1d^3\vb{k}^{}_2=\frac{V^2}{(2\pi)^6}\int f(\vb{k}^{}_1,\vb{k}^{}_2)\dd^3\vb{k}^{}_1\dd^3\vb{k}^{}_2,\end{equation}
-其中$\aleph(\vb{k})=\aleph(\vb{k}^{}_1)\aleph(\vb{k}^{}_2)=\dfrac{V^2}{(2\pi)^6}$是动量表象下的态密度。最终我们得到符的二次量子化最终结果为
-\begin{equation}\begin{aligned}\hat{F}^{(2)}=&\frac{V}{2}\sum\limits_{\sigma_1,\sigma_2}\bigintsss\hat{N}^{}_{\vb{k}^{}_1,\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2,\sigma^{}_2}f^{(2)}(\vb{r})\dd^3\vb{r}\qty(\frac{\dd{k}^{}_1}{2\pi})^3\qty(\frac{\dd{k}^{}_2}{2\pi})^3\\&-\frac{V}{2}\sum\limits_{\sigma}\bigintsss\hat{N}^{}_{\vb{k}^{}_1,\sigma}\hat{N}^{}_{\vb{k}^{}_2,\sigma}f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r}\qty(\frac{\dd{k}^{}_1}{2\pi})^3\qty(\frac{\dd{k}^{}_2}{2\pi})^3.\end{aligned}\end{equation}
-如果我们再假设$f^{(2)}(\vb{r})$是均匀分布，也就是
-$$\int_V f^{(2)}(\vb{r})\dd^3\vb{r}=0,$$
-并且在$s=\dfrac{1}{2}$下关于自旋的求和给出$\sum\limits_{\sigma}=2$，于是我们最终得到占有数表象下的算符值为
-\begin{equation}F^{(2)}=-V\bigintsss N^{}_{\vb{k}^{}_1}N^{}_{\vb{k}^{}_2}f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r}\qty(\frac{\dd{k}^{}_1}{2\pi})^3\qty(\frac{\dd{k}^{}_2}{2\pi})^3.\end{equation}
-这就是连续谱下费米子系统的二次量子化结论，其中占有数$N^{}_{\vb{k}}$满足连续谱的\textsl{FD}分布。这种方法一般多用于简并粒子气体的近似中，比如常温下的简并等离子气体，而$f^{(2)}(\vb{r})$就是电荷间\textsl{Colomb}势能。但是对于极低温时，我们还可以继续化简。\\
-\\
-在极低温时，所有的粒子都趋于费米能级，因此我们在上式得到\textsl{FD}凝聚。在这种情况下，粒子的动量是非常小的，因此我们可以认为上述的二次量子化是小动量近似的结果，称为\textbf{慢性碰撞极限}。对应到矩阵元，我们可以取其在动量为零时的值，也就是
-\begin{equation}\vb{k}^{}_1=\vb{k}'_1=\vb{k}^{}_2=\vb{k}'_2\sim o(\vb{0}),\quad \mel**{\vb{k}'_1,\vb{k}'_2}{\hat{f}^{(2)}}{\vb{k}^{}_1,\vb{k}^{}_2}=\mel**{\vb{0}\sigma^{}_1,\vb{0}\sigma^{}_2}{\hat{f}^{(2)}}{\vb{0}\sigma^{}_1,\vb{0}\sigma^{}_2}=f^{}_0,\end{equation}
-并且我们依旧令态对体积归一化，则二级近似给出
-\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{2V}\sum\limits_{\forall\vb{k},\sigma}{\hat{c}^{\dagger}}_{\vb{k}'_1\sigma'_1}{\hat{c}^{\dagger}}_{\vb{k}'_2\sigma'_2}\hat{c}^{}_{\vb{k}^{}_2\sigma^{}_2}\hat{c}^{}_{\vb{k}^{}_1\sigma^{}_1},\label{sgsdg}\end{equation}
-并且$\forall\vb{k}\rightarrow\vb{0}$。在这种情况下，我们可以直接带入算符的主轴化结果，给出
-$$\hat{F}^{(2)}=\frac{f^{}_0}{2V}\qty{\sum\limits_{\substack{\vb{k}^{}_1=\vb{k}^{}_2\\ \sigma^{}_1\neq\sigma^{}_2}}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_2}+\sum\limits_{\vb{k}^{}_1\neq\vb{k}^{}_2}\qty(\sum_{\sigma^{}_1,\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2\sigma^{}_2}-\sum_{\sigma}\hat{N}^{}_{\vb{k}^{}_1\sigma}\hat{N}^{}_{\vb{k}^{}_2\sigma})}.$$
-具体计算过程就不展示了，和上面做替换的过程是相同的。但注意到此时后两项由于没有矩阵元作为系数的限制，因此是可以合并的，其关于自旋的求和给出
-$$\sum_{\sigma^{}_1,\sigma^{}_2}-\sum_{\sigma}=\sum(\sigma^{}_1=\sigma^{}_2)+\sum(\sigma^{}_1\neq\sigma^{}_2)-\sum(\sigma^{}_1=\sigma^{}_2=\sigma)=\sum(\sigma^{}_1\neq\sigma^{}_2)=\sum\limits_{\sigma^{}_1\neq\sigma^{}_2},$$
-并且我们将其和前一项的动量求和统一为记号$\sum\limits_{\vb{k}^{}_1=\vb{k}^{}_2}+\sum\limits_{\vb{k}^{}_1\neq\vb{k}^{}_2}=\sum\limits_{\forall\vb{k}}$，则最终结果写为
-\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{V}\sum_{\forall\vb{k},\sigma^{}_1\neq\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_2}\implies F^{(2)}=\frac{f^{}_0}{V}\sum_{\forall\vb{k},\sigma^{}_1\neq\sigma^{}_2}N^{}_{\vb{k}^{}_1\sigma^{}_1}N^{}_{\vb{k}^{}_1\sigma^{}_2}.\end{equation}
-但是在$s=\dfrac{1}{2}$下自旋记号的取值为$\sigma=\pm1$，因此不等号解释为$\sigma^{}_1=-\sigma^{}_2$，也就是自旋相反。将其推广我们就得到了碰撞定理：
-\begin{center}\emph{对于两个处于慢性碰撞极限的费米子，只有自旋相反才能发生相互作用，也就是散射。}\end{center}
-这一点可以从碰撞理论中得到，我们就不展开了，但是这里我们从另一种角度解释了此现象。当然上述结论只是算符直接对角化的结果，更高精确度的值需要考虑矩阵元$f^{}_0$的涨落，其可以通过微扰论计算，具体请参考第\ref{DFVO))//}节。对于能量$\hat{H}$的涨落，以下我们用玻色子系统的\textsl{Bogoliubov}变换来简单介绍。\\
-\\
-现在我们考察自由玻色气体的双玻色子算符，其不需要自旋值的参与，因此二次量子化算符为
-\begin{equation}\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k}}\mel**{\vb{k}^{}_1,\vb{k}^{}_2}{\hat{f}^{(2)}}{\vb{k}'_1,\vb{k}'_2}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}.\end{equation}
-现在我们同样考虑慢性碰撞极限，对于声子而言就是指$\omega(\vb{k})\approx0$，对于普通的自由玻色子也就是$E^{}_{\vb{k}}\approx0$。于是我们得到算符为
-\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{2V}\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1},\quad f^{}_0=\mel**{\vb{0},\vb{0}}{\hat{f}^{(2)}}{\vb{0},\vb{0}}.\end{equation}
-根据玻色统计，此时系统处于\textsl{BE}凝聚态，其可以用式(\ref{---wosile h})表示，也就是
-$$N\approx N^{}_0=\mel**{\vb{0}}{\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{}_{\vb{0}}}{\vb{0}}\gg N^{}_{\vb{k}\neq\vb{0}}=\mel**{\vb{k}}{\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}}{\vb{k}}.$$
-这一事实给出了一种近似方法，因为凝聚态下粒子几乎全部处于基态，因此对于算符$\hat{c}^{}_{\vb{0}}$的对易性我们可以重整化为
-\begin{equation}\comm{\hat{c}^{}_{\vb{0}}}{\hat{c}^{\dagger}_{\vb{0}}}=\vb{0}\ll\hat{c}^{}_{\vb{0}},\hat{c}^{\dagger}_{\vb{0}},\quad \hat{c}^{}_{\vb{0}}=\hat{c}^{\dagger}_{\vb{0}}=c^{}_{\vb{0}}=\sqrt{N^{}_{\vb{0}}}.\label{enducs}\end{equation}
-也就是其对易性相较于总粒子数可以忽略不计，并且用数值替代。我们在这种背景下来考察化简，对于慢性碰撞极限我们给出算符按动量展开为
-\begin{equation}\hat{c}^{}_{\vb{k}}=\hat{c}^{}_{\vb{0}}+\hat{c}^{}_{\vb{k}},\end{equation}
-于是算符的乘积写为
-$$\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}=\qty(\hat{c}^{\dagger}_{\vb{0}}+\hat{c}^{\dagger}_{\vb{k}^{}_1})\qty(\hat{c}^{\dagger}_{\vb{0}}+\hat{c}^{\dagger}_{\vb{k}^{}_2})\qty(\hat{c}^{}_{\vb{0}}+\hat{c}^{}_{\vb{k}'_2})\qty(\hat{c}^{}_{\vb{0}}+\hat{c}^{}_{\vb{k}'_1}).$$
-为了后续的计算考虑，这里我们将其精确到$\hat{c}^{}_{\vb{k}}$的二次项，算上玻色对易关系我们得到展开式的零次项为
-\begin{equation}\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{0}}=c^4_{\vb{0}}=N^2_{\vb{0}}.\label{shiyanss}\end{equation}
-这里我们用凝聚态近似$N=N^{}_{\vb{0}}+\sum\limits_{\vb{k}\neq\vb{0}}c^2_{\vb{0}}$，替换$N^{}_{\vb{0}}$得到系统的零次项为
-\begin{equation}c^4_{\vb{0}}=\qty(N-\sum\limits_{\vb{k}\neq\vb{0}}N^{}_{\vb{k}})^2=N^2-2c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+o\qty(N^2_{\vb{k}}).\end{equation}
-其中非凝聚态项可以看作凝聚态的涨落修正。展开的一次项为
-$$c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{0}}+\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{\dagger}_{\vb{k}_2}+\hat{c}^{\dagger}_{\vb{k}_1}\hat{c}^{\dagger}_{\vb{0}}).$$
-可以看到在一次项中，动量只出现了一次，因而是不守恒的，需要舍弃，事实上对于奇数次项都是相同的。\\
-\\
-展开的二次项为
-$$\hat{c}^2_{\vb{k}}=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2})+\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{\dagger}_{\vb{k}^{}_2}\qty(\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{0}})+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{0}}\qty(\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{0}}).$$
-现在我们来讨论动量守恒下二次项的化简：
-\begin{itemize}\item 动量全部相同：$\vb{k}^{}_1=\vb{k}^{}_2=\vb{k}'_1=\vb{k}'_2=\vb{k}$，可以看到第一项为
-$$\hat{c}^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}},$$
-这是毫无物理意义的，也就是说同动量下不会碰撞，这是合理的；\item 单个粒子守恒：$\vb{k}^{}_1=\vb{k}'_1\neq\vb{k}^{}_2=\vb{k}'_2$，二次项给出
-$$\hat{c}^2_{\vb{k}}(1,2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_2}).$$
-两个粒子交换：$\vb{k}^{}_1=\vb{k}'_2\neq\vb{k}^{}_2=\vb{k}'_1$，二次项给出
-$$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_1}).$$
-可以看到，在玻色对易关系下，这两式只有第一项不同；\item 在慢性碰撞极限下，我们可以取质心系$\vb{k}^{}_1+\vb{k}^{}_2=\vb{k}'_1+\vb{k}'_2=\vb{0}$，记$\vb{k}^{}_1=-\vb{k}^{}_2=\vb{k}$，上述两项给出
-$$\hat{c}^2_{\vb{k}}(1,2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{-\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{-\vb{k}}),$$
-$$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).$$
-当然若我们展开到四次项，我们得到
-$$\hat{c}^4_{\vb{k}}(1,2)=\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{-\vb{k}}\hat{c}^{}_{\vb{k}},\quad \hat{c}^4_{\vb{k}}(1\longleftrightarrow2)=\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}.$$
-因而单个粒子守恒在四次近似下无意义，所以我们这里只保留交换式$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)$。\end{itemize}
-做替换$N=c^2_{\vb{0}}$后，经过简单计算我们得到最终的二次项的化简为
-\begin{equation}\begin{aligned}&\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}=c^4_{\vb{0}}+\sum\limits_{\vb{k}}\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)\\&=N^2-2c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+4\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}})\\&=N^2+N\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).\end{aligned}\end{equation}
-这里我们考虑势能$\hat{F}^{(2)}=\hat{U}^{(2)}$，则最终我们得到势能的二级近似为
-\begin{equation}\hat{U}^{(2)}=\frac{N^2}{2V}U^{}_0+\frac{NU^{}_0}{2V}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).\end{equation}
-这事实上就是平均场近似，可以参考\textsl{Ising}模型。现在如果我们算上单粒子算符，则声子系统的非相对论性\textit{Hamiltonian}算符在上述二次量子化近似下给出
-\begin{equation}\begin{aligned}\hat{H}=\hat{H}^{(1)}+\hat{U}^{(2)}=&\frac{N^2U^{}_0}{2V}+\sum\limits_{\vb{k}}\frac{\omega(\vb{k})}{2}+\sum\limits_{\vb{k}\neq\vb{0}}\omega(\vb{k})\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}\\&+\frac{NU^{}_0}{2V}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}})=\hat{H}^{0}+\sum\limits_{\vb{k}\neq\vb{0}}\hat{H}^{}_{\vb{k}}.\label{cd - -'':}\end{aligned}\end{equation}
-在不考虑微扰并取势能$U^{}_0=const$的情况下，我们来求其对应的能级，此处就是求$\hat{H}$的对角化。由于上式为明显的双线性型，那么自然的我们想到，可以引入系统的玻色\textsl{Bogoliubov}变换，当然因为式(\ref{cd - -'':})包含两个不同方向的动量表象算符，所以我们看到声子只是电中性的，并非真中性。于是这里的变换应该对应式(\ref{chaoliu1})和(\ref{chaoliu2})给出
-\begin{equation}\begin{cases}\displaystyle\hat{b}^{}_{\vb{k}}=u^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}+v^{}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}},&\\ \displaystyle\hat{b}^{\dagger}_{\vb{k}}=u^{}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}+v^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}.\end{cases}\implies \begin{cases}\displaystyle u^{}_{\vb{k}}=\cosh{r^{}_{\vb{k}}},&\\ \displaystyle v^{}_{\vb{k}}=\sinh{r^{}_{\vb{k}}}.\end{cases}\end{equation}
-这里我们方便起见令系数为实数。需要注意的是，这里的算符$\hat{c}$和算符$\hat{b}$并不对应同一种粒子，这是因为\textsl{Bogoliubov}变换实际上改变了占有数分布，因此在变换之后给出的是两种粒子。\\
-\\
-其对应的二次型$\vb{Y}^{}_{\vb{k}}$可以通过双线性型
-$$\hat{H}^{}_{\vb{k}}=\vb{R}^{\dagger}_{\vb{k}}\vb{Y}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k}}&\hat{c}^{\dagger}_{-\vb{k}}&\hat{c}^{}_{\vb{k}}&\hat{c}^{}_{-\vb{k}}}\vb{Y}^{}_{\vb{k}}\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{}_{-\vb{k}}\\ \hat{c}^{\dagger}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}},$$
-对比式(\ref{cd - -'':})求出其中$\vb{k}\neq\vb{0}$的部分的为
-$$\vb{Y}^{}_{\vb{k}\neq\vb{0}}=\pmqty{0&0&0&\dfrac{NU^{}_0}{2V}\\0&0&\dfrac{NU^{}_0}{2V}&0\\0&\dfrac{NU^{}_0}{2V}&\omega(\vb{k})+\dfrac{NU^{}_0}{V}&0\\ \dfrac{NU^{}_0}{2V}&0&0&\omega(\vb{k})+\dfrac{NU^{}_0}{V}}.$$
-于是带入玻色子的\textsl{Bogoliubov}方程$\vb{Y}^{}_{\vb{k}}=E(\vb{k})\vb{\Gamma}^{\dagger}_{\vb{k}}\vb{\Gamma}^{}_{\vb{k}}$，我们求得最终的结果为
-\begin{equation}E(\vb{k}\neq\vb{0})=\sqrt{\omega(\vb{k})^2+\frac{2NU^{}_0}{V}\omega(\vb{k})}.\end{equation}
-同时我们解得凝聚态的能量为
-\begin{equation}E^{}_0=\frac{N^2U^{}_0}{2V}+\frac{1}{2}\sum\limits_{\vb{k}\neq\vb{0}}\qty(E(\vb{k})-\omega(\vb{k})-\frac{NU^{}_0}{V}),\label{jitaine}\end{equation}
-这里请读者自行用\textsl{Nambu}形式验证上述结果并求出变换系数，于是最终\textit{Hamiltonian}算符的对角化为
-\begin{equation}\hat{H}=E^{}_0+\sum\limits_{\vb{k}\neq\vb{0}}E(\vb{k})\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}=E^{}_0+\sum\limits_{\vb{k}\neq\vb{0}}E(\vb{k})\hat{N}^{}_{\vb{k}}.\end{equation}
-我们最终求得双玻色子在慢性碰撞极限下的能量为
-\begin{equation}E=E^{}_0+\sum\limits_{\vb{k}\neq\vb{0}}E(\vb{k})\expval{n^{}_{\vb{k}}},\quad E(\vb{k})=\sqrt{\omega(\vb{k})^2+\frac{2NU^{}_0}{V}\omega(\vb{k})},\label{pouJN //}\end{equation}
-这里$n^{}_{\vb{k}}$就是准粒子的占有数，当然一般我们会用平均占有数计算。需要注意这里变换前后的算符$\hat{c}$和$\hat{b}$对应不同的粒子，其中
-$$\expval{N^{}_{\vb{k}}}=\frac{1}{\exp{\beta\omega(\vb{k})}-1}=\expval{\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}}$$
-是构成系统主体的玻色子的占有数，而
-$$\expval{n^{}_{\vb{k}}}=\frac{1}{\exp{\beta E(\vb{k})}-1}=\expval{\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}}$$
-是激发的准粒子的占有数，两者分布不同。上述就是质心系下一级微扰的结果，它说明了双玻色子在慢性碰撞时，碰撞能量谱为$E(\vb{k})$，其平均生成了
-$$\expval{n^{}_{\vb{k}}}=\expval{\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}}$$
-个声子。当然这并不精确，在碰撞下我们需要将$U^{}_0$用散射截面替换，而这就是二级微扰论的结果了，结果为$U^{}_0=\dfrac{4\pi a}{m}$，我们这里不做展开。
-\subsubsection{声子的统计规律}
-\noindent 现在我们来考察声子的统计，具体讨论由式(\ref{pouJN //})所给出的系统的热力学情况。因为我们已经知道声子和光子相同，而光子遵循\textsl{Planck}黑体辐射统计，因此声子的统计模型和黑体辐射必然是类似的，也就是\textsl{Planck}分布
-\begin{equation}\expval{N^{}_{\vb{k}}}=\frac{1}{\exp{\beta\omega(\vb{k})}-1}.\end{equation}
-但之前我们提到，角频率在介质中没有十分简单的色散关系，因此我们无法利用上述占有数来直接计算系统的热力学性质。为此，我们不妨从头来过，考虑如何从特殊情况下的简单结论推广至普遍性质。方便起见，我们考虑正则系综，因为在\textsl{Planck}分布下化学势$\mu=0$，所以巨正则系综和正则系综等价。\\
-\\
-作为一切的原点，我们给出声子系统的自由能，每个声子在动量表象下的能量为$E^{}_{\vb{k}\mu}=\omega^{}_{\mu}(\vb{k})$，这里我们是直接类比光子的结论。对于每一个谱支，其主频率的配分函数完全由式(\ref{peifen88777gb})确定，所以每一个谱支的自由能为
-$$F^{}_{\vb{k}\mu}=-T\ln{\qty(\frac{1}{1-\exp{-\beta\omega^{}_{\mu}(\vb{k})}})}=T\ln{\qty(1-\exp{-\beta\omega^{}_{\mu}(\vb{k})})}.$$
-同样的我们将各原子在原胞内的平衡能记为$E^{}_0$，可以证明它和晶格的密度有关，而和温度无关，若我们设晶格中共$D$个原胞，体积为$V$，则我们有$E^{}_0=E^{}_0\qty(\dfrac{D}{V})$。因为自由能是可加的，因此我们有
-\begin{equation}F=F^{}_0+\sum_{\mu(D)=1}^{3ND}\sum_{\vb{k}}F^{}_{\vb{k}\mu}=DE^{}_0+T\sum_{\mu(D)}\sum_{\vb{k}}\ln\qty{1-\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})},\end{equation}
-这里$\mu(D)$是整个晶格的原子数的自由度$3ND$。一般而言，对于波矢的求和可以通过式(\ref{minang77})，并带入态密度(\ref{minang66})转变为积分，写作
-\begin{equation}F=DE^{}_0+T\sum_{\mu=1}^{3ND}\bigintsss\aleph(\vb{k})\ln\qty{1-\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})}\frac{\dd^3\vb{k}}{(2\pi)^3},\label{BVF88.,/7}\end{equation}
-是为统计的一般原理。但是此处由于色散关系$\omega^{}_{\mu}(\vb{k})$并不明晰，所以目前无法将其直接转化为积分。若我们直接取$\omega^{}_{\mu}=const$，则得到、text部分{\textsl{Einstein}模型}，但其和实验结果相差较远。为此我们来讨论两个极端情况：$T\to 0$以及$T\to\infty$，最后总结归纳得出一个普适的结论。\\
-\\
-先考察$T\to 0$的极限情况，此时求和的指数函数
-$$\lim\limits_{T\to 0}\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})\sim o(1)\quad \text{当且仅当} \quad T\sim\omega\rightarrow0,$$
-因此我们看到在这种情况下，真正起到作用的是低频波，并考虑到$\omega\sim\dfrac{1}{\lambda}$，所以这就是长波。但我们之前提到，对于波长的量级在$\lambda\gg \abs{\vb{a}}=a$下，谐振给出声学波，且在声学波下色散定律可以简单的写为
-\begin{equation}\omega(\vb{k})=c\abs{\vb{k}}=c^{}_{loc}\frac{2\pi}{\lambda}\ll\frac{c^{}_{loc}}{a},\label{YehDFnb}\end{equation}
-其中$c^{}_{loc}$是晶格中的当地声速，因此我们得到声学波谱支的温度范围为
-\begin{equation}T\ll\frac{c^{}_{loc}}{a}.\end{equation}
-如果介质是各项同性的，那么我们完全可以将晶格的振动比作场，因为声子的总自由度$3ND\sim 10^{23}$。并且我们知道，声子是自旋为$s=1$的玻色子，所以我们可以认为其是可以由\textsl{Proca}场描述的。但是这里需要注意，声子作为准粒子，其对应的是$m\neq0$的\textsl{Proca}场，并非零质量的光子场，因为它可以定义等效质量。所以按照\textsl{Proca}场的式(\ref{0;;k6[FCF})的极化结论，我们得到声学波的三个谱支及相应的频域态密度为
-\begin{equation}\begin{aligned}&\text{两个横波：}c^{}_{loc}=c^{}_t\implies2\cp\omega(\vb{k})=c^{}_tk,\quad \dd\Omega^{}_t=2\dfrac{4\pi V}{(2\pi)^3}k^2\dd{k}=V\dfrac{\omega^2\dd\omega}{2\pi^2}\frac{2}{c^3_t}=\aleph^{}_t(\omega)\dd\omega\\&\text{一个纵波：}c^{}_{loc}=c^{}_l\implies1\cp\omega(\vb{k})=c^{}_lk,\quad \dd\Omega^{}_l=\dfrac{4\pi V}{(2\pi)^3}k^2\dd{k}=V\dfrac{\omega^2\dd\omega}{2\pi^2}\frac{1}{c^3_l}=\aleph^{}_l(\omega)\dd\omega.\end{aligned}\end{equation}
-同样的结论也可以在附录\ref{Y6TY.,.,''}中找到，于是最终的频域态密度为
-\begin{equation}\dd\Omega=\dd\Omega^{}_t+\dd\Omega^{}_l=V\dfrac{\omega^2\dd\omega}{2\pi^2}\qty(\frac{2}{c^3_t}+\frac{1}{c^3_l})=\aleph^{}_0(\omega)\dd\omega.\end{equation}
-当然因为态密度和当地声速无关，所以我们关于极化求和定义一个平均声速$\expval{c}$为
-\begin{equation}\frac{2}{c^3_t}+\frac{1}{c^3_l}=\sum\limits_{\mu=1}^3\frac{1}{\expval{c^{}_{\mu}}^3}=\frac{3}{\expval{c}^3}\implies\aleph^{}_0(\omega)=V\dfrac{\omega^2}{2\pi^2}\frac{3}{\expval{c}^3},\quad g=3.\label{guangdoj}\end{equation}
-对于各项异性介质，同样可以按极化定义平均声速，这里不展开，请参考第\ref{Y6TY.,.,''}节。\\
-\\
-因为在低温下积分收敛很快，所以频谱的取值范围可以取为$0\leq\omega\leq\infty$，从而式(\ref{BVF88.,/7})得到极低温度下的自由能为
-\begin{equation}F=DE^{}_0+\frac{3}{2}\dfrac{TV}{\pi^2\expval{c}^3}\int_0^{\infty}\ln\qty{1-\exp\qty(-\frac{\omega}{T})}\omega^2\dd\omega,\end{equation}
-对比光子系统(c=1)的式(\ref{tfgvPI)()<<})可以看到，声子的自由能多了一个系数$\dfrac{3}{2}$，其原因出在简并度上。在$\gamma$场中态密度由式(\ref{crgn''})给出，对于$\gamma$的简并度$g=2$因为$\gamma$只有两个横波，而声子场为$g=3$。于是和此自由能相关的热力学量都可以直接从\textsl{Planck}分布得到，取自然单位制$\expval{c}=1$后只需要乘上$\dfrac{3}{2}$即可，引入\textsl{Stephan-Boltzmann}常数$\sigma$后我们得到
-\begin{itemize}\item 自由能：\begin{equation}F=F^{}_0+\sum F^{}_{\vb{k}\mu}=DE^{}_0-\frac{3}{2}\frac{4V\sigma}{3}T^4=DE^{}_0-\dfrac{V\pi^2}{30}T^4,\end{equation}
-式中带入了自然单位制下的值$\sigma=\dfrac{\pi^2}{60}$，在国际单位制下为$\sigma=\dfrac{\pi^2k_B^4}{60\hbar^3\expval{c}^3}$；\item 介质的熵：\begin{equation}S=-\partial^{}_TF=\frac{3}{2}\frac{16V\sigma}{3}T^3=\frac{2V\pi^2}{15}T^3;\end{equation}\item 介质的能量：\begin{equation}E=F+TS=F^{}_0-3\sum F^{}_{\vb{k}\mu}=DE^{}_0+\dfrac{V\pi^2}{10}T^4;\end{equation}\item 介质的等容比热：\begin{equation}C^{}_V=\partial^{}_TE=\dfrac{2V\pi^2}{5}T^3.\end{equation}\end{itemize}
-由此可见在低温下，介质的比热和$T^3$成正比，这一定律称为\textbf{\textsl{Debye}定律}(1912)。通过上面的介绍可以看到，这一部分主要就是声子的贡献，因为简谐振动贡献了主要的微态分布，因此也可以看作声子的比热，记为$C^{}_{phn}$，以免和光子\textsl{Photon}混淆。在金属中，若我们算上电子的贡献，其比热由式(\ref{subbff})控制，则我们得到金属在低温下的比热和温度的关系为
-\begin{equation}C(T\ll1)=C^{}_e+C^{}_{phn}=aT+bT^3,\end{equation}
-其中一次项是电子(费米子)的比热，第二项是声子的比热，这一结论和实验结果符合的较好。\\
-\\
-再来考察$T\gg1$的极限情况，此时我们希望能够将指数函数化简，从而可以考虑量级为
-\begin{equation}\frac{\omega}{T}\ll1\implies T\gg\omega\gg\frac{c^{}_{loc}}{a}.\end{equation}
-此时声子给出光学谱支，对应短波长量级$\lambda\ll a$。在这一情况下，被积函数可以取近似
-$$\begin{aligned}&1-\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})=\frac{\omega^{}_{\mu}(\vb{k})}{T}-\frac{\omega^2_{\mu}}{2T^2}+o\qty(\frac{\omega^3_{\mu}}{T^3}),\\&\ln\qty{1-\exp\qty(-\frac{\omega}{T})}=\ln\qty{\frac{\omega^{}_{\mu}}{T}\qty(1-\frac{\omega^{}_{\mu}}{2T})}=\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}-\frac{\omega^{}_{\mu}}{2T}+o\qty(\frac{\omega^2_{\mu}}{2T^2}).\end{aligned}$$
-于是式(\ref{BVF88.,/7})变为
-\begin{equation}\begin{aligned}F&=DE^{}_0+T\sum_{\mu}\bigintsss\aleph(\vb{k})\qty(\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}-\frac{\omega^2_{\mu}}{2T})\frac{\dd^3\vb{k}}{(2\pi)^3}\\&=DE^{}_0-\sum\limits_{\vb{k}\mu}\frac{\omega^{}_{\mu}(\vb{k})}{2}+T\sum_{\mu}\bigintsss\aleph(\vb{k})\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}\frac{\dd^3\vb{k}}{(2\pi)^3}.\end{aligned}\end{equation}
-不难看到第二项就是声子的真空能
-$$H^{}_0=\sum\limits_{\vb{k}\mu}\dfrac{\omega^{}_{\mu}(\vb{k})}{2}<\infty,$$
-这就是声子和光子的区别，声子的真空能是有限的，无法通过重整化消去，因此我们也需要将其考虑进自由能中。由于前两项和温度无关，因此可以看作常自由能，记为
-\begin{equation}F^{}_0=DE^{}_0-\sum\limits_{\vb{k}\mu}\frac{\omega^2_{\mu}(\vb{k})}{2}=const.\end{equation}
-对于对数项，由于我们这里无法给出光学谱支的态密度，所以我们取频率的系综均值
-\begin{equation}\sum_{\mu=1}^{3ND}\bigintsss\aleph(\vb{k})\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}\frac{\dd^3\vb{k}}{(2\pi)^3}=3ND\ln\qty{\frac{\expval{\omega(\vb{k})}}{T}},\end{equation}
-则最终自由能写为
-\begin{equation}F=F^{}_0+3NDT\ln\qty{\expval{\omega(\vb{k})}}-3NDT\ln{T}.\end{equation}
-关于系统的熵我们就不计算了，介质的能量给出
-\begin{equation}E=F+TS=F-T\partial^{}_TF=F^{}_0+3NDT,\end{equation}
-从而介质的等容比热为
-\begin{equation}C^{}_V=\partial^{}_TE=3ND.\end{equation}
-此处$3ND$是振动的谱支数，也就是振动的自由度，只不过总自由度为$d=6ND$，因为作为相空间维数的话要同时考虑空间和动量，而谐振子模型将两者糅合进了一个自由度中。不难发现这是符合式(\ref{DPlongtt})的结论的，也就是\textsl{Dulong-Petit}定律，给出$C^{}_V=\dfrac{d}{2}=3ND$。因此在高温下，介质满足\textsl{Boltzmann}能量均分定理，这是很合理的结论，因为高温必然对应等概率分布。当然在极高温度下，晶格的运动相交简谐振动会有较大偏离，此时需要考虑自由能的高阶展开，这里就不介绍了。\\
-\\
-在上述两个极限的基础上，我们来建立中间温度的普遍统计规律。我们在极低温下引入了频谱态密度，并且频谱的取值范围近似为$0\leq\omega\leq\infty$，但这明显是不正确的。在大频率$\omega\gg\dfrac{c^{}_{loc}}{a}$下，积分会给出总谱支数$3ND$，并不符合低温的结论。因此在低温下，频谱应该有一个上限，记为$\omega^{}_m$，则我们可以建立一个在两个温度极限之间的关系，对低温态密度(\ref{guangdoj})积分得到总谱支数
-\begin{equation}\int_0^{\omega^{}_m}\aleph^{}_0(\omega)\dd\omega=\frac{3V}{2\pi^2\expval{c}^3}\int_0^{\omega^{}_m}\omega^2\dd\omega=\frac{V\omega^3_m}{2\pi^2\expval{c}^3}=3DN\implies\omega^3_m=\frac{6DN\pi^2}{V}\expval{c}^3.\end{equation}
-因此我们可以用此式替换平均声速，统一的态密度表述为
-\begin{equation}\aleph^{}_D(\omega)=\frac{3V}{2\pi^2\expval{c}^3}=9DN\frac{\omega^2}{\omega^3_m},\quad \omega\leq\omega^{}_m.\end{equation}
-称为\textbf{\textsl{Debye}态密度}，我们这里同样的已经对极化求和了，于是带入式(\ref{BVF88.,/7})得到介质系统的自由能为
-\begin{equation}F=DE^{}_0+\frac{9DNT}{\omega^3_m}\int_0^{\omega^{}_m}\ln\qty{1-\exp\qty(-\frac{\omega}{T})}\omega^2\dd\omega,\end{equation}
-由于正则系综的指数$\beta\omega$是无量纲量，所以我们可以类似的对$\omega^{}_m$引入相似的温度定义
-\begin{equation}\Theta^{}_D=\omega^{}_m,\end{equation}
-称为\textbf{\textsl{Debye}温度}。于是自由能公式写为
-$$F=DE^{}_0+9DNT\qty(\frac{T}{\Theta^{}_D})^3\int_0^{\Theta^{}_D/T}\ln\qty{1-e^{-z}}z^2\dd{z},$$
-对于积分，考虑分部积分
-$$\int_0^{\Theta^{}_D/T}\ln\qty{1-e^{-z}}z^2\dd{z}=\frac{z^3}{3}\eval{\ln\qty{1-e^{-z}}}_0^{\Theta^{}_D/T}-\frac{1}{3}\int_0^{\Theta^{}_D/T}\frac{z^3}{e^{z}-1}\dd{z},$$
-我们引入\textbf{$\bm{n}$阶\textsl{Debye}函数}为
-\begin{equation}W^{}_n(x)=\frac{n}{x^n}\bigintsss_0^x\frac{z^n}{e^z-1}\dd{z},\label{leloh}\end{equation}
-这里取$n=3$，于是自由能最终的结果为
-\begin{equation}F=DE^{}_0+DNT\qty(3\ln\qty{1-\exp\qty(-\frac{\Theta^{}_D}{T})}-W^{}_3\qty(\frac{\Theta^{}_D}{T})).\end{equation}
-从而我们得到能量为
-\begin{equation}E=F-T\partial^{}_TF=DE^{}_0+3DNTW^{}_3\qty(\frac{\Theta^{}_D}{T}).\end{equation}
-比热为
-\begin{equation}C=\partial^{}_TE=3DN\qty{W^{}_3\qty(\frac{\Theta^{}_D}{T})-\frac{\Theta^{}_D}{T}W'_3\qty(\frac{\Theta^{}_D}{T})}.\end{equation}
-这样的自由能形式称为\textbf{\textsl{Debye}内插公式}(1912)，可以验证其和前文中的极限结果是相匹配的，比如在低温下$T\ll\Theta^{}_D$，此时可以令积分上限为$\infty$，从而我们算得\textsl{Debye}函数为
-$$W^{}_3(x)=\frac{3}{x^3}\bigintsss_0^{\infty}\frac{z^3}{e^z-1}\dd{z}=\frac{\pi^4}{5x^3},$$
-从而比热为
-\begin{equation}C=\frac{12DN\pi^4}{5}\qty(\frac{T}{\Theta^{}_D})^3\propto T^3.\end{equation}
-这是符合\textsl{Debye}定律的，因此说明内插公式以及态密度公式的正确性。\\
-\\
-现在让我们从\textsl{Debye}态密度出发来计算式(\ref{pouJN //})，带入\textsl{Planck}分布我们得到双玻色子慢性碰撞极限下的能量为
-$$\begin{aligned}E&=E^{}_0+\bigintsss\frac{E(\vb{k})}{\exp{\beta\omega(\vb{k})}-1}\aleph^{}_D(\vb{k})\frac{\dd^3\vb{k}}{(2\pi)^3}\\&=E^{}_0+9N\bigintss_0^{\omega^{}_m}\sqrt{\omega^2+\dfrac{2NU^{}_0}{V}\omega}\frac{1}{\exp(\dfrac{\omega}{T})-1}\dfrac{\omega^2\dd\omega}{\omega^3_m},\end{aligned}$$
-这里我们取$D=1$。同样的记$z=\dfrac{\omega}{T}$，以及$z^{}_D=\dfrac{\Theta^{}_D}{T}$，我们得到能量最终写为
-\begin{equation}E=E^{}_0+\frac{9NT}{z^3_D}\bigintsss_0^{z^{}_D}\sqrt{1+\dfrac{2NU^{}_0}{zVT}}\frac{z^3}{e^z-1}\dd{z}.\end{equation}
-可见其和\textsl{Debye}函数之间相差一个权重因子
-$$C(z)=\sqrt{1+\dfrac{2NU^{}_0}{zVT}}.$$
-在慢速极限下我们一般有$U^{}_0\ll 1$，进而极限给出
-$$C(z)\approx1+\dfrac{NU^{}_0}{zVT}+o\qty(\dfrac{NU^{}_0}{zVT}),$$
-则能量最终写为
-$$E=E^{}_0+\frac{9NT}{z^3_D}\bigintsss_0^{z^{}_D}\qty(1+\dfrac{NU^{}_0}{zVT})\frac{z^3}{e^z-1}\dd{z},$$
-根据式(\ref{leloh})引入$2$阶\textsl{Debye}函数，则最终能量表述为
-\begin{equation}E=E^{}_0+3NTW^{}_3\qty(\frac{\Theta^{}_D}{T})+\frac{9N^2U^{}_0T}{2V\Theta^{}_D}W^{}_2\qty(\frac{\Theta^{}_D}{T}).\end{equation}
-$n$阶\textsl{Debye}函数的性质都是相同的，于是我们看到在慢速碰撞下，声子系统的能量和\textsl{Debye}内插模型是类似的，但是多了一个相互作用项。类似的我们从式(\ref{jitaine})得到凝聚态的能量为
-$$E^{}_0=\frac{N^2U^{}_0}{2V}+\frac{9N}{2\Theta^3_D}\bigintsss_0^{\omega^{}_m}\qty(\sqrt{\omega^2+\frac{2NU^{}_0}{V}\omega}-\omega-\frac{NU^{}_0}{V})\omega^2\dd\omega,$$
-依旧在极限$U^{}_0\ll 1$下，我们对被积函数展开到二阶，得到
-\begin{equation}E^{}_0=\frac{N^2 U_0}{2V} - \frac{9N^3 U_0^2}{4V^2 \Theta^{}_D}.\end{equation}
-可见在慢碰撞势能较小的情况$U^{}_0\ll 1$下，系统的能量写为
-\begin{equation}E=\frac{N^2 U^{}_0}{2V}+3NTW^{}_3\qty(\frac{\Theta^{}_D}{T})+\frac{9N^2U^{}_0}{2V\Theta^{}_D}\qty(TW^{}_2\qty(\frac{\Theta^{}_D}{T})-\frac{NU^{}_0}{2V})=E^{(0)}+E^{(1)}.\end{equation}
-因此，凝聚态临界温度$T^{}_c$的值近似满足方程
-\begin{equation}E^{(1)}(T^{}_c)=0\implies\frac{NU^{}_0}{2V}=T^{}_cW^{}_{2}\qty(\dfrac{\Theta^{}_D}{T^{}_c}).\end{equation}
-当然这一方程并不精确，因为我们并没有考虑$U^{}_0$的精确值，并且我们是直接使用了\textsl{Debye}态密度来计算，更不用所这里的近似是非常粗暴的。事实上声子的光学谱支态密度是可以具体求出，以下我们简单的介绍一下。\\
-\\
-对于非简并的光学支，我们按动量展开为
-\begin{equation}\omega(\vb{k})=\omega(\vb{k}^{}_0)+\frac{1}{2}\gamma^{}_{ij}\qty(k^i-k^i_0)\qty(k^j-k^j_0),\label{ffdgm988}\end{equation}
-其中$\gamma^{}_{ij}$是$\omega$在$\vb{k}=\vb{k}^{}_0$处的\textsl{Hesse}矩阵分量，没有一次项出现是因为极值条件限制。我们假设在动量空间内的三维笛卡尔系$\qty{k^{}_x,k^{}_y,k^{}_z}$下，$\gamma^{}_{ij}$是对角化的，其主值构成的谱为$\text{Sp}=\qty{\gamma^{}_1,\gamma^{}_2,\gamma^{}_3}$，从而动量空间的轴就是主轴，展开式为
-\begin{equation}\begin{aligned}\omega(\vb{k})-\omega^{}_0&=\frac{1}{2}\qty[\gamma^{}_1\qty(k^{}_x-k^{}_{0x})^2+\gamma^{}_2\qty(k^{}_y-k^{}_{0y})^2+\gamma^{}_3\qty(k^{}_z-k^{}_{0z})^2]\\&=\frac{1}{2}\qty(\xi^2_x+\xi^2_y+\xi^2_z)=\frac{1}{2}\abs{\bm{\xi}}^2,\quad \xi^{}_i=\sqrt{\abs{\gamma^{}_i}}\qty(k^{}_i-k^{}_{0i}).\end{aligned}\label{ffdgm998}\end{equation}
-我们这里依旧希望求出频域的态密度$\aleph(\omega)$，注意到$1-$形式基变换$\dd\omega=\grad^{}_{\vb{k}}\omega(\vb{k})\cdot d\vb{k}$，则频域态密度为
-\begin{equation}\aleph(\omega)=\aleph(\vb{k})\frac{\dd^3\vb{k}}{(2\pi)^3\dd\omega}=\frac{1}{(2\pi)^3}\bigintsss\frac{\dd^2\vb{k}}{\abs{\grad^{}_{\vb{k}}\omega(\vb{k})}},\end{equation}
-对等动量球面积分。对于频率带入式(\ref{ffdgm998})，则取坐标变换$k\rightarrow u$，在$\bm{\xi}$空间下等动量球面元写为
-$$d^2\vb{k}=\frac{1}{\sqrt{\gamma}}d^2\bm{\xi}=\frac{1}{\sqrt{\gamma}}\abs{\bm{\xi}}^2\dd\textit{O}^{}_{\bm{\xi}},\quad \gamma=\abs{\gamma^{}_1\gamma^{}_2\gamma^{}_3},\quad\abs{\grad^{}_{\vb{k}}\omega(\vb{k})}=\abs{\grad^{}_{\bm{\xi}}\omega(\bm{\xi})}=\abs{\bm{\xi}},$$
-其中$\dd\textit{O}^{}_{\bm{\xi}}$是$\bm{\xi}$空间的立体角元，第一个公式就是面元的变换，则最终我们得到光学支的态密度为
-\begin{equation}\aleph(\omega)=\aleph(\omega^{}_0)+\frac{1}{\pi^2\sqrt{2\gamma}}\sqrt{\abs{\omega-\omega^{}_0}}.\end{equation}
-对于声学支，\textsl{Debye}态密度是适用的，只不过其系数应变为$9ND\rightarrow9$，因此我们总结声子的态密度为
-\begin{equation}\aleph(\omega)=\begin{cases}\displaystyle \dfrac{9\omega^2}{\omega^3_m},\quad \omega\ll\omega^{}_0;&\\ \displaystyle\aleph(\omega^{}_0)-\dfrac{1}{\pi^2\sqrt{2\gamma}}\sqrt{\abs{\omega^{}_0-\omega}},\quad \omega<\omega^{}_0;&\\ \displaystyle\aleph(\omega^{}_0),\quad \omega>\omega^{}_0.\end{cases}\end{equation}
-注意这里我们按$\omega^{}_0$分类，其依据是导数$d^{}_{\omega}\aleph$在$\omega^{}_0$处奇异，读者可自行证明上式只能取在左侧。在此密度下的凝聚态能量就不计算了，读者可自行求解，当然要注意此时极化的数量为$1\leq\mu\leq 3DN-3$。
-
 \subsection{朗道二级相变理论}\label{landauooo909}
 \noindent 在第\ref{woho2ooi}节的最后，我们建立了$2D$\textsl{Ising}模型的\textsl{Landau}展开。并且我们证明了，\textsl{Landau}展开也适用于存在外场的情况，是研究相变理论的普遍工具，因此这一节我们就系统性的介绍\textsl{Landau}二级相变理论。当然所有的内容都是在相平衡的前提下讨论的，非平衡态情况参见附录\ref{haergong}。
 \subsubsection{序参量的引入}
@@ -4944,7 +4557,7 @@ $$\text{顺磁}(T>T^{}_c):\mathbb Z^{}_2\rightarrow\text{铁磁}(T<T^{}_c):\qty{
 最后一点就是系统对称性的具体体现。对于不存在外场的自发相变，系统的热力学函数在相变点附近可以取序参量的幂级展开，但是一般而言高对称性的相是各向同性对称，这实际上就是\textsl{CPT}变化的体现。比如三维铁磁—顺磁相变，之前已经证明了时间反演会导致自旋反演(第\ref{PUG><<}节)，但是二级相变和时间方向无关，所以在时间反演下我们得到
 $$\hat{T}(\vb{m})=-\vb{m},\quad \hat{T}\mathscr S(\vb{m})=\mathscr S(-\vb{m})=\mathscr S(\vb{m}),$$
 也就相当于宇称后系统保持不变，这就是各向同性对称。所以在幂级展开中，序参量的各向同性对称导致奇次项全部消失，只保留偶次项。这就是\textsl{Landau}展开的基本性质的由来，并且我们要求这一展开式对于低对称性相同样在形式上有效。由于一般相变和粒子数有关，所以根据热力学和统计物理，此时最佳的热力学函数是自由焓$G$，当然这应该是在平均场意义下的，我们使用书里的记号来表述\textsl{Landau}展开
-\begin{equation}G^{}_{mf}(\vb{y},T,\eta)=G(\vb{y},T,0)+A(\vb{y},T)\eta^2+B(\vb{y},T)\eta^4+\cdots+W^{2n}(\vb{y},T)\eta^{2n},\end{equation}
+\begin{equation}G^{}_{mf}(\vb{y},T,\eta)=G(\vb{y},T,0)+A(\vb{y},T)\eta^2+B(\vb{y},T)\eta^4+\cdots+W^{2n}(\vb{y},T)\eta^{2n},\label{LAD5941957}\end{equation}
 其中我们要求最高次项的系数为正，这里就是$\dim(G)=2n\rightarrow W^{2n}>0$，并且我们选择
 \begin{center}\emph{在高对称相中$A>0$，温度范围是$T\geq T^{}_c$；低对称相中$A<0$，温度范围是$T<T^{}_c$。}\end{center}
 当然这取决于序参量和函数的选择，具体情况还应具体分析，不能一味的套用这里既定的设定，相应最高此项的系数也要改变。对于一般的系统，展开式取到四阶即可，则此时要求$\dim(G^{}_{mf})=4\rightarrow B>0$。对与存在外场的受迫相变，我们参考\textsl{Ising}模型可以知道，外场是作为展开式的一次项插入的，以$h>0$表征外场，则四阶展开式为
@@ -5237,7 +4850,7 @@ $$\xi^2=\dfrac{g}{2b\eta^2_0}=g\qty(2b\cdot\dfrac{-a}{2b})^{-1}=-\frac{g}{a},\qu
 $$\mathrm{Cov}\qty(\eta(\vb{r}^{}_1),\eta(\vb{r}^{}_2))=\expval{(\eta^{}_1-\expval{\eta^{}_1})(\eta^{}_2-\expval{\eta^{}_2})},$$
 在物理中称为\textbf{关联函数 \textit{Correlation Function}}，取自协方差的线性相关程度系数。关联函数是研究涨落的重要工具之一，其在物理中的应用可以追溯到通体湍流分析，序参量为速度。在三维下，关联函数有形式
 $$G(\vb{r}^{}_1-\vb{r}^{}_2=\vb{r})=\expval{\Delta\eta(\vb{r}^{}_1)\Delta\eta(\vb{r}^{}_2)}=\frac{1}{4\pi r}\exp(-\frac{r}{\xi}),$$
-于是我们看到关联半径$\xi$的物理含义：它决定了关联作用显著减小的距离的数量级。在临界点附近$\xi=\infty$，所以涨落的关联性$\sim r^{-1}$。由于此时$d=3$，所以定义关联函数的临界指数$\zeta$如下
+于是我们看到关联半径$\xi$的物理含义：它决定了关联作用显著减小的距离的数量级。在临界点附近它是发散的$\xi=\infty$，所以涨落的关联性$\sim r^{-1}$。由于此时$d=3$，所以定义关联函数的临界指数$\zeta$如下
 \begin{equation}G(\vb{r})\propto r^{-(d-2+\zeta)},\end{equation}
 临界指数的出现主要是$\exp(-\dfrac{r}{\xi})$的精确度问题，这里近似到零阶得到$\zeta^{}_{mf}=0$。关于局部理论的动态变化参见附录\ref{haert123ng}，这里我们不展开。
 \subsubsection{临界指数与标度不变性}
@@ -5596,7 +5209,394 @@ $$\lim_{r\to\infty}C(\vb{r})=\begin{cases}\displaystyle T^{}_c(\ln(r)\cup r)=\in
 $$\xi(t)=\xi^{}_0(t)K(\epsilon),\quad \abs{t}\ll\abs{t}^{}_c,$$
 其中$\xi^{}_0$是非涨落的关联半径，其临界指数$\xi^{}_0\propto\abs{t}^{-\nu}$，函数$K$是内禀尺度的体现，若我们有$K(\epsilon)\sim\epsilon^{-\theta}$，则最终在涨落区$\abs{t}\ll\abs{t}^{}_c$的临界指数$\nu$修正为
 \begin{equation}\xi(t)\propto\abs{t}^{-\nu-\theta},\end{equation}
-指数$\theta$称为\textbf{涨落反常指数 \textit{Anomaly Exponent}}，可以通过标度不变性参数$y^{}_t,y^{}_h$推导其余指数关于$\theta$的修正，这里不详细说明。
+指数$\theta$称为\textbf{涨落反常指数 \textit{Anomaly Exponent}}，可以通过标度不变性参数$y^{}_t,y^{}_h$推导其余指数关于$\theta$的修正，这里不详细说明，具体请参考第\ref{JuticaG6Y9//}节。
+
+\subsection{各项同性介质中的声子}\label{ihuh3244ru..}
+\noindent 在第\ref{wohoooi}节中我们通过引入晶格理论，介绍了铁磁—顺磁相变的\textsl{Ising}模型，同时特别指出对于\textsl{Ising}模型取为静止晶格，每个格点上的粒子保持静止。但这明显不符合常理，我们知道电子系统在$T\to 0$时仍然有能量$E^{}_F$，这是由不相容原理导致的。既然其有能量那必然有运动，换句话来说就是运动是绝对的。方便起见，我们这里依旧采用自然单位制$c=1$。\\
+\\
+现在的问题就是如何来量化晶格的运动，因为晶格由格点构成，所以晶格的运动是各个格点上粒子运动的总和。由于在介质中，粒子之间的相互作用主要是由\textsl{LJ}势(\ref{JLJKHB///})控制，而\textsl{LJ}势有明显的吸引与排斥区，所以不难分析出格点的运动是周期性的。周期运动中最简单的莫过于简谐振动，因此我们来研究晶格的谐振子性质。
+\subsubsection{晶格的简谐振动}
+\noindent 这里我们从一维晶格入手，研究其中一个格点，这里我们假设其相邻的两个格点静止。
+\begin{center}\tikz{\pgfmathsetmacro{\d}{3}\draw[](0,)--(4*\d,);\shade[ball color=black](0,)circle(3pt);\shade[ball color=black](4*\d,)circle(3pt);\shade[ball color=black](2*\d,)circle(3pt);\node[draw,inner sep=2pt,dotted,circle,ultra thick]at(0.8*\d,){};\node[right,scale=1,above]at(0.4*\d,){Replusion U};\node[draw,inner sep=2pt,dotted,circle,ultra thick]at(2.8*\d,){};\node[right,above]at(2.4*\d,){Replusion U};\node[left=1,above]at(1.8*\d,){Attraction U};}\captionof{figure}{一维原胞中心格点关于两个相邻格点的势}\end{center}
+可以看到，左侧位置处原子必然被左侧的格点排斥，而会被右侧格点吸引，反之亦然。于是中心格点会在其相邻格点之间震荡，这对于每一个格点都是如此。当然震荡运动总有平衡位置，对于\textsl{LJ}势为$U^{}_{min}=U(r^{}_e)$。现在我们在格点$i$平衡点附近展开，得到
+\begin{equation}\begin{aligned}&\eval{\dv{U^{}_i}{r}}_{r^{}_e}=0\implies r^{}_e=2^{1/6}r^{}_0,\quad x^{}_i=r^{}_i-r^{}_e\implies\\&U^{}_i(x^{}_i)=U^{}_i(x^{}_i=0)+\frac{1}{2}\eval{\dv[2]{U}{r}}_{r^{}_e}x_i^2=-\dfrac{a}{4}+\dfrac{9a}{r_e^2}x_i^2=E^{}_0+\frac{1}{2}k^{}_ix_i^2.\end{aligned}\end{equation}
+此处$x$代表关于平衡点的偏离。于是我们看到，若在平衡点附近做微运动的话，那么运动必然是谐振动，所以每个格点可以理解为一个谐振子。当然和\textsl{S-S}耦合能的理解一样，若我们考虑整个晶格，则必然要考虑到不同粒子间势能参数$a,r^{}_0$的差异，这就导致弹性系数$k^{}_i$事实上和周围其余格点相关，写为$k^{}_i=k^{}_i(r,r')$。这样的振动形式称为\textbf{各项异性谐振子}，它可以用来描述高度各项异性的晶体，特别是当相邻格点处$k$的变化很大的时候。\\
+\\
+为了研究晶格的谐振子模型，我们先从宏观角度分析微振动。假设我们考察$n$维欧式空间$\mathbb R^n$，则单个原子自由度为$2n$，其中有$n$个旋转自由度，若有$N$个原子则自由度为$2nN$。但是振动属于平动，所以我们需要减去旋转自由度，得到$n$和$nN$。记原子的相对平衡点的位移为$\vb{r}=x^a\in\mathscr T^1_{\ 0}(\mathbb R^n)$，对于势能$U$我们在$0$处展开到二阶得到
+\begin{equation}U(\vb{r})=U(\vb{0})+\partial^{}_{\vb{r}}U(\vb{0})\vb{r}+\frac{1}{2}\mathscr H^{}_{\vb{0}}U(\vb{r},\vb{r}),\quad \mathscr H^{}_{\vb{0}}U^{}_{ab}(\vb{r},\vb{r})=\partial^{}_a\partial^{}_bU(\vb{0})x^ax^b.\end{equation}
+其中$\mathscr H^{}_{\vb{0}}U^{}_{ab}=k^{}_{ab}\in\mathscr T^0_{\ 2}(\mathbb R^n)$称为势能$U$在$\vb{r}=\vb{0}$处的\textbf{\textsl{Hesse}矩阵}，是二阶导数的二阶张量形式，我们会在\textsl{Riemann}几何中详细讨论。于是在经典力学体系下，系统的\textit{Lagrangian}为
+\begin{equation}L=E^{}_k-U=\frac{1}{2}\qty(m^{}_{ij}\dt{x}^i\dt{x}^j-k^{}_{ij}x^ix^j)=\mathcal B(\dt{\vb{r}})-\mathcal B(\vb{r}),\end{equation}
+其中$m^{}_{ab}$是质量张量，对应质量各向异性的原子系统，若是各向同性的则就是$m\delta^{}_{ab}$。不难看到这是典型的波动\textit{Lagrangian}，由两个\textsl{Laplace}核构成，在形式上和\textsl{Proca}场是一样的，所以我们得到\textsl{E-L}方程和相应的解为
+\begin{equation}m^{}_{ij}\ddt{x}^j+k^{}_{ij}x^j=0,\quad \vb{r}=\vb{C}\exp(i\omega t).\end{equation}
+这里的$\vb{C}$按定义就是极化矢量，给出振动的大小和方向。将解回代入波动方程得到
+\begin{equation}m^{}_{ij}\omega^2C^j=k^{}_{ij}C^j.\end{equation}
+这是一个典型的本征值方程，其主值为$\omega$，满足代数方程
+\begin{equation}\abs{m^{}_{ij}\omega^2-k^{}_{ij}}=0,\quad 1\leq i,j\leq n.\end{equation}
+最终我们得到主值的谱为$\text{Sp}=\qty{\omega^{}_{\mu}\vert1\leq\mu\leq n}$，一共有$n$个主值，对应$n$个主向量$\qty{\vb{C}^{}_{\mu}\vert1\leq\mu\leq n}$，当然不排除简并的可能性。\\
+\\
+在没有简并的情况下，主向量互相正交，则我们也可以将两个系数张量取主轴分解得到
+\begin{equation}m^{}_{ij}=\sum_{\mu}m^{}_{\mu}\xi^{}_{i\mu}\xi^{}_{j\mu},\quad k^{}_{ij}=\sum_{\mu}m^{}_{\mu}\omega^{}_{\mu}\xi^{}_{i\mu}\xi^{}_{j\mu}.\end{equation}
+其中$\bm{\xi}^{}_{\mu}$是单位主向量，满足$\abs{\bm{\xi}_{\mu}}=1$，$m^{}_{\mu}$是质量张量的主值，证明请参考第\ref{uoyu}节中关于偏振张量$\rho^{}_{ij}$的描述。此时\textit{Lagrangian}为
+$$L=\frac{1}{2}\qty(m^{}_{ij}\dt{x}^i\dt{x}^j-k^{}_{ij}x^ix^j)=\frac{1}{2}\sum_{\mu}m^{}_{\mu}\qty(\xi^{}_{i\mu}\dt{x}^i\xi^{}_{j\mu}\dt{x}^j-\omega^{}_{\mu}\xi^{}_{i\mu}x^i\xi^{}_{j\mu}x^j).$$
+由于$\bm{\xi}^{}_{\mu}$和时间无关，所以我们必然有$\xi^{}_{i\mu}\dt{x}^i=\dfrac{d}{dt}\qty(x^i\xi^{}_{i\mu})$，从而我们定义\textbf{简正坐标 \textit{Normal Coordinate}}如下
+\begin{equation}\Theta^{}_{\mu}(t)=\xi^{}_{i\mu}x^i(t)=C^i\xi^{}_{i\mu}\exp(i\omega^{}_{\mu}t),\quad \ddt{\Theta^{}_{\mu}}+\omega^2_{\mu}\Theta^{}_{\mu}=0,\end{equation}
+则系统的\textit{Lagrangian}可以写为
+\begin{equation}L=\sum_{\mu}\frac{m^{}_{\mu}}{2}\qty(\dt{\Theta}_{\mu}^2-\omega^2_{\mu}\Theta^{}_{\mu}),\end{equation}
+不难看到此时振动分解为若干个单自由度振动的和，称为\textbf{简正振动 \textit{Normal Oscillation}}。在此情况下，我们给出相应的能量为
+\begin{equation}E=\sum_{\mu}\frac{m^{}_{\mu}}{2}\qty(\dt{\Theta}_{\mu}^2+\omega^2_{\mu}\Theta^2_{\mu}),\label{bnOihb ))}\end{equation}
+而系统的正则量子化给出谐振子模型为
+\begin{equation}\hat{H}=\sum_{\mu}\frac{1}{2}\qty(\frac{\hat{p}_{\mu}^2}{m^{}_{\mu}}+\omega^2_{\mu}\hat{\Theta}^2_{\mu}),\quad E^{}_{n}=\sum_{\mu}\omega^{}_{\mu}\qty(\frac{1}{2}+n^{}_{\mu}).\end{equation}
+对于$N$个原子的系统，它们各自的相对位移为${x^a}^{}_{\kappa}$，其中$\kappa$是原子编号，则我们可以将其看作一个$N$维系统，于是按单粒子定义我们推广得到\textsl{Hesse}矩阵为
+$$\mathscr H^{}_{\vb{0}}{U^{}_{ab}}^{\kappa\gamma}=\pdv{U}{{x^a}^{}_{\kappa}}{{x^a}^{}_{\gamma}}={\Lambda^{}_{ij}}^{\kappa\gamma},$$
+可以看到其和粒子号有关，且$\kappa$也是哑标，从而系统的\textit{Lagrangian}写为
+\begin{equation}L=\frac{1}{2}\qty(\sum_{\kappa}{m^{}_{ij}}^{\kappa}{\dt{x}^i}_{\kappa}{\dt{x}^j}_{\kappa}-\sum\limits_{\kappa\gamma}{\Lambda^{}_{ij}}^{\kappa\gamma}{x^i}_{\kappa}{x^j}_{\gamma}).\label{dabi7,.76**5}\end{equation}
+关于系统的\textsl{E-L}方程就不给出了，请读者自行推导，并给出系统的简正坐标及其正则量子化。值得一提的是，简正振动在分子系统的计算中很有用，这里我们暂时不展开。\\
+\\
+现在我们从类似的角度分析三维晶格的振动，具体的几何细节请参考\cite{L6f}。因为晶格由相同的原胞构成，所以我们可以用某一原胞的任意格点作为晶格的原点，但应注意到格点是周期规律分布的，\textbf{所以坐标应取为整数}。记原胞的基矢量为$\qty{\vb{a}^{}_1,\vb{a}^{}_2,\vb{a}^{}_3}$，注意它们不是单位化的，模长$a^{}_1,a^{}_2,a^{}_3$代表了原胞的边长。在此坐标系下，原胞中每个原子的坐标可以用三个整数$(n^1,n^2,n^3)$表示，则矢径可写为
+\begin{equation}\vb{r}^{}_{\vb{n}}=n^i\vb{a}^{}_i=\vb{n}\vb{a},\quad \vb{n}=(n^1,n^2,n^3)\in\mathbb Z^3.\end{equation}
+这样的晶格坐标系称为\textbf{正晶格系 \textit{Direct Lattice}}，这里我们给出一维正晶格系中边长为$a$的示意图
+\begin{center}\tikz{\pgfmathsetmacro{\d}{1.5}\draw[](-4*\d,)--(4*\d,);\shade[ball color=black](0,)circle(3pt);\node[draw,inner sep=2pt,circle]at(2*\d,){};\node[draw,inner sep=2pt,circle]at(-4*\d,){};\draw[->,thick,blue](0,)--(2*\d,)node[red,above]{$a$};\draw[->,thick,green!50!black](0,)--(-4*\d,)node[red,above]{$-2a$};\node[mydarkblue,above]at(\d,){$\vb{r}^{}_{n=1}=\vb{a}$};\node[mydarkblue,above]at(-2*\d,){$\vb{r}^{}_{n=-2}=-2\vb{a}$};}\captionof{figure}{一维正晶格系的示意图，原胞边长为$a$}\end{center}
+不难看到矢径在晶格平移下不变，也就是
+\begin{equation}\forall\vb{r}^{}_{\vb{n}},\vb{R}\in\mathscr T^1_{\ 0}(DL),\quad \forall\vb{n}\in\mathbb Z^3,\quad \vb{r}^{}_{\vb{n}}+\vb{R}=\vb{r}^{}_{\vb{n}'}\in \mathscr T^1_{\ 0}(DL),\end{equation}
+这是晶格周期分布的数学表达式，且在\textsl{Ising}模型中所谓的相邻格点也就是满足$n^1+n^2+n^3=1$的格点。现在我们重点研究单个原胞，假设每个原胞包含$N$个原子，仍记各原子的相对位移为
+$${\vb{x}^a}^{}_{\kappa}(\vb{n}),\quad 1\leq\kappa\leq N,$$
+则晶格系统的\textit{Lagrangian}应该写为式(\ref{dabi7,.76**5})的形式。但前面提到，晶格的振动是各项异性的，各项异性弹性系数$\Lambda^{\kappa\gamma}_{ij}$和周围格点均相关，具体来讲是和相对位置$\vb{r}^{}_{\vb{n}}-\vb{r}^{}_{\vb{n}'}\propto\vb{n}-\vb{n}'$有关，因而晶格的\textit{Lagrangian}应该写为
+\begin{equation}L=\frac{1}{2}\qty(\sum\limits_{\vb{n}}{m^{}_{ab}}^{\kappa}{\dt{\vb{x}}^a}_{\kappa}(\vb{n}){\dt{\vb{x}}^b}_{\kappa}(\vb{n})-\sum\limits_{\vb{n}\vb{n}'}{\Lambda^{}_{ab}}^{\kappa\gamma}(\vb{n}-\vb{n}'){\vb{x}^a}^{}_{\kappa}(\vb{n}){\vb{x}^b}^{}_{\gamma}(\vb{n}')).\end{equation}
+注意这里要对整数坐标求和，因为粒子的平衡点在空间上是固定的。由晶格的对称性和平移不变性我们得到各项异性弹性系数满足关系
+\begin{equation}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n})={\Lambda^{}_{ji}}^{\gamma\kappa}(-\vb{n}),\quad \sum\limits_{\kappa\vb{n}}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n})=0.\end{equation}
+关于由晶格的旋转不变性所导致的系数关系这里不列出的，读者可自行推导。相应的\textsl{E-L}方程为
+\begin{equation}{m^{}_{ij}}^{\kappa}\ddt{x}^{j\kappa}(\vb{n})+\sum\limits_{\vb{n}'}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n}-\vb{n}'){x^j}_{\gamma}(\vb{n}')=0.\end{equation}
+值得指出的是，虽然此方程并非标准的波动方程，其不包含对空间的二阶导，但是因为最终的相对位移和空间坐标有关，所以我们依旧可以取解为单色平面波的叠加，写作
+\begin{equation}\vb{x}^{}_{\kappa}(\vb{n})=\vb{C}^{}_{\kappa}(\vb{k})\exp{i(\vb{k}\cdot\vb{r}^{}_{\vb{n}}-\omega t)}.\end{equation}
+其中$\vb{C}^{}_{\kappa}$是极化矢量，其和波的传播方向也就是波矢有关。可以看到波矢$\vb{k}$的引入和正晶格系矢径$\vb{r}^{}_{\vb{n}}$满足空间—波矢变换，但是因为方程的非波动性导致$\vb{k}$和$\omega$之间的关系必然不是自由粒子那样的$\omega=\abs{\vb{k}}$这么简单，我们需要重新求解。\\
+\\
+使用老办法，将解回带入方程中得到
+$$\omega^2{m^{}_{ij}}^{\kappa}C^{j\kappa}(\vb{k})\exp(i\vb{k}\cdot\vb{r}^{}_{\vb{n}})=\sum\limits_{\vb{n}'}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n}-\vb{n}'){C^j}_{\gamma}(\vb{k})\exp(i\vb{k}\cdot\vb{r}^{}_{\vb{n}'}),$$
+我们不难从中识别出空间—波矢变换项
+\begin{equation}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{k})=\sum\limits_{\vb{n}'}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n}-\vb{n}')\exp{-i\vb{k}\cdot\qty(\vb{r}^{}_{\vb{n}}-\vb{r}^{}_{\vb{n}'})},\end{equation}
+这是关于各项异性弹性系数的离散\textsl{Fourier}分量，于是我们得到波矢分量方程为
+\begin{equation}\omega^2{m^{}_{ij}}^{\kappa}C^{j\kappa}(\vb{k})={C^j}^{}_{\gamma}{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{k}).\label{gfbv yu}\end{equation}
+这就是明显的本征值方程，其能给出非零主向量$\vb{C}^a_{\gamma}$的等价条件是代数方程
+\begin{equation}\abs{{\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{k})-\omega^2{m^{}_{ij}}^{\kappa}\delta^{\kappa\gamma}}=0,\quad 1\leq i,j\leq3,\quad 1\leq\kappa,\gamma\leq N.\end{equation}
+不难看到该矩阵的秩是$3N$，也就是对应了$3N$个极化方向，称为\textbf{振动谱支 \textit{Branches}}，则对于有$l$个原胞的晶格的总本征谱为
+\begin{equation}\text{Sp}=\qty{\omega^{}_{\mu}=\omega^{}_{\mu}(\vb{k})\mid 1\leq\mu\leq 3Nl},\quad \omega^{}_{\mu}(\vb{k})=\omega^{}_{\mu}(-\vb{k}).\end{equation}
+$\omega^{}_{\mu}(\vb{k})$的偶函数性很容易证明，因为${\Lambda^{}_{ij}}^{\kappa\gamma}(\vb{n})$是偶函数，所以其\textsl{Fourier}分量也是偶函数，则按照代数方程必然得到本征值是偶函数。关于角频率的形式这里不具体分析，其和材料的弹性性质有关，我们放在附录\ref{Y6TY.,.,''}中。这里我们只引用后续会涉及到的结果：对于波长$\lambda\gg \abs{\vb{a}}$的波，我们有$\omega^{}_{\mu}=kf\qty(\dfrac{\vb{k}}{k})$，在连续介质中共有三支，这种类型的支称为\textbf{声学波}，对于的称为\textbf{光学波}，它们确定了谐振子的两种相互作用模式，这里不展开了。\\
+\\
+现在我们来讨论正晶格系下波矢的形式。我们知道正晶格系中矢径的系数是整数，而相位$\vb{k}\cdot\vb{r}^{}_{\vb{n}}\in \mathbb R$也就意味着波矢和矢径是对偶的。如果我们从\textsl{de Broglie}动量$\vb{p}=\hbar\vb{k}$出发就很容易看到，因为共轭动量和矢径是对偶的。于是我们可以在晶格基上定义其对偶基
+\begin{equation}\qty{\vb{b}^1,\vb{b}^2,\vb{b}^3},\quad \vb{b}^c(\vb{a}^{}_d)=\expval{\vb{b}^c,\vb{a}^{}_d}=\delta^c_d.\end{equation}
+因为$a^{}_i$是原胞的各边长，我们必然得到$b^i$的值就是原胞边长的倒数，从而波矢可以表示为
+\begin{equation}\vb{k}=q^{}_1\vb{b}^1+q^{}_2\vb{b}^2+q^{}_3\vb{b}^3=\vb{q}\vb{b},\quad \vb{q}=(q^{}_1,q^{}_2,q^{}_3).\end{equation}
+现在我们来讨论$\vb{q}$的取值。对于相位我们得到
+$$\vb{k}\cdot\vb{r}^{}_{\vb{n}}=q^{}_1n^1+q^{}_2n^2+q^{}_3n^3=\vb{k}'\cdot\vb{r}^{}_{\vb{n}'}={n'}^1+{n'}^2+{n'}^3,$$
+因为$\vb{n}^a,\vb{n}'^a\in\mathbb Z^3$，所以我们必然得出
+\begin{equation}\vb{q}\in\mathbb Z^3,\quad q^{}_i\in\mathbb Z.\end{equation}
+也就是说，波矢的分量也是整数，从而由对偶基$\qty{\vb{b}^1,\vb{b}^2,\vb{b}^3}$构成的空间也是网格式的，称为\textbf{倒晶格系 \textit{Reciprocal Lattices}}。并且由晶格的平移不变性我们得到波矢满足
+\begin{equation}\forall\vb{k},\vb{W}\in\mathscr T^1_{\ 0}(RL),\quad \vb{k}+\vb{W}=\vb{k}'\in\mathscr T^1_{\ 0}(RL)\implies\omega^{}_{\mu}(\vb{k}+\vb{W})=\omega^{}_{\mu}(\vb{k}').\end{equation}
+一般在晶体学中用的比较多的是倒晶格系，通过倒晶格系的\textsl{Bravais}定理可以得到一系列的结论，这里就不展开了。倒晶格系的离散性事实上是正晶格系正则量子化的直接结果，比如对于正晶格系我们采用无限维势阱模型
+$$-\frac{1}{2m}\bm{\Delta}\psi=E\psi,\quad \vb{r}^{}_{\vb{n}}\leq\vb{r}\leq\vb{r}^{}_{\vb{n}+\vb{1}}.$$
+这是量子力学的最基本模型，我们得到波矢为$k^{}_{iq}=\dfrac{q\pi}{a^{}_i}=qb^i$，也就是倒晶格系。所以我们看到，晶格的量子化是自然的结果，而其谐振子模型也自然也可以取二次量子化。这样的二次量子化结果就是\textbf{声子 \textit{Phonon}}，其对应的粒子场称为\textbf{声子场}，在1930年由两位苏联物理学家\textsl{\rusa{И. Е. Тамм}}和\textsl{\rusa{Я. И. Френкель}}提出，是凝聚态物理最重要的概念之一。
+\subsubsection{晶格谐振子的二次量子化}
+\noindent 关于上述晶格简谐振动的二次量子化应该和谐振子的思路是一致的，但是我们这里要解决一个问题：此处的二次量子化是否应该采用相对论性的？也就是说，晶格的简谐振动是类似于经典谐振子还是\textsl{Proca}场，亦或者是光子场。\\
+\\
+这个问题很容易解答，因为晶格的三维简谐振动是由三维矢量
+$$\vb{x}^{}_{\kappa}(\vb{n},t)=\vb{C}^{}_{\kappa}(\vb{k})\exp{i(\vb{k}\cdot\vb{r}-\omega t)}$$
+描述的，其和时间有关，因此我们得到晶格的简谐振动和$s=1$的相对论性玻色子场是一致的。但我们知道在相对论下，$s=1$的粒子有\textsl{Proca}场和真中性场比如光子$\gamma$，而两者的二次量子化是有较大的区别的。这也是很好解答的，我们知道晶格的波矢一定是倒晶格系中的矢径，所以无论晶格如何振动，波矢一定在同一个倒晶格系中，因此反波矢并不会导致新粒子的产生，也就不需要两套独立的二次量子化算符。因此晶格的简谐振动应该匹配电磁波场的二次量子化，从而我们知道声子的性质应该和光子是类似的。\\
+\\
+于是我们完全采用光子场的二次量子化思路，按照第\ref{fSVvv!!f}节的内容，我们给出各格点的相对位移$\bm{\psi}_s^a$的表达式
+\begin{equation}\bm{\psi}_{\kappa}^a(\vb{n},t)=D\sum\limits_{\mu=1}^{3N}\sum\limits_{\vb{k}}\qty(a_{\vb{k}\mu}(t){\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}+a^{*}_{\vb{k}\mu}(t){\vb{e}^{a*}}_{\kappa(\mu)}e^{-i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}),\label{xiang **}\end{equation}
+其中$\qty{a^{}_{\vb{k}(\mu)}(t),a^*_{\vb{k}(\mu)}(t)}$是叠加系数，$\vb{e}^{a}_{s(\mu)}$是极化矢量，$\mu$是相应的简正指标，$D$是归一化系数。我们知道此处色散关系$\omega^{}_{\mu}=\omega^{}_{\mu}(\vb{k})$无法表示成类似电磁波的$\omega=k$的简单形式，自然极化矢量也不会简单的满足式(\ref{XBJKF5B})的归一化。但是作为矢量，其归一化的形式应该是类似的，所以我们来计算内积，对本征方程(\ref{gfbv yu})取简正极化矢量内积得到
+$$\begin{aligned}&\sum_{\kappa}\omega^2_{(\mu)}{m^{}_{ij}}^{\kappa}{e^{j\kappa}}^{}_{(\mu)}{e^{i*}}_{\kappa(\nu)}=\sum_{\kappa}{e^j}^{}_{\gamma(\mu)}{\Lambda^{}_{ij}}^{\kappa\gamma}e^{i*}_{\kappa(\nu)},\\&\sum_{\kappa}\omega^2_{(\nu)}{m^{}_{ij}}^{\kappa}{e^{i*}}_{\kappa(\nu)}{e^{j\kappa}}^{}_{(\mu)}=\sum_{\kappa}{e^{i*}}^{}_{\kappa(\nu)}{\Lambda^{}_{ij}}^{\kappa\gamma}{e^j}^{}_{\gamma(\mu)}.\end{aligned}$$
+上下两式相减得到
+$$\sum_{\kappa}\qty(\omega^2_{(\mu)}-\omega^2_{(\nu)}){m^{}_{ij}}^{\kappa}{e^{i*}}^{}_{\kappa(\nu)}{e^{j\kappa}}^{}_{(\mu)}=0.$$
+对于非简并谱，也就是$\omega^2_{(\mu)}\neq\omega^2_{(\nu)}\Longleftrightarrow\mu\neq\nu$，我们得到正交关系
+\begin{equation}\sum_{\kappa}{m^{}_{ij}}^{\kappa}{e^{i*}}_{\kappa(\nu)}{e^{j\kappa}}_{(\mu)}=0,\quad \mu\neq\nu.\end{equation}
+可以看到极化矢量依旧满足本征矢量的正交性公式，但是其度规是质量张量。不难想到我们可以将其推广为归一化条件，但是因为系数质量的原因我们给出
+\begin{equation}\sum_{\kappa}\frac{{m^{}_{ij}}^{\kappa}}{m}{e^{i*}}_{\kappa(\nu)}{e^{j\kappa}}^{}_{(\mu)}=\delta^{}_{\mu\nu},\quad 3m^2=\sum_{\kappa}{m^{ij}}_{\kappa}{m^{}_{ij}}^{\kappa}.\end{equation}
+其中$m$是晶格系统总质量，由质量张量的积确定。同时根据晶格的平移不变性我们立马能推出结论
+\begin{equation}{\vb{e}^{a}}^{}_{\kappa(\mu)}(-\vb{k})={\vb{e}^{a*}}^{}_{\kappa(\mu)}(\vb{k}).\end{equation}
+在相对位移式(\ref{xiang **})中我们看到，叠加系数关于时间的形式为
+$$a^{}_{\vb{k}(\mu)}(t)\propto\exp{-i\omega^{}_{\mu}(\vb{k})t},\quad \ddt{a}^{}_{\vb{k}\mu}+\omega^2(\vb{k})a_{\vb{k}\mu}=0,$$
+不难发现这就是晶格的简正坐标，满足单自由度振动的形式。仍然记质量主值为$m^{}_{\mu}$，则能量按式(\ref{bnOihb ))})可以算得
+\begin{equation}E=\sum\limits_{\vb{k}\mu}\frac{m^{}_{\mu}}{2}\qty(\abs{\dt{a}^{}_{\vb{k}\mu}}^2+\omega^2_{\mu}\abs{a^{}_{\vb{k}\mu}}^2)=\sum_{\mu}m^{}_{\mu}\omega^2_{\mu}\abs{a^{}_{\vb{k}\mu}}^2,\end{equation}
+不难发现这是符合式(\ref{IUN09<>)0})的形式的，只不过对于电磁场质量没有意义，因此用体积代替。类似的我们按式(\ref{fenliangshi})定义位形分量$Q^{}_{\vb{k}\mu}$和广义动量分量$P^{}_{\vb{k}\mu}$为
+\begin{equation}\begin{aligned}&Q^{}_{\vb{k}\mu}=\sqrt{m^{}_{\mu}}\qty(a^{}_{\vb{k}\mu}+a^{*}_{\vb{k}\mu}),\\&P^{}_{\vb{k}\mu}=-i\omega^{}_k\sqrt{m^{}_{\mu}}\qty(a^{}_{\vb{k}\mu}-a^{*}_{\vb{k}\mu})=\dt{Q}^{}_{\vb{k}\mu},\end{aligned}\end{equation}
+则系统的总\textit{Hamiltonian}为
+\begin{equation}H=\frac{1}{2}\sum\limits_{\vb{k}\mu}\qty(P_{\vb{k}\mu}^2+\omega_{\mu}^2(\vb{k})Q^2_{\vb{k}\mu}).\end{equation}
+上述的这些内容都可以视作电磁场在晶格中的改版，两者在形式上基本是完全一致的，只不过由于非相对论近似我们需要使用简正形式表示，但其余都是照搬第\ref{j!upy!!}节的表述并做相应的改变即可。\\
+\\
+在做完了准备工作之后，我们就可以完全按照第\ref{fSVvv!!f}节的形式进行二次量子化，具体细节的处理就不重复了。定义声子的简正二次量子化算符如下：
+\begin{equation}\begin{aligned}&\hat{c}^{\dagger}_{\vb{k}\mu}=\sqrt{\dfrac{\omega^{}_{\mu}(\vb{k})}{2\pi}}\hat{a}^{\dagger}_{\vb{k}\mu}=\dfrac{-i}{\sqrt{2\omega^{}_{\mu}(\vb{k})}}\qty(\hat{P}^{}_{\vb{k}\mu}+i\omega^{}_{\mu}(\vb{k})\hat{Q}^{}_{\vb{k}\mu}),\\&\hat{c}^{}_{\vb{k}\mu}=\sqrt{\dfrac{\omega^{}_{\mu}(\vb{k})}{2\pi\hbar}}\hat{a}^{}_{\vb{k}\mu}=\dfrac{i}{\sqrt{2\hbar\omega^{}_{\mu}(\vb{k})}}\qty(\hat{P}^{}_{\vb{k}\mu}-i\omega(\vb{k})\hat{Q}^{}_{\vb{k}\mu}),\end{aligned}\end{equation}
+则它们的对易子是归一化的，和式(\ref{ddduim})一致
+\begin{equation}\comm{\hat{c}^{}_{\vb{k}\mu}}{\hat{c}^{\dagger}_{\vb{k}\mu}}=\dfrac{\omega(\vb{k})}{2\pi}\comm{\hat{a}^{}_{\vb{k}\mu}}{\hat{a}^{\dagger}_{\vb{k}\mu}}=\hat{\vb{I}}.\end{equation}
+用定义式反解出动量和位形带入\textit{Hamiltonian}，我们得到算符
+\begin{equation}\hat{H}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(\hat{c}^{\dagger}_{\vb{k}\mu}\hat{c}^{}_{\vb{k}\mu}+\dfrac{1}{2}\hat{\vb{I}}),\end{equation}
+则引入占有数算符$\hat{N}^{}_{\vb{k}\mu}$和占有数态$\ket{n^{}_{\vb{k}\mu}}$为
+\begin{equation}\hat{N}^{}_{\vb{k}\mu}=\hat{c}^{\dagger}_{\vb{k}\mu}\hat{c}^{}_{\vb{k}\mu},\quad \hat{N}^{}_{\vb{k}\mu}\ket{n^{}_{\vb{k}\mu}}=n^{}_{\vb{k}\mu}\ket{n^{}_{\vb{k}\mu}},\end{equation}
+我们可得简正产生—湮灭算符的矩阵元为
+$$\mel**{n^{}_{\vb{k}\mu}-1}{\hat{\vb{c}}^{}_{\vb{k}\mu}}{n^{}_{\vb{k}\mu}}=\mel**{n^{}_{\vb{k}\mu}}{\hat{\vb{c}}^{\dagger}_{\vb{k}\mu}}{n^{}_{\vb{k}\mu}-1}=\sqrt{n^{}_{\vb{k}\mu}},$$
+以及系统的总能量为
+\begin{equation}\hat{H}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(\hat{N}^{}_{\vb{k}\mu}+\dfrac{1}{2}\hat{\vb{I}})\implies E^{}_n=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(n^{}_{\vb{k}\mu}+\dfrac{1}{2}).\label{taipi880}\end{equation}
+需要注意的是，这里我们不能用重整化排除真空能$E^{}_0=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})/2$，因为波矢$\vb{k}$必须是倒晶格系\textsl{RL}中的矢量，根据定义它是有限的，因此$E^{}_0$是收敛的值。同时由于在电磁场中$P^{}_{\vb{k}\mu}\propto\sqrt{V}$，所以这里我们这里将体积替换为总原子数
+$$N=\sum\limits_{\vb{k}\mu}n^{}_{\vb{k}\mu}=\sum\limits_{\vb{k}\mu}\mel**{n^{}_{\vb{k}\mu}}{\hat{N}^{}_{\vb{k}\mu}}{n^{}_{\vb{k}\mu}},$$
+得到单个粒子的相对位移算符为
+\begin{equation}\hat{\bm{\psi}}_{\kappa}^a(\vb{n},t)=\sum\limits_{\vb{k}\mu}\sqrt{\dfrac{\omega^{}_{\mu}(\vb{k})}{2\pi N}}\qty(\hat{c}^{}_{\vb{k}\mu}(t){\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}+\hat{c}^{\dagger}_{\vb{k}\mu}(t){\vb{e}^{*a}}_{\kappa(\mu)}e^{-i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}),\end{equation}
+从而相对位移的归一化系数为$D=\sqrt{\dfrac{1}{N}}$。需要强调的是，这里我们依旧采用了自然单位制$c=1$，但是由于晶格是介质内的系统，而声学波在介质内的传播相较于真空中传播会有所改变，所以我们最终需要带上介质内的声速给出$\omega^{}_{\mu}(\vb{k})\sim c^{}_{\mu}\vb{k}$，这在超流体中是需要注意的。\\
+\\
+现在让我们来讨论声子的动力学。首先我们注意到，因为上述内容和电磁波场完全一致，而光子是无质量的，所以声子也是无质量的，$m=0$。但因为声子只是晶格振动的抽象表现，并不完全等同于实体的粒子场，因此一般称声子为\textbf{准粒子 \textit{Quasi-Particle}}，其动量为\textbf{准动量}，可以由此定义准粒子的\textbf{等效质量}为
+\begin{equation}m^*=\frac{\vb{p}}{\vb{u}}=\frac{k}{u^{}_g},\quad u^{}_g=\dv{\omega(k)}{k},\end{equation}
+其中$u^{}_g$是声子的群速度。同时我们也看到，声子是电中性粒子，但是否为真中性还需要进一步考察。其次根据正晶格系的平移不变性，类似电磁矢量式简记
+$${\vb{A}^a}^{}_{\kappa,\vb{k}\mu}({\vb{n}})=\sqrt{\dfrac{1}{N}}{\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}},$$
+则我们得到单向平面声子波的平移不变性
+\begin{equation}\forall\vb{R}\in\mathscr T^1_{\ 0}(DL),\quad \vb{x}_{\kappa}^a(\vb{r}^{}_{\vb{n}}+\vb{R},t)=\sum\limits_{\vb{k}\mu}C^{}_{\vb{k}\mu}{\vb{A}^a}^{}_{\kappa,\vb{k}(\mu)}e^{i\vb{R}\cdot\vb{k}}=\sum\limits_{\vb{k}\mu}e^{i\vb{R}\cdot\vb{k}}\vb{x}_{\kappa(\mu)}^a(\vb{n},t),\end{equation}
+也就是说准粒子的波也是空间周期性的，在各方向上周期为原胞边长$a^{}_1,a^{}_2,a^{}_3$。事实上，如果我们只看沿指定动量$\vb{k}$的位移分量，那么我们可以得到一个标量波
+$$\psi^{}_{\vb{k}}(\vb{n})=\sqrt{\dfrac{1}{N}}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}},\quad \psi^{}_{\vb{k}}(\vb{r}^{}_{\vb{n}}+\vb{R},t)=e^{i\vb{R}\cdot\vb{k}}\psi^{}_{\vb{k}}(\vb{n},t).$$
+这里我们略去了粒子编号$\kappa$和分支号$\mu$，默认只考虑单个声子的一个分支。类比电磁波场可以看到，标量波$\psi^{}_{\vb{k}}$和波函数$\ket{\vb{k}}$是十分类似的，只不过它的空间变量是离散的$\vb{n}$。由于此处我们处于非相对论环境，所以我们可以不在旋量表象下讨论，将$\psi^{}_{\vb{k}}$就看作是动量表象下的粒子波函数，相应的定态\textsl{Schrödinger}方程写为
+$$\hat{H}\ket{\vb{k}}=\qty(\frac{\hat{\vb{p}}^2}{2m^*}+\hat{U}(\vb{r}))\ket{\vb{k}}=E^{}_{\vb{k}}\ket{\vb{k}}\implies E^{}_{\vb{k}}=\frac{\abs{\vb{k}}^2}{2m^*}+\mel**{\vb{k}}{\hat{U}}{\vb{k}}.$$	
+虽然声子没有质量，但是我们这里将其等效为一般的粒子处理，因此这里的$m^*$就是等效粒子质量。为了更好的理解势能项，我们将波函数的空间周期性条件写为如下形式
+\begin{equation}\ket{\vb{k}}(\vb{n})=e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}}u^{}_{\vb{k}}(\vb{n}),\quad u^{}_{\vb{k}}(\vb{r}^{}_{\vb{n}})=u^{}_{\vb{k}}(\vb{r}^{}_{\vb{n}}+\vb{R}),\quad \forall\vb{R}\in\mathscr T^1_{\ 0}(DL).\label{Blockh}\end{equation}
+于是势能项给出
+$$\mel**{\vb{k}}{\hat{U}}{\vb{k}}=\int_{DL}u^*_{\vb{k}}\hat{U}(\vb{r})u^{}_{\vb{k}}\dd{V}.$$
+通过周期律不难看到，上式积分收敛当且仅当势能也是周期性的，即$U(\vb{r}^{}_{\vb{n}})=U(\vb{r}^{}_{\vb{n}}+\vb{R})$，否则积分会一直加上增量导致发散。因此我们得到，\textbf{晶格的势能场是周期性的，其中的粒子波函数也是周期性的，其周期律表示为式}(\ref{Blockh})。这一结论称为\textbf{\textsl{Bloch}定理}(\textsl{Felix Bloch}，1929)，是固体物理的开端，一般而言该定理适用于电子，但是不难发现在等效下它也适用于准粒子。现在若我们将振动分支纳入考量，得到能量为
+\begin{equation}\ket{\vb{k}}^{}_{\mu}(\vb{n},t)=De^{i(\vb{k}\cdot\vb{r}^{}_{\vb{n}}-\omega^{}_{\mu}t)},\quad E^{}_{\vb{k}\mu}=\frac{\abs{\vb{k}}^2}{2m}+\int_{DL}u^*_{\vb{k}\mu}\hat{U}u^{}_{\vb{k}\mu}\dd{V}.\end{equation}
+同时我们已经证明，对于不同的分支$\mu\neq\nu$有正交性，此处的正交性应该表述为
+$$\braket{\vb{k}\mu}{\vb{k}\nu}=\delta^{}_{\mu\nu}.$$
+于是我们看到，在\textsl{Bloch}定理下，能量由两个量子化控制：动量和分支，并且不同分支对应不同的能量。当然因为在动量表象中能量的主要指标依旧是动量，所以不同分支划分了不同的能级区域，在同一个区域中能级由动量划分。这样的划分称为\textbf{能带 \textit{Energy Band}}，是周期势能的直接结果，可以从量子力学导出，这里不展开。\\
+\\
+当然我们需要强调，在每一个能带中能量是按\textsl{RL}量子化的，而\textsl{RL}是\textsl{DL}的对偶，所以事实上这里的动量一定是准动量，其和非介质中粒子的动量的性质是不同的。晶格中的能带就构成了声子的基本动力学背景，当然这一性质适用的场景远不止固体。
+\subsubsection{相互作用的二次量子化计算}
+\noindent 这里我们来进一步分析此势能。由于势能的周期性，我们必然得到势能是偶函数，因为前文中的原点选择是任意的格点，而周期性意味着原点的选择不会影响到势能的形式，这是偶函数的性质。于是在单粒子势能关于相对位移的展开式中，只能出现偶数次项，即
+$$U(\vb{r})=U(\vb{0})+\frac{1}{2}\partial^{}_a\partial^{}_bU(\vb{0})x^ax^b+\frac{1}{4!}\partial^{}_a\partial^{}_b\partial^{}_c\partial^{}_dU(\vb{0})x^ax^bx^cx^d+\cdots,$$
+其中一次项的消失是平衡位置的定义，其余奇数次项的消失目前仅是偶函数的要求。现在我们具体分析偶数次项，精确到四次项给出方程
+$$m^{}_{ij}\ddt{x}^j+k^{}_{ij}x^j+\frac{1}{6}\mathscr{D}^{}_{ijkl}x^jx^kx^l=0,\quad \mathscr{D}_{ijkl}=\partial^{}_i\partial^{}_j\partial^{}_k\partial^{}_lU(\vb{0}).$$
+现在我们假设$\mathscr{D}_{ijkl}$是一个小项，则解依旧保持形式$x^i=C^i\exp(i\omega t)$，带入得到代数方程
+$$\abs{m^{}_{ij}\omega^2-k'_{ij}}=0,\quad k'_{ij}=k^{}_{ij}+\frac{1}{6}\mathscr{D}^{}_{ijkl}x^kx^l.$$
+我们必然得到主值会有偏离，并且该偏离和$x^kx^l$相关。这是谐振型相互作用的标志，因此我们看到在二次项之后的展开式代表了粒子之间的相互作用。而这就导致了一个问题：在相对论性的二次量子化中，我们目前没有涉及相互作用的描述，所有的模型全部是针对自由粒子而言的。事实上，我们在第\ref{bbboh}节和第\ref{FEIMIN}节中已经推导出了任意算符的二次量子化表示(\ref{final})和(\ref{make2})等，在动量表象下写为
+\begin{equation}\begin{aligned}&\text{单粒子}:\hat{\vb{p}}\ket{\vb{k}}=\vb{p}\ket{\vb{k}}\implies\hat{F}^{(1)}=\sum\limits_{\vb{k}\vb{k}'}f^{(1)}_{\vb{k}'\vb{k}}\hat{c}^{\dagger}_{\vb{k}'}\hat{c}^{}_{\vb{k}},\quad f^{(1)}_{\vb{k}'\vb{k}}=\mel**{\vb{k}'}{\hat{f}^{(1)}}{\vb{k}};\\&\text{双粒子}:\ket{\vb{k}^{}_1,\vb{k}^{}_2}\implies\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k}}\mel**{\vb{k}'_1,\vb{k}'_2}{\hat{f}^{(2)}}{\vb{k}^{}_1,\vb{k}^{}_2}{\hat{c}^{\dagger}}_{\vb{k}'_1}{\hat{c}^{\dagger}}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1};\\&\text{三粒子}:\ket{\vb{k}^{}_1,\vb{k}^{}_2,\vb{k}^{}_3}\implies\hat{F}^{(3)}=\sum\limits_{\forall\vb{k}}\frac{\mel**{\vb{k}'_1,\vb{k}'_2,\vb{k}'_3}{\hat{f}^{(3)}}{\vb{k}^{}_1,\vb{k}^{}_2,\vb{k}^{}_3}}{6}{\hat{c}^{\dagger}}_{\vb{k}'_1}{\hat{c}^{\dagger}}^{}_{\vb{k}'_2}{\hat{c}^{\dagger}}_{\vb{k}'_3}\hat{c}^{}_{\vb{k}^{}_3}\hat{c}^{}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1};\\&\ldots\ldots\end{aligned}\label{pucaohsh}\end{equation}
+可以看到，式中并没有直接体现适用范围的限制条件，其无论系统是否为相对论性的均成立，只不过在相对论下矩阵元还应在旋量表象下计算。这里我们处于非相对论环境，因此只需要计算通常的矩阵元即可，同时我们也可以解答奇数次项消失的原因：相互作用必然涉及多个粒子，而在二次量子化下算符必然是偶数次的。可以证明，对于单声子我们有
+$$\hat{F}^{(1)}=\hat{H}^{(1)}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty(\hat{N}^{}_{\vb{k}\mu}+\dfrac{1}{2}\hat{\vb{I}}),\quad H^{(1)}_{\vb{k}'\vb{k}\mu}=\omega^{}_{\mu}(\vb{k})\delta^{}_{\vb{k}'\vb{k}}.$$
+这是声子场唯一的一级算符，也就是式(\ref{taipi880})。不失一般性的，我们这里重点讨论双声子系统，并且我们假定此相互作用修正$\hat{F}^{(2)}$是粒子间的碰撞导致的。记碰撞前后两粒子的动量为$\qty{\vb{k}^{}_1,\vb{k}^{}_2}\rightarrow\qty{\vb{k}'_1,\vb{k}'_2}$，这里动量我们用波矢表示，则碰撞要求动量守恒写为
+\begin{equation}\vb{k}^{}_1+\vb{k}^{}_2=\vb{k}'_1+\vb{k}'_2.\end{equation}
+同时我们记单个粒子碰撞前后的动量差为
+\begin{equation}\vb{W}=\vb{k}'_2-\vb{k}^{}_2=-\qty(\vb{k}'_1-\vb{k}^{}_1),\label{Laue66}\end{equation}
+则不难知道$\vb{W}\in\mathscr T^1_{\ 0}(RL)$，因为$\vb{k}^{}_i,\vb{k}'_i\in\mathscr T^1_{\ 0}(RL)$。当然此等式对于任意的入射和散射动量均成立，只要求$\vb{W}$是倒晶格系的矢量，晶格中碰撞运动这一性质称为\textbf{\textsl{Laue}方程}，是晶体学中的基础方程，我们不展开这一方面。由于式(\ref{pucaohsh})对于费米子系统和玻色子系统的形式均一样，因此我们不妨都讨论一下。当然我们知道声子是玻色子，所以我们后续重点关注玻色子的势能二次量子化算符。\\
+\\
+先考察自由费米气体系统，在第\ref{145ggvo}节中我们指出，费米子系统的矩阵元和自旋有关，方便起见我们依旧只讨论$s=\dfrac{1}{2}$的费米子，仍以$\sigma^{}_i=\pm1$标记极化。并且我们假设算符$\hat{F}$和自旋无关，也就是$\sigma=\sigma'$，同样的令粒子$1$在前，我们得到二级近似算符为
+\begin{equation}\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k},\sigma}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}'_1\sigma^{}_1,\vb{k}'_2\sigma^{}_2}\hat{c}^{\dagger}_{\vb{k}^{}_1\sigma^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2\sigma^{}_2}\hat{c}^{}_{\vb{k}'_2\sigma^{}_2}\hat{c}^{}_{\vb{k}'_1\sigma^{}_1}.\end{equation}
+之前我们通过离散谱的形式已经得出结论(\ref{xinjai--9})，这里也是类似的，只需要将离散能级号变为连续动量谱即可，我们取记号变换
+$$i\rightarrow\vb{k}^{}_1,\quad j\rightarrow\vb{k}^{}_2,\quad k\rightarrow\vb{k}'_1,\quad l\rightarrow\vb{k}'_2,$$
+并且舍弃$i=j\Longleftrightarrow\vb{k}^{}_1=\vb{k}^{}_2$的非碰撞情况后，我们得到二次量子化算符的主轴形式为
+\begin{equation}\begin{aligned}\hat{F}^{(2)}=&\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \\qty{\sigma^{}_i}}}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1,\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2,\sigma^{}_2}\\&-\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \sigma^{}_1=\sigma^{}_2=\sigma}}\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}\hat{N}^{}_{\vb{k}^{}_1,\sigma}\hat{N}^{}_{\vb{k}^{}_2,\sigma}.\end{aligned}\end{equation}
+现在我们取按体积归一化的动量表象的波函数为
+\begin{equation}\ket{\vb{k}^{}_i}=A\exp(i\vb{k}^{}_i\cdot\vb{r}^{}_i),\quad A=\sqrt{\frac{1}{V}},\end{equation}
+并且我们假设算符只是粒子间相对位置的函数，对于两个粒子形如$\hat{f}^{(2)}=\hat{f}^{(2)}(\vb{r}^{}_2-\vb{r}^{}_1=\vb{r})$，则其特征方程为
+$$\hat{f}^{(2)}\ket{\vb{k}^{}_i}=f^{(2)}\ket{\vb{k}^{}_i}.$$
+由此我们得到相应的矩阵元为
+\begin{equation}\begin{aligned}&\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}=A^4\int e^{-i\vb{k}^{}_i\cdot\vb{r}^{}_i}f^{(2)}e^{i\vb{k}^{}_i\cdot\vb{r}^{}_i}\dd{V}^{}_1\dd{V}^{}_2=\frac{1}{V}\int f^{(2)}(\vb{r})\dd^3\vb{r},\\&\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}=A^4\int e^{-i\vb{k}^{}_1\cdot\vb{r}^{}_1}f^{(2)}e^{i\vb{k}^{}_2\cdot\vb{r}^{}_2}\dd{V}^{}_1\dd{V}^{}_2=\frac{1}{V}\int f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r},\label{i><>in u}\end{aligned}\end{equation}
+其中关于体元的处理和\textsl{vdW}气体的方法是类似的，可以参考式(\ref{tiji ]]''})的思路。同时根据统计的一般原理，利用式(\ref{minang77})将动量谱的求和化为积分，对于双粒子我们带入式(\ref{minang66})给出
+\begin{equation}\sum\limits_{\vb{k}^{}_1,\vb{k}^{}_2}f(\vb{k}^{}_1,\vb{k}^{}_2)=\int f(\vb{k}^{}_1,\vb{k}^{}_2)\aleph(\vb{k}^{}_1)\aleph(\vb{k}^{}_2)\dd^3\vb{k}^{}_1d^3\vb{k}^{}_2=\frac{V^2}{(2\pi)^6}\int f(\vb{k}^{}_1,\vb{k}^{}_2)\dd^3\vb{k}^{}_1\dd^3\vb{k}^{}_2,\end{equation}
+其中$\aleph(\vb{k})=\aleph(\vb{k}^{}_1)\aleph(\vb{k}^{}_2)=\dfrac{V^2}{(2\pi)^6}$是动量表象下的态密度。最终我们得到符的二次量子化最终结果为
+\begin{equation}\begin{aligned}\hat{F}^{(2)}=&\frac{V}{2}\sum\limits_{\sigma_1,\sigma_2}\bigintsss\hat{N}^{}_{\vb{k}^{}_1,\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2,\sigma^{}_2}f^{(2)}(\vb{r})\dd^3\vb{r}\qty(\frac{\dd{k}^{}_1}{2\pi})^3\qty(\frac{\dd{k}^{}_2}{2\pi})^3\\&-\frac{V}{2}\sum\limits_{\sigma}\bigintsss\hat{N}^{}_{\vb{k}^{}_1,\sigma}\hat{N}^{}_{\vb{k}^{}_2,\sigma}f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r}\qty(\frac{\dd{k}^{}_1}{2\pi})^3\qty(\frac{\dd{k}^{}_2}{2\pi})^3.\end{aligned}\end{equation}
+如果我们再假设$f^{(2)}(\vb{r})$是均匀分布，也就是
+$$\int_V f^{(2)}(\vb{r})\dd^3\vb{r}=0,$$
+并且在$s=\dfrac{1}{2}$下关于自旋的求和给出$\sum\limits_{\sigma}=2$，于是我们最终得到占有数表象下的算符值为
+\begin{equation}F^{(2)}=-V\bigintsss N^{}_{\vb{k}^{}_1}N^{}_{\vb{k}^{}_2}f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r}\qty(\frac{\dd{k}^{}_1}{2\pi})^3\qty(\frac{\dd{k}^{}_2}{2\pi})^3.\end{equation}
+这就是连续谱下费米子系统的二次量子化结论，其中占有数$N^{}_{\vb{k}}$满足连续谱的\textsl{FD}分布。这种方法一般多用于简并粒子气体的近似中，比如常温下的简并等离子气体，而$f^{(2)}(\vb{r})$就是电荷间\textsl{Colomb}势能。但是对于极低温时，我们还可以继续化简。\\
+\\
+在极低温时，所有的粒子都趋于费米能级，因此我们在上式得到\textsl{FD}凝聚。在这种情况下，粒子的动量是非常小的，因此我们可以认为上述的二次量子化是小动量近似的结果，称为\textbf{慢性碰撞极限}。对应到矩阵元，我们可以取其在动量为零时的值，也就是
+\begin{equation}\vb{k}^{}_1=\vb{k}'_1=\vb{k}^{}_2=\vb{k}'_2\sim o(\vb{0}),\quad \mel**{\vb{k}'_1,\vb{k}'_2}{\hat{f}^{(2)}}{\vb{k}^{}_1,\vb{k}^{}_2}=\mel**{\vb{0}\sigma^{}_1,\vb{0}\sigma^{}_2}{\hat{f}^{(2)}}{\vb{0}\sigma^{}_1,\vb{0}\sigma^{}_2}=f^{}_0,\end{equation}
+并且我们依旧令态对体积归一化，则二级近似给出
+\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{2V}\sum\limits_{\forall\vb{k},\sigma}{\hat{c}^{\dagger}}_{\vb{k}'_1\sigma'_1}{\hat{c}^{\dagger}}_{\vb{k}'_2\sigma'_2}\hat{c}^{}_{\vb{k}^{}_2\sigma^{}_2}\hat{c}^{}_{\vb{k}^{}_1\sigma^{}_1},\label{sgsdg}\end{equation}
+并且$\forall\vb{k}\rightarrow\vb{0}$。在这种情况下，我们可以直接带入算符的主轴化结果，给出
+$$\hat{F}^{(2)}=\frac{f^{}_0}{2V}\qty{\sum\limits_{\substack{\vb{k}^{}_1=\vb{k}^{}_2\\ \sigma^{}_1\neq\sigma^{}_2}}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_2}+\sum\limits_{\vb{k}^{}_1\neq\vb{k}^{}_2}\qty(\sum_{\sigma^{}_1,\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2\sigma^{}_2}-\sum_{\sigma}\hat{N}^{}_{\vb{k}^{}_1\sigma}\hat{N}^{}_{\vb{k}^{}_2\sigma})}.$$
+具体计算过程就不展示了，和上面做替换的过程是相同的。但注意到此时后两项由于没有矩阵元作为系数的限制，因此是可以合并的，其关于自旋的求和给出
+$$\sum_{\sigma^{}_1,\sigma^{}_2}-\sum_{\sigma}=\sum(\sigma^{}_1=\sigma^{}_2)+\sum(\sigma^{}_1\neq\sigma^{}_2)-\sum(\sigma^{}_1=\sigma^{}_2=\sigma)=\sum(\sigma^{}_1\neq\sigma^{}_2)=\sum\limits_{\sigma^{}_1\neq\sigma^{}_2},$$
+并且我们将其和前一项的动量求和统一为记号$\sum\limits_{\vb{k}^{}_1=\vb{k}^{}_2}+\sum\limits_{\vb{k}^{}_1\neq\vb{k}^{}_2}=\sum\limits_{\forall\vb{k}}$，则最终结果写为
+\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{V}\sum_{\forall\vb{k},\sigma^{}_1\neq\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_1\sigma^{}_2}\implies F^{(2)}=\frac{f^{}_0}{V}\sum_{\forall\vb{k},\sigma^{}_1\neq\sigma^{}_2}N^{}_{\vb{k}^{}_1\sigma^{}_1}N^{}_{\vb{k}^{}_1\sigma^{}_2}.\end{equation}
+但是在$s=\dfrac{1}{2}$下自旋记号的取值为$\sigma=\pm1$，因此不等号解释为$\sigma^{}_1=-\sigma^{}_2$，也就是自旋相反。将其推广我们就得到了碰撞定理：
+\begin{center}\emph{对于两个处于慢性碰撞极限的费米子，只有自旋相反才能发生相互作用，也就是散射。}\end{center}
+这一点可以从碰撞理论中得到，我们就不展开了，但是这里我们从另一种角度解释了此现象。当然上述结论只是算符直接对角化的结果，更高精确度的值需要考虑矩阵元$f^{}_0$的涨落，其可以通过微扰论计算，具体请参考第\ref{DFVO))//}节。对于能量$\hat{H}$的涨落，以下我们用玻色子系统的\textsl{Bogoliubov}变换来简单介绍。\\
+\\
+现在我们考察自由玻色气体的双玻色子算符，其不需要自旋值的参与，因此二次量子化算符为
+\begin{equation}\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k}}\mel**{\vb{k}^{}_1,\vb{k}^{}_2}{\hat{f}^{(2)}}{\vb{k}'_1,\vb{k}'_2}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}.\end{equation}
+现在我们同样考虑慢性碰撞极限，对于声子而言就是指$\omega(\vb{k})\approx0$，对于普通的自由玻色子也就是$E^{}_{\vb{k}}\approx0$。于是我们得到算符为
+\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{2V}\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1},\quad f^{}_0=\mel**{\vb{0},\vb{0}}{\hat{f}^{(2)}}{\vb{0},\vb{0}}.\end{equation}
+根据玻色统计，此时系统处于\textsl{BE}凝聚态，其可以用式(\ref{---wosile h})表示，也就是
+$$N\approx N^{}_0=\mel**{\vb{0}}{\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{}_{\vb{0}}}{\vb{0}}\gg N^{}_{\vb{k}\neq\vb{0}}=\mel**{\vb{k}}{\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}}{\vb{k}}.$$
+这一事实给出了一种近似方法，因为凝聚态下粒子几乎全部处于基态，因此对于算符$\hat{c}^{}_{\vb{0}}$的对易性我们可以重整化为
+\begin{equation}\comm{\hat{c}^{}_{\vb{0}}}{\hat{c}^{\dagger}_{\vb{0}}}=\vb{0}\ll\hat{c}^{}_{\vb{0}},\hat{c}^{\dagger}_{\vb{0}},\quad \hat{c}^{}_{\vb{0}}=\hat{c}^{\dagger}_{\vb{0}}=c^{}_{\vb{0}}=\sqrt{N^{}_{\vb{0}}}.\label{enducs}\end{equation}
+也就是其对易性相较于总粒子数可以忽略不计，并且用数值替代。我们在这种背景下来考察化简，对于慢性碰撞极限我们给出算符按动量展开为
+\begin{equation}\hat{c}^{}_{\vb{k}}=\hat{c}^{}_{\vb{0}}+\hat{c}^{}_{\vb{k}},\end{equation}
+于是算符的乘积写为
+$$\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}=\qty(\hat{c}^{\dagger}_{\vb{0}}+\hat{c}^{\dagger}_{\vb{k}^{}_1})\qty(\hat{c}^{\dagger}_{\vb{0}}+\hat{c}^{\dagger}_{\vb{k}^{}_2})\qty(\hat{c}^{}_{\vb{0}}+\hat{c}^{}_{\vb{k}'_2})\qty(\hat{c}^{}_{\vb{0}}+\hat{c}^{}_{\vb{k}'_1}).$$
+为了后续的计算考虑，这里我们将其精确到$\hat{c}^{}_{\vb{k}}$的二次项，算上玻色对易关系我们得到展开式的零次项为
+\begin{equation}\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{0}}=c^4_{\vb{0}}=N^2_{\vb{0}}.\label{shiyanss}\end{equation}
+这里我们用凝聚态近似$N=N^{}_{\vb{0}}+\sum\limits_{\vb{k}\neq\vb{0}}c^2_{\vb{0}}$，替换$N^{}_{\vb{0}}$得到系统的零次项为
+\begin{equation}c^4_{\vb{0}}=\qty(N-\sum\limits_{\vb{k}\neq\vb{0}}N^{}_{\vb{k}})^2=N^2-2c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+o\qty(N^2_{\vb{k}}).\end{equation}
+其中非凝聚态项可以看作凝聚态的涨落修正。展开的一次项为
+$$c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{0}}+\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{\dagger}_{\vb{k}_2}+\hat{c}^{\dagger}_{\vb{k}_1}\hat{c}^{\dagger}_{\vb{0}}).$$
+可以看到在一次项中，动量只出现了一次，因而是不守恒的，需要舍弃，事实上对于所有奇数次项都是相同的。\\
+\\
+展开的二次项为
+$$\hat{c}^2_{\vb{k}}=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2})+\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{\dagger}_{\vb{k}^{}_2}\qty(\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{0}})+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{0}}\qty(\hat{c}^{}_{\vb{0}}\hat{c}^{}_{\vb{k}'_1}+\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{0}}).$$
+现在我们来讨论动量守恒下二次项的化简：
+\begin{itemize}\item 动量全部相同：$\vb{k}^{}_1=\vb{k}^{}_2=\vb{k}'_1=\vb{k}'_2=\vb{k}$，可以看到第一项为
+$$\hat{c}^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}},$$
+这是毫无物理意义的，也就是说同动量下不会碰撞，这是合理的；\item 单个粒子守恒：$\vb{k}^{}_1=\vb{k}'_1\neq\vb{k}^{}_2=\vb{k}'_2$，二次项给出
+$$\hat{c}^2_{\vb{k}}(1,2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_2}).$$
+两个粒子交换：$\vb{k}^{}_1=\vb{k}'_2\neq\vb{k}^{}_2=\vb{k}'_1$，二次项给出
+$$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}^{}_1}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_2}+\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{}_{\vb{k}^{}_1}).$$
+可以看到，在玻色对易关系下，这两式只有第一项不同；\item 在慢性碰撞极限下，我们可以取质心系$\vb{k}^{}_1+\vb{k}^{}_2=\vb{k}'_1+\vb{k}'_2=\vb{0}$，记$\vb{k}^{}_1=-\vb{k}^{}_2=\vb{k}$，上述两项给出
+$$\hat{c}^2_{\vb{k}}(1,2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{-\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{-\vb{k}}),$$
+$$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)=c^2_{\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).$$
+当然若我们展开到四次项，我们得到
+$$\hat{c}^4_{\vb{k}}(1,2)=\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{-\vb{k}}\hat{c}^{}_{\vb{k}},\quad \hat{c}^4_{\vb{k}}(1\longleftrightarrow2)=\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}.$$
+因而单个粒子守恒在四次近似下无意义，所以我们这里只保留交换式$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)$。\end{itemize}
+做替换$N=c^2_{\vb{0}}$后，经过简单计算我们得到最终的二次项的化简为
+\begin{equation}\begin{aligned}&\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}=c^4_{\vb{0}}+\sum\limits_{\vb{k}}\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)\\&=N^2-2c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+4\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}})\\&=N^2+N\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).\end{aligned}\end{equation}
+这里我们考虑势能$\hat{F}^{(2)}=\hat{U}^{(2)}$，则最终我们得到势能的二级近似为
+\begin{equation}\hat{U}^{(2)}=\frac{N^2}{2V}U^{}_0+\frac{NU^{}_0}{2V}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).\end{equation}
+这事实上就是平均场近似，可以将其看作\textsl{Landau}展开(\ref{LAD5941957})的对称性来源。现在如果我们算上单粒子算符，则声子系统的非相对论性\textit{Hamiltonian}算符在上述二次量子化近似下给出
+\begin{equation}\begin{aligned}\hat{H}=\hat{H}^{(1)}+\hat{U}^{(2)}=&\frac{N^2U^{}_0}{2V}+\sum\limits_{\vb{k}}\frac{\omega(\vb{k})}{2}+\sum\limits_{\vb{k}\neq\vb{0}}\omega(\vb{k})\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}\\&+\frac{NU^{}_0}{2V}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}})=\hat{H}^{0}+\sum\limits_{\vb{k}\neq\vb{0}}\hat{H}^{}_{\vb{k}}.\label{cd - -'':}\end{aligned}\end{equation}
+在不考虑微扰并取势能$U^{}_0=const$的情况下，我们来求其对应的能级，此处就是求$\hat{H}$的对角化。由于上式为明显的双线性型，那么自然的我们想到，可以引入系统的玻色\textsl{Bogoliubov}变换，当然因为式(\ref{cd - -'':})包含两个不同方向的动量表象算符，所以我们看到声子只是电中性的，并非真中性。于是这里的变换应该对应式(\ref{chaoliu1})和(\ref{chaoliu2})给出
+\begin{equation}\begin{cases}\displaystyle\hat{b}^{}_{\vb{k}}=u^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}+v^{}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}},&\\ \displaystyle\hat{b}^{\dagger}_{\vb{k}}=u^{}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}+v^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}.\end{cases}\implies \begin{cases}\displaystyle u^{}_{\vb{k}}=\cosh{r^{}_{\vb{k}}},&\\ \displaystyle v^{}_{\vb{k}}=\sinh{r^{}_{\vb{k}}}.\end{cases}\end{equation}
+这里我们方便起见令系数为实数。需要注意的是，这里的算符$\hat{c}$和算符$\hat{b}$并不对应同一种粒子，这是因为\textsl{Bogoliubov}变换实际上改变了占有数分布，因此在变换之后给出的是两种粒子。\\
+\\
+其对应的二次型$\vb{Y}^{}_{\vb{k}}$可以通过双线性型
+$$\hat{H}^{}_{\vb{k}}=\vb{R}^{\dagger}_{\vb{k}}\vb{Y}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k}}&\hat{c}^{\dagger}_{-\vb{k}}&\hat{c}^{}_{\vb{k}}&\hat{c}^{}_{-\vb{k}}}\vb{Y}^{}_{\vb{k}}\pmqty{\hat{c}^{}_{\vb{k}}\\ \hat{c}^{}_{-\vb{k}}\\ \hat{c}^{\dagger}_{\vb{k}}\\ \hat{c}^{\dagger}_{-\vb{k}}},$$
+对比式(\ref{cd - -'':})求出其中$\vb{k}\neq\vb{0}$的部分的为
+$$\vb{Y}^{}_{\vb{k}\neq\vb{0}}=\pmqty{0&0&0&\dfrac{NU^{}_0}{2V}\\0&0&\dfrac{NU^{}_0}{2V}&0\\0&\dfrac{NU^{}_0}{2V}&\omega(\vb{k})+\dfrac{NU^{}_0}{V}&0\\ \dfrac{NU^{}_0}{2V}&0&0&\omega(\vb{k})+\dfrac{NU^{}_0}{V}}.$$
+于是带入玻色子的\textsl{Bogoliubov}方程$\vb{Y}^{}_{\vb{k}}=E(\vb{k})\vb{\Gamma}^{\dagger}_{\vb{k}}\vb{\Gamma}^{}_{\vb{k}}$，我们求得最终的结果为
+\begin{equation}E(\vb{k}\neq\vb{0})=\sqrt{\omega(\vb{k})^2+\frac{2NU^{}_0}{V}\omega(\vb{k})}.\end{equation}
+同时我们解得凝聚态的能量为
+\begin{equation}E^{}_0=\frac{N^2U^{}_0}{2V}+\frac{1}{2}\sum\limits_{\vb{k}\neq\vb{0}}\qty(E(\vb{k})-\omega(\vb{k})-\frac{NU^{}_0}{V}),\label{jitaine}\end{equation}
+这里请读者自行用\textsl{Nambu}形式验证上述结果并求出变换系数，于是最终\textit{Hamiltonian}算符的对角化为
+\begin{equation}\hat{H}=E^{}_0+\sum\limits_{\vb{k}\neq\vb{0}}E(\vb{k})\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}=E^{}_0+\sum\limits_{\vb{k}\neq\vb{0}}E(\vb{k})\hat{N}^{}_{\vb{k}}.\end{equation}
+我们最终求得双玻色子在慢性碰撞极限下的能量为
+\begin{equation}E=E^{}_0+\sum\limits_{\vb{k}\neq\vb{0}}E(\vb{k})\expval{n^{}_{\vb{k}}},\quad E(\vb{k})=\sqrt{\omega(\vb{k})^2+\frac{2NU^{}_0}{V}\omega(\vb{k})},\label{pouJN //}\end{equation}
+这里$n^{}_{\vb{k}}$就是准粒子的占有数，当然一般我们会用平均占有数计算。需要注意这里变换前后的算符$\hat{c}$和$\hat{b}$对应不同的粒子，其中
+$$\expval{N^{}_{\vb{k}}}=\frac{1}{\exp{\beta\omega(\vb{k})}-1}=\expval{\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}}$$
+是构成系统主体的玻色子的占有数，而
+$$\expval{n^{}_{\vb{k}}}=\frac{1}{\exp{\beta E(\vb{k})}-1}=\expval{\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}}$$
+是激发的准粒子的占有数，两者分布不同。上述就是质心系下一级微扰的结果，它说明了双玻色子在慢性碰撞时，碰撞能量谱为$E(\vb{k})$，其平均生成了
+$$\expval{n^{}_{\vb{k}}}=\expval{\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}}$$
+个声子。当然这并不精确，在碰撞下我们需要将$U^{}_0$用散射截面替换，而这就是二级微扰论的结果了，结果为$U^{}_0=\dfrac{4\pi a}{m}$，我们这里不做展开，具体细节请参考第\ref{sandUhg}节。
+\subsubsection{声子的统计规律}
+\noindent 现在我们来考察声子的统计，具体讨论由式(\ref{pouJN //})所给出的系统的热力学情况。因为我们已经知道声子和光子相同，而光子遵循\textsl{Planck}黑体辐射统计，因此声子的统计模型和黑体辐射必然是类似的，也就是\textsl{Planck}分布
+\begin{equation}\expval{N^{}_{\vb{k}}}=\frac{1}{\exp{\beta\omega(\vb{k})}-1}.\end{equation}
+但之前我们提到，角频率在介质中没有十分简单的色散关系，因此我们无法利用上述占有数来直接计算系统的热力学性质。为此，我们不妨从头来过，考虑如何从特殊情况下的简单结论推广至普遍性质。方便起见，我们考虑正则系综，因为在\textsl{Planck}分布下化学势$\mu=0$，所以巨正则系综和正则系综等价。\\
+\\
+作为一切的原点，我们给出声子系统的自由能，每个声子在动量表象下的能量为$E^{}_{\vb{k}\mu}=\omega^{}_{\mu}(\vb{k})$，这里我们是直接类比光子的结论。对于每一个谱支，其主频率的配分函数完全由式(\ref{peifen88777gb})确定，所以每一个谱支的自由能为
+$$F^{}_{\vb{k}\mu}=-T\ln{\qty(\frac{1}{1-\exp{-\beta\omega^{}_{\mu}(\vb{k})}})}=T\ln{\qty(1-\exp{-\beta\omega^{}_{\mu}(\vb{k})})}.$$
+同样的我们将各原子在原胞内的平衡能记为$E^{}_0$，可以证明它和晶格的密度有关，而和温度无关，若我们设晶格中共$D$个原胞，体积为$V$，则我们有$E^{}_0=E^{}_0\qty(\dfrac{D}{V})$。因为自由能是可加的，因此我们有
+\begin{equation}F=F^{}_0+\sum_{\mu(D)=1}^{3ND}\sum_{\vb{k}}F^{}_{\vb{k}\mu}=DE^{}_0+T\sum_{\mu(D)}\sum_{\vb{k}}\ln\qty{1-\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})},\end{equation}
+这里$\mu(D)$是整个晶格的原子数的自由度$3ND$。一般而言，对于波矢的求和可以通过式(\ref{minang77})，并带入态密度(\ref{minang66})转变为积分，写作
+\begin{equation}F=DE^{}_0+T\sum_{\mu=1}^{3ND}\bigintsss\aleph(\vb{k})\ln\qty{1-\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})}\frac{\dd^3\vb{k}}{(2\pi)^3},\label{BVF88.,/7}\end{equation}
+是为统计的一般原理。但是此处由于色散关系$\omega^{}_{\mu}(\vb{k})$并不明晰，所以目前无法将其直接转化为积分。若我们直接取$\omega^{}_{\mu}=const$，则得到、text部分{\textsl{Einstein}模型}，但其和实验结果相差较远。为此我们来讨论两个极端情况：$T\to 0$以及$T\to\infty$，最后总结归纳得出一个普适的结论。\\
+\\
+先考察$T\to 0$的极限情况，此时求和的指数函数
+$$\lim\limits_{T\to 0}\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})\sim o(1)\quad \text{当且仅当} \quad T\sim\omega\rightarrow0,$$
+因此我们看到在这种情况下，真正起到作用的是低频波，并考虑到$\omega\sim\dfrac{1}{\lambda}$，所以这就是长波。但我们之前提到，对于波长的量级在$\lambda\gg \abs{\vb{a}}=a$下，谐振给出声学波，且在声学波下色散定律可以简单的写为
+\begin{equation}\omega(\vb{k})=c\abs{\vb{k}}=c^{}_{loc}\frac{2\pi}{\lambda}\ll\frac{c^{}_{loc}}{a},\label{YehDFnb}\end{equation}
+其中$c^{}_{loc}$是晶格中的当地声速，因此我们得到声学波谱支的温度范围为
+\begin{equation}T\ll\frac{c^{}_{loc}}{a}.\end{equation}
+如果介质是各项同性的，那么我们完全可以将晶格的振动比作场，因为声子的总自由度$3ND\sim 10^{23}$。并且我们知道，声子是自旋为$s=1$的玻色子，所以我们可以认为其是可以由\textsl{Proca}场描述的。但是这里需要注意，声子作为准粒子，其对应的是$m\neq0$的\textsl{Proca}场，并非零质量的光子场，因为它可以定义等效质量。所以按照\textsl{Proca}场的式(\ref{0;;k6[FCF})的极化结论，我们得到声学波的三个谱支及相应的频域态密度为
+\begin{equation}\begin{aligned}&\text{两个横波：}c^{}_{loc}=c^{}_t\implies2\cp\omega(\vb{k})=c^{}_tk,\quad \dd\Omega^{}_t=2\dfrac{4\pi V}{(2\pi)^3}k^2\dd{k}=V\dfrac{\omega^2\dd\omega}{2\pi^2}\frac{2}{c^3_t}=\aleph^{}_t(\omega)\dd\omega\\&\text{一个纵波：}c^{}_{loc}=c^{}_l\implies1\cp\omega(\vb{k})=c^{}_lk,\quad \dd\Omega^{}_l=\dfrac{4\pi V}{(2\pi)^3}k^2\dd{k}=V\dfrac{\omega^2\dd\omega}{2\pi^2}\frac{1}{c^3_l}=\aleph^{}_l(\omega)\dd\omega.\end{aligned}\end{equation}
+同样的结论也可以在附录\ref{Y6TY.,.,''}中找到，于是最终的频域态密度为
+\begin{equation}\dd\Omega=\dd\Omega^{}_t+\dd\Omega^{}_l=V\dfrac{\omega^2\dd\omega}{2\pi^2}\qty(\frac{2}{c^3_t}+\frac{1}{c^3_l})=\aleph^{}_0(\omega)\dd\omega.\end{equation}
+当然因为态密度和当地声速无关，所以我们关于极化求和定义一个平均声速$\expval{c}$为
+\begin{equation}\frac{2}{c^3_t}+\frac{1}{c^3_l}=\sum\limits_{\mu=1}^3\frac{1}{\expval{c^{}_{\mu}}^3}=\frac{3}{\expval{c}^3}\implies\aleph^{}_0(\omega)=V\dfrac{\omega^2}{2\pi^2}\frac{3}{\expval{c}^3},\quad g=3.\label{guangdoj}\end{equation}
+对于各项异性介质，同样可以按极化定义平均声速，这里不展开，请参考第\ref{Y6TY.,.,''}节。\\
+\\
+因为在低温下积分收敛很快，所以频谱的取值范围可以取为$0\leq\omega\leq\infty$，从而式(\ref{BVF88.,/7})得到极低温度下的自由能为
+\begin{equation}F=DE^{}_0+\frac{3}{2}\dfrac{TV}{\pi^2\expval{c}^3}\int_0^{\infty}\ln\qty{1-\exp\qty(-\frac{\omega}{T})}\omega^2\dd\omega,\end{equation}
+对比光子系统(c=1)的式(\ref{tfgvPI)()<<})可以看到，声子的自由能多了一个系数$\dfrac{3}{2}$，其原因出在简并度上。在$\gamma$场中态密度由式(\ref{crgn''})给出，对于$\gamma$的简并度$g=2$因为$\gamma$只有两个横波，而声子场为$g=3$。于是和此自由能相关的热力学量都可以直接从\textsl{Planck}分布得到，取自然单位制$\expval{c}=1$后只需要乘上$\dfrac{3}{2}$即可，引入\textsl{Stephan-Boltzmann}常数$\sigma$后我们得到
+\begin{itemize}\item 自由能：\begin{equation}F=F^{}_0+\sum F^{}_{\vb{k}\mu}=DE^{}_0-\frac{3}{2}\frac{4V\sigma}{3}T^4=DE^{}_0-\dfrac{V\pi^2}{30}T^4,\end{equation}
+式中带入了自然单位制下的值$\sigma=\dfrac{\pi^2}{60}$，在国际单位制下为$\sigma=\dfrac{\pi^2k_B^4}{60\hbar^3\expval{c}^3}$；\item 介质的熵：\begin{equation}S=-\partial^{}_TF=\frac{3}{2}\frac{16V\sigma}{3}T^3=\frac{2V\pi^2}{15}T^3;\end{equation}\item 介质的能量：\begin{equation}E=F+TS=F^{}_0-3\sum F^{}_{\vb{k}\mu}=DE^{}_0+\dfrac{V\pi^2}{10}T^4;\end{equation}\item 介质的等容比热：\begin{equation}C^{}_V=\partial^{}_TE=\dfrac{2V\pi^2}{5}T^3.\end{equation}\end{itemize}
+由此可见在低温下，介质的比热和$T^3$成正比，这一定律称为\textbf{\textsl{Debye}定律}(1912)。通过上面的介绍可以看到，这一部分主要就是声子的贡献，因为简谐振动贡献了主要的微态分布，因此也可以看作声子的比热，记为$C^{}_{phn}$，以免和光子\textsl{Photon}混淆。在金属中，若我们算上电子的贡献，其比热由式(\ref{subbff})控制，则我们得到金属在低温下的比热和温度的关系为
+\begin{equation}C(T\ll1)=C^{}_e+C^{}_{phn}=aT+bT^3,\end{equation}
+其中一次项是电子(费米子)的比热，第二项是声子的比热，这一结论和实验结果符合的较好。同时它也匹配\textsl{Landau}平均场理论中，关联长度$\xi$在临界点附近的发散，因此相变主要由长波近似主导，我们在第\ref{CHoai**--}节的超流相变中会清楚的看到。\\
+\\
+再来考察$T\gg1$的极限情况，此时我们希望能够将指数函数化简，从而可以考虑量级为
+\begin{equation}\frac{\omega}{T}\ll1\implies T\gg\omega\gg\frac{c^{}_{loc}}{a}.\end{equation}
+此时声子给出光学谱支，对应短波长量级$\lambda\ll a$。在这一情况下，被积函数可以取近似
+$$\begin{aligned}&1-\exp\qty(-\frac{\omega^{}_{\mu}(\vb{k})}{T})=\frac{\omega^{}_{\mu}(\vb{k})}{T}-\frac{\omega^2_{\mu}}{2T^2}+o\qty(\frac{\omega^3_{\mu}}{T^3}),\\&\ln\qty{1-\exp\qty(-\frac{\omega}{T})}=\ln\qty{\frac{\omega^{}_{\mu}}{T}\qty(1-\frac{\omega^{}_{\mu}}{2T})}=\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}-\frac{\omega^{}_{\mu}}{2T}+o\qty(\frac{\omega^2_{\mu}}{2T^2}).\end{aligned}$$
+于是式(\ref{BVF88.,/7})变为
+\begin{equation}\begin{aligned}F&=DE^{}_0+T\sum_{\mu}\bigintsss\aleph(\vb{k})\qty(\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}-\frac{\omega^2_{\mu}}{2T})\frac{\dd^3\vb{k}}{(2\pi)^3}\\&=DE^{}_0-\sum\limits_{\vb{k}\mu}\frac{\omega^{}_{\mu}(\vb{k})}{2}+T\sum_{\mu}\bigintsss\aleph(\vb{k})\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}\frac{\dd^3\vb{k}}{(2\pi)^3}.\end{aligned}\end{equation}
+不难看到第二项就是声子的真空能
+$$H^{}_0=\sum\limits_{\vb{k}\mu}\dfrac{\omega^{}_{\mu}(\vb{k})}{2}<\infty,$$
+这就是声子和光子的区别，声子的真空能是有限的，无法通过重整化消去，因此我们也需要将其考虑进自由能中。由于前两项和温度无关，因此可以看作常自由能，记为
+\begin{equation}F^{}_0=DE^{}_0-\sum\limits_{\vb{k}\mu}\frac{\omega^2_{\mu}(\vb{k})}{2}=const.\end{equation}
+对于对数项，由于我们这里无法给出光学谱支的态密度，所以我们取频率的系综均值
+\begin{equation}\sum_{\mu=1}^{3ND}\bigintsss\aleph(\vb{k})\ln\qty{\frac{\omega^{}_{\mu}(\vb{k})}{T}}\frac{\dd^3\vb{k}}{(2\pi)^3}=3ND\ln\qty{\frac{\expval{\omega(\vb{k})}}{T}},\end{equation}
+则最终自由能写为
+\begin{equation}F=F^{}_0+3NDT\ln\qty{\expval{\omega(\vb{k})}}-3NDT\ln{T}.\end{equation}
+关于系统的熵我们就不计算了，介质的能量给出
+\begin{equation}E=F+TS=F-T\partial^{}_TF=F^{}_0+3NDT,\end{equation}
+从而介质的等容比热为
+\begin{equation}C^{}_V=\partial^{}_TE=3ND.\end{equation}
+此处$3ND$是振动的谱支数，也就是振动的自由度，只不过总自由度为$d=6ND$，因为作为相空间维数的话要同时考虑空间和动量，而谐振子模型将两者糅合进了一个自由度中。不难发现这是符合式(\ref{DPlongtt})的结论的，也就是\textsl{Dulong-Petit}定律，给出$C^{}_V=\dfrac{d}{2}=3ND$。因此在高温下，介质满足\textsl{Boltzmann}能量均分定理，这是很合理的结论，因为高温必然对应等概率分布。当然在极高温度下，晶格的运动相交简谐振动会有较大偏离，此时需要考虑自由能的高阶展开，这里就不介绍了。\\
+\\
+在上述两个极限的基础上，我们来建立中间温度的普遍统计规律。我们在极低温下引入了频谱态密度，并且频谱的取值范围近似为$0\leq\omega\leq\infty$，但这明显是不正确的。在大频率$\omega\gg\dfrac{c^{}_{loc}}{a}$下，积分会给出总谱支数$3ND$，并不符合低温的结论。因此在低温下，频谱应该有一个上限，记为$\omega^{}_m$，则我们可以建立一个在两个温度极限之间的关系，对低温态密度(\ref{guangdoj})积分得到总谱支数
+\begin{equation}\int_0^{\omega^{}_m}\aleph^{}_0(\omega)\dd\omega=\frac{3V}{2\pi^2\expval{c}^3}\int_0^{\omega^{}_m}\omega^2\dd\omega=\frac{V\omega^3_m}{2\pi^2\expval{c}^3}=3DN\implies\omega^3_m=\frac{6DN\pi^2}{V}\expval{c}^3.\end{equation}
+因此我们可以用此式替换平均声速，统一的态密度表述为
+\begin{equation}\aleph^{}_D(\omega)=\frac{3V}{2\pi^2\expval{c}^3}=9DN\frac{\omega^2}{\omega^3_m},\quad \omega\leq\omega^{}_m.\end{equation}
+称为\textbf{\textsl{Debye}态密度}，我们这里同样的已经对极化求和了，于是带入式(\ref{BVF88.,/7})得到介质系统的自由能为
+\begin{equation}F=DE^{}_0+\frac{9DNT}{\omega^3_m}\int_0^{\omega^{}_m}\ln\qty{1-\exp\qty(-\frac{\omega}{T})}\omega^2\dd\omega,\end{equation}
+由于正则系综的指数$\beta\omega$是无量纲量，所以我们可以类似的对$\omega^{}_m$引入相似的温度定义
+\begin{equation}\Theta^{}_D=\omega^{}_m,\end{equation}
+称为\textbf{\textsl{Debye}温度}。于是自由能公式写为
+$$F=DE^{}_0+9DNT\qty(\frac{T}{\Theta^{}_D})^3\int_0^{\Theta^{}_D/T}\ln\qty{1-e^{-z}}z^2\dd{z},$$
+对于积分，考虑分部积分
+$$\int_0^{\Theta^{}_D/T}\ln\qty{1-e^{-z}}z^2\dd{z}=\frac{z^3}{3}\eval{\ln\qty{1-e^{-z}}}_0^{\Theta^{}_D/T}-\frac{1}{3}\int_0^{\Theta^{}_D/T}\frac{z^3}{e^{z}-1}\dd{z},$$
+我们引入\textbf{$\bm{n}$阶\textsl{Debye}函数}为
+\begin{equation}W^{}_n(x)=\frac{n}{x^n}\bigintsss_0^x\frac{z^n}{e^z-1}\dd{z},\label{leloh}\end{equation}
+这里取$n=3$，于是自由能最终的结果为
+\begin{equation}F=DE^{}_0+DNT\qty(3\ln\qty{1-\exp\qty(-\frac{\Theta^{}_D}{T})}-W^{}_3\qty(\frac{\Theta^{}_D}{T})).\end{equation}
+从而我们得到能量为
+\begin{equation}E=F-T\partial^{}_TF=DE^{}_0+3DNTW^{}_3\qty(\frac{\Theta^{}_D}{T}).\end{equation}
+比热为
+\begin{equation}C=\partial^{}_TE=3DN\qty{W^{}_3\qty(\frac{\Theta^{}_D}{T})-\frac{\Theta^{}_D}{T}W'_3\qty(\frac{\Theta^{}_D}{T})}.\end{equation}
+这样的自由能形式称为\textbf{\textsl{Debye}内插公式}(1912)，可以验证其和前文中的极限结果是相匹配的，比如在低温下$T\ll\Theta^{}_D$，此时可以令积分上限为$\infty$，从而我们算得\textsl{Debye}函数为
+$$W^{}_3(x)=\frac{3}{x^3}\bigintsss_0^{\infty}\frac{z^3}{e^z-1}\dd{z}=\frac{\pi^4}{5x^3},$$
+从而比热为
+\begin{equation}C=\frac{12DN\pi^4}{5}\qty(\frac{T}{\Theta^{}_D})^3\propto T^3.\end{equation}
+这是符合\textsl{Debye}定律的，因此说明内插公式以及态密度公式的正确性。\\
+\\
+现在让我们从\textsl{Debye}态密度出发来计算式(\ref{pouJN //})，带入\textsl{Planck}分布我们得到双玻色子慢性碰撞极限下的能量为
+$$\begin{aligned}E&=E^{}_0+\bigintsss\frac{E(\vb{k})}{\exp{\beta\omega(\vb{k})}-1}\aleph^{}_D(\vb{k})\frac{\dd^3\vb{k}}{(2\pi)^3}\\&=E^{}_0+9N\bigintss_0^{\omega^{}_m}\sqrt{\omega^2+\dfrac{2NU^{}_0}{V}\omega}\frac{1}{\exp(\dfrac{\omega}{T})-1}\dfrac{\omega^2\dd\omega}{\omega^3_m},\end{aligned}$$
+这里我们取$D=1$。同样的记$z=\dfrac{\omega}{T}$，以及$z^{}_D=\dfrac{\Theta^{}_D}{T}$，我们得到能量最终写为
+\begin{equation}E=E^{}_0+\frac{9NT}{z^3_D}\bigintsss_0^{z^{}_D}\sqrt{1+\dfrac{2NU^{}_0}{zVT}}\frac{z^3}{e^z-1}\dd{z}.\end{equation}
+可见其和\textsl{Debye}函数之间相差一个权重因子
+$$C(z)=\sqrt{1+\dfrac{2NU^{}_0}{zVT}}.$$
+在慢速极限下我们一般有$U^{}_0\ll 1$，进而极限给出
+$$C(z)\approx1+\dfrac{NU^{}_0}{zVT}+o\qty(\dfrac{NU^{}_0}{zVT}),$$
+则能量最终写为
+$$E=E^{}_0+\frac{9NT}{z^3_D}\bigintsss_0^{z^{}_D}\qty(1+\dfrac{NU^{}_0}{zVT})\frac{z^3}{e^z-1}\dd{z},$$
+根据式(\ref{leloh})引入$2$阶\textsl{Debye}函数，则最终能量表述为
+\begin{equation}E=E^{}_0+3NTW^{}_3\qty(\frac{\Theta^{}_D}{T})+\frac{9N^2U^{}_0T}{2V\Theta^{}_D}W^{}_2\qty(\frac{\Theta^{}_D}{T}).\end{equation}
+$n$阶\textsl{Debye}函数的性质都是相同的，于是我们看到在慢速碰撞下，声子系统的能量和\textsl{Debye}内插模型是类似的，但是多了一个相互作用项。类似的我们从式(\ref{jitaine})得到凝聚态的能量为
+$$E^{}_0=\frac{N^2U^{}_0}{2V}+\frac{9N}{2\Theta^3_D}\bigintsss_0^{\omega^{}_m}\qty(\sqrt{\omega^2+\frac{2NU^{}_0}{V}\omega}-\omega-\frac{NU^{}_0}{V})\omega^2\dd\omega,$$
+依旧在极限$U^{}_0\ll 1$下，我们对被积函数展开到二阶，得到
+\begin{equation}E^{}_0=\frac{N^2 U_0}{2V} - \frac{9N^3 U_0^2}{4V^2 \Theta^{}_D}.\end{equation}
+可见在慢碰撞势能较小的情况$U^{}_0\ll 1$下，系统的能量写为
+\begin{equation}E=\frac{N^2 U^{}_0}{2V}+3NTW^{}_3\qty(\frac{\Theta^{}_D}{T})+\frac{9N^2U^{}_0}{2V\Theta^{}_D}\qty(TW^{}_2\qty(\frac{\Theta^{}_D}{T})-\frac{NU^{}_0}{2V})=E^{(0)}+E^{(1)}.\end{equation}
+因此，凝聚态临界温度$T^{}_c$的值近似满足方程
+\begin{equation}E^{(1)}(T^{}_c)=0\implies\frac{NU^{}_0}{2V}=T^{}_cW^{}_{2}\qty(\dfrac{\Theta^{}_D}{T^{}_c}).\end{equation}
+当然这一方程并不精确，因为我们并没有考虑$U^{}_0$的精确值，并且我们是直接使用了\textsl{Debye}态密度来计算，更不用所这里的近似是非常粗暴的。事实上声子的光学谱支态密度是可以具体求出，以下我们简单的介绍一下。\\
+\\
+对于非简并的光学支，我们按动量展开为
+\begin{equation}\omega(\vb{k})=\omega(\vb{k}^{}_0)+\frac{1}{2}\gamma^{}_{ij}\qty(k^i-k^i_0)\qty(k^j-k^j_0),\label{ffdgm988}\end{equation}
+其中$\gamma^{}_{ij}$是$\omega$在$\vb{k}=\vb{k}^{}_0$处的\textsl{Hesse}矩阵分量，没有一次项出现是因为极值条件限制。我们假设在动量空间内的三维笛卡尔系$\qty{k^{}_x,k^{}_y,k^{}_z}$下，$\gamma^{}_{ij}$是对角化的，其主值构成的谱为$\text{Sp}=\qty{\gamma^{}_1,\gamma^{}_2,\gamma^{}_3}$，从而动量空间的轴就是主轴，展开式为
+\begin{equation}\begin{aligned}\omega(\vb{k})-\omega^{}_0&=\frac{1}{2}\qty[\gamma^{}_1\qty(k^{}_x-k^{}_{0x})^2+\gamma^{}_2\qty(k^{}_y-k^{}_{0y})^2+\gamma^{}_3\qty(k^{}_z-k^{}_{0z})^2]\\&=\frac{1}{2}\qty(\xi^2_x+\xi^2_y+\xi^2_z)=\frac{1}{2}\abs{\bm{\xi}}^2,\quad \xi^{}_i=\sqrt{\abs{\gamma^{}_i}}\qty(k^{}_i-k^{}_{0i}).\end{aligned}\label{ffdgm998}\end{equation}
+我们这里依旧希望求出频域的态密度$\aleph(\omega)$，注意到$1-$形式基变换$\dd\omega=\grad^{}_{\vb{k}}\omega(\vb{k})\cdot d\vb{k}$，则频域态密度为
+\begin{equation}\aleph(\omega)=\aleph(\vb{k})\frac{\dd^3\vb{k}}{(2\pi)^3\dd\omega}=\frac{1}{(2\pi)^3}\bigintsss\frac{\dd^2\vb{k}}{\abs{\grad^{}_{\vb{k}}\omega(\vb{k})}},\end{equation}
+对等动量球面积分。对于频率带入式(\ref{ffdgm998})，则取坐标变换$k\rightarrow u$，在$\bm{\xi}$空间下等动量球面元写为
+$$d^2\vb{k}=\frac{1}{\sqrt{\gamma}}d^2\bm{\xi}=\frac{1}{\sqrt{\gamma}}\abs{\bm{\xi}}^2\dd\textit{O}^{}_{\bm{\xi}},\quad \gamma=\abs{\gamma^{}_1\gamma^{}_2\gamma^{}_3},\quad\abs{\grad^{}_{\vb{k}}\omega(\vb{k})}=\abs{\grad^{}_{\bm{\xi}}\omega(\bm{\xi})}=\abs{\bm{\xi}},$$
+其中$\dd\textit{O}^{}_{\bm{\xi}}$是$\bm{\xi}$空间的立体角元，第一个公式就是面元的变换，则最终我们得到光学支的态密度为
+\begin{equation}\aleph(\omega)=\aleph(\omega^{}_0)+\frac{1}{\pi^2\sqrt{2\gamma}}\sqrt{\abs{\omega-\omega^{}_0}}.\end{equation}
+对于声学支，\textsl{Debye}态密度是适用的，只不过其系数应变为$9ND\rightarrow9$，因此我们总结声子的态密度为
+\begin{equation}\aleph(\omega)=\begin{cases}\displaystyle \dfrac{9\omega^2}{\omega^3_m},\quad \omega\ll\omega^{}_0;&\\ \displaystyle\aleph(\omega^{}_0)-\dfrac{1}{\pi^2\sqrt{2\gamma}}\sqrt{\abs{\omega^{}_0-\omega}},\quad \omega<\omega^{}_0;&\\ \displaystyle\aleph(\omega^{}_0),\quad \omega>\omega^{}_0.\end{cases}\end{equation}
+注意这里我们按$\omega^{}_0$分类，其依据是导数$d^{}_{\omega}\aleph$在$\omega^{}_0$处奇异，读者可自行证明上式只能取在左侧。在此密度下的凝聚态能量就不计算了，读者可自行求解，当然要注意此时极化的数量为$1\leq\mu\leq 3DN-3$。
 
 \subsection{玻色超流体理论简介}\label{CHoai**--}
 \noindent 前面我们系统的介绍了相变的热力学基础以及\textsl{Landau}二级相变理论，并通过晶格的微振动引入了声子。现在我们本节回到最开始的内容，来研究人类历史上发现的第一类凝聚态：\textbf{超流体 \textit{Superfluid}}。这里我们依旧取自然单位制$\hbar=1$，所以下文不区分动量$\vb{p}$和波矢$\vb{k}$，但需要注意当地声速$c\neq1$，后续会给出其在超流体中的表达式。后文中以$\hat{a}$作为玻色子的粒子数算符，$\hat{c}$作为准粒子的粒子数算符，注意这些记号和前文中略有出入。
@@ -9335,7 +9335,7 @@ $$\hat{p}=\sqrt{\dfrac{\hbar}{2}}\qty(\hat{a}^\dagger+\hat{a}),\quad \hat{q}=-i\
 $$u=\sqrt{\dfrac{\hbar}{2}}(i\beta-\alpha),\quad v=\sqrt{\dfrac{\hbar}{2}}(i\beta+\alpha)\implies \dd u\dd v=i\hbar\dd\alpha\dd\beta,$$
 容易证明$(u,v)$构成了一个局部正则系，因而我们就得到
 \begin{equation}\hat{f}\qty(\hat{a},\hat{a}^\dagger)=\frac{1}{i\hbar}\int_{\Phi} f^{}_W(u,v)\exp(v\hat{a}^\dagger+u\hat{a})\dd u\dd v.\end{equation}
-也就是说通过此变换，我们就得到\textsl{GM}表示(\ref{Shuangr+})，因此在二次量子化理论中一般多使用\textsl{Weyl}符号。比如我们可以计算其对真空态的作用，用\textsl{Weyl}关系分离指数算符，不难得到
+也就是说通过此变换，我们就得到\textsl{GM}表示(\ref{Shuangr})，因此在二次量子化理论中一般多使用\textsl{Weyl}符号。比如我们可以计算其对真空态的作用，用\textsl{Weyl}关系分离指数算符，不难得到
 $$\begin{aligned}\hat{f}\qty(\hat{a},\hat{a}^\dagger)\ket{0}&=\frac{1}{i\hbar}\int_{\Phi} f^{}_W(u,v)\exp(\frac{uv}{2})\exp(v\hat{a}^\dagger)\exp(u\hat{a})\ket{0}\dd u\dd v\\&=\frac{1}{i\hbar}\sum_{N=0}\int_{\Phi}f^{}_W(u,v)\exp(\frac{uv}{2})\frac{v^N}{\sqrt{N!}}\ket{N}\dd u\dd v.\end{aligned}$$
 于是我们得到其关于真空的均值
 \begin{equation}\mel**{0}{\hat{f}\qty(\hat{a},\hat{a}^\dagger)}{0}=\frac{1}{i\hbar}\int_{\Phi}f^{}_W(u,v)\exp(\frac{uv}{2})\dd u\dd v.\end{equation}
@@ -10971,7 +10971,7 @@ $$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r}),\quad p^2=p_0^2-\abs{\vb{p}}^2=p_0^2-\qty
 \begin{equation}p^2=m^2+o(1)\approx m^2\end{equation}
 的动量面。对于零质量粒子，质量壳给出$p^2=p_0^2-E^2_{\vb{p}}=0\implies p^{}_0=E^{}_{\vb{p}}$，这里取在壳近似，则不难看到势能$U\sim o(1)$是一阶小量，因此我们得到
 $$p^2\approx p^2_0-p^2_0+2p^0U(\vb{r})\implies \frac{1}{2}\pdv{p^2}{x^\mu}\pdv{p^{}_\mu}=\frac{1}{2}\pdv{\qty(2p^0U)}{\vb{r}}\pdv{\vb{p}}=p^0\pdv{U(\vb{r})}{\vb{r}}\pdv{\vb{p}}.$$
-同样的引入外力$\vb{F}=-\grad U$，第二项给出
+因为我们的出发点是\textsl{Dyson}方程，而\textsl{Dyson}方程是势能作为微扰的结果，因此这里的在壳近似是必须的。同样的引入外力$\vb{F}=-\grad U$，第二项给出
 \begin{equation}-\frac{1}{2}\pdv{p^2}{x^\mu}\pdv{p^{}_\mu}\mathscr W\qty[\mathfrak C^{-+}]=p^0\vb{F}\cdot\pdv{\vb{p}}\mathscr W\qty[\mathfrak C^{-+}].\end{equation}
 将方程右侧记为$\mathscr Y(p,x)$，从而最终的\textsl{Moyal}方程写作
 \begin{equation}\qty(p^0\pdv{t}+\vb{p}\cdot\pdv{\vb{r}}+p^0\vb{F}\cdot\pdv{\vb{p}})\mathscr W\qty[\mathfrak C^{-+}](p,x)=\mathscr Y(p,x).\label{Fvyop}\end{equation}
@@ -10981,19 +10981,21 @@ $$p^2\approx p^2_0-p^2_0+2p^0U(\vb{r})\implies \frac{1}{2}\pdv{p^2}{x^\mu}\pdv{p
 $$\begin{aligned}\mathscr W\qty[C^{-+}]&=\bigintsss\frac{\exp(ipr)}{2E^{}_{\vb{k}}}\qty{\expval{n^{}_{\vb{k}}}e^{ikr}+\qty(\expval{n^{}_{\vb{k}}}+1)e^{-ikr}}\qty(\frac{\dd k}{2\pi})^4\dd r\\&=\bigintsss\frac{\expval{n^{}_{\vb{k}}}\delta^4(p+k)+\qty(\expval{n^{}_{\vb{k}}}+1)\delta^4(p-k)}{2E^{}_{\vb{k}}}\qty(\frac{\dd k}{2\pi})^4.\end{aligned}$$
 无质量自由场给出$p^2=0$，且均匀分布和动量方向无关，为了后续计算我们将质量壳约束写为$\delta\qty(p^2)$，则得到
 \begin{equation}\mathscr W\qty[C^{-+}]=\delta\qty(p^2)\frac{\expval{n^{}_{-\vb{p}}}+\expval{n^{}_{\vb{p}}}+1}{2E^{}_{\vb{p}}}=\frac{\delta\qty(p^2)}{E^{}_{\vb{p}}}\qty(\expval{n^{}_{\vb{p}}}+\frac{1}{2}).\end{equation}
-对于相互作用的全连通传播子$\mathfrak C^{-+}$，虽然我们目前并不知道其具体表达式，但能确定的是$\mathscr W\qty[\mathfrak C^{-+}]$的零质量在壳近似一定会给出$\delta\qty(p^2)$，这直接继承自由场的质量壳约束。最终这个积分的结果必然形如
-$$\mathscr W\qty[\mathfrak C^{-+}](p,x)\propto\int e^{ipr}\qty{a\exp(ikr)+b\exp(-ikr)}\dd^4k\dd r\propto {\mathscr W[a](p,x)+\mathscr W[b](p,x)}\delta\qty(p^2),$$
+对于相互作用的全连通传播子$\mathfrak C^{-+}$，虽然我们目前并不知道其具体表达式，但能确定的是$\mathfrak C^{-+}$的零质量在壳近似一定会给出形如$a\exp(ikr)+b\exp(-ikr)$的项，这等价于自由场。最终这个积分的结果必然形如
+$$\mathscr W\qty[\mathfrak C^{-+}](p,x)\propto\int e^{ipr}\qty{a\exp(ikr)+b\exp(-ikr)}\dd^4k\dd r\propto \mathscr W[a](p,x)+\mathscr W[b](p,x),$$
 其中系数$a$和$b$对应自由场为$a\sim\expval{n^{}_{\vb{k}}}$，$b\sim\expval{n^{}_{\vb{k}}}+1$，在积分后$a$对应反向动量$-p$，在均匀系统下就体现为负能$\mathscr W[a](p,x)\sim-p^0$。现在我们定义系统的分布函数$f$为平均占有数$\expval{n^{}_{\vb{k}}}$的\textsl{Wigner}变换
 \begin{equation}f(p,x)=\mathscr W\qty[\expval{n^{}_{\vb{k}}}](p,x),\end{equation}
 则用\textsl{Heaviside}函数$\theta$表示动量方向，对于均匀系统主要关注能量，我们得到$\mathfrak C^{-+}$的\textsl{Wigner}变换为
-$$\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\delta\qty(p^2)\qty{\theta\qty(-p^0)f(p,x)+\theta\qty(p^0)\qty(1+f(p,x))}.$$
+$$\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\theta\qty(-p^0)f(p,x)+\theta\qty(p^0)\qty(1+f(p,x)).$$
 但我们知道宏观粒子是不能取负能的，因此我们只保留正能项，得到传播子的\textbf{准粒子近似 \textit{Quasi-particle Approximation}}
-\begin{equation}\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(f(p,x)+1).\label{Dfb***-0bj}\end{equation}
+\begin{equation}\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\theta\qty(p^0)(f(p,x)+1).\end{equation}
 其含义和动量的在壳近似一样，都是对自由场的微修正。将其带入方程(\ref{Fvyop})，我们就得到分布函数的演化方程，当然此时依旧是协变的$f=f\qty(p^0,\vb{p},\vb{r},t)$。\\
 \\
-为了排除$p^0$的影响回到经典表述，参考式(\ref{chOdy//;L..})可知只需要对方程两侧均对$p^0$积分即可，得到
+为了排除$p^0$的影响回到经典表述，参考式(\ref{chOdy//;L..})可知只需要对方程两侧均对$p^0$积分即可，当然由于现在处于在壳近似，因此我们应该对质量壳积分。将零质量壳约束写为$\delta\qty(p^2)$，我们就得到
 \begin{equation}\bigintsss\delta\qty(p^2)\qty(p^0\pdv{t}+\vb{p}\cdot\pdv{\vb{r}}+p^0\vb{F}\cdot\pdv{\vb{p}})\theta\qty(p^0)f(p,x)\dd p^0=\bigintsss\mathscr Y(p,x)\dd p^0.\label{POPIuvsb}\end{equation}
-先看左侧，质量壳约束$\delta\qty(p^2)$给出$p^0=\pm E^{}_{\vb{p}}$，因而不难得到
+因此一般而言准粒子近似也可以写作
+\begin{equation}\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(f(p,x)+1),\label{Dfb***-0bj}\end{equation}
+也就是将质量壳约束放进近似中，这样最后的积分就是对$\mathbb R$的全积分。先看左侧，质量壳约束$\delta\qty(p^2)$给出$p^0=\pm E^{}_{\vb{p}}$，因而不难得到
 $$\text{左侧}=\qty(E^{}_{\vb{p}}\pdv{t}+\vb{p}\cdot\pdv{\vb{r}}+E^{}_{\vb{p}}\vb{F}\cdot\pdv{\vb{p}})f(\vb{p},\vb{r},t).$$
 提出能量并引入群速度$\vb{u}=\vb{p}/E^{}_{\vb{p}}$，我们得到\textbf{\textsl{Liouville}演化项}
 \begin{equation}\textsl{Liouville}=E^{}_{\vb{p}}\qty(\pdv{t}+\vb{u}\cdot\pdv{\vb{r}}+\vb{F}\cdot\pdv{\vb{p}})f(\vb{p},\vb{r},t).\end{equation}
@@ -11015,11 +11017,13 @@ $$\mathscr W\qty[\mathfrak C^{+-}](p,x)\approx\delta\qty(p^2)\qty{\theta\qty(p^0
 \begin{equation}\qty(\pdv{t}+\vb{u}\cdot\pdv{\vb{r}}+\vb{F}\cdot\pdv{\vb{p}})f(\vb{p},\vb{r},t)=C(f),\end{equation}
 其中\textsl{UU}碰撞积分为
 \begin{equation}C(f)=\frac{1}{E^{}_{\vb{p}}}\int\delta\qty(p^2)\theta\qty(p^0)\qty{\mathscr W\qty[\Sigma^{+-}]\qty(1+f(p,x))-\mathscr W\qty[\Sigma^{-+}]f(p,x)}\dd p^0.\end{equation}
-这样我们就回到了经典的\textsl{Boltzmann}动理方程(\ref{Cadasfi234})，但和经典方程不同的是，这里多出一个真空因子$(1+f)$，这是\textbf{玻色增强 \textit{Bose Enhancement}}效应确定的。值得一提的是，对于费米子我们得到$\mathscr W\qty[\mathfrak C^{+-}](p,x)\approx\theta\qty(-p^0)\qty(1-f(p,x))$，称为\textbf{\textsl{Pauli}阻塞}，这一点可以在\cite{Ld3k}\S 95中看到。一般的我们将此\textsl{Moyal}方程称为\textbf{\textsl{Uehling-Uhlenbeck}方程}，是非平衡态场研究的基石之一。\\
+这样我们就回到了经典的\textsl{Boltzmann}动理方程(\ref{Cadasfi234})，但和经典方程不同的是，这里多出一个真空因子$(1+f)$，这是\textbf{玻色增强 \textit{Bose Enhancement}}效应确定的。值得一提的是对于费米子，基于其反对易性我们得到
+\begin{equation}\mathscr W\qty[\mathfrak C^{+-}](p,x)\sim 1-\expval{\hat{a}^\dagger_p\hat{a}^{}_p}\approx\theta\qty(-p^0)\qty(1-f(p,x)),\end{equation}
+称为\textbf{\textsl{Pauli}阻塞}，这一点可以在\cite{Ld3k}\S 95中看到。一般的我们将此\textsl{Moyal}方程称为\textbf{\textsl{Uehling-Uhlenbeck}方程}，是非平衡态场研究的基石之一。\\
 \\
 最后我们总结一下所用到的各类近似：
 \begin{enumerate}\item 在\textsl{Dyson}方程中，左侧导数部分$p^2\star\mathscr W\qty[\mathfrak C^{-+}]$的星积取梯度近似
-$$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的。\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了\end{enumerate}
+$$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的。\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$，这里我们已经将质量壳约束纳入近似中。\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了\end{enumerate}
 基于这些近似，我们从\textsl{SK}形式得到了\textsl{Boltzmann}动理方程，可见其约束还是很多的，为了处理更一般的非平衡量子系统，我们就需要逐步放开这些约束。关于\textsl{UU}碰撞积分的图解法，可以参考\cite{Ld3k}\S 95，这里就不展开了。\\
 \\
 通过上述推导，我们看到宏观物理定律，是如何从微观量子场的关联函数中涌现出来的。这里主要涉及到两个近似：第\ref{Xheish//}个和第\ref{Meiifiab}个。后续我们会看到，这两个近似实际上是典型的粗粒化过程，它们将关联函数中最主要的统计性质提出，并在大范围的统计均值下得到宏观结论，这就是重整化的目标。\clearpage
@@ -12185,7 +12189,16 @@ $$\hat{\mathcal{H}}(\mu'_p=0)=\hat{\mathcal{H}}'-\frac{e\hbar}{4mc^2}\bm{\sigma}
 $$\mu=\frac{\mu^{}_p+\mu'_p}{2}=\frac{\hbar g^{(e)}_m}{2}+\mu'_p.$$
 但是因为电子没有反常部分，所以自然的均值就被这一部分平衡掉了，从而减小为宏观磁矩能的一半。当然这并非唯一的解释方法，此处我们给出的是一个较为普适的结论。
 
-\subsection{量子散射论基础}
+\subsection{量子散射论基础}\label{sandUhg}
+
+\subsubsection{非相对论性弹性散射}
+
+\subsubsection{不同能级的散射}
+
+\subsubsection{非弹性碰撞简介}
+
+\subsubsection{协变散射论}
+
 \subsection{外场下的Dirac场论}\label{dinm,a665rb2}
 
 \subsubsection{类氢原子和光的经典相互作用}
@@ -12209,7 +12222,7 @@ $$\mu=\frac{\mu^{}_p+\mu'_p}{2}=\frac{\hbar g^{(e)}_m}{2}+\mu'_p.$$
 \subsection{Wilson重整化群理论}\label{bh-gg0..34}
 \subsection{单圈修正与动量重整化}\label{0cbcx778dy550r8}
 \subsection{Higgs机制和自发对称性破缺}
-\subsection{实标量场的临界指数}
+\subsection{实标量场的临界指数}\label{JuticaG6Y9//}
 \subsection{有效场论的一般框架}
 \subsection{共形场论引入}
 
