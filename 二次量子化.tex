@@ -4,7 +4,7 @@
 \usepackage{tikz,capt-of,tikz-3dplot,pgfplots,siunitx,ifthen,xcolor}\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing,angles, quotes}\colorlet{mydarkblue}{blue!30!black}\colorlet{myred}{red!50!black}\colorlet{mydarkred}{red!60!black}\tikzset{midarr/.style={decoration={markings,mark=at position #1 with{\arrow{stealth}}},postaction={decorate}},midarr/.default=0.5}\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.03*\ymax) --++ (#2-180:0.06*\ymax)}
 \usepackage{tocbibind}\usepackage[compat=1.1.0]{tikz-feynman}\usepackage[title,titletoc]{appendix}\renewcommand{\appendixpagename}{附录}\renewcommand{\appendixtocname}{附录}\renewcommand{\appendixname}{}
 \usepackage[titles,subfigure]{tocloft}\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape}\newcommand*{\dt}[1]{\accentset{\mbox{\small\bfseries .}}{#1}}\newcommand*{\ddt}[1]{\accentset{\mbox{\small\bfseries ..}}{#1}}\newcommand*{\dddt}[1]{\accentset{\mbox{\small\bfseries ...}}{#1}}\usepackage{simpler-wick}
-\title{二次量子化理论概述\\ 及其在场论中的应用介绍（第一版）\\[1ex]\large ——朗道十卷部分导读}\author{Schlichting\\}\date{2024/10/04 - 2025/04/25}\begin{document}
+\title{二次量子化理论概述\\ 及其在场论中的应用介绍（第一版）\\[1ex]\large ——朗道十卷部分导读}\author{Schlichting\\}\date{2024/10/04 - \the\year/\ifnum\month<10 0\fi\the\month/\ifnum\day<10 0\fi\the\day}\begin{document}
 
 \begin{titlepage}\centering\pgfmathsetlengthmacro{\coverwidth}{\paperwidth-4cm}\pgfmathsetlengthmacro{\coverheight}{\paperheight-4cm}\begin{tikzpicture}[remember picture,overlay,shift={(current page.center)},x=\coverwidth,y=\coverheight]\shade[bottom color=blue!80!black,top color=green!70!black](current page.north west) rectangle(current page.south east);\begin{feynman}[large]\vertex at(-0.5,0.15)(a){\textcolor{red}{$\mu^{-}$}};\vertex[right=of a](b);\vertex[above right=of b](f1){\textcolor{orange}{$\nu_{\mu}$}};\vertex[below right=of b](c);\vertex[above right=of c](f2){\textcolor{magenta}{$\overline\nu_{e}$}};\vertex[below right=of c](f3){\textcolor{cyan}{$e^{-}$}};\diagram*{(a)--[fermion,red](b)--[fermion,orange](f1),(b)--[boson,edge label'=\textcolor{yellow}{$W^{-}$},green!60!black](c),(c)--[anti fermion,magenta](f2),(c)--[fermion,cyan](f3),};\end{feynman}\tikzfeynmanset{every fermion={brown}}\begin{feynman}[large]\vertex(a1)at(-0.5,-0.2){\textcolor{red}{\(\overline b\)}};\vertex[right=1cm of a1](a2);\vertex[right=1cm of a2](a3);\vertex[right=1cm of a3](a4){\textcolor{cyan!30!pink}{\(b\)}};\vertex[right=1cm of a4](a5);\vertex[right=2cm of a5](a6){\textcolor{green}{\(u\)}};\vertex[below=2cm of a1](b1){\textcolor{red}{\(d\)}};\vertex[right=1cm of b1](b2);\vertex[right=1cm of b2](b3);\vertex[right=1cm of b3](b4){\textcolor{cyan!30!pink}{\(\overline d\)}};\vertex[below=2em of a6](b5){\textcolor{green}{\(\overline d\)}};\vertex[above=of a6](c1){\textcolor{cyan}{\(\overline u\)}};\vertex[above=2em of c1](c3){\textcolor{magenta}{\(d\)}};\vertex at($(c1)!0.5!(c3)-(1cm,0)$)(c2);\diagram*{{[edges=fermion](b1)--(b2)--(a2)--(a1),(b5)--(b4)--(b3)--(a3)--(a4)--(a5)--(a6),},(a2)--[boson,edge label=\textcolor{cyan!40!purple}{$W$},orange](a3),(b2)--[boson,edge label'=\textcolor{red!30!green}{$W$},orange!50!yellow](b3),(c1)--[fermion,out=180,in=-45,blue!50!yellow](c2)--[fermion, out=45, in=180](c3),(a5)--[boson,bend left,edge label'=\textcolor{yellow}{$W^{-}$},green!60!black](c2),};\draw[decoration={brace}, decorate](b1.south west)--(a1.north west)node[pos=0.5, left,purple!20!cyan] {\(B^{0}\)};\draw[decoration={brace}, decorate](c3.north east)--(c1.south east)node [pos=0.5, right,blue!20!cyan]{\(\pi^{-}\)};\draw[decoration={brace},decorate](a6.north east)--(b5.south east)node[pos=0.5,right,red!20!orange]{\(\pi^{+}\)};\end{feynman}\begin{scope}[shift={(0.1,0)}]\begin{axis}[xmin=0,xmax=2.3,ymin=-0.3,ymax=2.3,axis lines=center,restrict y to domain=0:50,ticks=none,ylabel=$C(T)$,xlabel=$T$,axis line style={color=yellow!40!black,line width=1.5pt},]\addplot[domain=0.2:1,pink!30!black,samples=400,very thick]{\x^3+(3/4+\x^(-1)+\x^(-2))*(\x^(0.5))*e^(-1/\x)};\addplot[domain=1:2,pink!50!black,very thick]{\x^(-1.5)};\addplot[domain=0.8:1,black,dashed,thick]{\x^(-1.5)};\draw[dotted,thick,orange!40!pink,very thick](axis cs:1,0)node[below]{$T^{}_c$}--(axis cs:1,3);\node[green!30!black,scale=2]at(axis cs:0.5,1.5){He$^\text{\RomanNumeralCaps{2}}$};\node[orange!30!black,scale=2]at(axis cs:1.6,1.2){He$^\text{\RomanNumeralCaps{1}}$};\end{axis}\end{scope}\begin{scope}[shift={(0.1,-0.35)}]\begin{axis}[xmin=-1.2,xmax=1.2,ymin=-.5,ymax=.5,axis lines=center,axis on top=false,rotate=90,restrict y to domain=-20:50,xlabel=$h$,ylabel=$\eta^{}_*$,ticks=none,y dir=reverse,ylabel style={at={(axis cs:1.1,0.05)},anchor=south,line width=1.5pt},xlabel style={at={(axis cs:0.05,.5)},anchor=west},axis line style={color=red!40!black,line width=1.5pt},height=.5\textwidth]\addplot[mark=none,draw=orange!30!pink,thin,domain=-1.1:-.894,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[dashed,mark=none,draw=red!30!green,domain=-.894:-.51,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[dashed,mark=none,draw=red!30!green,,domain=.51:.894,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[mark=none,draw=orange!30!pink,domain=.894:1.1,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[dotted,mark=none,draw=black!30!white,domain=-.51:.51,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\draw[dotted,yellow!60!pink,very thick](axis cs:1.02,.276)node[right,above]{$C$}--(axis cs:-0.525,.276)node[left,]{$B'$};\draw[dotted,yellow!60!pink,very thick](axis cs:-1.02,-.276)node[right,below]{$C'$}--(axis cs:0.525,-.276)node[right]{$B$};\draw[cyan!50!orange,very thick](axis cs:0.9,0)node[right]{$A$}--(axis cs:-0.9,0)node[below,right]{$A'$};\end{axis}\end{scope}\foreach\x in{-0.5,-0.4,...,0.5}{\foreach\y in{-0.5,-0.4,...,0.5}{\fill[blue!30](\x,\y)circle(0.002);}}\fill[blue!10,opacity=0.65](-0.6,0.25)rectangle(0.6,0.55);\node[align=center]at(0,0.4){\fontsize{22}{26}\selectfont\bfseries A brief introduction of the Second Quantization\\ \\ \fontsize{20}{26}\selectfont \bfseries and its applications in the Field Theories \\ \\ \fontsize{16}{26}\selectfont-- Partially guided reading of the \\ \fontsize{16}{26}\textit{Course of Theoretical Physics,\ \ Landau and Lifchitz}};\fill[white,opacity=0.8](-0.8,-0.55) rectangle (0.8,-0.45);\node[align=center]at(0,-0.5){\fontsize{20}{24}\selectfont by Schlichting\quad First Edition\quad in Chinese};\end{tikzpicture}\end{titlepage}
 \maketitle\thispagestyle{empty}\clearpage\setcounter{page}{0}\pagenumbering{roman}
@@ -4349,7 +4349,7 @@ $$\mathcal H^{}_{ex}=\frac{e^2H^2r^2}{8m}.$$
 \\
 其次我们来确定系统的模型以及系综。我们知道，物体是由许多分子组成的，而每个分子都包含一定量的电子，正是由这些电子提供了磁矩。根据实验可以看到，固体中\textbf{晶体 \textit{Crystal}}的微观结构是呈规则周期性排列的，比如下图给出的CsCl晶体结构：
 \begin{figure}[htbp!]\centering\tikz{\pgfmathsetmacro{\d}{2.5}\draw[](0,0,0)--(\d,0,0)--(\d,\d,0)--(0,\d,0)--(0,0,0)--(0,0,\d)--(\d,0,\d)--(\d,\d,\d)--(0,\d,\d)--(0,0,\d)--(0,0,\d)--(\d,0,\d)--(\d,0,0)--(0,0,0)--(0,0,\d)--(0,\d,\d)--(\d,\d,\d)--(\d,\d,0)--(0,\d,0)--(0,\d,\d);\shade[ball color=black](0,0,0)circle(3pt);\shade[ball color=black](\d,\d,\d)circle(3pt);\shade[ball color=black](\d,0,0)circle(3pt);\shade[ball color=black](0,\d,0)circle(3pt);\shade[ball color=black](0,0,\d)circle(3pt);\shade[ball color=black](\d,\d,0)circle(3pt);\shade[ball color=black](\d,0,\d)circle(3pt);\shade[ball color=black](0,\d,\d)circle(3pt);\shade[ball color=black](0.5*\d,0.5*\d,0.5*\d)circle(3pt);\begin{scope}[line width=.5,shade,shading angle=30]\draw[](\d,0,\d)--(0,\d,0);\draw[](0,0,0)--(\d,\d,\d);\draw[](\d,0,0)--(0,\d,\d);\end{scope}}\caption{CsCl分子的晶体结构（体心立方）}\end{figure}
-图中每一个点代表一个晶体分子(质心)，称为\textbf{格点 \textit{Lattice Point}}，相应晶体的周期性排列的晶体结构称为\textbf{晶格 \textit{Crystal Lattice}}，其中由格点构成的基本结构称为\textbf{原胞 \textit{Unit Cell}}，一般是晶格的最小不可约单位。这三者构成了晶体的基本模型，也是\textbf{晶体学 \textit{Crystallography}}的基本要素，这里我们不对其展开。为了后续理解，我们这里对晶格做一个基本的假设：
+图中每一个点代表一个晶体分子(质心)，称为\textbf{格点 \textit{Lattice Point}}，相应晶体的周期性排列的晶体结构称为\textbf{晶格 \textit{Crystal Lattice}}，其中由格点构成的基本结构称为\textbf{原胞 \textit{Unit Cell}}，一般是晶格的最小不可约单位。这三者构成了晶体的基本模型，也是\textbf{晶体学 \textit{Crystallography}}的基本要素，我们不对其展开。为了后续理解，这里对晶格做一个基本的假设：
 \begin{center}令格点处分子的热运动反映为晶格的微振动，从而使得格点相对静止，保持原胞的形状不变。\end{center}
 关于晶格的微振动我们会在下一节的声子模型中具体分析，这里我们只考虑绝对静止的格点。\\
 \\
@@ -5385,7 +5385,7 @@ $$\hat{F}^{(1)}=\hat{H}^{(1)}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty
 之前我们通过离散谱的形式已经得出结论(\ref{xinjai--9})，这里也是类似的，只需要将离散能级号变为连续动量谱即可，我们取记号变换
 $$i\rightarrow\vb{k}^{}_1,\quad j\rightarrow\vb{k}^{}_2,\quad k\rightarrow\vb{k}'_1,\quad l\rightarrow\vb{k}'_2,$$
 并且舍弃$i=j\Longleftrightarrow\vb{k}^{}_1=\vb{k}^{}_2$的非碰撞情况后，我们得到二次量子化算符的主轴形式为
-\begin{equation}\begin{aligned}\hat{F}^{(2)}=&\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \\qty{\sigma^{}_i}}}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1,\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2,\sigma^{}_2}\\&-\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \sigma^{}_1=\sigma^{}_2=\sigma}}\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}\hat{N}^{}_{\vb{k}^{}_1,\sigma}\hat{N}^{}_{\vb{k}^{}_2,\sigma}.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\hat{F}^{(2)}=&\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \qty{\sigma^{}_i}}}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}\hat{N}^{}_{\vb{k}^{}_1,\sigma^{}_1}\hat{N}^{}_{\vb{k}^{}_2,\sigma^{}_2}\\&-\frac{1}{2}\sum\limits_{\substack{\vb{k}^{}_1\neq\vb{k}^{}_2,\\ \sigma^{}_1=\sigma^{}_2=\sigma}}\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}\hat{N}^{}_{\vb{k}^{}_1,\sigma}\hat{N}^{}_{\vb{k}^{}_2,\sigma}.\end{aligned}\end{equation}
 现在我们取按体积归一化的动量表象的波函数为
 \begin{equation}\ket{\vb{k}^{}_i}=A\exp(i\vb{k}^{}_i\cdot\vb{r}^{}_i),\quad A=\sqrt{\frac{1}{V}},\end{equation}
 并且我们假设算符只是粒子间相对位置的函数，对于两个粒子形如$\hat{f}^{(2)}=\hat{f}^{(2)}(\vb{r}^{}_2-\vb{r}^{}_1=\vb{r})$，则其特征方程为
@@ -9753,7 +9753,7 @@ $$P^{}_{ba}=\frac{2\pi t}{\hbar}\abs{V^{}_{ba}}^2\int\delta\qty(E^{(0)}_b-E^{(0)
 
 \subsection{微扰的直接级数展开}
 \noindent 前面我们通过对矩阵的讨论，系统性的介绍了定态微扰和含时微扰。但是不难看到如此处理的缺点：在将波函数当作向量，以及\textit{Hamiltonian}算符当作矩阵时，我们完全忽略了它们的函数性，仅是在数组视角下分析。因此我们不妨将向量升级为空间向量场，以函数视角重新审视微扰问题。
-\subsubsection{古典微扰论和Born级数}
+\subsubsection{古典微扰论和Born级数}\label{Uywqe.66}
 \noindent 我们从定态微扰开始，其矩阵方程由式(\ref{.,.,.,><>jh})确定。这里我们依旧采用单位正交的向量形式，但在向量场$\vb{f}(x)$含义下，我们将微扰方程写为
 \begin{equation}\qty(\lambda-\vb{A})\vb{f}(x)=\epsilon\vb{B}\vb{f}(x).\end{equation}
 由于向量场$\vb{f}(x)$的函数性，上述矩阵方程实际上是函数方程，矩阵$\vb{A}$和$\vb{B}$都是算子$\hat{A}$，$\hat{B}$。这里我们省略定态号，因为向量场对离散谱和连续谱军适用。这个方程的解不难得到，若我们将微扰部分$\epsilon\hat{B}\vb{f}(x)$整体看作源项，则这个方程和一般的有源微分方程完全一致，其解根据\textsl{Green}函数法得到
@@ -9761,7 +9761,7 @@ $$P^{}_{ba}=\frac{2\pi t}{\hbar}\abs{V^{}_{ba}}^2\int\delta\qty(E^{(0)}_b-E^{(0)
 其中\textsl{Green}函数$G(x)$和通解$\vb{f}^{}_0(x)$满足
 $$\qty(\lambda-\hat{A})G(x)=\delta(x),\quad \qty(\lambda-\hat{A})\vb{f}^{}_0(x)=0\implies \vb{f}^{}_0(x)=\vb{e}(x).$$
 也就是说，通解就是零级近似向量$\vb{e}(x)$，这并不难理解。于是最终的解为
-\begin{equation}\vb{f}(x)=\vb{e}(x)+\epsilon\int G(x-y)\hat{B}\vb{f}(y)\dd y.\end{equation}
+\begin{equation}\vb{f}(x)=\vb{e}(x)+\epsilon\int G(x-y)\hat{B}\vb{f}(y)\dd y.\label{Nad/*0044}\end{equation}
 这个函数解称为\textbf{\textsl{Lippmann-Schwinger}方程}，它确定了一个函数关于其零级近似的嵌套关系，因为在形式上它体现为零级近似和函数本身的和。基于\textsl{LS}方程的微扰近似称为\textbf{\textsl{Lippmann-Schwinger}近似}。\\
 \\
 按照一般嵌套关系的处理方法，我们将$\vb{f}(y)$直接回代给出
@@ -10184,7 +10184,7 @@ $$C^{(1)}_2(x,1)=i\lambda\int_{\mathscr M}\qty[\mel**{0}{\mathbb T\qty{\psi^2_y\
 $$\begin{aligned}C^{(2)}_2(x,1)=&-\dfrac{\lambda^2}{2}\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\psi^2_y\psi^2_z\psi^{}_x\psi^{}_1}}{0}\dd\Omega^{}_y\dd\Omega^{}_z-D^{}_F(x,1)\qty(\lambda\int_{\mathscr M}D^{}_F(y,y)\dd\Omega^{}_y)^2\\&+\lambda^2\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\psi^2_y\psi^{}_x\psi^{}_1}}{0}\dd\Omega^{}_y\int_{\mathscr M}D^{}_F(z,z)\dd\Omega^{}_z\\=&\lambda^2\int_{\mathscr M}\Big\{D^{}_F(1,y)D^{}_F(x,y)D^{}_F(z,z)-D^{}_F(1,z)D^{}_F(x,z)D^{}_F(y,y)\\&\hspace{1.3cm}-D^{}_F(x,1)D^2_F(y,z)-\frac{1}{2}D^{}_F(x,1)D^{}_F(y,y)D^{}_F(z,z)\\&\hspace{1.3cm}-2D^{}_F(y,z)\qty[D^{}_F(1,y)D^{}_F(x,z)+D^{}_F(1,z)D^{}_F(x,y)]\Big\}\dd\Omega^{}_y\dd\Omega^{}_z\end{aligned}$$
 可见对于二级修正，分母的展开貌似还不够精确。这里实际上涉及到点$y$和$z$的对称性问题，我们简单分析一下，对称性的具象证明请参考第\ref{ecui0r8//6}节和。\\
 \\
-由于我们已经通过一级修正证明了，\textsl{SD}方程的结果是最符合实际的，因此我们希望二级修正给出式(\ref{SD-Fb-v-j})的结果。和上式对比可以想到，它最有可能的化简结果为
+通过一级修正我们证明了，\textsl{SD}方程的结果是最符合实际的，因此我们希望二级修正给出式(\ref{SD-Fb-v-j})的结果。和上式对比可以想到，它最有可能的化简结果为
 $$C^{(2)}_2(x,1)=-2\lambda^2D^{}_F(y,z)\int\qty{D^{}_F(1,y)D^{}_F(x,z)+D^{}_F(1,z)D^{}_F(x,y)}\dd\Omega^{}_y\dd\Omega^{}_z.$$
 为了给出式(\ref{SD-Fb-v-j})的形式，我们需要考察对称性：传播子在时空点对换下保持不变，比如
 \begin{equation}D^{}_F(1,y)D^{}_F(x,z)D^{}_F(y,z)=D^{}_F(1,z)D^{}_F(x,y)D^{}_F(y,z).\label{dgtabndh99-}\end{equation}
@@ -10901,7 +10901,7 @@ $$\bm{\mathfrak C}^K\stackrel{\vb{Q}}{\sim}\bm{\mathfrak D}^K=\mqty(0&\mathfrak 
 \\
 首先介绍一下宏观低速下的\textsl{Boltzmann}动理方程，这里我们只考察处于非平衡态中的电中性理想气体系统$\mathscr S$，假设其内部的相互作用只由分子间的碰撞产生。根据统计物理的一般处理思路，引入气体分子的相空间和切触空间
 $$\Phi=T^*\mathscr C=\qty{(\vb{r},\vb{p})},\quad \bar\Phi=\overline{T^*\mathscr C}=\qty{(\vb{r},\vb{p},t)},$$
-需要说明的是这里的$\vb{r}$和$\vb{p}$是包含了所有空气分子的位置和动量信息，在切触坐标系下体元为$\dd\Gamma$。在切触空间上，我们定义气体的\textbf{分布函数 \textit{Distuibution Function}}为
+需要说明的是这里的$\vb{r}$和$\vb{p}$是包含了所有空气分子的位置和动量信息，在切触坐标系下体元为$\dd\Gamma$。在切触空间上，我们定义气体的\textbf{分布函数 \textit{Distribution Function}}为
 \begin{equation}f\in C^\infty\qty(\bar\Phi),\quad \int f\qty(\bar\Phi)\dd\Gamma=\expval{n}(\vb{r},t)=\dv{N}{V}.\end{equation}
 其中$\expval{n}$是系统$\mathscr S$的平均分子数密度，它只和位置与时间有关，这里和时间的关联性就是非平衡态的特征。对于分布函数$f$更精确的描述请参考\cite{Ld3k} \S1。记气体系统在切触空间中的演化轨迹为$\gamma(\tau)\subset\bar\Phi$，我们写出$f$沿该轨迹的导数
 $$\dv{f}{\tau}=\bm{\gamma}'(f)=\pdv{f}{t}\dv{t}{\tau}+\pdv{f}{\vb{r}}\dv{\vb{r}}{\tau}+\pdv{f}{\vb{p}}\dv{\vb{p}}{\tau}.$$
@@ -10965,7 +10965,7 @@ $$\begin{aligned}&\mathscr W\qty[\Sigma^{-+}]\star\mathscr W\qty[\mathfrak C^{++
 \begin{equation}\begin{aligned}\Re\qty{ip^2\star\mathscr W\qty[\mathfrak C^{-+}]}=&p^\mu\pdv{x^\mu}\mathscr W\qty[\mathfrak C^{-+}]-\frac{1}{2}\pdv{p^2}{x^\mu}\pdv{p^{}_\mu}\mathscr W\qty[\mathfrak C^{-+}]\\=&\mathscr W\qty[\Sigma^{-+}]\mathscr W\qty[\mathfrak C^{++}]+\mathscr W\qty[\Sigma^{--}]\mathscr W\qty[\mathfrak C^{-+}]\\&-\mathscr W\qty[\mathfrak C^{-+}]\mathscr W\qty[\Sigma^{++}]-\mathscr W\qty[\mathfrak C^{--}]\mathscr W\qty[\Sigma^{-+}].\end{aligned}\end{equation}
 将导数具体写出，第一项给出
 \begin{equation}p^\mu\pdv{x^\mu}\mathscr W\qty[\mathfrak C^{-+}]=p^0\pdv{t}\mathscr W\qty[\mathfrak C^{-+}]+\vb{p}\cdot\pdv{\vb{r}}\mathscr W\qty[\mathfrak C^{-+}].\end{equation}
-对于第二项，鉴于粒子无质量我们写出相互作用色散律
+对于第二项，鉴于粒子无质量，我们写出实标量场的相互作用色散律
 $$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r}),\quad p^2=p_0^2-\abs{\vb{p}}^2=p_0^2-\qty(E^{}_{\vb{p}}-U)^2,$$
 其中$U(\vb{r})$是相互作用势能，其只和空间相对距离有关。定义\textbf{质量壳 \textit{Mass Shell}}为动量空间中满足自由粒子\textsl{HJ}方程$p^2=m^2$的动量面，与之相关的定义\textbf{在壳近似 \textit{On-shell Approximation}}为相互作用场中，满足\textsl{HJ}方程
 \begin{equation}p^2=m^2+o(1)\approx m^2\end{equation}
@@ -10979,13 +10979,13 @@ $$p^2\approx p^2_0-p^2_0+2p^0U(\vb{r})\implies \frac{1}{2}\pdv{p^2}{x^\mu}\pdv{p
 \\
 现在我们按约定(\ref{Laf92++**})计算$\mathscr W\qty[\mathfrak C^{-+}]$，对于自由场我们根据式(\ref{Bv56225=-})得到
 $$\begin{aligned}\mathscr W\qty[C^{-+}]&=\bigintsss\frac{\exp(ipr)}{2E^{}_{\vb{k}}}\qty{\expval{n^{}_{\vb{k}}}e^{ikr}+\qty(\expval{n^{}_{\vb{k}}}+1)e^{-ikr}}\qty(\frac{\dd k}{2\pi})^4\dd r\\&=\bigintsss\frac{\expval{n^{}_{\vb{k}}}\delta^4(p+k)+\qty(\expval{n^{}_{\vb{k}}}+1)\delta^4(p-k)}{2E^{}_{\vb{k}}}\qty(\frac{\dd k}{2\pi})^4.\end{aligned}$$
-无质量自由场给出$p^2=0$，且均匀分布和动量方向无关，为了后续计算我们将质量壳约束写为$\delta\qty(p^2)$，则得到
-\begin{equation}\mathscr W\qty[C^{-+}]=\delta\qty(p^2)\frac{\expval{n^{}_{-\vb{p}}}+\expval{n^{}_{\vb{p}}}+1}{2E^{}_{\vb{p}}}=\frac{\delta\qty(p^2)}{E^{}_{\vb{p}}}\qty(\expval{n^{}_{\vb{p}}}+\frac{1}{2}).\end{equation}
+无质量自由场给出质量壳约束$p^2=0$，且均匀分布和动量方向无关，我们得到
+\begin{equation}\mathscr W\qty[C^{-+}]=\frac{\expval{n^{}_{-\vb{p}}}+\expval{n^{}_{\vb{p}}}+1}{2p^0}=\frac{1}{p^0}\qty(\expval{n^{}_{\vb{p}}}+\frac{1}{2}).\end{equation}
 对于相互作用的全连通传播子$\mathfrak C^{-+}$，虽然我们目前并不知道其具体表达式，但能确定的是$\mathfrak C^{-+}$的零质量在壳近似一定会给出形如$a\exp(ikr)+b\exp(-ikr)$的项，这等价于自由场。最终这个积分的结果必然形如
 $$\mathscr W\qty[\mathfrak C^{-+}](p,x)\propto\int e^{ipr}\qty{a\exp(ikr)+b\exp(-ikr)}\dd^4k\dd r\propto \mathscr W[a](p,x)+\mathscr W[b](p,x),$$
 其中系数$a$和$b$对应自由场为$a\sim\expval{n^{}_{\vb{k}}}$，$b\sim\expval{n^{}_{\vb{k}}}+1$，在积分后$a$对应反向动量$-p$，在均匀系统下就体现为负能$\mathscr W[a](p,x)\sim-p^0$。现在我们定义系统的分布函数$f$为平均占有数$\expval{n^{}_{\vb{k}}}$的\textsl{Wigner}变换
 \begin{equation}f(p,x)=\mathscr W\qty[\expval{n^{}_{\vb{k}}}](p,x),\end{equation}
-则用\textsl{Heaviside}函数$\theta$表示动量方向，对于均匀系统主要关注能量，我们得到$\mathfrak C^{-+}$的\textsl{Wigner}变换为
+注意由于占有数本身处于动量表象，因此其\textsl{Wigner}变换也应使用动量表象。用\textsl{Heaviside}函数$\theta$表示动量方向，对于均匀系统主要关注能量，我们得到$\mathfrak C^{-+}$的\textsl{Wigner}变换为
 $$\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\theta\qty(-p^0)f(p,x)+\theta\qty(p^0)\qty(1+f(p,x)).$$
 但我们知道宏观粒子是不能取负能的，因此我们只保留正能项，得到传播子的\textbf{准粒子近似 \textit{Quasi-particle Approximation}}
 \begin{equation}\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\theta\qty(p^0)(f(p,x)+1).\end{equation}
@@ -11174,7 +11174,7 @@ $$\vb{p}^{}_1=-\vb{p}^{}_2=\vb{p}=\pdv{S}{\vb{r}}.$$
 \noindent 上面我们介绍了电磁辐射的基础：推迟势，以及一些基本应用。现在我们来重点研究一类常见的辐射现象：远场电磁辐射，并确立此类辐射场的一些基本特性，注意下文中的思想对于弱引力辐射同样适用。方便起见，我们将坐标原点$O$取在电荷云内，记观察点$p$处的位矢为$\vb{R}^{}_0$，其单位向量为$\vb{n}$，电荷云体元的位矢为$\vb{r}$，则矢径为$\vb{R}=\vb{R}^{}_0-\vb{r}$。
 \subsubsection{辐射的远场近似}
 \noindent 首先我们需要明确何为远场。字面理解，远场即距离场源足够远的地方，但这对于粒子体系并非严格，因为粒子体系本身有一定的尺度。按几何光学中的\textsl{Gauss}近轴近似，我们可以想到此时观察点距离应远大于系统的尺度，这里就是$\abs{\vb{r}}$。据此我们定义\textbf{远场近似}为
-\begin{equation}R^{}_0\gg r.\end{equation}
+\begin{equation}R^{}_0\gg r.\label{Cfafetg}\end{equation}
 在这样的近似下，对矢径展开到一阶给出
 \begin{equation}R=\abs{\vb{R}^{}_0-\vb{r}}=R^{}_0-\vb{n}\cdot\vb{r},\label{yaccj}\end{equation}
 其中我们使用了$\grad\vb{R}^{}_0=\vb{n}$这个事实，在推迟势的计算中也有反复提及。现在我们来考察这一近似可以在多大程度上化简推迟势，式(\ref{retdd2})中距离体现在两个方面：分母上球面波的传播距离$R^{-1}$，和推迟的时间$R/c$。我们之前提到，推迟势的主要贡献在于，其体现了相互作用的非瞬时性，而球面波性并非主要特征。所以远场近似主要体现在推迟时间上，分母的球面波距离可以取为零级近似$R^{}_0$。因而我们得到
@@ -11227,7 +11227,7 @@ $$\dfrac{cR^{2}_0}{4\pi}\int H^2\dd{t}\dd{\textit{O}}=\dfrac{cR^{2}_0}{2\pi}\int
 \begin{equation}\dd{P^{\mu}}=-\frac{e^2k^{\mu}}{2\pi^2c}\chi^{}_{\nu}\chi^{\nu}\delta\qty(k^{\gamma}k^{}_{\gamma})\dd^4\vb{k},\quad\chi^{\mu}=\int_{\gamma}\exp(-ik^{}_{\nu}x^{\nu})\dd{x}^{\mu}.\end{equation}
 可以验证，其时间分量$\mu=0$就是$\dd{\mathscr E}^{}_{\vb{n}\omega}$，请读者自行计算。\\
 \subsubsection{远场低速极限和偶极辐射}
-当然上述的公式依旧难以计算，我们可以进一步取近似。我们来考察低速近似，现在$v\ll c$。前面指出，在远场近似下时间的推迟性不能忽略，而在低速近似下，对于一个做周期为$T$的封闭运动的电荷我们有
+\noindent 当然上述的公式依旧难以计算，我们可以进一步取近似。我们来考察低速近似，现在$v\ll c$。前面指出，在远场近似下时间的推迟性不能忽略，而在低速近似下，对于一个做周期为$T$的封闭运动的电荷我们有
 \begin{equation}t-t'=\frac{R^{}_0}{c}-\vb{n}\cdot\frac{\vb{v}T}{c}=\frac{R^{}_0}{c}-o\qty(\frac{R^{}_0}{c}),\quad v\ll c,\label{qsx4}\end{equation}
 也就是说时间差近似为一个常数。将上述近似带入远场辐射(\ref{retdd44})中得到矢势的\emph{零级近似}为
 \begin{equation}\vb{A}^{(0)}(t)=\frac{1}{cR^{}_0}\int\vb{j}\qty(t-\frac{R^{}_0}{c})\dd{V}=\frac{1}{cR^{}_0}\int\vb{j}(t')\dd{V}.\label{qsx5}\end{equation}
@@ -11643,7 +11643,7 @@ $$\frac{1}{\mathscr E^{}_{cr}}=\int_{\mathbb R}k(x)\dd{x},$$
 读者可自行计算与此相应的，双电荷接触所需的时间，这里不再过多介绍。\\
 \\
 关于极端相对论粒子的进一步分析这里就不给出了，具体可以参考\cite{L41}的\S76。这里我们只强调一下，条件(\ref{;da;ir23u})是外场下极端相对论存在的充要条件，并且此时阻尼力做的功和粒子总能量处于一个量级。
-\subsection{电磁波的散射}
+\subsection{电磁波的散射}\label{X*//00261.==}
 \noindent 前面我们系统性的介绍了电磁波的产生机制，以及各类衍生效应。但我们也知道，电磁波作为外场会诱导电荷运动，对于单电荷其在单色波中的运动方程由式(\ref{d2Dfb})控制。从其形式不难看出这是变速运动，因而根据前文所述，必然会产生电磁辐射。而且辐射波总体来讲是部分偏振的，因此作为外场的电磁波和由此辐射出的电磁波之间并不相同。\\
 \\
 上述的这种现象称为\textbf{电磁波的散射 \textit{Scattering of EM wave}}，是散射现象的一种微观解释，它将现象归结为电荷对电磁波的响应。一般而言，我们将作为外场的电磁波称为\textbf{入射波}，辐射导致的电磁波称为\textbf{散射波}，以此和光学中的散射现象相对应。需要注意的是，由于辐射是球面波，所以这不可能是反射。并且电磁辐射是单次瞬时发射，所以也不是衍射现象，对于这些区别应该有正确的认识。
@@ -12190,8 +12190,54 @@ $$\mu=\frac{\mu^{}_p+\mu'_p}{2}=\frac{\hbar g^{(e)}_m}{2}+\mu'_p.$$
 但是因为电子没有反常部分，所以自然的均值就被这一部分平衡掉了，从而减小为宏观磁矩能的一半。当然这并非唯一的解释方法，此处我们给出的是一个较为普适的结论。
 
 \subsection{量子散射论基础}\label{sandUhg}
-
+\noindent 上面我们介绍了粒子和场之间的耦合，但是通过电磁辐射我们也看到，场是由粒子产生的，因此粒子和场之间的耦合也可以等价为粒子和粒子之间的耦合。而在粒子系的耦合中，最能体现动力学相互作用的是碰撞过程，这也是经典宏观力学中一类重要的动力学问题。比如在第\ref{XIngagL}节中我们已经看到，超流相和超导相的产生就是因为，粒子间的碰撞激发了准粒子，进而给出新物理性质。对于宏观碰撞这里就不展开了，读者可以参考朗道一卷\cite{L8-8}的第四章，我们这里重点考察微观层面的碰撞。\\
+\\
+需要说明的是，微观层面特别是量子层面的碰撞，和宏观碰撞是截然不同的，因为量子体系是基于概率而言的。所以我们不能讨论粒子在碰撞过程中的演化，而是讨论碰撞前后所处的量子态的概率。一般而言碰撞并不需要粒子之间有直接的接触，它只需要粒子间有势能和耦合即可，一个典型的例子是第\ref{RF08**))12}节的\textsl{vdW}气体，其粒子间碰撞的势能由\textsl{LJ}势(\ref{JLJKHB///})确定，在气体分子互相靠近的过程中相互斥力是指数增加的，在大量分子比如若干$mol$分子的宏观统计下就体现为物体的直接接触碰撞。 \\
+\\
+在碰撞过程中，最常见的一类结果是散射，其基本特性是碰撞后粒子的运动方向是各向同性的，在后文中我们默认碰撞专指散射过程。因为微观粒子具有波粒二象性，因此粒子的散射也可以理解为波的散射，其基本的物理学模型在第\ref{X*//00261.==}节的电磁波散射中已有描述，我们的主要工作就是将波的散射理论改造为粒子的散射理论，从而将相对论性场也纳入到此体系中。下面依旧取自然单位制$\hbar=1$。
 \subsubsection{非相对论性弹性散射}
+\noindent 我们先来研究最简单的散射：非相对论性\textbf{弹性散射 \textit{Elastic Scattering}}。弹性碰撞中指的是粒子在碰撞过程中不改变系统的内部状态，在宏观力学中体现为能量守恒，在微观系统中还应要求碰撞粒子的状态不变。方便起见我们只在质心系中讨论$^{\cite{L1} \S123}$，记粒子云的约化质量为$m$，对于两个粒子就是$m=\dfrac{m^{}_1m^{}_2}{m^{}_1+m^{}_2}$，再次提醒质心系只粒子云的质心静止。\\
+\\
+不失一般性的，我们从单个粒子的散射入手。根据一般的散射模型，粒子在碰撞前后，指无穷远处是自由的，不存在任何的相互作用。因此作为散射的边界条件，粒子在无穷远处由自由波描述，运动方程为自由定态\textsl{Schrödinger}方程。令入射粒子为沿$x$轴传播的平面波，固定能量$E>0$
+\begin{equation}\psi(t=-\infty)=\psi^{}_0(x)=\exp(ikx),\quad \hat{H}^{}_0\psi^{}_0=-\frac{1}{2m}\dv[2]{\psi^{}_0}{x}=E\psi^{}_0,\quad k=\sqrt{2mE}.\end{equation}
+现在我们考察散射过程中的运动，为了得到一个各向同性的出射运动，我们应该用球坐标系，且相互作用势能应该是径向的$U(r)$。弹性碰撞保证能量仍为$E$，则定态\textsl{Schrödinger}方程写作
+\begin{equation}\psi=\psi(r,\theta,\phi),\quad \hat{H}\psi=-\frac{\hbar^2}{2m}\bm{\Delta}\psi+U(r)\psi=E\psi.\end{equation}
+为了得到解，我们将其写为\textsl{LS}形式(\ref{Nad/*0044})，$U=0$为初始条件，根据\textsl{Green}函数法得到
+$$\psi(\vb{r})=\psi^{}_0(x)+\int G(\vb{r}-\vb{a})U(\abs{\vb{a}})\psi(\vb{a})\dd V^{}_a,\quad \qty(E-\frac{\hbar^2}{2m}\bm{\Delta})G(\vb{r})=\delta^3(\vb{r}).$$
+其中径矢$\vb{a}$默认处于球坐标系。对于\textsl{Green}函数取波矢分量，我们得到奇点在$k=\pm\sqrt{2mE}$，利用留数定理取上半圆$k=\sqrt{2mE}$不难得到解为
+\begin{equation}\psi(\vb{r})=\exp(ikx)-\frac{1}{4\pi}\bigintsss\frac{\exp(ik\abs{\vb{r}-\vb{a}})}{\abs{\vb{r}-\vb{a}}}U(\abs{\vb{a}})\psi(\vb{a})\dd V^{}_a,\quad k=\sqrt{2mE},\end{equation}
+我们所关心的是散射的远场近似，定义(\ref{Cfafetg})这里写作$\abs{\vb{r}}\geq\abs{\vb{a}}$，于是对分母近似为$\abs{\vb{r}}=r$，在指数内使用近似(\ref{yaccj})得到
+$$\psi(\vb{r})=\exp(ikx)-\frac{1}{4\pi}\frac{\exp(ikr)}{r}\int\exp(ik\vb{n}\cdot\vb{a})U(\abs{\vb{a}})\psi(\vb{a})\dd V^{}_a,\quad\vb{r}=r\vb{n}.$$
+现在我们定义散射角$\theta=\arccos(\vb{n}\cdot\vb{a}/\abs{\vb{a}})$，则积分结果必然为$\theta$的实函数，定义为\textbf{散射振幅}
+\begin{equation}\mathcal A(\theta)=\int\exp(ik\abs{\vb{a}}\cos(\theta))U(\abs{\vb{a}})\psi(\vb{a})\dd V^{}_a\in\mathbb R,\end{equation}
+此处已将系数$-1/4\pi$放入势能$U$中，从而单粒子远场散射波函数为
+\begin{equation}\psi(r,\theta,\phi)=\exp(ikx)+\mathcal A(\theta)\frac{\exp(ikr)}{r},\quad r\to\infty.\end{equation}
+不难看到\textsl{LS}形式的第二项确定了一个球面散射波，这和远场辐射(\ref{retdd44})是一样的，但此时波函数并不是归一化的，不难看到
+$$\abs{\psi}^2\approx\abs{\exp(ikx)}^2+\abs{\mathcal A(\theta)\frac{\exp(ikr)}{r}}^2=1+\mathcal A^2(\theta)/r^2,$$
+当然在远处渐进归一。散射的一个特征量是有效截面，其由式(\ref{ddi..98})确定，在量子层面能流密度$\vb{\mathcal S}$应理解为概率流密度(\ref{miduliu})，写作
+\begin{equation}\vb{\mathcal S}=\vb{j}=\dfrac{i}{2m}\qty(\psi\grad\psi^{*}-\psi^{*}\grad\psi).\end{equation}
+而散射波强度$I$为散射波概率流密度的通量，其单位角元内的强度为$\dd I^{}_{\vb{n}}=\vb{j}\cdot\dd\vb{S}=j^{}_rr^2\dd\mathcal O$，它只依赖于径向概率流。对于入射波，其概率流密度为
+$$j^{}_0(x)=\dfrac{i}{2m}\qty(\psi\dv{\psi^{*}}{x}-\psi^{*}\dv{\psi}{x})=-\dfrac{i}{2m}2ik\psi\psi^{*}=\dfrac{k}{m},$$
+散射径向流密度按球坐标系给出
+$$j^{}_r(r)=\dfrac{i}{2m}\qty(\psi\dv{\psi^{*}}{r}-\psi^{*}\dv{\psi}{r})=\dfrac{k}{m}\frac{\abs{\mathcal A(\theta)}^2}{r^2},$$
+从而我们得到单位有效截面为
+\begin{equation}\dd\sigma^{}_{\vb{n}}=\frac{\dd I^{}_{\vb{n}}}{\abs{\vb{\mathcal S}}}=\frac{1}{k/m}\dfrac{k}{m}\dfrac{\abs{\mathcal A(\theta)}^2}{r^2}r^2\dd\mathcal O=\abs{\mathcal A(\theta)}^2\dd\mathcal O=2\pi\abs{\mathcal A(\theta)}^2\sin(\theta)\dd\theta.\end{equation}
+最后一步是因为，各向同性使得截面和进动角$\varphi$无关，因为将其积分了给出$2\pi$。这是非相对论性散射理论的基础，对于向心场可以用\textbf{分波法}得到散射振幅，这里就不介绍了。\\
+\\
+对于一般的势能场，散射振幅是比较难计算的，但是其作为\textsl{LS}形式的一部分已经给我们提供了绝佳的解决思路：根据第\ref{Uywqe.66}节的表述，它一定能展开为\textsl{Born}级数。
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsubsection{不同能级的散射}
 
@@ -12876,8 +12922,9 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 
 
 \clearpage\begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}\makeatother\begin{thebibliography}{99}
-\bibitem{L41} Landau, Lev D.; Lifshitz, Evgeny M. 场论（第八版）. 理论物理学教程 第二卷. 鲁欣、任朗、袁炳南 译. 邹振隆 校. 中国: 高等教育出版社. 2012. ISBN 978-7-04-035173-6 （中文（中国大陆））
-\bibitem{L1} Landau, Lev D.; Lifshitz, Evgeny M. 量子力学（非相对性理论）（第六版）. 理论物理学教程 第三卷. 严肃 译. 喀兴林 校. 中国: 高等教育出版社. 2008. ISBN 978-7-04-024306-2 （中文（中国大陆））
+\bibitem{L8-8} Landau, Lev D.; Lifshitz, Evgeny M. 力力学（第五版）. 理论物理学教程 第一卷. 李俊峰、鞠国兴 译校. 中国: 高等教育出版社. 2007. ISBN 978-7-04-020849-8 （中文（中国大陆））.
+\bibitem{L41} Landau, Lev D.; Lifshitz, Evgeny M. 场论（第八版）. 理论物理学教程 第二卷. 鲁欣、任朗、袁炳南 译. 邹振隆 校. 中国: 高等教育出版社. 2012. ISBN 978-7-04-035173-6 （中文（中国大陆））.
+\bibitem{L1} Landau, Lev D.; Lifshitz, Evgeny M. 量子力学（非相对性理论）（第六版）. 理论物理学教程 第三卷. 严肃 译. 喀兴林 校. 中国: 高等教育出版社. 2008. ISBN 978-7-04-024306-2 （中文（中国大陆））.
 \bibitem{L42} Berestetskii, Vladimir B.; Lifshitz, Evgeny M.; Pitaevskii, Lev P. 量子电动力学（第四版）. 理论物理学教程 第四卷. 朱允伦 译. 庆承瑞 校. 中国: 高等教育出版社. 2015. ISBN 978-7-04-041597-1 （中文（中国大陆））.
 \bibitem{L55} Landau, Lev D.; Lifshitz, Evgeny M. 统计物理学Ⅰ（第五版）. 理论物理学教程 第五卷. 束仁贵、束莼 译. 郑伟谋 校. 中国: 高等教育出版社. 2011. ISBN 978-7-04-030572-2 （中文（中国大陆））.
 \bibitem{L5f} Landau, Lev D.; Lifshitz, Evgeny M. 流体动力学（第五版）. 理论物理学教程 第六卷. 李植 译. 陈国谦 审. 中国: 高等教育出版社. 2012. ISBN 978-7-04-034659-6 （中文（中国大陆））.
