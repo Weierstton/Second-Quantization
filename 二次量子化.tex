@@ -4890,7 +4890,7 @@ $$\mqty{\text{\textsl{Rushbrooke}标度律：}\ \ \alpha+2\beta+\gamma=2,\\ \tex
 \begin{equation}\begin{cases}\displaystyle C(h)\propto h^{-\epsilon},&\\ \displaystyle \xi(h)\propto h^{-\mu}.\end{cases}\implies\begin{cases}\epsilon(\beta+\gamma)=\alpha,&\\ \mu(\beta+\gamma)=\nu.\end{cases},\quad h\gg h^{}_t.\end{equation}
 关于这两式的导出就不展开了，读者可以根据类似的方法自行思考。因此一共八个临界指数六个方程，依旧只需要两个参数来表示。同时我们也看到术语标度律的来源：推导过程完全由量级主导，是标度的一种体现。\\
 \\
-现在我们进一步讨论所得到的结果。注意到在定义中，唯一和长度直接相关的是关联半径$\xi$，其余的量都只和序参量$\eta$有关，所以序参量是理论中描述系统在临界处尺度的唯一参数。而由于$\xi(t\rightarrow0)\to\infty$，因此系统尺度没有上限，这就导致系统无论放大多少倍，其力学特性都不会改变。\\
+现在我们进一步讨论所得到的结果$^{\cite{BdpF}\S12.11,\,\S12.12}$。注意到在定义中，唯一和长度直接相关的是关联半径$\xi$，其余的量都只和序参量$\eta$有关，所以序参量是理论中描述系统在临界处尺度的唯一参数。而由于临界点附近关联半径发散$\xi(t\rightarrow0)\to\infty$，因此系统尺度没有上限，这就导致系统无论放大多少倍，其力学特性都不会改变。\\
 \\
 这一点是很明显的，因为上述六个标度律和空间都是无关的，空间上的变化不会影响临界指数之间的关联。一般而言，一个系统在空间放缩下保持特性不变的现象称为\textbf{标度不变性 \textit{Scale Invariance}}，是系统的一个几何特征。在相变理论中，标度不变性就是指在临界点附近，标度律在空间变换下保持不变的事实。\\
 \\
@@ -5419,7 +5419,7 @@ $$\sum_{\sigma^{}_1,\sigma^{}_2}-\sum_{\sigma}=\sum(\sigma^{}_1=\sigma^{}_2)+\su
 现在我们考察自由玻色气体的双玻色子算符，其不需要自旋值的参与，因此二次量子化算符为
 \begin{equation}\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k}}\mel**{\vb{k}^{}_1,\vb{k}^{}_2}{\hat{f}^{(2)}}{\vb{k}'_1,\vb{k}'_2}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}.\end{equation}
 现在我们同样考虑慢性碰撞极限，对于声子而言就是指$\omega(\vb{k})\approx0$，对于普通的自由玻色子也就是$E^{}_{\vb{k}}\approx0$。于是我们得到算符为
-\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{2V}\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1},\quad f^{}_0=\mel**{\vb{0},\vb{0}}{\hat{f}^{(2)}}{\vb{0},\vb{0}}.\end{equation}
+\begin{equation}\hat{F}^{(2)}=\frac{f^{}_0}{2V}\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1},\quad f^{}_0=\mel**{\vb{0},\vb{0}}{\hat{f}^{(2)}}{\vb{0},\vb{0}}.\label{JIngfg993}\end{equation}
 根据玻色统计，此时系统处于\textsl{BE}凝聚态，其可以用式(\ref{---wosile h})表示，也就是
 $$N\approx N^{}_0=\mel**{\vb{0}}{\hat{c}^{\dagger}_{\vb{0}}\hat{c}^{}_{\vb{0}}}{\vb{0}}\gg N^{}_{\vb{k}\neq\vb{0}}=\mel**{\vb{k}}{\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}}{\vb{k}}.$$
 这一事实给出了一种近似方法，因为凝聚态下粒子几乎全部处于基态，因此对于算符$\hat{c}^{}_{\vb{0}}$的对易性我们可以重整化为
@@ -5453,7 +5453,9 @@ $$\hat{c}^4_{\vb{k}}(1,2)=\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}\
 因而单个粒子守恒在四次近似下无意义，所以我们这里只保留交换式$\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)$。\end{itemize}
 做替换$N=c^2_{\vb{0}}$后，经过简单计算我们得到最终的二次项的化简为
 \begin{equation}\begin{aligned}&\sum\limits_{\forall\vb{k}}\hat{c}^{\dagger}_{\vb{k}^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2}\hat{c}^{}_{\vb{k}'_2}\hat{c}^{}_{\vb{k}'_1}=c^4_{\vb{0}}+\sum\limits_{\vb{k}}\hat{c}^2_{\vb{k}}(1\longleftrightarrow2)\\&=N^2-2c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}+c^2_{\vb{0}}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+4\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}})\\&=N^2+N\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).\end{aligned}\end{equation}
-这里我们考虑势能$\hat{F}^{(2)}=\hat{U}^{(2)}$，则最终我们得到势能的二级近似为
+这里我们考虑势能$\hat{F}^{(2)}=\hat{U}^{(2)}$，记式(\ref{JIngfg993})中的基态能为
+\begin{equation}U^{}_0=\mel**{\vb{0},\vb{0}}{\hat{U}^{(2)}}{\vb{0},\vb{0}},\label{Zufi//-*-*}\end{equation}
+则最终我们得到势能的二级近似为
 \begin{equation}\hat{U}^{(2)}=\frac{N^2}{2V}U^{}_0+\frac{NU^{}_0}{2V}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}).\end{equation}
 这事实上就是平均场近似，可以将其看作\textsl{Landau}展开(\ref{LAD5941957})的对称性来源。现在如果我们算上单粒子算符，则声子系统的非相对论性\textit{Hamiltonian}算符在上述二次量子化近似下给出
 \begin{equation}\begin{aligned}\hat{H}=\hat{H}^{(1)}+\hat{U}^{(2)}=&\frac{N^2U^{}_0}{2V}+\sum\limits_{\vb{k}}\frac{\omega(\vb{k})}{2}+\sum\limits_{\vb{k}\neq\vb{0}}\omega(\vb{k})\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}\\&+\frac{NU^{}_0}{2V}\sum\limits_{\vb{k}\neq\vb{0}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{}_{-\vb{k}}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{\dagger}_{-\vb{k}}+2\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}})=\hat{H}^{0}+\sum\limits_{\vb{k}\neq\vb{0}}\hat{H}^{}_{\vb{k}}.\label{cd - -'':}\end{aligned}\end{equation}
@@ -5479,7 +5481,7 @@ $$\expval{N^{}_{\vb{k}}}=\frac{1}{\exp{\beta\omega(\vb{k})}-1}=\expval{\hat{c}^{
 $$\expval{n^{}_{\vb{k}}}=\frac{1}{\exp{\beta E(\vb{k})}-1}=\expval{\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}}$$
 是激发的准粒子的占有数，两者分布不同。上述就是质心系下一级微扰的结果，它说明了双玻色子在慢性碰撞时，碰撞能量谱为$E(\vb{k})$，其平均生成了
 $$\expval{n^{}_{\vb{k}}}=\expval{\hat{b}^{\dagger}_{\vb{k}}\hat{b}^{}_{\vb{k}}}$$
-个声子。当然这并不精确，在碰撞下我们需要将$U^{}_0$用散射截面替换，而这就是二级微扰论的结果了，结果为$U^{}_0=\dfrac{4\pi a}{m}$，我们这里不做展开，具体细节请参考第\ref{sandUhg}节。
+个声子。当然这并不精确，在碰撞下我们需要将式(\ref{Zufi//-*-*})确定的$U^{}_0$用散射量替换，而这就是微扰的二级修正结果了，我们这里不做展开，具体细节请参考第\ref{sandUhg}节的式(\ref{AfhrGy88})。
 \subsubsection{声子的统计规律}
 \noindent 现在我们来考察声子的统计，具体讨论由式(\ref{pouJN //})所给出的系统的热力学情况。因为我们已经知道声子和光子相同，而光子遵循\textsl{Planck}黑体辐射统计，因此声子的统计模型和黑体辐射必然是类似的，也就是\textsl{Planck}分布
 \begin{equation}\expval{N^{}_{\vb{k}}}=\frac{1}{\exp{\beta\omega(\vb{k})}-1}.\end{equation}
@@ -5986,7 +5988,7 @@ $$\int\frac{\dd\theta}{\sin(\theta/2)}\approx\int^{\sim1}_{\sim \epsilon/R^{}_0}
 $$\mathscr E(R^{}_0)=R^{}_0\rho^{}_s\pi^2\frac{2}{m^2}\ln(\frac{R^{}_0}{\epsilon})=R^2_0\rho^{}_s\pi^2v\frac{4}{m}.$$
 因为对于涡环，其速度是群速度，和能量的关系为$v=\dfrac{\dd\mathscr E}{\dd{p}}$，因此我们得到动量为
 $$p(R^{}_0)=\int\dfrac{\dd\mathscr E}{v}=4\pi^2\rho^{}_s\frac{1}{m}R^2_0.$$
-由此，动量和能量依靠参数$R^{}_0$决定了圆形涡环的能谱$E=E(p)$。对于其余的内容这里不再过多介绍，在流体力学中还会进一步的探讨。
+由此，动量和能量依靠参数$R^{}_0$决定了圆形涡环的能谱$E=E(p)$，对于具体的数值计算可以参考\cite{BdpF}\S11.6。对于其余的内容这里不再过多介绍，在流体力学中还会进一步的探讨。
 \subsubsection{超流体在\texorpdfstring{$\lambda$}{lambda}点附近的相变}\label{CHoai**-2-}
 \noindent 前文中我们通过图\ \ref{yehai33}证明了$^4$He超流相变是二级相变，为了讨论具体细节，我们有必要使用\textsl{Landau}理论处理。根据第\ref{landauooo909}节我们知道，\textsl{Landau}理论的核心是序参量$\eta$，因为这里相变是严格二级的，不是受迫相变，因此序参量必然满足$\eta(T\geq T^{}_c)=0,\ \eta(T<T^{}_c)\neq0$。为了在超流体中寻找这一序参量，我们不妨考察超流体对温度的依赖关系。\\
 \\
@@ -6195,7 +6197,7 @@ $$\Delta=-\frac{U^{}_0}{2V}\sum\limits_{\vb{k}'\neq\vb{k}}\sqrt{1-\frac{\phi^2(\
 \begin{equation}-\frac{U^{}_0}{2}\bigintsss\frac{1-2\expval{n^{}_{\vb{k}}}}{\sqrt{\phi^2(\vb{k})+\Delta^2(T)}}\frac{\dd^3\vb{k}}{(2\pi)^3}=1.\label{sdfseff345}\end{equation}
 我们来具体分析这个方程，先考察绝对零度的情况。在$T=0$时没有准粒子激发，$\expval{n^{}_{\vb{k}}}=0$，我们记此时的能隙为$\Delta(T=0)=\Delta^{}_0$，则其方程为
 \begin{equation}-\frac{U^{}_0}{2(2\pi)^3}\bigintsss\frac{4\pi k^2\dd\vb{k}}{\sqrt{\phi^2(\vb{k})+\Delta^2_0}}=1.\label{sdsv<>}\end{equation}
-此方程有一个明显的约束条件：非平凡解$\Delta^{}_0\neq0$存在当且仅当$U^{}_0\leq0$。回顾到$U^{}_0$的定义
+此方程有一个明显的约束条件：非平凡解$\Delta^{}_0\neq0$存在当且仅当$U^{}_0\leq0$。回顾到$U^{}_0$的定义(\ref{Zufi//-*-*})，这里应算上自旋
 $$U^{}_0=\mel**{\vb{0}\sigma^{}_1,\vb{0}\sigma^{}_2}{\hat{f}^{(2)}}{\vb{0}\sigma^{}_1,\vb{0}\sigma^{}_2},$$
 这也就意味着基态下相互作用势能为负。进一分析，因为此势能是由碰撞导致的，所以我们得到
 $$E^{}_f=E^{}_i-\abs{U^{}_0}<E^{}_i\implies U(r)\sim -\frac{\alpha}{r}.$$
@@ -7111,7 +7113,7 @@ $$I(E^{}_n)=\dfrac{1}{2\pi\hbar}\oint p\dd{q}=\dfrac{1}{2\pi\hbar}\int \dd p\dd{
 其中叠加系数$K(\vb{r}^{}_1,\vb{r}^{}_0)$在数学上称为\textbf{积分核 \textit{Integral Kernel}}，注意到$\psi(\vb{r}^{}_0)$的归一化不难计算出该核为
 $$\psi(\vb{r}^{}_1)=\psi(\vb{r}^{}_1)\int \psi^*(\vb{r}^{}_0)\psi(\vb{r}^{}_0)\dd^3{\vb{r}^{}_0}\implies K(\vb{r}^{}_1,\vb{r}^{}_0)=\psi^*(\vb{r}^{}_0)\psi(\vb{r}^{}_1).$$
 在坐标表象下波函数为$\psi(\vb{r})=\braket{\vb{r}}{\psi}$，则积分核可以写为
-\begin{equation}K(\vb{r}^{}_1,\vb{r}^{}_0)=\psi^*(\vb{r}^{}_0)\psi(\vb{r}^{}_1)=\braket{\vb{r}^{}_1}{\psi}\braket{\psi}{\vb{r}^{}_0}=\braket{\vb{r}^{}_1}{\vb{r}^{}_0},\quad\dyad{\psi}{\psi}=\vb{I}.\label{he2ni3mb}\end{equation}
+\begin{equation}K(\vb{r}^{}_1,\vb{r}^{}_0)=\psi^*(\vb{r}^{}_0)\psi(\vb{r}^{}_1)=\braket{\vb{r}^{}_1}{\psi}\braket{\psi}{\vb{r}^{}_0}=\mel**{\vb{r}^{}_1}{\hat{\vb{w}}}{\vb{r}^{}_0},\quad\dyad{\psi}{\psi}=\hat{\vb{w}}.\label{he2ni3mb}\end{equation}
 同时根据定义式(\ref{speer})不难发现，上式就是单粒子系统的密度矩阵，此时系统处于纯态给出$\vb{w}=\zeta$，于是积分核也可以写为
 \begin{equation}K(\vb{r}^{}_1,\vb{r}^{}_0)=\zeta^{(1)}(\vb{r}^{}_0,\vb{r}^{}_1).\end{equation}
 在坐标表象下，这就是矩阵的混合分量，从而该核确定了粒子在这两个点处的相干性振幅。我们也称这个核为\textbf{相干核 \textit{Coherent Kernel}}，可以通过它给出\textsl{Bell}不等式和量子纠缠的概念，这里不做展开。\\
@@ -9803,7 +9805,7 @@ $$\begin{aligned}T^{}_{ba}=&\mel**{b^{(0)}}{\hat{V}}{a^{(0)}}+\epsilon\sum_i\mel
 写出\textsl{LS}核对离散态的作用为
 \begin{equation}\varPi^{}_{\text{LS}}\ket{k^{(0)}}=\frac{1}{\lambda-\vb{A}}\ket{k^{(0)}}=\frac{1}{\lambda-\lambda^{(0)}_k}\ket{k^{(0)}},\label{Airghv}\end{equation}
 并记$\mel**{b^{(0)}}{\hat{V}}{a^{(0)}}=V^{}_{ba}$，我们就能读出变换系数的各级修正，这里以二级近似为例
-\begin{equation}T^{(0)}_{ba}=c^{(0)}_{ba}=V^{}_{ba},\quad T^{(1)}_{ba}=\sum_i\frac{V^{}_{bi}V^{}_{ia}}{\lambda^{(0)}_b-\lambda^{(0)}_i},\quad T^{(2)}_{ba}=\sum_{ij}\frac{V^{}_{bi}V^{}_{ij}V^{}_{ja}}{\qty(\lambda^{(0)}_b-\lambda^{(0)}_i)\qty(\lambda^{(0)}_j-\lambda^{(0)}_a)}.\end{equation}
+\begin{equation}T^{(0)}_{ba}=c^{(0)}_{ba}=V^{}_{ba},\quad T^{(1)}_{ba}=\sum_i\frac{V^{}_{bi}V^{}_{ia}}{\lambda^{(0)}_b-\lambda^{(0)}_i},\quad T^{(2)}_{ba}=\sum_{ij}\frac{V^{}_{bi}V^{}_{ij}V^{}_{ja}}{\qty(\lambda^{(0)}_b-\lambda^{(0)}_i)\qty(\lambda^{(0)}_j-\lambda^{(0)}_a)}.\label{LinJ4Y8//}\end{equation}
 读者可以通过式(\ref{bukene8})和式(\ref{shuaillo})等自行检验，这里不再赘述。上述近似结果称为\textbf{n级\textsl{Born}近似 \textit{n$^{\text{th}}$ Born Approximation}}，在量子碰撞力学中有重要作用，也是古典微扰论的核心。\\
 \\
 当然\textsl{Born}近似对于连续谱失效，同时对于简并态也失效，因为此时$\lambda-\vb{A}\equiv0$使得$\varPi^{}_{\text{LS}}$发散。这个问题不难解决，根据定义\textsl{LS}核就是定态\textsl{Schrödinger}方程的\textsl{Green}函数，所以参考第\ref{Dee))//}节中的\textsl{Feynman}方法，我们将\textsl{LS}核写为\textsl{Feynman}传播子形式
@@ -10007,7 +10009,7 @@ $$1=AB\lim_{t\to w\infty}\mel**{0}{\hat{\tau}^{}_I\qty(t,t^{}_0)\hat{\tau}^{}_I(
 \begin{equation}A=B=\qty(\mel**{0}{\hat{\tau}^{}_I(\infty,-\infty)}{0})^{-1/2}=\qty(\mel**{0}{\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}}{0})^{-1/2},\end{equation}
 若在归一化时取一般情况$w\neq1$，最终我们得到相互作用真空态为
 \begin{equation}\begin{aligned}\ket{\Omega}&=\lim\limits_{\mathfrak T\to\infty(1-i\epsilon)}\sqrt{\frac{1}{\mel**{0}{\hat{\tau}^{}_I\qty(\mathfrak T,-\mathfrak T)}{0}}}\hat{\tau}^{}_I\qty(t^{}_0,-\mathfrak T)\ket{0};\\ \bra{\Omega}&=\lim\limits_{\mathfrak T\to\infty(1-i\epsilon)}\sqrt{\frac{1}{\mel**{0}{\hat{\tau}^{}_I\qty(\mathfrak T,-\mathfrak T)}{0}}}\bra{0}\hat{\tau}^{}_I\qty(\mathfrak T,t^{}_0).\label{zhenbkong1}\end{aligned}\end{equation}
-这在形式上和路径积分的归一化十分类似，事实上如果我们按定义(\ref{zi/F].,-8f})回到\textsl{Lagrange}形式$\Lambda^{}_{\text{int}}$，则$\hat{\tau}^{}_I$的相位就是相互作用的作用量，对应了始末态之间的路径积分。
+这在形式上和路径积分的归一化十分类似，事实上如果我们按定义(\ref{zi/F].,-8f})回到\textsl{Lagrange}形式$\Lambda^{}_{\text{int}}$，则算符$\hat{\tau}^{}_I$的相位就是相互作用的作用量，对应了始末态之间的路径积分。
 \subsection{相互作用场关联函数的微扰修正}\label{dandanbb521}
 \noindent 在第\ref{lbngjjf}节中，我们引入了场的多点关联函数，并具体计算了自由场的多点关联函数及其各种性质。在引入了相互作用及其微扰理论之后，我们将多点关联函数推广至相互作用场，并建立微扰和路径积分之间的关联。预先指出，下文中绘景间的转化主要使用式(\ref{hgjk,,-isi})。
 \subsubsection{波函数场的相互作用传播子}
@@ -10503,7 +10505,7 @@ $$h^{}_{\text{int}}=\partial^{}_t\psi^{\mu}\varpi^{}_{\mu}-\Lambda^{}_{\text{int
 \\
 上面我们详细探讨了配分函数$Z(0)$的计算，现在不妨回到相互作用多点关联函数，来研究指数化定理在粒子传播计算中的应用。从两点函数开始，引入路径积分表述(\ref{Gsn--dgsg++g..ygy})
 $$C(x,y)=\frac{1}{Z}\int\exp{iS(\psi)}\psi(x)\psi(y)\mathscr D\psi,$$
-上面已经详细计算了分母$Z$，现在来计算分子的图表述。首先注意到，分子和分母差了一个因子$\psi(x)\psi(y)$，所以令分母取零级近似$Z=Z^{}_{KG}$，那么分子的\textsl{Wick}定理展开给出
+上面已经详细计算了分母，现在来计算分子的图表述。首先注意到分子和分母差了一个因子$\psi(x)\psi(y)$，所以令分母取零级近似$Z=Z^{}_{KG}$，那么分子的\textsl{Wick}定理展开给出
 \begin{itemize}\item 该因子自己缩并$\wick[offset=1.3em]{\c{\hat{\psi}}(x)\c{\hat{\psi}}(y)}$，和其余的项的缩并$\displaystyle\frac{1}{Z^{}_{KG}}\int\mathscr D\psi\exp(iS^{}_{KG})\exp(iS^{}_{\text{int}})$。而这些项容易看出就是$\dfrac{Z}{Z^{}_{KG}}=\exp(W)$，因此这个部分的图为$\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=(a.base)]\vertex[dot,label=below:x](a){};\vertex[right=1cm of a,dot,label=below:y](b){};\diagram*{(a)--(b)};\end{feynman}}\times\exp(W)$。\item 或者将因子$\psi(x)\psi(y)$拆分到$\exp(W)$中，这等价于将$x$和$y$作为两个外点，通过引入两个外腿接入到各非连通图的真空泡泡因子中。基于运动的时空连续性要求，$x$和$y$之间应该是连通的，也就是说它们接入同一个真空泡泡。虽然奇数次幂相互作用允许处于不同的连通分支，但可以证明这是没有物理意义的，因此总的来说两个外点要处于同一连通分支。\end{itemize}
 现在重点计算第二种情况，每次和两个外点的缩并，都会在式(\ref{Ha--/+++..iGGf})的非连通图$K^{}_{\alpha}$中扣除一个真空泡泡。比如其扣除$B^{}_1$构成连通分支$B^{}_1(x,y)$，那么相应的简并度变为$l^{}_1-1$，记此时的非连通部分为$K^{(1)}_{\alpha}$，写作
 $$K^{(1)}_{\alpha}=\frac{1}{\qty(l^{}_1-1)!}\qty(B^{}_1)^{l^{}_1-1}\frac{1}{l^{}_2!}\qty(B^{}_2)^{l^{}_2}\cdots=K^{(1)}\qty(\qty{l^{}_i}).$$
@@ -11009,8 +11011,8 @@ $$\begin{aligned}\mathscr Y(p,x)&=\mathscr W\qty[\Sigma^{-+}]\qty(\mathscr W\qty
 $$\mathscr Y(p,x)=\mathscr W\qty[\Sigma^{-+}]\mathscr W\qty[\mathfrak D^{}_R+\mathfrak D^{}_A]-\mathscr W\qty[\mathfrak C^{-+}]\mathscr W\qty[\Psi^{}_R+\Psi^{}_A],$$
 这里我们定义\textbf{\textsl{Uehling-Uhlenbeck}近似}为
 \begin{equation}\begin{aligned}&\mathscr W\qty[\mathfrak D^{}_R+\mathfrak D^{}_A]\approx\mathscr W\qty[\mathfrak D^{}_R-\mathfrak D^{}_A]=\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\\&\mathscr W\qty[\Psi^{}_R+\Psi^{}_A]\approx\mathscr W\qty[\Psi^{}_R-\Psi^{}_A]=\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].\end{aligned}\end{equation}
-其中我们已经带入了式(\ref{SigFiy45})和式(\ref{;;ia[]h]f})，这个近似的合理性请参考第\ref{haergong}节。这样我们就得到
-\begin{equation}\begin{aligned}\mathscr Y(p,x)&=\mathscr W\qty[\Sigma^{-+}]\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}]-\mathscr W\qty[\mathfrak C^{-+}]\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}]\\&=\mathscr W\qty[\mathfrak C^{-+}]\mathscr W\qty[\Sigma^{+-}]-\mathscr W\qty[\Sigma^{-+}]\mathscr W\qty[\mathfrak C^{+-}]\end{aligned}\label{dWEad--.-.5}\end{equation}
+其中我们已经带入了式(\ref{SigFiy45})和式(\ref{;;ia[]h]f})，这个近似的合理性证明请参考附录\ref{haergong}。这样我们就得到
+\begin{equation}\begin{aligned}\mathscr Y(p,x)&=\mathscr W\qty[\Sigma^{-+}]\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}]-\mathscr W\qty[\mathfrak C^{-+}]\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}]\\&=\mathscr W\qty[\mathfrak C^{-+}]\mathscr W\qty[\Sigma^{+-}]-\mathscr W\qty[\Sigma^{-+}]\mathscr W\qty[\mathfrak C^{+-}].\end{aligned}\label{dWEad--.-.5}\end{equation}
 类似于大于传播子的准粒子近似(\ref{Dfb***-0bj})，对于小于传播子易得
 $$\mathscr W\qty[\mathfrak C^{+-}](p,x)\approx\delta\qty(p^2)\qty{\theta\qty(p^0)f(p,x)+\theta\qty(-p^0)\qty(1+f(p,x))},$$
 从而正能的其准粒子近似为
@@ -12203,9 +12205,9 @@ $$\mu=\frac{\mu^{}_p+\mu'_p}{2}=\frac{\hbar g^{(e)}_m}{2}+\mu'_p.$$
 \noindent 我们先来研究最简单的散射：非相对论性\textbf{弹性散射 \textit{Elastic Scattering}}。弹性碰撞中指的是粒子在碰撞过程中不改变系统的内部状态，在宏观力学中体现为能量守恒，在微观系统中还应要求碰撞粒子的状态不变。方便起见我们只在质心系中讨论$^{\cite{L1} \S123}$，记粒子云的约化质量为$m$。\\
 \\
 不失一般性的，我们从单个粒子的散射入手。根据一般的散射模型，粒子在碰撞前，指无穷远处是自由的，不存在任何的相互作用。因此作为散射的边界条件，粒子在无穷远处由自由波描述，运动方程为自由定态\textsl{Schrödinger}方程。令入射粒子为沿$x$轴传播的平面波，固定能量$E>0$
-\begin{equation}\psi(t=-\infty)=\psi^{}_0(x)=\exp(ikx),\quad \hat{H}^{}_0\psi^{}_0=-\frac{1}{2m}\dv[2]{\psi^{}_0}{x}=E\psi^{}_0,\quad k=\sqrt{2mE}.\end{equation}
+\begin{equation}\psi(t=-\infty)=\psi^{}_0(x)=\exp(ikx),\quad \hat{\mathcal H}^{}_0\psi^{}_0=-\frac{1}{2m}\dv[2]{\psi^{}_0}{x}=E\psi^{}_0,\quad k=\sqrt{2mE}.\end{equation}
 现在我们考察散射过程中的运动，为了得到一个各向同性的出射运动，我们应该\emph{以散射中心为原点}用球坐标系，且相互作用势能应该是径向的$U(r)$。弹性碰撞保证能量仍为$E$，则定态\textsl{Schrödinger}方程写作
-\begin{equation}\psi=\psi(r,\theta,\phi),\quad \hat{H}\psi=-\frac{1}{2m}\bm{\Delta}\psi+U(r)\psi=E^{}_s\psi=E\psi.\end{equation}
+\begin{equation}\psi=\psi(r,\theta,\phi),\quad \hat{\mathcal H}\psi=-\frac{1}{2m}\bm{\Delta}\psi+U(r)\psi=E^{}_s\psi=E\psi.\end{equation}
 为了得到解，我们将其写为\textsl{LS}形式(\ref{Nad/*0044})，$U=0$为初始条件，根据\textsl{Green}函数法得到观察点$\vb{r}$处的波场
 $$\psi(\vb{r})=\psi^{}_0(x)+\int G(\vb{r}-\vb{u})U(\abs{\vb{u}})\psi(\vb{u})\dd V^{}_u,\quad \qty(E+\frac{1}{2m}\bm{\Delta})G(\vb{r})=\delta^3(\vb{r}).$$
 其中体元径矢$\vb{u}$默认处于球坐标系。对于\textsl{Green}函数取波矢分量，记碰撞后的散射动量为$\vb{k}^{}_s$，我们得到奇点在$k^{}_s=\pm\sqrt{2mE}$，利用留数定理取上半圆$k^{}_s=k=\sqrt{2mE}$不难得到解为
@@ -12226,14 +12228,16 @@ $$j^{}_0(x)=\dfrac{i}{2m}\qty(\psi^{}_0\dv{\psi^{*}_0}{x}-\psi^{*}_0\dv{\psi^{}_
 $$j^s_r(r)=\dfrac{i}{2m}\qty(\psi^{}_s\pdv{\psi^{*}_s}{r}-\psi^{*}_s\pdv{\psi^{}_s}{r})=\dfrac{k^{}_s(=k)}{m}\frac{\abs{\mathcal A(\theta)}^2}{r^2},$$
 从而我们得到单位有效截面为
 \begin{equation}\dd\sigma^{}_{\vb{n}}=\frac{\dd I^s_{\vb{n}}}{j^{}_0}=\frac{1}{k/m}\dfrac{k}{m}\dfrac{\abs{\mathcal A(\theta)}^2}{r^2}r^2\dd\mathcal O=\abs{\mathcal A(\theta)}^2\dd\mathcal O=2\pi\abs{\mathcal A(\theta)}^2\sin(\theta)\dd\theta.\label{WzctaUV}\end{equation}
-最后一步是因为，各向同性使得截面和进动角$\varphi$无关，因为将其积分了给出$2\pi$。这是非相对论性散射理论的基础，对于向心场可以用\textbf{分波法}得到散射振幅，可以参考\cite{L1}\S123，\S 124。\\
+最后一步是因为，各向同性使得截面和进动角$\varphi$无关，因为将其积分了给出$2\pi$。对于总有效截面，我们给出
+\begin{equation}\sigma=\int\dd\sigma^{}_{\vb{n}}=2\pi\int_0^\pi\abs{\mathcal A(\theta)}^2\sin(\theta)\dd\theta.\label{WzctaUV1}\end{equation}
+这是非相对论性散射理论的基础，对于向心场可以用\textbf{分波法}得到散射振幅，也就是对自由波取球谐函数展开，可以参考\cite{L1}\S123，\S 124。\\
 \\
 对于一般的势能场，散射振幅是较难计算的，但其作为\textsl{LS}形式的一部分已经给我们提供了绝佳的解决思路：根据第\ref{Uywqe.66}节的表述，若$U$为微扰，则它一定能从\textsl{Born}近似中得到。从解(\ref{Sd--][fg})我们能得到微扰的成立条件
 $$\psi^{(1)}(\vb{r})=-\frac{m}{2\pi}\bigintsss\frac{\exp(ik^{}_s\abs{\vb{r}-\vb{u}})}{\abs{\vb{r}-\vb{u}}}U(\abs{\vb{u}})\psi^{}_0(\vb{u})\dd V^{}_u\ll\psi^{}_0(\vb{r}).$$
 设$\abs{\vb{r}-\vb{u}}\sim a$为散射波的特征长度，对于$ka\ll1$的低能入射情况，指数部分可以忽略，因此我们得到量级估计
-\begin{equation}ma^2\abs{U}\ll1\implies \abs{U}\ll\frac{1}{ma^2},\quad ka\ll1.\end{equation}
+\begin{equation}ma^2\abs{U}\ll1\implies \abs{U}\ll\frac{1}{ma^2},\quad ka\ll1.\label{Tdfgh//PNC}\end{equation}
 对于$ka\gg1$的高能入射情况，指数部分强烈振荡，此时我们得到量级估计
-\begin{equation}\frac{ma\abs{U}}{k}\ll1\implies \abs{U}\ll\frac{k}{ma}=\frac{v}{a},\quad ka\gg1.\end{equation}
+\begin{equation}\frac{ma\abs{U}}{k}\ll1\implies \abs{U}\ll\frac{k}{ma}=\frac{v}{a},\quad ka\gg1.\label{Td**/PN-.3}\end{equation}
 在这两个条件的基础上，我们来考察解的\textsl{Born}级数，先在以散射中心为原点的坐标系内，将入射波用动量实体$\vb{k}$表述
 \begin{equation}\psi(\vb{r})=\exp(i\vb{k}\cdot\vb{r})-\frac{m}{2\pi}\bigintsss\frac{\exp(ik^{}_s\abs{\vb{r}-\vb{u}})}{\abs{\vb{r}-\vb{u}}}U(\abs{\vb{u}})\psi(\vb{u})\dd V^{}_u,\end{equation}
 于是\textsl{Born}级数就给出
@@ -12279,7 +12283,7 @@ $$\begin{aligned}\mel**{\vb{r}}{\hat{\mathfrak S}}{\vb{k}^{}_i}&=\braket{\vb{r}}
 两个和坐标的内积给出空间波函数，取动量左矢为末态$\vb{k}^{}_f$，我们就得到散射振幅为转换矩阵元
 \begin{equation}\mathcal A\qty(\vb{k}^{}_s,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_f}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}T^{}_{fi},\label{Ldhg-=GSpp][}\end{equation}
 从而通过式(\ref{lds44sse})我们可以直接写出散射振幅的\textsl{Born}级数
-\begin{equation}\mathcal A\qty(\vb{k}^{}_s,\vb{k}^{}_i)=\mel**{\vb{k}^{}_s}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{U+U\varPi^{}_{LS}U+\cdots}{\vb{k}^{}_i}.\end{equation}
+\begin{equation}\mathcal A\qty(\vb{k}^{}_s,\vb{k}^{}_i)=\mel**{\vb{k}^{}_s}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{U+U\varPi^{}_{LS}U+\cdots}{\vb{k}^{}_i}.\label{MIPdh11p]]}\end{equation}
 我们可以直接读出振幅的各级修正，因为势能只和空间有关，因此在计算时需要插入完备坐标态，比如零级近似
 $$\begin{aligned}\mathcal A^{(0)}\qty(\vb{k}^{}_s,\vb{k}^{}_i)&=-\frac{m}{2\pi}\int\dd V^{}_u\mel**{\vb{k}^{}_s}{U(\vb{r})}{\vb{u}}\braket{\vb{u}}{\vb{k}^{}_i}=-\frac{m}{2\pi}\int\dd V^{}_u U(\vb{u})\exp(-i\qty(\vb{k}^{}_s-\vb{k}^{}_i)\cdot\vb{u})\\&=-\frac{m}{2\pi}\int\dd V^{}_u U(\vb{u})\exp(-i\vb{q}\cdot\vb{u}),\end{aligned}$$
 和式(\ref{Gandg-*PO})一致。一级修正需要插入三组完备坐标态，给出
@@ -12300,12 +12304,12 @@ $$\hat{\vb{I}}=\qty(\hat{\vb{I}}+2\pi i\hat{\mathcal T}^\dagger)\qty(\hat{\vb{I}
 $$\mel**{\vb{k}^{}_a}{\hat{\mathcal T}^\dagger-\hat{\mathcal T}}{\vb{k}^{}_b}=2\pi i\mel**{\vb{k}^{}_a}{\hat{\mathcal T}^\dagger\hat{\mathcal T}}{\vb{k}^{}_b}\implies T^*_{ba}-T^{}_{ab}=2\pi i\int\qty(\frac{\dd k^{}_c}{2\pi})^3T^*_{cb}T^{}_{ca}.$$
 如果我们取$\vb{k}^{}_a=\vb{k}^{}_b=\sqrt{2mE}\,\vb{n}$，注意这里是严格的矢量相等，则左侧矩阵元为$T^{}_{aa}$的虚部，右侧为$\abs{T^{}_{ca}}^2$。现在我们代入散射振幅(\ref{Ldhg-=GSpp][})，且能量守恒要求$k^2_c=k^2=2mE$，则右侧的积分给出
 $$2\pi i\int\qty(\frac{\dd k^{}_c}{2\pi})^3\abs{T^{}_{ca}}^2=2\pi i\qty(\frac{2\pi}{m})^2\int\frac{\dd\mathcal O^{}_{\vb{k}}\dd k^{}_c}{\qty(2\pi)^3}k^2_c\abs{\mathcal A}^2=\frac{2iEk}{m}\int\dd\mathcal O^{}_{\vb{k}}\abs{\mathcal A}^2.$$
-虽然现在的单位角元是动量空间中的，但因为散射振幅也是在动量空间中计算的，因此我们完全可以将其放在位置空间中计算，而根据定义(\ref{WzctaUV})这就是全有效截面
-\begin{equation}\int\dd\mathcal O^{}_{\vb{k}}\abs{\mathcal A}^2=\int\dd\mathcal O\abs{\mathcal A\qty(\vb{n}^{}_a,\vb{n}^{}_c)}^2=\int \dd\sigma^{}_{\vb{n}}=\sigma^{}_{tot},\end{equation}
+虽然现在的单位角元是动量空间中的，但因为散射振幅也是在动量空间中计算的，因此我们完全可以将其放在位置空间中计算，而根据定义(\ref{WzctaUV1})这就是全有效截面
+\begin{equation}\int\dd\mathcal O^{}_{\vb{k}}\abs{\mathcal A}^2=\int\dd\mathcal O\abs{\mathcal A\qty(\vb{n}^{}_a,\vb{n}^{}_c)}^2=\int \dd\sigma^{}_{\vb{n}}=\sigma,\end{equation}
 于是将左侧也替换为散射振幅后，我们就得到全有效截面的公式
-\begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma^{}_{tot}.\end{equation}
+\begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma.\end{equation}
 这个结论称为散射的\textbf{光学定理 \textit{Optical Theorem}}，它指出有效截面和无偏转的散射有关，关于其物理史可以参考\cite{NbCF}。我们也可以用散射角$\theta=\arccos(\vb{k}^{}_a\cdot\vb{k}^{}_b/k^2)$表示，此处明显有$\theta=0$，因此也可以写为
-$$\Im \mathcal A\qty(\theta=0)=\frac{k}{4\pi}\sigma^{}_{tot}.$$
+$$\Im \mathcal A\qty(\theta=0)=\frac{k}{4\pi}\sigma.$$
 对于弹性散射而言，时间反演不会改变运动方程，因此散射的特征量都不变。而时间反演在运动中给出空间反演$\hat{P}$，这样我们就得到转换矩阵元
 \begin{equation}\mel**{\vb{k}}{\hat{P}\hat{\mathcal T}}{\vb{k}^{}_i}=\mel**{-\vb{k}}{\hat{\mathcal T}}{-\vb{k}^{}_i}=T^{}_{fi},\end{equation}
 进而散射振幅满足
@@ -12314,16 +12318,84 @@ $$\Im \mathcal A\qty(\theta=0)=\frac{k}{4\pi}\sigma^{}_{tot}.$$
 \\
 以上是弹性散射理论的基础内容，对于其余的细节以及散射的性质等，可以参考\cite{L1}\S 125—130，这里就不具体展开了。需要说明的是，我们这里只考查了单个粒子，对于多粒子云的散射，我们还需要考虑到全同性和自旋的影响，比如参考\cite{L1}\S137和\S 140。并且这里只考察了定态的运动，对于从时间方面的讨论我们放在第\ref{Tadfi///}节中借助场说明。
 \subsubsection{不同能级的散射}
+\noindent 上面我们建立了基础的非相对论性散射理论，现在来考察具体不同能级下的情况。\\
+\\
+首先来看低能情况，其适用于近似(\ref{Tdfgh//PNC})。对于有限作用的散射$a\sim O(1)$，条件$ka\ll1$给出$k\sim o(1)$，也就是$k\to 0$。这使得系统总能量$E\to0$，从而我们可以只考察一级\textsl{Born}近似(\ref{Gandg-*PO})，并且波矢差$\abs{\vb{q}}\propto k\to0$，因此我们可以忽略相位得到
+$$\mathcal A^{(0)}(\vb{q})=-\frac{m}{2\pi}\int U(\abs{\vb{u}})\dd V^{}_u.$$
+由于其不含任何直接表征方向的变量，因此它是各向同性的一个实数，我们将其记为
+\begin{equation}\alpha=\frac{m}{2\pi}\int U(\abs{\vb{u}})\dd V^{}_u=-\mathcal A^{(0)}\in\mathbb R.\label{Y;;L34*--/}\end{equation}
+这是一个实数，现在分析其量纲，为此我们需要将$\hbar$加上，写出
+$$\qty[\alpha]=\qty[\frac{m}{\hbar^2}UV]=\frac{M\times L^3}{M\times L^2\times T^{-2}\times T^2}=L.$$
+可见这是一个长度量，称为低能散射的\textbf{有效长度 \textit{Effective Length}}，注意\emph{它可正可负}，并非和通常的长度一样正定，从而通过式(\ref{WzctaUV1})我们得到总有效截面为
+\begin{equation}\sigma=2\pi\int_0^\pi\abs{\alpha}^2\sin(\theta)\dd\theta=4\pi\alpha^2.\label{Yan234*//}\end{equation}
+我们知道一个半径为$R$的三维球面$S^2$的表面积为$4\pi R$，因此在这个意义上$\alpha$的确表征了长度。对于半径为$R$的刚性球形势场，分布请参考\cite{L8-8}\S 18习题$1$，宏观情况下$\sigma=\pi R^2$，因此在数值上微观有效截面比宏观的大四倍。现在我们需要明确上述近似的适用范围，为此我们需要考察相位的一级修正
+$$\mathcal A^{(0);1}(\vb{q})=\frac{mi}{2\pi}\int U(\abs{\vb{u}})\vb{q}\cdot\vb{u}\dd V^{}_u.$$
+如果式(\ref{Yan234*//})严格成立，那么在远场处我们必须有$\mathcal A^{(0);1}(r\gg a)\sim0$，这里只做量级分析，给出
+$$\mathcal A^{(0);1}\sim k\int_0^r U(r)r^3\dd r\sim kU(r)r^4\sim0.$$
+因为$ka\ll1$，所以在量级上至少需要
+\begin{equation}U(r)r^4\sim r^w\sim a,\quad w<1\implies U(r)\sim r^{-n},\quad n>3.\end{equation}
+注意$n=3$时$\mathcal A^{(0);1}\sim kr\sim O(1)$是不能忽略的，因此$n$严格大于$3$，也就是说中心对称势能至少按$r^{-3}$在远处衰减。不妨来讨论一下$n\leq3$的情况，对于$n\leq1$和$1<n<2$时散射是经典的，可以参考\cite{L1}\S 132。对于$n>2$在远场我们有
+\begin{equation}\abs{U}\ll\frac{1}{mr^2},\quad r\gg a,\end{equation}
+假设$r^{}_0$为特征距离，使得$r\gg r^{}_0$时上述不等式成立，同时满足$r^{}_0k\ll1$，则微扰条件成立。对于散射振幅的一级\textsl{Born}修正(\ref{Gandg-*PO})，设势能为$U(r)\approx\lambda r^{-n}$，我们得到
+$$\mathcal A^{(0)}(\vb{q})=-m\lambda\int r^{-n}\exp(-iqr\cos\theta)r^2\dd r\sin\theta\dd\theta=-2m\lambda\int_{r^{}_0}^\infty\frac{\sin(qr)}{qr}r^{2-n}\dd r.$$
+或者做变量代换得到
+\begin{equation}\mathcal A^{(0)}=-2m\lambda q^{n-3}\int_{qr^{}_0}^\infty\frac{\sin\xi}{\xi^{n-1}}\dd\xi.\label{Zhdbf}\end{equation}
+这样我们就大致得到一个可定量的高阶修正。当$2<n<3$时上述积分收敛，因此在低速下$qr^{}_0\ll1$可以将下限改为零，进而我们得到散射振幅
+$$\mathcal A^{(0)}(\vb{q})\sim q^{n-3},\quad 2<n<3.$$
+这样我们就得到有效截面和例子速度之间的关系。对于$n=3$这个积分下限给出
+$$\mathcal A^{(0)}=-2m\lambda \int_{qr^{}_0}^\infty\frac{\sin\xi}{\xi^2}\dd\xi\approx \int\frac{\xi}{\xi^2}\dd\xi\sim\ln(\frac{1}{q}),$$
+可见其仍是散射振幅的主要部分。对于$n>3$散射振幅主要由常数(\ref{Y;;L34*--/})控制，但式(\ref{Zhdbf})依旧可以当作反常情况处理。同时我们可以定性分析粒子所处的轨道，在球坐标系中\textit{Hamiltonian}为
+$$\hat{\mathcal H}=\frac{\hat{p}^2_r}{2m}+\frac{L^2}{2I}+U(r),$$
+在束缚态中能级正比于主量子数$E\propto l(l+1)$，这由角动量提供。现在低能$k\to 0$使得$L\to0$，因此主量子数$l\to 0$。也就是说在低能有限场散射中，粒子的轨道角动量主要由$l=0$的轨道控制，我们采用原子物理的术语称为\textbf{$\bm{s}$波散射}。\\
+\\
+现在来讨论$s$波有效长度的符号问题，在量级上我们有$\alpha\sim U(r)$。根据前文的介绍不妨令$U=\lambda r^{-4}$，考虑到外力
+$$F=-\dv{U}{r}=\frac{4\lambda}{r^5}=\frac{4U}{r}\propto U,$$
+我们就得到力和有效长度的符号关联
+\begin{equation}\alpha<0\implies U<0\implies F<0,\quad\text{吸引};\quad \alpha>0\implies U>0\implies F>0,\quad\text{排斥}.\end{equation}
+也就是说若有效长度和通常的距离一样正定，那么散射就是发散的，反之负定则散射束缚。可见在低能情况下，有效长度确定了散射的性质，而且束缚态由“负距离”确定，这在宏观碰撞中是不存在的。但是如果我们将其看作一个向量，那么负值就是指向散射中心，则自然就是束缚的。\\
+\\
+为了更加具体的理解这个负长度，我们来考察两个质量为$m^{}_0$的全同粒子的散射，这里暂时不考虑自旋，因此不区分费米子和玻色子。由于涉及双粒子，因此$m$作为约化质量就应该写作
+\begin{equation}m=\frac{m^2_0}{m^{}_0+m^{}_0}=\frac{m^{}_0}{2}.\end{equation}
+再记$U^{}_0=\displaystyle\int U(\abs{\vb{u}})\dd V^{}_u$，因而有效长度(\ref{Y;;L34*--/})就给出
+$$\alpha=\frac{m}{2\pi}U^{}_0=\frac{m^{}_0}{4\pi}U^{}_0,\quad U^{}_0=\frac{4\pi\alpha}{m^{}_0}.$$
+当然此时一级近似的精度并不足够，因为双粒子必然伴随动量的交换，我们需要更高的修正。考察二级修正，记两个粒子各自的动量为$\vb{k}^{}_1$和$\vb{k}^{}_2$，按照式(\ref{MIPdh11p]]})写出
+$$\mathcal A^{(1)}\qty(\vb{k}^{}_{s,1},\vb{k}^{}_{s,2},\vb{k}^{}_{i,1},\vb{k}^{}_{i,2})=-\frac{m/2}{2\pi}\mel**{\vb{k}^{}_{s,1},\vb{k}^{}_{s,2}}{U\varPi^{}_{LS}U}{\vb{k}^{}_{i,1},\vb{k}^{}_{i,2}}.$$
+对于\textsl{LS}核考虑到式(\ref{Airghv})，关于自由粒子双动量态的作用为
+\begin{equation}\mel**{\vb{k}^b_1,\vb{k}^b_2}{\varPi^{}_{LS}}{\vb{k}^a_1,\vb{k}^a_2}=\frac{\braket{\vb{k}^b_1,\vb{k}^b_2}{\vb{k}^a_1,\vb{k}^a_2}}{E^{(0)b}_1+E^{(0)b}_2-E^{(0)a}_1-E^{(0)a}_2}=\frac{2m\delta^3\qty(\vb{k}^b_1+\vb{k}^b_2-\vb{k}^a_1-\vb{k}^a_2)}{\abs{\vb{k}^b_1}^2+\abs{\vb{k}^b_2}^2-\abs{\vb{k}^a_1}^2-\abs{\vb{k}^a_2}^2}.\end{equation}
+这里对于能量只考虑动能，并且我们得到碰撞的动量守恒$\vb{k}^{}_{s,1}+\vb{k}^{}_{s,2}=\vb{k}^{}_{i,1}+\vb{k}^{}_{i,2}$。类似的引入单粒子的动量差
+$$\vb{q}=\vb{k}^{}_{f,1}-\vb{k}^{}_{i,1}=\vb{k}^{}_{i,2}-\vb{k}^{}_{f,2},$$
+则插入完备双动量态以及坐标态后，我们回到式(\ref{LinJ4Y8//})的结论，其中$V^{}_{fi}=\displaystyle\int U(r)\exp(-i\vb{q}\cdot\vb{r})\dd V$，且对离散能级的求和变为对所有动量的求和
+\begin{equation}\begin{aligned}\mathcal A^{(1)}\qty(\vb{q})&=-\frac{m}{4\pi}\sum_x\frac{V^*_{sx}V^{}_{xi}}{E^{(0)f}_1+E^{(0)f}_2-E^{(0)x}_1-E^{(0)x}_2}\\&=-\frac{m}{4\pi V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}\abs{\int U(r)\exp(-i\vb{q}\cdot\vb{r})\dd V}^2.\end{aligned}\end{equation}
+可见决定散射振幅的依旧是动量差，而不是各粒子的精确动量，最后一步中的$1/V$是双动量态的体积归一化系数。同样的理由，在低速下$\abs{\vb{q}}\to0$可以忽略相位，则我们再次得到一个各向同性的量
+$$\mathcal A^{(1)}\qty(\vb{q})=-\frac{m}{4\pi V}\sum_{\qty{\vb{k}}}\frac{2mU^2_0}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}.$$
+不难计算其量纲$\qty[\mathcal A^{(1)}]=L$，于是根据定义(\ref{Y;;L34*--/})将其加入到$\alpha$，我们就得到有效长度的二级\textsl{Born}近似
+\begin{equation}\alpha=-\mathcal A^{(0)}-\mathcal A^{(1)}=\frac{m}{4\pi}\qty(U^{}_0+\frac{U^2_0}{V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}).\end{equation}
+关于这个求和，其解析性可以参考\cite{L1}\S130的内容。现在我们用有效长度来表示势能$U^{}_0$，先直接写出
+$$U^{}_0=\frac{4\pi\alpha}{m}-\frac{U^2_0}{V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}.$$
+因为在微扰情况下$U^{}_0\to0$，因此我们可以将$U^2_0$直接替换为零级近似$\qty(\dfrac{4\pi\alpha}{m})^2$，我们就得到
+\begin{equation}U^{}_0=\frac{4\pi\alpha}{m}\qty(1-\frac{4\pi\alpha}{mV}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}).\label{AfhrGy88}\end{equation}
+这就是式(\ref{Zufi//-*-*})所确定的基态能$U^{}_0$的修正，这样我们可以得到更精确的超流相基态能，具体计算请参考第\ref{UHYB..**}节。我们进一步讨论$\alpha$的符号性质，假设$\alpha>0$，那么势能的修正为负，代表两个粒子向外发散，和宏观散射一致；若$\alpha<0$那么修正为正，这说明两个粒子互相吸引，而其就是费米超流(\ref{sdsv<>})所得到的约束$U^{}_0<0$，我们后续会看到，这是电子—声子交换的结果。\\
+\\
+其次来看高能散射，其适用于近似(\ref{Td**/PN-.3})。对于有限作用的散射$a\sim O(1)$，条件$ka\gg1$给出$k\to\infty$。当然需要注意，动量趋向于无穷大并不代表速度无穷大，这里我们依旧要求速度$v=k/m\ll c$要远小于真空光速，因为目前仍处于非相对论性环境。此时散射波函数的一级近似可以写为
+\begin{equation}\psi=\exp(ikx)F(\vb{r}),\end{equation}
+这里$F$是对自由波的微小修正。带入\textsl{Schrödinger}方程，我们得到
+$$-\frac{1}{2m}\bm{\Delta}\qty{\exp(ikx)F(\vb{r})}+U\exp(ikx)F(\vb{r})=E\exp(ikx)F(\vb{r}).$$
 
-\subsubsection{非弹性碰撞简介}
+
+
+
+
+
+
+
+\subsubsection{非相对论性非弹性碰撞简介}
 
 \subsubsection{协变散射论}\label{Tadfi///}
 
-\subsection{外场下的Dirac场论}\label{dinm,a665rb2}
+\subsection{外场中的Dirac场}\label{dinm,a665rb2}
 
+\subsection{电磁辐射的量子化}
 \subsubsection{类氢原子和光的经典相互作用}
-\subsection{量子电磁辐射引入}
-
 \subsection{电磁辐射修正}\label{dsjbas66543+3.}
 
 
@@ -12332,7 +12404,7 @@ $$\Im \mathcal A\qty(\theta=0)=\frac{k}{4\pi}\sigma^{}_{tot}.$$
 \subsection{量子场论中的凝聚态}\label{UHYB..**}
 \clearpage
 
-\section{平衡态的响应与耗散}\label{ha7524*g}
+\section{热平衡态的响应与耗散}\label{ha7524*g}
 
 \clearpage
 
@@ -12996,7 +13068,7 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 
 
 \clearpage\begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}\makeatother\begin{thebibliography}{99}
-\bibitem{L8-8} Landau, Lev D.; Lifshitz, Evgeny M. 力力学（第五版）. 理论物理学教程 第一卷. 李俊峰、鞠国兴 译校. 中国: 高等教育出版社. 2007. ISBN 978-7-04-020849-8 （中文（中国大陆））.
+\bibitem{L8-8} Landau, Lev D.; Lifshitz, Evgeny M. 力学（第五版）. 理论物理学教程 第一卷. 李俊峰、鞠国兴 译校. 中国: 高等教育出版社. 2007. ISBN 978-7-04-020849-8 （中文（中国大陆））.
 \bibitem{L41} Landau, Lev D.; Lifshitz, Evgeny M. 场论（第八版）. 理论物理学教程 第二卷. 鲁欣、任朗、袁炳南 译. 邹振隆 校. 中国: 高等教育出版社. 2012. ISBN 978-7-04-035173-6 （中文（中国大陆））.
 \bibitem{L1} Landau, Lev D.; Lifshitz, Evgeny M. 量子力学（非相对性理论）（第六版）. 理论物理学教程 第三卷. 严肃 译. 喀兴林 校. 中国: 高等教育出版社. 2008. ISBN 978-7-04-024306-2 （中文（中国大陆））.
 \bibitem{L42} Berestetskii, Vladimir B.; Lifshitz, Evgeny M.; Pitaevskii, Lev P. 量子电动力学（第四版）. 理论物理学教程 第四卷. 朱允伦 译. 庆承瑞 校. 中国: 高等教育出版社. 2015. ISBN 978-7-04-041597-1 （中文（中国大陆））.
@@ -13030,8 +13102,11 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \bibitem{Fgbn88} William B. Case. \emph{Wigner functions and Weyl transforms for pedestrians.} 2008. Am. J. Physics. 1 October; 76 (10): 937–946. \url{https://doi.org/10.1119/1.2957889}.
 \bibitem{VVB6--.78} Leaf, Boris. \emph{Weyl Transformation and the Classical Limit of Quantum Mechanics}. 1968. J. Mathematical Physics. January; 9 (1); 65-72. ISSN 0022-2488; \url{https://doi.org/10.1063/1.1664478}.
 \bibitem{VnmI--*} Rundle, Russell; Everitt, Mark. \emph{Overview of the Phase Space Formulation of Quantum Mechanics with Application to Quantum Technologies}. 2021/04/01. Advanced Quantum Technologies. Vol 4. \url{https://doi.org/10.1002/qute.202100016}.
-\bibitem{Curt//..ht} Curtright, Thomas; Fairlie, David; Zachos, Cosmas. (2016). A Concise Treatise on Quantum Mechanics in Phase Space. (1st ed.). World Scientific Publishing Co Pte Ltd. ISBN-13: 978-9-814-52043-0.
+\bibitem{Curt//..ht} Curtright, Thomas; Fairlie, David; Zachos, Cosmas. (2016). A Concise Treatise on Quantum Mechanics in Phase Space. (1st ed.). World Scientific Publishing Co Pte Ltd. ISBN-13 978-9-814-52043-0.
 \bibitem{Cvqe12} Rammer, J. (2007). Quantum Field Theory of Non-equilibrium States. Cambridge: Cambridge University Press. ISBN 978-0-511-61895-6.
 \bibitem{NbCF} Roger G. Newton. \emph{Optical theorem and beyond}. Am. J. Phys. 1 July 1976; 44 (7): 639–642. \url{https://doi.org/10.1119/1.10324}.
-\bibitem{Lbnlp} Philippe, Francesco.; Pierre, Mathieu.; David, Sénéchal. (1996). Conformal Field Theory. (1st ed.). Springer-Verlag New York, Inc. ISBN 978-0-387-94785-3.\end{thebibliography}\endgroup
+\bibitem{Lbnlp} Philippe, Francesco.; Pierre, Mathieu.; David, Sénéchal. (1996). Conformal Field Theory. (1st ed.). Springer-Verlag New York, Inc. ISBN 978-0-387-94785-3.
+\bibitem{BdpF} R.K. Pathria; Paul D. Beale. (2021). Statistical Mechanics. (4th ed.). Academic Press. ISBN 978-0-08-102692-2. DOI: 10.1016/C2017-0-01713-5.
+\bibitem{Ch--3} Chandrasekhar, S. 黑洞的数学理论（第一版）. 卢炬甫 译. 中国: 高等教育出版社. 2018. ISBN 978-7-04-049097-8.
+\end{thebibliography}\endgroup
 \end{document}
