@@ -752,7 +752,7 @@ $$U^{(2)}_{i^{}_-j^{}_-i^{}_-j^{}_-}\hat{c}^{\dagger}_{i^{}_-}\hat{c}^{\dagger}_
 $$T^{}_{\mu\nu}=T^{}_{\mu'\nu'}\partial^{}_{\mu}x^{\mu'}\partial^{}_{\nu}x^{\nu'},$$
 这里我们就不展开介绍了，可以参考任意的微分几何教材。在时空中两点之间距离由\textbf{间隔 \textit{Interval}}所给出，其在微分几何中实际上就是度规，在\textsl{Lorentz}流形中写为
 \begin{equation}\dd{s}^2=\dd{x}^{\mu}\dd{x}^{}_{\mu}=\eta^{}_{\mu\nu}\dd{x}^{\mu}\dd{x}^{\nu}.\end{equation}
-该式也是指标升降的理论依据，它在坐标变换下是不变的。对于\textsl{Lorentz}流形，空间用笛卡尔坐标系$(x^i)=(x,y,z)$给出
+该式也是指标升降的理论依据，它在坐标变换下是不变的。对于\textsl{Lorentz}流形，空间用\textsl{Cartesian}坐标系$(x^i)=(x,y,z)$给出
 \begin{equation}\dd{s}^2=c^2\dd{t}^2-\dd{x}^2-\dd{y}^2-\dd{z}^2=\qty(c\dd{t})^2-\dd{r}^2.\end{equation}
 \textbf{后文中统一起见用自然单位制，取真空光速$c=1$，也即光速不变原理}。流形上的\textbf{线元}记为$\dd{x}^{\mu}$，\textbf{面元}记为$\dd f^{}_{\mu\nu}$，\textbf{超曲面面元}记为$\dd{S}^{}_{\mu}$，\textbf{体面元}记为$\dd\Omega$。对应的\textsl{Stokes}公式和\textsl{Gauss}公式根据\textsl{Hodge}对偶公式写为
 \begin{equation}\begin{aligned}&\int A^{\mu\nu}\dd f^{}_{\mu\nu}=\oint \qty(\partial^{}_{\nu}A^{\mu\nu}\dd{S}^{}_{\mu}-\partial^{}_{\mu}A^{\mu\nu}\dd{S}^{}_{\nu}),\\&\oint A^{\mu}\dd{S}^{}_{\mu}=\int\partial^{}_{\mu}A^{\mu}\dd\Omega,\\&\oint A^{}_{\mu}\dd{x}^{\mu}=\int\qty(\partial^{}_{\nu}A^{\mu}-\partial^{}_{\mu}A^{\nu})\dd f^{}_{\mu\nu}.\end{aligned}\end{equation}
@@ -1089,7 +1089,7 @@ $$\abs{S^{}_{ij}}=\lambda^{}_1\lambda^{}_2,\quad P(A=0)=\lambda^{}_1-\lambda^{}_
 \begin{equation}\vb{e}\cdot\vb{k}=0.\end{equation}
 事实上，这个结论是空间\textsl{Lorentz}规范的直接结果，将平面波带入方程$\div\vb{A}=0$得到$\vb{A}\cdot\vb{k}=0$。而根据前文我们知道$\vb{e}=\vb{E}/\abs{\vb{E}}\propto\vb{A}$，因此我们得到该正交性。可以说，这个正交性是规范的直观物理体现。\\
 \\
-现在我们来讨论任意角度的偏振，设$\vb{n(S)}^{(1)}=\qty(\cos\zeta,\sin\zeta),\ l=\lambda^{}_1-\lambda^{}_2>0$，其中$\zeta=\expval{\widehat{\vb{x},\vb{n(S)}^{(1)}}}$为夹角，则不难计算出在这两个参数下的实部矩阵
+现在我们来讨论任意角度的偏振，设$\vb{n(S)}^{(1)}=\qty(\cos\zeta,\sin\zeta),\ l=\lambda^{}_1-\lambda^{}_2>0$，其中$\zeta=\arccos(\vb{x}\cdot\vb{n(S)}^{(1)}/\abs{\vb{x}})$为夹角，则不难计算出在这两个参数下的实部矩阵
 \begin{equation}S^{}_{ij}=\dfrac{1}{2}\pmqty{1+l\cos{2\zeta}&l\sin{2\zeta} \\l\sin{2\zeta}&1-l\cos{2\zeta}}.\end{equation}
 若再加上反对称部分，则引入\textbf{\textsl{Stokes}参数}(这里采用\cite{L41}中的记号）
 \begin{equation}\xi^{}_1=l\sin{2\zeta},\quad \xi^{}_2=A,\quad \xi^{}_3=l\cos{2\zeta},\quad 0\leq\xi^{}_{1,2,3}\leq 1\end{equation}
@@ -1522,7 +1522,7 @@ $$\pb{A^{\perp}_i}{\varpi^{\perp}_j}=\delta^\perp_{ij}\implies \comm{\hat{A}^{\p
 \begin{equation}e'^{\mu}(x^\nu)=e^{\mu}(x^\nu)+f(x^\nu)k^\mu,\quad \forall f\in C^\infty(\mathscr M).\label{li..g7878-vz11}\end{equation}
 由于波矢的零模性$k^\mu k^{}_{\mu}=0$，我们自然得到正交性$e'^{\mu}k^{}_{\mu}=0$。这本质上等价于场规范，事实上完全可以将其理解为时空平权下三维场规范对时间的扩展。\\
 \\
-同时我们在第\ref{oiuhgf}节中看到，电磁场的规范性会给波函数附加一个相位，同时会使得新动量算符$\hat{\mathbb{D}}$保持协变变换。这一点在相对论中尤其重要，因为这意味着场的变化不能导致可观测物理量的变化，而这说明系统存在一个内禀对称性，从而我们可以从微观层面理解宏观现象，比如可以参考第\ref{kgbc}节末尾对于电荷与规范的说明。\\
+同时我们在第\ref{oiuhgf}节中看到，电磁场的规范性会给波函数附加一个相位，同时会使得新动量算符$\hat{\mathbb{D}}$保持协变变换。这一点在相对论中尤其重要，因为这意味着场的变化不能导致可观测物理量的变化，而这说明系统存在一个内禀对称性，从而我们可以从微观层面理解宏观现象，比如可以参考第\ref{kgbc}节末尾对于电荷与规范的说明。
 
 \subsection{三维旋量代数和辛形式简介}\label{xuanppp}
 
@@ -1798,7 +1798,7 @@ $$h^{}_L=\vb{L}\cdot\vb{n}=\dfrac{\vb{L}\cdot\vb{P}}{\abs{\vb{P}}}.$$
 按照式(\ref{speer})不难看到此处的局部参数$\xi=x^\mu$，它利用\textsl{Stokes}参数给定了不同方向上光子的极化概率。这是容易证明的，因为按照定义式(\ref{pzzl})，我们在纯偏振下可以将其写为
 $$\rho^{}_{ij}\stackrel{\text{纯态}}{=}\expval{\frac{E^{}_{0i}E^{*}_{0j}}{\abs{\vb{E}^{}_0}^2}}^{}_t=\expval{\frac{E^{}_{0i}}{\abs{\vb{E}^{}_0}}}^{}_t\expval{\frac{E^{*}_{0j}}{\abs{\vb{E}^{}_0}}}^{}_t=\expval{e^{}_{0i}e^{*}_{0j}}_t,$$
 其中$e^{}_{0i}$是单位电场矢量，同时也是单位极化矢量。如果我们近似的用波函数表示，则上式就回到了单粒子密度矩阵$\zeta$的定义式(\ref{midujzz})。若按上文中的记号，记传播方向为$\vb{k}\propto\vb{e}^{(3)}$，两个线偏振方向为$\vb{e}^{(1)}=\qty(\cos{\zeta},\sin{\zeta})$和$\vb{e}^{(2)}$，则我们看到
-\begin{itemize}\item 主对角项$\xi^{}_3=l\cos{2\zeta}$给出了光子沿轴$\vb{e}^{(1)}$或$\vb{e}^{(2)}$的线极化概率，分别为\begin{equation}P\qty(\vb{e}^{(1)})=\dfrac{1+\xi^{}_3}{2},\quad P\qty(\vb{e}^{(2)})=\dfrac{1-\xi^{}_3}{2},\end{equation}这个是矩阵元的定义，$P$表示相应方向上的极化概率；\item 实部的斜对角项$\xi^{}_1=l\sin{2\zeta}$给定了光子在与轴$\vb{e}^{(1)}$呈$\pm\dfrac{\pi}{4}$夹角的轴上的线极化概率，同样的分别为\begin{equation}P\qty(\vb{e}^{(1)}+\dfrac{\pi}{4})=\dfrac{1+\xi^{}_1}{2},\quad P\qty(\vb{e}^{(1)}-\dfrac{\pi}{4})=\dfrac{1-\xi^{}_1}{2},\end{equation}这一点从$\rho^{}_{ij}$投影到方向$\vb{n}=\dfrac{(1,-1)}{\sqrt{2}}$上可以看到，且同样的夹角$\expval{\widehat{\vb{n},\vb{e}^{(2)}}}=\pm \dfrac{\pi}{4}$也能体现；\item 虚部的$\xi^{}_2=A$给出圆偏振度，自然的对应的左右圆极化概率为\begin{equation}P\qty(A=\pm 1)=\dfrac{1\pm\xi^{}_2}{2}.\end{equation}这一点是可以根据螺旋性推出的，这里$A=h$，对应的极化概率自然也就是螺旋性的取值概率。\end{itemize}
+\begin{itemize}\item 主对角项$\xi^{}_3=l\cos{2\zeta}$给出了光子沿轴$\vb{e}^{(1)}$或$\vb{e}^{(2)}$的线极化概率，分别为\begin{equation}P\qty(\vb{e}^{(1)})=\dfrac{1+\xi^{}_3}{2},\quad P\qty(\vb{e}^{(2)})=\dfrac{1-\xi^{}_3}{2},\end{equation}这个是矩阵元的定义，$P$表示相应方向上的极化概率；\item 实部的斜对角项$\xi^{}_1=l\sin{2\zeta}$给定了光子在与轴$\vb{e}^{(1)}$呈$\pm\dfrac{\pi}{4}$夹角的轴上的线极化概率，同样的分别为\begin{equation}P\qty(\vb{e}^{(1)}+\dfrac{\pi}{4})=\dfrac{1+\xi^{}_1}{2},\quad P\qty(\vb{e}^{(1)}-\dfrac{\pi}{4})=\dfrac{1-\xi^{}_1}{2},\end{equation}这一点从$\rho^{}_{ij}$投影到方向$\vb{n}=\dfrac{(1,-1)}{\sqrt{2}}$上可以看到，且同样的夹角$\arccos(\vb{n}\cdot\vb{e}^{(2)})=\pm \dfrac{\pi}{4}$也能体现；\item 虚部的$\xi^{}_2=A$给出圆偏振度，自然的对应的左右圆极化概率为\begin{equation}P\qty(A=\pm 1)=\dfrac{1\pm\xi^{}_2}{2}.\end{equation}这一点是可以根据螺旋性推出的，这里$A=h$，对应的极化概率自然也就是螺旋性的取值概率。\end{itemize}
 不难看到我们这里仍然在使用纯空间形式的表述，为了过渡到四维形式，我们用单位四维复极化矢量$e^{}_{\mu}$将偏振张量写为
 \begin{equation}\rho^{}_{\mu\nu}=e^{}_{\mu}e^{*}_{\nu},\label{242bnbn7}\end{equation}
 对于自然光，三维正交性$\vb{e}\cdot\vb{k}=0$给出
@@ -1867,7 +1867,7 @@ $$\rho'_{\mu\nu}=\qty(e^{}_{\mu}+fk^{}_{\mu})\qty(e^{*}_{\nu}+f^*k^{}_{\nu})=\rh
 \\
 这里就出现了量子体系独有的问题：根据能量公式$E^2=p^2+m^2$，在数学上能量可以取正负两值$E^{}_{\pm}=\pm \sqrt{p^2+m^2}$，对于宏观自由粒子$E\geq 0$因此只取正值$E^{}_+$，但是在量子层面总态函数应该是两个能量态的叠加$\psi\sim\ket{E^{}_+}+\ket{E^{}_-}$，因此负值$E_-$也对应一个粒子态。但是负值态$\ket{E^{}_-}$在理论上是不符合物理含义的，因此总态函数理论上是不可能给出概率密度的，这被称为\textbf{\textsl{Fock}悖论}，是\textsl{FKG}方程的一个重大缺陷，我们会在二次量子化阶段解决这个问题。\\
 \\
-并且我们可以预言，\textsl{KG}场的二次量子化结果和光子场的结果一定是类似的，有相同的算符结构，也就是式(\ref{wllls})所给出的产生算符和湮灭算符同时出现的情况，当时我们缺少关键的一步来理解这个现象，在\textsl{KG}场中我们会初步的看到该现象产生的原因。\\
+并且我们可以预言，\textsl{KG}场的二次量子化结果和光子场的结果一定是类似的，有相同的算符结构，也就是式(\ref{wllls})所给出的产生算符和湮灭算符同时出现的情况，当时我们缺少关键的一步来理解这个现象，在\textsl{KG}场中我们会初步的看到该现象产生的原因。
 
 \subsection{Klein-Gordon场论}\label{kgbc}
 
@@ -2949,7 +2949,7 @@ $$\vb{u}^{\tilde{i}}_{(\upsilon)},\quad \upsilon=1/2.$$
 \\
 之前在\textsl{Proca}场我们提到，对于一个非零质量粒子，其自旋值是不守恒的，为此我们引入了螺旋性$\hat{h}=\hat{\vb{S}}\cdot\vb{n}$，它在选定的参考系下守恒。对于$s=\dfrac{1}{2}$的费米子，其自旋算符用\textsl{Pauli}自旋算符给出$\hat{\vb{S}}=\dfrac{1}{2}\hat{\bm{\sigma}}$，因此螺旋性在此处写为
 \begin{equation}\hat{h}=\hat{\vb{S}}\cdot\dfrac{\vb{p}}{\abs{\vb{p}}}=\dfrac{1}{2}\hat{\bm{\sigma}}\cdot\vb{n},\quad \hat{h}\vb{u}^{(h)}=h\vb{u}^{(h)}\end{equation}
-这里考虑最简单的情况，也就是静止参考系。假设在笛卡尔系下运动沿$z$轴，$\vb{n}=(0,0,1)$，则此时方程写作
+这里考虑最简单的情况，也就是静止参考系。假设在\textsl{Cartesian}系下运动沿$z$轴，$\vb{n}=(0,0,1)$，则此时方程写作
 \begin{equation}\dfrac{1}{2}\hat{\bm{\sigma}}\cdot\vb{n}\bm{\Theta}^{(h)}=\dfrac{1}{2}\hat{\sigma}^{}_z=h\bm{\Theta}^{(h)}.\end{equation}
 带入$\sigma^{}_z=\pmqty{1&0\\0&-1}$不难发现这两个三维极化旋量是
 \begin{equation}\bm{\Theta}^{\qty(\frac{1}{2})}=\pmqty{1\\0},\quad \bm{\Theta}^{\qty(-\frac{1}{2})}=\pmqty{0\\1}.\label{PI;YT}\end{equation}
@@ -3778,7 +3778,7 @@ $$D^{}_c=\qty(\pdv{v}{T})_{T^{}_c,P}+\dfrac{v^{}_c}{T^{}_c}.$$
 $$\mathscr C(\mathscr S)=\qty{(\vb{r}^{}_1,\vb{r}^{}_2,\ldots,\vb{r}^{}_N)}$$
 来确定，每一个$\vb{r}^{}_i$代表了粒子在$\mathbb R^l$中的位置。在\textsl{Hamilton}表述下我们应该考虑相空间，也就是其余切丛
 $$\Phi=T^*\mathscr C=\qty{(\vb{r}^{}_1,\vb{p}^{}_1,\vb{r}^{}_2,\vb{p}^{}_2,\ldots,\vb{r}^{}_N,\vb{p}^{}_N)}.$$
-不难看到此相空间是各粒子的相空间的笛卡尔积，所以$\forall p\in\Phi$，它给出了系统中每一个粒子的位置和动量。我们称这样的一个点为系统的\textbf{微态 \textit{Microstate}}。也就是说，每一个微态给出了系统中具有一定动量粒子的空间分布情况，是统计物理的基础研究对象。\\
+不难看到此相空间是各粒子的相空间的\textsl{Cartesian}积，所以$\forall p\in\Phi$，它给出了系统中每一个粒子的位置和动量。我们称这样的一个点为系统的\textbf{微态 \textit{Microstate}}。也就是说，每一个微态给出了系统中具有一定动量粒子的空间分布情况，是统计物理的基础研究对象。\\
 \\
 但是由于在现实中，我们只能观测到系统的热力学特性，也就是上一节所讲的内容。因此我们在这里所涉及到的粒子数，依旧是正比于\textsl{Avogadro}常数，也就是在$10^{23}$量级左右。不难想到，这些粒子必然会给出类似数量级的微态，但最终从宏观上系统并不会给出这么多状态，我们称为\textbf{宏观态 \textit{Macrostate}}。每一个宏观态对应若干微态，考虑到量级，我们自然不可能完整的分析清楚其中的任何一个微态。\\
 \\
@@ -4284,7 +4284,7 @@ $$E(T)=\int_0^{\infty}E(T,\omega)\dd\omega=\dfrac{1}{\pi^2}\int_0^{\infty}\dfrac
 \begin{equation}\int_0^{\infty}\dfrac{x^3}{\exp(x)-1}\dd{x}=\Gamma(4)\zeta(4)=\dfrac{\pi^4}{15}\label{OIU*>**><22}\end{equation}
 我们得到自然光能量密度的最终形式为
 \begin{equation}E(T)=\dfrac{\pi^2}{15\beta^4}=\dfrac{\pi^2}{15}T^4=aT^4.\label{PI**B(V)fv)}\end{equation}
-现在我们考察各向同性光子系统的\textsl{Poynting}矢量，也就是能流密度$\vb{\mathcal S}(T)=\varphi^{}_0\vb{n}$。由于各向同性所以我们在球坐标系下考虑，取章动角为$\theta=\expval{\widehat{\dd\vb{f},\vb{n}}}$，其取值范围是$0\leq\theta\leq\dfrac{\pi}{2}$，也就是最多与球面相切，后部为死水区。于是按照定义我们得到
+现在我们考察各向同性光子系统的\textsl{Poynting}矢量，也就是能流密度$\vb{\mathcal S}(T)=\varphi^{}_0\vb{n}$。由于各向同性所以我们在球坐标系下考虑，取章动角为$\theta=\arccos(\dd\vb{f}\cdot\vb{n}/\abs{\dd\vb{f}})$，其取值范围是$0\leq\theta\leq\dfrac{\pi}{2}$，也就是最多与球面相切，后部为死水区。于是按照定义我们得到
 $$\int\vb{\mathcal S}\cdot \dd\vb{f}=\varphi^{}_0\int\cos{\theta}\dd\textit{O}=\pdv{VE}{t}=\frac{E}{2}\int_0^{\frac{\pi}{2}}\cos{\theta}\sin{\theta}\dd\theta,$$
 最终我们得到能流密度标量为
 \begin{equation}\varphi^{}_0(T)=\frac{1}{4}E=\dfrac{\pi^2}{60}T^4=\sigma T^4.\end{equation}
@@ -4359,7 +4359,7 @@ $$\mathcal H^{}_{ex}=\frac{e^2H^2r^2}{8m}.$$
 \subsubsection{晶格的Heisenberg能量}
 \noindent 我们先来确定晶格的能量，因为我们忽略了电子的运动，所以场在空间上是静止的，从而$\expval{\vb{H}}^{}_t=\vb{H}$，以此类推。在真空下磁场的相关细节已经在第\ref{oiuhgf}节中表述过了，这里不再展开。为了将磁场的模$\abs{\vb{H}}=H$和\textit{Hamiltonian}的记号区分，我们记\textit{Hamiltonian}为$\mathcal{H}$。由于晶格内的磁场和真空的磁场完全不同，一般的记为$\vb{B}$，两者的具体关联参考第\ref{C5i**--}节：介质中的电动力学，这里会利用电子的自旋做简单的分析。\\
 \\
-在笛卡尔系下，对于二维\textsl{Ising}模型，我们令网格状晶格处于$X-Y$平面，记格点编号为$\{i\}$，同时令自旋$\vb{S}=\vb{S}^{}_z=s\vb{e}^{}_z$只有$z$分量。此时$\vb{R}^{}_0$就是格点的矢径，因而我们得到$\vb{n}\cdot\vb{S}\sim\vb{n}\cdot\bm{\mu}\equiv0$，从而自旋的诱导磁场(\ref{surssa})为
+在\textsl{Cartesian}系下，对于二维\textsl{Ising}模型，我们令网格状晶格处于$X-Y$平面，记格点编号为$\{i\}$，同时令自旋$\vb{S}=\vb{S}^{}_z=s\vb{e}^{}_z$只有$z$分量。此时$\vb{R}^{}_0$就是格点的矢径，因而我们得到$\vb{n}\cdot\vb{S}\sim\vb{n}\cdot\bm{\mu}\equiv0$，从而自旋的诱导磁场(\ref{surssa})为
 $$\vb{H}^{}_s=\frac{3(\vb{n}\cdot\bm{\mu})\vb{n}-\bm{\mu}}{R_0^3}=-\frac{\bm{\mu}}{R_0^3}.$$
 同时对于电子我们按照式(\ref{dinivvo;;;})的形式记自旋，在静止情况下我们有$h=s$，并取$g^{}_s=2$得到每个格点上电子的自旋磁矩为
 \begin{equation}\mu^{}_i=g^{}_sh^{}_i=\dfrac{g^{}_s}{2}\sigma^{}_i=\sigma^{}_i=\pm1.\end{equation}
@@ -4517,7 +4517,7 @@ $$\begin{aligned}&\lim\limits_{T=T_c^-}\ln\qty{2\cosh\qty(\frac{H+T^{}_cm}{T})}=
 \begin{equation}f^{}_{mf}(m=0,T=T_c^-,H)=-T\ln(2)-mH+\frac{1}{2}(T-T^{}_c)m^2+\frac{1}{12}m^4+\cdots.\end{equation}
 可见外场在展开式中是作为一次项系数出现的，其具体的影响我们在二级相变理论中再详细介绍，这里只简单的从图像角度(如图\ \ref{qwegkljmn}和图\ \ref{gygkljmn}所示)来定性分析其在铁磁相中的作用。
 \begin{center}\begin{minipage}[t]{.5\textwidth}\centering\tikz{\begin{axis}[xmin=-5, xmax=5,ymin=-3, ymax=5,axis lines=center,axis on top=false,restrict y to domain=-20:50,ylabel=$-f^{}_{mf}{(H>0)}$,xlabel=$m$,ticks=none,height=0.7\textwidth]\addplot[mark=none,draw=mydarkred,thin,domain=-3.5:3.5,samples=400]{2+.5*\x+.5*\x^2-\x^4/12)};\draw[dotted,blue,thick](axis cs:2,3.65)--(axis cs:2,0)node[left=10,scale=1,below]{$m^*_+$};\draw[blue,thick](axis cs:0,3.65)--(axis cs:2,3.65);\end{axis}}\captionof{figure}{$H>0$时的自由能}\label{qwegkljmn}\end{minipage}\hfill\begin{minipage}[t]{.5\textwidth}\centering\tikz{\begin{axis}[xmin=-4, xmax=4,ymin=-3, ymax=6,axis lines=center,restrict y to domain=-20:50 ,ylabel=$-f^{}_{mf}{(H<0)}$,xlabel=$m$,ticks=none,height=0.7\textwidth]\addplot[mark=none,draw=mydarkblue,thin,domain=-4:4,samples=400]{2-\x+.5*\x^2-\x^4/12)};\draw[dotted,mydarkred,thick](axis cs:-2.1,4.65)--(axis cs:-2.1,0)node[left=10,scale=1,below]{$m^*_-$};\draw[mydarkred,thick](axis cs:0,4.65)--(axis cs:-2.1,4.65);\end{axis}}\captionof{figure}{$H<0$时的自由能}\label{gygkljmn}\end{minipage}\end{center}
-在加上外场之后可以看到，自洽性方程(\ref{ziqiaaa})的解就不再对称，并且此时铁磁相只对应唯一的解$m^{}_*$。这其实说明从顺磁相变为铁磁相时，晶体系统会选择一个解来呈现，并非所有的解都要体现。存在外场时比较容易理解，本质上是外场帮助系统选择了能量最低的解，称为{\textbf{受迫相变}}，而不存在外场时主要是依赖相变前系统的能量，称为{\textbf{自发相变}}，这涉及到相变动力学，此处不展开。但是值得指出的是，\textbf{对于$B=0$的两个解$\pm m^{}_0$，系统只会选取其中的一个作为铁磁相的磁矩。}
+在加上外场之后可以看到，自洽性方程(\ref{ziqiaaa})的解就不再对称，并且此时铁磁相只对应唯一的解$m^{}_*$。这其实说明从顺磁相变为铁磁相时，晶体系统会选择一个解来呈现，并非所有的解都要体现。存在外场时比较容易理解，本质上是外场帮助系统选择了能量最低的解，称为{\textbf{受迫相变}}，而不存在外场时主要是依赖相变前系统的能量，称为{\textbf{自发相变}}，这涉及到相变动力学，此处不展开。但是值得指出的是，\emph{对于$B=0$的两个解$\pm m^{}_0$，系统只会选取其中的一个作为铁磁相的磁矩。}
 \subsubsection{相变的底层逻辑}
 \noindent 在这个结论下我们再来分析无外场$B=0$时的顺磁—铁磁自发相变。在没有外场时顺磁体的平均磁矩为$m=0$，这意味着\textsl{Ising}晶格中电子的自旋是各项同性的。当然因为对于二维\textsl{Ising}模型，我们限制了自旋垂直与晶格，因而此处的各向同性是指自旋极化值$\sigma^{}_i=\{1,-1\}$对于两种取值的概率是相等的。我们记该集合为$\mathbb Z^{}_2=\{1,-1\}$，事实上它在顺磁体中构成一个群，并对空间反演守恒。
 $$\begin{cases}2\times1=\qty{1^{}_1,1^{}_2},&\\2\times-1=\qty{-1^{}_1,-1^{}_2},\end{cases}\rightarrow \begin{cases}1^{}_1\longleftrightarrow-1^{}_1,&\\1^{}_2\longleftrightarrow-1^{}_2,\end{cases}\ \hat P(1,-1)\equiv(-1,1).$$
@@ -4806,7 +4806,7 @@ $$E^{}_{\eta}+f^{}_L(\eta)=a\eta^2+b\eta^4-a\eta^2_0-b\eta^4_0\approx(a+b)(\eta^
 \begin{equation}u^{}_A=\qty(\pdv{F}{A})^{}_T-T\qty(\pdv{S}{A})^{}_T=\sigma-T\pdv{\sigma}{T}.\end{equation}
 目前表面能我们用不到，但是在凝聚态系统中有非常重要的作用。根据式(\ref{cichans--g})在表面效应下自由能的差为
 \begin{equation}F(\eta^{}_{su})-F(\eta^{}_0)=\int^{}_{\Sigma}\sigma \dd{A},\label{biaDDian}\end{equation}
-在笛卡尔系下，我们令体元为$\dd{V}=\dd{A}\dd{z}$，对自由能带入\textsl{LG}泛函我们得到
+在\textsl{Cartesian}系下，我们令体元为$\dd{V}=\dd{A}\dd{z}$，对自由能带入\textsl{LG}泛函我们得到
 $$\int^{}_{\Sigma}\sigma \dd{A}=\int^{}_{\Sigma\times\mathbb R}\qty(g\abs{\grad\eta}^2+f^{}_L(\eta)-f^{}_L(\eta^{}_0))\dd{A}\dd{z},$$
 因为根据定义$\eta(\pm\infty)=\pm\eta^{}_0$，因此我们得到表面张力系数为
 \begin{equation}\sigma=g\int^{\infty}_{-\infty}\qty(\dv{\eta}{z})^2\dd{z}.\end{equation}
@@ -4927,7 +4927,6 @@ $$f(1)=x^{-y}f(x)=const\rightarrow f(x)=x^y,$$
 现在我们来计算这六个指数的关系。首先关联函数的标度律很容易给出为$\gamma=\nu(2-\bm{\zeta})$，也就是\textsl{Fisher}标度律。其次$\alpha$和$\nu$也很容易看出为$\alpha=2-d\nu$，也就是\textsl{Josephson}标度律。其余的两个就不具体计算了，读者可自行验证。最后我们一定能重新得到四个标度律，这就是相变系统的标度不变性。\\
 \\
 需要注意，标度不变性可以导出系统的标度律，但是无法给出临界指数的具体数值，因为并不一定所有系统均可以用平均场理论。这个问题可以通过量子场论中的重整化群理论解决，具体请参考第\ref{bh-gg0..34}节，这里就不说明了。
-
 \subsubsection{二级相变的空间涨落分析}\label{landaoo908}
 \noindent 前面我们通过对整体序参量的涨落分析，系统性的介绍了\textsl{LG}二级相变理论，并在弱外场下引入了关联函数$G(\vb{r}^{}_1-\vb{r}^{}_2)$。通过$\chi$我们看到，$G$表示了两个不同空间点处序参量之间的均方涨落，但是当时我们只是假设整体的结论可以推广至局部，并且是取$T^{}_c=2g$后得到，并没有深入的讨论其背后的逻辑。这里我们通过涨落分析将这一部分补全，当然需要强调的是，我们所处理的系统都是相平衡的，因此这里所讨论的涨落特指空间涨落，关于时间方面的涨落参见附录\ref{ha7524*g}的非平衡态理论。\\
 \\
@@ -5389,8 +5388,8 @@ $$i\rightarrow\vb{k}^{}_1,\quad j\rightarrow\vb{k}^{}_2,\quad k\rightarrow\vb{k}
 现在我们取按体积归一化的动量表象的波函数为
 \begin{equation}\ket{\vb{k}^{}_i}=A\exp(i\vb{k}^{}_i\cdot\vb{r}^{}_i),\quad A=\sqrt{\frac{1}{V}},\end{equation}
 并且我们假设算符只是粒子间相对位置的函数，对于两个粒子形如$\hat{f}^{(2)}=\hat{f}^{(2)}(\vb{r}^{}_2-\vb{r}^{}_1=\vb{r})$，则其特征方程为
-$$\hat{f}^{(2)}\ket{\vb{k}^{}_i}=f^{(2)}\ket{\vb{k}^{}_i}.$$
-由此我们得到相应的矩阵元为
+$$\hat{f}^{(2)}\ket{\vb{k}^{}_i}=\int\braket{\hat{f}^{(2)}}{\vb{r}}\braket{\vb{r}}{\vb{k}^{}_i}\dd V=\int f^{(2)}(r)\braket{\vb{r}}{\vb{k}^{}_i}\ket{\vb{r}}\dd V.$$
+其中我们插入了一组完备坐标态，由此我们得到相应的矩阵元为
 \begin{equation}\begin{aligned}&\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}=A^4\int e^{-i\vb{k}^{}_i\cdot\vb{r}^{}_i}f^{(2)}e^{i\vb{k}^{}_i\cdot\vb{r}^{}_i}\dd{V}^{}_1\dd{V}^{}_2=\frac{1}{V}\int f^{(2)}(\vb{r})\dd^3\vb{r},\\&\mel**{\vb{k}^{}_1\sigma,\vb{k}^{}_2\sigma}{\hat{f}^{(2)}}{\vb{k}^{}_2\sigma,\vb{k}^{}_1\sigma}=A^4\int e^{-i\vb{k}^{}_1\cdot\vb{r}^{}_1}f^{(2)}e^{i\vb{k}^{}_2\cdot\vb{r}^{}_2}\dd{V}^{}_1\dd{V}^{}_2=\frac{1}{V}\int f^{(2)}(\vb{r})e^{i(\vb{k}^{}_2-\vb{k}^{}_1)\cdot\vb{r}}\dd^3\vb{r},\label{i><>in u}\end{aligned}\end{equation}
 其中关于体元的处理和\textsl{vdW}气体的方法是类似的，可以参考式(\ref{tiji ]]''})的思路。同时根据统计的一般原理，利用式(\ref{minang77})将动量谱的求和化为积分，对于双粒子我们带入式(\ref{minang66})给出
 \begin{equation}\sum\limits_{\vb{k}^{}_1,\vb{k}^{}_2}f(\vb{k}^{}_1,\vb{k}^{}_2)=\int f(\vb{k}^{}_1,\vb{k}^{}_2)\aleph(\vb{k}^{}_1)\aleph(\vb{k}^{}_2)\dd^3\vb{k}^{}_1d^3\vb{k}^{}_2=\frac{V^2}{(2\pi)^6}\int f(\vb{k}^{}_1,\vb{k}^{}_2)\dd^3\vb{k}^{}_1\dd^3\vb{k}^{}_2,\end{equation}
@@ -5588,7 +5587,7 @@ $$E^{}_0=\frac{N^2U^{}_0}{2V}+\frac{9N}{2\Theta^3_D}\bigintsss_0^{\omega^{}_m}\q
 \\
 对于非简并的光学支，我们按动量展开为
 \begin{equation}\omega(\vb{k})=\omega(\vb{k}^{}_0)+\frac{1}{2}\gamma^{}_{ij}\qty(k^i-k^i_0)\qty(k^j-k^j_0),\label{ffdgm988}\end{equation}
-其中$\gamma^{}_{ij}$是$\omega$在$\vb{k}=\vb{k}^{}_0$处的\textsl{Hesse}矩阵分量，没有一次项出现是因为极值条件限制。我们假设在动量空间内的三维笛卡尔系$\qty{k^{}_x,k^{}_y,k^{}_z}$下，$\gamma^{}_{ij}$是对角化的，其主值构成的谱为$\text{Sp}=\qty{\gamma^{}_1,\gamma^{}_2,\gamma^{}_3}$，从而动量空间的轴就是主轴，展开式为
+其中$\gamma^{}_{ij}$是$\omega$在$\vb{k}=\vb{k}^{}_0$处的\textsl{Hesse}矩阵分量，没有一次项出现是因为极值条件限制。我们假设在动量空间内的三维\textsl{Cartesian}系$\qty{k^{}_x,k^{}_y,k^{}_z}$下，$\gamma^{}_{ij}$是对角化的，其主值构成的谱为$\text{Sp}=\qty{\gamma^{}_1,\gamma^{}_2,\gamma^{}_3}$，从而动量空间的轴就是主轴，展开式为
 \begin{equation}\begin{aligned}\omega(\vb{k})-\omega^{}_0&=\frac{1}{2}\qty[\gamma^{}_1\qty(k^{}_x-k^{}_{0x})^2+\gamma^{}_2\qty(k^{}_y-k^{}_{0y})^2+\gamma^{}_3\qty(k^{}_z-k^{}_{0z})^2]\\&=\frac{1}{2}\qty(\xi^2_x+\xi^2_y+\xi^2_z)=\frac{1}{2}\abs{\bm{\xi}}^2,\quad \xi^{}_i=\sqrt{\abs{\gamma^{}_i}}\qty(k^{}_i-k^{}_{0i}).\end{aligned}\label{ffdgm998}\end{equation}
 我们这里依旧希望求出频域的态密度$\aleph(\omega)$，注意到$1-$形式基变换$\dd\omega=\grad^{}_{\vb{k}}\omega(\vb{k})\cdot d\vb{k}$，则频域态密度为
 \begin{equation}\aleph(\omega)=\aleph(\vb{k})\frac{\dd^3\vb{k}}{(2\pi)^3\dd\omega}=\frac{1}{(2\pi)^3}\bigintsss\frac{\dd^2\vb{k}}{\abs{\grad^{}_{\vb{k}}\omega(\vb{k})}},\end{equation}
@@ -5622,7 +5621,7 @@ $$d^2\vb{k}=\frac{1}{\sqrt{\gamma}}d^2\bm{\xi}=\frac{1}{\sqrt{\gamma}}\abs{\bm{\
 式中带入了自然单位制下的\textsl{Stephan-Boltzmann}常数$\sigma=\dfrac{\pi^2}{60c^3}$；\item 流体的熵：\begin{equation}S=V\frac{2\pi^2}{45c^3}T^3;\end{equation}\item 流体的总能量：\begin{equation}E=E^{}_0+V\dfrac{\pi^2}{30c^3}T^4;\label{gemen00}\end{equation}\item 流体的等容比热：\begin{equation}C^{}_V=V\dfrac{2\pi^2}{15c^3}T^3\propto T^3.\end{equation}\end{itemize}
 其中$F^{}_0,E^{}_0$代表流体在\textsl{BE}凝聚下的自由能和基态能，参考\textsl{Ising}模型可知，它们是由$\qty(^4\text{He})$分子的相互作用确定，后面我i们会具体计算。\\
 \\
-我们知道除了声学支以外，光学谱支的色散关系是很复杂的，但对于非简并的光学支我们可以按动量展开色散方程。在动量$\vb{k}^{}_0\gg \vb{0}$处引入二阶展开式(\ref{ffdgm988})，由于流体是各向同性的，所以可以假设在笛卡尔系下\textsl{Hesse}矩阵$\gamma^{}_{ij}$是三重简并的，也就是各向同性张量$\gamma^{}_{ij}=\gamma\delta^{}_{ij}$，则色散律为
+我们知道除了声学支以外，光学谱支的色散关系是很复杂的，但对于非简并的光学支我们可以按动量展开色散方程。在动量$\vb{k}^{}_0\gg \vb{0}$处引入二阶展开式(\ref{ffdgm988})，由于流体是各向同性的，所以可以假设在\textsl{Cartesian}系下\textsl{Hesse}矩阵$\gamma^{}_{ij}$是三重简并的，也就是各向同性张量$\gamma^{}_{ij}=\gamma\delta^{}_{ij}$，则色散律为
 \begin{equation}\omega(\vb{k})=\omega^{}_0+\frac{1}{2}\gamma\delta^{}_{ij}\qty(k^i-k^i_0)\qty(k^j-k^j_0)=\omega^{}_0+\frac{\gamma}{2}\qty(\vb{k}-\vb{k}^{}_0)^2,\end{equation}
 我们暂时不设置$\gamma$的符号。于是在动量$\vb{k}^{}_0$附近声子的能量给出
 \begin{equation}\varepsilon^{}_{\vb{k}}=\omega(\vb{k})=\omega^{}_0+\frac{\gamma}{2}(\vb{k}-\vb{k}^{}_0)^2,\quad \vb{k}\sim\vb{k}^{}_0.\label{checheng}\end{equation}
@@ -6100,9 +6099,7 @@ $$\rho^{}_s\propto\abs{t}^{\nu}.$$
 现在我们来讨论费米子的情况，特别的关注金属中电子的动力学。超流性的主要特点是理想无黏，如果我们将流体等效为金属中的电子束，则黏性就等效为金属电阻，从而超流性在金属中就体现为无电阻。同时由于电荷会在外磁场下运动，超流性对于磁场也有相应的表现，其给出金属对磁场的全排斥。类似于超流体中“超级”的命名，我们对这类无电阻且排斥磁场的金属定义为\textbf{超导体 \textit{Superconducter}}，这种电子性质称为\textbf{超导性 \textit{Superconductivity}}，由\textsl{Kamerlingh Onnes}在1911年基于其得到的液氦的冷冻机制在低温汞上发现。\\
 \\
 对于超导性的宏观唯象解释由\textsl{Landau}和\textsl{Ginzburg}在1950年通过\textsl{Landau-Ginzburg}二级相变理论给出，微观动力学解释由\textsl{John Bardeen}，\textsl{Leon N. Cooper}和\textsl{John R.Schrieffer}在1957年通过三人名字首字母命名的\textbf{\textsl{BCS}理论}描述。这里我们主要利用\textsl{Bogoliubov}变换建立$^3$He费米超流的\textsl{BCS}理论，并以此为基础叙述\textsl{LG}超导唯象理论，关于超导体的\textsl{BCS}理论的细节放在第\ref{UHYB..**}节中展开讨论。和第\ref{CHoai**-3-}节中一样，后文中仍以$\hat{a}$作为玻色子的粒子数算符，$\hat{c}$作为准粒子的粒子数算符。
-
 \subsubsection{电子的Cooper对}\label{CHoeei**--}
-
 \noindent 在超流体中我们看到，声子主要是由动量相反的一对玻色子，对于液氦而言特别是$^4$He构成的玻色子，在低速碰撞近似下激发的，其能谱可通过\textsl{Bogoliubov}变换得到。因此对于超导体而言，我们由电子束和流体的类比不难想到，超导性大概率也是类似的产生机制，由动量相反的一对费米子在低速碰撞近似下，所激发的某种准粒子给出。\\
 \\
 但是因为费米子根据\textsl{FD}分布可知，它们还受自旋约束，所以在动量相反之外，我们还需要对自旋做额外的限制。这样的一对可以激发准粒子的费米子称为\textbf{\textsl{Cooper}对 \textit{Cooper Pair}}，是超导性的基础，所以这里我们利用\textsl{Bogoliubov}变换来介绍\textsl{Cooper}对的形成原因。由于我们重点考察电子的情况，而电子的自旋是$s=\dfrac{1}{2}$，所以我们主要考虑相同自旋值的费米子，并依旧以$\sigma=\pm1$来记自旋方向。\\
@@ -6719,7 +6716,7 @@ $$-\frac{4\pi}{3}r^3\abs{f^{}_l-f^{}_s}+4\pi r^2u^{}_A=\int^{}_{\Sigma}\sigma \d
 \\
 回到超导体，已知临界磁场$H^{}_c$是超导$s$相外场的上限，对于任意形状的超导体，外磁场并非均匀分布。当超导体中某一个点$p$的外场达到临界$\eval{\vb{H}}_p=\vb{H}^{}_c$时，可能其周围的磁场仍小于临界值$\eval{\vb{H}}_{\mathscr N(p)}<\vb{H}^{}_c$。随着外场增大，点$p$出率先退出$s$相变为$n$相，随后这一现象逐渐扩张至其邻域$\mathscr N(p)$内，形成一个$n$相核。对于这种涉及$n$相成核现象的$s$相，我们称为\textbf{中间态超导体}$^{\cite{Leewr}}$。\\
 \\
-\textsl{Landau}在1937年基于\textsl{Fritz W.London}的工作指出，中间态体现为若干$s$相和$n$相构成的薄层互相堆叠，和一般的固液成核现象不同。其原因在于，超导相变是二级相变，序参量$\psi$是连续变的，如果是类似固液成核的形式，序参量自然是间断的。因此中间态只能以薄层结构出现，并且不难证明固液相变的过冷成核是一级相变。同时中间态还有可能是$n$相和$s$相过渡的区间，这和一般的成核现象一样。于是利用类似的思路，我们最终可以求得上临界磁场对温度的依赖关系为前面提到过的抛物线式(\ref{ciwuzhi})，这里不具体说明了。\\
+\textsl{Landau}在1937年基于\textsl{Fritz W.London}的工作指出，中间态体现为若干$s$相和$n$相构成的薄层互相堆叠，和一般的固液成核现象不同。其原因在于，超导相变是二级相变，序参量$\psi$是连续变的，如果是类似固液成核的形式，序参量自然是间断的。因此中间态只能以薄层结构出现，并且不难证明固液相变的过冷成核是一级相变。同时中间态还有可能是$n$相和$s$相过渡的区间，这和一般的成核现象一样。于是利用类似的思路，我们最终可以求得上临界磁场对温度的依赖关系为前面提到过的抛物线式(\ref{ciwuzhi})，这里不具体说明了。
 \subsubsection{London超导体的分类}
 \noindent 现在我们来具体讨论中间态超导体的表面张力$\sigma$，后续我们统一称超导相为\textbf{$\bm{s}$相}，正常相为\textbf{$\bm{n}$相}，设外场是弱场$H\ll H^{}_c$，且对于正常相我们取$\mu^{}_m=1$。此处我们只考虑满足\textsl{London}极限，也就是唯象的\textsl{Meissner}效应。\\
 \\
@@ -6753,7 +6750,7 @@ $$\vb{j}=j\vb{e}^{}_y=-\dfrac{ie}{2m}\qty{\psi^*\qty(\dv{y}-2ieA)\psi(x)-\psi\qt
 \\
 根据式(\ref{biaDDian})以及中间态的定义，包含表面效应的是$n$相核，所以对应序参量的自由能为
 $$F(\eta^{}_{su})=F^{}_{n}=\int f^{}_n\dd{V},\quad F(\eta^{}_0)=F=\int f\dd{V}\implies f^{}_n=f(x=-\infty).$$
-因为$\sigma$和自由能的差有关，而磁场的能量对于两相在$\Sigma$上相同，所以我们可以只考虑导体本身的自由能$F$，而不用计算包含磁场的总自由能$\mathfrak{F}$。平面$\Sigma$处的体元是笛卡尔系的$\dd{V}=\dd{A}\dd{x}$，由此我们引入中间态表面张力$\sigma^{}_{sn}$为
+因为$\sigma$和自由能的差有关，而磁场的能量对于两相在$\Sigma$上相同，所以我们可以只考虑导体本身的自由能$F$，而不用计算包含磁场的总自由能$\mathfrak{F}$。平面$\Sigma$处的体元是\textsl{Cartesian}系的$\dd{V}=\dd{A}\dd{x}$，由此我们引入中间态表面张力$\sigma^{}_{sn}$为
 \begin{equation}F^{}_{n}-F=-\int^{}_{\Sigma}\sigma^{}_{sn}\dd{A}=-\int^{}_{\Sigma\times\mathbb R}(f^{}_n-f)\dd{A}\dd{x}.\end{equation}
 这里负号是为了体现\emph{$\sigma^{}_{sn}$是从$s$相指向$n$相核的表面张力}，于是我们得到其以自由能密度的形式写为
 $$\sigma^{}_{sn}=\int^{}_{\mathbb R}(f-f^{}_n)\dd{x}.$$
@@ -6874,7 +6871,7 @@ $$E^{0}_{su}=\frac{\sqrt{35}}{10}E^{}_0=0.59\dfrac{\abs{e}\mathfrak{H}}{2m}<\abs
 在量子涡丝中，我们通过旋转能的变化$\Delta E^{rot}$为负得到容器转速的下限(\ref{loi2gg})，对于量子磁涡丝也是类似的。只不过这里没有真实的旋转，存在的是由磁场导致的环形电流，所以旋转能应该对应磁场自由焓，注意相平衡是依靠自由焓定义的。和计算表面张力类似，记$s$相的自由能密度为$f^{}_s$，根据式(\ref{ensemble})我们得到包含$n$相核的总自由焓为
 \begin{equation}G=\int\qty(f^{}_s+\varepsilon-\frac{1}{4\pi}\vb{B}\cdot\vb{H})\dd{V}=G^{}_s+L\varepsilon-\frac{1}{4\pi}\vb{\mathfrak{H}}\cdot\int\vb{B}\dd{V}.\label{vaerrf))0}\end{equation}
 其中$\vb{\mathfrak{H}}=\expval{\vb{H}}$是外场均值，$\varepsilon$是磁涡丝的能量线密度，$L$是线长。由于唯象\textsl{Meissner}效应$s$相中$f^{}_s=g^{}_s$，因此第二步我们就替换为$G^{}_s$。没有将磁场能量考虑进去的原因是相同的，因为我们最终需要的是差值，磁场能量作为平衡能不计入差值中。现在我们来计算磁场附加能，根据磁涡丝的定义我们得到$\vb{B}\cdot\vb{\mathfrak{H}}=B\mathfrak{H}$，同时我们将体元按外场方向$\vb{e}$写为
-$$\dd{V}=\cos\theta\dd{f}\dd{l},\quad\dd{\vb{f}}=\vb{n}\dd{f},\quad \theta=\expval{\widehat{\vb{n},\vb{e}}}.$$
+$$\dd{V}=\cos\theta\dd{f}\dd{l},\quad\dd{\vb{f}}=\vb{n}\dd{f},\quad \theta=\arccos(\vb{n}\cdot\vb{e}).$$
 因为$\vb{B}=B\vb{e}$，所以$B\dd{V}=\vb{B}\cdot\dd{\vb{f}}\dd{l}$，从而磁场附加能以磁通$\phi$表示写为
 $$\vb{\mathfrak{H}}\cdot\int\vb{B}\dd{V}=\mathfrak{H}\int\vb{B}\cdot\dd{\vb{f}}\dd{l}=\mathfrak{H}L\phi.$$
 带入磁通量子(\ref{liangcc})我们得到自由焓的变化为
@@ -6948,7 +6945,6 @@ $$L\varepsilon^{}_{12}=\dfrac{1}{8\pi}\lambda^{2}_L\oint_{\Sigma^{}_1+\Sigma^{}_
 我们还可以计算磁涡丝的密度$\nu$，当然通过上文中和玻色超流的类比不难想到，对式(\ref{dfwfg})做相应的替换$\Omega\rightarrow\abs{\vb{B}},\ m\rightarrow\abs{e}=\phi^{-1}_0$就能得到
 \begin{equation}\phi^{}_0\nu=\expval{\abs{\vb{B}}},\end{equation}
 其中$\expval{\abs{\vb{B}}}$是磁场对整个超导体沿垂直于磁涡丝的横截面的平均，因为式(\ref{dfwfg})中涉及$\Omega R^{-2}$，这里$R^{-2}$作为面积给磁场面均值。这同样也可以直接计算，对有源\textsl{London}积分方程(\ref{teLhj1})取整个超导体的横截面，左侧为边界效应可以忽略，右侧第一项是总磁通$\sum\phi(n=1)=S\nu\phi^{}_0$，第二项的磁通可以理解为截面总磁场，两者相等就能得到密度。至此磁涡丝的动力学基本建立完毕，对于相反的$\dfrac{1}{\sqrt{2}}<\kappa\ll1$情况这里就不介绍了，读者可自行查阅资料。
-
 \subsubsection{Pippard极限下的超导体}\label{sdfe}
 \noindent 在前文中我们所处理超导体的全部都处于\textsl{London}极限下，也就是$\lambda^{}_L\gg l^{}_0$，其中$l^{}_0$是相干距离。在这种情况下，\textsl{Meissner}效应是唯象的，从而我们可以大范围的使用\textsl{LG}理论分析。现在我们来讨论其反向极限，也就是\textsl{Pippard}极限下的超导体，这里重点关注立方对称晶体。\\
 \\
@@ -7022,7 +7018,7 @@ $Q^{}_k(\theta)$在计算时也算上该平均夹角，从而最终我们得到�
 \noindent 我们已经看到在可变粒子数表象下，粒子和场是等价的，因此要研究场的量子统计，只需要讨论相应的粒子性质，再通过一定的方法和场关联即可。\\
 \\
 不失一般性的，我们这里只考察沿$x$方向运动的单个粒子。所谓粒子的\textbf{准经典近似 \textit{Semi-Classic}}，指的是粒子物质波的波长$\lambda$远小于系统的特征尺度$L$。若我们考察的是自由光子，则这一条件就解释为光的波长趋向于零。这使得我们能从几何光学的角度来分析，鉴于波函数的归一性我们将其写成
-\begin{equation}\psi(x)=\exp(\frac{i}{\hbar}\sigma(x)).\end{equation}
+\begin{equation}\psi(x)=\exp(\frac{i}{\hbar}\sigma(x)).\label{Scger}\end{equation}
 根据\textsl{de Broglie}理论$\hbar\sim\lambda/L$，从而在准经典近似下$\hbar\to 0$。这意味着我们可以将相位按$\hbar$展开，为了后续书写方便这里写成
 \begin{equation}\sigma=\sum_{n=0}\qty(\frac{\hbar}{i})^n\sigma^{}_n=\sigma^{}_0+\qty(\frac{\hbar}{i})\sigma^{}_1+\qty(\frac{\hbar}{i})^2\sigma^{}_2+\cdots.\label{huidaor5}\end{equation}
 对于单粒子而言，定态\textsl{Schrödinger}方程写为
@@ -7057,7 +7053,7 @@ $$-\frac{\hbar^2}{2m}\qty{\frac{i}{\hbar}\dv[2]{\sigma_0}{x}+\dv[2]{\sigma_1}{x}
 \begin{equation}\sigma_1=-\bigintsss\frac{1}{2p}\dv{p}{x}\dd x=-\frac{1}{2}\ln p+C=\ln(\frac{1}{\sqrt{p}}).\end{equation}
 回代入式(\ref{huidaor5})中，我们得到波函数的一级近似为
 \begin{equation}\psi(x)=\frac{C^{}_1}{\sqrt{p}}\exp(\frac{i}{\hbar}\int_{-\infty}^x p\dd{q})+\frac{C^{}_2}{\sqrt{p}}\exp(-\frac{i}{\hbar}\int_{-\infty}^x p\dd{q}),\label{2retgsh}\end{equation}
-注意$\sigma^{}_0$有两个解，因此都要叠加到结果中。可见$\abs{\psi}^2\sim1/p$，这是十分合理的，根据不确定性原理$\Delta p\Delta x=\hbar$，动量越大测量区间就越小，自然的概率也就越小。我们同样可以计算一级近似的条件
+注意$\sigma^{}_0$有两个解，因此都要叠加到结果中。可见$\abs{\psi}^2\sim1/p$，这是十分合理的，根据不确定性原理，动量越大测量区间就越小，自然的概率也就越小。我们同样可以计算一级近似的条件
 $$\abs{\dv[2]{\sigma_1}{x}+\qty(\dv{\sigma_1}{x})^2}\ll\frac{2}{\hbar}\abs{\dv{\sigma_0}{x}\dv{\sigma_1}{x}},$$
 不难得到结果
 \begin{equation}\hbar\abs{\frac{2pp''+p'^{2}}{4p^2p'}}\ll1.\end{equation}
@@ -7104,7 +7100,7 @@ $$I(E^{}_n)=\dfrac{1}{2\pi\hbar}\oint p\dd{q}=\dfrac{1}{2\pi\hbar}\int \dd p\dd{
 其中$\Delta p\Delta x$是一维封闭系统在二维相空间中所占的体积。虽然这里$n$是能级，但若我们考察能量为$\hbar\omega$的单态，则根据差值$\Delta E$结论，我们完全可以将$n$理解为态个数，从而单态的体积为$V=2\pi\hbar=h$。这就是第\ref{ret.7hg3}节中，每个微态体积的由来，从而使得统计物理在公式上完备。
 
 \subsection{传播子和路径积分}
-\noindent 上面讨论了准经典近似下的单粒子波函数，我们看到在零级近似下量子系统和几何光学系统一致，粒子波函数的相位随着运动而增加。但是当波长和系统尺度相当时，该近似失效，这会使得相位的变化和准经典情况有所不同。下面我们就来详细的分析这一问题。\\
+\noindent 上面讨论了准经典近似下的单粒子波函数，我们看到在零级近似下量子系统和几何光学系统一致，粒子波函数的相位随着运动而增加。但是当波长和系统尺度相当时，该近似失效，这会使得相位的变化和准经典情况有所不同。下面我们就来详细的分析这一问题。
 \subsubsection{衍射和粒子传播子}
 \noindent 应当指出，对于$\hbar\sim1$的非准经典情况，它对应了光学中\textbf{衍射 \textit{Diffraction}}现象。简而言之，当$\lambda\sim L$时几何光学近似失效，系统沿传播方向上个点的场强由\textsl{Huygens}原理确定，其数学形式为\textsl{Huygens-Fresnel}公式。具体推导过程可以参考\cite{L41}，这里就不展示了。\\
 \\
@@ -7130,7 +7126,7 @@ $$\psi(\vb{r}^{}_1,t^{}_1)=\hat{\tau}\qty(t^{}_1)\psi\qty(\vb{r}^{}_1)=\int K(\v
 \begin{equation}K(\vb{r}^{}_1,t^{}_1;\vb{r}^{}_0,t^{}_0)=\psi^*(\vb{r}^{}_0,t^{}_0)\psi(\vb{r}^{}_1,t^{}_1)\theta\qty(t^{}_1-t^{}_0)=\mel**{\vb{r}^{}_1}{\hat{\tau}\qty(t^{}_1-t^{}_0)}{\vb{r}^{}_0}\theta\qty(t^{}_1-t^{}_0).\label{liyouyyb}\end{equation}
 同时由于算符$\hat{\tau}\qty(t^{}_1-t^{}_0)$使得两个坐标态的时间一致，因此可以写出密度矩阵表示的核
 \begin{equation}K(\vb{r}^{}_1,t^{}_1;\vb{r}^{}_0,t^{}_0)=\hat{\tau}\qty(t^{}_1-t^{}_0)\zeta^{(1)}(\vb{r}^{}_0,\vb{r}^{}_1)\theta\qty(t^{}_1-t^{}_0).\end{equation}
-因而我们可以说，积分核$K$确定了粒子在$t^{}_0$时刻从$\vb{r}^{}_0$位置处，在$t^{}_1$时刻运动到$\vb{r}^{}_1$处的相干性振幅，体现了波包在传播中的概率。基于这样的物理性质，我们将这个核称为粒子的\textbf{传播子 \textit{Propagator}}，是粒子微观性质的体现，下面我们来具体计算两个积分核。\\
+因而我们可以说，积分核$K$确定了粒子在$t^{}_0$时刻从$\vb{r}^{}_0$位置处，在$t^{}_1$时刻运动到$\vb{r}^{}_1$处的相干性振幅，体现了波包在传播中的概率。基于这样的物理性质，我们将这个核称为粒子的\textbf{传播子 \textit{Propagator}}，是粒子微观性质的体现，下面我们来具体计算两个积分核。
 \subsubsection{传播子的路径积分表示}
 \noindent 若粒子的能量守恒，则在能级态下积分核的结果是显而易见的，只需要用密度矩阵元(\ref{napless})计算即可。由于这里只涉及单粒子，所以不需要额外参数$\xi$的参与，同时在粒子运动过程中相应的能级$E^{}_n$和能级态$\ket{n}=\psi^{}_n$保持不变，因此$w^{}_{mn}=\delta^{}_{mn}$。于是我们得到定态的相干核和含时的传播子为
 \begin{equation}\begin{aligned}&K\qty(\vb{r}^{}_1,\vb{r}^{}_0)=\sum_n\braket{\vb{r}^{}_1}{n}\braket{n}{\vb{r}^{}_0}=\sum_n\psi^{*}_n\qty(\vb{r}^{}_0)\psi^{}_n\qty(\vb{r}^{}_1);\\&K\qty(\vb{r}^{}_1,t^{}_1;\vb{r}^{}_0,t^{}_0)=\theta\qty(t^{}_1-t^{}_0)\sum_n\psi^{*}_n\qty(\vb{r}^{}_0)\psi^{}_n\qty(\vb{r}^{}_1)\exp{\frac{-iE^{}_n}{\hbar}\qty(t^{}_1-t^{}_0)}.\end{aligned}\label{Vonnerru}\end{equation}
@@ -9053,7 +9049,7 @@ $$\delta\hat{p}\vb{d}t\wedge\vb{d}\hat{q}+\vb{d}\hat{p}\wedge \delta\hat{q}\vb{d
 $$\begin{aligned}&\delta\qty(\hat{q}\psi)=\frac{1}{i\hbar}\hat{K}\hat{q}\psi=\delta\hat{q}(\psi)+\hat{q}\delta\psi=\delta\hat{q}(\psi)+\frac{1}{i\hbar}\hat{q}\hat{K}\psi,\\&\delta\qty(\hat{p}\psi)=\frac{1}{i\hbar}\hat{K}\hat{p}\psi=\delta\hat{p}(\psi)+\hat{p}\delta\psi=\delta\hat{p}(\psi)+\frac{1}{i\hbar}\hat{p}\hat{K}\psi.\end{aligned}$$
 于是我们得到\textsl{Schrödinger}方程确定的无穷小正则变换
 \begin{equation}i\hbar\delta\hat{q}=\comm{\hat{K}}{\hat{q}},\quad i\hbar\delta\hat{p}=\comm{\hat{K}}{\hat{p}}.\end{equation}
-将变分重新写回时间导数$\delta=\eval{\dv*{t}}_{\gamma}$，则这两个方程就是\textsl{Heisenberg}绘景下的演化方程，系统的母函数为\textit{Hamiltonian}。由此我们完成相空间的量子化，不妨记为$\hat{\Phi}$，这也是\textsl{Dirac}量子化规则(\ref{kanc48/5200++..})的理论基础。如果我们现在考虑一个对$\psi(0)$的完整正则变换，比如$\hat{q}(t)$，则可以将其拆分成许多无穷小变换$i\hbar\Delta t\delta\hat{q}$反复作用到$\psi(0)$上，我们就得到
+将变分重新写回时间导数$\delta=\eval{\dv*{t}}_{\gamma}$，则这两个方程就是\textsl{Heisenberg}绘景下的演化方程，系统的母函数为\textit{Hamiltonian}。由此我们完成相空间的量子化，不妨将结果记为$\hat{\Phi}$，这也是\textsl{Dirac}量子化规则(\ref{kanc48/5200++..})所处的空间。如果我们现在考虑一个对$\psi(t=0)$的完整正则变换，比如$\hat{q}(t)$，则可以将其拆分成许多无穷小变换$i\hbar\Delta t\delta\hat{q}$反复作用到$\psi(0)$上，我们就得到
 $$\hat{q}(t)\psi(0)=\qty(\vb{I}+i\hbar\Delta t\delta\hat{q})\qty(\vb{I}+i\hbar\Delta t\delta\hat{q})\cdots\qty(\vb{I}+i\hbar\Delta t\delta\hat{q})\psi(0)=\qty(\vb{I}+i\hbar\Delta t\delta\hat{q})^l\psi(0).$$
 最终的结果由$\Delta t\to0$和$l\to\infty$的双约束下共同确定，且$l\Delta t=t$，则我们得到
 \begin{equation}\hat{q}(t)\psi(0)=\lim\limits_{l\to\infty}\qty(\vb{I}+\frac{i\hbar t}{l}\delta\hat{q})^l\psi(0)=\exp(i\hbar\hat{q}t)\psi(0),\label{la-/*/-*ovbB}\end{equation}
@@ -10010,6 +10006,7 @@ $$1=AB\lim_{t\to w\infty}\mel**{0}{\hat{\tau}^{}_I\qty(t,t^{}_0)\hat{\tau}^{}_I(
 若在归一化时取一般情况$w\neq1$，最终我们得到相互作用真空态为
 \begin{equation}\begin{aligned}\ket{\Omega}&=\lim\limits_{\mathfrak T\to\infty(1-i\epsilon)}\sqrt{\frac{1}{\mel**{0}{\hat{\tau}^{}_I\qty(\mathfrak T,-\mathfrak T)}{0}}}\hat{\tau}^{}_I\qty(t^{}_0,-\mathfrak T)\ket{0};\\ \bra{\Omega}&=\lim\limits_{\mathfrak T\to\infty(1-i\epsilon)}\sqrt{\frac{1}{\mel**{0}{\hat{\tau}^{}_I\qty(\mathfrak T,-\mathfrak T)}{0}}}\bra{0}\hat{\tau}^{}_I\qty(\mathfrak T,t^{}_0).\label{zhenbkong1}\end{aligned}\end{equation}
 这在形式上和路径积分的归一化十分类似，事实上如果我们按定义(\ref{zi/F].,-8f})回到\textsl{Lagrange}形式$\Lambda^{}_{\text{int}}$，则算符$\hat{\tau}^{}_I$的相位就是相互作用的作用量，对应了始末态之间的路径积分。
+
 \subsection{相互作用场关联函数的微扰修正}\label{dandanbb521}
 \noindent 在第\ref{lbngjjf}节中，我们引入了场的多点关联函数，并具体计算了自由场的多点关联函数及其各种性质。在引入了相互作用及其微扰理论之后，我们将多点关联函数推广至相互作用场，并建立微扰和路径积分之间的关联。预先指出，下文中绘景间的转化主要使用式(\ref{hgjk,,-isi})。
 \subsubsection{波函数场的相互作用传播子}
@@ -10609,6 +10606,7 @@ $$-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\pdv{\eta^{}_4}\Gamma^{}_{
 相应的\textsl{BD}级数以图表示为
 $$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,label=below:1,scale=.8](a){};\vertex[below right=1cm of a,blob](c){};\vertex[below right=1cm of c,dot,label=below:4,scale=.8](b){};\vertex[below left=1cm of c,dot,label=below:2,scale=.8](d){};\vertex[above right=1cm of c,dot,label=below:3,scale=.8](e){};\diagram*{(a)--(c)--(b),(e)--(c)--(d)};\end{feynman}}=\tikz[baseline=(current bounding box.center)]{\def\d{.8}\def\l{1}\begin{feynman}[inline=a.base]\vertex[dot,label=below:1](a){};\vertex[below right=2*\d cm of a,circle,draw,minimum size=.8cm](c){};\vertex[below right=2*\d cm of c,dot,label=below:4](b){};\vertex[below left=2*\d cm of c,dot,label=below:2](d){};\vertex[above right=2*\d cm of c,dot,label=below:3](e){};\vertex[above left=\l cm of c,blob](c1){};\vertex[below right=\l cm of c,blob](b1){};\vertex[below left=\l cm of c,blob](d1){};\vertex[above right=\l cm of c,blob](e1){};\diagram*{(a)--(c1)--(c)--(b1)--(b),(e)--(e1)--(c)--(d1)--(d)};\node at(c){\scalebox{1.2}{$\Sigma$}};\end{feynman}}+\cdots.$$
 这样就完成了对连通图的大致分析。这里介绍的是一个理论框架，对于一些细节上的处理，我们在具体应用的时候会重新梳理，并且解释其和重整化以及对称性破缺之间的关联。
+
 \subsection{有限温度实标量场的微扰}
 \noindent 在上文中我们系统性的介绍了零温场的微扰理论，并通过\textsl{Born}级数引入了\textsl{Feynman}图这一具象的工具。现在我们将上述的微扰理论应用到有限温度场中，讨论热态如何在微扰下演化。不失一般性的，这里我们只考察实标量场$\psi$，其自由场设定为\textsl{KG}场。
 \subsubsection{平衡热场的微扰}\label{ty78/**/y99r}
@@ -10993,7 +10991,7 @@ $$\mathscr W\qty[\mathfrak C^{-+}](p,x)\propto\int e^{ipr}\qty{a\exp(ikr)+b\exp(
 \begin{equation}f(p,x)=\mathscr W\qty[\expval{n^{}_{\vb{k}}}](p,x),\end{equation}
 注意由于占有数本身处于动量表象，因此其\textsl{Wigner}变换也应使用动量表象。用\textsl{Heaviside}函数$\theta$表示动量方向，对于均匀系统主要关注能量，我们得到$\mathfrak C^{-+}$的\textsl{Wigner}变换为
 $$\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\theta\qty(-p^0)f(p,x)+\theta\qty(p^0)\qty(1+f(p,x)).$$
-但我们知道宏观粒子是不能取负能的，因此我们只保留正能项，得到传播子的\textbf{准粒子近似 \textit{Quasi-particle Approximation}}
+但我们知道经典宏观粒子是不能取负能的，负能是量子系统独有的因果律保护产物，因此我们只保留正能项，得到传播子的\textbf{准粒子近似 \textit{Quasi-particle Approximation}}
 \begin{equation}\mathscr W\qty[\mathfrak C^{-+}](p,x)\approx\theta\qty(p^0)(f(p,x)+1).\end{equation}
 其含义和动量的在壳近似一样，都是对自由场的微修正。将其带入方程(\ref{Fvyop})，我们就得到分布函数的演化方程，当然此时依旧是协变的$f=f\qty(p^0,\vb{p},\vb{r},t)$。\\
 \\
@@ -11029,7 +11027,7 @@ $$\mathscr W\qty[\mathfrak C^{+-}](p,x)\approx\delta\qty(p^2)\qty{\theta\qty(p^0
 \\
 最后我们总结一下所用到的各类近似：
 \begin{enumerate}\item 在\textsl{Dyson}方程中，左侧导数部分$p^2\star\mathscr W\qty[\mathfrak C^{-+}]$的星积取梯度近似
-$$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的。\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$，这里我们已经将质量壳约束纳入近似中。\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了\end{enumerate}
+$$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的。\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$，这里我们已经将质量壳约束纳入近似中。\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了。\end{enumerate}
 基于这些近似，我们从\textsl{SK}形式得到了\textsl{Boltzmann}动理方程，可见其约束还是很多的，为了处理更一般的非平衡量子系统，我们就需要逐步放开这些约束。关于\textsl{UU}碰撞积分的图解法，可以参考\cite{Ld3k}\S 95，这里就不展开了。\\
 \\
 通过上述推导，我们看到宏观物理定律，是如何从微观量子场的关联函数中涌现出来的。这里主要涉及到两个近似：第\ref{Xheish//}个和第\ref{Meiifiab}个。后续我们会看到，这两个近似实际上是典型的粗粒化过程，它们将关联函数中最主要的统计性质提出，并在大范围的统计均值下得到宏观结论，这就是重整化的目标。\clearpage
@@ -11107,7 +11105,7 @@ $$\lim_{R\to\infty}\abs{\vb{E}^{}_{\vb{v}}}\sim\frac{e}{R^3}\qty(1-\frac{v^2}{c^
 \begin{equation}\vb{R}(t')-\frac{\vb{v}}{c}R(t')=\vb{R}(t')-\vb{v}\qty(t-t')=\vb{R}(t)\end{equation}
 就是准确的在观察时刻$t$从电荷到观察点$p$的矢径。对上式和因子$F(t')$平方，我们得到
 $$\vb{R}^2(t)-F^2(t')=\qty{\vb{R}-\frac{\vb{v}}{c}R}^2(t')-\qty{R-\frac{\vb{v}\cdot\vb{R}}{c}}^2(t')=\frac{1}{c^2}\qty{\vb{v}^2R^2-(\vb{v}\cdot\vb{R})}=\frac{1}{c^2}\qty[\vb{v}\cp\vb{R}(t)]^2.$$
-其中最后一步是用到$\vb{v}\cp\vb{v}=\vb{0}$这一结论。记速度和径矢的夹角为$\theta^{}_{t}=\expval{\widehat{\vb{v},\vb{R}}(t)}$，所以我们得到\textsl{LW}势的分母因子为
+其中最后一步是用到$\vb{v}\cp\vb{v}=\vb{0}$这一结论。记速度和径矢的夹角为$\theta^{}_{t}=\arccos(\dfrac{\vb{v}\cdot\vb{R}(t)}{\abs{\vb{v}}\abs{\vb{R}}})$，所以我们得到\textsl{LW}势的分母因子为
 \begin{equation}F(t')=\sqrt{\vb{R}^2(t)-\dfrac{1}{c^2}\qty[\vb{v}\cp\vb{R}(t)]^2}=R(t)\sqrt{1-\frac{\vb{v}^2}{c^2}\sin^2\theta^{}_t}.\end{equation}
 不难通过计算作用量证明，将上式代入\textsl{LW}标势(\ref{1AVn62})，结果和匀速运动点电荷的标势匹配。于是第一项等效于静电场，对辐射没有贡献。所以我们得出结论，辐射主要通过依赖于加速度的第二项$\vb{E}^{}_{\vb{w}}$贡献，或者说
 \begin{center}\emph{电磁辐射由做变速运动的电荷产生，对外辐射的电磁波的性质依赖于加速度。}\end{center}
@@ -11231,7 +11229,7 @@ $$\dfrac{cR^{2}_0}{4\pi}\int H^2\dd{t}\dd{\textit{O}}=\dfrac{cR^{2}_0}{2\pi}\int
 \begin{equation}\dd{I}^{}_n=\dfrac{c}{2\pi}\abs{\vb{H}^{}_n}^2R^{2}_0\dd{\textit{O}}.\label{boqq4}\end{equation}
 这里我们直接给出点电荷的四维辐射动量的分量结果，设粒子沿世界线$\gamma$运动
 \begin{equation}\dd{P^{\mu}}=-\frac{e^2k^{\mu}}{2\pi^2c}\chi^{}_{\nu}\chi^{\nu}\delta\qty(k^{\gamma}k^{}_{\gamma})\dd^4\vb{k},\quad\chi^{\mu}=\int_{\gamma}\exp(-ik^{}_{\nu}x^{\nu})\dd{x}^{\mu}.\end{equation}
-可以验证，其时间分量$\mu=0$就是$\dd{\mathscr E}^{}_{\vb{n}\omega}$，请读者自行计算。\\
+可以验证，其时间分量$\mu=0$就是$\dd{\mathscr E}^{}_{\vb{n}\omega}$，请读者自行计算。
 \subsubsection{远场低速极限和偶极辐射}
 \noindent 当然上述的公式依旧难以计算，我们可以进一步取近似。我们来考察低速近似，现在$v\ll c$。前面指出，在远场近似下时间的推迟性不能忽略，而在低速近似下，对于一个做周期为$T$的封闭运动的电荷我们有
 \begin{equation}t-t'=\frac{R^{}_0}{c}-\vb{n}\cdot\frac{\vb{v}T}{c}=\frac{R^{}_0}{c}-o\qty(\frac{R^{}_0}{c}),\quad v\ll c,\label{qsx4}\end{equation}
@@ -11245,7 +11243,7 @@ $$\int\vb{j}(t')\dd{V}=\sum_ae^{}_a\vb{v}^{}_a(t')=\dv{t'}\qty(\sum_ae^{}_a\vb{r
 \begin{equation}\vb{H}=\frac{1}{c^2R^{}_0}\ddt{\vb{d}}\cp\vb{n},\quad\vb{E}=\frac{1}{c^2R^{}_0}\qty(\ddt{\vb{d}}\cp\vb{n})\cp\vb{n}.\end{equation}
 可见此时辐射场和偶极矩的加速度相关，此类辐射称为\textbf{偶极辐射}，具体称为\textbf{电偶极辐射}。由于$\ddt{\vb{d}}\sim\vb{w}$，所以我们得到结论：只有做变速运动的电荷才会产生辐射。这一点我们已经从点电荷的辐射场(\ref{wogenni})中略见一二，此处我们通过偶极辐射证明这对于所有电荷系统均有效。将上述场带入式(\ref{qiangdd})中得到偶极辐射的强度角分布为
 \begin{equation}\dd{I}^{}_{\vb{n}}=\frac{1}{4\pi c^3}\qty(\ddt{\vb{d}}\cp\vb{n})^2\dd\textit{O}=\frac{\ddt{\vb{d}}^2}{2c^3}\sin^3\theta\dd\theta,\label{d33tt}\end{equation}
-其中$\theta=\expval{\widehat{\ddt{\vb{d}},\vb{n}}}$是辐射方向到观察点的章动角，后一步是我们带入了立体角元$\dd\textit{O}=2\pi\sin\theta\dd\theta$，当然我们这里默认辐射和进动角$\phi$无关。对全空间积分后，我们得到偶极辐射的总耗散强度
+其中$\theta=\arccos(\ddt{\vb{d}}\cdot\vb{n}/\abs{\ddt{\vb{d}}})$是辐射方向到观察点的章动角，后一步是我们带入了立体角元$\dd\textit{O}=2\pi\sin\theta\dd\theta$，当然我们这里默认辐射和进动角$\phi$无关。对全空间积分后，我们得到偶极辐射的总耗散强度
 \begin{equation}I=\frac{2}{3c^3}\ddt{\vb{d}}^2.\label{danctt}\end{equation}
 关于$\sin^3$的积分这里就跳过了。对于系统中的单个电荷，偶极矩为$\vb{d}=e\vb{r}$，二阶导$\ddt{\vb{d}}=e\vb{w}$，则我们得到其总辐射强度为
 \begin{equation}I=\frac{2e^2w^2}{3c^3}.\label{daeet}\end{equation}
@@ -11259,7 +11257,7 @@ $$d^{}_x=d^{}_0\cos(\Omega t),\quad d^{}_y=d^{}_0\sin(\Omega t)\implies\ddt{\vb{
 \begin{equation}I=\frac{2}{3c^3}\ddt{\vb{d}}^2=\frac{2}{3c^3}\Omega^4d^2_0.\end{equation}
 特别的，辐射场给出$\vb{H}\sim\ddt{\vb{d}}\cp\vb{n}\sim\vb{n}\cp\vb{d}$，若我们在$\vb{n}-z$平面和相垂直的平面上分解，记横向单位向量为$\vb{i}$，该平面上相应的的单位向量为$\vb{e}=\vb{n}\cp\vb{i}$，不难算出分量为
 $$\vb{H}\sim\pmqty{\sin\phi\abs{\vb{d}}\vb{e}\\ \cos\alpha\cos\phi\abs{\vb{d}}\vb{i}}=\pmqty{\vb{H}^{}_{\parallel}\\ \vb{H}^{}_{\perp}},$$ 
-其中$\phi=\expval{\widehat{\vb{d},\vb{e}}}$是偶极矩关于该平面的进动角，$\alpha=\expval{\widehat{\vb{n},\vb{i}}}$是辐射方向的章动角。不难看到这里有
+其中$\phi=\arccos(\vb{d}\cdot\vb{e}/\abs{\vb{d}})$是偶极矩关于该平面的进动角，$\alpha=\arccos(\vb{i}\cdot\vb{e}/\abs{\vb{i}})$是辐射方向的章动角。不难看到这里有
 $$\vb{H}^{2}_{\parallel}+\frac{\vb{H}^{2}_{\perp}}{\cos^2\alpha}=1,$$
 也就是椭圆偏振波，两半轴长比为$\cos\alpha$。特别的，若$\alpha=0$也即辐射沿$z$轴时，辐射波为圆偏振。\\
 \\
@@ -11277,8 +11275,8 @@ $$\dd\vb{P}^{}_{\vb{n}}=\frac{1}{c}\vb{\mathcal{S}}r^2\dd{r}\dd\textit{O}=\dfrac
 $$\begin{aligned}&\vb{P}^{}_{\vb{n}}=\dfrac{R^{}_0}{12\pi c^4}\int\qty(\ddt{\vb{d}}\cp\vb{n})^2\vb{n}\dd\textit{O},\quad\text{其中}\\& P^{}_x\sim\int^{2\pi}_0\cos\phi\dd\phi=0,\quad P^{}_Y\sim\int^{2\pi}_0\sin\phi\dd\phi=0,\quad P^{}_z\sim\int^{\pi}_0\sin^3\theta\cos\theta\dd\theta=0.\end{aligned}$$
 因而我们最终得到偶极辐射的动量为
 \begin{equation}\vb{P}=\vb{0}\implies\dd\vb{P}=\vb{0}.\label{23LDM}\end{equation}
-这实际上是偶极辐射对称性的体现，考虑到方向性，偶极辐射在两侧的动量损失是互为相反向量，因而总动量没有变化。\\
-\subsubsection{韧致辐射}
+这实际上是偶极辐射对称性的体现，考虑到方向性，偶极辐射在两侧的动量损失是互为相反向量，因而总动量没有变化。
+\subsubsection{韧致辐射}\label{Cvb8889****}
 \noindent 作为连续谱偶极辐射的例子，我们这里讨论粒子碰撞时的\textbf{韧致辐射 \textit{Bremsstrahlung}}，其余情形这里就不展开了，比如库伦场中的辐射$^{\cite{L41}}$。令入射粒子流密度$n^{}_0=1$，代表单位时间内有一个粒子通过截面，记瞄准距离为$\rho$，单个粒子的偶极辐射能为$\Delta\mathscr E$，则总能量以\textbf{有效辐射}记为
 \begin{equation}\varkappa=\int_0^{\infty} \Delta\mathscr E 2\pi\rho\dd\rho.\label{yyu88}\end{equation}
 此时$\vb{d}$对应散射系统关于惯性中心的偶极矩。因为入射粒子束是轴对称的，所以辐射的主要部分也来自于该轴上的偶极矩。不妨设入射轴为$x$，则为了计算单个粒子的辐射能量，还需要对$y-z$平面上的分量取方向均值，以$\expval{f}$表示。根据式(\ref{d33tt})，偶极辐射能量写为
@@ -11342,7 +11340,7 @@ $$\dd{P}^0=\frac{\dd{\mathscr E}}{c}=\frac{2e^2}{3c^4}\qty(w^2-\frac{\qty(\vb{v}
 \begin{equation}\Delta P^{\mu}=-\frac{2e^2}{3c}\int\dv[2]{x^{\nu}}{s}\dv[2]{x^{}_{\nu}}{s}\dd{x}^{\mu}.\label{xse660}\end{equation}
 对点电荷带入其四维运动方程
 \begin{equation}mc\dv[2]{x^\mu}{s}=mc\dv{u^\mu}{s}=\frac{e}{c}F^{\mu\nu}u^{}_\nu,\label{shi337}\end{equation}
-这个方程会在附录\ref{Y,<>,.,''}中用变分法具体证明，我们将加速度用电磁场张量替换，得到
+这个方程会在第\ref{Y><><)))}节中用变分法具体证明，我们将加速度用电磁场张量替换，得到
 \begin{equation}\Delta P^{\mu}=-\frac{2e^4}{3m^2c^5}\int\qty(F^{\nu\gamma}u^{}_{\gamma})\qty(F^{}_{\nu\delta}u^{\delta})\dd{x}^{\mu}.\end{equation}
 上式的时间分量是总辐射能，于是我们得到
 $$\frac{\Delta\mathscr E}{c}=-\frac{2e^4}{3m^2c^4}\int_{\mathbb R}\qty(F^{\nu\gamma}u^{}_{\gamma})\qty(F^{}_{\nu\delta}u^{\delta})\dd{t},$$
@@ -11368,7 +11366,7 @@ $$I\sim\vb{E}^2\qty(1-\dfrac{v^2}{c^2})\qty(1-\dfrac{v^2}{c^2})^{-1}\sim\vb{E}^2
 \begin{equation}\dd{\mathscr E}^{}_{\vb{n}}=\int\dd{I}^{}_{\vb{n}}\dd{t}=\frac{e^2\dd\textit{O}}{4\pi c^3}\bigints \qty{\frac{2\qty(\vb{n}\cdot\vb{w})\qty(\vb{v}\cdot\vb{w})}{c\qty(1-\dfrac{\vb{v}\cdot\vb{n}}{c})^4}+\frac{\vb{w}^2}{\qty(1-\dfrac{\vb{v}\cdot\vb{n}}{c})^3}-\frac{\qty(1-\dfrac{v^2}{c^2})\qty(\vb{n}\cdot\vb{w})^2}{\qty(1-\dfrac{\vb{v}\cdot\vb{n}}{c})^5}}\dd{t}'.\end{equation}
 可以看到，一般参考系下的角分布是非常复杂的，这是可以完全预见的。\\
 \\
-当然从式(\ref{ffi88**})不难看到，当矢量$\qty(\vb{n}-\dfrac{\vb{v}}{c})\parallel\vb{w}$时$\vb{E}=\vb{0}$，从而$I=0$。这就说明永远存在使得辐射为零的速度分布情况，记三者之间的夹角为$\chi=\expval{\widehat{\vb{n},\vb{w}}}$，$\iota=\expval{\widehat{\vb{v},\vb{w}}}$，则它们满足关系
+当然从式(\ref{ffi88**})不难看到，当矢量$\qty(\vb{n}-\dfrac{\vb{v}}{c})\parallel\vb{w}$时$\vb{E}=\vb{0}$，从而$I=0$。这就说明永远存在使得辐射为零的速度分布情况，记三者之间的夹角为$\chi=\arccos(\vb{n}\cdot\vb{w}/\abs{\vb{w}})$，$\iota=\arccos(\vb{v}\cdot\vb{w}/\qty(\abs{\vb{v}}\abs{\vb{w}}))$，则它们满足关系
 \begin{equation}\dd{I}=0\Longleftrightarrow\vb{E}=\vb{0}\Longleftrightarrow\vb{n}\cp\vb{w}=\frac{\vb{v}}{c}\cp\vb{w}\Longleftrightarrow\sin\chi=\frac{v}{c}\sin\iota.\end{equation}
 正弦函数说明这种分布是对称的，因而在任意的参考系中，$\iota$确定时必存在两个观察点的辐射恒为零，它们关于垂直于加速度$\vb{w}$的平面对称。对于极端相对论情况$v\approx c$，我们在小角度$\theta$下对分母展开
 $$1-\frac{\vb{v}\cdot\vb{n}}{c}=1-\frac{v}{c}\cos\theta\approx1-\frac{v}{c}+\frac{\theta^2}{2}\approx\frac{1}{2}\qty(1-\frac{v^2}{c^2}+\theta^2),$$
@@ -11376,11 +11374,11 @@ $$1-\frac{\vb{v}\cdot\vb{n}}{c}=1-\frac{v}{c}\cos\theta\approx1-\frac{v}{c}+\fra
 \begin{equation}2\theta\sim2\sqrt{1-\frac{v^2}{c^2}}\ll 1\label{rrr}\end{equation}
 的范围。\\
 \\
-我们最后再给出两类特殊情况下的强度分布，依旧记$\theta=\expval{\widehat{\vb{n},\vb{v}}}$：
+我们最后再给出两类特殊情况下的强度分布，依旧记$\theta=\arccos(\vb{n}\cdot\vb{v}/\abs{\vb{v}})$：
 \begin{itemize}\item 若粒子的速度平行于加速度，$\vb{v}\cp\vb{w}=\vb{0}$
 \begin{equation}\vb{H}=\frac{e}{Rc^2}\frac{\vb{w}\cp\vb{n}}{\qty(1-\dfrac{\vb{v}\cdot\vb{n}}{c})^3}\implies\dd{I}^{}_{\vb{n}}=\frac{e^2}{4\pi c^3}\frac{w^2\sin^2\theta}{\qty(1-\dfrac{v}{c}\cos\theta)^6}\dd\textit{O}.\label{naaa1}\end{equation}辐射关于$\vb{v}$和$\vb{w}$共同的方向轴对称，且在纵向上$\theta=0,\pi$变为零，在横向上$\theta=\dfrac{\pi}{2}$取到最大值。对于极端相对论情况，辐射在(\ref{rrr})区域的两侧有两个极大值，且在$\theta=0$时锐减至零。
-\item 若粒子的速度垂直于加速度，$\vb{v}\perp\vb{w}$。设两者张成平面$\Sigma$，记$\vb{n}$和$\Sigma$之间的夹角为$\phi$，则不难从立体几何算出，$\vb{n}$和$\vb{w}$之间的夹角$\chi$满足$\cos\chi=\sin\theta\cos\phi$。因此我们得到\begin{equation}\dd{I}^{}_{\vb{n}}(t)=\frac{e^2w^2}{4\pi c^3}\qty{\frac{1}{\qty(1-\dfrac{v}{c}\cos\theta)^4}-\frac{\qty(1-\dfrac{v^2}{c^2})\sin^2\theta\cos^2\phi}{\qty(1-\dfrac{v}{c}\cos\theta)^6}}(t')\dd\textit{O}.\label{naaa2}\end{equation}此时不难看到辐射只关于平面$\Sigma$对称，且在$\Sigma$上即$\phi=0$时强度为零给出角度方程$$\dd{I}=0\implies1-2\dfrac{v}{c}\cos\theta+\frac{v^2}{c^2}\cos^2\theta-\sin^2\theta+\frac{v^2}{c^2}\sin^2\theta=\qty(\cos\theta-\dfrac{v}{c})^2=0.$$因为$v>0$所以我们解得角度为$\cos\theta=\dfrac{v}{c}$。当然需要注意角元$\dd\textit{O}\sim\dd{\phi}$，因此在这种情况下的角积分要算上$\cos^2\phi\dd{\phi}$。 \end{itemize}
-式(\ref{naaa1})一般用于电场中粒子的辐射，比如直线粒子加速器，总强度这里就不计算了。下面我们重点讨论第二种情况。\\
+\item 若粒子的速度垂直于加速度，$\vb{v}\perp\vb{w}$。设两者张成平面$\Sigma$，记$\vb{n}$和$\Sigma$之间的夹角为$\phi$，则不难从立体几何算出，$\vb{n}$和$\vb{w}$之间的夹角$\chi$满足$\cos\chi=\sin\theta\cos\phi$。因此我们得到\begin{equation}\dd{I}^{}_{\vb{n}}(t)=\frac{e^2w^2}{4\pi c^3}\qty{\frac{1}{\qty(1-\dfrac{v}{c}\cos\theta)^4}-\frac{\qty(1-\dfrac{v^2}{c^2})\sin^2\theta\cos^2\phi}{\qty(1-\dfrac{v}{c}\cos\theta)^6}}(t')\dd\textit{O}.\label{naaa2}\end{equation}此时不难看到辐射只关于平面$\Sigma$对称，且在$\Sigma$上即$\phi=0$时强度为零给出角度方程$$\dd{I}=0\implies1-2\dfrac{v}{c}\cos\theta+\frac{v^2}{c^2}\cos^2\theta-\sin^2\theta+\frac{v^2}{c^2}\sin^2\theta=\qty(\cos\theta-\dfrac{v}{c})^2=0.$$因为$v>0$所以我们解得角度为$\cos\theta=\dfrac{v}{c}$。当然需要注意角元$\dd\textit{O}\sim\dd{\phi}$，因此在这种情况下的角积分要算上$\cos^2\phi\dd{\phi}$。\end{itemize}
+式(\ref{naaa1})一般用于电场中粒子的辐射，比如直线粒子加速器，总强度这里就不计算了。下面我们重点讨论第二种情况。
 \subsubsection{同步辐射}
 我们知道在纯磁场$\vb{H}$中，电荷做速度大小为$v$的匀速圆周运动，其运轨迹半径$r$和频率$\omega^{}_H$为
 \begin{equation}r=\frac{mcv}{eH\sqrt{1-\dfrac{v^2}{c^2}}},\quad \omega^{}_H=\frac{v}{r}=\frac{eH}{mc}\sqrt{1-\dfrac{v^2}{c^2}},\quad T=\frac{2\pi}{\omega^{}_H}.\end{equation}
@@ -11392,7 +11390,7 @@ $$1-\frac{\vb{v}\cdot\vb{n}}{c}=1-\frac{v}{c}\cos\theta\approx1-\frac{v}{c}+\fra
 $$I=\frac{2e^4H^2}{3m^4c^3}\qty(\frac{\mathscr E}{mc^2})^2\sim\mathscr E^2,$$
 这一点前文中已经提及。对于辐射的角分布，由于圆周运动$\vb{v}\perp\vb{w}$，所以我们可以直接用式(\ref{naaa2})。当然鉴于运动的周期性，我们一般选择计算时间均值。\\
 \\
-不妨设磁场沿$z$轴，轨道在$xy$平面内，记辐射方向和$y$轴之间的夹角$\eta=\expval{\widehat{\vb{n},\vb{e}}^{}_y}$，进动角$\zeta=\omega^{}_Ht$，则从立体几何不难算出$\cos\theta=\cos\eta\cos\zeta$。利用运动方程将三维加速度表述为
+不妨设磁场沿$z$轴，轨道在$xy$平面内，记辐射方向和$y$轴之间的夹角$\eta=\arccos(\vb{n}\cdot\vb{e}^{}_y)$，进动角$\zeta=\omega^{}_Ht$，则从立体几何不难算出$\cos\theta=\cos\eta\cos\zeta$。利用运动方程将三维加速度表述为
 $$\vb{w}=\frac{e}{mc}\sqrt{1-\frac{v^2}{c^2}}\vb{v}\cp\vb{H},$$
 并将时间积分换为$\omega^{}_H\dd{t}=\dd\zeta$，我们从式(\ref{naaa2})得到如下表达式
 \begin{equation}\expval{\dd{I}^{}_{\vb{n}}}_t=\frac{1}{T}\int_0^TI^{}_{\vb{n}}\dd{t}=\frac{e^4H^2v^2\dd\textit{O}}{8\pi^2m^2c^5}\qty(1-\dfrac{v^2}{c^2})\bigints_0^{2\pi}\frac{\qty(1-\dfrac{v^2}{c^2})\sin^2\eta+\qty(\dfrac{v}{c}-\cos\eta\cos\zeta)^2}{\qty(1-\dfrac{v}{c}\cos\eta\cos\zeta)^5}\dd\zeta.\end{equation}
@@ -11430,7 +11428,7 @@ $$\abs{\vb{H}^{}_n}^2=k^2\abs{\vb{n}\cp\vb{A}^{}_n}^2=k^2A^{2}_{xn}+k^2A^{2}_{yn
 \begin{equation}\dd{t}^{}_{\text{obs}}=\qty(1-\frac{1}{c}v^{}_{\parallel}\cos\theta)\dd{t}'.\end{equation}
 在极端相对论情况下，在速度方向附近分辐射给出$\theta\approx\chi$，因此
 \begin{equation}\frac{\dd{t}^{}_{\text{obs}}}{\dd{t}'}=\qty(1-\frac{1}{c}v^{}_{\parallel}\cos\theta)^{-1}\approx\frac{1}{\sin^2\chi}>1.\end{equation}
-也就是说辐射传播的时间间隔只和纵向运动有关，且观测时间大于运动时间，这是典型的\textsl{Doppler}效应。由此我们看到“同步辐射”术语的来源：如果没有纵向运动则时间的流逝一致，即时间同步。若存在纵向运动，则必然出现\textsl{Doppler}效应，依然同步时间则会看到辐射红移。\\
+也就是说辐射传播的时间间隔只和纵向运动有关，且观测时间大于运动时间，这是典型的\textsl{Doppler}效应。由此我们看到“同步辐射”术语的来源：如果没有纵向运动则时间的流逝一致，即时间同步。若存在纵向运动，则必然出现\textsl{Doppler}效应，依然同步时间则会看到辐射红移。
 \subsubsection{远场多极矩辐射}
 \noindent 最后我们来讨论远场辐射势(\ref{retdd44})的高阶\underline{低速近似}，上文中所讨论的偶极辐射是基于式(\ref{qsx5})的零阶项，我们按照相同的近似逻辑展开。依旧采用式(\ref{qsx4})的近似，我们将矢势(\ref{retdd44})写为
 $$\vb{A}(\vb{r},t)=\frac{1}{cR^{}_0}\int\vb{j}\qty(t'+\vb{r}\cdot\frac{\vb{n}}{c})\dd{V},\quad v\ll c.$$
@@ -11550,7 +11548,7 @@ $$\vb{d}^{}_{\omega}e^{-i\omega t'}=\vb{d}^{}_{\omega}\exp{-i\omega\qty(t-\frac{
 \begin{equation}\vb{E}^{}_{\omega}=\frac{1}{R^3_0}\qty{3\vb{n}\qty(\vb{n}\cdot\vb{d}^{}_{\omega})-\vb{d}^{}_{\omega}}.\end{equation}
 可以看到，这类似式(\ref{surssa})的诱导磁场，事实上这就是电偶极矩的诱导电场公式。
 \subsection{电磁辐射阻尼简介}\label{Fyyv.'}
-\noindent 前面我们介绍了低速电荷云系统的二阶修正\textit{Lagrangian}(\ref{hi2gdd})，现在我们考虑更高阶的修正。首先需要指出的是，在上文中我们看到，偶极辐射的能量(\ref{danctt})量级为$\sim c^{-3}$，而由于\textit{Lagrangian}对四维势能本身带$\sim c^{-1}$，因此二阶修正已经可以描述绝大部分的辐射体系。由此我们推测，高阶修正应该能给出体系的内蕴现象，并且这些现象和对外辐射相关。\\
+\noindent 前面我们介绍了低速电荷云系统的二阶修正\textit{Lagrangian}(\ref{hi2gdd})，现在我们考虑更高阶的修正。首先需要指出的是，在上文中我们看到，偶极辐射的能量(\ref{danctt})量级为$\sim c^{-3}$，而由于\textit{Lagrangian}对四维势能本身带$\sim c^{-1}$，因此二阶修正已经可以描述绝大部分的辐射体系。由此我们推测，高阶修正应该能给出体系的内蕴现象，并且这些现象和对外辐射相关。
 \subsubsection{辐射系统的三级修正和Abraham-Lorentz力}
 \noindent 类似式(\ref{efeg44})，我们对推迟标势展开到三阶$\sim c^{-3}$，当然同样的，对于矢势我们只需要展开到二阶即可。具体的过程这里就不展示了，直接给出相应的结果
 $$\begin{aligned}&\varphi^{(3)}=-\frac{1}{6c^3}\pdv[3]{t}\int R^2\rho \dd{V},\\&\vb{A}^{(2)}=-\frac{1}{c^2}\pdv{t}\int\vb{j}\dd{V}.\end{aligned}$$
@@ -11600,7 +11598,7 @@ $$\ddt{\vb{v}}=\frac{e}{m}\dt{\vb{E}}+\frac{e}{mc}\dt{\vb{v}}\cp\vb{H},$$
 \begin{equation}\frac{2e^3\omega}{3mc^3}\ll e\implies\lambda\gg\frac{e^2}{mc^2}=r{}_e,\quad\lambda\sim\frac{c}{\omega}.\end{equation}
 可见阻尼力只适用于辐射波长远大于经典半径$r{}_e$的电荷上。可以看到，与$r{}_e$同量级的距离会导致电磁场的内在矛盾。类似的，我们将第二项也和电场力$e\vb{E}$对比，给出
 \begin{equation}\frac{2e^4}{3m^2c^4}H\ll e\implies H\ll\frac{m^2c^4}{e^3}\text{或}\frac{c}{\omega^{}_H}\gg r^{}_e\label{zhajiii}\end{equation}
-因此扰动只适用于弱场情况，这和\textsl{Landau}理论的结论是类似的。\\
+因此扰动只适用于弱场情况，这和\textsl{Landau}理论的结论是类似的。
 \subsubsection{四维辐射阻尼力}
 \noindent 在详细分析了三维\textsl{AL}力后，我们来考察其四维协变形式。后续的推导内容和第\ref{Fyyv.'3}节是十分类似的，这里我们介绍一下计算思路。\\
 \\
@@ -11649,6 +11647,7 @@ $$\frac{1}{\mathscr E^{}_{cr}}=\int_{\mathbb R}k(x)\dd{x},$$
 读者可自行计算与此相应的，双电荷接触所需的时间，这里不再过多介绍。\\
 \\
 关于极端相对论粒子的进一步分析这里就不给出了，具体可以参考\cite{L41}的\S76。这里我们只强调一下，条件(\ref{;da;ir23u})是外场下极端相对论存在的充要条件，并且此时阻尼力做的功和粒子总能量处于一个量级。
+
 \subsection{电磁波的散射}\label{X*//00261.==}
 \noindent 前面我们系统性的介绍了电磁波的产生机制，以及各类衍生效应。但我们也知道，电磁波作为外场会诱导电荷运动，对于单电荷其在单色波中的运动方程由式(\ref{d2Dfb})控制。从其形式不难看出这是变速运动，因而根据前文所述，必然会产生电磁辐射。而且辐射波总体来讲是部分偏振的，因此作为外场的电磁波和由此辐射出的电磁波之间并不相同。\\
 \\
@@ -11666,7 +11665,7 @@ $$\vb{E}=\vb{E}^{}_0\cos(\vb{k}\cdot\vb{r}-\omega t+\alpha).$$
 \begin{equation}\ddt{\vb{d}}=e\ddt{\vb{r}}=\frac{e^2}{m}\vb{E}.\end{equation}
 由于现在是低速近似，因此我们可以使用远场偶极辐射描述散射波，从而强度由式(\ref{d33tt})确定为
 \begin{equation}\dd I^{}_{\vb{n}}=\frac{e^4}{4\pi m^2c^3}\qty(\vb{E}\cp\vb{n}')^2\dd\textit{O}=\frac{e^4}{4\pi m^2c^3}\sin^2\theta\abs{\vb{E}}^2\dd\textit{O}.\label{feoon}\end{equation}
-其中$\vb{n}'$是散射波的单位方向，$\theta=\expval{\widehat{\vb{E},\vb{n}'}}$。不难注意到，由于辐射通过运动方程和入射波直接相关，因而两者的频率必然相同。入射波的能流密度只考虑电场即可，于是我们得到
+其中$\vb{n}'$是散射波的单位方向，$\theta=\arccos(\vb{E}\cdot\vb{n}'/\abs{\vb{E}})$。不难注意到，由于辐射通过运动方程和入射波直接相关，因而两者的频率必然相同。入射波的能流密度只考虑电场即可，于是我们得到
 $$\abs{\vb{\mathcal S}}=\frac{c}{4\pi}\abs{\vb{E}}^2.$$
 最终单位有效截面给出
 \begin{equation}\dd\sigma^{}_{\vb{n}}=\frac{e^4}{4\pi m^2c^3}\frac{4\pi}{c}\frac{\sin^2\theta\abs{\vb{E}}^2\dd\textit{O}}{\abs{\vb{E}}^2}=\qty(\frac{e^2}{mc^2})^2\sin^2\theta\dd\textit{O}.\label{quns2s}\end{equation}
@@ -11675,7 +11674,7 @@ $$\abs{\vb{\mathcal S}}=\frac{c}{4\pi}\abs{\vb{E}}^2.$$
 这个结论称为\textbf{\textit{Thomson}公式}，其可以通过\textsl{Compton}散射公式取低速近似得到，这里不做说明。\\
 \\
 这里我们简单的列举几个例子，并介绍运动电荷的散射模型。
-\begin{enumerate}\item 对于椭圆波，我们将其电场在原点处写为$\vb{E}=\vb{A}\cos(\omega t-\alpha)+\vb{B}\sin(\omega t-\alpha)$，其中$\vb{A}$和$\vb{B}$是相互垂直的常矢量，分别确定两个线偏振。替换式(\ref{feoon})中的电场矢量，我们立马得到有效截面\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\frac{\qty(\vb{A}\cp\vb{n}')^2+\qty(\vb{B}\cp\vb{n}')^2}{A^2B^2}\dd\textit{O}.\end{equation}如果我们记$\theta=\expval{\widehat{\vb{A},\vb{n}'}}$，则$\vb{B}$和$\vb{n}'$的夹角$\theta'$确定为$\cos\theta'=\sin\theta\sin\alpha$，其中$\alpha=\expval{\widehat{\vb{n},\vb{n}'}}$是入射波和散射波之间的夹角。此时角元为$$\dd\textit{O}=\sin\alpha\dd\alpha\dd\theta,\quad0\leq\alpha\leq\pi,\quad0\leq\theta\leq2\pi,$$总有效截面就在上述取值限下取积分给出，请读者自行计算。\item 现在考虑运动电荷的散射。由于此时散射源在运动，所以必然存在\textbf{\textsl{Doppler}效应}，简而言之就是观察者和源本身的频率不同，可以通过四维波矢的\textsl{Lorentz}变化得到。此处我们所考察的是入射波和散射波的频率差，因而类似的写出不变量\begin{equation}k^{\text{入}}_{\mu}u^{\mu}=const=k^{\text{散}}_{\mu}u^{\mu},\end{equation}其中左侧是入射波量，右侧是散射波量，当然电荷的四维速度是相同的。设电荷三维速度为$\vb{v}$，相应的频率为$\omega^{}_{\text{入}},\omega^{}_{\text{散}}$，相应波矢和速度的夹角为$\theta^{}_{\text{入}},\theta^{}_{\text{散}}$，则不变量的具体展开式为\begin{equation}\omega^{}_{\text{入}}\qty(1-\frac{v}{c}\cos(\theta^{}_{\text{入}}))=\omega^{}_{\text{散}}\qty(1-\frac{v}{c}\cos(\theta^{}_{\text{散}})).\label{1wqd23oo}\end{equation}可见若入射波垂直于粒子运动方向打入，则散射波的频率变化完全依赖于散射方向，这是加速度和速度平行的结果，也就是散射波的\textsl{Doppler}效应。关于散射导致的频率变换，我们后续在电荷云中做详细探讨。\item 承接上述运动粒子模型，我们来考察入射线偏振波。假设入射方向和粒子的运动方向吻合，则电磁场也即加速度与速度垂直，散射强度由式(\ref{naaa2})控制，当然三维加速度需要用入射波外场给出\begin{equation}\vb{w}=\dt{\vb{v}}=\frac{e}{m}\sqrt{1-\frac{v^2}{c^2}}\qty{\vb{E}+\frac{\vb{v}}{c}\cp\vb{H}-\frac{\vb{v}}{c^2}\vb{v}\cdot\vb{E}}.\end{equation}这个公式的推导留给读者自行证明。入射波的能流密度不难得到，就是\textsl{Poynting}矢量的模，于是有效截面给出\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\frac{\qty(1-\dfrac{v^2}{c^2})\qty(1-\dfrac{v}{c})^2}{\qty(1-\dfrac{v}{c}\cos\theta)^6}\qty{\qty(1-\dfrac{v}{c}\sin\theta\cos\phi)^2-\qty(1-\dfrac{v^2}{c^2})\cos^2\theta}(t')\dd\textit{O}.\end{equation}此处相应的角度参数含义均不变，当然仍需注意等式右侧是取$(t')$瞬时散射时刻的值。\item 现在我们来考察微振动电荷对线偏振波的散射，暂时不考虑辐射的反作用力。记电荷的固有频率为$\omega^{}_0$，入射波频率为$\omega$，则在弱场的前提下，电荷谐振子只受电场力，其运动方程写出\begin{equation}\dv[2]{\vb{r}}{t}+\omega^2_0\vb{r}=\frac{e}{m}\vb{E}^{}_0\cos(\omega t).\label{li11}\end{equation}这是典型的单参强迫振动方程，其解为\begin{equation}\vb{r}=\frac{e}{m}\frac{\vb{E}^{}_0\cos(\omega t)}{\omega^2_0-\omega^2}.\end{equation}计算出相应的散射场$\ddt{\vb{d}}=e\ddt{\vb{r}}$，我们得到有效截面为\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\frac{\omega^4}{(\omega^2_0-\omega^2)^2}\sin^2\theta\dd\textit{O}=\qty(\frac{e^2}{mc^2})^2\qty(\dfrac{\omega^2_0}{\omega^2}-1)^{-2}\sin^2\theta\dd\textit{O},\quad \theta=\expval{\widehat{\vb{E},\vb{n}'}}.\label{li1231}\end{equation}我们还可以类似的得到电偶极转子的散射，假设转子的频率$\Omega^{}_0\ll\omega$，同时令其是各项同性的，则在对$\ddt{\vb{d}}^2$方向平均后我们直接给出总截面\begin{equation}\sigma=\frac{16\pi d^4}{9c^4J^2}.\end{equation}其中$J$转子的转动惯量，其具体的力学细节请参考\cite{L6f}。\end{enumerate}
+\begin{enumerate}\item 对于椭圆波，我们将其电场在原点处写为$\vb{E}=\vb{A}\cos(\omega t-\alpha)+\vb{B}\sin(\omega t-\alpha)$，其中$\vb{A}$和$\vb{B}$是相互垂直的常矢量，分别确定两个线偏振。替换式(\ref{feoon})中的电场矢量，我们立马得到有效截面\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\frac{\qty(\vb{A}\cp\vb{n}')^2+\qty(\vb{B}\cp\vb{n}')^2}{A^2B^2}\dd\textit{O}.\end{equation}如果我们记$\theta=\arccos(\vb{A}\cdot\vb{n}'/\abs{\vb{A}})$，则$\vb{B}$和$\vb{n}'$的夹角$\theta'$由立体几何确定为$\cos\theta'=\sin\theta\sin\alpha$，其中$\alpha=\arccos(\vb{n}\cdot\vb{n}')$是入射波和散射波之间的夹角。此时角元为$$\dd\textit{O}=\sin\alpha\dd\alpha\dd\theta,\quad0\leq\alpha\leq\pi,\quad0\leq\theta\leq2\pi,$$总有效截面就在上述取值限下取积分给出，请读者自行计算。\item 现在考虑运动电荷的散射。由于此时散射源在运动，所以必然存在\textbf{\textsl{Doppler}效应}，简而言之就是观察者和源本身的频率不同，可以通过四维波矢的\textsl{Lorentz}变化得到。此处我们所考察的是入射波和散射波的频率差，因而类似的写出不变量\begin{equation}k^{\text{入}}_{\mu}u^{\mu}=const=k^{\text{散}}_{\mu}u^{\mu},\end{equation}其中左侧是入射波量，右侧是散射波量，当然电荷的四维速度是相同的。设电荷三维速度为$\vb{v}$，相应的频率为$\omega^{}_{\text{入}},\omega^{}_{\text{散}}$，相应波矢和速度的夹角为$\theta^{}_{\text{入}},\theta^{}_{\text{散}}$，则不变量的具体展开式为\begin{equation}\omega^{}_{\text{入}}\qty(1-\frac{v}{c}\cos(\theta^{}_{\text{入}}))=\omega^{}_{\text{散}}\qty(1-\frac{v}{c}\cos(\theta^{}_{\text{散}})).\label{1wqd23oo}\end{equation}可见若入射波垂直于粒子运动方向打入，则散射波的频率变化完全依赖于散射方向，这是加速度和速度平行的结果，也就是散射波的\textsl{Doppler}效应。关于散射导致的频率变换，我们后续在电荷云中做详细探讨。\item 承接上述运动粒子模型，我们来考察入射线偏振波。假设入射方向和粒子的运动方向吻合，则电磁场也即加速度与速度垂直，散射强度由式(\ref{naaa2})控制，当然三维加速度需要用入射波外场给出\begin{equation}\vb{w}=\dt{\vb{v}}=\frac{e}{m}\sqrt{1-\frac{v^2}{c^2}}\qty{\vb{E}+\frac{\vb{v}}{c}\cp\vb{H}-\frac{\vb{v}}{c^2}\vb{v}\cdot\vb{E}}.\end{equation}这个公式的推导留给读者自行证明。入射波的能流密度不难得到，就是\textsl{Poynting}矢量的模，于是有效截面给出\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\frac{\qty(1-\dfrac{v^2}{c^2})\qty(1-\dfrac{v}{c})^2}{\qty(1-\dfrac{v}{c}\cos\theta)^6}\qty{\qty(1-\dfrac{v}{c}\sin\theta\cos\phi)^2-\qty(1-\dfrac{v^2}{c^2})\cos^2\theta}(t')\dd\textit{O}.\end{equation}此处相应的角度参数含义均不变，当然仍需注意等式右侧是取$(t')$瞬时散射时刻的值。\item 现在我们来考察微振动电荷对线偏振波的散射，暂时不考虑辐射的反作用力。记电荷的固有频率为$\omega^{}_0$，入射波频率为$\omega$，则在弱场的前提下，电荷谐振子只受电场力，其运动方程写出\begin{equation}\dv[2]{\vb{r}}{t}+\omega^2_0\vb{r}=\frac{e}{m}\vb{E}^{}_0\cos(\omega t).\label{li11}\end{equation}这是典型的单参强迫振动方程，其解为\begin{equation}\vb{r}=\frac{e}{m}\frac{\vb{E}^{}_0\cos(\omega t)}{\omega^2_0-\omega^2}.\end{equation}计算出相应的散射场$\ddt{\vb{d}}=e\ddt{\vb{r}}$，我们得到有效截面为\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\frac{\omega^4\sin^2\theta\dd\textit{O}}{(\omega^2_0-\omega^2)^2}=\qty(\frac{e^2}{mc^2})^2\qty(\dfrac{\omega^2_0}{\omega^2}-1)^{-2}\sin^2\theta\dd\textit{O},\quad\theta=\arccos(\frac{\vb{E}\cdot\vb{n}'}{\abs{\vb{E}}}).\label{li1231}\end{equation}我们还可以类似的得到电偶极转子的散射，假设转子的频率$\Omega^{}_0\ll\omega$，同时令其是各项同性的，则在对$\ddt{\vb{d}}^2$方向平均后我们直接给出总截面\begin{equation}\sigma=\frac{16\pi d^4}{9c^4J^2}.\end{equation}其中$J$转子的转动惯量，其具体的力学细节请参考\cite{L6f}。\end{enumerate}
 这里我们没有分析运动电荷对椭圆波的散射，请读者自行给出，只需要做类似第一种模型的分解即可。\\
 \\
 现在来讨论散射导致的反作用力。由于我们现在考察对象是电荷，所以最简单的方法便是计算单位时间的动量损失。根据正则能动密度张量定义(\ref{8h7g7u})及其相应的守恒律，入射波在电荷上的动量损失为
@@ -11712,11 +11711,11 @@ $$k^{}_ik^i=k^2=-C^{ij}k^{}_jk^{}_i\implies C^{}_{ij}=-\frac{k^{}_ik^{}_j}{k^2}.
 \begin{equation}\expval{e^ie^j}=\frac{1}{2}\qty(\delta^{ij}-\frac{k^ik^j}{k^2}),\end{equation}
 从而正弦的均值为
 \begin{equation}\expval{\sin^2\theta}=1-\frac{1}{2}n'_in'_j\qty(\delta^{ij}-\frac{k^ik^j}{k^2})=\frac{1}{2}\qty(1+\frac{\qty(\vb{n}'\cdot\vb{k})^2}{k^2}).\end{equation}
-记入射波和散射波方向间夹角为$\Theta=\expval{\widehat{\vb{k},\vb{n}'}}$，称为\textbf{散射角}，则我们最终得到自然光的单位有效截面为
+记入射波和散射波方向间夹角为$\Theta=\arccos(\vb{k}\cdot\vb{n}'/k)$，称为\textbf{散射角}，则我们最终得到自然光的单位有效截面为
 \begin{equation}\dd\sigma^{}_{\vb{n}}=\frac{1}{2}\qty(\frac{e^2}{mc^2})^2\qty(1+\cos^2\Theta)\dd\textit{O},\quad \dd\textit{O}=\sin\Theta\dd\Theta\dd\phi.\end{equation}
 总截面积分给出
 \begin{equation}\sigma=\frac{8\pi}{3}\qty(\frac{e^2}{mc^2})^2.\end{equation}
-我们发现最终结果和式(\ref{qunss})给出的偏振波的散射性质一致，这是一个意料之中的结论。事实上有效截面和电阻一样是内禀性质，和外界因素无关，只是若无外场参与则该参数不会有所体现。类似电阻，\textsl{Thomson}公式同样也是以内禀参数给出的，比如改变电荷量便能改变散射分布。关于运动电荷的散射的计算是类似的，这里不再重复。\\
+我们发现最终结果和式(\ref{qunss})给出的偏振波的散射性质一致，这是一个意料之中的结论。事实上有效截面和电阻一样是内禀性质，和外界因素无关，只是若无外场参与则该参数不会有所体现。类似电阻，\textsl{Thomson}公式同样也是以内禀参数给出的，比如改变电荷量便能改变散射分布。关于运动电荷的散射的计算是类似的，这里不再重复。
 \subsubsection{电荷云的散射}
 \noindent 前文中我们所讨论的均是单电荷的散射，现在我们来考察电荷云对电磁波的散射。两者之间最大的区别在于，电荷系统中不存在一个参考系，使得所有电荷在其中都静止，这一点在计算四维辐射动量时已经提过。由此导致的结果就是，电荷体系的散射给出一个频谱，具体的频率分布由式(\ref{1wqd23oo})控制。一般的我们称静止电荷的散射为\textbf{相干散射}，其不改变频率，反之为\textbf{非相干散射}，其对应运动电荷的散射。非相干散射导致的频率差可认为是\textbf{系统内频率}，由各电荷自行控制，我们记为$\omega^{}_{in}$。\\
 \\
@@ -11761,7 +11760,7 @@ $$\vb{A}^{}_{\text{散}}=-\frac{1}{icR^{}_0\omega}\frac{e^2}{m}\vb{E}^{}_0\exp{-
 从而偶极散射波的磁场由波区公式(\ref{boqqu})给出
 \begin{equation}\vb{H}^{}_{\text{散}}=\frac{\vb{E}^{}_0\cp\vb{n}^{}_{\text{散}}}{c^2R^{}_0}\exp{-i\omega\qty(t-\frac{R^{}_0}{c})}\sum_a\exp(-i\vb{q}\cdot\vb{r}^{}_a).\end{equation}
 散射波的强度由式(\ref{qiangdd})确定，而入射波的能流密度为$\abs{\vb{\mathcal S}}=c\dfrac{E^2_0}{4\pi}$，于是带入定义式(\ref{ddi..98})我们得到单位有效截面为
-\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\expval{\abs{\sum_a\exp(-i\vb{q}\cdot\vb{r}^{}_a)}^2}_t\sin^2\theta\dd\textit{O},\quad\theta=\expval{\widehat{\vb{E}^{}_0,\vb{n}}^{}_{\text{散}}}.\label{genasdfj}\end{equation}
+\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{e^2}{mc^2})^2\expval{\abs{\sum_a\exp(-i\vb{q}\cdot\vb{r}^{}_a)}^2}_t\sin^2\theta\dd\textit{O},\quad\theta=\arccos(\frac{\vb{E}^{}_0\cdot\vb{n}^{}_{\text{散}}}{\abs{\vb{E}^{}_0}}).\label{genasdfj}\end{equation}
 虽然高频极限给出波长范围$\lambda\ll\dfrac{ac}{v}$，但其并没有指明和内禀尺度$a$的关系，因而有两种可能性，下面我们分别讨论相应的极限，原子序数仍为$Z$。
 \begin{itemize}\item $\lambda\gg a$：由于波矢$q\propto\dfrac{1}{\lambda}$，$\vb{r}$作为电子矢径自然有$r\sim a$，因此$\vb{q}\cdot\vb{r}\ll 1$。不妨取$$\exp(-i\vb{q}\cdot\vb{r}^{}_a)=1\implies\sum_{a=1}^Z\exp(-i\vb{q}\cdot\vb{r}^{}_a)=Z,$$于是式(\ref{genasdfj})化为\begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{Ze^2}{mc^2})^2\sin^2\theta\dd\textit{O}\propto Z^2\quad(\lambda\gg a),\label{af33.adf}\end{equation}也就是散射性质和原子序数的平方成正比。\item $\lambda\ll a$：此时相位项不能消去，因为$\vb{q}\cdot\vb{r}\gg 1$。但由于$r(t)\sim a\cos(\omega t)$，且$\omega=\infty$，所以平方项中类似的有$$\exp{-i\vb{q}\cdot(\vb{r}^{}_2-\vb{r}^{}_1)}\sim \exp(-i\frac{a}{\lambda}\omega^2 t),\quad \vb{r}^{}_2\neq\vb{r}^{}_1$$的项，其时均为零$\expval{\exp{-i\vb{q}\cdot\Delta\vb{r}}}_t\equiv0$，因为相位振荡过快。因此相位的时均最终给出$$\expval{\abs{\sum_a\exp(-i\vb{q}\cdot\vb{r}^{}_a)}^2}_t=\expval{\abs{\sum_{a=1}^Z\exp(-2i\vb{q}\cdot\vb{0}^{}_a)}}_t=Z,$$而式(\ref{genasdfj})化为\begin{equation}\dd\sigma^{}_{\vb{n}}=Z\qty(\frac{e^2}{mc^2})^2\sin^2\theta\dd\textit{O}\propto Z\quad(\lambda\ll a).\end{equation}也就是散射性质和原子序数成正比。需要注意，小波长只适用于大散射角的情形，因为小散射角从式(\ref{dwwoll})可以得到$$q=2\frac{\omega}{c}\frac{\Theta}{2}\sim\frac{\Theta}{\lambda}\sim\frac{1}{a}\implies\vb{q}\cdot\vb{r}\sim1,$$这不符合我们的极限前提。\end{itemize}
 上述结论在晶体学中亦有体现，同时也是散射理论的重要应用之一。\\
@@ -12201,8 +12200,8 @@ $$\mu=\frac{\mu^{}_p+\mu'_p}{2}=\frac{\hbar g^{(e)}_m}{2}+\mu'_p.$$
 需要说明的是，微观层面特别是量子层面的碰撞，和宏观碰撞是截然不同的，因为量子体系是基于概率而言的。所以我们不能讨论粒子在碰撞过程中的演化，而是讨论碰撞前后所处的量子态的概率。一般而言碰撞并不需要粒子之间有直接的接触，它只需要粒子间有势能和耦合即可，一个典型的例子是第\ref{RF08**))12}节的\textsl{vdW}气体，其粒子间碰撞的势能由\textsl{LJ}势(\ref{JLJKHB///})确定，在气体分子互相靠近的过程中相互斥力是指数增加的，在大量分子比如若干$mol$分子的宏观统计下就体现为物体的直接接触碰撞。 \\
 \\
 在碰撞过程中，最常见的一类结果是散射，其基本特性是碰撞后粒子的运动方向是各向同性的，在后文中我们默认碰撞专指散射过程。因为微观粒子具有波粒二象性，因此粒子的散射也可以理解为波的散射，其基本的物理学模型在第\ref{X*//00261.==}节的电磁波散射中已有描述，我们的主要工作就是将波的散射理论改造为粒子的散射理论，从而将相对论性场也纳入到此体系中。下面依旧取自然单位制$\hbar=1$。
-\subsubsection{非相对论性弹性散射}
-\noindent 我们先来研究最简单的散射：非相对论性\textbf{弹性散射 \textit{Elastic Scattering}}。弹性碰撞中指的是粒子在碰撞过程中不改变系统的内部状态，在宏观力学中体现为能量守恒，在微观系统中还应要求碰撞粒子的状态不变。方便起见我们只在质心系中讨论$^{\cite{L1} \S123}$，记粒子云的约化质量为$m$。\\
+\subsubsection{非相对论性弹性散射}\label{Fneb8768//}
+\noindent 我们先来研究最简单的散射：非相对论性\textbf{弹性散射 \textit{Elastic Scattering}}。弹性碰撞指的是粒子在碰撞过程中不改变系统的内部状态，在宏观力学中体现为能量守恒，在微观系统中还应要求\emph{碰撞粒子的内态不变}。方便起见我们只在质心系中讨论$^{\cite{L1} \S123}$，记粒子云的约化质量为$m$。\\
 \\
 不失一般性的，我们从单个粒子的散射入手。根据一般的散射模型，粒子在碰撞前，指无穷远处是自由的，不存在任何的相互作用。因此作为散射的边界条件，粒子在无穷远处由自由波描述，运动方程为自由定态\textsl{Schrödinger}方程。令入射粒子为沿$x$轴传播的平面波，固定能量$E>0$
 \begin{equation}\psi(t=-\infty)=\psi^{}_0(x)=\exp(ikx),\quad \hat{\mathcal H}^{}_0\psi^{}_0=-\frac{1}{2m}\dv[2]{\psi^{}_0}{x}=E\psi^{}_0,\quad k=\sqrt{2mE}.\end{equation}
@@ -12215,9 +12214,9 @@ $$\psi(\vb{r})=\psi^{}_0(x)+\int G(\vb{r}-\vb{u})U(\abs{\vb{u}})\psi(\vb{u})\dd 
 我们所关心的是散射的远场近似，定义(\ref{Cfafetg})这里写作$\abs{\vb{r}}\geq\abs{\vb{u}}$，于是对分母近似为$\abs{\vb{r}}=r$，在指数内使用近似(\ref{yaccj})得到
 \begin{equation}\psi(\vb{r})=\exp(ikx)-\frac{m}{2\pi}\frac{\exp(ik^{}_sr)}{r}\int\exp(-ik^{}_s\vb{n}\cdot\vb{u})U(\abs{\vb{u}})\psi(\vb{u})\dd V^{}_u=\psi^{}_0(\vb{r})+\psi^{}_s(\vb{r}),\quad\vb{r}=r\vb{n}.\label{Gac7865}\end{equation}
 现在我们定义散射角$\theta=\arccos(\vb{n}\cdot\vb{u}/\abs{\vb{u}})$，则积分结果必然为$\theta$的实函数，定义为\textbf{散射振幅}
-\begin{equation}\mathcal A(\theta)=-\frac{m}{2\pi}\int\exp(-ik^{}_s\abs{\vb{u}}\cos(\theta))U(\abs{\vb{u}})\psi(\vb{u})\dd V^{}_u\in\mathbb C,\end{equation}
+\begin{equation}\mathcal A(\theta)=-\frac{m}{2\pi}\int\exp(-ik^{}_s\abs{\vb{u}}\cos(\theta))U(\abs{\vb{u}})\psi(\vb{u})\dd V^{}_u\in\mathbb C,\label{B95///5}\end{equation}
 从而单粒子远场散射波函数为
-\begin{equation}\psi(r,\theta,\phi)=\exp(ikx)+\mathcal A(\theta)\frac{\exp(ik^{}_sr)}{r},\quad r\to\infty.\end{equation}
+\begin{equation}\psi(r,\theta,\phi)=\exp(ikx)+\mathcal A(\theta)\frac{\exp(ik^{}_sr)}{r},\quad r\to\infty.\label{B--*65}\end{equation}
 不难看到\textsl{LS}形式的第二项确定了一个球面散射波，这和远场辐射(\ref{retdd44})是一样的，但此时波函数并不是归一化的，不难看到
 $$\abs{\psi}^2\approx\abs{\exp(ikx)}^2+\abs{\mathcal A(\theta)\frac{\exp(ik^{}_sr)}{r}}^2=1+\mathcal A^2(\theta)/r^2,$$
 当然在远处渐进归一。散射的一个特征量是有效截面，其由式(\ref{ddi..98})确定，在量子层面能流密度$\vb{\mathcal S}$应理解为概率流密度(\ref{miduliu})，写作
@@ -12228,17 +12227,17 @@ $$j^{}_0(x)=\dfrac{i}{2m}\qty(\psi^{}_0\dv{\psi^{*}_0}{x}-\psi^{*}_0\dv{\psi^{}_
 $$j^s_r(r)=\dfrac{i}{2m}\qty(\psi^{}_s\pdv{\psi^{*}_s}{r}-\psi^{*}_s\pdv{\psi^{}_s}{r})=\dfrac{k^{}_s(=k)}{m}\frac{\abs{\mathcal A(\theta)}^2}{r^2},$$
 从而我们得到单位有效截面为
 \begin{equation}\dd\sigma^{}_{\vb{n}}=\frac{\dd I^s_{\vb{n}}}{j^{}_0}=\frac{1}{k/m}\dfrac{k}{m}\dfrac{\abs{\mathcal A(\theta)}^2}{r^2}r^2\dd\mathcal O=\abs{\mathcal A(\theta)}^2\dd\mathcal O=2\pi\abs{\mathcal A(\theta)}^2\sin(\theta)\dd\theta.\label{WzctaUV}\end{equation}
-最后一步是因为，各向同性使得截面和进动角$\varphi$无关，因为将其积分了给出$2\pi$。对于总有效截面，我们给出
+最后一步是因为，各向同性使得截面和进动角$\varphi$无关，对其积分给出$2\pi$。对于总有效截面，我们给出
 \begin{equation}\sigma=\int\dd\sigma^{}_{\vb{n}}=2\pi\int_0^\pi\abs{\mathcal A(\theta)}^2\sin(\theta)\dd\theta.\label{WzctaUV1}\end{equation}
 这是非相对论性散射理论的基础，对于向心场可以用\textbf{分波法}得到散射振幅，也就是对自由波取球谐函数展开，可以参考\cite{L1}\S123，\S 124。\\
 \\
 对于一般的势能场，散射振幅是较难计算的，但其作为\textsl{LS}形式的一部分已经给我们提供了绝佳的解决思路：根据第\ref{Uywqe.66}节的表述，若$U$为微扰，则它一定能从\textsl{Born}近似中得到。从解(\ref{Sd--][fg})我们能得到微扰的成立条件
 $$\psi^{(1)}(\vb{r})=-\frac{m}{2\pi}\bigintsss\frac{\exp(ik^{}_s\abs{\vb{r}-\vb{u}})}{\abs{\vb{r}-\vb{u}}}U(\abs{\vb{u}})\psi^{}_0(\vb{u})\dd V^{}_u\ll\psi^{}_0(\vb{r}).$$
-设$\abs{\vb{r}-\vb{u}}\sim a$为散射波的特征长度，对于$ka\ll1$的低能入射情况，指数部分可以忽略，因此我们得到量级估计
+设$\dfrac{U}{\abs{\grad U}}\sim a$为散射波的特征长度，对于$ka\ll1$的低能入射情况，指数部分可以忽略，因此我们得到量级估计
 \begin{equation}ma^2\abs{U}\ll1\implies \abs{U}\ll\frac{1}{ma^2},\quad ka\ll1.\label{Tdfgh//PNC}\end{equation}
 对于$ka\gg1$的高能入射情况，指数部分强烈振荡，此时我们得到量级估计
 \begin{equation}\frac{ma\abs{U}}{k}\ll1\implies \abs{U}\ll\frac{k}{ma}=\frac{v}{a},\quad ka\gg1.\label{Td**/PN-.3}\end{equation}
-在这两个条件的基础上，我们来考察解的\textsl{Born}级数，先在以散射中心为原点的坐标系内，将入射波用动量实体$\vb{k}$表述
+在这两个条件的基础上，我们来考察解的\textsl{Born}级数，先在以散射中心为原点的坐标系内，将入射波用动量本征态$\vb{k}$表述
 \begin{equation}\psi(\vb{r})=\exp(i\vb{k}\cdot\vb{r})-\frac{m}{2\pi}\bigintsss\frac{\exp(ik^{}_s\abs{\vb{r}-\vb{u}})}{\abs{\vb{r}-\vb{u}}}U(\abs{\vb{u}})\psi(\vb{u})\dd V^{}_u,\end{equation}
 于是\textsl{Born}级数就给出
 $$\psi(\vb{r})=\exp(i\vb{k}\cdot\vb{r})-\frac{m}{2\pi}\bigintsss\frac{\exp(ik^{}_s\abs{\vb{r}-\vb{u}})}{\abs{\vb{r}-\vb{u}}}U(\abs{\vb{u}})\exp(i\vb{k}\cdot\vb{u})\dd V^{}_u+\cdots.$$
@@ -12246,9 +12245,9 @@ $$\psi(\vb{r})=\exp(i\vb{k}\cdot\vb{r})-\frac{m}{2\pi}\bigintsss\frac{\exp(ik^{}
 $$\psi^{(1)}_s(\vb{r})=-\frac{m}{2\pi}\frac{\exp(ik^{}_sr)}{r}\int\exp(-i\qty(k^{}_s\vb{n}-\vb{k})\cdot\vb{u})U(\abs{\vb{u}})\dd V^{}_u=\mathcal A(\theta)\frac{\exp(ik^{}_sr)}{r}.$$
 因为散射中心为原点使得$\vb{k}^{}_s\parallel\vb{r}$，因此$k^{}_s\vb{n}=\vb{k}^{}_s$。记波矢差为$\vb{k}^{}_s-\vb{k}=\vb{q}$，于是我们得到散射振幅的零级近似
 \begin{equation}\mathcal A^{(0)}(\vb{q})=-\frac{m}{2\pi}\int U(\abs{\vb{u}})\exp(-i\vb{q}\cdot\vb{u})\dd V^{}_u.\label{Gandg-*PO}\end{equation}
-其之所以是零级近似，是因为它之和散射波有关，而散射波本身就是高阶修正。注意到这和式(\ref{dw22NMll})所确定的结构因子完全一致，而势能$U$充当了形态因子，且$\abs{\vb{k}^{}_s}=\abs{\vb{k}}=k$使得$\vb{q}$大小和式(\ref{dwwoll})一致
+其之所以是零级近似，是因为它只和散射波有关，而散射波本身就是高阶修正。注意到这和式(\ref{dw22NMll})所确定的结构因子完全一致，而势能$U$充当了形态因子，且$\abs{\vb{k}^{}_s}=\abs{\vb{k}}=k$使得$\vb{q}$大小和式(\ref{dwwoll})一致
 $$\abs{\vb{q}}=2k\sin\frac{\theta}{2},\quad \theta=\arccos(\frac{\vb{k}^{}_s\cdot\vb{k}}{k^2}),$$
-所有的数学结构和电磁波的散射相同。这并不意外，因为散射波若算上时间则也是推迟势的结构，因而其结果理都能在电磁辐射中找到对应。在此近似中，不难看到我们有
+所有的数学结构和电磁波的散射相同。这并不意外，因为散射波若算上时间则也是推迟势的结构，因而其结果都能在电磁辐射中找到对应。在此近似中，不难看到我们有
 \begin{equation}\mathcal A(\vb{q})=\mathcal A\qty(\vb{k}^{}_s,\vb{k})=\mathcal A^*(\vb{q})=\mathcal A^*(\vb{k},\vb{k}^{}_s),\label{tAdo-2023-*-}\end{equation}
 它指出若对换入射和散射过程的动量，则散射振幅互为共轭，这是一种不同于时间反演的对称性。将结果(\ref{Gandg-*PO})带入式(\ref{WzctaUV})，我们得到单位有效截面的一级近似
 \begin{equation}\dd\sigma^{}_{\vb{n}}=\qty(\frac{m}{2\pi})^2\abs{\int U(\abs{\vb{u}})\exp(-i\vb{q}\cdot\vb{u})\dd V^{}_u}^2\dd\mathcal O.\end{equation}
@@ -12265,7 +12264,7 @@ $$\ket{s}=\hat{\mathfrak S}\ket{i}=\ket{i}+\varPi^{}_{LS}\hat{\mathcal T}\ket{i}
 现在来具体计算散射矩阵元，由于入射波是自由波，所以用动量表象基是最好的选择$\ket{i}=\ket{\vb{k}^{}_i}$，考虑对坐标的投影
 \begin{equation}\mel**{\vb{r}}{\hat{\mathfrak S}}{\vb{k}^{}_i}=\braket{\vb{r}}{\vb{k}^{}_i}+\mel**{\vb{r}}{\varPi^{}_{LS}\hat{\mathcal T}}{\vb{k}^{}_i}.\label{Gvetti--}\end{equation}
 根据式(\ref{Airghv})可知\textsl{LS}核对动量表象是本征的$\varPi^{}_{LS}\ket{\vb{k}}=\qty(E-k^2/2m)^{-1}\ket{\vb{k}}$，在弹性散射过程中能量守恒，因此有$E=E^{}_i=k^2/2m,\ \forall k^2=2mE$。可见\textsl{LS}核发散，为此我们使用\textsl{Feynman}方法令分母微虚确保因果性，并引入\textbf{\textsl{Sochocki-Plemelj}定理}
-\begin{equation}\qty(E^{}_i-\frac{k^2}{2m}+i0)^{-1}\approx -i\pi\delta\qty(\frac{k^2}{2m}-E^{}_i)+\mathcal P\qty(\frac{k^2}{2m}-E^{}_i)^{-1},\end{equation}
+\begin{equation}\qty(E^{}_i-\frac{k^2}{2m}+i0)^{-1}\approx -i\pi\delta\qty(\frac{k^2}{2m}-E^{}_i)+\mathcal P\qty(\frac{k^2}{2m}-E^{}_i)^{-1},\label{Choae323//}\end{equation}
 其中主值部分$\mathcal P$因没有物理含义而忽略，于是我们插入一组完备动量基得到
 $$\begin{aligned}\mel**{\vb{r}}{\hat{\mathfrak S}}{\vb{k}^{}_i}&=\int\qty(\frac{\dd k}{2\pi})^3\braket{\vb{r}}{\vb{k}}\mel**{\vb{k}}{\hat{\mathfrak S}}{\vb{k}^{}_i}\\&=\int\qty(\frac{\dd k}{2\pi})^3\braket{\vb{r}}{\vb{k}}\braket{\vb{k}}{\vb{k}^{}_i}-i\pi\int\qty(\frac{\dd k}{2\pi})^3\delta\qty(\frac{k^2}{2m}-E^{}_i)\braket{\vb{r}}{\vb{k}}\mel**{\vb{k}}{\hat{\mathcal T}}{\vb{k}^{}_i}.\end{aligned}$$
 这样我们就得到散射矩阵在动量表象中的矩阵元
@@ -12281,9 +12280,9 @@ $$\mel**{\vb{r}}{\hat{\mathfrak S}}{\vb{k}^{}_i}=\braket{\vb{r}}{\vb{k}^{}_i}+\i
 对\textsl{LS}核用式(\ref{Rav8gFGG})得到空间\textsl{Green}函数，在能量守恒下取远场近似得到
 $$\begin{aligned}\mel**{\vb{r}}{\hat{\mathfrak S}}{\vb{k}^{}_i}&=\braket{\vb{r}}{\vb{k}^{}_i}-\frac{m}{2\pi}\frac{\exp(ikr)}{r}\int\dd V^{}_u \braket{\vb{k}}{\vb{u}}\mel**{\vb{u}}{\hat{\mathcal T}}{\vb{k}^{}_i}\\&=\braket{\vb{r}}{\vb{k}^{}_i}-\frac{m}{2\pi}\frac{\exp(ikr)}{r}\mel**{\vb{k}}{\hat{\mathcal T}}{\vb{k}^{}_i},\quad \forall\abs{\vb{k}}=\sqrt{2mE}.\end{aligned}$$
 两个和坐标的内积给出空间波函数，取动量左矢为末态$\vb{k}^{}_f$，我们就得到散射振幅为转换矩阵元
-\begin{equation}\mathcal A\qty(\vb{k}^{}_s,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_f}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}T^{}_{fi},\label{Ldhg-=GSpp][}\end{equation}
+\begin{equation}\mathcal A\qty(\vb{k}^{}_f,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_f}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}T^{}_{fi},\label{Ldhg-=GSpp][}\end{equation}
 从而通过式(\ref{lds44sse})我们可以直接写出散射振幅的\textsl{Born}级数
-\begin{equation}\mathcal A\qty(\vb{k}^{}_s,\vb{k}^{}_i)=\mel**{\vb{k}^{}_s}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{U+U\varPi^{}_{LS}U+\cdots}{\vb{k}^{}_i}.\label{MIPdh11p]]}\end{equation}
+\begin{equation}\mathcal A\qty(\vb{k}^{}_s,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{\hat{\mathcal T}}{\vb{k}^{}_i}=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{U+U\varPi^{}_{LS}U+\cdots}{\vb{k}^{}_i}.\label{MIPdh11p]]}\end{equation}
 我们可以直接读出振幅的各级修正，因为势能只和空间有关，因此在计算时需要插入完备坐标态，比如零级近似
 $$\begin{aligned}\mathcal A^{(0)}\qty(\vb{k}^{}_s,\vb{k}^{}_i)&=-\frac{m}{2\pi}\int\dd V^{}_u\mel**{\vb{k}^{}_s}{U(\vb{r})}{\vb{u}}\braket{\vb{u}}{\vb{k}^{}_i}=-\frac{m}{2\pi}\int\dd V^{}_u U(\vb{u})\exp(-i\qty(\vb{k}^{}_s-\vb{k}^{}_i)\cdot\vb{u})\\&=-\frac{m}{2\pi}\int\dd V^{}_u U(\vb{u})\exp(-i\vb{q}\cdot\vb{u}),\end{aligned}$$
 和式(\ref{Gandg-*PO})一致。一级修正需要插入三组完备坐标态，给出
@@ -12301,13 +12300,13 @@ $$\hat{\vb{I}}=\qty(\hat{\vb{I}}+2\pi i\hat{\mathcal T}^\dagger)\qty(\hat{\vb{I}
 也就是
 \begin{equation}\hat{\mathcal T}^\dagger-\hat{\mathcal T}=2\pi i\hat{\mathcal T}^\dagger\hat{\mathcal T}.\end{equation}
 回到动量表象下的矩阵元，对任意两个散射中的自由动量态$\ket{\vb{k}^{}_i}$取内积得到
-$$\mel**{\vb{k}^{}_a}{\hat{\mathcal T}^\dagger-\hat{\mathcal T}}{\vb{k}^{}_b}=2\pi i\mel**{\vb{k}^{}_a}{\hat{\mathcal T}^\dagger\hat{\mathcal T}}{\vb{k}^{}_b}\implies T^*_{ba}-T^{}_{ab}=2\pi i\int\qty(\frac{\dd k^{}_c}{2\pi})^3T^*_{cb}T^{}_{ca}.$$
+\begin{equation}\mel**{\vb{k}^{}_a}{\hat{\mathcal T}^\dagger-\hat{\mathcal T}}{\vb{k}^{}_b}=2\pi i\mel**{\vb{k}^{}_a}{\hat{\mathcal T}^\dagger\hat{\mathcal T}}{\vb{k}^{}_b}\implies T^*_{ba}-T^{}_{ab}=2\pi i\int\qty(\frac{\dd k^{}_c}{2\pi})^3T^*_{cb}T^{}_{ca}\delta\qty(E^{}_c-E).\label{C..-u998}\end{equation}
 如果我们取$\vb{k}^{}_a=\vb{k}^{}_b=\sqrt{2mE}\,\vb{n}$，注意这里是严格的矢量相等，则左侧矩阵元为$T^{}_{aa}$的虚部，右侧为$\abs{T^{}_{ca}}^2$。现在我们代入散射振幅(\ref{Ldhg-=GSpp][})，且能量守恒要求$k^2_c=k^2=2mE$，则右侧的积分给出
-$$2\pi i\int\qty(\frac{\dd k^{}_c}{2\pi})^3\abs{T^{}_{ca}}^2=2\pi i\qty(\frac{2\pi}{m})^2\int\frac{\dd\mathcal O^{}_{\vb{k}}\dd k^{}_c}{\qty(2\pi)^3}k^2_c\abs{\mathcal A}^2=\frac{2iEk}{m}\int\dd\mathcal O^{}_{\vb{k}}\abs{\mathcal A}^2.$$
-虽然现在的单位角元是动量空间中的，但因为散射振幅也是在动量空间中计算的，因此我们完全可以将其放在位置空间中计算，而根据定义(\ref{WzctaUV1})这就是全有效截面
+$$2\pi i\int\qty(\frac{\dd k^{}_c}{2\pi})^3\abs{T^{}_{ca}}^2\delta\qty(E^{}_c-E)=2\pi i\qty(\frac{2\pi}{m})^2\int\frac{\dd\mathcal O^{}_{\vb{k}}\dd k^{}_c}{\qty(2\pi)^3}k^2_c\abs{\mathcal A}^2\delta\qty(E^{}_c-E)=\frac{ik}{2m}\int\dd\mathcal O^{}_{\vb{k}}\abs{\mathcal A}^2.$$
+这里我们只取正值动量$\theta(k)$。虽然现在的单位角元是动量空间中的，但因为散射振幅也是在动量空间中计算的，因此我们完全可以将其放在位置空间中计算，而根据定义(\ref{WzctaUV1})这就是全有效截面
 \begin{equation}\int\dd\mathcal O^{}_{\vb{k}}\abs{\mathcal A}^2=\int\dd\mathcal O\abs{\mathcal A\qty(\vb{n}^{}_a,\vb{n}^{}_c)}^2=\int \dd\sigma^{}_{\vb{n}}=\sigma,\end{equation}
-于是将左侧也替换为散射振幅后，我们就得到全有效截面的公式
-\begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma.\end{equation}
+于是将式(\ref{C..-u998})的左侧也替换为散射振幅后，我们就得到全有效截面的公式
+\begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma.\label{Opfg,m..;;}\end{equation}
 这个结论称为散射的\textbf{光学定理 \textit{Optical Theorem}}，它指出有效截面和无偏转的散射有关，关于其物理史可以参考\cite{NbCF}。我们也可以用散射角$\theta=\arccos(\vb{k}^{}_a\cdot\vb{k}^{}_b/k^2)$表示，此处明显有$\theta=0$，因此也可以写为
 $$\Im \mathcal A\qty(\theta=0)=\frac{k}{4\pi}\sigma.$$
 对于弹性散射而言，时间反演不会改变运动方程，因此散射的特征量都不变。而时间反演在运动中给出空间反演$\hat{P}$，这样我们就得到转换矩阵元
@@ -12326,14 +12325,14 @@ $$\mathcal A^{(0)}(\vb{q})=-\frac{m}{2\pi}\int U(\abs{\vb{u}})\dd V^{}_u.$$
 \begin{equation}\alpha=\frac{m}{2\pi}\int U(\abs{\vb{u}})\dd V^{}_u=-\mathcal A^{(0)}\in\mathbb R.\label{Y;;L34*--/}\end{equation}
 这是一个实数，现在分析其量纲，为此我们需要将$\hbar$加上，写出
 $$\qty[\alpha]=\qty[\frac{m}{\hbar^2}UV]=\frac{M\times L^3}{M\times L^2\times T^{-2}\times T^2}=L.$$
-可见这是一个长度量，称为低能散射的\textbf{有效长度 \textit{Effective Length}}，注意\emph{它可正可负}，并非和通常的长度一样正定，从而通过式(\ref{WzctaUV1})我们得到总有效截面为
+可见这是一个长度量，称为低能散射的\textbf{散射长度 \textit{Scattering Length}}，注意\emph{它可正可负}，并非和通常的长度一样正定，从而通过式(\ref{WzctaUV1})我们得到总有效截面为
 \begin{equation}\sigma=2\pi\int_0^\pi\abs{\alpha}^2\sin(\theta)\dd\theta=4\pi\alpha^2.\label{Yan234*//}\end{equation}
 我们知道一个半径为$R$的三维球面$S^2$的表面积为$4\pi R$，因此在这个意义上$\alpha$的确表征了长度。对于半径为$R$的刚性球形势场，分布请参考\cite{L8-8}\S 18习题$1$，宏观情况下$\sigma=\pi R^2$，因此在数值上微观有效截面比宏观的大四倍。现在我们需要明确上述近似的适用范围，为此我们需要考察相位的一级修正
 $$\mathcal A^{(0);1}(\vb{q})=\frac{mi}{2\pi}\int U(\abs{\vb{u}})\vb{q}\cdot\vb{u}\dd V^{}_u.$$
 如果式(\ref{Yan234*//})严格成立，那么在远场处我们必须有$\mathcal A^{(0);1}(r\gg a)\sim0$，这里只做量级分析，给出
 $$\mathcal A^{(0);1}\sim k\int_0^r U(r)r^3\dd r\sim kU(r)r^4\sim0.$$
 因为$ka\ll1$，所以在量级上至少需要
-\begin{equation}U(r)r^4\sim r^w\sim a,\quad w<1\implies U(r)\sim r^{-n},\quad n>3.\end{equation}
+\begin{equation}U(r)r^4\sim r^w\sim a,\quad w<1\implies U(r)\sim r^{-n},\quad n>3.\label{Bufg123424==-}\end{equation}
 注意$n=3$时$\mathcal A^{(0);1}\sim kr\sim O(1)$是不能忽略的，因此$n$严格大于$3$，也就是说中心对称势能至少按$r^{-3}$在远处衰减。不妨来讨论一下$n\leq3$的情况，对于$n\leq1$和$1<n<2$时散射是经典的，可以参考\cite{L1}\S 132。对于$n>2$在远场我们有
 \begin{equation}\abs{U}\ll\frac{1}{mr^2},\quad r\gg a,\end{equation}
 假设$r^{}_0$为特征距离，使得$r\gg r^{}_0$时上述不等式成立，同时满足$r^{}_0k\ll1$，则微扰条件成立。对于散射振幅的一级\textsl{Born}修正(\ref{Gandg-*PO})，设势能为$U(r)\approx\lambda r^{-n}$，我们得到
@@ -12348,15 +12347,15 @@ $$\mathcal A^{(0)}=-2m\lambda \int_{qr^{}_0}^\infty\frac{\sin\xi}{\xi^2}\dd\xi\a
 $$\hat{\mathcal H}=\frac{\hat{p}^2_r}{2m}+\frac{L^2}{2I}+U(r),$$
 在束缚态中能级正比于主量子数$E\propto l(l+1)$，这由角动量提供。现在低能$k\to 0$使得$L\to0$，因此主量子数$l\to 0$。也就是说在低能有限场散射中，粒子的轨道角动量主要由$l=0$的轨道控制，我们采用原子物理的术语称为\textbf{$\bm{s}$波散射}。\\
 \\
-现在来讨论$s$波有效长度的符号问题，在量级上我们有$\alpha\sim U(r)$。根据前文的介绍不妨令$U=\lambda r^{-4}$，考虑到外力
+现在来讨论$s$波散射长度的符号问题，在量级上我们有$\alpha\sim U(r)$。根据前文的介绍不妨令$U=\lambda r^{-4}$，考虑到外力
 $$F=-\dv{U}{r}=\frac{4\lambda}{r^5}=\frac{4U}{r}\propto U,$$
-我们就得到力和有效长度的符号关联
+我们就得到力和散射长度的符号关联
 \begin{equation}\alpha<0\implies U<0\implies F<0,\quad\text{吸引};\quad \alpha>0\implies U>0\implies F>0,\quad\text{排斥}.\end{equation}
-也就是说若有效长度和通常的距离一样正定，那么散射就是发散的，反之负定则散射束缚。可见在低能情况下，有效长度确定了散射的性质，而且束缚态由“负距离”确定，这在宏观碰撞中是不存在的。但是如果我们将其看作一个向量，那么负值就是指向散射中心，则自然就是束缚的。\\
+也就是说若散射长度和通常的距离一样正定，那么散射就是发散的，反之负定则散射束缚。可见在低能情况下，散射长度确定了散射的性质，而且束缚态由“负距离”确定，这在宏观碰撞中是不存在的。但是如果我们将其看作一个向量，那么负值就是指向散射中心，则自然就是束缚的。\\
 \\
 为了更加具体的理解这个负长度，我们来考察两个质量为$m^{}_0$的全同粒子的散射，这里暂时不考虑自旋，因此不区分费米子和玻色子。由于涉及双粒子，因此$m$作为约化质量就应该写作
 \begin{equation}m=\frac{m^2_0}{m^{}_0+m^{}_0}=\frac{m^{}_0}{2}.\end{equation}
-再记$U^{}_0=\displaystyle\int U(\abs{\vb{u}})\dd V^{}_u$，因而有效长度(\ref{Y;;L34*--/})就给出
+再记$U^{}_0=\displaystyle\int U(\abs{\vb{u}})\dd V^{}_u$，因而散射长度(\ref{Y;;L34*--/})就给出
 $$\alpha=\frac{m}{2\pi}U^{}_0=\frac{m^{}_0}{4\pi}U^{}_0,\quad U^{}_0=\frac{4\pi\alpha}{m^{}_0}.$$
 当然此时一级近似的精度并不足够，因为双粒子必然伴随动量的交换，我们需要更高的修正。考察二级修正，记两个粒子各自的动量为$\vb{k}^{}_1$和$\vb{k}^{}_2$，按照式(\ref{MIPdh11p]]})写出
 $$\mathcal A^{(1)}\qty(\vb{k}^{}_{s,1},\vb{k}^{}_{s,2},\vb{k}^{}_{i,1},\vb{k}^{}_{i,2})=-\frac{m/2}{2\pi}\mel**{\vb{k}^{}_{s,1},\vb{k}^{}_{s,2}}{U\varPi^{}_{LS}U}{\vb{k}^{}_{i,1},\vb{k}^{}_{i,2}}.$$
@@ -12368,27 +12367,140 @@ $$\vb{q}=\vb{k}^{}_{f,1}-\vb{k}^{}_{i,1}=\vb{k}^{}_{i,2}-\vb{k}^{}_{f,2},$$
 \begin{equation}\begin{aligned}\mathcal A^{(1)}\qty(\vb{q})&=-\frac{m}{4\pi}\sum_x\frac{V^*_{sx}V^{}_{xi}}{E^{(0)f}_1+E^{(0)f}_2-E^{(0)x}_1-E^{(0)x}_2}\\&=-\frac{m}{4\pi V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}\abs{\int U(r)\exp(-i\vb{q}\cdot\vb{r})\dd V}^2.\end{aligned}\end{equation}
 可见决定散射振幅的依旧是动量差，而不是各粒子的精确动量，最后一步中的$1/V$是双动量态的体积归一化系数。同样的理由，在低速下$\abs{\vb{q}}\to0$可以忽略相位，则我们再次得到一个各向同性的量
 $$\mathcal A^{(1)}\qty(\vb{q})=-\frac{m}{4\pi V}\sum_{\qty{\vb{k}}}\frac{2mU^2_0}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}.$$
-不难计算其量纲$\qty[\mathcal A^{(1)}]=L$，于是根据定义(\ref{Y;;L34*--/})将其加入到$\alpha$，我们就得到有效长度的二级\textsl{Born}近似
+不难计算其量纲$\qty[\mathcal A^{(1)}]=L$，于是根据定义(\ref{Y;;L34*--/})将其加入到$\alpha$，我们就得到散射长度的二级\textsl{Born}近似
 \begin{equation}\alpha=-\mathcal A^{(0)}-\mathcal A^{(1)}=\frac{m}{4\pi}\qty(U^{}_0+\frac{U^2_0}{V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}).\end{equation}
-关于这个求和，其解析性可以参考\cite{L1}\S130的内容。现在我们用有效长度来表示势能$U^{}_0$，先直接写出
+关于这个求和，其解析性可以参考\cite{L1}\S130的内容。现在我们用散射长度来表示势能$U^{}_0$，先直接写出
 $$U^{}_0=\frac{4\pi\alpha}{m}-\frac{U^2_0}{V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}.$$
 因为在微扰情况下$U^{}_0\to0$，因此我们可以将$U^2_0$直接替换为零级近似$\qty(\dfrac{4\pi\alpha}{m})^2$，我们就得到
 \begin{equation}U^{}_0=\frac{4\pi\alpha}{m}\qty(1-\frac{4\pi\alpha}{mV}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}^2_{f,1}+\vb{k}^2_{f,2}-\vb{k}^2_{i,1}-\vb{k}^2_{i,2}}).\label{AfhrGy88}\end{equation}
 这就是式(\ref{Zufi//-*-*})所确定的基态能$U^{}_0$的修正，这样我们可以得到更精确的超流相基态能，具体计算请参考第\ref{UHYB..**}节。我们进一步讨论$\alpha$的符号性质，假设$\alpha>0$，那么势能的修正为负，代表两个粒子向外发散，和宏观散射一致；若$\alpha<0$那么修正为正，这说明两个粒子互相吸引，而其就是费米超流(\ref{sdsv<>})所得到的约束$U^{}_0<0$，我们后续会看到，这是电子—声子交换的结果。\\
 \\
 其次来看高能散射，其适用于近似(\ref{Td**/PN-.3})。对于有限作用的散射$a\sim O(1)$，条件$ka\gg1$给出$k\to\infty$。当然需要注意，动量趋向于无穷大并不代表速度无穷大，这里我们依旧要求速度$v=k/m\ll c$要远小于真空光速，因为目前仍处于非相对论性环境。此时散射波函数的一级近似可以写为
-\begin{equation}\psi=\exp(ikx)F(\vb{r}),\end{equation}
-这里$F$是对自由波的微小修正。带入\textsl{Schrödinger}方程，我们得到
-$$-\frac{1}{2m}\bm{\Delta}\qty{\exp(ikx)F(\vb{r})}+U\exp(ikx)F(\vb{r})=E\exp(ikx)F(\vb{r}).$$
-
-
-
-
-
-
-
-
+\begin{equation}\psi(\vb{r})=\exp(ikx)F(\vb{r}),\end{equation}
+这里$F$是对自由波的微小修正。暂时只考虑$x$方向上的情况，带入\textsl{Schrödinger}方程我们得到
+$$\begin{aligned}(U-E)\exp(ikx)F(x)&=\frac{1}{2m}\dv[2]{x}\qty{\exp(ikx)F(x)}\\&=\frac{1}{2m}\qty{-k^2\psi+2ik\exp(ikx)\dv{F}{x}+\exp(ikx)\dv[2]{F}{x}}.\end{aligned}$$
+对于单个高速粒子，微扰要求散射在近场满足$U\ll E$，因此我们有$\lim\limits_{x\to0}E=\dfrac{k^2}{2m}$。同时令$F$在近场中满足$\lim\limits_{x\to0}\dv*[2]{F}{x}\ll\dv*{F}{x}$，我们就得到$F$的方程
+\begin{equation}mU(x)F(x)=ik\dv{F(x)}{x}.\label{Gamd**f-/}\end{equation}
+还是引入粒子的速度$v=k/m$，我们得到$F$的解析式和波函数
+\begin{equation}\ln F(x)=\frac{1}{iv}\int_{-\infty}^x U(x)\dd x,\quad \psi=C\exp(ikx-\frac{i}{v}\int_{-\infty}^x U(x)\dd x).\label{GO8/.23[[}\end{equation}
+可见这和准经典近似(\ref{Scger})是一致的。现在我们通过\textsl{Cartesian}系将$y,z$坐标加入到$F$中，从而
+$$\bm{\Delta}\psi(\vb{r})=\qty(\dv[2]{x}+\dv[2]{y}+\dv[2]{z})\exp(ikx)F(x,y,z)\propto\qty(\dv[2]{y}+\dv[2]{z})F(y,z).$$
+同时若我们要求在近场有$\lim\limits_{r\to0}\dv*[2]{F}{y},\dv*[2]{F}{z}\ll\dv*{F}{x}$，则$F$满足的方程不变，进而波函数不变
+\begin{equation}\psi(\vb{r})=C\exp(ikx-\frac{i}{v}\int_{-\infty}^x U(x)\dd x),\quad r\to0.\end{equation}
+一般这里的近场范围可以延拓到$r\ll ka$，但是根据定义(\ref{B--*65})，散射振幅只存在于远场近似中，因此我们需要将$F$的积分延拓到远场。远场近似只是相对的，事实上我们可以只要求$r\gg a\sim \dfrac{U}{\abs{\grad U}}$，也就是远离散射的作用即可，我们就可以将积分延拓到无穷远，得到远场一级近似
+\begin{equation}\psi(y,z)=\psi(\bm{\rho})=C\exp(ikx-\frac{i}{v}\int_{\mathbb R} U(x)\dd x)=\exp(ikx)F(\bm{\rho}),\quad a\ll r\ll ka.\label{Ga254*f//}\end{equation}
+其中$\bm{\rho}$是垂直于传播轴的$y-z$平面上的径矢。这样我们就可以计算散射振幅了，从式(\ref{B95///5})出发，当然这里应该使用\textsl{Cartesian}系，再用式(\ref{Gamd**f-/})替换$U\psi$我们得到
+$$\mathcal A(\vb{q})=-\frac{m}{2\pi}\frac{ik}{m}\int\exp(-i\vb{k}^{}_s\cdot\vb{r})\pdv{F}{x}\exp(i\vb{k}^{}_i\cdot\vb{r})\dd x\dd y\dd z=\frac{k}{2\pi i}\eval{F(x)}_{-\infty}^\infty\int\exp(-i\vb{q}\cdot\bm{\rho})\dd y\dd z.$$
+其中$\vb{q}$是动量差，$k=\abs{\vb{k}^{}_s}=\abs{\vb{k}^{}_i}$。计算$F(x)$在边界处的值，根据式(\ref{GO8/.23[[})的定义不难得到
+$$\eval{F(x)}_{-\infty}^\infty=\exp(\frac{1}{iv}\int_{-\infty}^\infty U(x)\dd x)-\exp(\frac{1}{iv}\int_{-\infty}^{-\infty} U(x)\dd x)=F(\bm{\rho})-1,$$
+其中我们对$F(\infty)$带入了式(\ref{Ga254*f//})的记号，则散射振幅的零级近似就确定为
+\begin{equation}\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int \qty[F(\bm{\rho})-1]\exp(-i\vb{q}\cdot\bm{\rho})\dd^2\bm{\rho}.\end{equation}
+利用光学定理(\ref{Opfg,m..;;})可以得到总有效截面，$\mathcal A^{(0)}(\vb{k},\vb{k})=\mathcal A^{(0)}(\vb{q}=\vb{0})$，进而得到
+\begin{equation}\sigma=\frac{4\pi}{k}\Im\qty{\frac{k}{2\pi i}\int\qty[\exp(\frac{1}{iv}\int_{\mathbb R}U(x)\dd x)-1]\dd^2\bm{\rho}}=\int 4\sin^2\delta(\bm{\rho})\dd^2\bm{\rho},\quad\delta(\bm{\rho})=\frac{-1}{2v}\int_{\mathbb R}U(x)\dd x.\end{equation}
+若速度极高$v\sim c$使得$F\sim 1$，当然此时仍不考虑相对论效应，则我们将相位展开到一阶给出
+$$\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int \qty[1+\frac{i}{v}\int_{\mathbb R} U(x)\dd x-1]\exp(-i\vb{q}\cdot\bm{\rho})\dd^2\bm{\rho}=-\frac{m}{2\pi}\int_{\mathbb R} U(x)\exp(-i\vb{q}\cdot\bm{\rho})\dd x\dd^2\bm{\rho}.$$
+式中已经代入$k=mv$，这样我们就回到一级\textsl{Born}近似(\ref{Gandg-*PO})，因而对于高能散射而言，\textsl{Born}近似适用于极高能的散射。所以\textsl{Born}近似只适用于两种极端情况，而这实际上和经典散射是类似的，因为速度在极低和极高的情况下其散射的远场动力学都是完全解析的。\\
+\\
+我们还可以进一步的断言，高能散射只适用于小散射角情况，这由$F$的约束控制，读者可以自行证明，或参考\cite{L1}\S126。同时关于中心散射势场下，以分波法的推导，可以参考\cite{L1}\S 131，这里就不介绍了。\\
+\\
+我们还可以简单的讨论一下，$s$波散射中的共振现象。记$s$态的能量为$\varepsilon$，令其在势场$U$的作用范围$a$内为束缚态$\varepsilon\ll U<0$，自然的其对应负散射长度$\alpha<0$。现在令入射粒子的能量$E\sim \varepsilon$，称为负的\textbf{浅能级}。对于$s$波函数我们记为$\chi(r)$，则根据假设我们得到\textsl{Schrödinger}方程
+\begin{equation}-\frac{1}{2m}\dv[2]{\chi}{r}+U\chi=E\chi\implies \begin{cases}\displaystyle\chi''=2mU\chi,\quad r\lesssim a;&\\ \displaystyle\chi''+2mE\chi=0,\quad r\gg a.\end{cases} \end{equation}
+其中在势场范围内取$E\approx0$，在远场处取为自由波$U\approx0$，单粒子波函数$\chi$应该在这两个区域间连续。在边界条件$\chi(0)=0$下，不难写出波函数大致的表达式
+$$\chi\sim\begin{cases} \sinh(\vartheta r),\quad\vartheta^2\sim 2mU,\quad r\sim a;&\\ \sinh(kr), \quad k^2=2m\abs{E},\quad r\gg a.\end{cases}$$
+为了满足连续性，我们需要一个量来关联这两个函数，并且考虑到动量也有连续性，波函数的连续性可以由$\chi'/\chi$的连续性确定，其不依赖于归一化。在散射中心附近$\sin(kr)=0$，可以忽略外区的部分，因此它和粒子的能量无关，我们约定为
+\begin{equation}\lim_{r\to0}\frac{\chi'}{\chi}=-\kappa=const.\label{..664//vg2423}\end{equation}
+由于$\kappa$和$E$无关，我们自然可以将这条件延拓到远场，但能量需要匹配。不妨取浅能级为$E=-\abs{\varepsilon}<0$，则远场函数就给出
+$$\chi''-2m\abs{\varepsilon}\chi=0\implies \chi=C\exp(-\sqrt{2m\abs{\varepsilon}}\,r),\quad r\to\infty.$$
+此时条件(\ref{..664//vg2423})适用于$r\to\infty$，因此将上式代入后我们得到
+\begin{equation}\kappa=\sqrt{2m\abs{\varepsilon}}>0,\label{X212C}\end{equation}
+可见在结果上这就是散射动量，符合动量的连续性。利用分波法，我们可以求得精确的低速$s$波散射振幅(\textsl{E. Wigner}，1933)
+\begin{equation}\mathcal A(k,\varepsilon)=-\frac{1}{\kappa+ik},\end{equation}
+利用光学定理(\ref{Opfg,m..;;})，考虑到$k^2=2m\abs{E}$以及式(\ref{X212C})，我们求得总有效截面
+\begin{equation}\sigma=\frac{4\pi}{k}\Im \mathcal A=\frac{4\pi}{k^2+\kappa^2}=\frac{2\pi}{m}\frac{1}{\abs{E}+\abs{\varepsilon}}.\end{equation}
+可见散射仍然是各向同性的，但截面现在和能量呈反比，在低能散射中$E\to0$，若我们取
+$$\abs{\varepsilon}\sim\abs{E}\sim o(1)\implies \sigma=\lim_{\abs{E}\sim o(1)}\,\frac{\pi}{m\abs{E}}=\infty,$$
+此时$\sigma$显著的发散。这和宏观体系的强迫振动中，外力频率和系统固有频率相近时振动幅度会增大的共振现象十分类似，因此这个结果也称为低能散射的\textbf{\textsl{Wigner}共振截面}，$\varepsilon$称为\textbf{共振能量}。需要着重说明的是，共振截面和近距离内粒子相互作用的细节无关，而是取决于整体的共振能量。\\
+\\
+现在我们探讨一个具体的低能散射情形：假设低速粒子入射进有限势阱$U^{}_{min}<E<U^{}_{max}$中成为束缚态，虽然只有改变内态才能散射到远处，但我们目前忽略这种变化，只考虑弹性框架，称为\textbf{准定态近似}。此时粒子允许出射，但是它必须在势阱中先持续运动一段时间$\tau$，这个时间称为准定态的\textbf{寿命}。典型的准定态近似运动是衰变，寿命就是原子核的半衰期。根据不确定性原理，有限运动时间对应有\textbf{宽度}的能级，不妨记宽度为$\Gamma$，定义为
+\begin{equation}\Delta E\Delta t\sim 1\implies\Delta E=\Gamma\sim\frac{1}{\tau}.\end{equation}
+当然需要强调的是，宽度$\Gamma$应小于能级间的距离，也就是$\Gamma<E^{}_n-E^{}_{n\pm1}$，这可以从准定态近似证明，具体可以参考\cite{L1}\S 44。\\
+\\
+对于此类散射的研究，可以完全采用唯象的方法。
+\\
+关于低能共振散射的更多细节请参考\cite{L1}\S 133和\S134，这里就不做过多展开了。值得说明的一点，上面我们计算的结果是$\kappa$为正常数，这是由波函数在远场的收敛性决定的，但改变$U(r)$会改变波函数的选择，使得我们从式(\ref{..664//vg2423})得到
+$$\kappa=-\sqrt{2m\abs{\varepsilon}}\to0^-,$$
+即允许$\kappa$微负。这样虽然$\abs{\varepsilon}=2m\kappa^2$依旧成立，但它不再代表$U$的$s$波能量，称为一个\textbf{虚能级}。这个能级在原子核的散射中较为重要的应用，包括了衰变的准定态过程，请参考\cite{L1}\S 134和\S 138。这里我们邀请读者，通过\textsl{Fermi}黄金法则(\ref{ewuwr4})重构上述的散射理论，以便更好的和后续的协变散射理论接轨。
 \subsubsection{非相对论性非弹性碰撞简介}
+\noindent 上面我们介绍了非相对论性弹性碰撞，其前提是粒子的内态不变。若碰撞使得粒子的内态改变，比如衰变导致电荷的改变，则就称为\textbf{非弹性碰撞}。一般而言对于粒子内态的改变，都伴随着若干不同的物理过程，称为\textbf{反应道 \textit{Reaction Channel}}。比如在第\ref{eindgu}节的光电效应中，光子和电荷的散射一共有三个反应道：吸收道，自发辐射道，和受激辐射道，对应了相应的三个系数。如果和电磁辐射类比，那么非弹性碰撞就是电子云的非相干散射。\\
+\\
+为了后续表述方便，我们需要引入几个通用术语。将碰撞之前整个系统的初始状态称为\textbf{输入道}，它包含了参与散射的入射粒子的内态，以及相对运动的动力学态。对于散射后的出射粒子称为\textbf{输出道}，在非弹性碰撞中又可以分为两类：若粒子内态不变则称为\textbf{弹性道}，若内态改变则称为\textbf{非弹性道}，最终的出射波函数就是所有输出道的和。因此弹性碰撞可以理解为输入道$+$弹性道，注意在朗道三卷\cite{L1} \S142中\emph{直接将弹性道定义为输入道}，这和通用术语不同。下面我们重点考察动力学波函数$\psi$。\\
+\\
+我们先唯象分析，若只考察弹性道，则散射过程由第\ref{Fneb8768//}节完整描述。如果我们仍完全采用相同的理论，那么概率流密度只能给出弹性道部分，对于非弹性道和两者的耦合是无法描述的。这就说明在总的散射过程中，弹性道概率流密度不守恒，为此需要重新建立一套模型。回到\textsl{Schrödinger}方程，我们重新来计算概率密度的演化，暂时将$U$看作复数
+$$\begin{aligned}\pdv{\rho}{t}&=\pdv{t}\qty(\psi^*\psi)=\psi\pdv{\psi^*}{t}+\psi^*\pdv{\psi}{t}=-i\qty{\psi^*\qty(\frac{-1}{2m}\bm{\Delta}\psi+U\psi)-\psi\qty(\frac{-1}{2m}\bm{\Delta}\psi^*+U^*\psi^*)}\\&=\frac{i}{2m}\div\qty(\psi^*\grad\psi-\psi\grad\psi^*)-i\qty(U-U^*)\psi^*\psi=-\div\vb{j}^{}_s-i\qty(U-U^*)\rho.\end{aligned}$$
+如果势能$U$是实函数，那么我们就回到守恒方程$\pdv*{\rho}{t}+\div\vb{j}^{}_s=0$。但是根据上述分析，弹性道的流密度不能守恒，因此$U\neq U^*$，也就是说势能$U$必然是复函数。我们引入\textbf{光学势}
+\begin{equation}U(r)=V(r)-iW(r),\quad V(r),W(r)>0,\end{equation}
+则概率密度的演化为
+\begin{equation}\pdv{\rho}{t}+\div\vb{j}^{}_s=-2W(r)\rho<0.\label{eRv**996}\end{equation}
+这样一来，概率流密度是衰减的，减少的部分就体现在非弹性道中。在此基础上我们就可以应用弹性散射的理论计算弹性道，比如弹性散射振幅就可以通过式(\ref{MIPdh11p]]})写为
+\begin{equation}\mathcal A^{}_{el}\qty(\vb{k}^{}_s,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{(V-iW)+(V-iW)\varPi^{}_{LS}(V-iW)+\cdots}{\vb{k}^{}_i}.\end{equation}
+我们先看一级\textsl{Born}近似
+$$\mathcal A^{(0)}_{el}\qty(\vb{k}^{}_s,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{V-iW}{\vb{k}^{}_i}=-\frac{m}{2\pi}\int (V-iW)(\abs{\vb{u}})\exp(-i\vb{q}\cdot\vb{u})\dd V^{}_u=-\frac{m}{2\pi}\qty(V^{}_{\vb{q}}-iW^{}_{\vb{q}}),$$
+于是弹性有效截面根据式(\ref{WzctaUV})写作
+\begin{equation}\dd\sigma^{}_{\vb{n},el}=\qty(\frac{m}{2\pi})^2\abs{V^{}_{\vb{q}}-iW^{}_{\vb{q}}}^2\dd\mathcal O=\qty(\frac{m}{2\pi})^2\qty(V^2_{\vb{q}}+W^2_{\vb{q}})\dd\mathcal O,\quad \sigma^{}_{el}=\int\dd\sigma^{}_{\vb{n},el}.\end{equation}
+可见作为虚部的非弹性道的部分被吸收了，因为弹性道的计算结果都是实数，是没有虚部的。因此我们无法从上述内容中得到非弹性道的相关信息。\\
+\\
+对于非弹性道，我们可以从定态的连续性方程(\ref{eRv**996})得到，对全空间积分给出
+$$\int\div\vb{j}^{}_s\dd V=\oint \vb{j}^{}_s\cdot\dd\vb{S}=-2\int W(r)\rho^{}_s\dd V.$$
+入射道依旧取平面波，则入射流密度依旧是$j^{}_0=k/m$，从而我们得到有效截面
+$$\sigma=\frac{1}{j^{}_0}\oint \vb{j}^{}_s\cdot\dd\vb{S}=-\frac{2m}{k}\int W(r)\rho^{}_s\dd V.$$
+由于$W>0$，因此这个量是一个负值。在现实中面积是不可能为负的，因此一个合理的解释就是，这代表了吸收效应。于是我们就得到非弹性道的有效截面
+\begin{equation}\sigma^{}_{ine}=\frac{2m}{k}\int W(r)\rho^{}_s\dd V,\end{equation}
+而总散射截面为
+\begin{equation}\sigma^{}_{tot}=\sigma^{}_{ine}+\sigma^{}_{el}=\frac{2m}{k}\int W(r)\rho^{}_s\dd V+\qty(\frac{m}{2\pi})^2\int\abs{\mel**{\vb{k}^{}_f}{\hat{\mathcal T}^{}_{el}}{\vb{k}^{}_i}}^2\dd\mathcal O.\end{equation}
+由于非弹性部分是作为弹性道的吸收出现的，因此光学定理(\ref{Opfg,m..;;})就应该写作
+\begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma^{}_{tot}.\label{76tfGFV}\end{equation}
+这一点可以通过分波法严格证明，请参考\cite{L1}\S142。在一级\textsl{Born}近似下，可以计算出非弹性道截面为
+\begin{equation}\sigma^{}_{ine}=\frac{2m}{k}\int W(r)\dd V.\label{JufG69.3}\end{equation}
+关于光学势更具体的理论，可以参考\cite{Linif}。现在我们引入一个等效势$U^{}_{\text{eff}}$，使得其在一级\textsl{Born}近似下确定无散射的振幅
+\begin{equation}\mathcal A^{(0)}_{el}(0,E)=-\frac{m}{2\pi}\int U^{}_{\text{eff}}(r)\rho^{}_s\dd V.\end{equation}
+这里我们将波矢用能量$E$代表。假设入射是粒子数为$N$的粒子束，我们就得到一个在介质中散射的平均恒定势能
+\begin{equation}\expval{U^{}_{\text{eff}}}=\frac{N}{V}\int U^{}_{\text{eff}}(r)\rho^{}_s\dd V=-\frac{2\pi}{m}\frac{N}{V}\mathcal A^{(0)}_{el}(0,E).\end{equation}
+这是把介质中所有$N$个粒子的等效势能场，对介质的体积$V$求平均得到的。我们可以简单的认为，这同样是一种平均场理论，由于非弹性道的吸收而导致的衰减由$\mathcal A^{(0)}_{el}(0,E)$确定，进而这个平均恒定势能决定了介质的散射性质。\\
+\\
+现在我们来考察低能$s$波散射，关于微扰的量级条件(\ref{Tdfgh//PNC})不变。在光学势模型下，散射长度仍由式(\ref{Y;;L34*--/})确定，写出
+\begin{equation}\alpha=-\mathcal A^{(0)}=\frac{m}{2\pi}\int(V-iW)\dd V^{}_u=\alpha'-i\alpha''.\end{equation}
+可见此时散射长度是一个复数，其虚部决定了非弹性道的截面。根据光学势的性质，我们不难得到从式(\ref{Yan234*//})得到弹性道的总截面
+\begin{equation}\sigma^{}_{el}=4\pi\abs{\alpha}^2.\label{duiyingB}\end{equation}
+而非弹性道的截面可以从式(\ref{JufG69.3})得到，$W$对应光学势的虚部，因此我们得到(\textsl{H. A. Bethe}，1935)
+\begin{equation}\sigma^{}_{ine}=\frac{4\pi}{k}\abs{\Im\alpha}.\label{Bd*/32..-/*}\end{equation}
+可见非弹性散射的截面和速度的倒数有关，因此当速度降低时，非弹性道的吸收效应会显著提高。现在不妨再计算下一阶修正，对于二级近似我们从式(\ref{MIPdh11p]]})得到散射振幅为
+$$\mathcal A^{(1)}\qty(\vb{k}^{}_s,\vb{k}^{}_i)=-\frac{m}{2\pi}\mel**{\vb{k}^{}_s}{U\varPi^{}_{LS}U}{\vb{k}^{}_i}.$$
+我们插入坐标和动量完备态，同时对$\mel**{\vb{k}}{\varPi^{}_{LS}}{\vb{k}'}$取\textsl{SP}定理(\ref{Choae323//})的虚部，则上式给出
+$$\mathcal A^{(1)}\qty(\vb{k}^{}_f,\vb{k}^{}_i)=-\frac{m}{2\pi}\int\dd V^{}_x\dd V^{}_y U(\vb{x})U(\vb{y})e^{-i(\vb{k}^{}_s-\vb{k})\cdot\vb{x}+i(\vb{k}'-\vb{k}^{}_i)\cdot\vb{y}}\qty(-i\pi)\delta\qty(\frac{k^2-k'^2}{2m})\qty(\frac{\dd k}{2\pi})^3\qty(\frac{\dd k'}{2\pi})^3.$$
+经过一些计算，在低速情况$\abs{\vb{q}}\to0$下，我们得到二级\textsl{Born}近似为
+\begin{equation}\mathcal A^{(1)}\qty(\vb{k}^{}_f,\vb{k}^{}_i)=ik\qty(\frac{m}{2\pi}\int\dd V^{}_xU(\vb{x}))\qty(\frac{m}{2\pi}\int\dd V^{}_yU(\vb{y}))=ik\alpha^2.\end{equation}
+于是我们就得到振幅的一级近似
+$$\mathcal A=\mathcal A^{(0)}+\mathcal A^{(1)}=-\alpha+ik\alpha^2=-\alpha\qty(1-ik\alpha),$$
+从而弹性散射截面近似到$k$的一阶给出
+\begin{equation}\sigma^{}_{el}=4\pi\abs{\mathcal A}^2=4\pi\abs{\alpha}^2\qty(1-2k\abs{\Im\alpha}).\end{equation}
+这里省略了振幅的第二个因子内，$k$的二阶项$k^2\abs{\alpha}^2$。对比式(\ref{duiyingB})，其多出了$1-2k\abs{\Im\alpha}$因子，且由光学定理(\ref{76tfGFV})我们得到$\sigma^{}_{tot}\propto\qty(1-2k\abs{\Im\alpha})$，因此对于非弹性截面我们就从式(\ref{Bd*/32..-/*})得到
+\begin{equation}\sigma^{}_{ine}=\sigma^{}_{tot}-\sigma^{}_{el}=\frac{4\pi}{k}\abs{\Im\alpha}\qty(1-2k\abs{\Im\alpha}).\end{equation}
+这些结果就确定了非弹性散射的特性，当然需要强调的是，上述结论的成立前提和约束(\ref{Bufg123424==-})一样，也就是$U(r)\sim r^{-n},\ n>3$。而非弹性截面$\sigma^{}_{ine}\sim v^{-1}$这个性质，可以证明其只需要平方反比，也即是$U(r)\sim r^{-2}$即可。这一点的证明可以参考\cite{L1}\S 143，这里就不展开了。\\
+\\
+现在来考察高能散射。
+\\
+对于非弹性散射而言，能量必然会有损失，这一点和第\ref{Cvb8889****}节的韧致辐射是类似的。在非弹性过程中，入射粒子的部分动能被转移到了系统的内部，为了表征这种平均能量损耗，我们引入\textbf{有效滞阻 \textit{Effective Stopping}}。根据定义反应道对应内态的变换，因此我们
+
+
+
+
+
+
+
+
+
+
+
 
 \subsubsection{协变散射论}\label{Tadfi///}
 
@@ -12418,6 +12530,7 @@ $$-\frac{1}{2m}\bm{\Delta}\qty{\exp(ikx)F(\vb{r})}+U\exp(ikx)F(\vb{r})=E\exp(ikx
 \subsection{有效场论的一般框架}
 \subsection{共形场论引入}
 
+\clearpage
 
 \section{非欧几何与引力场}\label{VYTVC34}
 \subsection{Riemann几何概览}\label{Y><><)))}
@@ -12427,12 +12540,11 @@ $$-\frac{1}{2m}\bm{\Delta}\qty{\exp(ikx)F(\vb{r})}+U\exp(ikx)F(\vb{r})=E\exp(ikx
 \subsubsection{背景引力场中的介质和热力学}\label{Ph[47DD**])--}
 \subsection{经典黑洞理论}
 
-
-
 \subsection{相对论宇宙学}
 
 \subsubsection{原初宇宙的扰动}
 
+\clearpage
 
 \section{弯曲时空中的量子场}\label{V202020534}
 \subsection{引力波场的二次量子化}
@@ -13108,5 +13220,6 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \bibitem{Lbnlp} Philippe, Francesco.; Pierre, Mathieu.; David, Sénéchal. (1996). Conformal Field Theory. (1st ed.). Springer-Verlag New York, Inc. ISBN 978-0-387-94785-3.
 \bibitem{BdpF} R.K. Pathria; Paul D. Beale. (2021). Statistical Mechanics. (4th ed.). Academic Press. ISBN 978-0-08-102692-2. DOI: 10.1016/C2017-0-01713-5.
 \bibitem{Ch--3} Chandrasekhar, S. 黑洞的数学理论（第一版）. 卢炬甫 译. 中国: 高等教育出版社. 2018. ISBN 978-7-04-049097-8.
+\bibitem{Linif} W.H. Dickhoff; R.J. Charity. \emph{Recent developments for the optical model of nuclei}. 2019. Progress in Particle and Nuclear Physics. 105; 252-299. \url{https://doi.org/10.1016/j.ppnp.2018.11.002}.
 \end{thebibliography}\endgroup
 \end{document}
