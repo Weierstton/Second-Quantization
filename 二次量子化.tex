@@ -9440,7 +9440,7 @@ $$\hat{\mathcal{D}}(\epsilon)=\sum_{n=0}\epsilon^n\hat{\mathcal{D}}^{}_n,\quad h
 \begin{equation}\hat{H}\psi=\qty(\hat{H}^{}_0+\epsilon\hat{V})\psi=E\psi.\label{shouaxian}\end{equation}
 由于能量是离散且有限的，所以上述问题在算符的矩阵元下可以化为二阶矩阵本征方程的扰动。为此我们先从通常的矩阵出发分析，再通过\textsl{Hilbert}空间回到量子系统。
 \subsubsection{矩阵的自本征微扰}
-方便起见这里讨论向量空间$\mathbb V$上的实对称矩阵$\vb{A}^{}_{ab}$，记其谱为$\text{Sp}\qty(\vb{A},\mathbb V)=\qty{\lambda^{(0)}_i}$，其扰动$\vb{B}^{}_{ab}$给出
+\noindent 方便起见这里讨论向量空间$\mathbb V$上的实对称矩阵$\vb{A}^{}_{ab}$，记其谱为$\text{Sp}\qty(\vb{A},\mathbb V)=\qty{\lambda^{(0)}_i}$，其扰动$\vb{B}^{}_{ab}$给出
 \begin{equation}\vb{A}^{}_{ab}\vb{e}^{(i)a}=\lambda^{(0)}_i\vb{e}^{(i)}_b,\quad\qty(\vb{A}^{}_{ab}+\epsilon\vb{B}^{}_{ab})\vb{f}^{(i)a}=\lambda^{}_i\vb{f}^{(i)}_b.\label{.,.,.,><>jh}\end{equation}
 我们将新主值也记为$\lambda$，\underline{是为了使得在$\epsilon=0$时仍为$\vb{A}^{}_{ab}$的本征方程*}，对于不同记号情况的讨论参考下文。因为矩阵的加法要求两个矩阵的性质相同，也就是处于同一个向量空间$\mathbb V$中，所以新的本征向量$\vb{f}^{(i)}$也可以对单位正交基$\qty{\vb{e}^{(i)}}$分解
 \begin{equation}\vb{f}^{(i)}=\sum_jc^{}_{ij}\vb{e}^{(j)},\quad c^{}_{ij}\neq0\in\mathbb R.\label{awrgtfse}\end{equation}
@@ -9694,7 +9694,7 @@ $$P^{}_{ba}=P^{}_{fa}(t\to\infty)=\frac{\pi}{\hbar^2}\abs{F^{}_{ba}}^2\delta\qty
 在第\ref{eindgu}中我们通过热平衡系统，建立了光子的自发发射，受激发射和自发吸收三个系数之间的关联，由式(\ref{ei4ei66})确定。但自发性并不依赖平衡假设，因此之前的推导缺乏普适性。这里我们从含时微扰出发，考察一个封闭的双能级系统。首先写出跃迁速率和粒子数的关系
 $$\Gamma^{}_{ba}=\Gamma^{}_{a\to b}=\frac{\text{单位时间内从}\ket{a}\text{跃迁到}\ket{b}\text{的粒子数}}{\ket{a}\text{的总粒子数}},$$
 记各能级的粒子数密度为$n^{}_i=N^{}_i/V$，封闭性要求$n^{}_a+n^{}_b=n=const$，不难得到$n^{}_i$的变化速率方程
-\begin{equation}\dt{n^{}_a}=-\dt{n^{}_b}=\Gamma^{}_{b\to a}n^{}_a-\Gamma^{}_{a\to b}n^{}_b=\Gamma^{}_{ab}n^{}_b-\Gamma^{}_{ba}n^{}_a.\label{midu77b}\end{equation}
+\begin{equation}\dt{n}^{}_a=-\dt{n}^{}_b=\Gamma^{}_{b\to a}n^{}_a-\Gamma^{}_{a\to b}n^{}_b=\Gamma^{}_{ab}n^{}_b-\Gamma^{}_{ba}n^{}_a.\label{midu77b}\end{equation}
 现在我们取非相对论性的电磁波微扰，这里只考虑矢量势$\epsilon\vb{A}$的影响。根据式(\ref{meiyon2e]})取动量的正则量子化，从而\textit{Hamiltonian}给出
 $$\hat{H}=\frac{1}{2m}\qty(\hat{\vb{p}}-e\epsilon\hat{\vb{A}})=\frac{\hat{\vb{p}}^2}{2m}-\frac{e}{m}\epsilon\hat{\vb{p}}\cdot\hat{\vb{A}}+\frac{e^2}{2m}\epsilon^2\hat{\vb{A}}^2.$$
 由于动量和矢量势对易，不难看到一级微扰给为
@@ -9714,7 +9714,7 @@ $$\mel**{n^{}_{\vb{k}}}{\hat{c}^{}_{\vb{k}}}{n^{}_{\vb{k}}+1}=\sqrt{n^{}_{\vb{k}
 带入式(\ref{ewuwr4})中，我们得到相应的跃迁速率为
 \begin{equation}\Gamma^{}_{ba}=\frac{2\pi}{\hbar}\abs{F^{}_{ba}}^2=\frac{2\pi}{\hbar}\sum_{\vb{k}}\abs{\mathcal M^{}_{\vb{k}}}^2n^{}_{\vb{k}},\quad\Gamma^{}_{ab}=\frac{2\pi}{\hbar}\abs{F^{}_{ab}}^2=\frac{2\pi}{\hbar}\sum_{\vb{k}}\abs{\mathcal M^{*}_{\vb{k}}}^2\qty(n^{}_{\vb{k}}+1).\end{equation}
 此处我们省略了$\delta$函数部分，只有在$\omega^{}_{ba}=\hbar\omega^{}_0$时上式才成立。在绝对值下$\abs{\mathcal M^{*}_{\vb{k}}}^2=\abs{\mathcal M^{}_{\vb{k}}}^2$，我们将系数整体记作$Y^{}_{\vb{k}}$，带入式(\ref{midu77b})中便得到粒子数密度的变化
-\begin{equation}\dt{n^{}_a}=-\dt{n^{}_b}=\sum_{\vb{k}}Y^{}_{\vb{k}}\qty(n^{}_{\vb{k}}+1)n^{}_b-\sum_{\vb{k}}Y^{}_{\vb{k}}n^{}_{\vb{k}}n^{}_a.\end{equation}
+\begin{equation}\dt{n}^{}_a=-\dt{n}^{}_b=\sum_{\vb{k}}Y^{}_{\vb{k}}\qty(n^{}_{\vb{k}}+1)n^{}_b-\sum_{\vb{k}}Y^{}_{\vb{k}}n^{}_{\vb{k}}n^{}_a.\end{equation}
 这里我们已经能够看到三个部分，为了和式(\ref{woeucnb00/})在形式上匹配，我们考虑将$n^{}_{\vb{k}}$和能量频谱密度相关联。\\
 \\
 对于跃迁导致的能量差$\hbar\omega^{}_0$，计算其相应的总能量
@@ -9724,9 +9724,9 @@ $$U=V\int\dfrac{\hbar \omega^3_0}{c^2\pi^2}n^{}_{\omega^{}_0}\dd\omega^{}_0=\int
 从而得到$n^{}_{\vb{k}}$以能量频谱密度表示为
 \begin{equation}n^{}_{\omega^{}_0}=\dfrac{c^2\pi^2}{\hbar \omega^3_0}I(T,\omega^{}_0).\end{equation}
 注意由于这里我们并不要求热平衡，因此$n^{}_{\omega^{}_0}$取均值没有意义。将粒子数变化写成频谱形式
-$$\dt{n^{}_a}=-\dt{n^{}_b}=\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}\qty(n^{}_{\omega^{}_0}+1)n^{}_b-\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}n^{}_{\vb{k}}n^{}_a,$$
+$$\dt{n}^{}_a=-\dt{n}^{}_b=\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}\qty(n^{}_{\omega^{}_0}+1)n^{}_b-\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}n^{}_{\vb{k}}n^{}_a,$$
 带入占有数密度得到
-\begin{equation}\dt{n^{}_a}=\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}\qty(\dfrac{c^2\pi^2}{\hbar \omega^3_0}I+1)n^{}_b-\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}\dfrac{c^2\pi^2}{\hbar \omega^3_0}In^{}_a=BIn^{}_a-(A+CI)n^{}_b.\end{equation}
+\begin{equation}\dt{n}^{}_a=\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}\qty(\dfrac{c^2\pi^2}{\hbar \omega^3_0}I+1)n^{}_b-\sum_{\omega^{}_0}Y^{}_{\omega^{}_0}\dfrac{c^2\pi^2}{\hbar \omega^3_0}In^{}_a=BIn^{}_a-(A+CI)n^{}_b.\end{equation}
 这样我们立马就可以读出相应的系数
 $$B=C=Y^{}_{\omega^{}_0}\dfrac{c^2\pi^2}{\hbar \omega^3_0},\quad A=Y^{}_{\omega^{}_0}={\hbar \omega^3_0}\dfrac{c^2\pi^2}B.$$
 这就是不依赖热平衡假设的\textsl{Einstein}关系(\textsl{Paul Dirac},\ 1927)，同时也是场的二次量子化的首次应用，因此也被当作量子场论的开端之一。关于其历史背景和更多细节，请参考\cite{L5} \S 1.3。
@@ -9950,9 +9950,9 @@ $$\eval{\psi^{}_0(x)}_{\Sigma^{}_{t^{}_0}}=\psi^{}_0(t^{}_0,\vb{r})\implies\eval
 注意这里的$\hat{\psi}^{}_0(t^{}_0,\vb{r})$是\textsl{Schrödinger}绘景，时间在固定后就只和空间相关，当然$\vb{r}\in\Sigma^{}_{t^{}_0}$。现在我们在该类空超曲面上，定义相互作用场的\textsl{Schrödinger}绘景位形算符$\hat{\psi}(x)$为
 \begin{equation}\eval{\hat{\psi}(x)}_{\Sigma^{}_{t^{}_0}}=\hat{\psi}\qty(t^{}_0,\vb{r})=\hat{\psi}^{}_0\qty(t^{}_0,\vb{r}).\end{equation}
 这就说明在参考时刻$t^{}_0$，相互作用场和自由场的二次量子化一致，从而保证我们可以使用自由场的占有数态，以及粒子数算符$\qty{\hat{c}^{}_{\vb{p}},\hat{c}^{\dagger}_{\vb{p}}}$。在上述定义下，我们写出该超曲面上的\textit{Hamiltonian}算符
-$$\hat{H}(t^{}_0)=\int_{\Sigma^{}_{t^{}_0}}\qty{\hat{h}^{}_{KG}\qty(\hat{\psi}^{}_0)+\hat{U}\qty(\hat{\psi})}\dd{V}=\hat{H}^{}_{KG}\qty(t^{}_0)+\int_{\Sigma^{}_{t^{}_0}}\hat{U}\qty(\hat{\psi}^{}_0)\dd{V}=\hat{H}^{}_{t0},$$
-若在相互作用下能量守恒，则相互作用场位形算符$\hat{\psi}$对时间的依赖由总演化算符$\hat{\tau}(t)=\exp(-i\hat{H}^{}_{t0}t)$确定，在\textsl{Heisenberg}绘景中写作
-\begin{equation}\hat{\psi}(t,\vb{r})=\hat{\tau}^\dagger\qty(t,t^{}_0)\hat{\psi}^{}_0\qty(t^{}_0,\vb{r})\hat{\tau}\qty(t,t^{}_0)=\exp(i\hat{H}^{}_{t0}(t-t^{}_0))\hat{\psi}^{}_0(t^{}_0,\vb{r})\exp(-i\hat{H}^{}_{t0}(t-t^{}_0)).\end{equation}
+$$\hat{H}(t^{}_0)=\int_{\Sigma^{}_{t^{}_0}}\qty{\hat{h}^{}_{KG}\qty(\hat{\psi}^{}_0)+\hat{U}\qty(\hat{\psi})}\dd{V}=\hat{H}^{}_{KG}\qty(t^{}_0)+\int_{\Sigma^{}_{t^{}_0}}\hat{U}\qty(\hat{\psi}^{}_0)\dd{V}=\hat{H}^{}_{t^{}_0},$$
+若在相互作用下能量守恒，则相互作用场位形算符$\hat{\psi}$对时间的依赖由总演化算符$\hat{\tau}(t)=\exp(-i\hat{H}^{}_{t^{}_0}t)$确定，在\textsl{Heisenberg}绘景中写作
+\begin{equation}\hat{\psi}(t,\vb{r})=\hat{\tau}^\dagger\qty(t,t^{}_0)\hat{\psi}^{}_0\qty(t^{}_0,\vb{r})\hat{\tau}\qty(t,t^{}_0)=\exp(i\hat{H}^{}_{t^{}_0}(t-t^{}_0))\hat{\psi}^{}_0(t^{}_0,\vb{r})\exp(-i\hat{H}^{}_{t^{}_0}(t-t^{}_0)).\end{equation}
 上式给出位形从参考时刻$t^{}_0$开始，相对于\textsl{KG}自由场的演化，此时相互作用的影响完全归结到算符中。\\
 \\
 这里再简单梳理一下参考时刻的性质：
@@ -12571,7 +12571,34 @@ $$\sigma^{}_{re}=\frac{\pi}{k^2}\frac{\qty(\Gamma^{}_{el}+\sum\limits_{a\neq el}
 \\
 对于非弹性散射而言，能量必然会有损失，这一点和第\ref{Cvb8889****}节的韧致辐射是类似的。在非弹性过程中，入射粒子的部分动能被转移到了系统的内部，这种平均能量损耗称为\textbf{有效滞阻 \textit{Effective Stopping}}。关于有效滞阻的结论，对于电子的情形可以参考\cite{L1}\S149，我们就不做过多的说明了。当然这同样也可以从光学势模型，可以参考\cite{NbCF}。
 \subsubsection{协变散射论}\label{Tadfi///}
-\noindent 现在
+\noindent 上面我们介绍了非相对论性散射理论，关注点是无穷远的入射和散射定态，到目前为止都没有涉及到具体的演化过程。但若我们想讨论相对论性散射，对于演化过程的研究是很有必要的，为此我们需要建立散射的演化表示，并过渡到协变理论。\\
+\\
+首先
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
