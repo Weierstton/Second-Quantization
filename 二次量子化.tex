@@ -5376,8 +5376,8 @@ $$\hat{F}^{(1)}=\hat{H}^{(1)}=\sum\limits_{\vb{k}\mu}\omega^{}_{\mu}(\vb{k})\qty
 这是声子场唯一的一级算符，也就是式(\ref{taipi880})。不失一般性的，我们这里重点讨论双声子系统，并且我们假定此相互作用修正$\hat{F}^{(2)}$是粒子间的碰撞导致的。记碰撞前后两粒子的动量为$\qty{\vb{k}^{}_1,\vb{k}^{}_2}\rightarrow\qty{\vb{k}'_1,\vb{k}'_2}$，这里动量我们用波矢表示，则碰撞要求动量守恒写为
 \begin{equation}\vb{k}^{}_1+\vb{k}^{}_2=\vb{k}'_1+\vb{k}'_2.\end{equation}
 同时我们记单个粒子碰撞前后的动量差为
-\begin{equation}\vb{W}=\vb{k}'_2-\vb{k}^{}_2=-\qty(\vb{k}'_1-\vb{k}^{}_1),\label{Laue66}\end{equation}
-则不难知道$\vb{W}\in\mathscr T^1_{\ 0}(RL)$，因为$\vb{k}^{}_i,\vb{k}'_i\in\mathscr T^1_{\ 0}(RL)$。当然此等式对于任意的入射和散射动量均成立，只要求$\vb{W}$是倒晶格系的矢量，晶格中碰撞运动这一性质称为\textbf{\textsl{Laue}方程}，是晶体学中的基础方程，我们不展开这一方面。由于式(\ref{pucaohsh})对于费米子系统和玻色子系统的形式均一样，因此我们不妨都讨论一下。当然我们知道声子是玻色子，所以我们后续重点关注玻色子的势能二次量子化算符。\\
+\begin{equation}\vb{q}=\vb{k}'_2-\vb{k}^{}_2=-\qty(\vb{k}'_1-\vb{k}^{}_1),\label{Laue66}\end{equation}
+则不难知道$\vb{q}\in\mathscr T^1_{\ 0}(RL)$，因为$\vb{k}^{}_i,\vb{k}'_i\in\mathscr T^1_{\ 0}(RL)$。当然此等式对于任意的入射和散射动量均成立，只要求$\vb{W}$是倒晶格系的矢量，晶格中碰撞运动这一性质称为\textbf{\textsl{Laue}方程}，是晶体学中的基础方程，我们不展开这一方面。由于式(\ref{pucaohsh})对于费米子系统和玻色子系统的形式均一样，因此我们不妨都讨论一下。当然我们知道声子是玻色子，所以我们后续重点关注玻色子的势能二次量子化算符。\\
 \\
 先考察自由费米气体系统，在第\ref{145ggvo}节中我们指出，费米子系统的矩阵元和自旋有关，方便起见我们依旧只讨论$s=\dfrac{1}{2}$的费米子，仍以$\sigma^{}_i=\pm1$标记极化。并且我们假设算符$\hat{F}$和自旋无关，也就是$\sigma=\sigma'$，同样的令粒子$1$在前，我们得到二级近似算符为
 \begin{equation}\hat{F}^{(2)}=\frac{1}{2}\sum\limits_{\forall\vb{k},\sigma}\mel**{\vb{k}^{}_1\sigma^{}_1,\vb{k}^{}_2\sigma^{}_2}{\hat{f}^{(2)}}{\vb{k}'_1\sigma^{}_1,\vb{k}'_2\sigma^{}_2}\hat{c}^{\dagger}_{\vb{k}^{}_1\sigma^{}_1}\hat{c}^{\dagger}_{\vb{k}^{}_2\sigma^{}_2}\hat{c}^{}_{\vb{k}'_2\sigma^{}_2}\hat{c}^{}_{\vb{k}'_1\sigma^{}_1}.\end{equation}
@@ -12316,7 +12316,7 @@ $$\Im \mathcal A\qty(\theta=0)=\frac{k}{4\pi}\sigma.$$
 这个关系称为\textbf{倒易定理}，它源自于\underline{单体物理定律对时间反演的允许}。注意到这个结论和式(\ref{tAdo-2023-*-})是不同的，它们共同确定了散射过程的对称性。\\
 \\
 以上是弹性散射理论的基础内容，对于其余的细节以及散射的性质等，可以参考\cite{L1}\S 125—130，这里就不具体展开了。需要说明的是，我们这里只考查了单个粒子，对于多粒子云的散射，我们还需要考虑到全同性和自旋的影响，比如参考\cite{L1}\S137和\S 140。并且这里只考察了定态的运动，对于从时间方面的讨论我们放在第\ref{Tadfi///}节中借助场说明。
-\subsubsection{不同能级的散射}
+\subsubsection{不同能级的弹性散射}\label{TaMpiytt}
 \noindent 上面我们建立了基础的非相对论性散射理论，现在来考察具体不同能级下的情况。\\
 \\
 首先来看低能情况，其适用于近似(\ref{Tdfgh//PNC})。对于有限作用的散射$a\sim O(1)$，条件$ka\ll1$给出$k\sim o(1)$，也就是$k\to 0$。这使得系统总能量$E\to0$，从而我们可以只考察一级\textsl{Born}近似(\ref{Gandg-*PO})，并且波矢差$\abs{\vb{q}}\propto k\to0$，因此我们可以忽略相位得到
@@ -12376,25 +12376,25 @@ $$U^{}_0=\frac{4\pi\alpha}{m}-\frac{U^2_0}{V}\sum_{\qty{\vb{k}}}\frac{2m}{\vb{k}
 这就是式(\ref{Zufi//-*-*})所确定的基态能$U^{}_0$的修正，这样我们可以得到更精确的超流相基态能，具体计算请参考第\ref{UHYB..**}节。我们进一步讨论$\alpha$的符号性质，假设$\alpha>0$，那么势能的修正为负，代表两个粒子向外发散，和宏观散射一致；若$\alpha<0$那么修正为正，这说明两个粒子互相吸引，而其就是费米超流(\ref{sdsv<>})所得到的约束$U^{}_0<0$，我们后续会看到，这是电子—声子交换的结果。\\
 \\
 其次来看高能散射，其适用于近似(\ref{Td**/PN-.3})。对于有限作用的散射$a\sim O(1)$，条件$ka\gg1$给出$k\to\infty$。当然需要注意，动量趋向于无穷大并不代表速度无穷大，这里我们依旧要求速度$v=k/m\ll c$要远小于真空光速，因为目前仍处于非相对论性环境。此时散射波函数的一级近似可以写为
-\begin{equation}\psi(\vb{r})=\exp(ikx)F(\vb{r}),\end{equation}
-这里$F$是对自由波的微小修正。暂时只考虑$x$方向上的情况，带入\textsl{Schrödinger}方程我们得到
+\begin{equation}\psi(\vb{r})=\exp(ikx)F(\vb{r}),\label{BiNFG-**}\end{equation}
+这里$F$是对自由波的微小修正，称为\textbf{程函近似}，其来自于准经典近似。暂时只考虑$x$方向上的情况，带入\textsl{Schrödinger}方程我们得到
 $$\begin{aligned}(U-E)\exp(ikx)F(x)&=\frac{1}{2m}\dv[2]{x}\qty{\exp(ikx)F(x)}\\&=\frac{1}{2m}\qty{-k^2\psi+2ik\exp(ikx)\dv{F}{x}+\exp(ikx)\dv[2]{F}{x}}.\end{aligned}$$
 对于单个高速粒子，微扰要求散射在近场满足$U\ll E$，因此我们有$\lim\limits_{x\to0}E=\dfrac{k^2}{2m}$。同时令$F$在近场中满足$\lim\limits_{x\to0}\dv*[2]{F}{x}\ll\dv*{F}{x}$，我们就得到$F$的方程
 \begin{equation}mU(x)F(x)=ik\dv{F(x)}{x}.\label{Gamd**f-/}\end{equation}
 还是引入粒子的速度$v=k/m$，我们得到$F$的解析式和波函数
 \begin{equation}\ln F(x)=\frac{1}{iv}\int_{-\infty}^x U(x)\dd x,\quad \psi=C\exp(ikx-\frac{i}{v}\int_{-\infty}^x U(x)\dd x).\label{GO8/.23[[}\end{equation}
 可见这和准经典近似(\ref{Scger})是一致的。现在我们通过\textsl{Cartesian}系将$y,z$坐标加入到$F$中，从而
-$$\bm{\Delta}\psi(\vb{r})=\qty(\dv[2]{x}+\dv[2]{y}+\dv[2]{z})\exp(ikx)F(x,y,z)\propto\qty(\dv[2]{y}+\dv[2]{z})F(y,z).$$
-同时若我们要求在近场有$\lim\limits_{r\to0}\dv*[2]{F}{y},\dv*[2]{F}{z}\ll\dv*{F}{x}$，则$F$满足的方程不变，进而波函数不变
+$$\bm{\Delta}\psi(\vb{r})=\qty(\pdv[2]{x}+\pdv[2]{y}+\pdv[2]{z})\exp(ikx)F(x,y,z)\propto\qty(\pdv[2]{y}+\pdv[2]{z})F(y,z).$$
+同时若我们要求在近场有$\lim\limits_{r\to0}\pdv*[2]{F}{y},\pdv*[2]{F}{z}\ll\pdv*{F}{x}$，则$F$满足的方程不变，进而波函数不变
 \begin{equation}\psi(\vb{r})=C\exp(ikx-\frac{i}{v}\int_{-\infty}^x U(x)\dd x),\quad r\to0.\end{equation}
 一般这里的近场范围可以延拓到$r\ll ka$，但是根据定义(\ref{B--*65})，散射振幅只存在于远场近似中，因此我们需要将$F$的积分延拓到远场。远场近似只是相对的，事实上我们可以只要求$r\gg a\sim \dfrac{U}{\abs{\grad U}}$，也就是远离散射的作用即可，我们就可以将积分延拓到无穷远，得到远场一级近似
-\begin{equation}\psi(y,z)=\psi(\bm{\rho})=C\exp(ikx-\frac{i}{v}\int_{\mathbb R} U(x)\dd x)=\exp(ikx)F(\bm{\rho}),\quad a\ll r\ll ka.\label{Ga254*f//}\end{equation}
-其中$\bm{\rho}$是垂直于传播轴的$y-z$平面上的径矢。这样我们就可以计算散射振幅了，从式(\ref{B95///5})出发，当然这里应该使用\textsl{Cartesian}系，再用式(\ref{Gamd**f-/})替换$U\psi$我们得到
-$$\mathcal A(\vb{q})=-\frac{m}{2\pi}\frac{ik}{m}\int\exp(-i\vb{k}^{}_s\cdot\vb{r})\pdv{F}{x}\exp(i\vb{k}^{}_i\cdot\vb{r})\dd x\dd y\dd z=\frac{k}{2\pi i}\eval{F(x)}_{-\infty}^\infty\int\exp(-i\vb{q}\cdot\bm{\rho})\dd y\dd z.$$
-其中$\vb{q}$是动量差，$k=\abs{\vb{k}^{}_s}=\abs{\vb{k}^{}_i}$。计算$F(x)$在边界处的值，根据式(\ref{GO8/.23[[})的定义不难得到
-$$\eval{F(x)}_{-\infty}^\infty=\exp(\frac{1}{iv}\int_{-\infty}^\infty U(x)\dd x)-\exp(\frac{1}{iv}\int_{-\infty}^{-\infty} U(x)\dd x)=F(\bm{\rho})-1,$$
+\begin{equation}\psi(y,z)=\psi(\bm{\rho})=C\exp(ikx-\frac{i}{v}\int_{\mathbb R} U(x,\bm{\rho})\dd x)=\exp(ikx)F(\bm{\rho}),\quad a\ll r\ll ka.\label{Ga254*f//}\end{equation}
+其中$\bm{\rho}$是垂直于传播轴的$y-z$平面上的径矢，使得三维矢径为$\vb{r}=(x,\bm{\rho})$。这样我们就可以计算散射振幅了，从式(\ref{B95///5})出发，当然这里应该使用\textsl{Cartesian}系，再用式(\ref{Gamd**f-/})替换$U\psi$我们得到
+$$\mathcal A(\vb{q})=-\frac{m}{2\pi}\frac{ik}{m}\int\exp(-i\vb{k}^{}_s\cdot\vb{r})\pdv{F}{x}\exp(i\vb{k}^{}_i\cdot\vb{r})\dd x\dd y\dd z=\frac{k}{2\pi i}\int\eval{F(x)}_{-\infty}^\infty\exp(-i\vb{q}\cdot\bm{\rho})\dd y\dd z.$$
+其中$\vb{q}$是动量差，$k=\abs{\vb{k}^{}_s}=\abs{\vb{k}^{}_i}=mv$。计算$F(x)$在边界处的值，根据式(\ref{GO8/.23[[})的定义不难得到
+$$\eval{F(x)}_{-\infty}^\infty=\exp(\frac{1}{iv}\int_{-\infty}^\infty U\dd x)-\exp(\frac{1}{iv}\int_{-\infty}^{-\infty} U\dd x)=F(\bm{\rho})-1,$$
 其中我们对$F(\infty)$带入了式(\ref{Ga254*f//})的记号，则散射振幅的零级近似就确定为
-\begin{equation}\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int \qty[F(\bm{\rho})-1]\exp(-i\vb{q}\cdot\bm{\rho})\dd^2\bm{\rho}.\end{equation}
+\begin{equation}\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int \qty[F(\bm{\rho})-1]\exp(-i\vb{q}\cdot\bm{\rho})\dd^2\bm{\rho}.\label{fKFN//33/}\end{equation}
 利用光学定理(\ref{Opfg,m..;;})可以得到总有效截面，$\mathcal A^{(0)}(\vb{k},\vb{k})=\mathcal A^{(0)}(\vb{q}=\vb{0})$，进而得到
 \begin{equation}\sigma=\frac{4\pi}{k}\Im\qty{\frac{k}{2\pi i}\int\qty[\exp(\frac{1}{iv}\int_{\mathbb R}U(x)\dd x)-1]\dd^2\bm{\rho}}=\int 4\sin^2\delta(\bm{\rho})\dd^2\bm{\rho},\quad\delta(\bm{\rho})=\frac{-1}{2v}\int_{\mathbb R}U(x)\dd x.\end{equation}
 若速度极高$v\sim c$使得$F\sim 1$，当然此时仍不考虑相对论效应，则我们将相位展开到一阶给出
@@ -12403,31 +12403,67 @@ $$\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int \qty[1+\frac{i}{v}\int_{\mathbb 
 \\
 我们还可以进一步的断言，高能散射只适用于小散射角情况，这由$F$的约束控制，读者可以自行证明，或参考\cite{L1}\S126。同时关于中心散射势场下，以分波法的推导，可以参考\cite{L1}\S 131，这里就不介绍了。\\
 \\
-我们还可以简单的讨论一下，$s$波散射中的共振现象。记$s$态的能量为$\varepsilon$，令其在势场$U$的作用范围$a$内为束缚态$\varepsilon\ll U<0$，自然的其对应负散射长度$\alpha<0$。现在令入射粒子的能量$E\sim \varepsilon$，称为负的\textbf{浅能级}。对于$s$波函数我们记为$\chi(r)$，则根据假设我们得到\textsl{Schrödinger}方程
+我们还可以讨论一下，$s$波散射中的共振现象。记$s$态的能量为$\varepsilon$，令其在势场$U$的作用范围$a$内为束缚态$\varepsilon\ll U<0$，自然的其对应负散射长度$\alpha<0$。现在令入射粒子的能量$E\sim \varepsilon$，称为负的\textbf{浅能级}。对于$s$波函数我们记为$\chi(r)=rR^{}_0$，注意现在$l=0$，则根据假设我们得到\textsl{Schrödinger}方程
 \begin{equation}-\frac{1}{2m}\dv[2]{\chi}{r}+U\chi=E\chi\implies \begin{cases}\displaystyle\chi''=2mU\chi,\quad r\lesssim a;&\\ \displaystyle\chi''+2mE\chi=0,\quad r\gg a.\end{cases} \end{equation}
 其中在势场范围内取$E\approx0$，在远场处取为自由波$U\approx0$，单粒子波函数$\chi$应该在这两个区域间连续。在边界条件$\chi(0)=0$下，不难写出波函数大致的表达式
 $$\chi\sim\begin{cases} \sinh(\vartheta r),\quad\vartheta^2\sim 2mU,\quad r\sim a;&\\ \sinh(kr), \quad k^2=2m\abs{E},\quad r\gg a.\end{cases}$$
-为了满足连续性，我们需要一个量来关联这两个函数，并且考虑到动量也有连续性，波函数的连续性可以由$\chi'/\chi$的连续性确定，其不依赖于归一化。在散射中心附近$\sin(kr)=0$，可以忽略外区的部分，因此它和粒子的能量无关，我们约定为
+为了满足连续性，我们需要一个量来关联这两个函数，其需要满足两个条件
+\begin{itemize}\item 不依赖于归一化常数，因为方程会影响归一化；\item 需要包含动量的连续性，因为这是同一个粒子的波函数，其由$\chi'$的连续性确定。\end{itemize}
+在这两个约束下，最佳的选择是相对导数$\chi'/\chi=(\ln\chi)'$，其不依赖于归一化。在散射中心附近$\sin(kr)=0$，可以忽略外区的部分，因此它和粒子的能量无关，我们约定为
 \begin{equation}\lim_{r\to0}\frac{\chi'}{\chi}=-\kappa=const.\label{..664//vg2423}\end{equation}
 由于$\kappa$和$E$无关，我们自然可以将这条件延拓到远场，但能量需要匹配。不妨取浅能级为$E=-\abs{\varepsilon}<0$，则远场函数就给出
 $$\chi''-2m\abs{\varepsilon}\chi=0\implies \chi=C\exp(-\sqrt{2m\abs{\varepsilon}}\,r),\quad r\to\infty.$$
 此时条件(\ref{..664//vg2423})适用于$r\to\infty$，因此将上式代入后我们得到
 \begin{equation}\kappa=\sqrt{2m\abs{\varepsilon}}>0,\label{X212C}\end{equation}
-可见在结果上这就是散射动量，符合动量的连续性。利用分波法，我们可以求得精确的低速$s$波散射振幅(\textsl{E. Wigner}，1933)
-\begin{equation}\mathcal A(k,\varepsilon)=-\frac{1}{\kappa+ik},\end{equation}
-利用光学定理(\ref{Opfg,m..;;})，考虑到$k^2=2m\abs{E}$以及式(\ref{X212C})，我们求得总有效截面
-\begin{equation}\sigma=\frac{4\pi}{k}\Im \mathcal A=\frac{4\pi}{k^2+\kappa^2}=\frac{2\pi}{m}\frac{1}{\abs{E}+\abs{\varepsilon}}.\end{equation}
+可见在结果上这就是散射动量，符合动量的连续性。现在对$s$波计算该量，径向函数$R^{}_0(r)$在远场应满足式(\ref{B--*65})的形式，对于$s$波应给出
+$$R^{}_0(r)=1+\mathcal A(\theta)\frac{\exp(ik^{}_sr)}{r},\quad r\to\infty,\quad k\to0,$$
+从而粒子波函数给出
+\begin{equation}\chi(r)=rR^{}_0=r+\mathcal A(\theta)\exp(ikr).\end{equation}
+带入定义(\ref{..664//vg2423})，我们得到
+$$\kappa=-\eval{\frac{\chi'}{\chi}}_{r=0}=\frac{1+ik\mathcal A}{\mathcal A}.$$
+由此我们可以求得精确的低速$s$波共振散射振幅，称为\textbf{\textsl{Wigner}振幅}(\textsl{E. Wigner}，1933)
+\begin{equation}\mathcal A^{}_{re}(k,\varepsilon)=-\frac{1}{\kappa+ik},\label{X2IJB09=C}\end{equation}
+利用光学定理(\ref{Opfg,m..;;})，考虑到$k^2=2m\abs{E}$以及式(\ref{X212C})，我们求得总共振有效截面
+\begin{equation}\sigma^{}_{re}=\frac{4\pi}{k}\Im \mathcal A^{}_{re}=\frac{4\pi}{k^2+\kappa^2}=\frac{2\pi}{m}\frac{1}{\abs{E}+\abs{\varepsilon}}.\end{equation}
 可见散射仍然是各向同性的，但截面现在和能量呈反比，在低能散射中$E\to0$，若我们取
 $$\abs{\varepsilon}\sim\abs{E}\sim o(1)\implies \sigma=\lim_{\abs{E}\sim o(1)}\,\frac{\pi}{m\abs{E}}=\infty,$$
-此时$\sigma$显著的发散。这和宏观体系的强迫振动中，外力频率和系统固有频率相近时振动幅度会增大的共振现象十分类似，因此这个结果也称为低能散射的\textbf{\textsl{Wigner}共振截面}，$\varepsilon$称为\textbf{共振能量}。需要着重说明的是，共振截面和近距离内粒子相互作用的细节无关，而是取决于整体的共振能量。\\
+此时$\sigma$显著的发散。这和宏观体系的强迫振动中，外力频率和系统固有频率相近时振动幅度会增大的共振现象十分类似，因此这个结果也称为低能散射的\textbf{\textsl{Wigner}共振截面}，$\varepsilon$称为\textbf{共振能量}。一般而言入射粒子的能量是正的$E>0$，此时远场为自由散射态$\chi''+k^2\chi=0$，从而对散射波取式(\ref{X212C})给出
+\begin{equation}\chi=C\exp(ikr),\quad \kappa=-ik=\kappa(E).\end{equation}
+注意此时$\kappa$是能量的函数，不是一个常数。若直接带入式(\ref{X2IJB09=C})，可以看到分母为
+$$\kappa+ik=0\implies \mathcal A^{}_{re}(k,E>0)=\frac{1}{\kappa+ik}\to\infty,$$
+也就是说散射振幅是发散的。可见对于正能粒子，其能量$E$是一个极点，但是这个极点在实数轴上，相应的处理是较为麻烦的。关于这个问题，我们后续会通过一个具体的情形说明。需要强调的是，共振截面和近距离内粒子相互作用的细节无关，而是取决于整体的共振能量。\\
 \\
-现在我们探讨一个具体的低能散射情形：假设低速粒子入射进有限势阱$U^{}_{min}<E<U^{}_{max}$中成为束缚态，虽然只有改变内态才能散射到远处，但我们目前忽略这种变化，只考虑弹性框架，称为\textbf{准定态近似}。此时粒子允许出射，但是它必须在势阱中先持续运动一段时间$\tau$，这个时间称为准定态的\textbf{寿命}。典型的准定态近似运动是衰变，寿命就是原子核的半衰期。根据不确定性原理，有限运动时间对应有\textbf{宽度}的能级，不妨记宽度为$\Gamma$，定义为
-\begin{equation}\Delta E\Delta t\sim 1\implies\Delta E=\Gamma\sim\frac{1}{\tau}.\end{equation}
-当然需要强调的是，宽度$\Gamma$应小于能级间的距离，也就是$\Gamma<E^{}_n-E^{}_{n\pm1}$，这可以从准定态近似证明，具体可以参考\cite{L1}\S 44。\\
+最后我们探讨一个具体的低能散射情形：假设低速粒子入射进有限势阱$U^{}_{min}<E<U^{}_{max}$中成为束缚态，虽然只有改变内态才能散射到远处，但我们目前忽略这种变化，只考虑弹性框架，称为\textbf{准定态近似}。此时粒子允许出射，但是它必须在势阱中先持续运动一段时间$\tau$，这个时间称为准定态的\textbf{寿命}。典型的准定态近似运动是衰变，寿命就是原子核的半衰期。根据不确定性原理，有限运动时间对应有\textbf{宽度}的能级，不妨记宽度为$\Gamma$，定义为
+\begin{equation}\Delta E\Delta t\sim 1\implies\Delta E=\Gamma\sim\frac{1}{\tau},\quad \Gamma\ll E.\label{AdhF=--[}\end{equation}
+此类能级称为\textbf{准离散能级}，当然需要强调的是，宽度$\Gamma$应小于能级间的距离，也就是$\Gamma<E^{}_n-E^{}_{n\pm1}$，这可以从准定态近似证明，具体可以参考\cite{L1}\S 44。\\
 \\
-对于此类散射的研究，可以完全采用唯象的方法。
+对于此类散射的研究，可以完全采用唯象的方法。由于粒子最终会出射，因此概率随时间应该减少，我们应该得到$\rho(t)\sim\exp(-at)$。根据定义我们应该有$\rho(\tau)\sim0$，因此必然得出$a\tau\to1$，于是由式(\ref{AdhF=--[})对于波函数可以写出
+$$a\tau\to1\implies a=a\tau\to1\implies \abs{\psi}^2(t)\sim\exp(-\Gamma t)\implies\psi(t)\sim \exp(-\frac{1}{2}\Gamma t).$$
+由于时间演化算符为$\exp(-i\mathcal Ht)\propto\exp(-\Gamma t/2)$，同时波函数只能精确到一个相位，我们将正入射能量记为$E^{}_0>0$，则总能量就为一个复数
+\begin{equation}\exp(-i\mathcal Ht)=\exp(-iE^{}_0t)\exp(-\frac{1}{2}\Gamma t)\implies \mathcal H=E^{}_0-\frac{i}{2}\Gamma,\quad E^{}_0,\Gamma>0.\end{equation}
+在此能量下动量给出$k=\sqrt{2m\mathcal H}=\Re k-i\Im k$，远场波函数相位为$\exp(ikr)\propto\exp(r\Im k)$，可见在远场$r\to\infty$波函数发散，称为\textbf{\textsl{Gamow}态}。为了解释这个现象，我们不妨考察关于此能级的共振。回到\textsl{Wigner}振幅(\ref{X2IJB09=C})，之前提到正能$E>0$是振幅的极点，且$\kappa=\kappa(E)$，准离散能级的实部同样为正，所以在解析延拓下我们得到极点条件
+\begin{equation}\eval{\qty{\kappa(E)+ik}}_{E=\mathcal H}=\kappa\qty(E^{}_0-\frac{i}{2}\Gamma)+ik=0.\end{equation}
+这就合理化了\textsl{Gamow}态的发散，但同时也使得结论(\ref{X2IJB09=C})不再适用。为此我们将$\kappa(E)+ik$整体按极点$\mathcal H$展开
+\begin{equation}\kappa(E)+ik=\kappa(\mathcal H)+ik+(E-\mathcal H)\eval{\dv{\kappa}{E}}_{\mathcal H}=\qty(E-E^{}_0+\frac{i}{2}\Gamma)\eval{\dv{\kappa}{E}}_{\mathcal H},\label{Dau128428734676}\end{equation}
+其中我们已经使用了极点条件。为了计算导数，我们可以将$\kappa(\mathcal H)$在实轴共振点$E^{}_0$附近展开到一阶，从极点条件得到
+$$\kappa(\mathcal H)+ik=\kappa\qty(E^{}_0)-\frac{i}{2}\Gamma\dv{\kappa}{E^{}_0}+i\sqrt{2m\qty(E^{}_0-\frac{i}{2}\Gamma)}=0.$$
+再次打开$k$的根号，近似到$\Gamma$的零阶项，并记$\sqrt{2mE^{}_0}=k\qty(E^{}_0)=k^{}_0$，我们得到
+$$\kappa\qty(E^{}_0)-\frac{i}{2}\Gamma\dv{\kappa}{E^{}_0}+ik^{}_0=0.$$
+一个复数严格为零的条件是实部虚部均为零，实部给出$\kappa\qty(E^{}_0)=0$，虚部给出关于$E^{}_0$的导数条件
+$$-\frac{1}{2}\Gamma\dv{\kappa}{E^{}_0}+k^{}_0=0\implies\eval{\dv{\kappa}{E}}_{E^{}_0}=\frac{2k^{}_0}{\Gamma}.$$
+不加证明的，我们直接将实极点$E^{}_0$替换为下移极点$\mathcal H$，得到
+\begin{equation}\kappa\qty(\mathcal H)=0,\quad\eval{\dv{\kappa}{E}}_{\mathcal H}=\frac{2k}{\Gamma}\sim\tau.\label{FniTYTRR}\end{equation}
+可见其正比于粒子在势阱内部的驻留时间。导数越大，说明$\kappa$随能量变化越剧烈，对应的宽度$\Gamma$越小，寿命越长。回代入式(\ref{Dau128428734676})，按式(\ref{X2IJB09=C})我们得到\textsl{Wigner}振幅为
+\begin{equation}\mathcal A^{}_{re}(E)=-\frac{1}{\kappa(E)+ik}=-\frac{\Gamma/2}{k\qty(E-E^{}_0+i\Gamma/2)}.\label{EfV.,,}\end{equation}
+这称为弹性散射的\textbf{\textsl{Breit-Wigner}振幅}，是准离散能级作为$s$波共振能级的散射振幅延拓，于是总共振截面由式(\ref{WzctaUV1})给出
+\begin{equation}\sigma^{}_{re}=4\pi\abs{\mathcal{A}}^2=\frac{\pi}{k^2}\frac{\Gamma^2}{\qty(E-E^{}_0)^2+\Gamma^2/4}.\label{Ludbnfff}\end{equation}
+当$E=E^{}_0$时，截面达到最大值 $4\pi/k^2$，这称为散射的\textbf{幺正极限}，其完整的理论可以参考\cite{L1}\S125。若入射能远离共振能量，$s$波的散射振幅就由势能决定，也就是散射长度$\alpha$(\ref{Y;;L34*--/})，从而低能准定态弹性散射的\textbf{\textsl{Breit-Wigner}总振幅}为
+\begin{equation}\mathcal A^{(s)}=-\alpha-\frac{\Gamma/2}{k\qty(E-E^{}_0+i\Gamma/2)},\label{F--*/*/85}\end{equation}
+相应的总弹性散射截面为(\textsl{G. Breit}，\textsl{E. Wigner}，1936)
+\begin{equation}\sigma^{(s)}=4\pi\alpha^2+\frac{\pi\Gamma}{k^2}\frac{\Gamma+4\alpha k\qty(E-E^{}_0)}{\qty(E-E^{}_0)^2+\Gamma^2/4}.\label{Cf12--13.1}\end{equation}
+注意到此时共振部分中包含干涉项$4\alpha k\qty(E-E^{}_0)$，这意味着共振峰在$\alpha\neq0$时呈现出一种非对称结构。再次强调，我们这里的推导完全是唯象的，只是将\textsl{Wigner}振幅解析延拓至全复平面，严格的推导仍需依赖分波法。但是上述思路仍具有方法论意义，它并不依赖势的对称性，因此是普适的。\\
 \\
-关于低能共振散射的更多细节请参考\cite{L1}\S 133和\S134，这里就不做过多展开了。值得说明的一点，上面我们计算的结果是$\kappa$为正常数，这是由波函数在远场的收敛性决定的，但改变$U(r)$会改变波函数的选择，使得我们从式(\ref{..664//vg2423})得到
+关于共振散射的更多细节请参考\cite{L1}\S133和\S134，这里就不做过多展开了。值得说明的一点，上面我们计算的结果是$\kappa$为正常数，这是由波函数在远场的收敛性决定的，但改变$U(r)$会改变波函数的选择，使得我们从式(\ref{..664//vg2423})得到
 $$\kappa=-\sqrt{2m\abs{\varepsilon}}\to0^-,$$
 即允许$\kappa$微负。这样虽然$\abs{\varepsilon}=2m\kappa^2$依旧成立，但它不再代表$U$的$s$波能量，称为一个\textbf{虚能级}。这个能级在原子核的散射中较为重要的应用，包括了衰变的准定态过程，请参考\cite{L1}\S 134和\S 138。这里我们邀请读者，通过\textsl{Fermi}黄金法则(\ref{ewuwr4})重构上述的散射理论，以便更好的和后续的协变散射理论接轨。
 \subsubsection{非相对论性非弹性碰撞简介}
@@ -12459,15 +12495,15 @@ $$\sigma=\frac{1}{j^{}_0}\oint \vb{j}^{}_s\cdot\dd\vb{S}=-\frac{2m}{k}\int W(r)\
 \begin{equation}\sigma^{}_{tot}=\sigma^{}_{ine}+\sigma^{}_{el}=\frac{2m}{k}\int W(r)\rho^{}_s\dd V+\qty(\frac{m}{2\pi})^2\int\abs{\mel**{\vb{k}^{}_f}{\hat{\mathcal T}^{}_{el}}{\vb{k}^{}_i}}^2\dd\mathcal O.\end{equation}
 由于非弹性部分是作为弹性道的吸收出现的，因此光学定理(\ref{Opfg,m..;;})就应该写作
 \begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma^{}_{tot}.\label{76tfGFV}\end{equation}
-这一点可以通过分波法严格证明，请参考\cite{L1}\S142。在一级\textsl{Born}近似下，可以计算出非弹性道截面为
-\begin{equation}\sigma^{}_{ine}=\frac{2m}{k}\int W(r)\dd V.\label{JufG69.3}\end{equation}
+这一点可以通过分波法严格证明，请参考\cite{L1}\S142。在一级\textsl{Born}近似下，非弹性道截面为
+\begin{equation}\sigma^{(1)}_{ine}=\frac{2m}{k}\int W(r)\dd V.\label{JufG69.3}\end{equation}
 关于光学势更具体的理论，可以参考\cite{Linif}。现在我们引入一个等效势$U^{}_{\text{eff}}$，使得其在一级\textsl{Born}近似下确定无散射的振幅
 \begin{equation}\mathcal A^{(0)}_{el}(0,E)=-\frac{m}{2\pi}\int U^{}_{\text{eff}}(r)\rho^{}_s\dd V.\end{equation}
 这里我们将波矢用能量$E$代表。假设入射是粒子数为$N$的粒子束，我们就得到一个在介质中散射的平均恒定势能
 \begin{equation}\expval{U^{}_{\text{eff}}}=\frac{N}{V}\int U^{}_{\text{eff}}(r)\rho^{}_s\dd V=-\frac{2\pi}{m}\frac{N}{V}\mathcal A^{(0)}_{el}(0,E).\end{equation}
 这是把介质中所有$N$个粒子的等效势能场，对介质的体积$V$求平均得到的。我们可以简单的认为，这同样是一种平均场理论，由于非弹性道的吸收而导致的衰减由$\mathcal A^{(0)}_{el}(0,E)$确定，进而这个平均恒定势能决定了介质的散射性质。\\
 \\
-现在我们来考察低能$s$波散射，关于微扰的量级条件(\ref{Tdfgh//PNC})不变。在光学势模型下，散射长度仍由式(\ref{Y;;L34*--/})确定，写出
+现在我们来考察低能$s$波散射，关于微扰的量级条件(\ref{Tdfgh//PNC})不变。在光学势模型下，散射振幅仍由散射长度(\ref{Y;;L34*--/})确定，写出
 \begin{equation}\alpha=-\mathcal A^{(0)}=\frac{m}{2\pi}\int(V-iW)\dd V^{}_u=\alpha'-i\alpha''.\end{equation}
 可见此时散射长度是一个复数，其虚部决定了非弹性道的截面。根据光学势的性质，我们不难得到从式(\ref{Yan234*//})得到弹性道的总截面
 \begin{equation}\sigma^{}_{el}=4\pi\abs{\alpha}^2.\label{duiyingB}\end{equation}
@@ -12487,22 +12523,58 @@ $$\mathcal A=\mathcal A^{(0)}+\mathcal A^{(1)}=-\alpha+ik\alpha^2=-\alpha\qty(1-
 \begin{equation}\sigma^{}_{ine}=\sigma^{}_{tot}-\sigma^{}_{el}=\frac{4\pi}{k}\abs{\Im\alpha}\qty(1-2k\abs{\Im\alpha}).\end{equation}
 这些结果就确定了非弹性散射的特性，当然需要强调的是，上述结论的成立前提和约束(\ref{Bufg123424==-})一样，也就是$U(r)\sim r^{-n},\ n>3$。而非弹性截面$\sigma^{}_{ine}\sim v^{-1}$这个性质，可以证明其只需要平方反比，也即是$U(r)\sim r^{-2}$即可。这一点的证明可以参考\cite{L1}\S 143，这里就不展开了。\\
 \\
-现在来考察高能散射。
+现在来考察高能散射，这里仍适用于近似(\ref{Td**/PN-.3})，微扰条件为$ka\gg1$和$E\gg\abs{U}$。我们这里考虑被粒子云散射的情况，记粒子云中各粒子的径矢为$\vb{R}^{}_a$，粒子云的第$i$个内态总波函数为$\Phi^{}_i=\Phi^{}_i\qty(\vb{R}^{}_1,\vb{R}^{}_2,\ldots)$，于是入射粒子和粒子云系统的总波函数可以写作
+\begin{equation}\psi\qty(\vb{r},\vb{R}^{}_1,\vb{R}^{}_2,\ldots)=\varphi\qty(\vb{r};\vb{R}^{}_1,\vb{R}^{}_2,\ldots)\Phi^{}_i\qty(\vb{R}^{}_1,\vb{R}^{}_2,\ldots).\end{equation}
+其中$\varphi$是被散射粒子的散射波函数，其矢径为$\vb{r}$。令该粒子和粒子云各粒子之间的相互作用为$U^{}_a\qty(\vb{r}-\vb{R}^{}_a)$，假设动量差$q\to0$，散射粒子在远场处的动量记为$k=k^{}_s$，我们写出$\varphi$的一级近似\textsl{Schrödinger}方程
+\begin{equation}\qty[-\frac{1}{2m}\bm{\Delta}+\sum_aU^{}_a\qty(\vb{r}-\vb{R}^{}_a)]\varphi=\frac{k^2}{2m}\varphi.\end{equation}
+由于动量差很小，因此我们假定散射中能量守恒。在程函近似下，$\varphi$的形式应该由式(\ref{BiNFG-**})确定，因此我们将$\varphi$写作
+\begin{equation}\varphi=F\qty(\vb{e},\vb{n};\vb{R}^{}_1,\vb{R}^{}_2,\ldots)\exp(i\vb{k}\cdot\vb{r}).\end{equation}
+其中两个单位向量为$\vb{e}=\vb{r}/r$，$\vb{n}=\vb{k}/k=\vb{k}^{}_s/k^{}_s$，从而总波函数为
+\begin{equation}\psi=F\Phi^{}_i\exp(i\vb{k}\cdot\vb{r}).\end{equation}
+这确定了碰撞前处于$i$态的粒子云导致的散射，此处我们假设入射粒子的能量改变极小。由于非弹性散射会改变粒子云的内态，我们需要将总波函数用终态表示，用矢量符号记$\Phi^{}_i=\ket{i}$，插入一组完备末态
+$$\ket{\psi}=\sum_f\ket{f}\mel**{f}{F}{i}(\vb{e},\vb{n})\exp(i\vb{k}\cdot\vb{r}).$$
+这里我们将$F$看作算符，写成矩阵元形式为
+\begin{equation}\psi=\sum_f\Phi^{}_fC^{}_{fi}(\vb{e},\vb{n})\exp(i\vb{k}\cdot\vb{r}),\quad C^{}_{fi}=\mel**{f}{F}{i}.\end{equation}
+后续的理论可以使用第\ref{TaMpiytt}节的内容，同样的从沿$x$轴的一维情形推广至三维，在小散射角假设下我们仍有$\lim\limits_{r\to0}\partial^2_y,\partial^2_z=0$，程函近似变为式(\ref{Ga254*f//})，写作
+\begin{equation}\begin{aligned}&\displaystyle\psi=\sum_f\ket{f}\mel**{f}{F}{i}(\bm{\rho},\qty{\vb{R}^{}_a})\exp(i\vb{k}\cdot\vb{r}),\\&\displaystyle F(\bm{\rho},\qty{\vb{R}^{}_a})=\sum_a\exp(-\frac{i}{v}\int_{-\infty}^x U^{}_a\qty[(x,\bm{\rho})-\vb{R}^{}_a]\dd x).\end{aligned}\end{equation}
+弹性道按定义为$i=f$内态不变，从而我们得到远场弹性波函数
+$$\psi^{}_{el}=\mel**{i}{F}{i}(\bm{\rho},\qty{\vb{R}^{}_a})\exp(i\vb{k}\cdot\vb{r})\ket{i}=\varphi\Phi^{}_i,$$
+可见弹性散射振幅和$\mel**{i}{F}{i}(\bm{\rho})=\expval{F}(\bm{\rho})$有关。通过类似的计算，我们由式(\ref{fKFN//33/})得到弹性散射振幅
+\begin{equation}\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int\qty[\expval{F}(\bm{\rho})-1]\exp(-i\vb{q}\cdot\bm{\rho})\dd^2\bm{\rho},\end{equation}
+也就是将原式中的$F$改为对初态的均值$\expval{F}$，注意其是一个复数。总散射截面根据光学定理(\ref{76tfGFV})确定为
+\begin{equation}\sigma^{}_{tot}=\frac{4\pi}{k}\Im \mathcal A\qty(\vb{0})=2\int\qty[1-\Re\expval{F}(\bm{\rho})]\dd^2\bm{\rho},\label{CVrt1}\end{equation}
+而弹性道总截面经过计算给出
+\begin{equation}\sigma^{}_{el}=\int\abs{\expval{F}-1}^2\dd^2\bm{\rho},\label{CVrt2}\end{equation}
+从而非弹性道总截面就给出
+\begin{equation}\sigma^{}_{ine}=\sigma^{}_{tot}-\sigma^{}_{el}=\int\qty[1-\abs{\expval{F}}^2(\bm{\rho})]\dd^2\bm{\rho}.\label{CVrt3}\end{equation}
+可以通过分波法证明，这些结论和一般的公式是一致的，比如非弹性道截面在微扰展开到一阶后就回到式(\ref{JufG69.3})。具体内容可以参考\cite{L1}\S142和\S152，这里不展开。\\
 \\
-对于非弹性散射而言，能量必然会有损失，这一点和第\ref{Cvb8889****}节的韧致辐射是类似的。在非弹性过程中，入射粒子的部分动能被转移到了系统的内部，为了表征这种平均能量损耗，我们引入\textbf{有效滞阻 \textit{Effective Stopping}}。根据定义反应道对应内态的变换，因此我们
-
-
-
-
-
-
-
-
-
-
-
-
+最后我们来讨论低能非弹性散射的准定态近似，此时非弹性道是纯共振的，因此其存在只会影响弹性道在准离散能级处的共振，而不会影响远离共振的势能部分。关于这个结论在原子核中的证明，请参考\cite{L1}\S145。现在记各输出道的编号为$a$，能级的宽度是可加量，并且假设此散射只有一个弹性道，则输出道的总宽度为
+\begin{equation}\Gamma=\sum_a\Gamma^{}_a=\Gamma^{}_{el}+\sum_{a\neq el}\Gamma^{ine}_a=\Gamma^{}_{el}+\Gamma^{}_{ine},\quad \Gamma^{ine}_a\ll\Gamma^{}_{el}.\end{equation}
+其中我们单独将弹性道的宽度列出，并且弹性道的宽度远大于非弹性道的宽度，。根据$s$波弹性\textsl{BW}散射振幅公式(\ref{EfV.,,})，我们只需要将分母的$\Gamma$替换为$\Gamma^{}_{el}$，就得到$s$波在准离散能级处的弹性\textsl{BW}振幅
+\begin{equation}\mathcal A^{el}_{re}=-\frac{\Gamma^{}_{el}/2}{k\qty(E-E^{}_0+i\Gamma/2)}.\end{equation}
+注意分子不替换，因为根据推导分子中的$\Gamma$来自于导数(\ref{FniTYTRR})的倒数，其对应粒子的寿命，自然不同的输出道寿命不同。而分母中的$\Gamma$来自于\textsl{Wigner}振幅(\ref{X2IJB09=C})在准离散能级作为极点的一级近似，这是一个全局量，和输出分道无关。因为非弹性道不影响势散射，所以$s$波的准定态总弹性散射振幅仍由式(\ref{F--*/*/85})确定，做替换得到
+\begin{equation}\mathcal A^{(s)}_{el}=-\alpha-\frac{\Gamma^{}_{el}/2}{k\qty(E-E^{}_0+i\Gamma^{}_{el}/2)}.\end{equation}
+总弹性道截面由式(\ref{Cf12--13.1})给出
+\begin{equation}\sigma^{(s)}_{el}=4\pi\alpha^2+\frac{\pi\Gamma^{}_{el}}{k^2}\frac{\Gamma^{}_{el}+4\alpha k\qty(E-E^{}_0)}{\qty(E-E^{}_0)^2+\Gamma^2/4}.\end{equation}
+其余的都是纯共振的非弹性道，每一个振幅由各自的宽度$\Gamma^{ine}_a$确定，但这个共振的效果也包含了弹性道宽度的贡献。这一点不难证明，对共振截面(\ref{Ludbnfff})带入$\Gamma$并直接打开给出
+$$\sigma^{}_{re}=\frac{\pi}{k^2}\frac{\qty(\Gamma^{}_{el}+\sum\limits_{a\neq el}\Gamma^{ine}_a)^2}{\qty(E-E^{}_0)^2+\Gamma^2/4}\approx\sigma^{el}_{re}+\frac{\pi}{k^2}\sum_{a\neq el}\frac{\Gamma^{}_{el}\Gamma^{ine}_a}{\qty(E-E^{}_0)^2+\Gamma^2/4}.$$
+我们省略了二阶小量$\qty(\Gamma^{ine}_a)^2$，这样各非弹性道的共振截面为
+\begin{equation}\sigma^{int}_{re,a}=\frac{\pi}{k^2}\frac{\Gamma^{}_{el}\Gamma^{ine}_a}{\qty(E-E^{}_0)^2+\Gamma^2/4},\end{equation}
+而总非弹性道的共振截面为
+\begin{equation}\sigma^{int}_{re}=\sum_a\sigma^{int}_{re,a}=\frac{\pi}{k^2}\frac{\Gamma^{}_{el}\Gamma^{}_{ine}}{\qty(E-E^{}_0)^2+\Gamma^2/4}.\end{equation}
+于是总输出道的共振截面给出
+\begin{equation}\sigma^{}_{re}=\sigma^{int}_{re}+\sigma^{el}_{re}=\frac{\pi}{k^2}\frac{\Gamma^{}_{el}\qty(\Gamma^{}_{ine}+\Gamma^{}_{el})}{\qty(E-E^{}_0)^2+\Gamma^2/4}=\frac{\pi}{k^2}\frac{\Gamma^{}_{el}\Gamma}{\qty(E-E^{}_0)^2+\Gamma^2/4}.\end{equation}
+可见如果在共振能附近$\alpha\to0$，则弹性道和非弹性道共振截面可以表示为
+\begin{equation}\sigma^{el}_{re}=\sigma^{}_{re}\frac{\Gamma^{}_{el}}{\Gamma},\quad \sigma^{ine}_{re}=\sigma^{}_{re}\frac{\Gamma^{}_{ine}}{\Gamma}.\end{equation}
+对于更多的细节，请参考\cite{L1}\S145，而相应的光学势模型可以从式(\ref{CVrt1})，(\ref{CVrt2})和(\ref{CVrt3})得到，因为这三式是精确结果，光学势本质就是平均后的结果，这一点从一阶展开也能证明。\\
+\\
+对于非弹性散射而言，能量必然会有损失，这一点和第\ref{Cvb8889****}节的韧致辐射是类似的。在非弹性过程中，入射粒子的部分动能被转移到了系统的内部，这种平均能量损耗称为\textbf{有效滞阻 \textit{Effective Stopping}}。关于有效滞阻的结论，对于电子的情形可以参考\cite{L1}\S149，我们就不做过多的说明了。当然这同样也可以从光学势模型，可以参考\cite{NbCF}。
 \subsubsection{协变散射论}\label{Tadfi///}
+\noindent 现在
+
+
+
 
 \subsection{外场中的Dirac场}\label{dinm,a665rb2}
 
