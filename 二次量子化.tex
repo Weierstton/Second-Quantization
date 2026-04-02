@@ -4,7 +4,8 @@
 \usepackage{tikz,capt-of,tikz-3dplot,pgfplots,siunitx,ifthen,xcolor}\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing,angles, quotes}\colorlet{mydarkblue}{blue!30!black}\colorlet{myred}{red!50!black}\colorlet{mydarkred}{red!60!black}\tikzset{midarr/.style={decoration={markings,mark=at position #1 with{\arrow{stealth}}},postaction={decorate}},midarr/.default=0.5}\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.03*\ymax) --++ (#2-180:0.06*\ymax)}
 \usepackage{tocbibind}\usepackage[compat=1.1.0]{tikz-feynman}\usepackage[title,titletoc]{appendix}\renewcommand{\appendixpagename}{附录}\renewcommand{\appendixtocname}{附录}\renewcommand{\appendixname}{}
 \usepackage[titles,subfigure]{tocloft}\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape}\newcommand*{\dt}[1]{\accentset{\mbox{\small\bfseries .}}{#1}}\newcommand*{\ddt}[1]{\accentset{\mbox{\small\bfseries ..}}{#1}}\newcommand*{\dddt}[1]{\accentset{\mbox{\small\bfseries ...}}{#1}}\usepackage{simpler-wick}
-\title{二次量子化理论概述\\ 及其在场论中的应用介绍（第一版）\\[1ex]\large ——朗道十卷部分导读}\author{Schlichting\\}\date{2024/10/04 - \the\year/\ifnum\month<10 0\fi\the\month/\ifnum\day<10 0\fi\the\day}\begin{document}
+\title{二次量子化理论概述\\ 及其在场论中的应用介绍（第一版）\\[1ex]\large ——朗道十卷部分导读}\author{Schlichting\\}\date{2024/10/04 - \the\year/\ifnum\month<10 0\fi\the\month/\ifnum\day<10 0\fi\the\day}
+\begin{document}
 
 \begin{titlepage}\centering\pgfmathsetlengthmacro{\coverwidth}{\paperwidth-4cm}\pgfmathsetlengthmacro{\coverheight}{\paperheight-4cm}\begin{tikzpicture}[remember picture,overlay,shift={(current page.center)},x=\coverwidth,y=\coverheight]\shade[bottom color=blue!80!black,top color=green!70!black](current page.north west) rectangle(current page.south east);\begin{feynman}[large]\vertex at(-0.5,0.15)(a){\textcolor{red}{$\mu^{-}$}};\vertex[right=of a](b);\vertex[above right=of b](f1){\textcolor{orange}{$\nu_{\mu}$}};\vertex[below right=of b](c);\vertex[above right=of c](f2){\textcolor{magenta}{$\overline\nu_{e}$}};\vertex[below right=of c](f3){\textcolor{cyan}{$e^{-}$}};\diagram*{(a)--[fermion,red](b)--[fermion,orange](f1),(b)--[boson,edge label'=\textcolor{yellow}{$W^{-}$},green!60!black](c),(c)--[anti fermion,magenta](f2),(c)--[fermion,cyan](f3),};\end{feynman}\tikzfeynmanset{every fermion={brown}}\begin{feynman}[large]\vertex(a1)at(-0.5,-0.2){\textcolor{red}{\(\overline b\)}};\vertex[right=1cm of a1](a2);\vertex[right=1cm of a2](a3);\vertex[right=1cm of a3](a4){\textcolor{cyan!30!pink}{\(b\)}};\vertex[right=1cm of a4](a5);\vertex[right=2cm of a5](a6){\textcolor{green}{\(u\)}};\vertex[below=2cm of a1](b1){\textcolor{red}{\(d\)}};\vertex[right=1cm of b1](b2);\vertex[right=1cm of b2](b3);\vertex[right=1cm of b3](b4){\textcolor{cyan!30!pink}{\(\overline d\)}};\vertex[below=2em of a6](b5){\textcolor{green}{\(\overline d\)}};\vertex[above=of a6](c1){\textcolor{cyan}{\(\overline u\)}};\vertex[above=2em of c1](c3){\textcolor{magenta}{\(d\)}};\vertex at($(c1)!0.5!(c3)-(1cm,0)$)(c2);\diagram*{{[edges=fermion](b1)--(b2)--(a2)--(a1),(b5)--(b4)--(b3)--(a3)--(a4)--(a5)--(a6),},(a2)--[boson,edge label=\textcolor{cyan!40!purple}{$W$},orange](a3),(b2)--[boson,edge label'=\textcolor{red!30!green}{$W$},orange!50!yellow](b3),(c1)--[fermion,out=180,in=-45,blue!50!yellow](c2)--[fermion, out=45, in=180](c3),(a5)--[boson,bend left,edge label'=\textcolor{yellow}{$W^{-}$},green!60!black](c2),};\draw[decoration={brace}, decorate](b1.south west)--(a1.north west)node[pos=0.5, left,purple!20!cyan] {\(B^{0}\)};\draw[decoration={brace}, decorate](c3.north east)--(c1.south east)node [pos=0.5, right,blue!20!cyan]{\(\pi^{-}\)};\draw[decoration={brace},decorate](a6.north east)--(b5.south east)node[pos=0.5,right,red!20!orange]{\(\pi^{+}\)};\end{feynman}\begin{scope}[shift={(0.1,0)}]\begin{axis}[xmin=0,xmax=2.3,ymin=-0.3,ymax=2.3,axis lines=center,restrict y to domain=0:50,ticks=none,ylabel=$C(T)$,xlabel=$T$,axis line style={color=yellow!40!black,line width=1.5pt},]\addplot[domain=0.2:1,pink!30!black,samples=400,very thick]{\x^3+(3/4+\x^(-1)+\x^(-2))*(\x^(0.5))*e^(-1/\x)};\addplot[domain=1:2,pink!50!black,very thick]{\x^(-1.5)};\addplot[domain=0.8:1,black,dashed,thick]{\x^(-1.5)};\draw[dotted,thick,orange!40!pink,very thick](axis cs:1,0)node[below]{$T^{}_c$}--(axis cs:1,3);\node[green!30!black,scale=2]at(axis cs:0.5,1.5){He$^\text{\RomanNumeralCaps{2}}$};\node[orange!30!black,scale=2]at(axis cs:1.6,1.2){He$^\text{\RomanNumeralCaps{1}}$};\end{axis}\end{scope}\begin{scope}[shift={(0.1,-0.35)}]\begin{axis}[xmin=-1.2,xmax=1.2,ymin=-.5,ymax=.5,axis lines=center,axis on top=false,rotate=90,restrict y to domain=-20:50,xlabel=$h$,ylabel=$\eta^{}_*$,ticks=none,y dir=reverse,ylabel style={at={(axis cs:1.1,0.05)},anchor=south,line width=1.5pt},xlabel style={at={(axis cs:0.05,.5)},anchor=west},axis line style={color=red!40!black,line width=1.5pt},height=.5\textwidth]\addplot[mark=none,draw=orange!30!pink,thin,domain=-1.1:-.894,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[dashed,mark=none,draw=red!30!green,domain=-.894:-.51,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[dashed,mark=none,draw=red!30!green,,domain=.51:.894,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[mark=none,draw=orange!30!pink,domain=.894:1.1,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\addplot[dotted,mark=none,draw=black!30!white,domain=-.51:.51,samples=200,very thick]{2*\x*(-.4+.5*\x^2)};\draw[dotted,yellow!60!pink,very thick](axis cs:1.02,.276)node[right,above]{$C$}--(axis cs:-0.525,.276)node[left,]{$B'$};\draw[dotted,yellow!60!pink,very thick](axis cs:-1.02,-.276)node[right,below]{$C'$}--(axis cs:0.525,-.276)node[right]{$B$};\draw[cyan!50!orange,very thick](axis cs:0.9,0)node[right]{$A$}--(axis cs:-0.9,0)node[below,right]{$A'$};\end{axis}\end{scope}\foreach\x in{-0.5,-0.4,...,0.5}{\foreach\y in{-0.5,-0.4,...,0.5}{\fill[blue!30](\x,\y)circle(0.002);}}\fill[blue!10,opacity=0.65](-0.6,0.25)rectangle(0.6,0.55);\node[align=center]at(0,0.4){\fontsize{22}{26}\selectfont\bfseries A brief introduction of the Second Quantization\\ \\ \fontsize{20}{26}\selectfont \bfseries and its applications in the Field Theories \\ \\ \fontsize{16}{26}\selectfont-- Partially guided reading of the \\ \fontsize{16}{26}\textit{Course of Theoretical Physics,\ \ Landau and Lifchitz}};\fill[white,opacity=0.8](-0.8,-0.55) rectangle (0.8,-0.45);\node[align=center]at(0,-0.5){\fontsize{20}{24}\selectfont by Schlichting\quad First Edition\quad in Chinese};\end{tikzpicture}\end{titlepage}
 \maketitle\thispagestyle{empty}\clearpage\setcounter{page}{0}\pagenumbering{roman}
@@ -341,16 +342,16 @@ $$f^{(2)}_{ab,ijkl}=\mel**{i^{}_a,j^{}_b}{\hat{f}^{(2)}_a}{k^{}_a,l^{}_b}=f^{(2)
 \begin{equation}\mel**{N^{}_{\mu}}{\hat F^{(2)}}{N^{}_{\mu}}=f^{(2)}_{ijkl}\sqrt{N^{}_iN^{}_jN^{}_kN^{}_l},\end{equation}
 这里省略粒子号下标$a$了。总之，根据此方法可以构造任意的物理量算符$\hat F^{(n)}$，直至包含所有粒子$\hat F^{(N)}$，并且可以完全用占有数态及其矩阵元来描述。
 
-\subsection{可变粒子数算符}
+\subsection{可变占有数算符}
 
-\noindent 现在来正式推广产生和湮灭算符。回顾到谐振子系统的这两个算符，定义玻色子系统相对应的\textbf{粒子数算符 \textit{Quantity Operator}}为：
+\noindent 现在来正式推广产生和湮灭算符。回顾到谐振子系统的这两个算符，定义玻色子系统相对应的\textbf{占有数算符 \textit{Occupation Operator}}为：
 \begin{itemize}\item\textbf{产生算符 \textit{Creation}}：$\hat{c}^{\dagger}$\begin{equation}\hat{c}^{\dagger}_i\ket{N^{}_1, N^{}_2,\ldots,N^{}_i,\ldots\ldots}=\sqrt{N^{}_i+1}\ket{N^{}_1,\ldots,N^{}_i+1,\ldots\ldots}, \label{crea}\end{equation}
 \item\textbf{湮没算符 \textit{Annilation}}：$\hat{c}$\begin{equation}\hat{c}^{}_i\ket{N^{}_1,N^{}_2,\ldots,N^{}_i,\ldots\ldots}=\sqrt{N^{}_i}\ket{N^{}_1,\ldots,N^{}_i-1,\ldots\ldots}.\label{anni} \end{equation}\end{itemize}
 他们满足以下三条性质：
-\begin{itemize}\item\textit{Hermitian}性：\begin{equation}\mel**{N^{}_i}{\hat{c}^{\dagger}_i}{N^{}_i-1}=\mel**{N^{}_i-1}{\hat{c}^{}_i}{N^{}_i};\end{equation}\item \textbf{系统占有数算符}的构造：\begin{equation}\hat{c}^{\dagger}_i\hat{c}^{}_i=\hat{N}^{}_i,\implies\hat{c}^{\dagger}_i\hat{c}^{}_i\ket{N^{}_i}=N^{}_i\ket{N^{}_i};\label{num}\end{equation}\item 玻色对易关系：\begin{equation}\comm{\hat{c}^{}_i}{\hat{c}^{}_k}=\comm{\hat{c}^{\dagger}_i}{\hat{c}^{\dagger}_k}\equiv0,\quad \comm{\hat{c}^{}_i}{\hat{c}^{\dagger}_k}=\delta^{}_{ik}\hat{\vb{I}}.\label{com}\end{equation}\end{itemize}
+\begin{itemize}\item\textit{Hermitian}性：\begin{equation}\mel**{N^{}_i}{\hat{c}^{\dagger}_i}{N^{}_i-1}=\mel**{N^{}_i-1}{\hat{c}^{}_i}{N^{}_i};\end{equation}\item \textbf{总占有数算符}的构造：\begin{equation}\hat{c}^{\dagger}_i\hat{c}^{}_i=\hat{N}^{}_i\implies\hat{c}^{\dagger}_i\hat{c}^{}_i\ket{N^{}_i}=N^{}_i\ket{N^{}_i};\label{num}\end{equation}\item 玻色对易关系：\begin{equation}\comm{\hat{c}^{}_i}{\hat{c}^{}_k}=\comm{\hat{c}^{\dagger}_i}{\hat{c}^{\dagger}_k}\equiv0,\quad \comm{\hat{c}^{}_i}{\hat{c}^{\dagger}_k}=\delta^{}_{ik}\hat{\vb{I}}.\label{com}\end{equation}\end{itemize}
 这些都是直接源自于谐振子系统的计算，非常容易验证，这里就不细说了，注意到最后一条和动量及位置的对易很类似。事实上这些算符都是针对单粒子定义的，具体关于粒子$a$的算符为$\hat{c}^{\dagger}_{i^{}_a},\hat{c}^{}_{i^{}_a}$。但是因为其形式和粒子无关，因此可以省去粒子号从而整体的定义。\\
 \\
-现在考虑多能级升降的情况。以单粒子双能级$\ket{N^{}_i, N^{}_k}$为例，因为总占有数$N=N^{}_i+ N^{}_k$守恒，因此跃迁$\hat{c}^{\dagger}_i\ket{N^{}_i, N^{}_k} \rightarrow \ket{N^{}_i+1, N^{}_k-1}$中关于能级$N^{}_k$一定还会涉及其湮没算符$\hat{c}^{}_k$，因此最终双能级的跃迁写为
+现在考虑多能级升降的情况。以单粒子双能级$\ket{N^{}_i,N^{}_k}$为例，因为总粒子数$N=N^{}_i+N^{}_k$守恒，因此跃迁$\hat{c}^{\dagger}_i\ket{N^{}_i, N^{}_k} \rightarrow \ket{N^{}_i+1, N^{}_k-1}$中关于能级$N^{}_k$一定还会涉及其湮没算符$\hat{c}^{}_k$，则最终双能级的跃迁写为
 \begin{equation}\hat{c}^{\dagger}_i\hat{c}^{}_k\ket{N^{}_i-1, N^{}_k}=\sqrt{N^{}_iN^{}_k}\ket{N^{}_i, N^{}_k-1}.\label{single}\end{equation}
 类似的，对于双粒子四能级$\qty{N^{}_i, N^{}_j, N^{}_k, N^{}_l}$跃迁，我们有
 \begin{equation}\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_k\hat{c}^{}_l\ket{N^{}_i-1, N^{}_j-1,N^{}_k,N^{}_l}=\sqrt{N^{}_iN^{}_jN^{}_kN^{}_l}\ket{N^{}_i,N^{}_j,N^{}_k-1,N^{}_l-1}.\end{equation}
@@ -362,7 +363,7 @@ $$f^{(2)}_{ab,ijkl}=\mel**{i^{}_a,j^{}_b}{\hat{f}^{(2)}_a}{k^{}_a,l^{}_b}=f^{(2)
 $$\sum\limits_{ik}\hat{\mathcal D}^{}_{ik}\hat F^{(1)}=\hat F^{(1)}=\sum_{ik}f^{(1)}_{ik}\hat{c}^{\dagger}_i\hat{c}^{}_k,$$
 最终给出形式
 \begin{equation}\hat{F}^{(1)}=\sum\limits_{ik}f^{(1)}_{ik}\hat{c}^{\dagger}_i\hat{c}^{}_k.\label{final}\end{equation}
-该式就是单粒子物理量算符$\hat F^{(1)}$在粒子数算符下的表达，不难看到其均值回到式(\ref{moyen})，其和粒子数算符统称为\textbf{二次量子化算符 \textit{Second Quantization Operator}}。很容易验证其准确性，例如我们来考察单粒子的\textit{Hamiltonian}，矩阵元为$H^{(1)}_{ik}=E^{}_i\delta^{}_{ik}$，则式(\ref{final})给出
+该式就是单粒子物理量算符$\hat F^{(1)}$在占有数算符下的表达，不难看到其均值回到式(\ref{moyen})，其和占有数算符统称为\textbf{二次量子化算符 \textit{Second Quantization Operator}}。很容易验证其准确性，例如我们来考察单粒子的\textit{Hamiltonian}，矩阵元为$H^{(1)}_{ik}=E^{}_i\delta^{}_{ik}$，则式(\ref{final})给出
 \begin{equation}\hat{H}^{(1)}=\sum\limits_{ik}E^{}_i\delta^{}_{ik}\hat{c}^{\dagger}_i\hat{c}^{}_k=\sum\limits_{i}E^{}_i\hat{c}^{\dagger}_i\hat{c}^{}_i=\sum\limits_{i}E^{}_i\hat{N}^{}_i,\label{8.12h}\end{equation} 
 对比式(\ref{osci})可以发现在谐振子模型下是符合的。用同样的方法，按照式(\ref{yasana})可以给出双粒子算符
 \begin{equation}\hat F^{(2)}=\dfrac{1}{2}\sum\limits_{ijkl}f^{(2)}_{ijkl}\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_l\hat{c}^{}_k,\label{make2}\end{equation}
@@ -378,7 +379,7 @@ $$\hat{U}(\vb{r}^{}_1-\vb{r}^{}_2)=\dfrac{1}{\abs{\vb{r}^{}_1-\vb{r}^{}_2}}=\dfr
 \begin{equation}\hat{H}=\hat{H}^{(1)}+\dfrac{1}{2}\sum\limits_{ijkl}U^{(2)}_{ijkl}\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_l\hat{c}^{}_k+\cdots.\end{equation}
 一般而言后续的展开项对于单粒子而言是微扰，因此可以用微扰论处理，详情请参考第\ref{DFVO))//}节，这里我们只是给出统一的表达式。\\
 \\
-现在我们来考虑如何化简此算符，需要强调的是以下计算只有方法论意义，在实际中以下的结果是无意义的。由式(\ref{8.12h})可知一级近似的\textit{Hamiltonian}算符可以用粒子数算符给出
+现在我们来考虑如何化简此算符，需要强调的是以下计算只有方法论意义，在实际中以下的结果是无意义的。由式(\ref{8.12h})可知一级近似的\textit{Hamiltonian}算符可以用占有数算符给出
 $$\hat{H}^{(1)}=\sum\limits_{i}E^{}_i\hat{N}^{}_i=\sum\limits_{i}E^{}_i\hat{c}^{\dagger}_i\hat{c}^{}_i,\quad H^{(1)}_{ik}=H^{(1)}_{ii}=E^{}_i.$$
 如果我们将算符看作矢量的话，那么上式就是$\hat{H}^{(1)}$的主轴分解，只不过$i$是主值号，主向量的分量由对偶共轭$\dagger$控制，表述为
 \begin{equation}\hat F^{(1)}=\sum\limits_{i}f^{(1)}_{ii}\hat{c}^{\dagger}_i\hat{c}^{}_i=\sum\limits_{i}f^{(1)}_{ii}C^{1}_{(i)}C^2_{(i)},\quad \vb{C}^{}_i=\pmqty{C^1_{(i)}\\ C^2_{(i)}}=\pmqty{\hat{c}^{\dagger}_i\\ \hat{c}^{}_i}.\end{equation}
@@ -402,7 +403,7 @@ $$U^{(2)}_{ijij}=\mel**{ij}{\hat{U}^{(2)}}{ij}=U^{(2)}_{ijji}=\mel**{ij}{\hat{U}
 \begin{equation}U^{(2)}=\dfrac{1}{2}\sum\limits_{i}U^{(2)}_{iiii}N^{}_i\qty(N^{}_i-1)+\sum\limits_{i\neq j}U^{(2)}_{ijij}N^{}_iN^{}_j.\end{equation}
 因此对于二次量子化式的化简可以极大程度的方便我们计算能量，在扰动理论中有非常重要的作用。但需要注意，上述计算只针对算符$\hat{U}^{(2)}$本身的化简，一般作为单粒子算符的微扰处理时，是不能使用此结果的，需要依靠\textsl{Bogoliubov}变换。\\
 \\
-前文中我们在谐振子系统下引入了单能级的\textsl{Bogoliubov}变换，这里我们来考虑多能级情形。在上述的粒子数算符下，考虑到有粒子跃迁的可能性，此处的线性变换应该参考矢量变换，也就是将式(\ref{Bogoliubov1})扩充定义为
+前文中我们在谐振子系统下引入了单能级的\textsl{Bogoliubov}变换，这里我们来考虑多能级情形。在上述的占有数算符下，考虑到有粒子跃迁的可能性，此处的线性变换应该参考矢量变换，也就是将式(\ref{Bogoliubov1})扩充定义为
 \begin{equation}\hat{d}^{}_i=u^{ij}\hat{c}^{}_j+v^{ij}\hat{c}^{\dagger}_j,\quad \hat{d}^{\dagger}_i=u^{*ij}\hat{c}^{\dagger}_j+v^{*ij}\hat{c}^{}_j.\label{Bogoliubov111}\end{equation}
 这里用了求和约定。同时，对易关系也应该定义为式(\ref{com})的形式
 $$\comm{\hat{d}^{}_i}{\hat{d}^{}_k} = \comm{\hat{d}^{\dagger}_i}{\hat{d}^{\dagger}_k}\equiv0,\quad \comm{\hat{d}^{}_i}{\hat{d}^{\dagger}_k}=\delta^{}_{ik}\hat{\vb{I}},$$
@@ -442,7 +443,7 @@ $$\hat{H}^{}_i=E^{}_i\hat{N}^{}_i=E^{}_i\hat{d}^{\dagger}_i\hat{d}^{}_i=\frac{1}
 \\
 考虑到算符$f^{(1)}$的矩阵元(\ref{unit})在波函数下的展开为
 \begin{equation}f^{(1)}_{ik}=\mel**{\psi^{}_i(\xi)}{\hat{f}^{(1)}}{\psi^{}_k(\xi)}=\int\psi^{*}_i\hat{f}^{(1)}\psi^{}_k \dd\xi. \end{equation}
-不难想到，这里的波函数其实也完全可以算符化，将其作为标量场和粒子数算符结合就可以进一步简化总算符的表达式。对于一级近似
+不难想到，这里的波函数其实也完全可以算符化，将其作为标量场和占有数算符结合就可以进一步简化总算符的表达式。对于一级近似
 $$\hat F^{(1)}=\sum\limits_{ik}\hat{c}^{\dagger}_i\hat{c}^{}_k \int \psi^{*}_i\hat{f}^{(1)}\psi^{}_k \dd\xi,$$
 不难看出结合方法：将下标相同的放在一起，当然要注意顺序，因为我们最后的结果一定是一个算符而不是标量，因而该表达式可以用求和约定改写为
 \begin{equation}\hat{F}^{(1)}=\sum\limits_{ik}\int\qty(\psi^{*}_i\hat{c}^{\dagger}_i)\hat{f}^{(1)}(\psi^{}_k\hat{c}^{}_k)\dd\xi= \int\psi^{*}_i{\hat{c}^{\dagger}}^{i}\hat{f}^{(1)}\psi^{}_k\hat{c}^k \dd\xi=\int\hat{\psi}^{\dagger}(\xi)\hat{f}^{(1)}\hat{\psi}(\xi)\dd\xi,\label{psis}\end{equation}
@@ -473,7 +474,7 @@ $$\hat F^{(1)}=\sum\limits_{ik}\hat{c}^{\dagger}_i\hat{c}^{}_k \int \psi^{*}_i\h
 \begin{equation}\hat{N}=\int\hat{\rho}^{}_N(\xi)\dd\xi=\sum_i\hat N^{}_i=\sum_i\hat{c}^{\dagger}_i\hat{c}^{}_i\label{zers}\end{equation} 
 是系统的\textbf{总粒子数算符}，其在\textit{Hamiltonian}算符下取占有数表象就能得到系统的能级。定义系统的\textbf{粒子数密度}$n$和总粒子数$N$为上述两个算符在占有数表象中的本征值
 \begin{equation}\hat{\rho}^{}_N(\xi)\ket{n}=n^{}_{\xi}\ket{N},\quad \hat{N}\ket{n}=N\ket{N}.\end{equation}
-两者之间的关系由归一化确定，而归一化取决于参数$\xi$，比如取$\xi$为坐标$\vb{r}$，使得$V=\displaystyle\int\dd^d\vb{r}$，则归一化写为$N=nV$。我们同样可以对波函数算符求\textsl{Bogoliubov}变换，但由于波函数算符本身关于粒子数算符就是线性的，并且在积分后会析出粒子数算符，所以最终会回到前文中的内容，因此这里就不讨论了。\\
+两者之间的关系由归一化确定，而归一化取决于参数$\xi$，比如取$\xi$为坐标$\vb{r}$，使得$V=\displaystyle\int\dd^d\vb{r}$，则归一化写为$N=nV$。我们同样可以对波函数算符求\textsl{Bogoliubov}变换，但由于波函数算符本身关于占有数算符就是线性的，并且在积分后会析出占有数算符，所以最终会回到前文中的内容，因此这里就不讨论了。\\
 \\
 最后我们谈一下矩阵元的表示$^{\cite{L1}}$。关于算符的矩阵元理论这里不过多重复，但是在形式上我们可以这么思考：算符$\hat{f}$的矩阵元在能级态$\ket{n}=\psi_n(\xi)$下写为
 \begin{equation}f^{}_{mn}=\mel**{m}{\hat{f}}{n}=\int\psi^*_m(\xi)\hat{f}\psi_n(\xi)\dd\xi,\quad \expval{f}=\sum_nf^{}_{nn},\end{equation} 
@@ -685,7 +686,7 @@ $$\vb{I}=\vb{\Sigma}_+=\pmqty{1&0\\0&1},\quad \vb{\Sigma}=\vb{\Sigma}^{}_-=\pmqt
 \begin{equation}\qty(\vb{\Gamma}^{\dagger}\vb{\Sigma})\mathbb E\vb{\Gamma}=\vb{\Sigma}\vb{Y}\Longleftrightarrow\qty(\vb{\Sigma}\vb{\Gamma}^{\dagger})\qty(\vb{\Sigma}\mathbb E)\vb{\Gamma}=\vb{Y}.\end{equation}
 具体细节我们就不再重复了，读者可自行证明。\\
 \\
-我们看到\textsl{Bogoliubov}变换由于反对易性使得其和玻色子系统不同，和粒子数算符相关的所有算符自然的也应相对应的改变。比如波函数算符
+我们看到\textsl{Bogoliubov}变换由于反对易性使得其和玻色子系统不同，和占有数算符相关的所有算符自然的也应相对应的改变。比如波函数算符
 $$\hat{\psi}=\sum_i\psi^{}_i\hat{c}^{}_i,\quad \hat{\psi}^{\dagger}=\sum_i\psi^{*}_i(\xi)\hat{c}^{\dagger}_i$$
 的反对易性表现为
 \begin{equation}\hat{\psi}(\xi)\hat{\psi}^{\dagger}(\eta)+\hat{\psi}^{\dagger}(\eta)\hat{\psi}(\xi)=\delta(\xi-\eta)\hat{\vb{I}},\label{AAS786}\end{equation}
@@ -714,7 +715,7 @@ $$\hat{U}^{(2)}=0,$$
 $$\ket{i^{}_+,j^{}_-}=\ket{i,+\mid j,-}=\ket{\eval{i,s^{(a)}_z=\frac{1}{2}}j,s^{(b)}_z=-\frac{1}{2}}\rightarrow\ket{i,\sigma^{}_a\vert j,\sigma^{}_b},\quad \sigma^{}_a=\pm1,$$
 后文中我们规定粒子$1$在前粒子$2$在后，则矩阵元表示为
 \begin{equation}U^{(2)}_{ijkl}=\mel**{i\sigma^{}_1,j\sigma^{}_2}{\hat{U}^{(2)}}{k\sigma^{}_1,l\sigma^{}_2}.\end{equation}
-这也就造成了矩阵元的非对称性。并且此时粒子数算符也需要加上自旋方向，比如我们有以下的项
+这也就造成了矩阵元的非对称性。并且此时占有数算符也需要加上自旋方向，比如我们有以下的项
 $$U^{(2)}_{i^{}_-j^{}_-i^{}_-j^{}_-}\hat{c}^{\dagger}_{i^{}_-}\hat{c}^{\dagger}_{j^{}_-}\hat{c}^{}_{j^{}_-}\hat{c}^{}_{i^{}_-},\quad U^{(2)}_{i^{}_+j^{}_-j^{}_-i^{}_+}\hat{c}^{\dagger}_{i^{}_+}\hat{c}^{\dagger}_{j^{}_-}\hat{c}^{}_{i^{}_+}\hat{c}^{}_{j^{}_-},\quad U^{(2)}_{i^{}_-j^{}_+i^{}_-j^{}_+}\hat{c}^{\dagger}_{i^{}_-}\hat{c}^{\dagger}_{j^{}_+}\hat{c}^{}_{j^{}_+}\hat{c}^{}_{i^{}_-},\ldots,$$
 因此反对易性关系可以重新写为
 \begin{equation}\comm{\hat{c}^{}_{i,\sigma^{}_a}}{\hat{c}^{}_{k,\sigma^{}_b}}_+\equiv0,\quad \comm{\hat{c}^{\dagger}_{i,\sigma^{}_a}}{\hat{c}^{}_{k,\sigma^{}_b}}_+=\delta^{}_{ik}\delta^{}_{ab}\hat{\vb{I}},\label{tenmmp}\end{equation}
@@ -1492,7 +1493,7 @@ $$\expval{\vb{r}(t)}=\mel**{\psi(x^{\mu})}{\hat{\vb{r}}}{\psi(x^{\mu})}.$$
 \begin{equation}\hat{\vb{a}}^{}_{\vb{k}\alpha}(t)\sim e^{-i\omega^{}_kt},\label{posdfn}\end{equation}
 算符$\hat{\vb{A}}$的确包含了时空坐标$(t,x,y,z)$，它本身就是\textsl{Heisenberg}绘景。将时空全部展示出来，这里我们按照经典体系的记号改造式(\ref{ewrt})写为
 \begin{equation}\hat{\vb{c}}^{}_{\vb{k}\alpha}(t) \rightarrow \hat{\vb{c}}^{}_{\vb{k}\alpha},\quad A^{}_{\vb{k}\alpha}=\sqrt{\dfrac{2\pi\hbar}{\omega^{}_{\vb{k}}}}\vb{e}^{}_{(\alpha)}e^{-ix^{\mu}k^{}_{\mu}}.\label{pornn}\end{equation}
-现在粒子数算符和时空无关，此时波函数写为$\psi(\vb{r})$，只和空间有关。但是这也给我们提出了新的问题：粒子的空间波函数的平方应该反应粒子在某区域出现的概率密度，那么电磁场的空间波函数应该反应出什么物理性质呢？如果和粒子一样反应了场出现的概率密度，但是场根据定义是一直存在于整个时空中的，只考虑空间部分没有任何意义。在后文中我们会进一步讨论这个其含义。\\
+现在占有数算符和时空无关，此时波函数写为$\psi(\vb{r})$，只和空间有关。但是这也给我们提出了新的问题：粒子的空间波函数的平方应该反应粒子在某区域出现的概率密度，那么电磁场的空间波函数应该反应出什么物理性质呢？如果和粒子一样反应了场出现的概率密度，但是场根据定义是一直存在于整个时空中的，只考虑空间部分没有任何意义。在后文中我们会进一步讨论这个其含义。\\
 \\
 同时我们看到，在电磁场本征振动的分析中，我们只涉及了矢量势$\vb{A}$，但是在第\ref{uoyu}中我们已经提到，波的四维势事实上可以用式(\ref{siweishibiaoshu})表示，$\varphi=0$只是参考系的选择问题。而且我们在第\ref{dgdsfgsdf}节中也提到，空间-波矢分解对于任意的场位形都有效，那么自然对于标量$\varphi$我们也有同样的平面波本征振动分解，当然需要注意到在平面波下它也有两个偏振模式。因而式(\ref{yaodaofanle})在任意的参考系下写为
 \begin{equation}A^{\mu}=\sum\limits_{\vb{k}\alpha}\qty(a^{\mu}_{\vb{k}\alpha}(t)e^{i\vb{k}\cdot\vb{r}}+a^{*\mu}_{\vb{k}\alpha}(t)e^{-i\vb{k}\cdot\vb{r}}),\label{oijuihyug}\end{equation}
@@ -1504,7 +1505,7 @@ $$\expval{\vb{r}(t)}=\mel**{\psi(x^{\mu})}{\hat{\vb{r}}}{\psi(x^{\mu})}.$$
 \begin{equation}\hat{A}^{\mu}(x^{\mu})=\sum\limits_{\vb{k}\alpha}\qty(\hat{c}^{}_{\vb{k}\alpha}A^{\mu}_{\vb{k}\alpha}+\hat{c}^{\dagger}_{\vb{k}\alpha}A^{*\mu}_{\vb{k}\alpha}).\label{wllls}\end{equation}
 \emph{后续在不涉及多个时空点的情况下，省略算符的时空坐标$(x^{\mu})$，并默认处于\textsl{Heisenberg}绘景。}并且由于四位势是实函数$A^{\mu}\in C^{\infty}(\mathscr M)$，因此我们必然有$\hat{A}^{\mu}=\hat{A}^{\dagger\mu}$，也就是说它是\textit{Hermitian}，这恒容易证明，并且这是完美符合预期的。\\
 \\
-在\textsl{Heisenberg}绘景下，我们可以利用\textsl{Poisson}括号，快速的计算和$\hat{A}^{\mu}(x^{\mu})$相关算符的对易关系。对式(\ref{cndi2sf})关于时间求导，我们得到\textsl{Heisenberg}绘景中算符的演化方程
+在\textsl{Heisenberg}绘景下，我们可以利用\textsl{Poisson}括号，快速的计算和$\hat{A}^{\mu}(x^{\mu})$相关算符的对易关系。关于相空间的量子化，请参考第\ref{Fli9--fRR}节，我们这里直接使用其中的结论，对式(\ref{cndi2sf})关于时间求导，我们得到\textsl{Heisenberg}绘景中算符的演化方程
 \begin{equation}\dv{\hat{f}}{t}=\partial^{}_t\hat{f}+\frac{1}{i\hbar}\comm{\hat{f}}{\hat{H}}.\label{Fut+++.331gs}\end{equation}
 对比经典粒子的演化方程$\dt{f}=\partial^{}_tf+\pb{f}{H}$，我们看到对应关系$\comm{\hat{f}}{\hat{H}}=i\hbar\pb{f}{H}$。并且\textsl{Poisson}括号的性质和对易子完全一致，因此我们得到\textbf{\textsl{Dirac}正则量子化规则}
 \begin{equation}\forall f,g\in \mathcal O,\quad \hat{f},\hat{g}\in\hat{\mathcal O}(\mathscr H),\quad \pb{f}{g}=\frac{1}{i\hbar}\comm{\hat{f}}{\hat{g}}.\label{kanc48/5200++..}\end{equation}
@@ -1657,7 +1658,7 @@ $$\vb{p}=\partial^{}_{\vb{r}}S,\quad H=-\partial^{}_{t}S,$$
 \begin{equation}\ket{\vb{k}\alpha}=\ket{N^{}_{\vb{k}\alpha}}\implies\begin{cases}\hat{\vb{c}}^{}_{\vb{k}\alpha}\ket{\vb{k}\alpha}=\sqrt{N^{}_{\vb{k}\alpha}}\ket{N^{}_{\vb{k}\alpha}-1},&\\ \hat{\vb{c}}^{\dagger}_{\vb{k}\alpha}\ket{\vb{k}\alpha}=\sqrt{N^{}_{\vb{k}\alpha}+1}\ket{N^{}_{\vb{k}\alpha}+1}.&\end{cases}\label{xindingyide}\end{equation}
 在这种定义下，能级的占有数态就和动量表象的占有数态相对应，这本质上和占有数的表述相关，我们会在第\ref{RF08**))}节的统计物理中详细说明这个问题。在后文中，所有的连续谱占有数态都将按照此定义给出，同时我们定义\textbf{动量表象的真空}为
 \begin{equation}\ket{0}=\ket{N^{}_{\vb{k}\alpha}=0}\implies\begin{cases}\hat{\vb{c}}^{}_{\vb{k}\alpha}\ket{0}=0,&\\ \hat{\vb{c}}^{\dagger}_{\vb{k}\alpha}\ket{0}=\ket{1}=\ket{N^{}_{\vb{k}\alpha}=1}.&\end{cases}\end{equation}
-需要强调的是，这里的$\ket{N^{}_{\vb{k}\alpha}=1}$指的是动量和极化为$\vb{k}$以及$\alpha=\pm1$的单个光子，并非相应动量表象的占有数。读者也可自行在此定义下重新证明粒子数算符的玻色对易性，这里不做展开。\\
+需要强调的是，这里的$\ket{N^{}_{\vb{k}\alpha}=1}$指的是动量和极化为$\vb{k}$以及$\alpha=\pm1$的单个光子，并非相应动量表象的占有数。读者也可自行在此定义下重新证明占有数算符的玻色对易性，这里不做展开。\\
 \\
 注意在\textsl{Heisenberg}绘景下$\ket{\vb{k}\alpha}$和时间是完全无关的，只是空间的函数。同时上一节也指出，讨论光子的波函数的概率是没有意义的，因为波场的空间坐标没有意义。但是此时我们可以讨论它的动量，因为光子的动量是确定的。不难看出光子拥有特定波矢和偏振的概率为
 \begin{equation}\rho^{}_{\vb{k}\alpha} \propto\abs{\vb{A}(\vb{k})^{}_{\alpha}}^2,\end{equation}
@@ -1713,7 +1714,7 @@ $\vb{\Sigma}$是伪幺正度规。同样的，\textsl{Bogoliubov}条件也可以
 $$u^{}_{\vb{k}}(t)=e^{-i\omega^{}_kt},\quad v^{}_{\vb{k}}(t)=e^{i\omega^{}_kt}.$$
 如果我们将相位进一步缩并并用变换系数代替，我们得到广义的\textbf{含时\textsl{Bogoliubov}变换}
 \begin{equation}\hat{\vb{a}}^{}_{\vb{k}}(t)=u^{}_{\vb{k}}(t)\hat{\vb{b}}^{}_{\vb{k}}+v^{}_{\vb{k}}(t)\hat{\vb{b}}^{\dagger}_{\vb{k}},\end{equation}
-其中$\hat{\vb{b}}^{}_{\vb{k}},\ \hat{\vb{b}}^{\dagger}_{\vb{k}}$是不含时空的\textsl{Heisenberg}粒子数算符。这个变换会在引力场中应用到，参考第\ref{VYTVC34}节。同时应当指出，含时\textsl{Bogoliubov}变换所体现的恰好是相轨道的自正则变换，是量子化在辛几何表述下的必然结果，这里我们不展开。
+其中$\qty{\hat{\vb{b}}^{}_{\vb{k}},\hat{\vb{b}}^{\dagger}_{\vb{k}}}$是不含时空的\textsl{Heisenberg}占有数算符。这个变换会在引力场中应用到，参考第\ref{VYTVC34}节。同时应当指出，含时\textsl{Bogoliubov}变换所体现的恰好是相轨道的自正则变换，是量子化在辛几何表述下的必然结果，这里我们不展开。
 
 \subsection{光子的物理性质}\label{7gigi}
 
@@ -1907,11 +1908,13 @@ $$\pdv{\Lambda^{}_{KG}}{\qty(\partial^{}_{\nu}\psi)}=\partial^{\nu}\psi^*,\quad 
 \begin{equation}\begin{aligned}T_{c \ \nu}^{\ \mu}&=\partial^{}_{\nu}\psi\pdv{\Lambda^{}_{KG}}{\qty(\partial^{}_{\mu}\psi)}+\partial^{}_{\nu}\psi^*\pdv{\Lambda^{}_{KG}}{\qty(\partial^{}_{\mu}\psi^*)}-\delta_{\nu}^{\mu}\Lambda^{}_{KG}\\&=2\partial^{}_{\nu}\psi\partial^{}_{\nu}\psi^*-\delta_{\nu}^{\mu}\partial^{}_{\tau}\psi\partial^{\tau}\psi^*+\delta_{\nu}^{\mu}m^2\psi\psi^*,\end{aligned}\label{vefgu}\end{equation}
 其中纯协变分量可以写为
 \begin{equation}\begin{aligned}T^c_{00}=2\dt\psi\dt{\psi}^*-\partial^{}_{\tau}\psi\partial^{\tau}\psi^*&+m^2\psi\psi^*=\partial^{}_{\mu}\psi\partial^{\mu}\psi^*+m^2\psi\psi^*=h\geq0,\\&T^c_{0i}=\dt\psi\partial^{}_i\psi^*+\partial^{}_i\psi\dt{\psi}^*,\end{aligned}\end{equation}
-场的能量为$E=\displaystyle\int T^c_{00}\dd{V}=\displaystyle\int h\dd{V}=H$，场的动量为$P^{}_i=\displaystyle\int T^c_{0i}\dd{V}$，这些都是经典场论的结果。依靠能量我们可以如此取归一化，使得单位体积$V=1$内只包含一个粒子的能量$E$，不难求得结果为
-\begin{equation}\psi=\dfrac{1}{\sqrt{2E}}e^{-ix^{\mu}p^{}_{\mu}}.\end{equation}
+场的能量为$E=\displaystyle\int T^c_{00}\dd{V}=\displaystyle\int h\dd{V}=H$，场的动量为$P^{}_i=\displaystyle\int T^c_{0i}\dd{V}$，这些都是经典场论的结果。依靠能量我们可以如此取归一化，使得单位体积$V=1$内只包含一个自由粒子的能量$E^{}_{\vb{p}}=T^c_{00}$，将解(\ref{badsduv})带入$T^c_{00}$得到
+$$T^c_{00}=\qty[\qty(-ip^\mu)\qty(ip^{}_\mu)+m^2]\psi\psi^*=C^2\qty(p^\mu p^{}_\mu+m^2)=2C^2E^{}_{\vb{p}}=E^{}_{\vb{p}},$$
+从而我们得到归一化
+\begin{equation}\psi=\dfrac{1}{\sqrt{2E^{}_{\vb{p}}}}e^{-ix^{\mu}p^{}_{\mu}}.\label{UY89++-342}\end{equation}
 角动量这里先不求了，在后文中有需要时再给出，读者也可自行计算，权当练习。\\
 \\
-现在讨论一下场的四维流密度$J^{\mu}$，这一部分是对前文中第\ref{uguygy90}节最后关于光子概率流密度问题的解答。上文在处理\textsl{Laplace}核时用物理学公理消去了\textsl{Dirichlet}积分的边界项$\partial^{}_i\qty(y\partial^iy)\implies\oint_{\partial{\mathbb R^n}} y\partial^iy\dd{S}^{}_i$，得出结论(\ref{0ok})。但是我们需要强调的是，物理学公理只适用于整个场的边界，如果我们取场的局部研究那么公理就失效了，因为我们无法确定该局部场的边界是否是整个场的边界。于是我们取局部空间$\mathscr U\subset\mathbb R^n$，使得$y\ \&\ \partial^{}_{\mu}y(\partial{\mathscr U})\neq0$，则边界项就写作
+现在讨论一下场的四维流密度$J^{\mu}$，这一部分是对前文中第\ref{uguygy90}节最后关于光子概率流密度问题的解答。上文在处理\textsl{Laplace}核时用物理学公理消去了\textsl{Dirichlet}积分的边界项$\partial^{}_i\qty(y\partial^iy)\implies\displaystyle\oint_{\partial{\mathbb R^n}} y\partial^iy\dd{S}^{}_i$，得出结论(\ref{0ok})。但是我们需要强调的是，物理学公理只适用于整个场的边界，如果我们取场的局部研究那么公理就失效了，因为我们无法确定该局部场的边界是否是整个场的边界。于是我们取局部空间$\mathscr U\subset\mathbb R^n$，使得$y\ \&\ \partial^{}_{\mu}y(\partial{\mathscr U})\neq0$，则边界项就写作
 \begin{equation}\int_{\mathscr U}\partial^{}_i\qty(y\partial^iy)\dd{x}=\oint_{\partial{\mathscr U}} y\partial^iy\dd{S}^{}_i=\oint_{\partial{\mathscr U}} \zeta^i\dd{S}^{}_i,\end{equation}
 其中$\bm{\zeta}=\zeta^ie^{}_i=y\partial^iye^{}_i \in \mathscr T^1_{\ 0}(\mathscr U)$。\\
 \\
@@ -1982,11 +1985,11 @@ $$\pb{\psi(\alpha)}{Q}=\int\qty(\pdv{\psi}{\psi^*}\pdv{Q}{\varpi}+\pdv{\psi}{\ps
 \\
 按照一般原理，我们应该对位形按正交归一的本征态展开，为了给出负能态我们在动量表象下处理，这里在记号上暂时不区分三维和四维。于是我们有
 \begin{equation}\psi=\sum_{\vb{p}}c^{}_{\vb{p}}\ket{\vb{p}},\quad \psi^{*}=\sum_{\vb{p}}c^{*}_{\vb{p}}\ket{\vb{p}}^{*}\implies\hat{\psi}=\sum_{\vb{p}}\ket{\vb{p}}\hat{c}^{}_{\vb{p}},\quad \hat{\psi}^{\dagger}=\sum_{\vb{p}}\ket{\vb{p}}^{*}\hat{c}^{\dagger}_{\vb{p}},\end{equation}
-其中我们按形式定义“产生算符”为$\hat{c}^{\dagger}_{\vb{p}}$，“湮灭算符”为$\hat{c}^{}_{\vb{p}}$，\emph{注意两者和时空无关，后续不再提及}。它们对态函数的作用满足式(\ref{xindingyide})的形式，且态函数满足能量归一化
-\begin{equation}\ket{\vb{p}}=\dfrac{1}{\sqrt{2E}}e^{-i(Et-\vb{p}\cdot\vb{r})}.\end{equation}
+其中我们按形式定义“产生算符”为$\hat{c}^{\dagger}_{\vb{p}}$，“湮灭算符”为$\hat{c}^{}_{\vb{p}}$，\emph{注意两者和时空无关，后续不再提及}。它们对态函数的作用满足式(\ref{xindingyide})的形式，且态函数满足能量归一化(\ref{UY89++-342})，给出一组完备基
+\begin{equation}\sum_{\vb{p}}\dfrac{1}{2E^{}_{\vb{p}}}\dyad{\vb{p}}{\vb{p}}=\hat{\vb{I}},\label{Pzasd547.}\end{equation}
 我们再次看到这里整体的思路和光子场的形式是一致的，都是对动量或波矢取\textsl{Fourier}分量来进行量子化。原因就在于\textsl{KG}场和光子场的背景都是平面波，平面波自然的就有空间—波矢分解，虽然这里我们仍然还没有看到类似式(\ref{wllls})的产生和湮灭算符叠加的位形算符。因为动量可以为负，即运动方向相反，因此
 $$\ket{-\vb{p}}=\dfrac{1}{\sqrt{2E}}e^{-i(Et+\vb{p}\cdot\vb{r})}.$$
-但是按照\textsl{FKG}方程，解的相位只能由四维形式$\pm x^{\mu}p^{}_{\mu}=\pm \qty(Et-\vb{p}\cdot\vb{r})$给出，因此可以看到这里有变换
+但是按照\textsl{FKG}方程，解的相位只能由四维形式$\pm x^{\mu}p^{}_{\mu}=\pm\qty(Et-\vb{p}\cdot\vb{r})$给出，因此可以看到这里有变换
 \begin{equation}\vb{p}\rightarrow -\vb{p},\quad E\rightarrow -E\implies p^{\mu}\rightarrow -p^{\mu},\end{equation}
 从而相位的变化就是$x^{\mu}p^{}_{\mu}\rightarrow -x^{\mu}p^{}_{\mu}$，态函数为
 $$\ket{-\vb{p}}=\dfrac{1}{\sqrt{2E}}e^{i(Et-\vb{p}\cdot\vb{r})}\equiv\ket{\vb{p}}^{*}.$$
@@ -2041,7 +2044,7 @@ $$\hat{\rho}^{}_N=\hat{\psi}^{\dagger}\hat{\psi},$$
 但此算符在坐标表象下的本征值为$\rho=\psi^{*}\psi$，对于单个玻色子而言就是概率密度，而我们不止一次地提到，在相对论下这个形式不是概率密度。并且此时我们有两个不同的粒子，这是哪个粒子的概率密度也需要斟酌。因此我们在这里无法按照非相对论体系的结论构造概率密度。\\
 \\
 但是它在形式上给了我们启发，$\rho$是用$\psi$和$\psi^*$表示的，其算符$\hat{\rho}$形式是用相对应的二次量子化算符$(\hat{\psi},\hat{\psi}^{\dagger})$直接替换给出的。虽然我们在这里无法直接通过这两个算符构造占有数密度，但是在第\ref{kgbc}节中我们已经用\textsl{Lagrange}表述和\textsl{Hamilton}表述将\textsl{KG}场的几乎所有基础物理量均用场位形$\psi$和$\psi^*$来表示，于是从现在开始，我们可以总结\textsl{KG}场的二次量子化过程为：
-\textbf{\begin{itemize}\item 首先给出场在位形$\psi,\psi^*$下的经典场论形式，并给出场方程的解；\item 其次计算场位形对应的位形算符$\hat{\psi},\hat{\psi}^{\dagger}$，并选择合适的粒子数算符使得它们能匹配解的形式；\item 最后将经典场论形式中的位形全部用相应的位形算符替换，给出对应的场量算符。\end{itemize}} 
+\textbf{\begin{itemize}\item 首先给出场在位形$\psi,\psi^*$下的经典场论形式，并给出场方程的解；\item 其次计算场位形对应的位形算符$\hat{\psi},\hat{\psi}^{\dagger}$，并选择合适的占有数算符使得它们能匹配解的形式；\item 最后将经典场论形式中的位形全部用相应的位形算符替换，给出对应的场量算符。\end{itemize}} 
 \noindent 重点指出，这样的过程对于任意的场都是有效的，我们之后的研究也是按照这样的步骤来操作。在这样的思想指导下，我们来完整的描述\textbf{KG}场的二次量子化以及其各算符。\\
 \\
 场论开始于\textit{Lagrangian}，于是我们给出式(\ref{kglag})对应的\textbf{\textit{Lagrangian}算符}：
@@ -2120,7 +2123,7 @@ $$\text{粒子：}\qty{\hat{c}^{}_{\vb{p}},\hat{c}^{\dagger}_{\vb{p}}},\quad \te
 \begin{equation}\begin{aligned}&\hat{a}^{}_{\vb{p}}=u^{11}_{\vb{p}}\hat{c}^{}_{\vb{p}}+u^{12}_{\vb{p}}\hat{d}^{}_{\vb{p}}+v^{11}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+v^{12}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}},\\ &\hat{a}^{\dagger}_{\vb{p}}=v^{*11}_{\vb{p}}\hat{c}^{}_{\vb{p}}+v^{*12}_{\vb{p}}\hat{d}^{}_{\vb{p}}+u^{*11}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+u^{*12}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}}.\end{aligned}\end{equation}
 这里请读者补全$\hat{b}^{}_{\vb{p}}$。在此模型下，我们来讨论$\vb{\Gamma}^{}_{\vb{p}}$应满足的\textsl{Bogoliubov}条件，以及相应的\textsl{Bogoliubov}方程，当然我们必然是在\textsl{KG}场模型下进行的。\\
 \\
-首先我们注意到，除去\textsl{KG}场的玻色对易性，相对论性的二次量子化的特点是粒子和反粒子算符都参与了位形算符。所以对于新的算符，我们同样要求它们保持位形算符不变。为此我们将式(\ref{ooppgj})的分量进一步缩减到只出现粒子数算符的形式
+首先我们注意到，除去\textsl{KG}场的玻色对易性，相对论性的二次量子化的特点是粒子和反粒子算符都参与了位形算符。所以对于新的算符，我们同样要求它们保持位形算符不变。为此我们将式(\ref{ooppgj})的分量进一步缩减到只出现占有数算符的形式
 \begin{equation}\hat{\psi}^{}_{\vb{p}}=\dfrac{1}{\sqrt{2E^{}_{\vb{p}}}}\qty(\hat{c}^{}_{\vb{p}}e^{-ix^{\mu}p^{}_{\mu}}+\hat{d}^{\dagger}_{\vb{p}}e^{ix^{\mu}p^{}_{\mu}})=F^{}_{\vb{p}}\hat{c}^{}_{\vb{p}}+G^{}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}},\end{equation}
 则带入\textsl{Bogoliubov}变换我们得到
 $$\begin{aligned}F^{}_{\vb{p}}\hat{a}^{}_{\vb{p}}+G^{}_{\vb{p}}\hat{b}^{\dagger}_{\vb{p}}=&F^{}_{\vb{p}}\qty(u^{11}_{\vb{p}}\hat{c}^{}_{\vb{p}}+u^{12}_{\vb{p}}\hat{d}^{}_{\vb{p}}+v^{11}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+v^{12}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}})\\&+G^{}_{\vb{p}}\qty(v^{*21}_{\vb{p}}\hat{c}^{}_{\vb{p}}+v^{*22}_{\vb{p}}\hat{d}^{}_{\vb{p}}+u^{*21}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}+u^{*22}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}})=F^{}_{\vb{p}}\hat{c}^{}_{\vb{p}}+G^{}_{\vb{p}}\hat{d}^{\dagger}_{\vb{p}},\end{aligned}$$
@@ -5342,7 +5345,7 @@ $$N=\sum\limits_{\vb{k}\mu}n^{}_{\vb{k}\mu}=\sum\limits_{\vb{k}\mu}\mel**{n^{}_{
 从而相对位移的归一化系数为$D=\sqrt{\dfrac{1}{N}}$。需要强调的是，这里我们依旧采用了自然单位制$c=1$，但是由于晶格是介质内的系统，而声学波在介质内的传播相较于真空中传播会有所改变，所以我们最终需要带上介质内的声速给出$\omega^{}_{\mu}(\vb{k})\sim c^{}_{\mu}\vb{k}$，这在超流体中是需要注意的。\\
 \\
 现在让我们来讨论声子的动力学。首先我们注意到，因为上述内容和电磁波场完全一致，而光子是无质量的，所以声子也是无质量的，$m=0$。但因为声子只是晶格振动的抽象表现，并不完全等同于实体的粒子场，因此一般称声子为\textbf{准粒子 \textit{Quasi-Particle}}，其动量为\textbf{准动量}，可以由此定义准粒子的\textbf{等效质量}为
-\begin{equation}m^*=\frac{\vb{p}}{\vb{u}}=\frac{k}{u^{}_g},\quad u^{}_g=\dv{\omega(k)}{k},\end{equation}
+\begin{equation}m^*=\frac{\vb{p}}{\vb{u}}=\frac{k}{u^{}_g},\quad u^{}_g=\dv{\omega(k)}{k},\label{Cvetyh9567}\end{equation}
 其中$u^{}_g$是声子的群速度。同时我们也看到，声子是电中性粒子，但是否为真中性还需要进一步考察。其次根据正晶格系的平移不变性，类似电磁矢量式简记
 $${\vb{A}^a}^{}_{\kappa,\vb{k}\mu}({\vb{n}})=\sqrt{\dfrac{1}{N}}{\vb{e}^{a}}_{\kappa(\mu)}e^{i\vb{r}^{}_{\vb{n}}\cdot\vb{k}},$$
 则我们得到单向平面声子波的平移不变性
@@ -5600,7 +5603,7 @@ $$d^2\vb{k}=\frac{1}{\sqrt{\gamma}}d^2\bm{\xi}=\frac{1}{\sqrt{\gamma}}\abs{\bm{\
 注意这里我们按$\omega^{}_0$分类，其依据是导数$d^{}_{\omega}\aleph$在$\omega^{}_0$处奇异，读者可自行证明上式只能取在左侧。在此密度下的凝聚态能量就不计算了，读者可自行求解，当然要注意此时极化的数量为$1\leq\mu\leq 3DN-3$。
 
 \subsection{玻色超流体理论简介}\label{CHoai**--}
-\noindent 前面我们系统的介绍了相变的热力学基础以及\textsl{Landau}二级相变理论，并通过晶格的微振动引入了声子。现在我们本节回到最开始的内容，来研究人类历史上发现的第一类凝聚态：\textbf{超流体 \textit{Superfluid}}。这里我们依旧取自然单位制$\hbar=1$，所以下文不区分动量$\vb{p}$和波矢$\vb{k}$，但需要注意当地声速$c\neq1$，后续会给出其在超流体中的表达式。后文中以$\hat{a}$作为玻色子的粒子数算符，$\hat{c}$作为准粒子的粒子数算符，注意这些记号和前文中略有出入。
+\noindent 前面我们系统的介绍了相变的热力学基础以及\textsl{Landau}二级相变理论，并通过晶格的微振动引入了声子。现在我们本节回到最开始的内容，来研究人类历史上发现的第一类凝聚态：\textbf{超流体 \textit{Superfluid}}。这里我们依旧取自然单位制$\hbar=1$，所以下文不区分动量$\vb{p}$和波矢$\vb{k}$，但需要注意当地声速$c\neq1$，后续会给出其在超流体中的表达式。后文中以$\hat{a}$作为玻色子的占有数算符，$\hat{c}$作为准粒子的占有数算符，注意这些记号和前文中略有出入。
 \subsubsection{超流性的唯象理论}\label{CHoai**-1-}
 \noindent 对于超流体，我们需要首先明确一个问题：如何描述流体的运动。在宏观层面，流体的运动由流体力学精确的描述，包括其黏性可以用\textsl{Navier-Stokes}方程说明。但是如果我们想研究流体的内部运动，比如\textbf{黏性 \textit{Viscosity}}的产生机制，包括在极低温下的表现，流体力学就有所欠缺。为此我们需要回到流体最根本的定义上：连续介质，从介质的角度来分析。\\
 \\
@@ -5803,9 +5806,9 @@ $$\hat{\rho}^{}_{ex}(\vb{r})\sim\hat{x},\quad \hat{\varphi}(\vb{r})\sim\hat{p}^{
 \\
 按照上述理论，我们此处的二次量子化对象并非三维位移矢量$\bm{\psi}^a$，而是标量$\varphi$。当然这并不代表我们在流场中所处理的是一类零自旋的粒子，只是我们的出发点不同。由于$\varphi$是标量，因此其算符$\hat{\varphi}$应该为位形算符，而不是波函数算符$\hat{\psi}$。根据第\ref{ihuh3244ru..}节关于声子的内容，我们给出
 $$\hat{\varphi}(t,\vb{r})=\dfrac{1}{\sqrt{V}}\sum\limits_{\vb{k}}\qty(\hat{a}^{}_{\vb{k}}(t)e^{i\vb{k}\cdot\vb{r}}+\hat{a}^{\dagger}_{\vb{k}}(t)e^{-i\vb{k}\cdot\vb{r}}).$$
-利用式(\ref{posdfn})引入归一化的粒子数算符$\qty{\hat{c},\hat{c}^{\dagger}}$，其对易子满足式(\ref{ddduim})，也就是$\comm{\hat{c}^{}_{\vb{k}}}{\hat{c}^{\dagger}_{\vb{k}}}=\hat{\vb{I}}$，在占有数态$\ket{N^{}_{\vb{k}}}$下的矩阵元为
+利用式(\ref{posdfn})引入归一化的占有数算符$\qty{\hat{c},\hat{c}^{\dagger}}$，其对易子满足式(\ref{ddduim})，也就是$\comm{\hat{c}^{}_{\vb{k}}}{\hat{c}^{\dagger}_{\vb{k}}}=\hat{\vb{I}}$，在占有数态$\ket{N^{}_{\vb{k}}}$下的矩阵元为
 $$\mel**{N^{}_{\vb{k}}-1}{\hat{c}^{}_{\vb{k}}}{N^{}_{\vb{k}}}=\mel**{N^{}_{\vb{k}}}{\hat{c}^{\dagger}_{\vb{k}}}{N^{}_{\vb{k}}-1}=\sqrt{N^{}_{\vb{k}}},$$
-于是粒子数算符写为
+于是占有数算符写为
 \begin{equation}\hat{a}^{}_{\vb{k}}(t)=A^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}e^{-i\omega^{}_kt},\quad \hat{a}^{\dagger}_{\vb{k}}(t)=A^*_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}e^{i\omega^{}_kt},\end{equation}
 其中$A^{}_{\vb{k}}$是归一化系数。根据式(\ref{yibttbs})我们看到，超流性在相变点附近主要由声子贡献，所以这里我们简单的取长波线性能谱$\omega^{}_k=ck$，最终速度势的二次量子化算符写为
 \begin{equation}\hat{\varphi}(t,\vb{r})=\dfrac{1}{\sqrt{V}}\sum\limits_{\vb{k}}\qty(A^{}_{\vb{k}}\hat{c}^{}_{\vb{k}}\exp{i(\vb{k}\cdot\vb{r}-ckt)}+A^*_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}\exp{-i(\vb{k}\cdot\vb{r}-ckt)}).\end{equation}
@@ -5857,7 +5860,7 @@ $$\begin{aligned}&\text{玻色子粒子数：}\qty{\hat{a}^{}_{\vb{k}},\hat{a}^{
 \\
 现在我们进一步分析$^4$He的微观凝聚机制，因为目前所处的是非相对论环境，因此我们不妨从经典的波函数算符出发。我们先考察理想玻色气体的情况，波函数算符按式(\ref{wysl})的定义在动量表象下写为
 $$\hat{\psi}(t,\vb{r})=\sum\limits_{\vb{k}}\psi^{}_{\vb{k}}(\vb{r})\hat{a}^{}_{\vb{k}}(t),\quad \hat{\psi}^{\dagger}(t,\vb{r})=\sum\limits_{\vb{k}}\psi^{*}_{\vb{k}}(\vb{r})\hat{a}^{\dagger}_{\vb{k}}(t),$$
-这里我们依旧采用\textsl{Heisenberg}绘景，并且化学势$\mu=0$。我们知道粒子数算符和时间的关系为
+这里我们依旧采用\textsl{Heisenberg}绘景，并且化学势$\mu=0$。我们知道占有数算符和时间的关系为
 $$\hat{a}^{}_{\vb{k}}(t)=\hat{a}^{}_{\vb{k}}\exp(iE^{}_{\vb{k}}t),$$
 理想气体不考虑相互作用，所以能量就是自由粒子的色散关系$E^{}_{\vb{k}}=\dfrac{k^2}{2m}$，同时定态波函数的动量表象按体积归一化写为
 $$\psi^{}_{\vb{k}}(\vb{r})=\sqrt{\frac{1}{V}}\exp(i\vb{k}\cdot\vb{r}),$$
@@ -6098,7 +6101,7 @@ $$\rho^{}_s\propto\abs{t}^{\nu}.$$
 \\
 现在我们来讨论费米子的情况，特别的关注金属中电子的动力学。超流性的主要特点是理想无黏，如果我们将流体等效为金属中的电子束，则黏性就等效为金属电阻，从而超流性在金属中就体现为无电阻。同时由于电荷会在外磁场下运动，超流性对于磁场也有相应的表现，其给出金属对磁场的全排斥。类似于超流体中“超级”的命名，我们对这类无电阻且排斥磁场的金属定义为\textbf{超导体 \textit{Superconducter}}，这种电子性质称为\textbf{超导性 \textit{Superconductivity}}，由\textsl{Kamerlingh Onnes}在1911年基于其得到的液氦的冷冻机制在低温汞上发现。\\
 \\
-对于超导性的宏观唯象解释由\textsl{Landau}和\textsl{Ginzburg}在1950年通过\textsl{Landau-Ginzburg}二级相变理论给出，微观动力学解释由\textsl{John Bardeen}，\textsl{Leon N. Cooper}和\textsl{John R.Schrieffer}在1957年通过三人名字首字母命名的\textbf{\textsl{BCS}理论}描述。这里我们主要利用\textsl{Bogoliubov}变换建立$^3$He费米超流的\textsl{BCS}理论，并以此为基础叙述\textsl{LG}超导唯象理论，关于超导体的\textsl{BCS}理论的细节放在第\ref{UHYB..**}节中展开讨论。和第\ref{CHoai**-3-}节中一样，后文中仍以$\hat{a}$作为玻色子的粒子数算符，$\hat{c}$作为准粒子的粒子数算符。
+对于超导性的宏观唯象解释由\textsl{Landau}和\textsl{Ginzburg}在1950年通过\textsl{Landau-Ginzburg}二级相变理论给出，微观动力学解释由\textsl{John Bardeen}，\textsl{Leon N. Cooper}和\textsl{John R.Schrieffer}在1957年通过三人名字首字母命名的\textbf{\textsl{BCS}理论}描述。这里我们主要利用\textsl{Bogoliubov}变换建立$^3$He费米超流的\textsl{BCS}理论，并以此为基础叙述\textsl{LG}超导唯象理论，关于超导体的\textsl{BCS}理论的细节放在第\ref{UHYB..**}节中展开讨论。和第\ref{CHoai**-3-}节中一样，后文中仍以$\hat{a}$作为玻色子的占有数算符，$\hat{c}$作为准粒子的占有数算符。
 \subsubsection{电子的Cooper对}\label{CHoeei**--}
 \noindent 在超流体中我们看到，声子主要是由动量相反的一对玻色子，对于液氦而言特别是$^4$He构成的玻色子，在低速碰撞近似下激发的，其能谱可通过\textsl{Bogoliubov}变换得到。因此对于超导体而言，我们由电子束和流体的类比不难想到，超导性大概率也是类似的产生机制，由动量相反的一对费米子在低速碰撞近似下，所激发的某种准粒子给出。\\
 \\
@@ -6120,9 +6123,9 @@ $$\rho^{}_s\propto\abs{t}^{\nu}.$$
 $$\hat{a}^{\dagger}_{\vb{0}\sigma}=\hat{a}^{}_{\vb{0}\sigma}=a^{}_{\vb{0},\sigma}=\sqrt{N^{}_{\vb{0},\sigma}},$$
 这和不相容原理冲突，并体现为费米反对易性的失效。因而我们暂且不对算符取低速微扰并精确到二次项，在无法数值化基态的情况下，取微扰并不能有效的使得算符线性化，所以我们这里不能用\textsl{Nambu}形式(\ref{namnpp3})。后面我们会从平均场的思想重新考虑这一近似。\\
 \\
-为了求解式(\ref{goddamn})的能级，在不做微扰近似的前提下，我们考虑直接使用费米子的\textsl{Bogoliubov}变换。虽然粒子数算符一直都是$\hat{c}$，没有改变其粒子来源，但是在计入自旋符号后，我们依旧可以在形式上采用粒子—反粒子的双能级模型，将$\sigma=1$对应粒子算符$\hat{c}=\hat{c}^{}_{,+}$，$\sigma=-1$对应反粒子算符$\hat{d}=\hat{c}^{}_{,-}$。于是，我们使用第\ref{DFBGRW99}节引入的连续谱费米子\textsl{Bogoliubov}变换(\ref{o})，以矩阵形式表述为
+为了求解式(\ref{goddamn})的能级，在不做微扰近似的前提下，我们考虑直接使用费米子的\textsl{Bogoliubov}变换。虽然占有数算符一直都是$\hat{c}$，没有改变其粒子来源，但是在计入自旋符号后，我们依旧可以在形式上采用粒子—反粒子的双能级模型，将$\sigma=1$对应粒子算符$\hat{c}=\hat{c}^{}_{,+}$，$\sigma=-1$对应反粒子算符$\hat{d}=\hat{c}^{}_{,-}$。于是，我们使用第\ref{DFBGRW99}节引入的连续谱费米子\textsl{Bogoliubov}变换(\ref{o})，以矩阵形式表述为
 \begin{equation}\begin{aligned}\hat{\vb{a}}^{}_{\vb{k},+}=&\pmqty{\hat{a}^{}_{\vb{k}}\\ \hat{d}^{}_{\vb{k}}}=\pmqty{\hat{a}^{}_{\vb{k},+}\\ \hat{a}^{}_{\vb{k},-}},\quad \hat{\vb{a}}^{\dagger}_{\vb{k}}=\pmqty{\hat{a}^{\dagger}_{\vb{k},+}\\ \hat{a}^{\dagger}_{\vb{k},-}},\quad \vb{R}^{}_{\vb{k}}(\hat{\vb{b}})=\pmqty{\hat{\vb{a}}^{}_{\vb{k}}\\ \hat{\vb{a}}^{\dagger}_{\vb{k}}},\quad \vb{\Gamma}^{}_{\vb{k}}=\begin{pNiceArray}{c:c}[margin]\vb{u}^{}_{\vb{k}}&-\vb{v}^{}_{\vb{k}}\\ \hdashline \vb{v}^*_{\vb{k}}&\vb{u}^*_{\vb{k}}\end{pNiceArray},\\ \\&\implies\vb{R}^{}_{\vb{k}}(\hat{\vb{c}})=\pmqty{\hat{\vb{c}}^{}_{\vb{k}}\\ \hat{\vb{c}}^{\dagger}_{\vb{k}}}=\vb{\Gamma}^{}_{\vb{k}}\vb{R}^{}_{\vb{k}}(\hat{\vb{a}}),\quad \hat{\vb{c}}^{}_{\vb{k}}=\pmqty{\hat{c}^{}_{\vb{k},+}\\ \hat{c}^{}_{\vb{k},-}},\quad \hat{\vb{b}}^{\dagger}_{\vb{k}}=\pmqty{\hat{c}^{\dagger}_{\vb{k},+}\\ \hat{c}^{\dagger}_{\vb{k},-}}.\end{aligned}\end{equation}
-其中$\hat{c}$是准粒子的粒子数算符。但因为系统依旧是电中性的(算符不变，并非指完全电中性)，所以系统的正规\textsl{Bogoliubov}变换矩阵的形式依旧由式(\ref{ffp11})控制，这里不需要计入自旋
+其中$\hat{c}$是准粒子的占有数算符。但因为系统依旧是电中性的(算符不变，并非指完全电中性)，所以系统的正规\textsl{Bogoliubov}变换矩阵的形式依旧由式(\ref{ffp11})控制，这里不需要计入自旋
 $$\vb{\Gamma}^{}_{\vb{k}}=\qty(\begin{array}{cc:cc}u^{}_{\vb{k}}&0&0&-v^{}_{\vb{k}}\\0&u^{}_{\vb{k}}&-v^{}_{\vb{k}}&0\\ \hdashline0&v^{*}_{\vb{k}}&u^{*}_{\vb{k}}&0\\v^{*}_{\vb{k}}&0&0&u^{*}_{\vb{k}}\end{array}),$$
 也就是说子矩阵$\vb{u}^{}_{\vb{k}}$是对角的，$\vb{v}^{}_{\vb{k}}$是斜对角的。于是我们具体将变换写出为
 \begin{equation}\begin{aligned}&\hat{c}^{}_{\vb{k},+}=u^{}_{\vb{k}}\hat{a}^{}_{\vb{k},+}-v^{}_{\vb{k}}\hat{a}^{\dagger}_{\vb{k},-},\\&\hat{c}^{\dagger}_{\vb{k},-}=u^*_{\vb{k}}\hat{a}^{\dagger}_{\vb{k},-}+v^{*}_{\vb{k}}\hat{a}^{}_{\vb{k},+}.\end{aligned}\end{equation}
@@ -6208,7 +6211,7 @@ $$E^{}_f=E^{}_i-\abs{U^{}_0}<E^{}_i\implies U(r)\sim -\frac{\alpha}{r}.$$
 $$\Delta^{}_0\sim\mu\exp(-2)\ll\mu,$$
 也就是此束缚能是一个小量，侧面证明了\textsl{Cooper}对和能隙无关的事实。\\
 \\
-基于\textsl{Cooper}对这一结论，让我们重新回顾有效\textit{Hamiltonian}算符(\ref{goddamn})。如果我们将\textsl{Cooper}对等效为一个费米子$\mathfrak{C}$，则我们可以将拥有相反动量和自旋的粒子数算符做对应，使它们能给出$\mathfrak{C}$的粒子数算符。也就是说，我们可以将式(\ref{goddamn})写为
+基于\textsl{Cooper}对这一结论，让我们重新回顾有效\textit{Hamiltonian}算符(\ref{goddamn})。如果我们将\textsl{Cooper}对等效为一个费米子$\mathfrak{C}$，则我们可以将拥有相反动量和自旋的占有数算符做对应，使它们能给出$\mathfrak{C}$的占有数算符。也就是说，我们可以将式(\ref{goddamn})写为
 $$\hat{H}^{\textit{eff}}=\sum\limits_{\vb{k},\sigma}\phi(\vb{k})\hat{a}^{\dagger}_{\vb{k}\sigma}\hat{a}^{}_{\vb{k}\sigma}+\frac{U^{}_0}{V}\sum\limits_{\forall\vb{k}}\qty(\hat{a}^{\dagger}_{\vb{k}',+}\hat{a}^{\dagger}_{-\vb{k}',-})\qty(\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}),$$
 其中算符$\hat{a}^{}_{-\vb{k},-}\longleftrightarrow\hat{a}^{}_{\vb{k},+}$相互对应，这样我们就可以类比声子使用平均场近似。当然由于不相容原理的限制，我们无法取基态为类似式(\ref{shiyanss})一样的数值并取微扰，但是依旧可以取其均值。关于费米子的平均场我们可以参考\textsl{Ising}模型的涨落平均，其中我们对磁矩$\vb{m}$按均值展开为式(\ref{dabus54i})，这里也是类似的，只不过磁矩变为$\mathfrak{C}$的算符，定义相应均值为
 \begin{equation}\mathscr B=\frac{1}{V}\sum_{\vb{k}}\expval{\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}}=\sum_{\vb{k}}\expval{\hat{a}^{\dagger}_{-\vb{k},-}\hat{a}^{\dagger}_{\vb{k},+}}\qty(=\expval{\vb{m}}).\label{fhbcbi}\end{equation}
@@ -6346,7 +6349,7 @@ $$\rho=\frac{m\expval{N^{}_F}}{V}=\frac{mk^3_F}{3\pi^2},$$
 \\
 当然由第\ref{FERmihv}节我们知道，费米子系统的位形是旋量而非波函数，所以“波函数算符”应该理解为旋量算符。由于这里处于经典环境，所以对于电子只需要使用三维的一秩旋量，按照前文记为$\bm{\chi}^{}_{\alpha}$，其中$\alpha$是旋量抽象指标，由辛形式$\bm{\Omega}^{\alpha\beta}$升降。则类似式(\ref{sufdsp})，我们形式化的给出\textsl{Heisenberg}绘景下的理想电子气体的凝聚态旋量算符为
 \begin{equation}\begin{aligned}&\hat{\bm{\chi}}^{}_{\alpha}(t,\vb{r})=\sqrt{\frac{1}{V}}\hat{a}^{}_{\vb{k}^{}_F}\vb{C}^{}_{\alpha,\vb{k}^{}_F}\exp{i\qty(\vb{k}^{}_F\cdot\vb{r}-\dfrac{k^2_F}{2m}t)},\\&\hat{\bm{\chi}}^{\dagger}_{\alpha}(t,\vb{r})=\sqrt{\frac{1}{V}}\hat{a}^{\dagger}_{\vb{k}^{}_F}\vb{C}^{*}_{\alpha,\vb{k}^{}_F}\exp{-i\qty(\vb{k}^{}_F\cdot\vb{r}-\dfrac{k^2_F}{2m}t)},\end{aligned}\end{equation}
-其中$\qty{\hat{a}^{}_{\vb{k}},\hat{a}^{\dagger}_{\vb{k}}}$是费米子粒子数算符，$\vb{C}^{}_{\alpha,\vb{k}^{}_F}$是极化旋量，并且理想电子气体的凝聚态对应\textsl{Fermi}面$\vb{k}^{}_F$。旋量算符必然要满足费米反对易性(\ref{RF34cfv})
+其中$\qty{\hat{a}^{}_{\vb{k}},\hat{a}^{\dagger}_{\vb{k}}}$是费米子占有数算符，$\vb{C}^{}_{\alpha,\vb{k}^{}_F}$是极化旋量，并且理想电子气体的凝聚态对应\textsl{Fermi}面$\vb{k}^{}_F$。旋量算符必然要满足费米反对易性(\ref{RF34cfv})
 \begin{equation}\begin{aligned}&\comm{\hat{\bm{\chi}}^{}_{\alpha}(t,\vb{r})}{\hat{\bm{\chi}}^{}_{\beta}(t,\vb{r}')}_+=\comm{\hat{\bm{\chi}}^{\dagger}_{\alpha}(t,\vb{r})}{\hat{\bm{\chi}}^{\dagger}_{\beta}(t,\vb{r}')}_+=\delta^{}_{\alpha\beta}(\vb{r}-\vb{r}'),\\&\comm{\hat{\bm{\chi}}^{}_{\alpha}(t,\vb{r})}{\hat{\bm{\chi}}^{\dagger}_{\beta}(t,\vb{r}')}_+=i\delta^{}_{\alpha\beta}(\vb{r}-\vb{r}').\end{aligned}\end{equation}
 对于凝聚态算符$\hat{\bm{\chi}}^{}_{\alpha}$的矩阵元，在玻色系统中由式(\ref{fehcae1})和(\ref{fehcae2})确定，但是在费米系统中需要修改。因为前文证明了\textsl{FD}凝聚会诱导\textsl{Cooper}对，所以在费米系统中，凝聚态粒子数的变化是增减一对
 $$\text{\textsl{Cooper}对：}N=\infty\rightarrow N\pm2,$$
@@ -8363,7 +8366,7 @@ $$\dv{\tau}\hat{f}^M=\comm{\hat{f}^M}{\hat{H}},$$
 \begin{equation}\hat{\psi}^M(\tau,\vb{r})=\exp(\tau\hat{H}^{\textit{eff}})\hat{\psi}(\vb{r})\exp(-\tau\hat{H}^{\textit{eff}}),\quad\hat{\psi}^{\dagger M}(\tau,\vb{r})=\exp(\tau\hat{H}^{\textit{eff}})\hat{\psi}^\dagger(\vb{r})\exp(-\tau\hat{H}^{\textit{eff}}).\end{equation}
 由于波函数坐标满足欧式度规，则在逆向\textsl{Wick}旋转下坐标$\qty(x^i)=(\tau,\vb{r})$给出
 $$\dd t^2+\dd \vb{r}^2=\dd \vb{r}^2-\dd\tau^2=-\eta^{}_{ij}x^ix^j,$$
-也就是负的\textsl{Lorentz}度规。因此波函数场在\textsl{Matsubara}绘景中按时空确定，但这并不代表其有协变性。在巨正则系综下，我们知道粒子数算符$\hat{N}$和波函数算符的关系根据式(\ref{zers})和(\ref{zyss})，在空间中取为
+也就是负的\textsl{Lorentz}度规。因此波函数场在\textsl{Matsubara}绘景中按时空确定，但这并不代表其有协变性。在巨正则系综下，我们知道占有数算符$\hat{N}$和波函数算符的关系根据式(\ref{zers})和(\ref{zyss})，在空间中取为
 $$\hat{N}=\int \hat{\rho}^{}_N(\vb{r})\dd V=\int \hat{\psi}^{\dagger}(\vb{r})\hat{\psi}(\vb{r})\dd V.$$
 单位体积的\textit{Hamiltonian}为$H^{\textit{eff}}=H-\mu\rho^{}_N$，因此作用量在$\tau$参数下由式(\ref{wuwuwu77})给出
 \begin{equation}S=\bigintsss\psi^*\qty(i\pdv{t}-\hat{H}^{\textit{eff}}(\tau))\psi\dd\Omega=\bigintsss_0^\beta\bigintsss\psi^*\qty(\pdv{\tau}-\hat{H}(\tau)-\mu)\psi\dd V\dd\tau,\label{Uckfn**-}\end{equation}
@@ -8951,7 +8954,7 @@ $$\begin{aligned}&\expval{\mathbb P\qty{1^+2^+3^+4^+}},\quad\expval{\mathbb P\qt
 \begin{equation}D^{----}(1,2,3,4)=C^{--}_{12}C^{--}_{34}+C^{--}_{13}C^{--}_{24}+C^{--}_{23}C^{--}_{14}.\end{equation}
 也就是说在同一分支上，多点函数的热\textsl{Wick}定理和\textsl{BdD}定理是完全一致的，我们只需要按照零温\textsl{Wick}定理打开编时乘积，再对\textsl{Gree}函数带入\textsl{Keyldsh}矩阵对角元即可。\\
 \\
-当然在实际应用中，更加重要的混合分量，因为这是平衡态和零温场无法描述的，下面默认采用规则(\ref{D-*..[];fb})的负号在左排序。从单个反向支出发，我们写出
+当然在实际应用中，更加重要的是混合分支分量，因为这是平衡态和零温场所无法描述的，下面默认采用规则(\ref{D-*..[];fb})的负号在左排序。从单个反向支出发，我们写出
 \begin{equation}D^{-+++}(1,2,3,4)=\expval{\mathbb P\qty{1^-2^+3^+4^+}}\end{equation}
 基于$\mathcal P^{}_1$和$\mathcal P^{}_2$两个分支上算符的独立性，我们对路径排序做这样的处理：反向支上的算符$\hat{\psi}^-_1$可以从路径排序中提出，剩下三个在正向支上的算符取时序乘积，在上述热\textsl{Wick}定理下写作
 \begin{equation}D^{-+++}(1,2,3,4)=\expval{1^-\circ\mathbb T\qty{2^+3^+4^+}}=\expval{1^-\circ\mathcal N\qty{2^+3^+4^++\text{所有可能的缩并}}}.\end{equation}
@@ -9707,7 +9710,7 @@ $$\hat{\vb{p}}\cdot\hat{\vb{A}}=\hat{\vb{p}}\cdot\sum\limits_{\vb{k}}\qty(\vb{A}
 \begin{equation}V^{}_{ba,\vb{k}}=\mel**{b,n^{}_{\vb{k}}}{\hat{V}}{a,n^{}_{\vb{k}}}.\end{equation}
 也就是说在二次量子化下，微扰给出其矩阵元的\textsl{Fourier}分量，符合场的一般性质。\\
 \\
-将电磁波的一级微扰带入，在动量表象下，记关于粒子自身的矩阵元为$\mel**{b}{\hat{\mathcal M}^{}_{\vb{k}}}{a}=\mathcal M^{}_{\vb{k}}$，并注意玻色粒子数算符的性质(\ref{crea})和(\ref{anni})给出
+将电磁波的一级微扰带入，在动量表象下，记关于粒子自身的矩阵元为$\mel**{b}{\hat{\mathcal M}^{}_{\vb{k}}}{a}=\mathcal M^{}_{\vb{k}}$，并注意玻色占有数算符的性质(\ref{crea})和(\ref{anni})给出
 $$\mel**{n^{}_{\vb{k}}}{\hat{c}^{}_{\vb{k}}}{n^{}_{\vb{k}}+1}=\sqrt{n^{}_{\vb{k}}},\quad \mel**{n^{}_{\vb{k}}+1}{\hat{c}^{}_{\vb{k}}}{n^{}_{\vb{k}}}=\sqrt{n^{}_{\vb{k}}+1},$$
 从而一级微扰矩阵元的不含时部分为
 \begin{equation}F^{}_{ba}=\sum_{\vb{k}}\mathcal M^{}_{\vb{k}}\sqrt{n^{}_{\vb{k}}},\quad F^{*}_{ab}=\sum_{\vb{k}}\mathcal M^{*}_{\vb{k}}\sqrt{n^{}_{\vb{k}}+1}.\end{equation}
@@ -9949,7 +9952,7 @@ $$\varpi=\pdv{\Lambda}{\qty(\partial^{}_t\psi)}=\pdv{\Lambda^{}_{KG}}{\qty(\part
 $$\eval{\psi^{}_0(x)}_{\Sigma^{}_{t^{}_0}}=\psi^{}_0(t^{}_0,\vb{r})\implies\eval{\hat{\psi}^{}_0(x)}_{\Sigma^{}_{t^{}_0}}=\hat{\psi}^{}_0(t^{}_0,\vb{r}).$$
 注意这里的$\hat{\psi}^{}_0(t^{}_0,\vb{r})$是\textsl{Schrödinger}绘景，时间在固定后就只和空间相关，当然$\vb{r}\in\Sigma^{}_{t^{}_0}$。现在我们在该类空超曲面上，定义相互作用场的\textsl{Schrödinger}绘景位形算符$\hat{\psi}(x)$为
 \begin{equation}\eval{\hat{\psi}(x)}_{\Sigma^{}_{t^{}_0}}=\hat{\psi}\qty(t^{}_0,\vb{r})=\hat{\psi}^{}_0\qty(t^{}_0,\vb{r}).\end{equation}
-这就说明在参考时刻$t^{}_0$，相互作用场和自由场的二次量子化一致，从而保证我们可以使用自由场的占有数态，以及粒子数算符$\qty{\hat{c}^{}_{\vb{p}},\hat{c}^{\dagger}_{\vb{p}}}$。在上述定义下，我们写出该超曲面上的\textit{Hamiltonian}算符
+这就说明在参考时刻$t^{}_0$，相互作用场和自由场的二次量子化一致，从而保证我们可以使用自由场的占有数态，以及占有数算符$\qty{\hat{c}^{}_{\vb{p}},\hat{c}^{\dagger}_{\vb{p}}}$。在上述定义下，我们写出该超曲面上的\textit{Hamiltonian}算符
 $$\hat{H}(t^{}_0)=\int_{\Sigma^{}_{t^{}_0}}\qty{\hat{h}^{}_{KG}\qty(\hat{\psi}^{}_0)+\hat{U}\qty(\hat{\psi})}\dd{V}=\hat{H}^{}_{KG}\qty(t^{}_0)+\int_{\Sigma^{}_{t^{}_0}}\hat{U}\qty(\hat{\psi}^{}_0)\dd{V}=\hat{H}^{}_{t^{}_0},$$
 若在相互作用下能量守恒，则相互作用场位形算符$\hat{\psi}$对时间的依赖由总演化算符$\hat{\tau}(t)=\exp(-i\hat{H}^{}_{t^{}_0}t)$确定，在\textsl{Heisenberg}绘景中写作
 \begin{equation}\hat{\psi}(t,\vb{r})=\hat{\tau}^\dagger\qty(t,t^{}_0)\hat{\psi}^{}_0\qty(t^{}_0,\vb{r})\hat{\tau}\qty(t,t^{}_0)=\exp(i\hat{H}^{}_{t^{}_0}(t-t^{}_0))\hat{\psi}^{}_0(t^{}_0,\vb{r})\exp(-i\hat{H}^{}_{t^{}_0}(t-t^{}_0)).\end{equation}
@@ -10057,7 +10060,7 @@ $$D^{(1)}(1,2,3,4)=-i\mel**{2}{\mathbb T\qty{\int\hat{\psi}^\dagger_I(1)\hat{\ps
 读者可以尝试用\textsl{Wick}定理计算这个六点函数，具体内容放在下文的协变场论中。
 \subsubsection{相互作用场的传播子}\label{chFf456..6**hg}
 \noindent 基于上述粒子系统的展开，我们来正式计算场的多点关联函数。仍旧以实标量场$\psi(x)$为例，此时场的传播子为
-\begin{equation}C(a,b)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}\qty(\vb{a},a^0)\hat{\psi}\qty(\vb{b},b^0)}}{\Omega}.\end{equation}
+\begin{equation}C(a,b)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}\qty(\vb{a},a^0)\hat{\psi}\qty(\vb{b},b^0)}}{\Omega}.\label{Vbsigjer}\end{equation}
 强调一下，这里的$\ket{\Omega}$是参考时刻$t^{}_0$处的相互作用\emph{真空态}。按照同样的思路，根据式(\ref{hgjk,,-isi})，写出上述算符关于$t^{}_0$的相互作用绘景，假设$a^0>b^0$
 $$\begin{aligned}\mathbb T\qty{\hat{\psi}\qty(\vb{a},a^0)\hat{\psi}\qty(\vb{b},b^0)}&=\hat{\psi}(a)\hat{\psi}(b)=
 \hat{\tau}^{\dagger}_I\qty(a^0,t^{}_0)\hat{\psi}^{}_I(a)\hat{\tau}^{}_I\qty(a^0,t^{}_0)\hat{\tau}^{\dagger}_I\qty(b^0,t^{}_0)\hat{\psi}^{}_I(b)\hat{\tau}^{}_I\qty(b^0,t^{}_0)\\&=\hat{\tau}^{}_I\qty(t^{}_0,a^0)\hat{\psi}^{}_I(a)\hat{\tau}^{}_I\qty(a^0,b^0)\hat{\psi}^{}_I(b)\hat{\tau}^{}_I\qty(b^0,t^{}_0).\end{aligned}$$
@@ -10378,12 +10381,12 @@ $$\tr(\frac{\lambda}{\square+m^2})^u=\frac{2 g^{}_{sym}(u)}{(u-1)\times(u-1)!}\q
 \\
 仍然从自由场的传播子开始，回顾到\textsl{KG}场的\textsl{Feynman}传播子由式(\ref{feynch})确定为
 $$D^{}_F(a,b)=\lim\limits_{\epsilon\to 0}\bigintsss\frac{i}{p^2+i\epsilon}e^{-ip(a-b)}\qty(\frac{\dd p}{2\pi})^4,\quad pa=\omega a^0-\vb{p}\cdot\vb{a}.$$
-方便起见考虑零质量的真中性粒子，在四维动量空间下传播子给出
-\begin{equation}D^{}_F\qty(p)=\frac{i}{p^2+i\epsilon}e^{-ip(a-b)}.\end{equation}
+方便起见考虑零质量的真中性粒子，传播子的四维动量表象为
+\begin{equation}D^{}_F\qty(p)=\frac{i}{p^2+i\epsilon}.\label{1f/*/-*}\end{equation}
 从空间\textsl{Feynman}规则我们知道，传播子的\textsl{Feynman}图由式(\ref{lahuerganfi})确定。而我们也知道动量空间和真实时空关于\textsl{Fourier}变换对偶，因此根据对偶空间的几何性质，动量空间的\textsl{Feynman}图也是一条直线。我们定义传播子的\textbf{动量\textsl{Feynman}图}如下
-\begin{equation}D^{}_F\qty(p)=\frac{i}{p^2+i\epsilon}e^{-ip(a-b)}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:a](a){};\vertex[right=3cm of a,label=below:b](b){};\vertex[right=1.5cm of a,label=below:$p$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}}\end{equation}
+\begin{equation}D^{}_F\qty(p)=\frac{i}{p^2+i\epsilon}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:a](a){};\vertex[right=3cm of a,label=below:b](b){};\vertex[right=1.5cm of a,label=below:$p$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}}\end{equation}
 虚线是标量场的表示，用以区分动量和时空点，\emph{箭头代表动量方向}。当然我们也可以在图外加上动量，比如非零质量粒子可以写作
-$$\frac{i}{p^2-m^2+i\epsilon}e^{-ip(a-b)}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:a](a){};\vertex[right=3cm of a,label=below:b](b){};\diagram*{(a)--[scalar,momentum'=\(p\)](b)};\end{feynman}}$$
+$$\frac{i}{p^2-m^2+i\epsilon}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:a](a){};\vertex[right=3cm of a,label=below:b](b){};\diagram*{(a)--[scalar,momentum'=\(p\)](b)};\end{feynman}}$$
 根据对偶关系我们也不难想到，单外点$x$的\textsl{Feynman}图对应$\exp(-ipx)$。自由多点关联函数也是类似的，以从四点函数为例，我们直接写出其动量图
 \begin{equation}D^{}_p=\quad\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\d}{1.5}\begin{feynman}[inline=(a.base)]\vertex[label=above:1](a){};\vertex[right=\d cm of a,label=above:2](b){};\vertex[below=\d cm of a,label=below:3](c){};\vertex[right=\d cm of c,label=below:4](d){};\diagram*{(a)--[charged scalar](b),(c)--[charged scalar](d)};\end{feynman}}\quad+\quad\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\d}{1.5}\begin{feynman}[inline=(a.base)]\vertex[label=above:1](a){};\vertex[right=\d cm of a,label=above:2](b){};\vertex[below=\d cm of a,label=below:3](c){};\vertex[right=\d cm of c,label=below:4](d){};\diagram*{(a)--[charged scalar](c),(b)--[charged scalar](d)};\end{feynman}}\quad+\quad\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\d}{1.5}\begin{feynman}[inline=(a.base)]\vertex[label=above:1](a){};\vertex[right=\d cm of a,label=above:2](b){};\vertex[below=\d cm of a,label=below:3](c){};\vertex[right=\d cm of c,label=below:4](d){};\diagram*{(a)--[charged scalar,in=105,out=-15](d),(b)--[charged scalar](c)};\end{feynman}}\end{equation}
 其余的多点函数这里就不一一列举了，完全可以参考空间\textsl{Feynman}图，将实线改为虚线，并加上相应的动量箭头即可。动量的\textsl{Feynman}图不需要标端点记号，因为我们关注的是动量而并非时空点。\\
@@ -10553,7 +10556,7 @@ $$\mathscr H^{}_\Gamma(x,y)=\int D^{-1}_F(x,z)M(z,y)\dd\Omega^{}_z=D^{-1}_F(x,y)
 参考通常文献中的记号，将第二项记为$\Sigma$，定义为
 \begin{equation}\mathscr H^{}_\Gamma(x,y)=D^{-1}_F(x,y)-\Sigma(x,y)\implies \Sigma=\qty(\mathfrak C^{(0)})^{-1}-\mathscr H^{}_\Gamma,\end{equation}
 也就是连通传播子的零级近似倒数和$\Gamma$二阶导的差。若我们直接采取记号$\mathscr H^{}_\Gamma=\mathfrak C^{-1}$，则$\Sigma$满足
-\begin{equation} \Sigma=\qty(\mathfrak C^{(0)})^{-1}-\mathfrak C^{-1}=\mathscr H^{(0)}_\Gamma-\mathscr H^{}_\Gamma.\label{KouG-*-*-*-//DYVG}\end{equation}
+\begin{equation}\Sigma=\qty(\mathfrak C^{(0)})^{-1}-\mathfrak C^{-1}=\mathscr H^{(0)}_\Gamma-\mathscr H^{}_\Gamma.\label{KouG-*-*-*-//DYVG}\end{equation}
 其物理含义暂且不表，我们现在仅将这个等式当作$\Sigma$的定义。将此等式回代入互易关系(\ref{FgDF785ergf})，现在按微扰展开的是$\mathscr H^{}_\Gamma$，我们得到
 $$\int\qty(D^{-1}_F(x,z)-\Sigma(x,z))\mathfrak C(z,y)\dd\Omega^{}_z=\delta^{}_{xy}.$$
 将$\Sigma$移到右侧，并将$D^{-1}_F$在形式上看作算符$\hat{D}^{-1}_F$，根据定义其满足归一化，和\textsl{SD}方程(\ref{th841++s})对比得到
@@ -10569,7 +10572,7 @@ $$\int\hat{D}^{-1}_F(x,z)D^{}_F(z,y)\dd\Omega^{}_z=\delta^{}_{xy}=i\square D^{}_
 这个级数称为\textbf{\textsl{Born-Dyson}级数}，它指出连通传播子可以由$\Sigma$反复作用于零级近似得到，按空间图可以写为
 \begin{equation}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:x](a){};\vertex[right=1cm of a,blob](c){};\vertex[right=1cm of c,dot,label=below:y,scale=.5](b){};\diagram*{(a)--(c)--(b)};\end{feynman}}=\tikz[baseline=-.5ex]{\begin{feynman}\vertex[dot,scale=.5,label=below:x](a){};\vertex[right=1cm of a,dot,label=below:y,scale=.5](b){};\diagram*{(a)--(b)};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:x](a){};\vertex[right=1cm of a,circle,draw,minimum size=.8cm](c){};\vertex[right=1cm of c,dot,label=below:y,scale=.5](b){};\diagram*{(a)--(c)--(b)};\node at(c){\scalebox{1.2}{$\Sigma$}};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:x](a){};\vertex[right=1cm of a,circle,draw,minimum size=.8cm](c){};\node at(c){\scalebox{1.2}{$\Sigma$}};\vertex[right=2.5cm of a,circle,draw,minimum size=.8cm](d){};\vertex[right=1cm of d,dot,label=below:y,scale=.5](e){};\node at(d){\scalebox{1.2}{$\Sigma$}};\diagram*{(a)--(c)--(d)--(e)};\end{feynman}}+\cdots.\label{LD---92.302zBF}\end{equation}
 其中每条腿都代表了自由传播子$D^{}_F$，除了两个外腿以外其余的都是内部连通图的组成部分，方便起见下面还是省略卷积符号$\circledast$。根据定义(\ref{KouG-*-*-*-//DYVG})，可以在数学上严格证明，\textsl{BD}级数是收敛的且结果为
-\begin{equation}\mathfrak C=D^{}_F+D^{}_F\Sigma D^{}_F+D^{}_F\Sigma\circledast D^{}_F\Sigma D^{}_F+\cdots=\frac{1}{\qty(\mathfrak C^{(0)})^{-1}-\Sigma}.\end{equation}
+\begin{equation}\mathfrak C=D^{}_F+D^{}_F\Sigma D^{}_F+D^{}_F\Sigma D^{}_F\Sigma D^{}_F+\cdots=\frac{1}{\qty(\mathfrak C^{(0)})^{-1}-\Sigma}.\end{equation}
 此证明请参考\cite{L6f} \S6.5.3的定义6.5.10，这里不展开。需要说明的是，之前将传播子定义为算符的处理完全是形式化的，其详细的数学定义需要\textsl{Sobolev}空间理论，这里同样不详细说明，读者可以自行验证。\\
 \\
 现在让我们分析所得结果，\textsl{BD}级数的图表示(\ref{LD---92.302zBF})提供了一个具象的分析方向：电路中的等效电阻。事实上在第\ref{Dc///.2][][uin}节中，我们正是通过电路图引入\textsl{Born}级数的\textsl{Feynman}图表示的，此处同样的还是以电路分析理解。我们重新明确这里的电路元件：
@@ -10581,8 +10584,18 @@ $$\int\hat{D}^{-1}_F(x,z)D^{}_F(z,y)\dd\Omega^{}_z=\delta^{}_{xy}=i\square D^{}_
 我们从定义出发，可以发现定义式(\ref{KouG-*-*-*-//DYVG})只和$\mathscr H^{}_\Gamma$有关，所以$\Sigma$并不依赖于场位形，因为第\ref{ha--yyub*}节中正是从波函数场引入的该二阶导。因此这个定义式对任意的场都有效，我们不妨依旧考察波函数场，传播子按定义是\textsl{Schrödinger}方程的\textsl{Green}函数，在形式上有
 $$\qty(i\pdv{t}-\hat{H})\mathfrak C(x,y)=\delta^{}_{xy}\implies\mathfrak C^{-1}=i\pdv{t}-\hat{H}.$$
 记自由\textit{Hamiltonian}为$\hat{H}^{}_0$，相互作用\textit{Hamiltonian}为$\hat{H}=\hat{H}^{}_0+\hat{V}$，于是式(\ref{KouG-*-*-*-//DYVG})写作
-\begin{equation} \Sigma=\qty(\mathfrak C^{(0)})^{-1}-\mathfrak C^{-1}=i\pdv{t}-\hat{H}^{}_0-\qty(i\pdv{t}-\hat{H}^{}_0-\hat{V})=\hat{V},\end{equation}
-可见$\Sigma$定性的来看，充当了相互作用能的角色，这使得\textsl{BD}级数在形式上和\textsl{Dyson}级数类似。回到电路图，已知全等效电阻是约化真空泡泡的和，因此作为并联支路的电阻$\Sigma$也应该由约化真空泡泡构成，我们将$\Sigma$也看做一个等效电阻。由于$\Sigma$在某种程度上也是关联函数，因此不妨假设其有类似\textsl{BD}级数的结构，我们来看每一级的子元件，这里不考虑和电源的连接线，设内部电线依旧为$D^{}_F$。
+\begin{equation}\Sigma=\qty(\mathfrak C^{(0)})^{-1}-\mathfrak C^{-1}=i\pdv{t}-\hat{H}^{}_0-\qty(i\pdv{t}-\hat{H}^{}_0-\hat{V})=\hat{V},\end{equation}
+可见$\Sigma$定性的来看，充当了相互作用能的角色，这使得\textsl{BD}级数在形式上和\textsl{Dyson}级数类似。其具体的物理含义可以在动量空间中得到，对实标量场取式(\ref{KouG-*-*-*-//DYVG})的动量表象
+$$\mathfrak C(p)=\frac{1}{\qty(\mathfrak C^{(0)})^{-1}(p)-\Sigma(p)}=\frac{1}{D^{-1}_F(p)-\Sigma(p)},$$
+带入\textsl{Feynman}传播子(\ref{1f/*/-*})，这里带上质量$m^{}_0\neq 0$并忽略因果约束$\epsilon=0$，我们得到
+\begin{equation}\mathfrak C(p)=\frac{1}{-i(p^2-m^2_0)-\Sigma(p)}=\frac{i}{p^2-m^2_0-i\Sigma(p)}.\label{Dfbd6897=-=}\end{equation}
+现在如果我们按式(\ref{Cvetyh9567})引入实标量场的等效质量$m^*$，令此全连通传播子的动量表象为
+\begin{equation}\mathfrak C(p)=\lim_{p^0\to E^{}_p}\frac{iZ}{p^2-m^{*2}},\quad Z\in\mathbb R,\label{ZxxCr}\end{equation}
+则我们看到这里的质量$m$通过式(\ref{Dfbd6897=-=})等价为
+\begin{equation}m^{*2}=m^2_0+i\Sigma(p).\label{98100..9}\end{equation}
+也就是说，由式(\ref{KouG-*-*-*-//DYVG})定义的$\Sigma(p)$的虚部，某种程度上表现为质量的修正，因而我们一般称之为\textbf{质量函数}，或者\textbf{自能函数 \textit{Self Enrgy Function}}。结合之前我们得到的$\Sigma\sim\hat{V}$，这正体现了相互作用对粒子的影响，其在固体中就呈现为等效质量$m^*$。关于其实际的物理表现，我们在第\ref{dsjbas66543+3.}节中会看到，同时式(\ref{ZxxCr})中系数$Z$的含义会在第\ref{AllDHFgr}节中明确，这里都暂时略过了。\\
+\\
+回到电路图，已知全等效电阻是约化真空泡泡的和，因此作为并联支路的电阻$\Sigma$也应该由约化真空泡泡构成，我们将$\Sigma$也看做一个等效电阻。由于$\Sigma$在某种程度上也是关联函数，因此不妨假设其有类似\textsl{BD}级数的结构，我们来看每一级的子元件，这里不考虑和电源的连接线，设内部电线依旧为$D^{}_F$。
 \begin{itemize}\item 零级修正是单个约化真空泡泡$B^{(r)}_i,\quad \forall i$；\item 一级修正是两个约化真空泡泡的串联，根据定义其形如$B^{(r)}_iD^{}_FB^{(r)}_j,\quad \forall i,j$；\item 二级修正是三个约化真空泡泡的串联，形如$B^{(r)}_iD^{}_FB^{(r)}_jD^{}_FB^{(r)}_k,\quad \forall i,j,k$；\item 后续每一级修正都往前一项的右侧乘上$D^{}_FB^{(r)}_i$，最终$\Sigma$为这些子元件的并联。\end{itemize}
 这看起来没有问题，那么将其回代\textsl{BD}级数，只取到一级近似给出
 $$\begin{aligned}\mathfrak C&=D^{}_F+D^{}_F\qty(B^{(r)}_i+B^{(r)}_iD^{}_FB^{(r)}_j)D^{}_F+D^{}_FB^{(r)}_iD^{}_FB^{(r)}_jD^{}_F+\cdots\\&=D^{}_F+D^{}_FB^{(r)}_iD^{}_F+D^{}_FB^{(r)}_iD^{}_FB^{(r)}_jD^{}_F+D^{}_FB^{(r)}_iD^{}_FB^{(r)}_jD^{}_F+\cdots.\end{aligned}$$
@@ -10697,9 +10710,11 @@ $$F(\beta;J)=-\ln Z(\beta;J)=F^{}_0-W^M(\beta;J).$$
 $$\pdv{\Gamma^M}{\eta}=\qty(\pdv{F}{J}+\eta)\pdv{J}{\eta}+J=J.$$
 这和零温场的结论是一样的。通过类似的计算，我们得到$\mathfrak C^M(x,y)=\displaystyle\eval{\pdv{W^M(\beta;J)}{J(x)}{J(y)}}^{}_{J=0}$，于是在有限温度场中$W^M(\beta;J)$同样是连通关联函数的生成函数。做进一步计算，将$\Gamma$关于$\eta$的二阶导按式(\ref{BNM,P;Phb98++})记为$\mathscr H^M_\Gamma$，我们就重新得到互易关系
 \begin{equation}\int\dd\Omega^{}_z \mathfrak C^M(x,z)\mathscr H^M_\Gamma(z,y)=\delta^{}_{xy},\quad \mathscr H^M_\Gamma(x,y)=-\eval{\pdv{\Gamma^M}{\eta(x)}{\eta(y)}}^{}_{\eta=0}.\end{equation}
-在此基础上，按照式(\ref{KouG-*-*-*-//DYVG})在微扰展开下引入$\Sigma$函数
-\begin{equation} \Sigma^M=\qty(\mathfrak C^{M(0)})^{-1}-\qty(\mathfrak C^M)^{-1}=\mathscr H^{M(0)}_\Gamma-\mathscr H^M_\Gamma,\end{equation}
-我们就得到平衡热场的\textsl{Dyson}方程，注意在\textsl{Eculidean}表述下，传播子的\textsl{SD}方程按照式(\ref{WocFHQQ245276})为$-\square^{}_E D^M_F(x,y)=\delta^E_{xy}$，因而我们得到
+在此基础上，按照式(\ref{KouG-*-*-*-//DYVG})在微扰展开下引入自能函数
+\begin{equation}\Sigma^M=\qty(\mathfrak C^{M(0)})^{-1}-\qty(\mathfrak C^M)^{-1}=\mathscr H^{M(0)}_\Gamma-\mathscr H^M_\Gamma,\end{equation}
+我们就得到平衡热场的\textsl{Dyson}方程，注意在\textsl{Eculidean}表述下，传播子的\textsl{SD}方程按照式(\ref{WocFHQQ245276})为
+$$-\square^{}_E D^M_F(x,y)=\delta^E_{xy},$$
+因而我们得到
 \begin{equation}\begin{cases}&-\square^{}_E\mathfrak C^M(x,y)=\delta^{}_{xy}+\displaystyle\int\Sigma^M(x,m)\mathfrak C^M(m,y)\dd\Omega^{}_m,\\&\mathfrak C^M(x,y)=D^M_F(x,y)+\displaystyle\int D^M_F(x,z)\Sigma^M(z,m)\mathfrak C^M(m,y)\dd\Omega^{}_m\dd\Omega^{}_z,\end{cases}\end{equation}
 以及其核形式的\textsl{BD}级数解
 \begin{equation}\mathfrak C^M=D^M_F+D^M_F\circledast\Sigma^M\circledast D^M_F+D^M_F\circledast\Sigma^M\circledast D^M_F\circledast\Sigma^M\circledast D^M_F+\cdots.\end{equation}
@@ -10792,7 +10807,7 @@ $$C^{(1)}_{+-}(x,y)=\qty(\tikz[baseline=(current bounding box.center)]{\begin{fe
 这样就确定了\textsl{RA}图的动量\textsl{Feynman}规则，进一步的我们就不再给出了，留给读者按照第\ref{acrF55][][pp[}节中的零温场规则自行画出一级修正。\\
 \\
 值得一提的是，\textsl{SK}形式同样适用于平衡热场，也就是\textsl{Matsubara}形式。在第\ref{oeERgYGGG-*-*-/}节推导\textsl{CTP}时我们使用了分段\textit{Hamiltonian}(\ref{CsIhgHDB})，在$t=0$时刻$\hat{H}$存在间断，使得热场的演化是非平衡的。但若我们令$\hat{H}$恒定，则\textsl{SK}形式就退化为\textsl{Matsubara}形式，具体的表现就在于，对于图 \ref{weGBNNM..,te}的\textsl{KP}路径中$\mathcal P^{}_1$和$\mathcal P^{}_2$实部相同的对应点，都可以定义一个整体虚时圆$\mathcal P^{}_4$，从而可以认为$\mathcal P^{}_3=\mathcal P^{}_4=S^1_\tau$，这样就回到了平衡热场理论。
-\subsubsection{Schwinger-Keyldsh形式的Dyson方程}\label{=0=-0FSJGDHRE}
+\subsubsection{CTP形式的Dyson方程}\label{=0=-0FSJGDHRE}
 \noindent 上面我们分析了传播子分母的展开，现在让我们重点分析分母，也就是热路径积分自身的展开。在零温场中我们通过第\ref{ecvgsddy550r8}节以及第\ref{1pL//-..][rG}节的分析，确定了连通图和作为\textit{1PI}和的生成函数，以及全连通传播子的\textsl{BD}级数。类似的理论也可以在平衡热场中找到，我们现在要做的就是考察非平衡热场是否也有同样的联通结构。\\
 \\
 相互作用热路径积分由式(\ref{Zdv-/edfs/*..+})确定，这里我们令热多点函数(\ref{NBhjl[[][[r})的分母取零级近似，并记自由场的热路径积分为$Z^{(0)}_{SK}$，则按照通常的处理，我们展开相互作用的指数相得到
@@ -10851,7 +10866,7 @@ $$\sum_n\int G^{ln}_{KG}(x,z)\mathscr H^{nm}_\Gamma(z,y)\dd\Omega^{}_z=\delta^{}
 \begin{equation}\mathscr H^{lm}_\Gamma(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\sum_{n,k}\int\qty(G^{lk}_{KG})^{-1}(x,1)\mathfrak C^{(res)}_{kn}(1,2)\mathscr H^{nm}_\Gamma(2,y)\dd\Omega^{}_1\dd\Omega^{}_2.\end{equation}
 这是一个典型的\textsl{LS}方程，同样将第二项记为$\Sigma$，但此时这是一个二维矩阵的矩阵元$\Sigma^{lm}$，定义为
 \begin{equation}\Sigma^{lm}(x,y)=\qty(G^{lm}_{KG})^{-1}(x,y)-\mathscr H^{lm}_\Gamma(x,y)\implies \vb{\Sigma}^K=\mathscr H^{K(0)}_\Gamma-\mathscr H^K_\Gamma=\mqty(\Sigma^{++}&\Sigma^{+-}\\ \Sigma^{-+}&\Sigma^{--}).\label{Pouicu89788/}\end{equation}
-回代入互易关系我们得到
+按照第\ref{1pL//-..][rG}节中的定义，这就是\textsl{SK}形式的自能函数，一般也称为\textbf{自能矩阵}。回代入互易关系我们得到
 \begin{equation}\sum_n\int\qty(G^{ln}_{KG})^{-1}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z=\delta^{}_{xy}\delta^{lm}+\sum_n\int\Sigma^{ln}(x,z)\mathfrak C^{nm}(z,y)\dd\Omega^{}_z,\label{KiUyt**-cg}\end{equation}
 但在计算$\qty(\vb{G}^{K}_{KG})^{-1}$时需要注意\textsl{CTP}约束。在实标量\textsl{KG}场中场算符为$-\square$，将自由\textsl{SD}方程组(\ref{dudu98786786665})以矩阵形式写作
 $$-\square\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(x,y)=\mqty(1&0\\0&-1)i\delta^{}_{xy},$$
@@ -10867,7 +10882,7 @@ $$-\square\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(x,y)=\mqty(1&0
 $$\begin{aligned}\mathfrak C^{++}(x,y)=&G^{++}_{KG}(x,y)+\int \Big\{G^{++}_{KG}(x,c)\Sigma^{++}(c,z)G^{++}_{KG}(z,y)+G^{++}_{KG}(x,c)\Sigma^{+-}(c,z)G^{-+}_{KG}(z,y)\\&+G^{+-}_{KG}(x,c)\Sigma^{-+}(c,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,c)\Sigma^{--}(c,z)G^{-+}_{KG}(z,y)\Big\}\dd\Omega^{}_z\dd\Omega^{}_c.\end{aligned}$$
 当然更好的选择是矩阵形式，积分用核形式写出卷积化简
 \begin{equation}\begin{aligned}&\text{\textsl{Dyson}方程：}i\hat{\sigma}^{}_3\square\bm{\mathfrak C}^K=\vb{I}+\vb{\Sigma}^K\circledast\bm{\mathfrak C}^K,\quad\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\bm{\mathfrak C}^K,\\&\text{\textsl{BD}级数：}\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\vb{G}^K_{KG}+\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\vb{G}^K_{KG}+\cdots.\end{aligned}\label{Yat623457}\end{equation}
-关于$\vb{\Sigma}^K$的图含义，以及\textsl{SK}形式的\textit{1PI}这里就不再重新计算了，根据之前的结论可知，这些都可以直接从第\ref{1pL//-..][rG}节直接得到。但需要说明的是，目前为止我们一直都处于回路规则中，并非\textsl{RA}规则，因此这里的\textit{1PI}是回路图，式(\ref{UGYU[0274378][})现在写为
+关于自能矩阵$\vb{\Sigma}^K$的图含义，以及\textsl{SK}形式的\textit{1PI}这里就不再重新计算了，根据之前的结论可知，这些都可以直接从第\ref{1pL//-..][rG}节直接得到。但需要说明的是，目前为止我们一直都处于回路规则中，并非\textsl{RA}规则，因此这里的\textit{1PI}是回路图，式(\ref{UGYU[0274378][})现在写为
 \begin{equation}\Sigma^{lm}(x,y)=\text{Sum of all contour \textit{1PI} with two external legs},\quad \forall l,m=\pm.\end{equation}
 也就是不可拆分的回路热浴泡泡和，这些和中包含所有可能的顶点种类，以及相应的符号。\\
 \\
@@ -11023,14 +11038,49 @@ $$\mathscr W\qty[\mathfrak C^{+-}](p,x)\approx\delta\qty(p^2)\qty{\theta\qty(p^0
 \begin{equation}C(f)=\frac{1}{E^{}_{\vb{p}}}\int\delta\qty(p^2)\theta\qty(p^0)\qty{\mathscr W\qty[\Sigma^{+-}]\qty(1+f(p,x))-\mathscr W\qty[\Sigma^{-+}]f(p,x)}\dd p^0.\end{equation}
 这样我们就回到了经典的\textsl{Boltzmann}动理方程(\ref{Cadasfi234})，对于平衡态$\Sigma^{+-}=\Sigma^{-+}=0$我们就回到\textsl{Vlasov}方程，但和经典方程不同的是，这里多出一个真空因子$(1+f)$，这是\textbf{玻色增强 \textit{Bose Enhancement}}效应确定的。值得一提的是对于费米子，基于其反对易性我们得到
 \begin{equation}\mathscr W\qty[\mathfrak C^{-+}](p,x)\sim 1-\expval{\hat{a}^\dagger_p\hat{a}^{}_p}\approx\theta\qty(p^0)\qty(1-f(p,x)),\end{equation}
-称为\textbf{\textsl{Pauli}阻塞}，这一点可以在\cite{Ld3k}\S 95中看到。一般的我们将此\textsl{Moyal}方程称为\textbf{\textsl{Uehling-Uhlenbeck}方程}，是非平衡态场研究的基石之一。\\
+称为\textbf{\textsl{Pauli}阻塞}，这一点可以在\cite{Ld3k}\S 95中看到。一般的我们将此\textsl{Moyal}方程称为\textbf{\textsl{Uehling-Uhlenbeck}方程}，是非平衡态场研究的基石之一。可以看到，\textsl{UU}碰撞积分由自能矩阵元确定，这再次说明自能函数在相互作用理论中占据核心地位。\\
 \\
 最后我们总结一下所用到的各类近似：
 \begin{enumerate}\item 在\textsl{Dyson}方程中，左侧导数部分$p^2\star\mathscr W\qty[\mathfrak C^{-+}]$的星积取梯度近似
 $$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的。\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$，这里我们已经将质量壳约束纳入近似中。\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了。\end{enumerate}
 基于这些近似，我们从\textsl{SK}形式得到了\textsl{Boltzmann}动理方程，可见其约束还是很多的，为了处理更一般的非平衡量子系统，我们就需要逐步放开这些约束。关于\textsl{UU}碰撞积分的图解法，可以参考\cite{Ld3k}\S 95，这里就不展开了。\\
 \\
-通过上述推导，我们看到宏观物理定律，是如何从微观量子场的关联函数中涌现出来的。这里主要涉及到两个近似：第\ref{Xheish//}个和第\ref{Meiifiab}个。后续我们会看到，这两个近似实际上是典型的粗粒化过程，它们将关联函数中最主要的统计性质提出，并在大范围的统计均值下得到宏观结论，这就是重整化的目标。\clearpage
+通过上述推导，我们看到宏观物理定律，是如何从微观量子场的关联函数中涌现出来的。这里主要涉及到两个近似：第\ref{Xheish//}个和第\ref{Meiifiab}个。后续我们会看到，这两个近似实际上是典型的粗粒化过程，它们将关联函数中最主要的统计性质提出，并在大范围的统计均值下得到宏观结论，这就是重整化的目标。
+
+\subsection{实标量场的重整化引入}\label{AllDHFgr}
+\noindent 回到式(\ref{Dfbd6897=-=})，我们看到在动量表象中，自能函数确定了实标量场的有效质量(\ref{98100..9})，写为
+$$m^{*2}=m^2_0+i\Sigma(p).$$
+而这就使得全连通传播子(\ref{ZxxCr})的极点相较于自由传播子有所改变，为$p^2=m^{*2}$，这说明我们有必要详细计算这个有效质量的值。根据之前论述，有效质量和相互作用直接相关，因此我们可以将质量看作一个参数，通过和统计中似然理论的类似操作，得到真实的质量。我们最终会看到，这一理论也能从唯象的角度解释\textsl{UU}碰撞积分的由来。
+\subsubsection{Källén-Lehmann谱分布}
+\noindent 我们从相互作用传播子自身(\ref{Vbsigjer})出发，前文中的处理都是从相互作用绘出发的，但这并不能完整的体现$C(a,b)$原本的性质。事实上，相互作用绘景以及\textsl{Feynman}图都是\emph{计算方法}，它们是通过数学直接定义的，但本身并没有具体的物理含义，它们所体现的物理性质依旧需要通过$C(a,b)$赋予。既然现在我们在相互作用绘景下无法处理发散，那么最好的方法便是回到开始，从实际的\emph{物理意义}解决问题。\\
+\\
+重新写出相互作用传播子
+$$C(a,b)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}\qty(\vb{a},a^0)\hat{\psi}\qty(\vb{b},b^0)}}{\Omega},$$
+其中$\ket{\Omega}$是相互作用真空，并且根据定义，相互作用场位形算符$\hat{\psi}$处于\textsl{Heisenberg}绘景。我们现在的目标是直接处理这个量，为此先将编时乘积打开
+\begin{equation}C(a,b)=\mel**{\Omega}{\hat{\psi}(a)\hat{\psi}(b)}{\Omega}\theta\qty(a^0-b^0)+\mel**{\Omega}{\hat{\psi}(b)\hat{\psi}(a)}{\Omega}\theta\qty(b^0-a^0).\end{equation}
+我们先考察第一项，虽然$\psi$未知，但二次量子化算符$\hat{\psi}$的定义是明确的，因此我们不妨来计算其矩阵元。为了将它拆分为矩阵元，最简单的方法是插入一组完备的占有数态，引入相互作用占有数态$\ket{\lambda}$，其能量归一化可以直接从式(\ref{Pzasd547.})推广
+\begin{equation}\hat{\vb{I}}=\sum_\lambda\prod_{a\in\qty{\lambda}}\sum_{\vb{p}}\dfrac{\dyad{\lambda}{\lambda}}{2E^{}_a\qty(\vb{p}^{}_a)}=\sum_\lambda\prod_{a\in\qty{\lambda}}\bigintsss\frac{\dd^3\vb{p}^{}_a}{(2\pi)^3}\frac{\dyad{\lambda}{\lambda}}{2E^{}_a\qty(\vb{p}^{}_a)},\quad E^2_a=\vb{p}^2_a+m^2_a.\end{equation}
+其中序号$a$可以认为是$\lambda$个粒子中的第$a$个粒子，相应的质量为$m^{}_a$，动量为$\vb{p}^{}_a$，这可以从\textsl{FKG}方程解的能量归一化(\ref{UY89++-342})取张量积得到，证明略过。方便起见，我们简记此完备性为
+\begin{equation}\hat{\vb{I}}=\sum_\lambda\int\dd\varPi^{}_\lambda\dyad{\lambda}{\lambda},\quad \dd\varPi^{}_\lambda=\frac{\dd^3\vb{p}^{}_a}{(2\pi)^3}\dfrac{1}{2E^{}_a\qty(\vb{p}^{}_a)}.\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{零温场质量的重整化}
+\subsubsection{相互作用传播子的解析性质}
+\subsubsection{热场的重整化}
+
+
+\clearpage
 
 \section{经典电磁辐射理论概览}\label{DFgg//}
 \noindent 前文中我们介绍了无电荷下的非恒定外场，也就是第\ref{uoyu}节电磁波场。这里我们讨论在宏观情况下电磁波的来源$^{\cite{L41}}$，以及电荷运动和电磁波的关联，为后续的量子电动力学(QED)理论做一定的铺垫。下文中为了避免和电场大小混淆，总能量记为$\mathscr E$。
@@ -12075,13 +12125,13 @@ $$R^{\mu}R^{}_{\mu}=q^{\mu}q^{}_{\mu}-\frac{e^2}{\Gamma c^2}k^{\mu}q^{}_{\mu}\ex
 我们先从低速近似开始，外场中电子的非相对论性的\textit{Hamiltonian}算符根据\textsl{Pauli}方程(\ref{SGppu})写为
 \begin{equation}\hat{\mathcal{H}}=\hat{\mathcal{H}}'-\mu^{}_B\bm{\sigma}\cdot\vb{H},\quad\comm{\hat{\mathcal{H}}'}{\hat{\bm{\sigma}}}=\vb{0},\label{/}\end{equation}
 其中将所有和自旋无关的项都归纳进$\hat{\mathcal{H}}'$中。我们来考察自旋算符$\hat{\vb{S}}$的演化，在\textsl{Schrödinger}绘景下算符和时间无关，因此演化方程为
-$$\dv{\hat{\vb{S}}}{t}=\hat{\dt{\vb{S}}}=\frac{i}{\hbar}\comm{\hat{\mathcal{H}}}{\hat{\vb{S}}}=\frac{i}{2}\comm{\hat{\mathcal{H}}}{\bm{\sigma}},$$
+$$\dv{\hat{\vb{S}}}{t}=\dt{\hat{\vb{S}}}=\frac{i}{\hbar}\comm{\hat{\mathcal{H}}}{\hat{\vb{S}}}=\frac{i}{2}\comm{\hat{\mathcal{H}}}{\bm{\sigma}},$$
 带入式(\ref{/})并利用性质(\ref{ybGHDwe})我们得到
-\begin{equation}\hat{\dt{\vb{S}}}^{}_a=-\frac{i\mu^{}_B}{2}\vb{H}^b\comm{\bm{\sigma}^{}_b}{\bm{\sigma}^{}_a}=-\mu^{}_B\bm{\epsilon}^{}_{abc}\vb{H}^b\bm{\sigma}^c,\end{equation}
+\begin{equation}\dt{\hat{\vb{S}}}^{}_a=-\frac{i\mu^{}_B}{2}\vb{H}^b\comm{\bm{\sigma}^{}_b}{\bm{\sigma}^{}_a}=-\mu^{}_B\bm{\epsilon}^{}_{abc}\vb{H}^b\bm{\sigma}^c,\end{equation}
 或者用自旋算符本身写为
-\begin{equation}\hat{\dt{\vb{S}}}=\frac{2\mu^{}_B}{\hbar}\hat{\vb{S}}\cp\vb{H}.\label{llKK!}\end{equation}
+\begin{equation}\dt{\hat{\vb{S}}}=\frac{2\mu^{}_B}{\hbar}\hat{\vb{S}}\cp\vb{H}.\label{llKK!}\end{equation}
 根据第\ref{VVNnvcgoP}节最后的内容，我们看到在静止参考系下，粒子的极化完全由三维自旋均值(\ref{KKJGB7})控制，且均值可以由式(\ref{RSVS5C})定义的三维矢量$\bm{\zeta}^a$确定。此处也是类似的，但注意这里磁场在均值下和时间有关，写为$\vb{H}(t)=\expval{\hat{\vb{H}}}$，这是其作为算符的必然结果。因此式(\ref{llKK!})在均值下写为
-\begin{equation}\expval{\hat{\dt{\vb{S}}}}=\dv{\bm{\zeta}}{t}=\frac{2\mu^{}_B}{\hbar}\bm{\zeta}\cp\vb{H}(t)=-\bm{\Omega}\cp\bm{\zeta},\quad \bm{\Omega}^{}_s(t)=\dfrac{2\mu^{}_B}{\hbar}\vb{H}(t)=\dfrac{e}{mc}\vb{H}.\label{mus''}\end{equation}
+\begin{equation}\expval{\dt{\hat{\vb{S}}}}=\dv{\bm{\zeta}}{t}=\frac{2\mu^{}_B}{\hbar}\bm{\zeta}\cp\vb{H}(t)=-\bm{\Omega}\cp\bm{\zeta},\quad \bm{\Omega}^{}_s(t)=\dfrac{2\mu^{}_B}{\hbar}\vb{H}(t)=\dfrac{e}{mc}\vb{H}.\label{mus''}\end{equation}
 这是一个典型的\textbf{进动方程 \textit{Precession Equation}}，它说明自旋均值$\bm{\zeta}^a$沿外场做保持模的旋转，且角速度为$\bm{\Omega}^{}_s=\dfrac{e}{mc}\vb{H}$，这里我们已经带入了\textsl{Bohr}磁子(\ref{boerciz})。\\
 \\
 上述结果是纯宏观经典的，我们从恒定匀强磁场分析来说明这一点。根据\textsl{Lorentz}力(\ref{emfff})，我们得到电荷系统在纯外磁场$\vb{H}$下的力矩为
@@ -12097,7 +12147,7 @@ $$\dv{\expval{\vb{M}}_t}{t}=\expval{\vb{K}}_t=\expval{\vb{m}}_t\cp\vb{H},$$
 在低速近似下，对于磁荷质比(\ref{cihezb})完全相同的系统，我们从式(\ref{cifvb})带入宏观磁矩得到
 \begin{equation}\dv{\expval{\vb{M}}_t}{t}=\frac{e}{2mc}\expval{\vb{M}}_t\cp\vb{H}=-\bm{\Omega}^{}_L\cp\expval{\vb{M}}_t,\end{equation}
 其中$\bm{\Omega}^{}_L=\dfrac{e\vb{H}}{2mc}$称为\textbf{\textsl{Larmor}频率}，上述角动量的进动方程称为\textbf{\textsl{Larmor}进动}。我们看到这个结论和量子化下的结论(\ref{mus''})高度吻合，只要做替换
-$$\expval{\vb{M}}_t\rightarrow\bm{\zeta},\quad \expval{\vb{m}}_t=\frac{e}{2mc}\expval{\vb{M}}_t=g^{(e)}_m\expval{\vb{M}}_t\rightarrow\frac{e}{mc}\bm{\zeta}\Longleftrightarrow g^{(e)}_s\expval{\vb{M}}_t$$
+$$\expval{\vb{M}}_t\longrightarrow\bm{\zeta},\quad \expval{\vb{m}}_t=\frac{e}{2mc}\expval{\vb{M}}_t=g^{(e)}_m\expval{\vb{M}}_t\longrightarrow\frac{e}{mc}\bm{\zeta}\Longleftrightarrow g^{(e)}_s\expval{\vb{M}}_t$$
 即可。而对比磁矩不难看到，这种替换的结果给出$g^{(e)}_m=\dfrac{1}{2}g^{(e)}_{s}$，这正是\textsl{Dirac}定理。所以我们看到，自旋的进动是纯经典性的，其可以解释为\textsl{Larmor}进动的量子化。对于系统的旋转角速度，我们可以通过能量简单计算。外磁场下旋转系的能量写为
 $$E=T+U=\sum_a\frac{m^{}_a}{2}\vb{v}^2_a+U=\sum_a\frac{m}{2}(\vb{v}^{}_{0a}+\bm{\Omega}^{}_{\vb{v}}\cp\vb{r}^{}_a)^2+U,$$
 低速近似要求转速的二级近似为零，满足$(\bm{\Omega}^{}_{\vb{v}}\cp\vb{r})^2=0$，此时能量的增加为
@@ -12112,14 +12162,14 @@ $$\dv{\vb{M}}{t}=\sum_am^{}_a\vb{r}^{}_a\cp\dv{\vb{v}^{}_a}{t}=\sum_a\frac{e^{}_
 \begin{equation}\dv{\vb{v}}{t}=\frac{e}{mc}\vb{v}\cp\vb{H}=-\bm{\omega}\cp\vb{v},\quad\bm{\omega}=\frac{e\vb{H}}{mc}.\end{equation}
 可见速度的进动频率比角动量的少一半，但值得注意的是根据式(\ref{mus''})我们看到$\bm{\omega}=\bm{\Omega}^{}_s$，说明速度和极化矢量之间相对静止，无论是否存在量子效应或者相对论效应都成立，我们后续会看到。\\
 \\
-现在我们过渡到相对论性量子效应。在相对论体系下，三维空间矢量$\bm{\zeta}^a$应该替换为四维复极化时空矢量$\vb{a}^A$，同样由式(\ref{RSVS5C})定义，并满足正交性条件(\ref{Rcv5C})。此时自旋演化方程(\ref{mus''})应该用世界线$\gamma(s)$的切向量给出，即
+现在让我们过渡到相对论性量子效应。在相对论环境中，三维空间矢量$\bm{\zeta}^a$应该替换为四维复极化时空矢量$\vb{a}^A$，同样由式(\ref{RSVS5C})定义，并满足正交性条件(\ref{Rcv5C})。此时自旋演化方程(\ref{mus''})应该用世界线$\gamma(s)$的切向量给出，即
 $$\dv{\bm{\zeta}}{t}\rightarrow\dv{\vb{a}^A}{s}.$$
 我们先将三维形式用四维物理量表示，比如磁场$\vb{H}$应该用电磁场张量$\vb{F}^{AB}$替换。根据其矩阵形式(\ref{tFFVan})，我们用空间分量$\vb{F}^{ab}$写出方程(\ref{mus''})叉积的三维空间形式
 $$(\bm{\zeta}\cp\vb{H})^a=\frac{1}{2}\bm{\epsilon}^{abc}\bm{\zeta}^{}_b\bm{\epsilon}^{}_{cde}\vb{F}^{de}=-\frac{1}{2}\bm{\zeta}^{}_b\vb{F}^{de}\qty(\delta^a_d\delta^b_e-\delta^a_e\delta^b_d)=-\bm{\zeta}^{}_b\vb{F}^{ab},$$
 其中用到了$\epsilon-\delta$等式。这个结论其实从微分几何的角度推导非常简单，这里简单展示一下：
 $$\bm{\zeta}\cp\vb{H}=-*\qty(\bm{\zeta}\wedge*\vb{F})=-*\qty(\expval{\bm{\zeta},\vb{F}}\bm{\eta})=-\vb{F}(\bm{\zeta}),$$
 其中$*$称为\textbf{\textsl{Hodge}星算子}，$\bm{\eta}$为流形的\textbf{适配体元}，最后一步用到$*\bm{\eta}=1$这个结论，以及外形式的内积，后续我们都会涉及到。于是演化方程(\ref{mus''})可以写为$\dt{\bm{\zeta}}^a=-\dfrac{2\mu^{}_B}{\hbar}\bm{\zeta}^{}_b\vb{F}^{ab}$，从而四维形式不难看到写为
-\begin{equation}!!\qquad \dv{\vb{a}^A}{s}=\dfrac{2\mu^{}_B}{\hbar}\vb{F}^{AB}\bm{a}^{}_B.\qquad !!\label{shi34}\end{equation}
+\begin{equation}!!\qquad \dv{\vb{a}^A}{s}=\dfrac{2\mu^{}_B}{\hbar}\vb{F}^{AB}\vb{a}^{}_B.\qquad !!\label{shi34}\end{equation}
 但要注意，这个方程不一定满足正交性条件(\ref{Rcv5C})，我们来检验一下。引入电荷的四维运动方程(\ref{shi337})，则对正交性求导给出
 $$\dv{\vb{a}^A\vb{p}^{}_A}{s}=\vb{a}^A\dv{\vb{p}^{}_A}{s}+\vb{p}^{}_A\dv{\vb{a}^A}{s}=\vb{p}^{}_A\dv{\vb{a}^A}{s}+\frac{e}{c}\vb{F}^{}_{AB}\vb{u}^B\vb{a}^A=0,$$
 也就是说导数一定满足
@@ -12127,19 +12177,19 @@ $$\dv{\vb{a}^A\vb{p}^{}_A}{s}=\vb{a}^A\dv{\vb{p}^{}_A}{s}+\vb{p}^{}_A\dv{\vb{a}^
 于是在式(\ref{shi34})的基础上，我们对导数增加一个辅助矢量$\vb{C}^A$，使得其在低速近似下为零，保证不影响原结果，并要求最终结果满足式(\ref{shi367})。\\
 \\
 不难想到$\vb{C}^A$最简单的形式为$\vb{C}^A=C\vb{u}^A$，因此式(\ref{shi367})改写为
-$$\vb{u}^{}_A\qty(\dfrac{2\mu^{}_B}{\hbar}\vb{F}^{AB}\bm{a}^{}_B+C\vb{u}^A)=C+\dfrac{2\mu^{}_B}{\hbar}\vb{F}^{AB}\vb{u}^A\bm{a}^{}_B=\frac{e}{mc^2}\vb{F}^{}_{AB}\vb{u}^A\vb{a}^B,$$
+$$\vb{u}^{}_A\qty(\dfrac{2\mu^{}_B}{\hbar}\vb{F}^{AB}\vb{a}^{}_B+C\vb{u}^A)=C+\dfrac{2\mu^{}_B}{\hbar}\vb{F}^{AB}\vb{u}^A\vb{a}^{}_B=\frac{e}{mc^2}\vb{F}^{}_{AB}\vb{u}^A\vb{a}^B,$$
 其中用到四维速度的归一性$\vb{u}^{}_A\vb{u}^A=1$，于是我们得到比例系数为
-\begin{equation}C=\qty(\frac{e}{mc}-\dfrac{2\mu^{}_B}{\hbar})\vb{F}^{AB}\vb{u}^A\bm{a}^{}_B.\end{equation}
+\begin{equation}C=\qty(\frac{e}{mc}-\dfrac{2\mu^{}_B}{\hbar})\vb{F}^{AB}\vb{u}^A\vb{a}^{}_B.\end{equation}
 对于电子而言，带入\textsl{Bohr}磁子给出$\dfrac{2\mu^{}_B}{\hbar}=\dfrac{e}{mc}$，因而$C^{}_{(e^-)}=0$。但对于核子，一般其磁矩为
 \begin{equation}\mu^{}_n=\mu'_n+\frac{e\hbar}{2mc},\end{equation}
 其中$\mu'_n$为其反常部分，对于电子没有这一项。因此将$C$中的\textsl{Bohr}磁子替换为粒子磁矩$\mu^{}_p$，其包含了核子的反常部分，则$C$写为
-$$C=2\qty(\frac{e}{2mc}-\dfrac{2\mu^{}_p}{\hbar})\vb{F}^{AB}\vb{u}^A\bm{a}^{}_B=-\frac{2\mu'_p}{\hbar}\vb{F}^{AB}\vb{u}^A\bm{a}^{}_B,$$
+$$C=2\qty(\frac{e}{2mc}-\dfrac{2\mu^{}_p}{\hbar})\vb{F}^{AB}\vb{u}^A\vb{a}^{}_B=-\frac{2\mu'_p}{\hbar}\vb{F}^{AB}\vb{u}^A\vb{a}^{}_B,$$
 并将式(\ref{shi367})的系数$\dfrac{e\hbar}{mc}$替换为$2\mu^{}_p$，最终方程写为
-\begin{equation}\hbar\dv{\vb{a}^A}{s}=2\mu^{}_p\vb{F}^{AB}\vb{a}^{}_B-2\mu'_p\vb{u}^A\vb{F}^{BC}\vb{u}^{}_B\bm{a}^{}_C.\label{Bragmm}\end{equation}
+\begin{equation}\hbar\dv{\vb{a}^A}{s}=2\mu^{}_p\vb{F}^{AB}\vb{a}^{}_B-2\mu'_p\vb{u}^A\vb{F}^{BC}\vb{u}^{}_B\vb{a}^{}_C.\label{Bragmm}\end{equation}
 这个方程称为\textbf{\textsl{Bargmann}方程}(1959)，它确定了半自旋值费米子在外电磁场下的极化演化。这里所使用的思路，即从三维低速方程扩充为四维时空方程的过程，我们已经在计算四维辐射阻尼力时介绍了，可以回顾第\ref{Fyyv.'}节。后续一切取三维空间分量的结论，也都在第\ref{Fyyv.'}节有所体现。\\
 \\
 现在我们来仔细考察\textsl{Bargmann}方程(\ref{Bragmm})，这里重点讨论其三维空间分量$\bm{\zeta}$。在四维时空矢量的含义下，$\bm{\zeta}$应该理解为在粒子参考系中的三维极化矢量，其和$\vb{a}^A$的关系由式(\ref{shanchu})控制。首先我们注意到，由于$\vb{F}^{AB}$的反对称性以及正交性条件(\ref{Rcv5C})，\textsl{Bargmann}方程给出
-$$\hbar\vb{a}^{}_A\dv{\vb{a}^A}{s}=2\mu^{}_p\vb{F}^{AB}\vb{a}^{}_A\vb{a}^{}_B-2\mu'_p\vb{a}^{}_A\vb{u}^A\vb{F}^{BC}\vb{u}^{}_B\bm{a}^{}_C=\hbar\dv{(\vb{a}^{}_A\vb{a}^A)}{s}=0,$$
+$$\hbar\vb{a}^{}_A\dv{\vb{a}^A}{s}=2\mu^{}_p\vb{F}^{AB}\vb{a}^{}_A\vb{a}^{}_B-2\mu'_p\vb{a}^{}_A\vb{u}^A\vb{F}^{BC}\vb{u}^{}_B\vb{a}^{}_C=\hbar\dv{(\vb{a}^{}_A\vb{a}^A)}{s}=0,$$
 也就是说在式(\ref{shaERhu})的协变性下，我们得到模
 \begin{equation}\vb{a}^A\vb{a}^{}_A=-\abs{\bm{\zeta}}^2=const.\end{equation}
 这说明粒子在外场运动时，保持极化矢量的模不变，和进动的结论是相同的。其次来讨论三维进动方程，和式(\ref{mus''})一样我们计算$\dfrac{\dd}{\dd{t}}$，这里选择时间坐标$t$是考虑到空间下的运动一般仍然以$t$为主要参照。根据相对论动力学，我们得到间隔和时间的关系为
@@ -12596,7 +12646,7 @@ $$\braket{\phi^{}_f}{s}=\mel**{\phi^{}_f}{\hat{\mathfrak S}}{\phi^{}_i}=\mathfra
 \begin{equation}\mathfrak S^{}_{fi}=\braket{\psi^+_{int}}{\psi^-_{int}}.\end{equation}
 带入定义(\ref{Loghf})，我们写出$\braket{\psi^+_{int}}{\psi^-_{int}}=\mel**{\phi^{}_f}{\hat{\mathfrak M}^\dagger_+\hat{\mathfrak M}^{}_-}{\phi^{}_i}$，从而散射矩阵的演化形式为
 \begin{equation}\hat{\mathfrak S}=\hat{\mathfrak M}^\dagger_+\hat{\mathfrak M}^{}_-=\lim_{t=\infty}\exp(i\hat{\mathcal H}^{}_0t)\exp(-i\hat{\mathcal H}t)\lim_{t=-\infty}\exp(i\hat{\mathcal H}t)\exp(-i\hat{\mathcal H}^{}_0t),\label{Chdnfb555}\end{equation}
-可见散射矩阵完全由两个渐近时间确定，并且这样定义的优势在于，其同时适用于弹性散射和非弹性散射。但需要注意，算符$\exp(-i\hat{\mathcal H}t)$内含了一个约束条件：相互作用$\hat{U}=\hat{\mathcal H}-\hat{\mathcal H}^{}_0$和时间无关。这是可以理解的，因为我们目前所处理的碰撞都是单粒子散射，其只涉及一个运动的粒子，因此耦合的必然都是静态场。唯一的例外是第\ref{TaMpiytt}节中处理的双粒子散射，但当时我们考察的是低能散射，因此仍取$U=const$，还是处于静态场框架。\\
+可见散射矩阵完全由两个渐近时间确定，并且这样定义的优势在于，其同时适用于弹性散射和非弹性散射。但需要注意，算符$\exp(-i\hat{\mathcal H}t)$内含了一个约束条件：相互作用$\hat{U}=\hat{\mathcal H}-\hat{\mathcal H}^{}_0$和时间无关。这是可以理解的，因为我们目前所处理的碰撞都是单粒子散射，其只涉及一个运动的粒子，因此耦合的必然都是静态场。唯一的例外是第\ref{TaMpiytt}节中处理的双粒子散射，但当时我们考察的是低能散射，因此仍取$U$为常数，还是处于静态场框架。\\
 \\
 为了得到普遍的散射理论，我们需要考察$U=U(t)$的动态场，此时式(\ref{Loghf})不再成立。对于一般情形这是较为困难的，因为无法求得\textsl{Schrödinger}方程的普适解。但回顾到在第\ref{InterfbPoiiu+94}节和第\ref{Fefb60}节中，我们建立了一套完整的处理含时微扰的方法，因此若$U(t)$是微扰，则散射理论就归结为相互作用绘景和\textsl{Dyson}级数。而我们已经在第\ref{09HB2230}节中看到，\textsl{Dyson}级数同样是处理相对论性相互作用场的核心，所以通过相互作用绘景我们可以自然的将非相对论性散射过渡到相对论性散射。\\
 \\
@@ -12616,7 +12666,7 @@ $$\hat{F}\qty(\mathfrak T,t^{}_0)\phi^{}_I(t^{}_0)=\hat{\tau}^{\dagger}_0(\mathf
 \begin{equation}\hat{\mathfrak S}=\hat{\tau}^{}_I\qty(\infty,-\infty)=\mathbb T\qty{\exp(-i\int_{\mathbb R}\hat{U}^{}_I(t)\dd t)}.\end{equation}
 其中$\hat{U}^{}_I(t)=\hat{\tau}^{\dagger}_0(t)\hat{U}^{}_S\hat{\tau}^{}_0(t)$是按式(\ref{jietyisi})定义的相互作用绘景势能算符，可见散射矩阵天然是定义在整个时间轴上的。再根据一般的相互作用场结论(\ref{zi/F].,-8f})，我们将势能表达为相互作用\textit{Lagrangian}，则最终在占有数态表象下，我们回到式(\ref{zi/..yy--8f})的形式
 \begin{equation}\hat{\mathfrak S}=\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}.\end{equation}
-其中$\hat{\psi}^{}_I$是自由波函数$\phi$在相互作用绘景中的二次量子化算符。这样就得到了一个协变的散射矩阵，并且在占有数态表象下我们可以自然的处理多粒子的散射，而不必纠结于从单粒子到多粒子的过渡中，含时势能的处理问题。\\
+其中$\hat{\psi}^{}_I$是自由波函数$\phi$在相互作用绘景中的二次量子化算符，事实上通过上面的操作，我们就回到了式(\ref{qrian77*/+})的渐进态变换。这样就得到了一个协变的散射矩阵，并且在占有数态表象下我们可以自然的处理多粒子的散射，而不必纠结于从单粒子到多粒子的过渡中，含时势能的处理问题。\\
 \\
 散射的特征量是散射振幅$\mathcal A$，它通过式(\ref{Ldhg-=GSpp][})和转换矩阵$\hat{\mathcal T}$相关联，所以我们需要将协变散射矩阵用$\hat{\mathcal T}$表示。在非相对论性弹性散射下，这由式(\ref{Ulz--**ad})确定，其矩阵元为(\ref{zx2345sd6/})。但很明显$\delta\qty(E^{}_f-E^{}_i)$并不协变，考虑到碰撞中动量守恒，我们得到
 $$\delta\qty(E^{}_f-E^{}_i)\longrightarrow\delta\qty(p^0_f-p^0_i)\delta^3\qty(\vb{p}^{}_f-\vb{p}^{}_i)=\delta^4\qty(p^{}_f-p^{}_i).$$
@@ -12625,7 +12675,7 @@ $$\delta\qty(E^{}_f-E^{}_i)\longrightarrow\delta\qty(p^0_f-p^0_i)\delta^3\qty(\v
 具体按式(\ref{WQDD//*-})打开$\hat{\tau}^{}_I$的指数，我们就得到协变转换矩阵$\hat{\mathcal M}$的\textsl{Dyson}级数
 $$\hat{\mathcal M}=\sum_{n=1}^\infty\prod_{k=0}^{n-1}\qty{\frac{i^k}{k!}\int^t_0\dd t^{}_{k+1}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I\qty(t^{}_{k+1}))}.$$
 不难验证在低速近似下，这就是\textsl{Born}展开。现在来处理散射振幅，在四维时空中式(\ref{Ldhg-=GSpp][})必然就不成立了，因为它是建立在\textsl{Schrödinger}方程的\textsl{Green}函数远场近似上的。但目前相互作用态已经是渐进态，所以回到远场形式(\ref{B--*65})，我们可以直接省略式(\ref{Ldhg-=GSpp][})的系数，将协变散射振幅直接定义为
-\begin{equation}\mathcal M^{}_{fi}=\mathcal A^{}_{cov}=\mel**{f^{}_I}{\hat{\mathcal M}}{i^{}_I}.\end{equation}
+\begin{equation}\mathcal M^{}_{fi}=\mathcal A^{}_{cov}=\mel**{f^{}_I}{\hat{\mathcal M}}{i^{}_I}.\label{fxf///=-p=}\end{equation}
 一般对于多粒子的散射，协变转换矩阵$\hat{\mathcal M}$根据定义为入射和出射场位形的乘积，因为在相对论场中场位形的能量归一化系数为$\qty(2E)^{-1/2}$，所以我们也可以将协变散射振幅定义为
 \begin{equation}\mathcal M^{}_{fi}=\mathcal A\prod_a\frac{1}{\sqrt{2E^{}_a}},\quad a\in\qty{\text{所有参与散射的粒子}}.\label{Ff909sdfg}\end{equation}
 需要强调的是，由于占有数态表象将粒子的内态完全吸纳进相互作用绘景中，因此协变散射矩阵同样也可以用来描述非弹性散射，各反应道完全由协变转换矩阵元确定。这样一来，协变散射振幅可以处理初态和末态和粒子数不相同的散射，这是我们在后续讨论量子场论的基础。\\
@@ -12659,6 +12709,27 @@ $$\begin{aligned}F=&\sqrt{\qty(p^a_1p^{}_{2a})^2-\qty(m^{}_1m^{}_2)^2}=\sqrt{\qt
 这三个量描述了同一个散射过程中，三类不同的反应道，一般称为\textbf{交叉道}。我们以图表示，相互作用以阴影圆给出
 \begin{itemize}\item \emph{$s$道}：$\begin{tikzpicture}[baseline=(current bounding box.center)]\begin{feynman}\vertex[blob](m)at(0,0){};\vertex[left=0.38cm of m](left_v);\vertex[right=0.38cm of m](right_v);\vertex[left=1.5cm of left_v,yshift=-0.5cm](p1_in);\vertex[left=1.5cm of left_v,yshift=0.5cm](p2_in);\vertex[right=1.5cm of right_v, yshift=0.5cm](p3_out);\vertex[right=1.5cm of right_v,yshift=-0.5cm](p4_out);\diagram*{(p1_in)--[fermion,momentum'={\(p^{}_1\)}](left_v),(p2_in)--[fermion, momentum={\(p^{}_2\)}](left_v),(right_v)--[fermion, momentum={\(p^{}_3\)}](p3_out),(right_v)--[fermion, momentum'={\(p^{}_4\)}](p4_out),};\end{feynman}\end{tikzpicture}$，阴影圆内有$p^{}_1+p^{}_2$守恒，这个反应道对应$s=const$。\item \emph{$t$道}：$\begin{tikzpicture}[baseline=(current bounding box.center)]\begin{feynman}\vertex[blob](m)at(0,0){};\vertex[above=0.38cm of m](right_v);\vertex[below=0.38cm of m](left_v);\vertex[left=1.5cm of left_v,yshift=-0.5cm](p1_in);\vertex[left=1.5cm of left_v,yshift=0.5cm](p2_in);\vertex[right=1.5cm of right_v, yshift=-0.5cm](p3_out);\vertex[right=1.5cm of right_v,yshift=0.5cm](p4_out);\diagram*{(p1_in)--[fermion,momentum'={\(p^{}_1\)}](left_v),(p2_in)--[fermion, momentum={\(p^{}_2\)}](right_v),(left_v)--[fermion, momentum'={\(p^{}_3\)}](p3_out),(right_v)--[fermion, momentum={\(p^{}_4\)}](p4_out),};\end{feynman}\end{tikzpicture}$，阴影圆内有$p^{}_1-p^{}_3$守恒，这个反应道对应$t=const$。\item\emph{$u$道}：$\begin{tikzpicture}[baseline=(current bounding box.center)]\begin{feynman}\vertex[blob](m)at(0,0){};\vertex[above=0.38cm of m](right_v);\vertex[below=0.38cm of m](left_v);\vertex[left=1.5cm of left_v,yshift=-0.5cm](p1_in);\vertex[left=1.5cm of left_v,yshift=0.5cm](p2_in);\vertex[right=1.5cm of right_v, yshift=0.5cm](p3_out);\vertex[right=1.5cm of right_v,yshift=-0.5cm](p4_out);\diagram*{(p1_in)--[fermion,momentum'={\(p^{}_1\)}](left_v),(p2_in)--[fermion, momentum={\(p^{}_2\)}](right_v),(left_v)--[fermion, momentum'={\(p^{}_4\)}](p4_out),(right_v)--[fermion, momentum={\(p^{}_3\)}](p3_out),};\end{feynman}\end{tikzpicture}$，阴影圆内有$p^{}_1-p^{}_4$守恒，这个反应道对应$u=const$。\end{itemize}
 可见这几个常数各自对应确定的反应道，这些图像都可以在后续的\textsl{Feynman}图中看到同样的结构。当然这三个三个运动学不变量需要满足一定的约束条件，可以表述在\textbf{\textsl{Mandelstam}平面}内，这一点可以参考\cite{L42}\S 67得到，我们就不介绍了。
+\subsubsection{实标量场的散射和LSZ约化}
+\noindent 上面我们通过推广非相对论性系统散射的时间演化，建立了相对论性场的散射理论，现在我们具体来计算实标量场的散射。方便起见，我们这里尽考察入射为两个粒子的散射，出射粒子数为$n\geq 2$。\\
+\\
+我们从式(\ref{fxf///=-p=})出发，在相互作用占有数态下写出
+\begin{equation}\mathcal M^{}_{fi}=\mel**{n^{}_I}{\hat{\mathcal M}}{2^{}_I}=\mel**{n^{}_I}{\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}}{2^{}_I}.\end{equation}
+注意到一个问题：在形式上其和零温场多点函数(\ref{HFghx98//F///*})类似，但是多点关联函数是关于相互作用真空态$\ket{\Omega}$定义的，这里的左右矢态非真空。由于目前所有的理论都建立在多点函数之上，因此我们需要回到真空态，将散射矩阵元变为可计算的多点函数。\\
+\\
+一个显然的出发点就是，通过无穷远处的占有数算符$\qty{\hat{a},\hat{a}^\dagger}$将非真空态变为真空态。为此我们不妨记入射粒子为$e$和$f$，出射粒子按顺序用$1\leq i\leq n$表示，则按定义(\ref{crea})和(\ref{anni})，我们得到始末态为
+$$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I}=B\hat{a}^\dagger_1\hat{a}^\dagger_2\cdots\hat{a}^\dagger_n\ket{\Omega}.$$
+其中$A$和$B$为归一化系数，但
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Dirac场之间的耦合}\label{dinm,a665rb2}
 \noindent 在前文中
