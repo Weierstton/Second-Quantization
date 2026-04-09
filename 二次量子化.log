@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  9 APR 2026 03:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  9 APR 2026 03:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -15198,10 +15198,6 @@ l.13592 \end{document}
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `二次量子化.out' has not changed.
 (rerunfilecheck)             Checksum: 8883AAA7D305A89A15F3E59573CDB055;36076.
  )
@@ -15212,7 +15208,7 @@ Package rerunfilecheck Info: File `二次量子化.out' has not changed.
 Here is how much of TeX's memory you used:
  70644 strings out of 467799
  1583780 string characters out of 5425587
- 2418947 words of memory out of 5000000
+ 2419875 words of memory out of 5000000
  92395 multiletter control sequences out of 15000+600000
  879825 words of font info for 1157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -15368,7 +15364,7 @@ ype1/public/cm-super/sfti0800.pfb><d:/Program Files (x86)/texlive/2025/texmf-di
 st/fonts/type1/public/cm-super/sfti0900.pfb><d:/Program Files (x86)/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><d:/Program Files (x86)/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on 二次量子化.pdf (682 pages, 5911080 bytes).
+Output written on 二次量子化.pdf (682 pages, 5911035 bytes).
 PDF statistics:
  13057 PDF objects out of 15390 (max. 8388607)
  11811 compressed objects within 119 object streams
