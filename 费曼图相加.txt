@@ -1,0 +1,78 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{tikz-feynman}% not needed: ,contour}
+\usetikzlibrary{shapes.geometric}
+
+\begin{document}
+% defining some pictures
+% diagrams
+    % ~~~ (1) your code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    \tikzset{
+        A/.pic={
+        \begin{feynman}
+            \vertex[blob] (m) at ( 0, 0) {};
+            \vertex (a) at (-1,-1) {};\vertex (b) at ( -60:1cm) {};
+            \vertex (c) at (-1, 2) {};
+            \vertex (d) at ( 1, 2) {};
+            \diagram* {
+                (a) -- [photon,edge label=$q_2$] (m) 
+                    -- [photon,edge   label=$q_1$] (c),
+                (b) -- [plain,edge label'=$p_2$] (m) 
+                    -- [plain, edge label'=$p_1$] (d),
+              };
+        \end{feynman}
+        }
+    }
+        
+    % ~~~ (3) making said node a circle ~~~~~~~~~~~~~~~~~~~~~~
+    \tikzset{
+        B/.pic={
+        \begin{feynman}
+            \node[shape=circle,fill=blue] (m) at ( 0, 0) {};
+            \vertex (a) at (-1,-2) {};
+            \vertex (b) at ( 1,-2) {};
+            \vertex (c) at (-1, 2) {};
+            \vertex (d) at ( 1, 2) {};
+            \diagram* {
+                (a) -- [photon,edge label=$q_2$] (m) 
+                    -- [photon,edge   label=$q_1$] (c),
+                (b) -- [plain,edge label'=$p_2$] (m) 
+                    -- [plain, edge label'=$p_1$] (d),
+              };
+        \end{feynman}
+        }
+    }   
+    
+    % ~~~ (4) making said node a rectangle ~~~~~~~~~~~~~~~~~~~~~~
+    \tikzset{
+        C/.pic={
+        \begin{feynman}
+            \node[shape=rectangle,fill=black] (m) at ( 0, 0) {Rectangle\vrule width 1pt height 2cm};
+            \vertex (a) at (-1,-2) {};
+            \vertex (b) at ( 1,-2) {};
+            \vertex (c) at (-1, 2) {};
+            \vertex (d) at ( 1, 2) {};
+            \diagram* {
+                (a) -- [photon,edge label=$q_2$] (m) 
+                    -- [photon,edge   label=$q_1$] (c),
+                (b) -- [plain,edge label'=$p_2$] (m) 
+                    -- [plain, edge label'=$p_1$] (d),
+              };
+        \end{feynman}
+        }
+    }
+
+% texts 
+    \tikzset{t1/.pic={\node {(a)};}}
+    \tikzset{t2/.pic={\node {=};}}
+    \tikzset{t3/.pic={\node {+};}}
+
+
+\tikz{
+% drawing them all together
+    \draw        pic{t1} -- (2,0) pic{A} -- 
+         (3.5,0) pic{t2} -- (5,0) pic{B} -- 
+         (6.5,0) pic{t3} -- (8,0) pic{C}
+    ;
+}   
+    
+\end{document}
