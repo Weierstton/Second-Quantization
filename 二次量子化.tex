@@ -10419,7 +10419,7 @@ $$\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\d}{4}\begin{fe
 于是在顶点$x$处，从左侧流入的动量为$p+p^{}_3$，从右侧流出的动量为$p+p^{}_3$，给出动量守恒$p+p^{}_3=p+p^{}_3$。反方向也是一样，只是方程变为$p-p^{}_3=p-p^{}_3$。这就是动量\textsl{Feynman}图顶点的性质：其显式的确定了动量守恒。\\
 \\
 基于上述分析，我们可以总结实标量场的\textbf{动量\textsl{Feynman}规则}，这里考虑非零质量粒子：
-\begin{enumerate}\item 对于每个传播子，$\tikz[baseline=-0.5ex]{\begin{feynman}\vertex(a){};\vertex[right=3cm of a](b){};\diagram*{(a)--[charged scalar,momentum'=\(p\)](b)};\end{feynman}}=\dfrac{i}{p^2-m^2+i\epsilon}$，表示为一条\underline{有向线段}，动量确定方向；\item 对于每个顶点$x$，$\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\d}{1.5}\begin{feynman}\vertex[dot,label=below:$x$](a){};\vertex[above right=\d cm of a,coordinate](b){};\vertex[above left=\d cm of a,coordinate](c){};\vertex[below left=\d cm of a,coordinate](d){};\vertex[below right=\d cm of a,coordinate](e){};\vertex[left=\d cm of a,coordinate](f){};\diagram*{(c)--[charged scalar](a)--[charged scalar](b),(f)--[charged scalar](a),(d)--[charged scalar](a)--[charged scalar](e)};\end{feynman}\node at(1.5,0){$\cdots\cdots$};}=i\lambda$，不限腿的连接数；\item 对于每一个单外点$a$，\quad$\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot,scale=.5,label=below:$a$](a){};\vertex[right=2cm of a](b){};\diagram*{(b)--[charged scalar,momentum=\(p\)](a)};\end{feynman}}\quad=\exp(-ipa)$，这是空间单外点的\textsl{Fourier}变换；\item 在每个顶点处动量守恒，表述为因子$\delta\qty(\sum\limits_{\text{入}} \vb{p}-\sum\limits_{\text{出}}\vb{p})$；\item 单个图的贡献是图中所有传播子和顶点的乘积，并取动量空间的积分$\displaystyle\int\qty(\frac{\dd p}{2\pi})^4$；\item 在展开式中要乘上相应的简并度。\end{enumerate}
+\begin{enumerate}\item 对于每个传播子，$\tikz[baseline=-0.5ex]{\begin{feynman}\vertex(a){};\vertex[right=3cm of a](b){};\diagram*{(a)--[charged scalar,momentum'=\(p\)](b)};\end{feynman}}=\dfrac{i}{p^2-m^2+i\epsilon}$，表示为一条\underline{有向线段}，动量确定方向；\item 对于每个顶点$x$，$\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\d}{1.5}\begin{feynman}\vertex[dot,label=below:$x$](a){};\vertex[above right=\d cm of a,coordinate](b){};\vertex[above left=\d cm of a,coordinate](c){};\vertex[below left=\d cm of a,coordinate](d){};\vertex[below right=\d cm of a,coordinate](e){};\vertex[left=\d cm of a,coordinate](f){};\diagram*{(c)--[charged scalar](a)--[charged scalar](b),(f)--[charged scalar](a),(d)--[charged scalar](a)--[charged scalar](e)};\end{feynman}\node at(1.5,0){$\cdots\cdots$};}=i\lambda$，不限腿的连接数；\item 对于每一个单外点$a$，\quad$\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot,scale=.5,label=below:$a$](a){};\vertex[right=2cm of a](b){};\diagram*{(b)--[charged scalar,momentum=\(p\)](a)};\end{feynman}}\quad=\exp(-ipa)$，这是空间单外点的\textsl{Fourier}变换；\item 在每个顶点处由\textsl{Fourier}变换因子$\exp(-ikx)$的体积分确保动量守恒，表述为因子$\delta\qty(\sum\limits_{\text{入}} \vb{p}-\sum\limits_{\text{出}}\vb{p})$；\item 单个图的贡献是图中所有传播子和顶点的乘积，并取动量空间的积分$\displaystyle\int\qty(\frac{\dd p}{2\pi})^4$；\item 在展开式中要乘上相应的简并度。\end{enumerate}
 同样的，对于动量的积分可以理解为叠加原理，每个因子对应该过程在传播中对振幅的贡献。单外点的指数来自于该点具有指定动量粒子的振幅，或者说是具有指定动量的粒子运动到该点，并被发现的概率。\\
 \\
 现在我们重新来讨论非连通的动量图，以单个内传播子为例，这里我们直接以圈图计算传播子
@@ -10452,7 +10452,7 @@ $$C^{(2)}_2(1,2)=\frac{1}{2}F^{}_1\times \qty(F^{}_2)^2+F^{}_1\times F^{}_4+2F^{
 \begin{equation}\qty(F^{}_2)^2=F^{}_2(x)\times F^{}_2(y)+F^{}_2(y)\times F^{}_2(x)\implies F^{}_2(x)\times F^{}_2(y)=\frac{1}{2}\qty(F^{}_2)^2.\label{f-+EWT--***}\end{equation}
 这样一来，非连通图和连通图之间的拓扑关系就代数化了，后续我们可以完全从代数层面考虑图形。此类代数—拓扑等价是比较常见的，比如交集在概率上也可以表示为乘积$P(A\cap B)=P(A)P(B)$，更详细的理论需要用到代数拓扑的知识，比如这里等价的性质实际上和同调论有关，我们不具体展开。\\
 \\
-我们进一步的分析上述的定义。注意到在引入的这五个连通分支$\qty{F^{}_i\vert i=1,2,3,4,5}$中，有两个非常特别：$F^{}_2$和$F^{}_4$，因为它们只包含内点$x,y$，并不含外点$a,b$。这些图称为\textbf{真空泡泡 \textit{Vacuum bubble}}，它们在物理上不对应真实粒子的运动，而是场自身涨落的体现。\\
+我们进一步的分析上述的定义。注意到在引入的这五个连通分支$\qty{F^{}_i\vert i=1,2,3,4,5}$中，有两个非常特别：$F^{}_2$和$F^{}_4$，因为它们只包含顶点$x,y$，并不含外点$a,b$。这些图称为\textbf{真空泡泡 \textit{Vacuum bubble}}，它们在物理上不对应真实粒子的运动，而是场自身涨落的体现。\\
 \\
 根据定义不难发现，前文中定义的圈图都是真空泡泡，包括由式(\ref{liangundauy})确定的单圈也属于真空泡泡，称为\textbf{单圈多边形真空泡泡}。真空泡泡不参与粒子的运动，因此$u$顶点单圈只是针对场的泛函行列式的修正，因而我们强调了不要和后文中引入的通常意义上的单圈修正混淆，原因就是因为这是真空泡泡的贡献。\\
 \\
@@ -10462,7 +10462,7 @@ $$Z(0)=\bigintsss\mathscr D\psi\exp(iS^{}_{KG}+i\int\Lambda^{}_{\text{int}}[\psi
 \begin{equation}Z(0)=Z^{}_{KG}(0)+\sum_{n=1}^\infty\frac{1}{n!}\bigintsss\mathscr D\psi\exp(iS^{}_{KG})\qty(i\int\Lambda^{}_{\text{int}}(\psi)\dd\Omega)^n.\end{equation}
 按照\textsl{GML}定理(\ref{HFghx98//F///*})写出相互作用多点函数，对分母取到零级近似$Z^{}_{KG}(0)$，则我们得到
 \begin{equation}\frac{Z(0)}{Z^{}_{KG}(0)}=1+\sum_{n=1}^\infty\frac{i^n}{n!}\int\mel**{0}{\mathbb T\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_1)\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_2)\cdots\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_n)}}{0}\dd\Omega^{}_1\dd\Omega^{}_2\cdots\dd\Omega^{}_n.\label{d-gGGG--...}\end{equation}
-通常对于场而言，$\Lambda^{}_{\text{int}}$是位形的多项式$\Lambda^{}_{\text{int}}=\sum\limits_\alpha\lambda^{}_\alpha\psi^{2\alpha}$，因此被积函数$\mel**{0}{\mathbb T\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_1)\cdots}}{0}$是一个多点函数，根据\textsl{Wick}定理可以展开为若干只包含内点的传播子的积。按照定义，展开式由若干真空泡泡构成，这些泡泡的集合称为\textbf{真空泡泡基}，记为$\mathfrak B=\qty{B^{}_i\vert i\in\mathscr A}$。推广式(\ref{f-+EWT--***})，设任意的泡泡$B^{}_i$在某一非连通图$K$中出现的次数为$l^{}_i$，则图$K$中$B^{}_i$因子写作
+通常对于场而言，$\Lambda^{}_{\text{int}}$是位形的多项式$\Lambda^{}_{\text{int}}=\sum\limits_\alpha\lambda^{}_\alpha\psi^{2\alpha}$，因此被积函数$\mel**{0}{\mathbb T\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_1)\cdots}}{0}$是一个多点函数，根据\textsl{Wick}定理可以展开为若干只包含顶点的传播子的积。按照定义，展开式由若干真空泡泡构成，这些泡泡的集合称为\textbf{真空泡泡基}，记为$\mathfrak B=\qty{B^{}_i\vert i\in\mathscr A}$。推广式(\ref{f-+EWT--***})，设任意的泡泡$B^{}_i$在某一非连通图$K$中出现的次数为$l^{}_i$，则图$K$中$B^{}_i$因子写作
 \begin{equation}K\qty(B^{}_i)=\frac{1}{l^{}_i!}\qty(B^{}_i)^{l^{}_i}.\label{Dis-=-LLKJBhgyg}\end{equation}
 系数中阶乘的来源可以参考全同粒子的配分函数(\ref{.g,lo})，这里不赘述。于是我们写出第$n$级修正的传播子的图表示
 $$\mel**{0}{\mathbb T\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_1)\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_2)\cdots\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_n)}}{0}=\sum_\nu\prod_{i^{}_\nu}\frac{1}{l^{}_{i^{}_\nu}!}\qty(B^{}_{i^{}_\nu})^{l^{}_{i^{}_\nu}},$$
@@ -10645,7 +10645,7 @@ $$D^{(0)}_4(y,y,y,1)=\mel**{0}{\mathbb T\qty{\hat{\psi}^3_I(y)\hat{\psi}^{}_I(1)
 $$D^{(1)}_4(y,y,y,1)=i\lambda\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\hat{\psi}^3_I(y)\hat{\psi}^{}_I(1)\hat{\psi}^4_I(z)}-\mathbb T\qty{\hat{\psi}^3_I(y)\hat{\psi}^{}_I(1)}\mathbb T\qty{\hat{\psi}^4_I(z)}}{0}\dd\Omega^{}_z.$$
 根据第\ref{1pL//-..][rG}节的说明，这应该是全连通的，称为\textbf{全连通四点函数}，记为
 \begin{equation}\mathfrak D^{}_4(1,2,3,4)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4}}{\Omega}_{\text{conn}}.\end{equation}
-这里不具体展开了，直接用空间连通图表示
+这里不具体展开了，直接用空间连通图给出一级修正
 \begin{equation}\mathfrak D^{(1)}_4(y,y,y,1)=36i\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$1$](a){};\vertex[right=1cm of a,dot,label=below:$z$](c){};\vertex[right=1cm of c,dot,label=below:$y$](b){};\vertex[above=1cm of b,coordinate](d){};\vertex[above=1cm of c,coordinate](e){};\diagram*{(a)--(c)--[half left](e)--[half left](c)--(b)--[half left](d)--[half left](b)};\end{feynman}})+36i\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$1$](a){};\vertex[right=1cm of a,dot,label=below:$y$](c){};\vertex[above=1cm of c,dot,label=above:$z$](b){};\vertex[above=1cm of b,coordinate](d){};\diagram*{(a)--(c)--[half left](b)--[half left](d)--[half left](b)--[half left](c)};\end{feynman}})+72i\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$1$](a){};\vertex[right=1cm of a,dot,label=below left:$z$](c){};\vertex[right=1cm of c,dot,label=right:$y$](b){};\diagram*{(a)--(c)--(b)--[half left](c)--[half left](b)};\end{feynman}}).\label{DF454221*4}\end{equation}
 我们将第一张图记为$(A)$，第二张图记为$(B$。将上述结果回代入式(\ref{2500hj})得到近似解，当然这里的解根据第\ref{1pL//-..][rG}节为全连通传播子
 $$\begin{aligned}\mathfrak C^{}_4(x,1)=&D^{}_F(x,1)+12i\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,dot,label=below:$y$](c){};\vertex[right=1cm of c,dot,label=below:$1$](b){};\vertex[above=1cm of c,coordinate](e){};\diagram*{(a)--(c)--[half left](e)--[half left](c)--(b)};\end{feynman}})-144\lambda^2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,dot,label=below:$y$](c){};\vertex[right=1cm of c,dot,label=below:$z$](b){};\vertex[above=1cm of b,coordinate](d){};\vertex[above=1cm of c,coordinate](e){};\vertex[right=1cm of b,dot,label=below:$1$](f){};\vertex[above=1cm of a,coordinate,label=below:$(A)$](i){};\diagram*{(a)--(c)--[half left](e)--[half left](c)--(b)--[half left](d)--[half left](b)--(f)};\end{feynman}})\\&-144\lambda^2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,dot,label=below:$y$](c){};\vertex[above=1cm of c,dot,label=above:$z$](b){};\vertex[above=1cm of b,coordinate](d){};\vertex[right=1cm of c,dot,label=below:$1$](e){};\vertex[above=1cm of a,coordinate,label=below:$(B)$](i){};\diagram*{(a)--(c)--[half left](b)--[half left](d)--[half left](b)--[half left](c)--(e)};\end{feynman}})-288\lambda^2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,dot,label=below left:$y$](c){};\vertex[right=1cm of c,dot,label=below right:$z$](b){};\vertex[right=1cm of b,dot,label=below:1](d){};\diagram*{(a)--(c)--(b)--[half left](c)--[half left](b)--(d)};\end{feynman}}).\end{aligned}$$
@@ -10654,9 +10654,9 @@ $$\begin{aligned}\mathfrak C^{}_4(x,1)=&D^{}_F(x,1)+12i\lambda\qty(\tikz[baselin
 所以式(\ref{DF454221*4})可以写作
 \begin{equation}\mathfrak D^{(1)}_4(y,y,y,1)=3\qty[\mathfrak C(y,y)\mathfrak C(y,1)]^{(1)}+24i\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=left:$y$](a){};\vertex[right=1cm of a,dot](c){};\vertex[right=1cm of c,dot,label=below:$1$](b){};\diagram*{(a)--(c)--[half left](a)--[half left](c)--(b)};\end{feynman}}),\label{85478/*003}\end{equation}
 我们清晰地看到，第一项就是式(\ref{3lan;;e})直接使用\textsl{Wick}定理打开相互作用四点函数的结果，因为它显式的给出一级修正，所以存在于二级修正中是合理的。但因为其和一级修正类似，因此我们不会得到任何新信息，从而最终全连通传播子的二级修正可以简化为
-\begin{equation}\mathfrak C^{(2)}(x,1)=96i\lambda^2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,dot](c){};\vertex[right=1cm of c,dot](b){};\vertex[right=1cm of b,dot,label=below:1](d){};\diagram*{(a)--(c)--(b)--[half left](c)--[half left](b)--(d)};\end{feynman}}).\end{equation}
+\begin{equation}\mathfrak C^{(2)}(x,1)=-288\lambda^2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,dot](c){};\vertex[right=1cm of c,dot](b){};\vertex[right=1cm of b,dot,label=below:1](d){};\diagram*{(a)--(c)--(b)--[half left](c)--[half left](b)--(d)};\end{feynman}}).\end{equation}
 这个图我们称为\textbf{日落图 \textit{Sunset}}，因为其很像傍晚时分处于海平面处的太阳，当然称为日升图也可以。去掉两个外腿，剩下的是\textit{1PI}，根据式(\ref{UYRIERY})取一级修正$\mathfrak C^{(1)}=D^{}_F\Sigma D^{}_F$，这样我们就得到自能$\Sigma$的二级修正
-\begin{equation}\Sigma^{(2)}(y,z)\propto\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=left:$y$](a){};\vertex[right=1cm of a,dot,label=right:$z$](b){};\diagram*{(a)--[half left](b)--[half left](a)--(b)};\end{feynman}}=D^3_F(y,z).\label{VVGUI2342}\end{equation}
+\begin{equation}\Sigma^{(2)}(y,z)=288(i\lambda)^2\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=left:$y$](a){};\vertex[right=1cm of a,dot,label=right:$z$](b){};\diagram*{(a)--[half left](b)--[half left](a)--(b)};\end{feynman}}\propto D^3_F(y,z).\label{VVGUI2342}\end{equation}
 关于日落图确定的二级自能的计算，请参考第\ref{V34578//}节，而图$(A)$和图$(B)$与单圈物理性相同的拓扑背景，请参考附录\ref{Ydfghmh}，这里就都略过了。\\
 \\
 现在让我们回顾一下，对于全连通相互作用四点函数$\mathfrak D^{(0)}(y,y,y,1)$，我们计算了其一级修正(\ref{85478/*003})，得到了按\textsl{Wick}定理展开的一级修正部分，以及一个日落图。一个自然的问题就是，其精确形式是什么，直观的想法就是从\textsl{SD}方程计算。这里计算通常的全连通四点函数，对式(\ref{DSdfyo---n})取三个场位形给出
@@ -10793,9 +10793,9 @@ $$\qty(\omega^{}_{\vb{p}^{}_1}+\omega^{}_{\vb{p}^{}_2})^{-1}\qty{\exp[\qty(\omeg
 $$D^M_F(x,y)=\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot,label=below:$x$](a){};\vertex[right=2cm of a,dot,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}}.$$
 对于平方相互作用的一级修正，我们从式(\ref{Tev-*ff-++})得到
 $$C^{M;(1)}_2(x,y)=\quad\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$z$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\quad+\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$,label=above:$(-\lambda)$](d){};\vertex[right=1cm of d,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--(d)--(b)};\end{feynman}}$$
-只不过需要注意，现在读图时$\ \tikz[baseline=-.7ex]{\begin{feynman}[inline=a.base]\vertex[dot](a){};\vertex[right=1cm of a,dot](b){};\diagram*{(a)--(b)};\end{feynman}}\ $应算上占有数修正，并且内点对于参数$\tau$的积分限是$[0,\beta]$，其相互作用系数修正为$-\lambda$。对于动量\textsl{Feynman}规则也是一样的，为了方便表示这里取\textsl{Matsubara}频率求和的结果，这样在图上就用三维空间动量表示
+只不过需要注意，现在读图时$\ \tikz[baseline=-.7ex]{\begin{feynman}[inline=a.base]\vertex[dot](a){};\vertex[right=1cm of a,dot](b){};\diagram*{(a)--(b)};\end{feynman}}\ $应算上占有数修正，并且顶点对于参数$\tau$的积分限是$[0,\beta]$，其相互作用系数修正为$-\lambda$。对于动量\textsl{Feynman}规则也是一样的，为了方便表示这里取\textsl{Matsubara}频率求和的结果，这样在图上就用三维空间动量表示
 \begin{equation}\frac{1}{4\omega^{}_{\vb{p}}}\qty{\qty(1+\expval{n\qty(\omega^{}_{\vb{p}})})e^{\omega^{}_{\vb{p}}\qty(\tau^{}_x-\tau^{}_y)}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{-\omega^{}_{\vb{p}}\qty(\tau^{}_x-\tau^{}_y)}}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:$x$](a){};\vertex[right=3cm of a,label=below:$y$](b){};\vertex[right=1.5cm of a,label=below:$\vb{p}$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}}\end{equation}
-这是算上占有数补偿后的最简结果，图上最终只出现空间动量$\vb{p}$。对于内点最终只出现混合乘积项，满足动量守恒，比如式的图为
+这是算上占有数补偿后的最简结果，图上最终只出现空间动量$\vb{p}$。对于顶点最终只出现混合乘积项，满足动量守恒，比如式的图为
 $$\frac{\exp(2\omega^{}_{\vb{p}}\beta)-1}{4\omega^3_{\vb{p}}}\qty(1+\expval{n\qty(\omega^{}_{\vb{p}})})\expval{n\qty(\omega^{}_{\vb{p}})}\sinh(\omega^{}_{\vb{p}}\qty(\tau^{}_x+\tau^{}_y))=\tikz[baseline=-.5px]{\pgfmathsetmacro{\d}{2}\begin{feynman}[inline=(a.base)]\vertex(a){};\vertex[right=\d cm of a,dot](b){};\vertex[right=\d cm of b](c){};\diagram*{(a)--[charged scalar,momentum={\(\vb{p}\)}](b)--[charged scalar,momentum={\(\vb{p}\)}](c)};\end{feynman}}$$
 总结一下，对于热场而言，读图的时候要切记占有数的补偿。更复杂一点的图形如式(\ref{FOJIO89uf})也是如此，还是应注意内传播子的动量不参与顶点的动量守恒过程，因为其自身动量守恒。其余的内容和零温场也是一致的，这里就不重复展开了。\\
 \\
@@ -10896,19 +10896,19 @@ $$\vb{Q}^{-1}\hat{\sigma}^{}_3\vb{Q}=\frac{1}{2}\mqty(1&-1\\1&1)\mqty(1&0\\0&-1)
 \begin{equation}\begin{cases}D^{(1)}_S(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_S(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_S(z,y)+D^{(0)}_S(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_R(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_R(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_R(x,z)D^{(0)}_R(z,y)}\dd\Omega^{}_z;\\ D^{(1)}_A(x,y)&=i\lambda\displaystyle\int\qty{D^{(0)}_A(x,y)\qty(D^{(0)}_A+D^{(0)}_R)(z,z)+D^{(0)}_A(x,z)D^{(0)}_A(z,y)}\dd\Omega^{}_z.\end{cases}\label{JIngdtaioffu}\end{equation}
 可以看到对于一级修正，\textsl{Schwinger}传播子$D^{(1)}_S$的混合缩并同时涉及到另外两个传播子，该现象的物理含义在后面会解答。但需要注意一个非常重要的点，比如对于$D^{(1)}_R(x,y)$按式(\ref{Soruy97867576k})转换回$\vb{G}^K_{KG}(x,y)$并具体打开$D^{(0)}_R(x,z)D^{(0)}_R(z,y)$得到
 $$\begin{aligned}D^{(0)}_R(x,z)D^{(0)}_R(z,y)=&G^{++}_{KG}(x,z)G^{++}_{KG}(z,y)-G^{++}_{KG}(x,z)G^{+-}_{KG}(z,y)\\&-G^{+-}_{KG}(x,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,z)G^{+-}_{KG}(z,y),\end{aligned}$$
-最后两项中内点$z$的符号均为$z^-\to z^+$，这是不允许的，因为内点应该是同一个时空点。这就说明在具体计算时，我们不应该打开$D^{}_R$，而是将其当作一个普通的传播子计算。为了和\textsl{Keyldsh}矩阵$\vb{C}(x,y)$区分，我们将使用$D^{}_{R,A,S}$作为基本传播子的体系称为\textbf{推迟—超前基准 \textit{Retarded-Advanced Basis}}，简称为\textbf{RA}基准，而将\textsl{Keyldsh}矩阵称为\textbf{回路基准 \textit{Contour basis}}，因为其直接建立在\textsl{CTP}上。\\
+最后两项中顶点$z$的符号均为$z^-\to z^+$，这是不允许的，因为顶点应该是同一个时空点。这就说明在具体计算时，我们不应该打开$D^{}_R$，而是将其当作一个普通的传播子计算。为了和\textsl{Keyldsh}矩阵$\vb{C}(x,y)$区分，我们将使用$D^{}_{R,A,S}$作为基本传播子的体系称为\textbf{推迟—超前基准 \textit{Retarded-Advanced Basis}}，简称为\textbf{RA}基准，而将\textsl{Keyldsh}矩阵称为\textbf{回路基准 \textit{Contour basis}}，因为其直接建立在\textsl{CTP}上。\\
 \\
 在上述讨论的基础上，我们来考察\textsl{SK}形式的\textsl{Feynman}规则，先从自由场开始。方便起见，我们仍采用第\ref{Wea]]]907lsfGF}节的记号，将分支号直接归结到变量上，比如$\psi^{\pm}(x)=x^{\pm}$。以式(\ref{Csh***..5654do})为例，将自由传播子的空间\textsl{Feynman}图定义为
 \begin{equation}G^{--}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{+-}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}},\quad G^{-+}_{KG}(x,y)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}},\end{equation}
 则四点函数就写作
 $$\begin{aligned}D^{--++}(1,2,3,4)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$1^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$2^-$](b){};\diagram*{(a)--(b)};\vertex[below=1cm of a,dot,scale=.5,label=below:$3^+$](c){};\vertex[right=1cm of c,dot,scale=.5,label=below:$4^+$](d){};\diagram*{(c)--(d)};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=left:$1^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=right:$2^-$](b){};\diagram*{(a)--(c)};\vertex[below=1cm of a,dot,scale=.5,label=left:$3^+$](c){};\vertex[right=1cm of c,dot,scale=.5,label=right:$4^+$](d){};\diagram*{(b)--(d)};\end{feynman}}+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=left:$1^-$](a){};\vertex[right=1cm of a,dot,scale=.5,label=right:$2^-$](b){};\diagram*{(a)--(d)};\vertex[below=1cm of a,dot,scale=.5,label=below:$3^+$](c){};\vertex[right=1cm of c,dot,scale=.5,label=below:$4^+$](d){};\diagram*{(c)--(b)};\end{feynman}}.\end{aligned}$$
-整体来看和零温场类似，但是要注意变量所处的分支。这一点在微扰中尤为重要，比如我们画出$C^{++}$的一级修正(\ref{PIdc;F++///fu})的图，同样的令内点为圈图
+整体来看和零温场类似，但是要注意变量所处的分支。这一点在微扰中尤为重要，比如我们画出$C^{++}$的一级修正(\ref{PIdc;F++///fu})的图，同样的令顶点对应圈图
 \begin{equation}C^{(1)}_{++}(x,y)=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})-\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^+$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^-$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^+$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$y^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}-\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^-$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$y^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}\end{equation}
 再比如另一个分量
 $$C^{(1)}_{+-}(x,y)=\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})-\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y^-$](b){};\diagram*{(a)--(b)};\end{feynman}}\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$z^-$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}})+\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$y^-$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^+$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$x^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}-\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$y^-$](a){};\vertex[above right=1cm of a,dot,scale=.5,label=above:$z^-$](b){};\vertex[below right=1cm of b,dot,scale=.5,label=below:$x^+$](c){};\diagram*{(a)--(b)--(c)};\end{feynman}}$$
 所以\textsl{SK}形式的空间\textsl{Feynman}规则和零温场的相同，只不过相应的空间点需要注意符号。为此我们可以在第\ref{ecui0r8//6}节的基础上增加两条规则：
-\begin{enumerate}[\quad 7.]\item 多点函数对应外点的符号，即所处支路应和所求多点函数的分量相对应。\end{enumerate}\vspace{-9pt}\begin{enumerate}[\quad 8.]\item 连接不同路径的内点符号相同，因为内点作为积分变量应代表同一个时空点。\end{enumerate}
-因为其根据\textsl{Keyldsh}矩阵建立，因此根据前文将此八条空间\textsl{Feynman}规则其称为\textbf{回路规则}。现在我们考察$D^{}_{S,A,R}$的一级修正图，由于前文中所述的内点问题，我们需要直接在$D^{(0)}_{S,A,R}$上建立\textsl{Feynman}图，称为\textbf{\textsl{RA}规则}，零级图按照式(\ref{wuH[]//Ohyugi].,/;'})不妨定义为
+\begin{enumerate}[\quad 7.]\item 多点函数对应外点的符号，即所处支路应和所求多点函数的分量相对应。\end{enumerate}\vspace{-9pt}\begin{enumerate}[\quad 8.]\item 连接不同路径的顶点符号相同，因为顶点作为积分变量应代表同一个时空点。\end{enumerate}
+因为其根据\textsl{Keyldsh}矩阵建立，因此根据前文将此八条空间\textsl{Feynman}规则其称为\textbf{回路规则}。现在我们考察$D^{}_{S,A,R}$的一级修正图，由于前文中所述的顶点问题，我们需要直接在$D^{(0)}_{S,A,R}$上建立\textsl{Feynman}图，称为\textbf{\textsl{RA}规则}，零级图按照式(\ref{wuH[]//Ohyugi].,/;'})不妨定义为
 \begin{equation}\begin{aligned}D^{(0)}_R(x,y)&=\theta\qty(x^0-y^0)\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=2cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(b)--[fermion](a)};\end{feynman}}
 \\D^{(0)}_A(x,y)&=-\theta\qty(y^0-x^0)\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=2cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--[fermion](b)};\end{feynman}}
 \\D^{(0)}_S(x,y)&=\expval{\comm{\hat{\psi}(x)}{\hat{\psi}(y)}_+}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=2cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(b)--[with arrow=.7](a)--[with arrow=.7](b)};\end{feynman}}.\end{aligned}\end{equation}
@@ -10926,13 +10926,13 @@ $$C^{(1)}_{+-}(x,y)=\qty(\tikz[baseline=(current bounding box.center)]{\begin{fe
 \\
 相互作用热路径积分由式(\ref{Zdv-/edfs/*..+})确定，这里我们令热多点函数(\ref{NBhjl[[][[r})的分母取零级近似，并记自由场的热路径积分为$Z^{(0)}_{SK}$，则按照通常的处理，我们展开相互作用的指数相得到
 \begin{equation}Z^{}_{SK}(0)=Z^{(0)}_{SK}(0)\qty{1+\sum_{n=1}\frac{1}{n!}\expval{\mathbb P\qty{\qty(i\int\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_+)-\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_-)\dd\Omega)^n}}}.\end{equation}
-由于在\textsl{CTP}表示中涉及两个相互作用部分，因而在高阶修正中会出现多个耦合项，使得图的结构复杂化。当然有一个点是肯定的，那就是这些图只有内点，因此将多点函数展开后，每个非连通图也必然是由若干不同结构的圈图构成的，这和平衡场一样。比如对于平方相互作用$\Lambda^{}_{\text{int}}=\lambda\psi^2$，我们得到一级修正
+由于在\textsl{CTP}表示中涉及两个相互作用部分，因而在高阶修正中会出现多个耦合项，使得图的结构复杂化。当然有一个点是肯定的，那就是这些图只有顶点，因此将多点函数展开后，每个非连通图也必然是由若干不同结构的圈图构成的，这和平衡场一样。比如对于平方相互作用$\Lambda^{}_{\text{int}}=\lambda\psi^2$，我们得到一级修正
 $$\frac{Z^{(1)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=i\lambda\int\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)-\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)}}\dd\Omega^{}_x.$$
 由于路径排序$\mathbb P$是线性的，所以该比值就写作
 $$\begin{aligned}\frac{Z^{(1)}_{SK}(0)}{Z^{(0)}_{SK}(0)}&=i\lambda\int\qty(\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)}}-\expval{\mathbb P\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)}})\dd\Omega^{}_x\\&=i\lambda\int\qty(\expval{\mathbb T\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)}}-\expval{\tilde{\mathbb T}\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)}})\dd\Omega^{}_x\\&=i\lambda\int\qty(G^{++}_{KG}(x,x)-G^{--}_{KG}(x,x))\dd\Omega^{}_x.\end{aligned}$$
 在回路规则下，图给出
 \begin{equation}\frac{Z^{(1)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=i\lambda\int\qty(G^{++}_{KG}(x,x)-G^{--}_{KG}(x,x))\dd\Omega^{}_x=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^+$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}-\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x^-$](a){};\vertex[above=1cm of a,coordinate](b){};\diagram*{(a)--[half left](b)--[half left](a)};\end{feynman}}.\end{equation}
-也就是两个单点圈图的差，其中内点所处的真实时间相同，但支路不同。二级修正为
+也就是两个单点圈图的差，其中顶点所处的真实时间相同，但支路不同。二级修正为
 $$\frac{Z^{(2)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=\frac{-\lambda^2}{2}\int\expval{\mathbb P\qty{\qty(\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)-\hat{\psi}^-_I(x)\hat{\psi}^-_I(x))\qty(\hat{\psi}^+_I(y)\hat{\psi}^+_I(y)-\hat{\psi}^-_I(y)\hat{\psi}^-_I(y))}}\dd\Omega^{}_x\dd\Omega^{}_y.$$
 这就变复杂了，因为涉及混合缩并，具体按规则(\ref{D-*..[];fb})展开得到
 $$\begin{aligned}\frac{Z^{(2)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=\frac{-\lambda^2}{2}\int\Big(&\expval{\mathbb P\qty{\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)\hat{\psi}^+_I(y)\hat{\psi}^+_I(y)}}-\expval{\mathbb P\qty{\hat{\psi}^-_I(y)\hat{\psi}^-_I(y)\hat{\psi}^+_I(x)\hat{\psi}^+_I(x)}}\\&-\expval{\mathbb P\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)\hat{\psi}^+_I(y)\hat{\psi}^+_I(y)}}+\expval{\mathbb P\qty{\hat{\psi}^-_I(x)\hat{\psi}^-_I(x)\hat{\psi}^-_I(y)\hat{\psi}^-_I(y)}}\Big)\dd\Omega^2.\end{aligned}$$
@@ -10942,7 +10942,7 @@ $$\frac{Z^{(2)}_{SK}(0)}{Z^{(0)}_{SK}(0)}=2\tikz[baseline=1em]{\begin{feynman}\v
 $$G^{++}_{KG}(x,y),\quad G^{+-}_{KG}(x,y),\quad G^{-+}_{KG}(x,y),\quad G^{--}_{KG}(x,y),$$
 它们在二级近似下都出现了。\\
 \\
-在此基础上，我们来分析任意相互作用的图结构。在回路规则下，非平衡场和平衡热场一样均由热浴泡泡构成，而符号的介入只是增加了每种热浴泡泡的内点种类，但圈图本身并没有改变。值得强调的是，在平方相互作用中我们已经看到，全连通图涉及所有四个\textsl{Keyldsh}传播子。这是显然的，比如对角项$G^{++}_{KG}$和$G^{--}_{KG}$的连通性对应同一支路上不同时空点之间的耦合，而\textsl{Wightman}函数的连通性是由回路规则的内点约束自然确定的，因为若其不连通则只可能是单点圈组合$G^{+-}_{KG}(x,x)G^{+-}_{KG}(y,y)$，这样一来内点符号在两侧就不匹配了，和回路规则冲突。\\
+在此基础上，我们来分析任意相互作用的图结构。在回路规则下，非平衡场和平衡热场一样均由热浴泡泡构成，而符号的介入只是增加了每种热浴泡泡的顶点种类，但圈图本身并没有改变。值得强调的是，在平方相互作用中我们已经看到，全连通图涉及所有四个\textsl{Keyldsh}传播子。这是显然的，比如对角项$G^{++}_{KG}$和$G^{--}_{KG}$的连通性对应同一支路上不同时空点之间的耦合，而\textsl{Wightman}函数的连通性是由回路规则的顶点约束自然确定的，因为若其不连通则只可能是单点圈组合$G^{+-}_{KG}(x,x)G^{+-}_{KG}(y,y)$，这样一来顶点符号在两侧就不匹配了，和回路规则冲突。\\
 \\
 于是对于非平衡场而言，任意相互作用的图结构和平衡热场以及零温场完全一样，虽然相对于平衡热场其多出三种热浴泡泡，但热路径积分的展开式必然遍历所有四种热浴泡泡以及它们的各种连通组合，并且相应的符号也只是作为内禀连接系数。所以经过和第\ref{ecvgsddy550r8}节中相同的组合表述，我们同样得到非连通图的指数化，定义为
 \begin{equation}Z^{}_{SK}(0)=Z^{(0)}_{SK}(0)\exp(W^{}_{SK}).\label{*-/*/-++.372485=}\end{equation}
@@ -11289,11 +11289,11 @@ $$\mathfrak C^{(1)}_4(1,2)=12i\lambda\qty(\tikz[baseline=(current bounding box.c
 根据空间图级数(\ref{LD---92.302zBF})，自能函数就是去掉外脚后剩下的中间的单圈图，一般称为\textbf{蝌蚪图 \textit{Tadpole}}。当然因为我们只计算到一级修正，因此这里的自能函数也是一级修正，按照式(\ref{gff84ver})写作
 \begin{equation}\Sigma^{(1)}_4=12\lambda D^{}_F(x,x)=12\lambda\int\qty(\frac{\dd p}{2\pi})^4\frac{i}{p^2-m^2_0+i\epsilon}.\label{=-0767[[[][}\end{equation}
 这是符合动量图(\ref{FOJIO89uf})的，同时质量应为裸质量$m^{}_0$，且式(\ref{WuYTFG87})的约束使得$\Sigma^{(1)}_4$只能包含一个从自由传播子继承的$i$。在时空中动量体元$\dd^4p$不方便计算，我们知道\textsl{Wick}旋转可以将四维时空变为欧式空间，根据式(\ref{zhSADFWingy})引入四维\textsl{Euclidean}动量
-\begin{equation}p^0_E=-ip^0\implies p=\qty(ip^0_E,\vb{p}),\quad p^2=-\delta^{}_{\mu\nu}p^{\mu}_Ep^{\nu}_E=-l^2,\end{equation}
+\begin{equation}p^0_E=-ip^0\implies p=\qty(ip^0_E,\vb{p}),\quad p^2=-\delta^{}_{\mu\nu}p^{\mu}_Ep^{\nu}_E=-l^2,\label{JIrsg11}\end{equation}
 其中$l=\abs{p^{}_E}$是\textsl{Euclidean}动量的模，这样时空体元$\dd^4 p$就变为欧式体元$\dd^4 p^{}_E$。此处我们默认$p$在动量空间中是各项同性的，从而\textsl{Euclidean}动量$p^{}_E$在$\mathbb R^4$中划定了一个四维球体，其边界是一个三维球面$S^3$。类似球坐标系，取$\mathbb R^4$的\textsl{Gauss}法坐标系，考虑到被积函数和角度无关，我们得到
-\begin{equation}\int_{S^3}\dd^4 p=i\int_{S^3}\dd^4 p^{}_E=i\int_{S^3}l^3\dd l\wedge\dd S^{}_3=2i\pi^2l^3\dd l=i\pi^2l^2\dd l^2.\end{equation}
+\begin{equation}\int_{S^3}\dd^4 p=i\int_{S^3}\dd^4 p^{}_E=i\int_{S^3}l^3\dd l\wedge\dd S^{}_3=2i\pi^2l^3\dd l=i\pi^2l^2\dd\qty(l^2).\label{ZZefPI[[}\end{equation}
 其中$\dd S^{}_3$是$S^3$的体元，关于其积分的具体计算和\textsl{Gauss}法坐标系的定义，均放在第\ref{Y><><)))}节中详细说明，这里读者只需要将上述结果当作已知。这样式(\ref{=-0767[[[][})就可以写作
-\begin{equation}\Sigma^{(1)}_E=12\lambda\int\frac{\pi^2l^2\dd l^2}{(2\pi)^4}\frac{i^2}{-l^2-m^2_0+i\epsilon}=\frac{12\lambda}{16\pi^2}\int_0^\infty\frac{l^2\dd l^2}{l^2+m^2_0}=\frac{3\lambda}{4\pi^2}\int_0^\infty\frac{x\dd x}{x+m^2_0}.\end{equation}
+\begin{equation}\Sigma^{(1)}_E=12\lambda\int\frac{\pi^2l^2\dd\qty(l^2)}{(2\pi)^4}\frac{i^2}{-l^2-m^2_0+i\epsilon}=\frac{12\lambda}{16\pi^2}\int_0^\infty\frac{l^2\dd\qty(l^2)}{l^2+m^2_0}=\frac{3\lambda}{4\pi^2}\int_0^\infty\frac{x\dd x}{x+m^2_0}.\end{equation}
 我们省略了$i\epsilon$，因为目前因果律是自动满足的。因为被积函数是二次型，因此\textsl{Wick}旋转的复数化只体现在体元上，从而我们得到其和时空自能的关系
 \begin{equation}\Sigma^{(1)}_E\qty(p^{}_E)=i\Sigma^{(1)}_4(p).\end{equation}
 可以看到，通过\textsl{Wick}旋转我们成功去除了$m^{}_0$这个极点，但现在被积函数给出
@@ -11313,14 +11313,35 @@ $$m^2=m^2_0+\Sigma^{(1)}_E=m^2_0+\frac{3\lambda}{4\pi^2}\qty{\Lambda^2-m_0^2\ln\
 这并不是一个意外的结果，因为一级单圈修正是单顶点动量守恒，其在图上不产生任何新粒子，本质上和平方修正是类似的，只不过裸质量的移动是发散的。从\textsl{KL}谱分布的角度，我们能清晰的看到一级单圈修正处于单粒子能谱上，这和动量图是一致的。\\
 \\
 为了进一步讨论重整化的性质，我们不妨来考察二级修正$\sim\lambda^2$。根据第\ref{Tj][p--}节的结论，自能的二级修正由日落图(\ref{VVGUI2342})确定，其动量图按动量\textsl{Feynman}规则为
-\begin{equation}\mathfrak C^{(2)}(p)\propto\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[coordinate](a){};\vertex[right=2cm of a,dot](c){};\vertex[right=3cm of c,dot](b){};\vertex[right=2cm of b,coordinate](d){};\diagram*{(a)--[charged scalar,momentum={\(p\)}](c)--[charged scalar,momentum={\(p-k^{}_1-k^{}_2\)}](b)--[charged scalar,momentum={\(p\)}](d),(c)--[charged scalar,half left,momentum={\(k^{}_1\)}](b),(c)--[charged scalar,half right,momentum={\(k^{}_2\)}](b)};\end{feynman}}.\end{equation}
-根据图，我们写出具体表达式
-\begin{equation}\Sigma^{(2)}_4(p)\propto\bigintsss\qty(\frac{\dd k^{}_1}{2\pi})^4\qty(\frac{\dd k^{}_2}{2\pi})^4\frac{i^3}{\qty(k^2_1-i\epsilon)\qty(k^2_2-i\epsilon)\qty(\qty(p-k^{}_1-k^{}_2)^2-i\epsilon)}.\end{equation}
+\begin{equation}\Sigma^{(2)}_4(p)\propto\scalebox{0.8}{\tikz[scale=0.2,baseline=-.5ex]{\begin{feynman}[inline=a.base,small]\vertex[coordinate](a){};\vertex[right=2cm of a,dot](c){};\vertex[right=3cm of c,dot](b){};\vertex[right=2cm of b,coordinate](d){};\diagram*{(a)--[charged scalar,momentum={\(p\)}](c)--[charged scalar,momentum={\(p-k^{}_1-k^{}_2\)}](b)--[charged scalar,momentum={\(p\)}](d),(c)--[charged scalar,half left,momentum={\(k^{}_1\)}](b),(c)--[charged scalar,half right,momentum={\(k^{}_2\)}](b)};\end{feynman}}}.\end{equation}
+根据动量\textsl{Feynman}规则，我们写出具体表达式，这里暂时忽略因果因子$i\epsilon$
+$$\Sigma^{(2)}_4(p)=288(i\lambda)^2\bigintsss\qty(\frac{\dd k^{}_1}{2\pi})^4\qty(\frac{\dd k^{}_2}{2\pi})^4\frac{i^3}{\qty(k^2_1-m^2_0)\qty(k^2_2-m^2_0)\qty(\qty(p-k^{}_1-k^{}_2)^2-m^2_0)}.$$
+其中\textsl{Fourier}变换因子$\exp(-ikx)$积分后给出动量守恒，这个双积分不太容易计算，因为涉及变量的耦合，为此我们采用另一种布局
+$$\Sigma^{(2)}_4(p)\propto\scalebox{0.8}{\tikz[scale=0.2,baseline=-.5ex]{\begin{feynman}[inline=a.base,small]\vertex[coordinate](a){};\vertex[right=2cm of a,dot](c){};\vertex[right=3cm of c,dot](b){};\vertex[right=2cm of b,coordinate](d){};\diagram*{(a)--[charged scalar,momentum={\(p\)}](c)--[charged scalar,momentum={\(p-k\)}](b)--[charged scalar,momentum={\(p\)}](d),(c)--[charged scalar,half left,momentum={\(k-k^{}_1\)}](b),(c)--[charged scalar,half right,momentum={\(k^{}_1\)}](b)};\end{feynman}}}.$$
+这样就分出一个中间动量$k$，它使得我们可以对两个单圈独立计算，具体表达式为
+\begin{equation}-i\Sigma^{(2)}_4(p)\propto\bigintsss\qty(\frac{\dd k}{2\pi})^4\frac{1}{\qty[(p-k)^2-m^2_0]}\bigintsss\qty(\frac{\dd k^{}_1}{2\pi})^4\frac{1}{\qty(k^2_1-m^2_0)\qty[\qty(k-k^{}_1)^2-m^2_0]}.\end{equation}
+为了使用正规化，我们就需要计算出这个积分的发散部分，为此需要引入重整化理论中的一个核心数学技巧：\textbf{\textsl{Feynman}参数化公式 \textit{Feynman Parametrization}}。简单来讲，这个公式为
+\begin{equation}\prod_{i=1}^n\frac{1}{A^{}_i}=(n-1)!\bigintsss_0^1\dd x^{}_1\cdots\dd x^{}_n\delta\qty(1-\sum_{i=1}^nx^{}_i)\qty(\sum_{i=1}^nx^{}_iA^{}_i)^{-n}.\end{equation}
+比如对于$n=2$，我们得到
+$$\frac{1}{AB}=\bigintsss_0^1\dd x\dd y\frac{\delta(1-x-y)}{(Ax+By)^2}=\bigintsss_0^1\frac{\dd x}{[Ax+B(1-x)]^2}.$$
+这个公式的证明放在第\ref{0cb66++-r8}节，这里就略过了，此处我们将其运用在对$k^{}_1$的积分中，其传播子乘积给出
+\begin{equation}\frac{1}{\qty(k^2_1-m^2_0)\qty(\qty(k-k^{}_1)^2-m^2_0)}=\bigintss_0^1\frac{\dd x}{\qty[\qty(k^2_1-m^2_0)(1-x)+\qty(\qty(k-k^{}_1)^2-m^2_0)x]^2}.\end{equation}
+现在分析分母，我们将其写为$B^2$，展开得到
+$$\qty(k^2_1-m^2_0)x+\qty(\qty(k-k^{}_1)^2-m^2_0)(1-x)=xk^2-2xkk^{}_1+k^2_1-m^2_0.$$
+由于积分变量是$k^{}_1$，因此我们用配分法将其单独提出，给出
+$$\qty(k^{}_1-xk)^2+x(x-1)k^2-m^2_0=a^2+f,\quad a=k^{}_1-xk,\quad f(k)=x(x-1)k^2-m^2_0.$$
+在对$k^{}_1$积分时$k$不变，因此动量体元变换为$\dd^4k^{}_1=\dd^4a$，则算上$i\epsilon$后我们得到上单圈的积分
+\begin{equation}\bigintsss\qty(\frac{\dd k^{}_1}{2\pi})^4\frac{1}{\qty(k^2_1-m^2_0)\qty[\qty(k-k^{}_1)^2-m^2_0]}=\bigintsss\qty(\frac{\dd a}{2\pi})^4\bigintsss_0^1\frac{\dd x}{a^2+f}.\end{equation}
 
 
 
 
 
+
+按照前面的操作，取\textsl{Wick}旋转(\ref{JIrsg11})，注意第三部分的动量需要重新计算
+$$\begin{aligned}\qty(p-k^{}_1-k^{}_2)^2=&p^2+k^2_1+k^2_2-2pk^{}_1-2pk^{}_2+2k^{}_1k^{}_2\\=&-l^2_p-l^2_1-l^2_2-2\qty(i^2p^0_Ek^0_{E,1}-\vb{p}\cdot\vb{k}^{}_1)-2\qty(i^2p^0_Ek^0_{E,2}-\vb{p}\cdot\vb{k}^{}_2)+2\qty(i^2k^0_{E,1}k^0_{E,1}-\vb{k}^{}_1\cdot\vb{k}^{}_2)\\=&-\qty(l^2_p+l^2_1+l^2_2-2l^E_pl^E_2-2l^E_pl^E_1+2l^E_1l^E_2)=-\qty(l^E_p-l^E_1-l^E_2)^2.\end{aligned}$$
+其中，我们记$l^E_p=\qty(-ip^0,\vb{p})$为$p$的\textsl{Euclidean}动量，同时$l^E_pl^E_1=\delta^{}_{ab}\qty(l^E_p)^a\qty(l^E_1)^b$为欧式内积。动量体元通过(\ref{ZZefPI[[})变换，我们得到
+\begin{equation}\Sigma^{(2)}_4(p)\propto\frac{1}{\qty(16\pi^2)^2}\bigintsss\frac{-i^5l^2_1l^2_2\dd\qty(l^{}_1)^2\dd\qty(l^{}_2)^2}{\qty(l^2_1+m^2_0)\qty(l^2_1+m^2_0)\qty(\qty(l^E_p-l^E_1-l^E_2)^2+m^2_0)}.\end{equation}
 
 
 
@@ -11331,7 +11352,7 @@ $$m^2=m^2_0+\Sigma^{(1)}_E=m^2_0+\frac{3\lambda}{4\pi^2}\qty{\Lambda^2-m_0^2\ln\
 
 
 \subsubsection{相互作用传播子的解析性质}
-\subsubsection{热场的重整化}
+\subsubsection{热场的质量重整化}
 
 
 \clearpage
@@ -12978,13 +12999,6 @@ $$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I
 
 
 
-
-
-
-
-
-
-
 \subsection{Dirac场之间的耦合}\label{dinm,a665rb2}
 \noindent 在前文中
 
@@ -13008,7 +13022,10 @@ $$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I
 \subsection{Casimir效应和截断频率}\label{M+-+00.RG}
 \subsection{Ising模型和空间重整化}
 \subsection{Wilson重整化群理论}\label{bh-gg0..34}
-\subsection{单圈修正与动量重整化}\label{0cbcx778dy550r8}
+\subsection{圈图修正与动量重整化}\label{0cbcx778dy550r8}
+\subsubsection{Feynman参数化公式的证明}\label{0cb66++-r8}
+
+
 \subsection{Higgs机制和自发对称性破缺}
 \subsection{实标量场的临界指数}\label{JuticaG6Y9//}
 \subsection{有效场论的一般框架}
