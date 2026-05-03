@@ -10709,9 +10709,9 @@ $$\mathfrak D^{(1)}_4(y,y,y,1,2,3)\implies D^{}_F(1,y)\mathfrak D^{(1)}_4(y,y,2,
 \begin{equation}\mathfrak D^{}_4(4)=D^{}_FD^{}_F\hat{\varPi}D^{}_FD^{}_F.\label{sufFH}\end{equation}
 现在我们来定义这个算符$\hat{\varPi}$，方便起见将第$n$级修正的四点\textit{1PI}按顶点数记为$\varPi^{(n)}\qty(x^{}_1,x^{}_2,\ldots,x^{}_n)$，则一级修正(\ref{5478..4'})可以写作
 $$\mathfrak D^{(1)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega,$$
-二级修正(\ref{BD1243/*/*}写作
+二级修正(\ref{BD1243/*/*})写作
 $$\mathfrak D^{(2)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(2)}(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2,$$
-其余的就不写了。所以算符式(\ref{sufFHJ})可以具体打开为
+其余的就不写了。所以算符式(\ref{sufFH})可以具体打开为
 \begin{equation}\begin{aligned}&\mathfrak D^{}_4(1,2,3,4)\\&=\int D^{}_F(1,x)D^{}_F(2,x)\qty{\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega+\varPi^{(2)}(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2+\cdots}\\&=D^{}_F(1)D^{}_F(2)\circledast\qty{\varPi^{(1)}+\varPi^{(2)}+\cdots}\circledast D^{}_F(3)D^{}_F(4)=D^{}_FD^{}_F\circledast\varPi\circledast D^{}_FD^{}_F.\end{aligned}\label{NMT756==}\end{equation}
 也就是说，算符$\hat{\varPi}$作用到外腿上的本征值为$\varPi$，参照自能(\ref{UGYU[0274378][})可以定义为
 \begin{equation}\varPi=\text{Sum of all 4-point \textit{1PI} with 4 external legs}.\label{gRG-*000}\end{equation}
@@ -10819,7 +10819,7 @@ $$Z(\beta;0)=Z^{}_{KG}(\beta;0)\qty{1+\frac{1}{Z^{}_{KG}(\beta;0)}\bigointsss_{\
 和式(\ref{dFFG-*-**/*///ge})完全一样的结论
 \begin{equation}Z(\beta;0)=Z^{}_{KG}(\beta;0)\exp(W^M)=Z^{}_{KG}(\beta;0)\exp(\sum_iB^M_i),\quad B^M_i\in\mathfrak B^M.\label{jiZch35//}\end{equation}
 只不过此时热浴泡泡由式(\ref{Zhengkongre1})和式(\ref{adWQBNVCGUG})等确定，需要算上占有数补偿。同样的对于传播子，引入约化热浴泡泡$B^{M(r)}_i$为缩并掉一个圈的热浴泡泡，则式(\ref{...D.dgf46//rr})的外点连通图给出
-$$B^{(r)}_i(x,y)=\tikz[baseline=-0.5ex]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,coordinate](b){};\diagram*{(a)--(b)};\end{feynman}}+B^{M(r)}_i+\tikz[baseline=-0.5ex]{\begin{feynman}[inline=a.base]\vertex[coordinate](a){};\vertex[dot,right=1cm of a,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}},$$
+$$B^{M(r)}_i(x,y)=\tikz[baseline=-0.5ex]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$x$](a){};\vertex[right=1cm of a,coordinate](b){};\diagram*{(a)--(b)};\end{feynman}}+B^{M(r)}_i+\tikz[baseline=-0.5ex]{\begin{feynman}[inline=a.base]\vertex[coordinate](a){};\vertex[dot,right=1cm of a,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}},$$
 于是我们得到和式(\ref{SdggSDGSGegug})一样的结果，也即全连通传播子
 \begin{equation}\mathfrak C^M(x,y)=\text{Sum of all connected diagram with two external points}.\end{equation}
 这些结果都可以照搬第\ref{ecvgsddy550r8}节的内容，在形式上完全一致，只是在具体计算时需要参考自由场，加上平均占有数$\expval{n\qty(\omega^{}_{\vb{p}})}$。具体的证明这里就略过了。\\
@@ -11294,9 +11294,9 @@ $$\slashed{p}-m^{}_0-i\Sigma=\slashed{p}-m^{}_0-i\qty{\Sigma(m)+\qty(\slashed{p}
 \subsubsection{零温场质量的重整化}\label{V34578//}
 \noindent 上面我们介绍了重整化的基本思路，但是仍有一个问题未解决，那就是发散性依旧存在。由于发散问题的源头是自能函数$\Sigma$，那么我们不妨具体计算一下，讨论其发散程度，并建立一些解决这个问题的基本手段。\\
 \\
-方便起见，下面我们考察四次相互作用$\Lambda^{}_{\text{int}}=\lambda\psi^4_{ba}$。先解释一下为什么这里不采用平方相互作用，从第\ref{ecui0r8//6}节可以看到，在非连通图指数化的理论下，所有平方相互作用的连通图都是直线，或者说约化真空泡泡$B^{(r)}\in\qty{\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot](a){};\end{feynman}}}$。因此\textit{1PI}也就是单点，结构上没有任何发散性。而从场的角度，平方相互作用场的\textit{Lagrangian}为
+方便起见，下面我们考察四次相互作用$\Lambda^{}_{\text{int}}=\lambda\psi^4_{\text{bare}}$。先解释一下为什么这里不采用平方相互作用，从第\ref{ecui0r8//6}节可以看到，在非连通图指数化的理论下，所有平方相互作用的连通图都是直线，或者说约化真空泡泡$B^{(r)}\in\qty{\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot](a){};\end{feynman}}}$。因此\textit{1PI}也就是单点，结构上没有任何发散性。而从场的角度，平方相互作用场的\textit{Lagrangian}为
 $$\Lambda^{(2)}_{KG}=\partial^{}_\mu\psi\partial^\mu\psi+\qty(m^2_0+\lambda)\psi^2,$$
-相互作用直接确定了裸质量$m^{}_0$的移动$m^2=m^2_0+\lambda$，因此平方相互作用在技术层面是完全解析的。\\
+相互作用直接确定了裸质量$m^{}_0$的移动$m^2=m^2_0+\lambda$，因此平方相互作用在技术层面是完全解析的。方便起见，下面的计算中省略裸场的角标记号。\\
 \\
 对于四次相互作用，我们在第\ref{ecui0r8//6}节中计算了其一级修正图(\ref{Wofhjgs84235})。第一项是非连通图，它会被吸收到连通图的指数中，全连通传播子是第二项
 $$\mathfrak C^{(1)}_4(1,2)=12i\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1.5cm of a,dot,scale=.5,label=below:$x$](c){};\vertex[right=1.5cm of c,dot,scale=.5,label=below:2](b){};\vertex[above=1cm of c,coordinate](d){};\diagram*{(a)--(c)--[half left](d)--[half left](c)--(b)};\end{feynman}}).$$
@@ -11459,7 +11459,7 @@ $$\Im\Sigma(x)=\frac{1}{\pi}\pv\int_{\mathbb R}\frac{\Re\Sigma(a)}{x-a}\dd a+\fr
 由于热场态是混合态，因此若想通过类似零温场的计算得到\textsl{KL}谱分布是较为困难的，为此我们需要重新表述谱分布。在第\ref{Sfsgeiert*/}节我们在计算中引入了复自由温度传播子的动量表象
 $$C\qty(i\zeta^{}_s,\vb{p})\to f(z)=\int C\qty(z)\exp(-z\tau)\qty(\frac{\dd p}{2\pi})^3,$$
 并将离散频率理解为极点$z^{}_s=i\zeta^{}_s\in\mathbb C$，于是\textsl{Matsubara}频率求和就变为零温传播子的留数。这个复变函数$f(z)$就是传播子的解析延拓，在相互作用热场中即前文引入的$f(z)=\mathfrak C(z)$，这样温度传播子也可以表述为式(\ref{VSDFG345H})的形式，也就是说
-\begin{equation}\mathfrak C^M(p)\sim\int_{\mathbb R}\dd x\frac{f(x+i0)-f(x-i0)}{p^2-x}\expval{n(x)},\label{IUO/**---44}\end{equation}
+\begin{equation}\mathfrak C^M(p)\sim\int_{\mathbb R}\dd x\frac{f(x+i0)-f(x-i0)}{p^2-x}\expval{n(x)}.\label{IUO/**---44}\end{equation}
 其中$\expval{n(x)}$是热浴的涨落修正，其来源可以参考式(\ref{CFvtg2348//*})。可见最终的结果是由$f(x\pm i0)$决定的，为此我们需要计算这两个函数，这个结果可以直接从零温场推广，参考式(\ref{lishidiaiyy1})做替换$p^0\to z=z^{}_s+i0$，并考虑到频率求和就得到
 \begin{equation}f(z=x+i0)=\mathfrak D^M_R(x)=\lim\limits_{\epsilon\to 0}\frac{i}{\qty(x+i\epsilon)^2-E^2_{\vb{p}}}.\end{equation}
 其中$\mathfrak D^M_R$是平衡热场的推迟传播子，参考\textsl{CTP}形式(\ref{MeimanGbn})对虚时定义为
@@ -11489,26 +11489,39 @@ $$\Re\mathfrak D^{}_R(u,\vb{p})=\pi\rho\qty(u^2-\abs{\vb{p}}^2)\qty{\theta(u)-\t
 也就是说在下半平面，解析函数的\textsl{KK}关系有符号变化，这符合虚部为负的设定。让我们回到热场，现在式(\ref{IUO/**---44})写作
 $$\mathfrak C^M(p)\propto\int_{\mathbb R}\dd x\frac{\mathfrak D^M_R(x)-\mathfrak D^M_A(x)}{p^2-x}\expval{n(x)},$$
 根据式(\ref{FGDGOhuhu776})可知，平衡热场的自能对传播子的修正和零文场完全一致，因此对比式(\ref{36IOURTYKL})在形式上，我们得到谱分布为
-\begin{equation}\rho^M(x)=\mathfrak D^M_R(x)-\mathfrak D^M_A(x).\end{equation}
+\begin{equation}\rho^M(x)=\mathfrak D^M_R(x)-\mathfrak D^M_A(x).\label{87845*/5GG4}\end{equation}
 依旧类比\textsl{CTP}形式，引入全连通温度大于和小于函数
 \begin{equation}\mathfrak C^{M,<}(a,b)=\expval{\hat{\psi}^M(a)\hat{\psi}^M(b)}_{\text{conn}},\quad\mathfrak C^{M,>}(a,b)=\expval{\hat{\psi}^M(b)\hat{\psi}^M(a)}_{\text{conn}},\end{equation}
 则根据式(\ref{CtonCFHyg1})和式(\ref{CtonCFHyg2})我们得到谱分布的另一种表达式
 \begin{equation}\rho^M(x)=\mathfrak C^{++}(x)-\mathfrak C^<(x)-\mathfrak C^{++}(x)+\mathfrak C^>(x)=\mathfrak C^{M,>}(x)-\mathfrak C^{M,<}(x).\end{equation}
 这是一个更实用的形式，因为这两个函数更容易计算，从\textsl{KMS}条件(\ref{KNS];;GY})的动量表象不难得到推论
-\begin{equation}C^{M,>}(p)=C^{M,<}(p)=\exp(-\beta p)C^{M,>}(p),\end{equation}
+\begin{equation}C^{M,>}(p)=C^{M,<}(p)=\exp(-\beta p)C^{M,>}(p),\label{Rw239==-[][}\end{equation}
 其中$p$是实时动量，则最终我们得到谱分布的热涨落修正
 \begin{equation}\mathfrak C^{M,>}(p)=\qty(1+\expval{n(p)})\rho^M(p),\quad \mathfrak C^{M,<}(p)=\expval{n(p)}\rho^M(p),\quad \expval{n(p)}=\frac{1}{\exp(\beta p)-1}.\end{equation}
 可以看到，温度大于和小于函数通过谱分布，正确的体现了热涨落，这并非偶然，具体的细节可以参考\cite{therFUrc}的\S2.2-\S2.5，这里就不展开了。关于温度传播子的\textsl{Cauchy}积分形式，这里也不介绍了，读者可以自行参考。\\
 \\
 现在我们来看\textsl{Keyldsh}矩阵的解析性。由于自能此时是一个矩阵，因此若直接从\textsl{Keyldsh}矩阵的\textsl{Dyson}方程(\ref{Yat623457})出发，做和零温场一样的计算是不现实的。但是在\textsl{Keyldsh}旋转下，\textsl{Dyson}方程变为(\ref{Lasnf})，这和零温场是一样的。于是我们就可以使用上文中所介绍的推迟和超前传播子，给出
 \begin{equation}\mathfrak D^{}_R(p)=\frac{1}{\qty(D^{}_R)^{-1}(p)-\Psi^{}_R(p)},\quad \mathfrak D^{}_A(p)=\frac{1}{\qty(D^{}_A)^{-1}(p)-\Psi^{}_A(p)}.\end{equation}
-此处$p$是实时动量，则不难写出
+此处$p$是实时动量，则解析性可以直接从平衡热场得到，因为我们已经通过\textsl{Keyldsh}矩阵建立了一个完备的，关于$\mathfrak D^{}_{A/R}(p)$的解析性理论，比如\textsl{KK}关系有
+$$\Im\mathfrak D^{}_R(x)=\frac{\text{sgn}\qty(p^0)}{\pi}\pv\int\frac{\Re\mathfrak D^{}_R(a)}{x^2-a}\dd a,\quad \Im\mathfrak D^{}_A(x)=-\frac{\text{sgn}\qty(p^0)}{\pi}\pv\int\frac{\Re\mathfrak D^{}_A(a)}{x^2-a}\dd a.$$
+虽然非平衡场和平衡场的解析延拓在形式上是一样的，但是由于非平衡场中，推迟和超前传播子的自能不同，所以它们的\textsl{KK}关系不能简单的用\textsl{KL}谱分布表示。但是\textsl{KL}谱分布是唯一确定的，因为大于和小于传播子可以按照零温场，通过插入完备态确定谱分布，最终的结果是
+\begin{equation}\mathfrak C^{>}(p)=\qty(1+\expval{n(p)})\rho(p),\quad \mathfrak C^{<}(p)=\expval{n(p)}\rho(p),\quad \expval{n(p)}=\frac{1}{\exp(\beta p)-1}.\end{equation}
+本质上就是式(\ref{Rw239==-[][})的实时形式，因此反推我们不难看到，\textsl{CTP}形式中谱分布的定义应该和式(\ref{87845*/5GG4})一致，写作
+\begin{equation}\rho(x)=\mathfrak D^{}_R(x)-\mathfrak D^{}_A(x).\end{equation}
+通过\textsl{Keyldsh}旋转，我们不难得到\textsl{Schwinger}传播子的谱表示$\mathfrak D^{}_R(p)=\qty(1+\expval{n(p)})\rho(p)$，读者可以自行计算。至此\textsl{Schwinger-Keyldsh}形式的传播子的解析性基本就建立完毕，需要说明的是虽然其和\textsl{Matsubara}形式共用一套解析延拓记号，但最终所呈现的物理性质是完全不同的，可以参附录\ref{haergong}的非平衡态理论。
+\subsubsection{热场的自能重整化}
+\noindent 上面我们通过解析延拓，将零温场传播子的解析性拓展至有限温度场中。同时在第\ref{V34578//}节中我们看到，谱分布的一些细节可以通过自能的重整化来确定，因此这里我们来介绍热场的自能重整化。由于已经证明了平方相互作用只是质量的移动，下面还是以实标量场的四次相互作用理论$\Lambda^{}_{\text{int}}=\lambda\psi^4_{\text{bare}}$为例。\\
+\\
+从平衡热场出发，在第\ref{ty78/**/y99r}节中我们证明了在\textsl{BdD}定理下，其\textsl{Feynman}图理论和零温场是一致的，因此可以直接使用第\ref{V34578//}节中的图。比如自能的一级修正是一个蝌蚪图，以动量图从式(\ref{=-0767[[[][})得到
+\begin{equation}\Sigma^{(1)}_M=12\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,coordinate](a){};\vertex[right=1cm of a,dot,scale=.5,coordinate](c){};\vertex[right=1cm of c,dot,scale=.5,coordinate](b){};\vertex[above=1.5cm of c,coordinate](d){};\diagram*{(a)--(c)--[half left,momentum'=\(p\)](d)--[half left](c)--(b)};\end{feynman}})=12\lambda\int\qty(\frac{\dd p^{}_M}{2\pi})^4\frac{i}{p^2_M-m^2_0+i\epsilon}.\end{equation}
+在平衡热场中，
 
 
 
 
 
-\subsubsection{热场的质量重整化}
+
+
 
 
 \clearpage
