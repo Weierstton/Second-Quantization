@@ -1113,7 +1113,7 @@ $$\abs{\rho^{}_{ij}}=\frac{1}{4}\qty(1-\xi_1^2-\xi_2^2-\xi_3^3)=\frac{1}{4}\qty(
 \begin{equation}J^{(n)}=J(1-P),\quad J^{(p)}=JP.\end{equation}
 同时我们知道偏振波一般是以线偏振叠加为椭圆偏振给出的，这里还可以求出由常矢量$\vb{P}$给出的椭圆偏振模式，只需要按它给出的空间角度改变式(\ref{erfg2})或式(\ref{erfg1})的振幅即可，这里就不说明了。
 
-\subsection{谱分解}\label{dgdsfgsdf}
+\subsection{Fourier谱分解}\label{dgdsfgsdf}
 
 \noindent 有了平面电磁波我们就可以发展一些数学技巧了，我们称之为\textbf{谱分解 \textsl{Spectral Decomposition}}。这一技巧最早是由伟大的法国物理学家\textsl{$\star$Jean-Baptiste Joseph Fourier}在其著作\textbf{《热的分析理论》\textbf{Théorie Analytique de la Chaleur}}中提出的，他是总结了前人的经验后给出的一种解热传导方程的方法，现在已经发展成为一套成熟的数学分支，称为\textbf{\textsl{Fourier}谱分析}。这里我们只是简单介绍和广义的波动学理论相关的两个理论应用。\\
 \\
@@ -7534,7 +7534,7 @@ $$\begin{aligned}&\mel**{1}{\mathbb T\qty{\hat{\psi}^{\dagger}(\vb{r}^{}_1,t^{}_
 其中$a=(t,\vb{r})$是时空点的缩记，相位简记为$pa=E^{}_{\vb{k}}a^0-\vb{k}\cdot\vb{a}$，依旧考虑了编时乘积。和单粒子的两点函数(\ref{n841--+..m})一样，我们也写出真空态对时间的的显式依赖
 \begin{equation}C(a,b)=\lim\limits_{\mathfrak T\to\infty}\mel**{0(\mathfrak T)}{\mathbb T\qty{\hat{\psi}(a)\hat{\psi}(b)}}{0(-\mathfrak T)}.\end{equation}
 对于纯空间上的关联，我们在第\ref{landaoo908}节中已经详细的介绍，此处不再重复。这里不配对共轭位形算符是因为，对于自由实标量场而言两者相同(\ref{ahahann})，所以不需要$\hat{\psi}^\dagger$，也不需要反粒子算符。假设$a^0>b^0$，在动量表象中打开算符给出
-$$\begin{aligned}\mathbb T\qty{\hat{\psi}(a)\hat{\psi}(b)}&=\hat{\psi}(a)\hat{\psi}(b)=\sum_{\vb{k}}\frac{1}{\sqrt{2E^{}_{\vb{k}}}}\qty(\hat{c}^{}_{\vb{k}}e^{-ika}+\hat{c}^{\dagger}_{\vb{k}}e^{ika})\sum_{\vb{k}'}\frac{1}{\sqrt{2E^{}_{\vb{k}'}}}\qty(\hat{c}^{}_{\vb{k}'}e^{-ik'b}+\hat{c}^{\dagger}_{\vb{k}'}e^{ik'b})\\&=\sum_{\vb{k}}\frac{1}{2E^{}_{\vb{k}}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}e^{-ik(a-b)}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{p}}e^{ik(a-b)}).\end{aligned}$$
+$$\begin{aligned}\mathbb T\qty{\hat{\psi}(a)\hat{\psi}(b)}&=\hat{\psi}(a)\hat{\psi}(b)=\sum_{\vb{k}}\frac{1}{\sqrt{2E^{}_{\vb{k}}}}\qty(\hat{c}^{}_{\vb{k}}e^{-ika}+\hat{c}^{\dagger}_{\vb{k}}e^{ika})\sum_{\vb{k}'}\frac{1}{\sqrt{2E^{}_{\vb{k}'}}}\qty(\hat{c}^{}_{\vb{k}'}e^{-ik'b}+\hat{c}^{\dagger}_{\vb{k}'}e^{ik'b})\\&=\sum_{\vb{k}}\frac{1}{2E^{}_{\vb{k}}}\qty(\hat{c}^{}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}e^{-ik(a-b)}+\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}e^{ik(a-b)}).\end{aligned}$$
 这里同样使用了\textsl{Parseval}性质。注意到对于真空态我们有$\hat{c}^{}_{\vb{k}}\ket{0}=0$，因此$\expval{\hat{c}^{\dagger}_{\vb{k}}\hat{c}^{}_{\vb{k}}}=0$。也就是说，两点函数最终的结果，和$\expval{\hat{c}^{}_{\vb{k}}\hat{c}^{\dagger}_{\vb{k}}}$有关，这极大的依赖于二次量子化算符的顺序。\\
 \\
 类似这样的，湮灭算符在右侧的顺序称为算符的\textbf{正规序 \textit{Normal Order}}，记为$\mathcal N$，比如有
@@ -8426,7 +8426,7 @@ $$\begin{aligned}ZC^M(b-a)&=\tr{\exp(-\beta\hat{H})\hat{\psi}^{\dagger M}(a)\hat
 根据定义$\tau=\tau^{}_a-\tau^{}_b$，$\vb{r}=\vb{a}-\vb{b}$，则上式给出
 \begin{equation}C^M(\tau,\vb{r})=\frac{1}{Z}\tr{\exp(-\qty(\beta-\tau)\hat{H})\hat{\psi}(\vb{b})\exp(-\tau\hat{H})\hat{\psi}^{\dagger}(\vb{a})},\quad\tau>0.\label{qinglizibd}\end{equation}
 而对于$\tau^{}_a<\tau^{}_b\implies\tau<0$时，玻色系统在编时乘积下符号不变，费米系统编时乘积下变号，类似的计算给出
-\begin{equation}\begin{aligned}ZC(\tau,\vb{r})&=\mp\tr{\exp(-\qty(\beta+\tau)\hat{H})\hat{\psi}^{\dagger}(\vb{a})\exp(\tau\hat{H})\hat{\psi}(\vb{b})}\\&=\mp\tr{\exp(\tau\hat{H})\hat{\psi}(\vb{b})\exp(-\qty(\beta+\tau)\hat{H})\hat{\psi}^{\dagger}(\vb{a})},\quad\tau<0.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}ZC^M(\tau,\vb{r})&=\mp\tr{\exp(-\qty(\beta+\tau)\hat{H})\hat{\psi}^{\dagger}(\vb{a})\exp(\tau\hat{H})\hat{\psi}(\vb{b})}\\&=\mp\tr{\exp(\tau\hat{H})\hat{\psi}(\vb{b})\exp(-\qty(\beta+\tau)\hat{H})\hat{\psi}^{\dagger}(\vb{a})},\quad\tau<0.\end{aligned}\end{equation}
 其中费米反对易以上号记，玻色对易以下号记。对比式(\ref{qinglizibd})，我们就得到
 \begin{equation}C^M(\tau)=\mp C^M\qty(\tau-\frac{1}{T}),\quad \tau>0.\label{zhASFFDnauga}\end{equation}
 因为$\tau$的范围由条件(\ref{danbaizhitied})给定，所以$\tau-\beta>0$，这就确定了温度\textsl{Green}函数从$\tau>0$到$\tau<0$的延拓。类似的我们可以得到有限温度下的多点关联函数，这里就不多赘述了。\\
@@ -8479,17 +8479,19 @@ $$k^{2}_M=\delta^{}_{\mu\nu}k^{\mu}_Mk^{\nu}_M=\zeta^2_s+\vb{k}^2=\vb{k}^2-\omeg
 \begin{equation}D^{M\mu\nu}_P\qty(\zeta^{}_s,\vb{k})=\frac{4\pi i}{-\zeta^2_s-\vb{k}^2+i0}\qty(\eta^{\mu\nu}+(\xi-1)\frac{k^{\mu}_M k^{\nu}_M}{-\zeta^2_s-\vb{k}^2+i0}).\end{equation}
 可以看到，若我们取\textsl{CS}规范或\textsl{DP}规范，则光子的温度\textsl{Green}函数是自动给出的。对于凝聚态的情况，这里就不计算了，请参考第\ref{UHYB..**}节。\\
 \\
-我们不妨做进一步计算，对于实标量场取$0\leq\tau\leq\beta$，引入\textsl{Heaviside}函数并注意\textsl{Parseval}定理，我们写出
-$$\begin{aligned}C^M(\tau,\vb{r})=&\expval{\mathbb T^M\qty{\hat{\psi}^M(\tau^{}_a)\hat{\psi}^M(\tau^{}_b)}}=\expval{\hat{\psi}^M(\tau^{}_a)\hat{\psi}^M(\tau^{}_b)}\theta(\tau)\\=&\sum_s\sum_{\vb{p}}\frac{\theta(\tau)}{2E(s,\vb{p})}\expval{\hat{c}^{}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}\exp(-i\zeta^{}_s\tau+i\vb{p}\cdot\vb{r})+\hat{c}^{\dagger}_{\vb{p}}\hat{c}^{}_{\vb{p}}\exp(i\zeta^{}_s\tau-i\vb{p}\cdot\vb{r})}.\end{aligned}$$
+我们不妨做进一步计算，注意虚时的基本定义范围是$0\leq\tau\leq\beta$，考虑到\textsl{Parseval}定理我们写出
+$$\begin{aligned}C^M(\tau,\vb{r})=&\expval{\mathbb T^M\qty{\hat{\psi}^M(\tau^{}_a)\hat{\psi}^M(\tau^{}_b)}}=\expval{\hat{\psi}^M(\tau^{}_a)\hat{\psi}^M(\tau^{}_b)}\\=&\sum_s\sum_{\vb{p}}\frac{1}{2E(s,\vb{p})}\expval{\hat{c}^{}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}\exp(-i\zeta^{}_s\tau+i\vb{p}\cdot\vb{r})+\hat{c}^{\dagger}_{\vb{p}}\hat{c}^{}_{\vb{p}}\exp(i\zeta^{}_s\tau-i\vb{p}\cdot\vb{r})}.\end{aligned}$$
 根据占有数算符的定义，对于玻色子我们得到
 $$\expval{\hat{c}^{\dagger}_{\vb{p}}\hat{c}^{}_{\vb{p}}}=\expval{n^{}_{\vb{p}}}=\frac{1}{\exp(\beta\omega^{}_{\vb{p}})-1},\quad\expval{\hat{c}^{}_{\vb{p}}\hat{c}^{\dagger}_{\vb{p}}}=\expval{\hat{c}^{\dagger}_{\vb{p}}\hat{c}^{}_{\vb{p}}+\hat{\vb{I}}}=\expval{n^{}_{\vb{p}}}+1.$$
-其中我们对占有数均值$\expval{n^{}_{\vb{p}}}$带入了$\mu=0$的\textsl{BE}分布，也即\textsl{Planck}分布，并带入色散律$\omega^{}_{\vb{p}}=\abs{\vb{p}}$。同时将能量用虚能量替换$E(s,\vb{p})=i\zeta^{}_s$，由此得到温度\textsl{Green}函数的\textsl{Fourier}分量
-\begin{equation}C^M\qty(\zeta^{}_s,\vb{p})=\frac{1}{2i\zeta^{}_s}\qty{1+\expval{n\qty(\omega^{}_{\vb{p}})}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{2i\qty(\zeta^{}_s\tau-\vb{p}\cdot\vb{r})}}\theta(\tau).\label{fu-*-rFFhDfo}\end{equation}
-参考式(\ref{KUGTTFv})写成动量积分，积分在动量反演下不变，我们写出
-$$C^M(\tau,\vb{r})=\sum_s\bigintsss\qty{\frac{e^{-i\zeta^{}_s\tau}\theta\qty(\tau)+e^{i\zeta^{}_s\tau}\theta\qty(-\tau)}{2i\zeta^{}_s}+\frac{\expval{n\qty(\omega^{}_{\vb{p}})}}{2i\zeta^{}_s}\qty(e^{i\zeta^{}_s\tau}+e^{-i\zeta^{}_s\tau})\qty{\theta\qty(-\tau)+\theta\qty(\tau)}}e^{i\vb{p}\cdot\vb{r}}\qty(\frac{\dd p}{2\pi})^3.$$
-不难看到，第一项对应温度\textsl{Feynman}传播子$D^M_F\qty(\zeta^{}_s,\vb{p})$，第二项的相位和给出$2\cos(\zeta^{}_s\tau)$，$\theta$函数的和不难证明为$\theta(-\tau)+\theta(\tau)=1$，自然的我们得到
-\begin{equation}C^M(\tau,\vb{r})=\sum_s\bigintsss \qty(\frac{i}{-\zeta^2_s-\omega_{\vb{p}}^2+i0}e^{i(\vb{p}\cdot\vb{r}-\zeta^{}_s\tau)}+\frac{\expval{n\qty(\omega^{}_{\vb{p}})}\cos(\zeta^{}_s\tau)}{i\zeta^{}_s}e^{i\vb{p}\cdot\vb{r}})\qty(\frac{\dd p}{2\pi})^3.\label{a/-gfHEDCFeg}\end{equation}
-可见从式(\ref{wenRFf-du})的\textsl{Fourier}分量，是无法直接通过\textsl{Fourier}变换得到时空温度传播子的，这也很好理解，因为热浴导致的粒子交换必然会影响概率的测量。对于$T=0$的真空零温场情况，我们得到$\expval{n\qty(\omega^{}_{\vb{p}})}=0$，这自然就回到零温\textsl{Feynman}传播子。
+其中我们对占有数均值$\expval{n^{}_{\vb{p}}}$带入了$\mu=0$的\textsl{BE}分布，也即\textsl{Planck}分布，并带入色散律$\omega^{}_{\vb{p}}=\abs{\vb{p}}$。同时将能量用延拓的虚能量(\ref{pinlvDEyant})替换$E(s,\vb{p})=i\zeta^{}_s$，由此得到温度\textsl{Green}函数为
+\begin{equation}C^M(\tau>0,\vb{r})=\sum_s\sum_{\vb{p}}\frac{1}{2i\zeta^{}_s}\qty{\qty(\expval{n\qty(\omega^{}_{\vb{p}})}+1)e^{-i\zeta^{}_s\tau+i\vb{p}\cdot\vb{r}}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{i\zeta^{}_s\tau-i\vb{p}\cdot\vb{r}}}.\end{equation}
+按照离散变换公式(\ref{rrrdd})，考虑到积分在动量反演下不变，我们得到在区间$0\leq\tau\leq\beta$内温度\textsl{Green}函数的\textsl{Fourier}分量
+\begin{equation}C^M\qty(\zeta^{}_s,\vb{p})=\frac{1}{2i\zeta^{}_s\beta}\int_0^\beta\qty{\qty[\expval{n\qty(\omega^{}_{\vb{p}})}+1]e^{-i\zeta^{}_s\tau}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{i\zeta^{}_s\tau}}\dd\tau.\label{fu-*-rFFhDfo}\end{equation}
+我们根据式(\ref{Jannier})，可以将其延拓至$-\beta\leq\tau\leq0$区间内，对式(\ref{fu-*-rFFhDfo})做变换$\tau\to\tau-\beta$就得到相应的\textsl{Fourier}分量
+\begin{equation}C^M\qty(\zeta^{}_s,\vb{p})=\frac{1}{2i\zeta^{}_s\beta}\int_0^\beta\qty{\qty[\expval{n\qty(\omega^{}_{\vb{p}})}+1]e^{-i\zeta^{}_s(\tau-\beta)}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{i\zeta^{}_s(\tau-\beta)}}\dd\tau.\end{equation}
+将上述两个\textsl{Fourier}分量分别记为$C^M_{\pm}\qty(\zeta^{}_s,\vb{p})$，对应$[-\beta,0]$和$[0,\beta]$的两段区间，则温度\textsl{Green}函数可以参考式(\ref{KUGTTFv})，用\textsl{Heaviside}函数表述为
+\begin{equation}C^M(\tau,\vb{r})=\sum_s\bigintsss\qty{C^M_+\qty(\zeta^{}_s,\vb{p})\theta(\tau)+C^M_-\qty(\zeta^{}_s,\vb{p})\theta(-\tau)}e^{i\vb{p}\cdot\vb{r}}\qty(\frac{\dd p}{2\pi})^3.\label{a/-gfHEDCFeg}\end{equation}
+可见从式(\ref{wenRFf-du})的\textsl{Fourier}分量，是无法直接通过\textsl{Fourier}变换得到时空温度传播子的，这也很好理解，因为热浴导致的粒子交换必然会影响概率的测量。对于$T=0\implies\beta=\infty$的真空零温场情况，我们得到$\expval{n\qty(\omega^{}_{\vb{p}})}=0$，式(\ref{a/-gfHEDCFeg})会自然回到零温\textsl{Feynman}传播子。
 \subsubsection{Bloch-De Dominicis定理}\label{Sfsgeiert*/}
 \noindent 既然热场和零温场的\textsl{Green}函数有较大的不同，那么我们自然需要验证，温度关联函数是否仍满足\textsl{Wick}定理。\\
 \\
@@ -8497,8 +8499,8 @@ $$C^M(\tau,\vb{r})=\sum_s\bigintsss\qty{\frac{e^{-i\zeta^{}_s\tau}\theta\qty(\ta
 $$\mathcal N\qty{\hat{c}\hat{c}^\dagger}\ket{n}=\hat{c}^\dagger\hat{c}\ket{n}=n\ket{n}.$$
 这反应了系统对热浴先注入再抽取一个粒子的过程，这个过程对于零温基态是不允许的。具体计算均值给出$\expval{\mathcal N\qty{\hat{c}\hat{c}^\dagger}}=\expval{\hat{c}^\dagger\hat{c}}=\expval{n}$，从而根据上文我们必然得到
 $$\expval{\mathcal N\qty{\hat{\psi}^M_1\hat{\psi}^M_2}}=\sum_s\bigintsss\frac{\expval{n\qty(\omega^{}_{\vb{p}})}}{i\zeta^{}_s}\exp(i\vb{p}\cdot\vb{r})\qty(\frac{\dd p}{2\pi})^3.$$
-若我们这里将热场算符的缩并定义为
-\begin{equation}\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}=\sum_s\bigintsss D^M_F\qty(\zeta^{}_s,\vb{p})\exp{-i\qty(\zeta^{}_s\tau-\vb{p}\cdot\vb{r})}\qty(\frac{\dd p}{2\pi})^3,\end{equation}
+若我们这里将热场算符的缩并，参照零温场定义为
+\begin{equation}\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}\propto\sum_s\frac{1}{2i\zeta^{}_s\beta}\bigintsss e^{i\vb{p}\cdot\vb{r}}\qty{e^{-i\zeta^{}_s\tau}\theta(\tau)+e^{i\zeta^{}_s\tau}\theta(-\tau)}\qty(\frac{\dd p}{2\pi})^3,\end{equation}
 则根据式(\ref{a/-gfHEDCFeg})，我们得到$\mathbb T^M$和正规序的关系
 \begin{equation}\expval{\mathbb T^M\qty{\hat{\psi}^M_1\hat{\psi}^M_2}}=\expval{\mathcal N\qty{\hat{\psi}^M_1\hat{\psi}^M_2}}+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}\Longleftrightarrow\mathbb T^M\qty{\hat{\psi}^M_1\hat{\psi}^M_2}=\mathcal N\qty{\hat{\psi}^M_1\hat{\psi}^M_2+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}}.\end{equation}
 其中最后一步考虑了数值不受正规序影响的事实，可见在此算符缩并定义下，热场的两点\textsl{Wick}定理和零温场的结论(\ref{wivkW})一样。推广这个式子至四点函数，对于实标量场我们得到
@@ -8533,7 +8535,7 @@ $$\begin{aligned}&\frac{1}{2\pi i}\oint_{C^{}_1}f(z)\expval{n(z)}\dd z=\Res[f^+(
 $$\expval{n(-\omega^{}_{\vb{p}})}=\frac{1}{\exp(-\beta\omega^{}_{\vb{p}})-1}=\frac{-\exp(\beta\omega^{}_{\vb{p}})}{\exp(\beta\omega^{}_{\vb{p}})-1}=-1-\expval{n(\omega^{}_{\vb{p}})},$$
 则我们得到两点函数为
 \begin{equation}D^M_F\qty(\tau,\vb{r})=\bigintsss\frac{1}{2\omega^{}_{\vb{p}}}\qty{\qty(1+\expval{n\qty(\omega^{}_{\vb{p}})})e^{\omega^{}_{\vb{p}}\tau}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{-\omega^{}_{\vb{p}}\tau}}e^{i\vb{p}\cdot\vb{r}}\qty(\frac{\dd p}{2\pi})^3.\label{sdgUCCV''ERY][][YUF}\end{equation}
-上述的留数算法称为\textbf{\textsl{Matsubara}频率求和}，不难验证这就是式(\ref{a/-gfHEDCFeg})对$s$求和后的结果，并且其\textsl{Fourier}分量在$\tau>0$时对应式(\ref{fu-*-rFFhDfo})。并且我们看到，热涨落修正是自然出现的，所以\emph{在理论推导时，只需要使用\textsl{BdD}定理即可，具体计算在补偿后自动体现}。\\
+上述的留数算法称为\textbf{\textsl{Matsubara}频率求和}，可以验证这就是式(\ref{a/-gfHEDCFeg})对$s$求和后的结果，并且其\textsl{Fourier}分量在$\tau>0$时对应式(\ref{fu-*-rFFhDfo})。并且我们看到，热涨落修正是自然出现的，所以\emph{在理论推导时，只需要使用\textsl{BdD}定理即可，具体计算在补偿后自动体现}。\\
 \\
 我们不妨总结\textsl{BdD}定理的计算过程：
 \begin{enumerate}\item 对于任意的场位形$\psi$，按照零温场理论得到零温\textsl{Green}函数$$C(1,2)=\mel**{0}{\hat{\psi}^{}_1\hat{\psi}^{}_2}{0}=\int C\qty(\omega^{}_{\vb{p}},\vb{p})\frac{\dd^4 p}{(2\pi)^4}.$$其中$C\qty(\omega^{}_{\vb{p}},\vb{p})$是时空\textsl{Fourier}分量，计算时采用\textsl{Feynman}方法；\item 根据频率的\textsl{Wick}旋转(\ref{pinlvDEyant})，将分量解析延拓到温度\textsl{Green}函数$$C^M(\zeta^{}_s,\vb{p})=C\qty(i\zeta^{}_s,\vb{p}),\quad s\in\mathbb Z$$其中$\zeta^{}_s$是\textsl{Matsubara}频率(\ref{haoGDT7598})，注意对于费米子是反常的；\item 对$\mathcal N^M$的归零补偿，引入场的平均占有数$\expval{n\qty(i\zeta^{}_s)}$，给出时空温度\textsl{Green}函数$$C^M(\tau,\vb{r})=\displaystyle\sum_s\int C\qty(i\zeta^{}_s,\vb{p})\expval{n\qty(i\zeta^{}_s)}\exp{-i\qty(\zeta^{}_s\tau-\vb{p}\cdot\vb{r})}\qty(\frac{\dd p}{2\pi})^3.$$在\textsl{BdD}定理中，这就是一对\textsl{Matsubara}绘景算符的缩并；\item 记复数$z^{}_s=i\zeta^{}_s$，采用\textsl{Matsubara}频率求和将$z^{}_s$看作极点并反向使用留数定理。随后和零温理论一样得到最终结果，关于补偿的$\expval{n(z)}$的留数展开得到热涨落修正；\item 对于多点有限温关联函数，现在只需要使用零温\textsl{Wick}定理计算即可，最终结果是所有可能的全缩并的和，每个全缩并是若干$C^M(\tau,\vb{r})$的乘积。\end{enumerate}
@@ -10771,7 +10773,7 @@ $$S=S^{}_{KG}+\int^\beta_0\Lambda^{}_{\text{int}}[\psi(\tau)]\dd\tau,\quad \beta
 \\
 不妨从计算温度\textsl{Green}函数的各阶修正开始，零级近似自然就是自由场的温度\textsl{Green}函数，写作
 $$C^{M;(0)}(x,y)=D^M_F(x,y)=\frac{\displaystyle\oint\exp(-S^E_{KG})\psi\qty(\tau^{}_x)\psi\qty(\tau^{}_y)\mathscr D\psi(\tau)}{\displaystyle\oint\exp(-S^E_{KG})\mathscr D\psi(\tau)}=\expval{\mathbb T^M\qty{\hat{\psi}^{}_I(x)\hat{\psi}^{}_I(y)}},$$
-具体表达式由式(\ref{a/-gfHEDCFeg})确定，对于玻色\textsl{Matsubara}频率求和的结果为式(\ref{sdgUCCV''ERY][][YUF})。对于后续的修正，我们暂时不考虑分母的贡献
+直接展开的表达式由式(\ref{a/-gfHEDCFeg})确定，对于玻色\textsl{Matsubara}频率求和的结果为式(\ref{sdgUCCV''ERY][][YUF})。对于后续的修正，我们暂时不考虑分母的贡献
 $$\expval{\mathbb T^M\qty{\exp(0)}}=\expval{\hat{\vb{I}}}=\frac{1}{Z^{}_{KG}}\tr(\hat{\vb{w}})=1,$$
 注意密度矩阵$\vb{w}$是归一化的，因而和零温场一致，并取平方相互作用$\Lambda^E_{\text{int}}=\lambda\psi^2$。于是一级修正为
 \begin{equation}C^{M;(1)}_2(x,y)=\lambda\expval{-\mathbb T^M\qty{\hat{\psi}^{}_I(x)\hat{\psi}^{}_I(y)\int^\beta_0\hat{\psi}^{M}_I(\tau)\hat{\psi}^{M}_I(\tau)\dd\tau}}.\end{equation}
@@ -10780,7 +10782,7 @@ $$\expval{\mathbb T^M\qty{\hat{\psi}^{}_I(x)\hat{\psi}^{}_I(y)\hat{\psi}^M_I(\ta
 详细的计算过程我们就不重复了，于是一级修正为
 \begin{equation}C^{M;(1)}_2(x,y)=-\lambda\int^\beta_0\qty{D^M_F(x,y)D^M_F(\tau,\tau)+2D^M_F(x,\tau)D^M_F(\tau,y)}\dd\tau.\end{equation}
 可见其和零温场的一级修正(\ref{afIYUIEEQ][]==989})在形式上完全一致，这是可以预料到的，毕竟我们完全就是从零温场过渡而来的。暂时不考虑\textsl{Matsubara}频率求和，代入$D^M_F$具体表达式(\ref{a/-gfHEDCFeg})，第一项的内传播子为
-\begin{equation}D^M_F(\tau,\tau)=D^M_F(0)=\sum_s\bigintsss\qty(\frac{i}{-\zeta^2_s-\omega_{\vb{p}}^2+i0}+\frac{\expval{n\qty(\omega^{}_{\vb{p}})}}{i\zeta^{}_s})\qty(\frac{\dd p}{2\pi})^3.\end{equation}
+\begin{equation}D^M_F(\tau,\tau)=D^M_F(0)=\sum_s\frac{T}{i\zeta^{}_s}\bigintsss\qty(1+2\expval{n\qty(\omega^{}_{\vb{p}})})\qty(\frac{\dd p}{2\pi})^3.\end{equation}
 再次强调其动量表象绝不是$D^M_F\qty(\zeta^{}_s,\vb{p})$，因为需要占有数的补偿。事实上，我们也可以从$D^M_F\qty(\zeta^{}_s,\vb{k})$直接计算，式(\ref{wenRFf-du})给出
 $$D^M_F\qty(\zeta^{}_s,\vb{k})=\frac{i}{-(2\pi sT)^2-\vb{k}^2+i0}=-i\frac{(2\pi T)^{-2}}{s^2+\qty(\vb{k}/2\pi T)^2}.$$
 我们直接对$s$求和，这里涉及$\sum\limits_s\dfrac{1}{s^2+a^2}$，使用\textsl{Poisson}公式得到双曲余切求和公式
@@ -11513,10 +11515,8 @@ $$\Im\mathfrak D^{}_R(x)=\frac{\text{sgn}\qty(p^0)}{\pi}\pv\int\frac{\Re\mathfra
 \noindent 上面我们通过解析延拓，将零温场传播子的解析性拓展至有限温度场中。同时在第\ref{V34578//}节中我们看到，谱分布的一些细节可以通过自能的重整化来确定，因此这里我们来介绍热场的自能重整化。由于已经证明了平方相互作用只是质量的移动，下面还是以实标量场的四次相互作用理论$\Lambda^{}_{\text{int}}=\lambda\psi^4_{\text{bare}}$为例。\\
 \\
 从平衡热场出发，在第\ref{ty78/**/y99r}节中我们证明了在\textsl{BdD}定理下，其\textsl{Feynman}图理论和零温场是一致的，因此可以直接使用第\ref{V34578//}节中的图。比如自能的一级修正是一个蝌蚪图，以动量图从式(\ref{=-0767[[[][})得到
-\begin{equation}\Sigma^{(1)}_M=12\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,coordinate](a){};\vertex[right=1cm of a,dot,scale=.5,coordinate](c){};\vertex[right=1cm of c,dot,scale=.5,coordinate](b){};\vertex[above=1.5cm of c,coordinate](d){};\diagram*{(a)--(c)--[half left,momentum'=\(p\)](d)--[half left](c)--(b)};\end{feynman}})=12\lambda\int\qty(\frac{\dd p^{}_M}{2\pi})^4\frac{i}{p^2_M-m^2_0+i\epsilon}.\end{equation}
-在平衡热场中，
-
-
+\begin{equation}\Sigma^{(1)}_M=12\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,coordinate](a){};\vertex[right=1cm of a,dot,scale=.5,coordinate](c){};\vertex[right=1cm of c,dot,scale=.5,coordinate](b){};\vertex[above=1cm of c,coordinate](d){};\diagram*{(a)--(c)--[half left,momentum=\(p\),charged scalar](d)--[half left,charged scalar](c)--(b)};\end{feynman}})=12\lambda D^M_F(\tau,\tau).\end{equation}
+我们在第\ref{ty78/**/y99r}节中计算了其零质量的值，
 
 
 
