@@ -4153,11 +4153,11 @@ $$\Xi=\tr\qty(\exp{-\beta\sum\limits_{Nn}(E^{}_{Nn}-\mu)\hat{N}^{}_n})=\prod_n\q
 按照式(\ref{M0))*.,})的结论，我们给出系统的巨势
 \begin{equation}J=-T\ln{\Xi}=-T\sum_n\ln{\qty(1+\exp{-\beta(E^{}_n-\mu)})},\label{JJUADFH***}\end{equation}
 以及$T\beta=1$得到平均粒子数为
-$$\expval{N}=-\partial^{}_{\mu}J=-T\beta\sum_n\frac{\exp{-\dfrac{E^{}_n-\mu}{T}}}{1+\exp{-\dfrac{E^{}_n-\mu}{T}}}=\sum_n\frac{1}{1+\exp{\dfrac{E^{}_n-\mu}{T}}}=\sum_n\expval{N^{}_n},$$
+$$\expval{N}=-\partial^{}_{\mu}J=-T\beta\sum_n\frac{\exp(-\dfrac{E^{}_n-\mu}{T})}{1+\exp(-\dfrac{E^{}_n-\mu}{T})}=\sum_n\frac{1}{1+\exp(\dfrac{E^{}_n-\mu}{T})}=\sum_n\expval{N^{}_n},$$
 所以我们得到平均占有数分布为
-\begin{equation}\expval{N^{}_n}(T)=\qty(\exp{\dfrac{E^{}_n-\mu}{T}}+1)^{-1}.\end{equation}
+\begin{equation}\expval{N^{}_n}(T)=\qty[\exp(\dfrac{E^{}_n-\mu}{T})+1]^{-1}.\end{equation}
 这一分布称为\textbf{\textsl{Fermi-Dirac}分布 \textit{FD Distribution}}，对应的统计规律称为\textbf{\textsl{Fermi-Dirac}统计}。不难看到，当温度趋向绝对零度$T\to 0^+K$时，我们必然得到
-\begin{equation}\lim\limits_{T\to 0^+}\exp{\dfrac{E^{}_n-\mu}{T}}=\begin{cases}0,E^{}_n\leq\mu;&\\ \infty,E^{}_n\geq\mu\end{cases}\implies\lim\limits_{T\to 0^+}\expval{N^{}_n}(T)=\begin{cases}1,E^{}_n\leq\mu;&\\ 0,E^{}_n>\mu\end{cases}.\label{jielunoo--}\end{equation}
+\begin{equation}\lim\limits_{T\to 0^+}\exp{\dfrac{E^{}_n-\mu}{T}}=\begin{cases}0,E^{}_n\leq\mu;&\\ \infty,E^{}_n\geq\mu\end{cases}\implies\lim\limits_{T\to 0^+}\expval{N^{}_n}(T)=\begin{cases}1,E^{}_n\leq\mu;&\\ 0,E^{}_n>\mu.\end{cases}\label{jielunoo--}\end{equation}
 也就是说对于任意能级，平均占有数在$E^{}_n(T=0)=\mu(T=0)$时产生间断点，此时每一个能级都占满一个费米子。现在我们来计算$\mu(T=0)=const$，对于自由粒子能级给出$E^{}_n\propto k_n^2$，因此对于固定能量$\mu(T=0)$自然也对应了一个常波矢，我们记为
 \begin{equation}\mu(T=0)=E^{}_F\propto k_F^2,\end{equation}
 称为\textbf{\textsl{Fermi}能}。在波矢空间中，$k^{}_F=const$对应了一个球面，称为\textbf{\textsl{Fermi}面}，其中包含了系统内所有的费米子，并且球面内每一个态$k^{}_n$均占满了$g=2s+1$个费米子，也就是简并度，因而粒子数$N=V\expval{N^{}_F}$对应了
@@ -5563,7 +5563,7 @@ $$\int_0^{\Theta^{}_D/T}\ln\qty{1-e^{-z}}z^2\dd{z}=\frac{z^3}{3}\eval{\ln\qty{1-
 \begin{equation}E=F-T\partial^{}_TF=DE^{}_0+3DNTW^{}_3\qty(\frac{\Theta^{}_D}{T}).\end{equation}
 比热为
 \begin{equation}C=\partial^{}_TE=3DN\qty{W^{}_3\qty(\frac{\Theta^{}_D}{T})-\frac{\Theta^{}_D}{T}W'_3\qty(\frac{\Theta^{}_D}{T})}.\end{equation}
-这样的自由能形式称为\textbf{\textsl{Debye}内插公式}(1912)，可以验证其和前文中的极限结果是相匹配的，比如在低温下$T\ll\Theta^{}_D$，此时可以令积分上限为$\infty$，从而我们算得\textsl{Debye}函数为
+这样的自由能形式称为\textbf{\textsl{Debye}内插公式}(1912)，可以验证其和前文中的极限结果是相匹配的，比如在低温下$T\ll\Theta^{}_D$，此时可以令积分上限为$\infty$，我们算得\textsl{Debye}函数为
 $$W^{}_3(x)=\frac{3}{x^3}\bigintsss_0^{\infty}\frac{z^3}{e^z-1}\dd{z}=\frac{\pi^4}{5x^3},$$
 从而比热为
 \begin{equation}C=\frac{12DN\pi^4}{5}\qty(\frac{T}{\Theta^{}_D})^3\propto T^3.\end{equation}
@@ -10793,7 +10793,7 @@ $$\sum\limits_{s=-\infty}^\infty\frac{1}{s^2+a^2}=\frac{1}{2\pi}\sum\limits_{k=-
 $$\cosh(\beta x)=\frac{e^{\beta x}+e^{-\beta x}}{e^{\beta x}-e^{-\beta x}}=1+\frac{2e^{-\beta x}}{e^{\beta x}-e^{-\beta x}}=1+\frac{2}{e^{2\beta x}-1}=1+2\expval{n(2x)},$$
 其中$\expval{n(x)}$是\textsl{BE}分布。于是我们最终得到内传播子为
 \begin{equation}D^M_F(\tau,\tau)=\int\frac{1}{2\omega^{}_{\vb{k}}}\qty(1+2\expval{n\qty(\omega^{}_{\vb{k}})})\qty(\frac{\dd k}{2\pi})^3.\label{Zhengkongre1}\end{equation}
-这可以从式(\ref{sdgUCCV''ERY][][YUF})得到，读者可以自行计算。当然在时空$S^1_\tau\times\mathbb R^3$上，该体积分$\displaystyle\int D^M_F(\tau,\tau)\dd\tau\dd V$同样是发散的，所以需要使用重整化修正。\\
+这可以从式(\ref{sdgUCCV''ERY][][YUF})得到，读者可以自行计算。当然在时空$S^1_\tau\times\mathbb R^3$上，该体积分$\displaystyle\int D^M_F(\tau,\tau)\dd\tau\dd V$同样是发散的，所以需要使用重整化修正，请参考第\ref{807///*rt}节。\\
 \\
 对于第二项，我们算上\textsl{Matsubara}频率求和(\ref{sdgUCCV''ERY][][YUF})给出
 $$\begin{aligned}D^M_F(x,\tau)D^M_F(\tau,y)&=\bigintsss\frac{1}{4\omega^{}_{\vb{p}^{}_1}\omega^{}_{\vb{p}^{}_2}}\qty{\qty(1+\expval{n\qty(\omega^{}_{\vb{p}^{}_1})})e^{\omega^{}_{\vb{p}^{}_1}\qty(\tau^{}_x-\tau)}+\expval{n\qty(\omega^{}_{\vb{p}^{}_1})}e^{-\omega^{}_{\vb{p}^{}_1}\qty(\tau^{}_x-\tau)}}e^{i\vb{p}^{}_1\cdot\qty(\vb{x}-\vb{r})}\\&\qty{\qty(1+\expval{n\qty(\omega^{}_{\vb{p}^{}_2})})e^{\omega^{}_{\vb{p}^{}_2}\qty(\tau-\tau^{}_y)}+\expval{n\qty(\omega^{}_{\vb{p}^{}_2})}e^{-\omega^{}_{\vb{p}^{}_2}\qty(\tau-\tau^{}_y)}}e^{i\vb{p}^{}_2\cdot\qty(\vb{r}-\vb{y})}\qty(\frac{\dd p^{}_1}{2\pi})^3\qty(\frac{\dd p^{}_2}{2\pi})^3.\end{aligned}$$
@@ -10809,7 +10809,7 @@ $$D^M_F(x,y)=\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot,label=below:$x$](
 $$C^{M;(1)}_2(x,y)=\quad\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$z$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\quad+\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$,label=above:$(-\lambda)$](d){};\vertex[right=1cm of d,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--(d)--(b)};\end{feynman}}$$
 只不过需要注意，现在读图时$\ \tikz[baseline=-.7ex]{\begin{feynman}[inline=a.base]\vertex[dot](a){};\vertex[right=1cm of a,dot](b){};\diagram*{(a)--(b)};\end{feynman}}\ $应算上占有数修正，并且顶点对于参数$\tau$的积分限是$[0,\beta]$，其相互作用系数修正为$-\lambda$。对于动量\textsl{Feynman}规则也是一样的，为了方便表示这里取\textsl{Matsubara}频率求和的结果，这样在图上就用三维空间动量表示
 \begin{equation}\frac{1}{4\omega^{}_{\vb{p}}}\qty{\qty(1+\expval{n\qty(\omega^{}_{\vb{p}})})e^{\omega^{}_{\vb{p}}\qty(\tau^{}_x-\tau^{}_y)}+\expval{n\qty(\omega^{}_{\vb{p}})}e^{-\omega^{}_{\vb{p}}\qty(\tau^{}_x-\tau^{}_y)}}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:$x$](a){};\vertex[right=3cm of a,label=below:$y$](b){};\vertex[right=1.5cm of a,label=below:$\vb{p}$](c){};\diagram*{(a)--[charged scalar](b)};\end{feynman}}\end{equation}
-这是算上占有数补偿后的最简结果，图上最终只出现空间动量$\vb{p}$。对于顶点最终只出现混合乘积项，满足动量守恒，比如式的图为
+这是算上占有数补偿后的最简结果，图上最终只出现空间动量$\vb{p}$。对于顶点最终只出现混合乘积项，满足动量守恒，比如式(\ref{adWQBNVCGUG})的图为
 $$\frac{\exp(2\omega^{}_{\vb{p}}\beta)-1}{4\omega^3_{\vb{p}}}\qty(1+\expval{n\qty(\omega^{}_{\vb{p}})})\expval{n\qty(\omega^{}_{\vb{p}})}\sinh(\omega^{}_{\vb{p}}\qty(\tau^{}_x+\tau^{}_y))=\tikz[baseline=-.5px]{\pgfmathsetmacro{\d}{2}\begin{feynman}[inline=(a.base)]\vertex(a){};\vertex[right=\d cm of a,dot](b){};\vertex[right=\d cm of b](c){};\diagram*{(a)--[charged scalar,momentum={\(\vb{p}\)}](b)--[charged scalar,momentum={\(\vb{p}\)}](c)};\end{feynman}}$$
 总结一下，对于热场而言，读图的时候要切记占有数的补偿。更复杂一点的图形如式(\ref{FOJIO89uf})也是如此，还是应注意内传播子的动量不参与顶点的动量守恒过程，因为其自身动量守恒。其余的内容和零温场也是一致的，这里就不重复展开了。\\
 \\
@@ -11071,7 +11071,7 @@ $$\int\dv{f}{t}\dd\Gamma=\dv{t}\int f\dd\Gamma=\dv{t}\expval{n}=\int C(f)\dd\Gam
 基于此增益率和损失率就有了确定的比较对象，并且我们定义损失率是相对于碰撞前的系统，增益率是相对于碰撞后的系统，假设$w=const$我们得到
 $$w^{}_l=\frac{\text{单位时间内从}\mathscr S^{}_1\text{流出}\text{的总粒子数密度}}{\expval{n^{}_1}\expval{n^{}_2}},\quad w^{}_g=\frac{\text{单位时间内流入}\mathscr S^{}_1\text{的总粒子数密度}}{\expval{n'_1}\expval{n'_2}}.$$
 记增益的总粒子数密度为$\expval{n}^{}_g$，损失的总粒子数密度为$\expval{n}^{}_l$，注意$w$是关于相空间总体积定义的，根据上述定义得到
-$$\dv{n^{}_g}{t}=\int w^{}_g\qty(\Gamma'_1,\Gamma'_2;\Gamma^{}_1,\Gamma^{}_2)\expval{n'_1}\expval{n'_2}\dd\Gamma^{}_1\dd\Gamma^{}_2,\quad \dv{n^{}_g}{t}=\int w^{}_g\qty(\Gamma'_1,\Gamma'_2;\Gamma^{}_1,\Gamma^{}_2)\expval{n^{}_1}\expval{n^{}_2}\dd\Gamma'_1\dd\Gamma'_2.$$
+$$\dv{n^{}_g}{t}=\int w^{}_g\qty(\Gamma'_1,\Gamma'_2;\Gamma^{}_1,\Gamma^{}_2)\expval{n'_1}\expval{n'_2}\dd\Gamma^{}_1\dd\Gamma^{}_2,\quad \dv{n^{}_l}{t}=\int w^{}_g\qty(\Gamma'_1,\Gamma'_2;\Gamma^{}_1,\Gamma^{}_2)\expval{n^{}_1}\expval{n^{}_2}\dd\Gamma'_1\dd\Gamma'_2.$$
 但一般而言$w\neq const$，其和所有微态的分布相关，因此将$\expval{n^{}_i}$展开为$f^{}_i$的积分后，我们最终得到
 \begin{equation}\dv{n^{}_l}{t}=\int w^{}_lf^{}_1f^{}_2\dd\Gamma{}_1\dd\Gamma{}_2\dd\Gamma'_1\dd\Gamma'_2,\quad \dv{n^{}_g}{t}=\int w^{}_gf'_1f'_2\dd\Gamma{}_1\dd\Gamma{}_2\dd\Gamma'_1\dd\Gamma'_2.\end{equation}
 增益对粒子数变化$\Delta\expval{n}$的贡献为正，损失为负，因此系统$\mathscr S^{}_1$的动理方程写作
@@ -11508,15 +11508,50 @@ $$\mathfrak C^M(p)\propto\int_{\mathbb R}\dd x\frac{\mathfrak D^M_R(x)-\mathfrak
 $$\Im\mathfrak D^{}_R(x)=\frac{\text{sgn}\qty(p^0)}{\pi}\pv\int\frac{\Re\mathfrak D^{}_R(a)}{x^2-a}\dd a,\quad \Im\mathfrak D^{}_A(x)=-\frac{\text{sgn}\qty(p^0)}{\pi}\pv\int\frac{\Re\mathfrak D^{}_A(a)}{x^2-a}\dd a.$$
 虽然非平衡场和平衡场的解析延拓在形式上是一样的，但是由于非平衡场中，推迟和超前传播子的自能不同，所以它们的\textsl{KK}关系不能简单的用\textsl{KL}谱分布表示。但是\textsl{KL}谱分布是唯一确定的，因为大于和小于传播子可以按照零温场，通过插入完备态确定谱分布，最终的结果是
 \begin{equation}\mathfrak C^{>}(p)=\qty(1+\expval{n(p)})\rho(p),\quad \mathfrak C^{<}(p)=\expval{n(p)}\rho(p),\quad \expval{n(p)}=\frac{1}{\exp(\beta p)-1}.\end{equation}
-本质上就是式(\ref{Rw239==-[][})的实时形式，因此反推我们不难看到，\textsl{CTP}形式中谱分布的定义应该和式(\ref{87845*/5GG4})一致，写作
+本质上为式(\ref{Rw239==-[][})的实时形式，因此反推不难看到，\textsl{CTP}形式中谱分布的定义应该和式(\ref{87845*/5GG4})一致，相互作用场中写作
 \begin{equation}\rho(x)=\mathfrak D^{}_R(x)-\mathfrak D^{}_A(x).\end{equation}
 通过\textsl{Keyldsh}旋转，我们不难得到\textsl{Schwinger}传播子的谱表示$\mathfrak D^{}_R(p)=\qty(1+\expval{n(p)})\rho(p)$，读者可以自行计算。至此\textsl{Schwinger-Keyldsh}形式的传播子的解析性基本就建立完毕，需要说明的是虽然其和\textsl{Matsubara}形式共用一套解析延拓记号，但最终所呈现的物理性质是完全不同的，可以参附录\ref{haergong}的非平衡态理论。
-\subsubsection{热场的自能重整化}
+\subsubsection{热场的自能重整化}\label{807///*rt}
 \noindent 上面我们通过解析延拓，将零温场传播子的解析性拓展至有限温度场中。同时在第\ref{V34578//}节中我们看到，谱分布的一些细节可以通过自能的重整化来确定，因此这里我们来介绍热场的自能重整化。由于已经证明了平方相互作用只是质量的移动，下面还是以实标量场的四次相互作用理论$\Lambda^{}_{\text{int}}=\lambda\psi^4_{\text{bare}}$为例。\\
 \\
 从平衡热场出发，在第\ref{ty78/**/y99r}节中我们证明了在\textsl{BdD}定理下，其\textsl{Feynman}图理论和零温场是一致的，因此可以直接使用第\ref{V34578//}节中的图。比如自能的一级修正是一个蝌蚪图，以动量图从式(\ref{=-0767[[[][})得到
 \begin{equation}\Sigma^{(1)}_M=12\lambda\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,coordinate](a){};\vertex[right=1cm of a,dot,scale=.5,coordinate](c){};\vertex[right=1cm of c,dot,scale=.5,coordinate](b){};\vertex[above=1cm of c,coordinate](d){};\diagram*{(a)--(c)--[half left,momentum=\(p\),charged scalar](d)--[half left,charged scalar](c)--(b)};\end{feynman}})=12\lambda D^M_F(\tau,\tau).\end{equation}
-我们在第\ref{ty78/**/y99r}节中计算了其零质量的值，
+我们在第\ref{ty78/**/y99r}节中计算了单圈修正在零质量的值，结果表述为式(\ref{Zhengkongre1})，这里非零质量的色散律给出自能
+\begin{equation}\Sigma^{(1)}_M=12\lambda\int\frac{1}{2\omega^{}_{\vb{k}}}\qty(\frac{\dd k}{2\pi})^3+12\lambda\int\frac{1}{\omega^{}_{\vb{k}}}\expval{n\qty(\omega^{}_{\vb{k}})}\qty(\frac{\dd k}{2\pi})^3,\quad \omega^2_{\vb{k}}=\abs{\vb{k}}^2+m^2_0.\end{equation}
+我们来算第一项，带入$\omega^{}_{\vb{k}}$得到
+$$I^{}_1=\int\frac{1}{2\omega^{}_{\vb{k}}}\qty(\frac{\dd k}{2\pi})^3=\int_0^\infty\frac{4\pi}{4}\abs{\vb{k}}\qty(\abs{\vb{k}}^2+m^2_0)^{-1/2}\frac{\dd\abs{\vb{k}}^2}{(2\pi)^3}=\frac{1}{8\pi^2}\int_0^\infty\frac{\sqrt{l}\dd l}{\sqrt{l+m^2_0}}.$$
+在上限$l\to\infty$不难看到被积函数趋于$1$，因此积分发散，这和零温场是相同的。为此我们仍取紫外截断$\Lambda$，则正规化给出
+$$I^{}_1(\Lambda)=\frac{1}{8\pi^2}\int_0^{\Lambda^2}\dd l\sqrt{1-\frac{m^2_0}{l+m^2_0}}+\text{Convergence}.$$
+我们重点关注$l\to\infty$的部分，简单展开到一阶并积分，得到其截断正规化
+\begin{equation}I^{}_1(\Lambda)=\frac{1}{8\pi^2}\qty{\Lambda^2-\frac{m^2_0}{2}\ln(\frac{\Lambda^2}{m^2_0})}.\end{equation}
+可以看到，这一项和零温自能的蝌蚪图修正(\ref{Zfh66TG=-})在结构上是相同的，因此第一部分对应零温自能。根据\textsl{BdD}定理，第二部分就对应热涨落修正，我们带入\textsl{BE}分布具体写出这个积分
+$$I^{}_2(\beta)=\bigintsss\frac{\expval{n\qty(\omega^{}_{\vb{k}})}}{\omega^{}_{\vb{k}}}\qty(\frac{\dd k}{2\pi})^3=\frac{1}{2\pi^2}\bigintsss_0^\infty\frac{\abs{\vb{k}}^2}{\sqrt{\abs{\vb{k}}^2+m^2_0}}\qty{\exp(\beta\sqrt{\abs{\vb{k}}^2+m^2_0})-1}^{-1}\dd\abs{\vb{k}}.$$
+做换元$y=\beta\sqrt{\abs{\vb{k}}^2+m^2_0}>0$，简单计算后不难写出积分
+$$I^{}_2(\beta)=\frac{1}{2\pi^2\beta^2}\bigintsss_0^\infty\frac{\sqrt{y^2-\beta^2m^2_0}}{\exp(y)-1}\dd y<\infty,\quad \beta=\frac{1}{T}.$$
+这个积分的收敛性是显然的，可见热涨落自能的发散性主要由温度控制。比如考察高温情形$\beta\to0$，分母变为$\sqrt{y^2-\beta^2m^2_0}\approx y$，积分变为一阶\textsl{Debye}函数(\ref{leloh})，不妨计算一下
+\begin{equation}W^{}_1(x=1)=\int_0^\infty\frac{y\dd y}{\exp(y)-1}=\sum_{n=1}^\infty\int_0^\infty y\exp(-ny)\dd y=\Gamma(2)\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}.\end{equation}
+其中将分母写为等比数列$a^{}_n=\exp(-ny)$的极限和，这是容易证明的，当然注意比值$q\neq\exp(y)$否则部分和发散。于是热涨落自能积分在高温下为
+\begin{equation}I^{}_2(T\to\infty)=\frac{1}{2\pi^2\beta^2}W^{}_1(1)=\frac{T^2}{12}\to\infty.\end{equation}
+结果依旧是发散的，但这和紫外发散没有任何关联，完全是由场所处的热浴决定的，符合热涨落的性质。总结一下，我们写出高温蝌蚪图的自能修正
+\begin{equation}\Sigma^{(1)}_M=12\lambda\qty{I^{}_1(\Lambda)+I^{}_2(T\to\infty)}=\frac{3\lambda}{2\pi^2}\qty{\Lambda^2-\frac{m^2_0}{2}\ln(\frac{\Lambda^2}{m^2_0})}+\lambda T^2+\text{Convergence}.\end{equation}
+由于\textsl{Dyson}方程(\ref{FGDGOhuhu776})在结构上和零温场完全一致，因此质量的重整化依旧由自洽性方程(\ref{RT..'647})给出，当然此处应做替换$i\Sigma\to\Sigma^{}_M$，我们得到
+\begin{equation}\delta^{(1)}m^2=\Sigma^{(1)}_M=\delta^{(1)}m^2_{T=0}+\delta^{(1)}m^2_T=\frac{3\lambda}{2\pi^2}\qty{\Lambda^2-\frac{m^2_0}{2}\ln(\frac{\Lambda^2}{m^2_0})}+\lambda T^2.\end{equation}
+其中零温质量重整化和式(\ref{Zdhg123==--})是类似的，而热浴导致的重整化为$\delta^{(1)}m^2_T\propto T^2$。值得说明的是，这里我们依旧处于在热静系中，对于协变热浴的质量修正这里不展开，读者可以参考\cite{eC..25a}\S 1.8。\\
+\\
+由于$\Sigma^{(1)}_M$和动量无关，因此重整化常数$Z=1$，它的改变根据零温场的计算，依赖于二级日落图修正。在\textsl{Matsubara}求和下，动量\textsl{Feynman}规则要求顶点处三维动量守恒，此时式(\ref{123[OUHG]]})的另一种布局变为
+\begin{equation}\Sigma^{(2)}_M(\vb{p})\propto\scalebox{0.8}{\tikz[scale=0.2,baseline=-.5ex]{\begin{feynman}[inline=a.base,small]\vertex[coordinate](a){};\vertex[right=2cm of a,dot](c){};\vertex[right=3cm of c,dot](b){};\vertex[right=2cm of b,coordinate](d){};\diagram*{(a)--[charged scalar,momentum={\(\vb{p}\)}](c)--[charged scalar,momentum={\(\vb{p}-\vb{k}\)}](b)--[charged scalar,momentum={\(\vb{p}\)}](d),(c)--[charged scalar,half left,momentum={\(\vb{k}-\vb{k}^{}_1\)}](b),(c)--[charged scalar,half right,momentum={\(\vb{k}^{}_1\)}](b)};\end{feynman}}}.\end{equation}
+此规则的证明是显然的，因为三维相位$\exp(-i\vb{p}\cdot\vb{r})$和零温场一样。于是我们写出
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13162,10 +13197,10 @@ $$\begin{aligned}F=&\sqrt{\qty(p^a_1p^{}_{2a})^2-\qty(m^{}_1m^{}_2)^2}=\sqrt{\qt
 \\
 一个显然的出发点就是，通过无穷远处的占有数算符$\qty{\hat{a},\hat{a}^\dagger}$将非真空态变为真空态。为此我们不妨记入射粒子为$e$和$f$，出射粒子按顺序用$1\leq i\leq n$表示，则按定义(\ref{crea})和(\ref{anni})，我们得到始末态为
 $$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I}=B\hat{a}^\dagger_1\hat{a}^\dagger_2\cdots\hat{a}^\dagger_n\ket{\Omega}.$$
-其中$A$和$B$为归一化系数，由式(\ref{zhenbkong1})确定。根据式(\ref{Mjg;;L]3498})，两者的内积确定散射矩阵元，从而我们得到
-\begin{equation}\mathfrak S^{}_{fi}=\mel**{n^{}_I}{\hat{\mathfrak S}}{2^{}_I}=\frac{\displaystyle\mel**{0}{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}\hat{a}^\dagger_e\hat{a}^\dagger_f}{0}}{\displaystyle\mel**{0}{\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}}{0}}.\end{equation}
-这是精确的散射矩阵元，以相互作用绘景的\textsl{Dyson}级数表示的结果。为了计算这个量，我们需要将分母的占有数算符放入时序乘积中，以便用\textsl{Wick}定理打开。
-
+其中$A$和$B$为归一化系数，当然后续会自然约去。根据式(\ref{Mjg;;L]3498})，两者的内积确定散射矩阵元，将相互作用真空利用式(\ref{zhenbkong1})变为自由真空，我们得到
+\begin{equation}\mathfrak S^{}_{fi}=\mel**{n^{}_I}{\hat{\mathfrak S}}{2^{}_I}=AB\frac{\displaystyle\mel**{0}{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}\hat{a}^\dagger_e\hat{a}^\dagger_f}{0}}{\displaystyle\mel**{0}{\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}}{0}}.\end{equation}
+这是精确的散射矩阵元，以相互作用绘景的\textsl{Dyson}级数表示的结果。为了计算这个量，我们需要将分母的占有数算符变为场位形算符并放入时序乘积中，以便用\textsl{Wick}定理打开。注意到对于每个占有数算符，其时间均为无穷远，并且入射粒子肯定在出射粒子之后，因此自然的有
+$$\begin{aligned}&\mel**{0}{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}\hat{a}^\dagger_e\hat{a}^\dagger_f}{0}\\&=\mel**{0}{\mathbb T\qty{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)\hat{a}^\dagger_e\hat{a}^\dagger_f}}{0}.\end{aligned}$$
 
 
 
@@ -13189,7 +13224,10 @@ $$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I
 \clearpage
 
 \section{热平衡态的响应与耗散}\label{ha7524*g}
-
+\subsection{非相对论性热力学响应}
+\subsection{耗散的统计性质}
+\subsection{零温场的响应}
+\subsection{热场的响应与耗散}
 \clearpage
 
 \section{重整化和临界理论}\label{VYgx00..34}
@@ -13223,6 +13261,9 @@ $$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I
 
 \section{弯曲时空中的量子场}\label{V202020534}
 \subsection{引力波场的二次量子化}
+
+%%引力子所处的背景时空本身就应当看作一个热浴，那TFD的引入也是自然的，同时还能说明不同观者所看到的热浴不同，自然的接上Unruh效应。我们可以将整个时空背景本身视为一个“热浴”（thermal bath），而引力子（或其他场）是浸入其中的“探测器”或“子系统”。不同观者（惯性/加速）对这个“热浴”的温度感知不同。TFD正是描述这种“观者依赖热浴”的最优框架。
+
 \subsection{热场动力学引入}
 
 \subsection{Rindler时空与Unruh效应}
