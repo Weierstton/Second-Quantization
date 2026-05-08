@@ -210,6 +210,8 @@
 \contentsline {subsection}{\numberline {14.2}耗散的统计性质}{650}{subsection.14.2}%
 \contentsline {subsection}{\numberline {14.3}零温场的响应}{650}{subsection.14.3}%
 \contentsline {subsection}{\numberline {14.4}热场的响应与耗散}{650}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}线性响应下的输运系数}{650}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}临界点附近的响应发散}{650}{subsection.14.6}%
 \contentsline {section}{\numberline {15}重整化和临界理论}{651}{section.15}%
 \contentsline {subsection}{\numberline {15.1}Casimir效应和截断频率}{651}{subsection.15.1}%
 \contentsline {subsection}{\numberline {15.2}Ising模型和空间重整化}{651}{subsection.15.2}%
