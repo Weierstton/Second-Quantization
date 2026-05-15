@@ -916,7 +916,7 @@ $$\eta^{\mu\nu}\qty[\mathscr{L}^{}_{\bm{\xi}}(\bm{\psi})]^{}_{\mu\nu}=\tr[\maths
 \\
 我们当然可以将它推广至任意的张量上，只要将迹理解为缩并即可，但对于二阶张量而言，我们可以将此性质用于量子算符上。由定态\textsl{Schrödinger}方程我们知道，不含时的\textit{Hamiltonian}算符的迹为
 $$\tr(\hat{H})=\sum_n\mel**{n}{\hat{H}}{n}=\expval{\hat{H}}=\sum_nE^{}_n=E,$$
-其中$E$在二次量子化下是系统的总能量。无论是在能级态$\ket{n}$还是占有数态$\ket{N}$下，度规都是单位正交的，满足$\bm{\eta}$的形式，因此对于矩阵$\mel**{m}{\hat{H}}{n}$而言式(\ref{HFLL})的对易性适用。将二阶张量分量取为\textit{Hamiltonian}算符的单参矩阵元$\psi^{}_{\mu\nu}(\lambda)=\mel**{m}{\hat{H}^{}_{\lambda}}{n}$，我们就从式(\ref{HFLL})得到等式
+其中$E$在二次量子化下是系统的总能量。无论是在能级态$\ket{n}$还是占有数态$\ket{N}$下，度规都是单位正交的，满足$\bm{\eta}$的形式，因此对于矩阵$\mel**{m}{\hat{H}}{n}$而言式(\ref{HFLL})的对易性适用。将二阶张量分量取为\textit{Hamiltonian}算符的单参矩阵元$\psi^{}_{mn}(\lambda)=\mel**{m(\lambda)}{\hat{H}^{}_{\lambda}}{n(\lambda)}$，我们就从式(\ref{HFLL})得到等式
 \begin{equation}\pdv{E^{}_{\lambda}}{\lambda}=\expval{\pdv{\hat{H}^{}_{\lambda}}{\lambda}}\Longleftrightarrow\pdv{\tr(\hat{H}^{}_{\lambda})}{\lambda}=\tr(\pdv{\hat{H}^{}_{\lambda}}{\lambda}).\label{HFTTTT}\end{equation}
 该等式称为\textbf{\textsl{Hellmann-Feynman}定理}(\textsl{Hans Hellmann},1937,\ \textsl{Richard Feynman},1939)，是量子力学的核心等式之一，它指出如果\emph{封闭系统}的\textit{Hamiltonian}算符$\hat{H}$和某个参量$\lambda$有关，并且这种关联性在同一组基下，通过定态\textsl{Schrödinger}方程过继到能量$E$上，则算符$\hat{H}$对此参数偏导的期望等于能量对该参数的偏导。我们后续会经常看到这一定理，其和二次量子化有很深刻的关联。顺便一提，该定理的含时版本为
 \begin{equation}\expval{\pdv{\hat{H}}{\lambda}}(t)=i\hbar\pdv{t}\braket{N^{}_{\lambda}(t)}{\pdv{N^{}_{\lambda}(t)}{\lambda}},\end{equation}
@@ -3413,7 +3413,7 @@ $$\qty(\hat{C}\hat{P}\hat{T})\bm{\psi}(\vb{r},t)=e^{i(\phi+\theta)}\pmqty{\vb{I}
 我们得到其在\textsl{PT}联合反演下给出
 $$\qty(\hat{T}\hat{P})\bm{\rho}^{}_{p\bar{p}}=\pmqty{0&\pm\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{\vb{p}}\\ \pm\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{-\vb{p}}&0},$$
 其中反粒子的极化可以直接改变动量符号得到，或者用电荷反演计算，这里我们就不展开细节了。我们看到在这种情况下，系统的极化张量\emph{形式上的行列式}的变化为
-\begin{equation}\qty(\hat{T}\hat{P})\abs{\bm{\rho}^{}_{p\bar{p}}}=\qty(\hat{T}\hat{P})\qty(\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{\vb{p}}\cdot\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{-\vb{p}})=-\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{\vb{p}}\cdot\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{-\vb{p}},\end{equation}
+\begin{equation}\qty(\hat{T}\hat{P})\abs{\bm{\rho}^{}_{p\bar{p}}}=\qty(\hat{T}\hat{P})\qty(\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{\vb{p}}\cdot\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{-\vb{p}})=-\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{\vb{p}}\cdot\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{-\vb{p}},\label{IHUBF88}\end{equation}
 也就是说两个三维旋量在极化变号时乘积也变号。当然这里我们也可以检查其他两个联合反演，比如\textsl{CP}我们得到
 $$\qty(\hat{C}\hat{P})\bm{\rho}^{}_{p\bar{p}}=-i\pmqty{-\sigma^{}_2&0\\0&\sigma^{}_2}\pmqty{\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{\vb{p}}&0\\0&\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{-\vb{p}}}=\pmqty{\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{\vb{p}}&0\\0&-\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{-\vb{p}}},$$
 我们同样得到
@@ -3424,7 +3424,7 @@ $$\qty(\hat{C}\hat{P})\abs{\bm{\rho}^{}_{p\bar{p}}}=-\bm{\Theta}^{\qty(\mp\frac{
 $$\qty(\hat{C}\hat{P})\bm{\rho}^{}_{p\bar{p}}=\gamma^2\gamma^0\bm{\rho}^{}_{p\bar{p}}=-i\pmqty{\bm{\Theta}^{\qty(\mp\frac{1}{2})}_{\vb{p}}&0\\0&\bm{\Theta}^{\qty(\pm\frac{1}{2})}_{-\vb{p}}},$$
 系数乘积$(-i)^2=-1$仍然给出式(\ref{UUIB77})。于是我们看到这两个三维旋量在极化变号时乘积也变号是不随系数的选择而变的，这是一个公理性的结论。事实上可以进一步证明，只要使得条件$e^{i(\phi+\theta)}=\pm1$成立的任意系数$e^{i\phi},e^{i\theta}$，对于任意两个联合反演均有这个结论，所以在某种程度上系数$e^{i\phi},e^{i\theta}$的选择可以看作费米子系统或者\textsl{Dirac}场的一种规范。\\
 \\
-现在我们来讨论该规范的后果和可能的来源。我们知道\textsl{PT}联合反演保持粒子运动方向和初态相同，只交换了位置，因此这里可以认为它等价于一个三维静态宇称$\hat{P}_{\mathbb R^3}$。在此基础上，我们再观察式(\ref{UUIB77})的变化，这里省略极化
+现在我们来讨论该规范的后果和可能的来源。我们知道\textsl{PT}联合反演保持粒子运动方向和初态相同，只交换了位置，因此这里可以认为它等价于一个三维静态宇称$\hat{P}_{\mathbb R^3}$。在此基础上，我们再观察式(\ref{IHUBF88})的变化，这里省略极化
 $$\qty(\hat{T}\hat{P})\qty(\bm{\Theta}^{}_{\vb{p}}\cdot\bm{\Theta}^{}_{-\vb{p}})\approx\hat{P}^{}_{\mathbb R^3}\qty(\bm{\Theta}_{\vb{p}}\cdot\bm{\Theta}^{}_{-\vb{p}})=-\bm{\Theta}^{}_{\vb{p}}\cdot\bm{\Theta}^{}_{-\vb{p}},$$
 不难看到在三维宇称下，量$f=\bm{\Theta}^{}_{\vb{p}}\cdot\bm{\Theta}^{}_{-\vb{p}}$给出$\hat{P}^{}_{\mathbb R^3}f=-f$，是一个十分明显的奇宇称。但是由于规范的原因，此奇宇称和系统环境无关，只是构成系统的粒子和反粒子自身的性质。如果我们按照式(\ref{L3JKNNMH})计算一般情况，并类似第\ref{VVNnvcgoP}节中的各极化旋量定义系统$\mathscr S^{}_{p\bar{p}}$整体的极化张量为
 $$\bm{\rho}^{}_{p\bar{p}}=\vb{u}^{}_{\vb{p}}\vb{u}^{\dagger}_{-\vb{p}},$$
@@ -3436,7 +3436,7 @@ $$\qty(\hat{T}\hat{P})\qty(\bm{\Theta}^{\dagger}_{\vb{p}}\bm{\Theta}_{-\vb{p}})\
 \\
 我们在玻色子系统中看到，三维$2s$偶秩旋量$\psi$有两个来源，$s=s^{}_{max}$的三维偶宇称对称旋量$\bm{\chi}(2s)$，和$s=s^{}_{max}-1$的奇内禀宇称反对称旋量$\bm{\chi}(n,1)$，它们扩充到对应的四维不可约张量时仍保持其宇称。\\
 \\
-而在四维旋量中，宇称的扩充不变性就体现为和对应的三维奇秩旋量宇称一致，但由于奇秩旋量无不可约张量对应所以当时我们没有分析。这里我们看到\textsl{Dirac}场的宇称规范性给出奇秩旋量的宇称，但是由于$\hat{P}^{}_{\mathbb R^3}$只改变了粒子—反粒子位置，因此该宇称就是粒子的内禀宇称。于是式(\ref{HGYVY33})就可以解释为(\textsl{\rusa{В.Б.Берестецкий}}，1948)：
+而在四维旋量中，宇称的扩充不变性就体现为和对应的三维奇秩旋量宇称一致，但由于奇秩旋量无不可约张量对应，所以前文中没有分析这一点。这里我们看到\textsl{Dirac}场的宇称规范性给出奇秩旋量的宇称，但是由于$\hat{P}^{}_{\mathbb R^3}$只改变了粒子—反粒子位置，因此该宇称就是粒子的内禀宇称。于是式(\ref{HGYVY33})就可以解释为(\textsl{\rusa{В.Б.Берестецкий}}，1948)：
 \begin{center}\emph{\textsl{Dirac}场的宇称规范性给出自旋$s=\dfrac{1}{2}$的粒子和反粒子的内禀宇称相反。}\end{center}	
 特别指出，这个结论和粒子质量是否为零无关，也就是说中微子一样遵守该结论。这就是该规范的后果，其来源也就十分明显了：由于粒子的内禀宇称，导致四维旋量在宇称下的表现为
 $$\hat{P}^2\bm{\chi}=\pm\bm{\chi}\implies P^2=\pm1\implies P=\pm1 \text{或者} \pm i.\quad (\textsl{Giulio Racah}\text{，}1937)$$
@@ -3557,7 +3557,7 @@ $$\qty{\bm{\chi }^{\alpha\dt{\beta}\gamma\dt{\delta}},\quad \bm{\xi}^{}_{\alpha\
 \\
 其次我们来快速的讲一下弱引力波理论，具体细节请参考第\ref{Phytvj))**}节。不考虑宇宙学常数$\Lambda=0$，在广义相对论下我们给出\textbf{\textsl{Einstein}引力场方程}
 \begin{equation}G^{}_{\mu\nu}=R^{}_{\mu\nu}-\dfrac{1}{2}Rg^{}_{\mu\nu}=8\pi G T^{}_{\mu\nu},\end{equation}
-其中$g^{}_{\mu\nu}$是\textbf{度规张量}，$G^{}_{\mu\nu}$是\textbf{\textsl{Einstein}张量}，$R^{}_{\mu\nu}$是\textbf{\textsl{Ricci}曲率张量}，$R=R^{}_{\mu\nu}g^{\mu\nu}$是\textbf{曲率标量}，$T^{}_{\mu\nu}$是\textbf{\textsl{Hilbert}能动密度张量}，按第\ref{8y8hsf}节应该记为$T^H_{\mu\nu}$，这里无所谓，$G$是\textbf{万有引力常数}，来自牛顿万有引力公式
+其中$g^{}_{\mu\nu}$是引力场的\textbf{度规张量}，$G^{}_{\mu\nu}$是\textbf{\textsl{Einstein}张量}，$R^{}_{\mu\nu}$是\textbf{\textsl{Ricci}曲率张量}，$R=R^{}_{\mu\nu}g^{\mu\nu}$是\textbf{曲率标量}，$T^{}_{\mu\nu}$是\textbf{\textsl{Hilbert}能动密度张量}，按第\ref{8y8hsf}节应该记为$T^H_{\mu\nu}$，$G$是\textbf{万有引力常数}，来自万有引力公式
 $$\vb{F}=\dfrac{-GMm}{r^3}\vb{r}.$$
 考虑远场近似，取度规的局部扰动$h^{}_{\mu\nu}$为
 \begin{equation}g^{}_{\mu\nu}=\eta^{}_{\mu\nu}+h^{}_{\mu\nu},\quad h^{}_{\mu\nu}\sim o(r^{-2}),\label{087(D)(P)}\end{equation}
@@ -7564,7 +7564,7 @@ $$\begin{aligned}C(1,2)C(3,4)+C(1,4)C(2,3)+C(1,3)C(2,4)=\wick[offset=1.3em]{\c1{
 或者取等价表达式
 $$\qty(\wick[offset=1.3em]{\c{\hat{\psi}}^{}_1\c{\hat{\psi}}^{}_4})\mathcal N\qty{\hat{\psi}^{}_2\hat{\psi}^{}_3}=\mathcal N\qty{\wick[offset=1.3em]{\c{\hat{\psi}}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\c{\hat{\psi}}^{}_4}},\quad\cdots,$$
 我们得到类似式(\ref{wivk2W})的结果
-\begin{equation}\begin{aligned}\mathbb T\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4}=\mathcal N\Biggl\{&\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4+\wick[offset=1.3em]{\c{\hat{\psi}}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\c{\hat{\psi}}^{}_4}+\wick[offset=1.3em]{\c{\hat{\psi}}^{}_1\hat{\psi}^{}_2\c{\hat{\psi}}^{}_3\hat{\psi}^{}_4}+\wick[offset=1.3em]{\hat{\psi}^{}_1\c{\hat{\psi}}^{}_2\hat{\psi}^{}_3\c{\hat{\psi}}^{}_4}\\&+\wick[offset=1.3em]{\hat{\psi}^{}_1\c{\hat{\psi}}^{}_2\c{\hat{\psi}}^{}_3\hat{\psi}^{}_4}+\wick[offset=1.3em]{\c1{\hat{\psi}}^{}_1\c1{\hat{\psi}}^{}_2\c2{\hat{\psi}}^{}_3\c2{\hat{\psi}}^{}_4}+\wick[offset=1.3em]{\c2{\hat{\psi}}^{}_1\c1{\hat{\psi}}^{}_2\c1{\hat{\psi}}^{}_3\c2{\hat{\psi}}^{}_4}+\wick[offset=1.3em]{\c1{\hat{\psi}}^{}_1\c2{\hat{\psi}}^{}_2\c1{\hat{\psi}}^{}_3\c2{\hat{\psi}}^{}_4}\Biggr\}.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\mathbb T\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4}=\mathcal N&\left\{\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\hat{\psi}^{}_4+\wick[offset=1.3em]{\c{\hat{\psi}}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3\c{\hat{\psi}}^{}_4}+\wick[offset=1.3em]{\c{\hat{\psi}}^{}_1\hat{\psi}^{}_2\c{\hat{\psi}}^{}_3\hat{\psi}^{}_4}+\wick[offset=1.3em]{\hat{\psi}^{}_1\c{\hat{\psi}}^{}_2\hat{\psi}^{}_3\c{\hat{\psi}}^{}_4}\right.\\&\left.\quad+\wick[offset=1.3em]{\hat{\psi}^{}_1\c{\hat{\psi}}^{}_2\c{\hat{\psi}}^{}_3\hat{\psi}^{}_4}+\wick[offset=1.3em]{\c1{\hat{\psi}}^{}_1\c1{\hat{\psi}}^{}_2\c2{\hat{\psi}}^{}_3\c2{\hat{\psi}}^{}_4}+\wick[offset=1.3em]{\c2{\hat{\psi}}^{}_1\c1{\hat{\psi}}^{}_2\c1{\hat{\psi}}^{}_3\c2{\hat{\psi}}^{}_4}+\wick[offset=1.3em]{\c1{\hat{\psi}}^{}_1\c2{\hat{\psi}}^{}_2\c1{\hat{\psi}}^{}_3\c2{\hat{\psi}}^{}_4}\right\}.\end{aligned}\end{equation}
 可见最终的结果，是由所有可能的缩并之和的正规序给出，其中只缩并一对的在真空态下也消失。推广至任意偶数个位形算符，我们得到
 \begin{equation}\mathbb T\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\cdots}=\mathcal N\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\cdots+\text{所有可能的缩并}}.\end{equation}
 当然在所有的缩并中，和真空态的内积下只有完全缩并项不为零，其余的都因为和正规序的乘积而消失。这个等式就是\textsl{Wick}定理，关于其证明这里就略过了，最终多点关联函数为
@@ -7999,7 +7999,7 @@ $$\square^{}_aD^{}_F=\mel**{0}{\mathbb T\qty{\square^{}_a\hat{\psi}(a)\hat{\psi}
 此处的均值我们依旧取周期边界(\ref{xunxujia})，关于变分的具体几何表述请参考第\ref{jingdian}节，这里不再重复。注意由于变分是线性定义的，因此泛函积分不变$\delta\mathscr D\psi=0$，类似在\textsl{Lorentz}流形上体元的变分
 $$\delta\dd\Omega=\delta\qty(\sqrt{-(-1=g)}\dd t\dd V)=\dd t\dd V=\dd\Omega.$$
 具体打开变分，考虑到位形的变分和泛函积分无关可以提出，我们得到
-$$\begin{aligned}0&=\bigintsss \Bigl\{i\delta S(\psi)\psi(a)+\delta\psi(a)\Bigr\}\exp{iS\qty(\psi)}\mathscr D\psi\\&=\bigintsss\qty{i\int\delta^{}_\psi\Lambda(\psi)\delta\psi(x)\dd\Omega^{}_x\psi(a)+\int\delta\psi(x)\delta^4(x-a)\dd\Omega^{}_x}\exp{iS\qty(\psi)}\mathscr D\psi\\&=\bigintsss\dd\Omega^{}_x\delta\psi(x)\qty(\int\Bigl\{i\delta^{}_{\psi}\Lambda[\psi(x)]\psi(a)+\delta^4(x-a)\Bigr\}\exp{iS\qty(\psi)}\mathscr D\psi).\end{aligned}$$
+$$\begin{aligned}0&=\bigintsss \qty{i\delta S(\psi)\psi(a)+\delta\psi(a)}\exp{iS\qty(\psi)}\mathscr D\psi\\&=\bigintsss\qty{i\int\delta^{}_\psi\Lambda(\psi)\delta\psi(x)\dd\Omega^{}_x\psi(a)+\int\delta\psi(x)\delta^4(x-a)\dd\Omega^{}_x}\exp{iS\qty(\psi)}\mathscr D\psi\\&=\bigintsss\dd\Omega^{}_x\delta\psi(x)\qty(\int\qty{i\delta^{}_{\psi}\Lambda[\psi(x)]\psi(a)+\delta^4(x-a)}\exp{iS\qty(\psi)}\mathscr D\psi).\end{aligned}$$
 上式要求对任意$\delta\psi(x)$成立，因此由变分第一定理我们得到
 \begin{equation}\int\Big\{\delta^{}_{\psi}\Lambda[\psi(x)]\psi(a)-i\delta^4(x-a)\Big\}\exp{iS\qty(\psi)}\mathscr D\psi=0.\label{chushisdd}\end{equation}
 其中$\delta^{}_{\psi}\Lambda$就是场的\textsl{EL}导数，只不过这里其不为零。不妨以实\textsl{KG}场为例，我们写出真中性粒子的\textsl{EL}导数
@@ -8121,7 +8121,7 @@ $$D^{\mu^{}_1\mu^{}_2\ldots\mu^{}_{2n}}\qty(x^{}_1,x^{}_2,\ldots,x^{}_{2n})=\exp
 其满足\textsl{Wick}定理，这一点可以直接计算证明，也可以从\textsl{Proca}场和\textsl{KG}场之间的关联得到。\\
 \\
 现在我们来计算此张量，不妨和\textsl{KG}场一样从头开始，在自然单位制下直接打开
-$$\begin{aligned}C^{\mu\nu}(a,b)=&\expval{\hat{A}^\mu(a)\hat{A}^\nu(b)}\theta\qty(a^0-b^0)+\expval{\hat{A}^\nu(b)\hat{A}^\mu(a)}\theta\qty(b^0-a^0)\\=&\sum\limits_{\vb{k}\alpha}\dfrac{2\pi}{\omega^{}_{\vb{k}}}\Bigg\{\theta\qty(a^0-b^0)\qty(\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}e^{\mu}_{\vb{k}(\alpha)}e^{*\nu}_{\vb{k}(\alpha)}e^{-ik(a-b)}+\expval{\hat{c}^{\dagger}_{\vb{k}\alpha}\hat{c}^{}_{\vb{k}\alpha}}e^{*\mu}_{\vb{k}(\alpha)}e^{\nu}_{\vb{k}(\alpha)}e^{ik(a-b)})\\&\qquad\qquad+\theta\qty(b^0-a^0)\qty(\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}e^{\nu}_{\vb{k}(\alpha)}e^{*\mu}_{\vb{k}(\alpha)}e^{-ik(a-b)}+\expval{\hat{c}^{\dagger}_{\vb{k}\alpha}\hat{c}^{}_{\vb{k}\alpha}}e^{*\nu}_{\vb{k}(\alpha)}e^{\mu}_{\vb{k}(\alpha)}e^{ik(a-b)})\Bigg\}\\=&\sum\limits_{\vb{k}\alpha}\dfrac{2\pi}{\omega^{}_{\vb{k}}}\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}e^{\mu}_{\vb{k}(\alpha)}e^{*\nu}_{\vb{k}(\alpha)}\qty{e^{-ik(a-b)}\theta\qty(a^0-b^0)+e^{ik(b-a)}\theta\qty(b^0-a^0)}.\end{aligned}$$
+$$\begin{aligned}C^{\mu\nu}(a,b)=&\expval{\hat{A}^\mu(a)\hat{A}^\nu(b)}\theta\qty(a^0-b^0)+\expval{\hat{A}^\nu(b)\hat{A}^\mu(a)}\theta\qty(b^0-a^0)\\=&\sum\limits_{\vb{k}\alpha}\dfrac{2\pi}{\omega^{}_{\vb{k}}}\left\{\theta\qty(a^0-b^0)\qty(\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}e^{\mu}_{\vb{k}(\alpha)}e^{*\nu}_{\vb{k}(\alpha)}e^{-ik(a-b)}+\expval{\hat{c}^{\dagger}_{\vb{k}\alpha}\hat{c}^{}_{\vb{k}\alpha}}e^{*\mu}_{\vb{k}(\alpha)}e^{\nu}_{\vb{k}(\alpha)}e^{ik(a-b)})\right.\\&\left.\qquad\qquad+\theta\qty(b^0-a^0)\qty(\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}e^{\nu}_{\vb{k}(\alpha)}e^{*\mu}_{\vb{k}(\alpha)}e^{-ik(a-b)}+\expval{\hat{c}^{\dagger}_{\vb{k}\alpha}\hat{c}^{}_{\vb{k}\alpha}}e^{*\nu}_{\vb{k}(\alpha)}e^{\mu}_{\vb{k}(\alpha)}e^{ik(a-b)})\right\}\\=&\sum\limits_{\vb{k}\alpha}\dfrac{2\pi}{\omega^{}_{\vb{k}}}\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}e^{\mu}_{\vb{k}(\alpha)}e^{*\nu}_{\vb{k}(\alpha)}\qty{e^{-ik(a-b)}\theta\qty(a^0-b^0)+e^{ik(b-a)}\theta\qty(b^0-a^0)}.\end{aligned}$$
 其中第二步用了\textsl{Parseval}性质，第三步是因为$\hat{c}^{\dagger}_{\vb{k}\alpha}\hat{c}^{}_{\vb{k}\alpha}=\mathcal N\qty{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}$所以对基态$\ket{0}$的均值为零。根据玻色对易性容易得到$\expval{\hat{c}^{}_{\vb{k}\alpha}\hat{c}^{\dagger}_{\vb{k}\alpha}}=1$，并且式中极化矢量的乘积根据式(\ref{7y7})，对极化$\alpha$求和后就是动量表象下的\emph{自然光偏振张量}
 $$\sum_\alpha^{1,2}e^{\mu}_{\vb{k}(\alpha)}e^{*\nu}_{\vb{k}(\alpha)}=\rho^{(n)\mu\nu}_{\vb{k}},$$
 注意这是针对自然光的，也就是说\emph{自由光子场中的光子必然是非极化的}，这符合一般的逻辑。在自然单位制下$\omega^{}_{\vb{k}}=E^{}_{\vb{k}}$，因此我们得到积分形式
@@ -8504,7 +8504,7 @@ $$\expval{\mathcal N\qty{\hat{\psi}^M_1\hat{\psi}^M_2}}=\sum_s\bigintsss\frac{\e
 则根据式(\ref{a/-gfHEDCFeg})，我们得到$\mathbb T^M$和正规序的关系
 \begin{equation}\expval{\mathbb T^M\qty{\hat{\psi}^M_1\hat{\psi}^M_2}}=\expval{\mathcal N\qty{\hat{\psi}^M_1\hat{\psi}^M_2}}+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}\Longleftrightarrow\mathbb T^M\qty{\hat{\psi}^M_1\hat{\psi}^M_2}=\mathcal N\qty{\hat{\psi}^M_1\hat{\psi}^M_2+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}}.\end{equation}
 其中最后一步考虑了数值不受正规序影响的事实，可见在此算符缩并定义下，热场的两点\textsl{Wick}定理和零温场的结论(\ref{wivkW})一样。推广这个式子至四点函数，对于实标量场我们得到
-$$\begin{aligned}\mathbb T^M\qty{\hat{\psi}^M_1\hat{\psi}^M_2\hat{\psi}^M_3\hat{\psi}^M_4}=&\mathcal N\Biggl\{\hat{\psi}^M_1\hat{\psi}^M_2\hat{\psi}^M_3\hat{\psi}^M_4+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}\hat{\psi}^M_3\hat{\psi}^M_4+\hat{\psi}^M_1\hat{\psi}^M_2\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_3^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}\\&\qquad+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_1\hat{\psi}^M_2\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\hat{\psi}^M_4}+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_1\hat{\psi}^M_2\hat{\psi}^M_3\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}\\&\qquad+\wick[offset=1.3em]{\c1{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_2\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}+\wick[offset=1.3em]{\c1{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_2\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}+\wick[offset=1.6em]{\c2{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_2\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}\Biggr\},\end{aligned}$$
+$$\begin{aligned}\mathbb T^M\qty{\hat{\psi}^M_1\hat{\psi}^M_2\hat{\psi}^M_3\hat{\psi}^M_4}=&\mathcal N\left\{\hat{\psi}^M_1\hat{\psi}^M_2\hat{\psi}^M_3\hat{\psi}^M_4+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_2}\hat{\psi}^M_3\hat{\psi}^M_4+\hat{\psi}^M_1\hat{\psi}^M_2\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}_3^M\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}\right.\\&\left.\qquad+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_1\hat{\psi}^M_2\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\hat{\psi}^M_4}+\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_1\hat{\psi}^M_2\hat{\psi}^M_3\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}\right.\\&\left.\qquad+\wick[offset=1.3em]{\c1{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_2\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}+\wick[offset=1.3em]{\c1{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_2\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}+\wick[offset=1.6em]{\c2{\hat{\psi}}\vphantom{\hat{\psi}}_1^M\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_2\c1{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\c2{\hat{\psi}}\vphantom{\hat{\psi}}^M_4}\right\},\end{aligned}$$
 其中单对缩并的均值给出
 $$\expval{\mathcal N\qty{\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_1\hat{\psi}^M_2\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_3\hat{\psi}^M_4}}}=\expval{\mathcal N\qty{\hat{\psi}^M_2\hat{\psi}^M_4}}\wick[offset=1.3em]{\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_1\c{\hat{\psi}}\vphantom{\hat{\psi}}^M_3}\neq0.$$
 这就意味着在零温正规序下，零温\textsl{Wick}定理(\ref{jERE--aoTIna})不适用于热场，因为在单对缩并后正规序的均值不为零。这是可以预见的，因为我们之前也参考了零温场的传播子，最后得到热浴涨落$\expval{n}D^M_F\qty(\zeta^{}_s,\vb{p})$。一般我们称这些均值项为\textbf{热涨落修正}，因而有限温场的\textsl{Wick}定理写为
@@ -8544,15 +8544,15 @@ $$D^M_F\qty(0,\vb{r})=T\sum_s\int\frac{\exp(i\vb{p}\cdot\vb{r})}{-(2\pi sT)^2-\v
 是否成立。将分母中的求和因子$s$单独提出
 $$D^M_F\qty(\zeta^{}_s,\vb{p})=\frac{T}{-(2\pi sT)^2-\vb{p}^2+i0}=-T\frac{(2\pi T)^{-2}}{s^2+\qty(\vb{p}/2\pi T)^2},$$
 这里涉及$\sum\limits_s\dfrac{1}{s^2+a^2}$，为此我们引入\textbf{\textsl{Poisson}求和公式}，写作
-\begin{equation}\sum_{s=-\infty}^\infty f(s)=\sum_{u=-\infty}^\infty\int_{\mathbb R}f(x)\exp(2\pi iux)\dd x,\quad s,u\in\mathbb Z.\end{equation}
+\begin{equation}\sum_{s=-\infty}^\infty f(s)=\sum_{u=-\infty}^\infty\int_{\mathbb R}f(x)\exp(2\pi iux)\dd x,\quad s,u\in\mathbb Z.\label{gOA..*OAG}\end{equation}
 这个公式就不证明了，可以通过\textsl{Fourier}级数得到，于是这里的积分以留数为
 \begin{equation}\int_{\mathbb R}\frac{\exp(2\pi iux)}{x^2+a^2}\dd x=2\pi i\Res[\frac{\exp(2\pi iux)}{z^2+a^2},\pm ia]=\frac{\pi\exp(-2\pi a\abs{u})}{a}.\end{equation}
 其中$\abs{u}$的出现和\textsl{Jordan}引理有关，涉及到极点做出的平面，具体可以参考第\ref{Dee))//}节，这里不做过多说明。进一步对$u$求和，我们得到双曲余切
 $$\sum_{s=-\infty}^\infty\frac{1}{s^2+a^2}=\sum_{u=-\infty}^\infty\frac{\pi\exp(2\pi\abs{u})}{2ia}=\frac{\pi}{a}\qty(1+\frac{2\exp(-2\pi a)}{1-\exp(-2\pi a)})=\frac{\pi}{a}\coth(a\pi).$$
 带入$a=\abs{\vb{p}}/2\pi T$以及零质量色散定律$\omega^{}_{\vb{p}}=\abs{\vb{p}}$，我们得到内传播子为
-\begin{equation}D^M_F(\tau,\tau)=T\sum_s\bigintsss\frac{(2\pi T)^{-2}}{s^2+\qty(\omega^{}_{\vb{p}}/2\pi T)^2}\qty(\frac{\dd k}{2\pi})^3=\bigintsss\frac{1}{2\omega^{}_{\vb{p}}}\coth(\frac{\beta\omega^{}_{\vb{p}}}{2})\qty(\frac{\dd k}{2\pi})^3.\end{equation}
+\begin{equation}D^M_F(\tau,\tau)=T\sum_s\bigintsss\frac{(2\pi T)^{-2}}{s^2+\qty(\omega^{}_{\vb{p}}/2\pi T)^2}\qty(\frac{\dd k}{2\pi})^3=\bigintsss\frac{1}{2\omega^{}_{\vb{p}}}\coth(\frac{\beta\omega^{}_{\vb{p}}}{2})\qty(\frac{\dd k}{2\pi})^3.\label{K*f++h//}\end{equation}
 具体写出双曲余切
-$$\cosh(\beta x)=\frac{e^{\beta x}+e^{-\beta x}}{e^{\beta x}-e^{-\beta x}}=1+\frac{2e^{-\beta x}}{e^{\beta x}-e^{-\beta x}}=1+\frac{2}{e^{2\beta x}-1}=1+2\expval{n(2x)},$$
+\begin{equation}\cosh(\beta x)=\frac{e^{\beta x}+e^{-\beta x}}{e^{\beta x}-e^{-\beta x}}=1+\frac{2e^{-\beta x}}{e^{\beta x}-e^{-\beta x}}=1+\frac{2}{e^{2\beta x}-1}=1+2\expval{n(2x)},\label{WodiYF6653}\end{equation}
 其中$\expval{n(x)}$是\textsl{BE}分布。于是我们最终得到传播子为
 \begin{equation}D^M_F(\tau,\tau)=\int\frac{1}{2\omega^{}_{\vb{p}}}\qty(1+2\expval{n\qty(\omega^{}_{\vb{p}})})\qty(\frac{\dd k}{2\pi})^3.\label{Zhengkongre1}\end{equation}
 可见这是符合式(\ref{sdgUCCV''ERY][][YUF})在$\tau=0$时的结论的，因此\textsl{BdD}定理是正确的，并且不难看到若确实系数$T$则无法得到正确结果。这个直接对温度传播子的离散频率表象，取\textsl{Fourier}级数的方法，称为\textbf{\textsl{Matsubara}频率求和}。并且我们看到，热涨落修正是自然出现的，所以\emph{在理论推导时，只需要使用\textsl{BdD}定理参照零温形式即可，涨落会自动体现}。\\
@@ -8649,16 +8649,16 @@ $$-\beta H^{}_0=-iH^{}_0(-i\beta)=-iH^{}_0(t^{}_i-i\beta-t^{}_i)=-i\int_{t^{}_i}
 \begin{equation}z(0)=t^{}_i,\quad z(1)=t^{}_i-i\beta.\end{equation}
 也就是说，现在位形回路$C^*$给出一条不封闭的复时间曲线。还是参考虚时圆，我们在复平面中定义等价关系$z(0)\sim z(1)$，则重新定义曲线为商空间$z(u)=z(u)/\sim$，这是一条$\mathbb C$中的封闭曲线。当然这是非物理的结论，因为真实时间只能取实数，所以我们需要进一步处理。\\
 \\
-现在我们来研究其性质，以及如何构造这条回路$^{\cite{therFUrc}}$。对于复数时间$t$，可以想到初态作为平衡态满足\textsl{KMS}条件(\ref{KOm-*-*-gI087})，即热平衡\textsl{Green}函数的解析延拓$G(z)=G(z+i\beta),\ z\in\mathbb C$。取
+现在我们来研究其性质，以及如何构造这条回路$^{\cite{therFUrc}}$。对于复时间$t$，可以想到初态作为平衡态满足\textsl{KMS}条件(\ref{KOm-*-*-gI087})，即热平衡\textsl{Green}函数的解析延拓$G(z)=G(z+i\beta),\ z\in\mathbb C$。取
 $$z=t^{}_i-i\beta\implies G(t^{}_i-i\beta)=G(t^{}_i)\implies t^{}_i\sim t^{}_i-i\beta,$$
 这就证明了等价关系$z(0)\sim z(1)$的正确性，从而商空间$z(u)$是虚时圆$S^1_\tau$在复平面上的扩展。现在不加证明的将\textsl{KMS}条件推广至真实时间$t$，因为其为实数那么不妨定义$t=\Re z$，由\textsl{Wick}旋转可以将$z$定义为
 \begin{equation}t'=-i\tau\implies z=t+t'=t-i\tau,\quad t,\tau\in\mathbb R.\end{equation}
 在平衡态中，虚时$\tau$的取值为$0\leq\tau\leq\beta$，\textsl{KMS}条件将其延拓至$-\beta\leq\tau\leq0$。现在我们将这个条件理解为$z$的虚部，并将复变\textsl{Heaviside}函数写作虚实部的乘积给出
-\begin{equation}\theta(z)=\theta(t)\theta(-\tau)\implies\Im z=-\tau\in[-\beta,0]\quad\theta(-z)=\theta(-t)\theta(\tau)\implies\Im z\in[0,\beta].\end{equation}
+\begin{equation}\theta(z)=\theta(t)\theta(-\tau)\implies\Im z=-\tau\in[-\beta,0];\quad\theta(-z)=\theta(-t)\theta(\tau)\implies\Im z\in[0,\beta].\end{equation}
 对\textsl{Green}函数的编时乘积$\mathbb T$展开，并直接将$t$延拓为$z$给出
 \begin{equation}G(z^{}_1,z^{}_2)=\expval{\hat{\psi}\qty(z^{}_1)\hat{\psi}\qty(z^{}_2)}\theta(z)+\expval{\hat{\psi}\qty(z^{}_2)\hat{\psi}\qty(z^{}_1)}\theta(-z),\quad z=z^{}_2-z^{}_1,\label{diFRWER55090)()(}\end{equation}
 现在证明该延拓的合理性：由于上式同时包含复变\textsl{Heaviside}函数$\theta(z)$和$\theta(-z)$，所以\textsl{Green}函数的定义域应满足
-\begin{equation}[-\beta,0]\cup[0,\beta]=\qty{0}=\Im z,\label{;dkd-*-*..ggh}\end{equation}
+\begin{equation}[-\beta,0]\cap[0,\beta]=\qty{0}=\Im z,\label{;dkd-*-*..ggh}\end{equation}
 也就是说从$t^{}_i\in\mathbb R$出发，这个函数完全定义在实轴上，符合要求。于是从初始平衡态$t^{}_i$出发，$z(u)$在$\mathbb R$上的部分可以按零温场的周期边界定义，取$t^{}_i=-\mathfrak T$为
 $$\mathcal P^{}_1(u)=(-\mathfrak T,\mathfrak T)\subset z(u),\quad z(0)=-\mathfrak T\longrightarrow\mathfrak T=z(u>0), \quad\mathfrak T\to\infty.$$
 此时\textsl{Green}函数$C(x,y)$的时间应该满足$x^0,y^0\in \mathcal P^{}_1(u)$，场位形算符的编时乘积按照$u$的大小确定。注意现在曲线$z(u)$的终点为$z(1)=-\mathfrak T-i\beta$。\\
@@ -8848,9 +8848,9 @@ $$\delta S^{}_+-\delta S^{}_-=\int\qty(\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_
 并且在$\mathcal P^{}_1$上有坐标变换
 $$\delta\psi^{}_+(a)=\int\delta\qty(x^0-a^0)\delta^3(\vb{x}-\vb{a})\delta\psi^{}_+(x)\dd\Omega=\int\delta^4(x-a)\delta\psi^{}_+(x)\dd\Omega,$$
 我们自然得到
-\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_+(a)}=\int\mathscr D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}\Big\{&\qty(i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_+(a)+\delta^4(x-a))\delta\psi^{}_+(x)\\&-i\delta^{}_{\psi^{}_-}\Lambda[\psi^{}_-(x)]\psi^{}_+(a)\delta\psi^{}_-(x)\Big\}\dd\Omega=0.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_+(a)}=\int\mathscr D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}&\left\{\qty(i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_+(a)+\delta^4(x-a))\delta\psi^{}_+(x)\right.\\&\left.\qquad-i\delta^{}_{\psi^{}_-}\Lambda[\psi^{}_-(x)]\psi^{}_+(a)\delta\psi^{}_-(x)\right\}\dd\Omega=0.\end{aligned}\end{equation}
 类似的我们得到反向支的方程，同一分支上的坐标变换和正向支一致，所以我们得到
-\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_-(a)}=\int\mathscr D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}\Big\{&\qty(-i\delta^{}_{\psi^{}_-}\Lambda\qty[\psi^{}_-(x)]\psi^{}_-(a)+\delta^4(x-a))\delta\psi^{}_-(x)\\&+i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_-(a)\delta\psi^{}_+(x)\Big\}\dd\Omega=0.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_-(a)}=\int\mathscr D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}&\left\{\qty(-i\delta^{}_{\psi^{}_-}\Lambda\qty[\psi^{}_-(x)]\psi^{}_-(a)+\delta^4(x-a))\delta\psi^{}_-(x)\right.\\&\left.\qquad+i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_-(a)\delta\psi^{}_+(x)\right\}\dd\Omega=0.\end{aligned}\end{equation}
 将位形的变分通过\textsl{Keldysh}矢量表示为$\displaystyle\delta\bm{\psi}^K=\mqty(\delta\psi^{}_+\\ \delta\psi^{}_-)$，则这两个方程可以整理为一个矩阵方程
 \begin{equation}\int\mathscr D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}\vb{M}\qty(\bm{\psi}^K)\delta\bm{\psi}^K(x)\dd\Omega=0,\label{buH--//GFg-*99}\end{equation}
 其中系数矩阵为
@@ -10140,11 +10140,11 @@ $$\begin{aligned}\mathbb T\qty{\hat{\psi}^{}_I(a)\hat{\psi}^{}_I(b)\hat{\psi}^4_
 依旧从$n=2$开始，我们写出
 $$2C^{(2)}_2(a,b)=-\lambda^2\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_I(a)\hat{\psi}^{}_I(b)\hat{\psi}^2_I(1)\hat{\psi}^2_I(2)}}{0}\dd\Omega^{}_1\dd\Omega^{}_2.$$
 可以看到这是一个六点函数，但在排列组合上和$n=4$的一级近似不同。内传播子为两个重复的并联二选一问题，一共$g=2$个。混合传播子有两种情况，$1$和$2$各自独立缩并全同的简并度为$g=2$，$1-2$混合缩并全同共$g=2\times2\times2=8$个。我们写出总的结果
-\begin{equation}\begin{aligned}2C^{(2)}(a,b)=-2\lambda^2\int_{\mathscr M}\bigg\{&\frac{1}{2}D^{}_F(a,b)D^{}_F(1,1)D^{}_F(2,2)+D^{}_F(a,b)D^2_F(1,2)\\&+D^{}_F(a,1)D^{}_F(b,1)D^{}_F(2,2)+D^{}_F(a,2)D^{}_F(b,2)D^{}_F(1,1)\\&+2D^{}_F(a,1)D^{}_F(b,2)D^{}_F(1,2)+2D^{}_F(a,2)D^{}_F(b,1)D^{}_F(1,2)\bigg\}\dd\Omega^{}_1\dd\Omega^{}_2.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}2C^{(2)}(a,b)=-2\lambda^2\int_{\mathscr M}&\left\{\frac{1}{2}D^{}_F(a,b)D^{}_F(1,1)D^{}_F(2,2)+D^{}_F(a,b)D^2_F(1,2)\right.\\&\left.\quad+D^{}_F(a,1)D^{}_F(b,1)D^{}_F(2,2)+D^{}_F(a,2)D^{}_F(b,2)D^{}_F(1,1)\right.\\&\left.\quad+2D^{}_F(a,1)D^{}_F(b,2)D^{}_F(1,2)+2D^{}_F(a,2)D^{}_F(b,1)D^{}_F(1,2)\right\}\dd\Omega^{}_1\dd\Omega^{}_2.\end{aligned}\end{equation}
 现在我们考察$n=3$，二级修正为
 $$2C^{(2)}_3(a,b)=-\lambda^2\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_I(a)\hat{\psi}^{}_I(b)\hat{\psi}^3_I(1)\hat{\psi}^3_I(2)}}{0}\dd\Omega^{}_1\dd\Omega^{}_2.$$
 这是一个八点函数，简并度这里就不详细计算了，直接给出结果
-\begin{equation}\begin{aligned}2C^{(2)}_3(a,b)=-9\lambda^2\int_{\mathscr M}\bigg\{&D^{}_F(1,2)\qty{D^{}_F(a,b)D^{}_F(1,1)D^{}_F(2,2)+2D^{}_F(a,b)D^{2}_F(1,2)}\\&+D^{}_F(1,2)\qty{2D^{}_F(a,1)D^{}_F(b,1)D^{}_F(2,2)+2D^{}_F(a,2)D^{}_F(b,2)D^{}_F(1,1)}\\&+D^{}_F(1,1)D^{}_F(2,2)\qty{D^{}_F(a,1)D^{}_F(b,2)+D^{}_F(a,2)D^{}_F(b,1)}\\&+D^{2}_F(1,2)\qty{4D^{}_F(a,1)D^{}_F(b,2)+4D^{}_F(a,2)D^{}_F(b,1)}\bigg\}\dd\Omega^{}_1\dd\Omega^{}_2.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}2C^{(2)}_3(a,b)=-9\lambda^2\int_{\mathscr M}&\left\{D^{}_F(1,2)\qty{D^{}_F(a,b)D^{}_F(1,1)D^{}_F(2,2)+2D^{}_F(a,b)D^{2}_F(1,2)}\right.\\&\left.\quad+2D^{}_F(1,2)\qty{D^{}_F(a,1)D^{}_F(b,1)D^{}_F(2,2)+D^{}_F(a,2)D^{}_F(b,2)D^{}_F(1,1)}\right.\\&\left.\quad+D^{}_F(1,1)D^{}_F(2,2)\qty{D^{}_F(a,1)D^{}_F(b,2)+D^{}_F(a,2)D^{}_F(b,1)}\right.\\&\left.\quad+D^2_F(1,2)\qty{4D^{}_F(a,1)D^{}_F(b,2)+4D^{}_F(a,2)D^{}_F(b,1)}\right\}\dd\Omega^{}_1\dd\Omega^{}_2.\end{aligned}\end{equation}
 以上结果我们都没有考虑传播子关于$x^{}_1$和$x^{}_2$的对称性，在后续会重点涉及到这个问题，可以大幅度的简化展开式。其余模型和高级修正就不一一介绍了，有兴趣的读者可以自行研究。\\
 \\
 对于多点关联函数而言，推导都是类似的。根据之前所说的，粒子系统和场的传播子结构相同，我们就能从式(\ref{wutayi77})直接得到相应的\textsl{GML}定理
@@ -10224,7 +10224,7 @@ $$\begin{aligned}C^{}_2(x,1)=&\frac{\displaystyle\int\exp(iS^{}_{KG})\qty(1+i\la
 方便期间，下面我们记算符为$\hat{\psi}^{}_I(x)=\psi^{}_x$，于是一级修正给出
 $$C^{(1)}_2(x,1)=i\lambda\int_{\mathscr M}\qty[\mel**{0}{\mathbb T\qty{\psi^2_y\psi^{}_x\psi^{}_1}}{0}-D^{}_F(x,1)\mel**{0}{\psi^2_y}{0}]\dd\Omega^{}_y=2i\lambda\int D^{}_F(x,y)D^{}_F(y,1)\dd\Omega^{}_y,$$
 回到了\textsl{SD}方程的\textsl{Born}一级修正，正是我们想要得到的。二级修正给出
-$$\begin{aligned}C^{(2)}_2(x,1)=&-\dfrac{\lambda^2}{2}\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\psi^2_y\psi^2_z\psi^{}_x\psi^{}_1}}{0}\dd\Omega^{}_y\dd\Omega^{}_z-D^{}_F(x,1)\qty(\lambda\int_{\mathscr M}D^{}_F(y,y)\dd\Omega^{}_y)^2\\&+\lambda^2\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\psi^2_y\psi^{}_x\psi^{}_1}}{0}\dd\Omega^{}_y\int_{\mathscr M}D^{}_F(z,z)\dd\Omega^{}_z\\=&\lambda^2\int_{\mathscr M}\Big\{D^{}_F(1,y)D^{}_F(x,y)D^{}_F(z,z)-D^{}_F(1,z)D^{}_F(x,z)D^{}_F(y,y)\\&\hspace{1.3cm}-D^{}_F(x,1)D^2_F(y,z)-\frac{1}{2}D^{}_F(x,1)D^{}_F(y,y)D^{}_F(z,z)\\&\hspace{1.3cm}-2D^{}_F(y,z)\qty[D^{}_F(1,y)D^{}_F(x,z)+D^{}_F(1,z)D^{}_F(x,y)]\Big\}\dd\Omega^{}_y\dd\Omega^{}_z\end{aligned}$$
+$$\begin{aligned}C^{(2)}_2(x,1)=&-\dfrac{\lambda^2}{2}\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\psi^2_y\psi^2_z\psi^{}_x\psi^{}_1}}{0}\dd\Omega^{}_y\dd\Omega^{}_z-D^{}_F(x,1)\qty(\lambda\int_{\mathscr M}D^{}_F(y,y)\dd\Omega^{}_y)^2\\&+\lambda^2\int_{\mathscr M}\mel**{0}{\mathbb T\qty{\psi^2_y\psi^{}_x\psi^{}_1}}{0}\dd\Omega^{}_y\int_{\mathscr M}D^{}_F(z,z)\dd\Omega^{}_z\\=&\lambda^2\int_{\mathscr M}\left\{D^{}_F(1,y)D^{}_F(x,y)D^{}_F(z,z)-D^{}_F(1,z)D^{}_F(x,z)D^{}_F(y,y)\right.\\&\left.\hspace{1.3cm}-D^{}_F(x,1)D^2_F(y,z)-\frac{1}{2}D^{}_F(x,1)D^{}_F(y,y)D^{}_F(z,z)\right.\\&\left.\hspace{1.3cm}-2D^{}_F(y,z)\qty[D^{}_F(1,y)D^{}_F(x,z)+D^{}_F(1,z)D^{}_F(x,y)]\right\}\dd\Omega^{}_y\dd\Omega^{}_z\end{aligned}$$
 可见对于二级修正，分母的展开貌似还不够精确。这里实际上涉及到点$y$和$z$的对称性问题，我们简单分析一下，对称性的具象证明请参考第\ref{ecui0r8//6}节和。\\
 \\
 通过一级修正我们证明了，\textsl{SD}方程的结果是最符合实际的，因此我们希望二级修正给出式(\ref{SD-Fb-v-j})的结果。和上式对比可以想到，它最有可能的化简结果为
@@ -10376,7 +10376,7 @@ $$C^{(1)}_2(1,2)=i\lambda\int_{\mathscr M}\qty{D^{}_F(1,2)D^{}_F(x,x)+2D^{}_F(1,
 根据\textsl{Born}级数，积分变量应该作为图的内点，此处就是点$x$。据此我们不难得到，修正的第一项是非连通的，因为$ab$连通分支和$x$分支独立，第二项是连通的。为了表示内传播子$D^{}_F(x,x)$，我们定义其为一个闭合圈，从而可以写出
 \begin{equation}C^{(1)}_2(1,2)=\quad\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:2](b){};\diagram*{(a)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$x$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\quad+\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$x$,label=above:$(i\lambda)$](d){};\vertex[right=1cm of d,dot,scale=.5,label=below:2](b){};\diagram*{(a)--(d)--(b)};\end{feynman}}\label{Tev-*ff-++}\end{equation}
 从第二张连通图中可以看到，内点对应体积分$\displaystyle i\lambda\int\dd\Omega^{}_x$，并自带系数$i\lambda$。我们将这个性质定义到非连通图中，使得系数跟随内传播子。我们来看二级修正，平方作用给出
-$$\begin{aligned}2C^{(2)}_2(1,2)=-2\lambda^2\int_{\mathscr M}\bigg\{&\frac{1}{2}D^{}_F(1,2)D^{}_F(x,x)D^{}_F(y,y)+D^{}_F(1,2)D^2_F(x,y)\\&+D^{}_F(1,x)D^{}_F(2,x)D^{}_F(y,y)+D^{}_F(1,y)D^{}_F(2,y)D^{}_F(x,x)\\&+2D^{}_F(1,x)D^{}_F(2,y)D^{}_F(x,y)+2D^{}_F(1,y)D^{}_F(2,x)D^{}_F(x,y)\bigg\}\dd\Omega^{}_x\dd\Omega^{}_y.\end{aligned}$$
+$$\begin{aligned}2C^{(2)}_2(1,2)=-2\lambda^2\int_{\mathscr M}&\left\{\frac{1}{2}D^{}_F(1,2)D^{}_F(x,x)D^{}_F(y,y)+D^{}_F(1,2)D^2_F(x,y)\right.\\&\left.\quad+D^{}_F(1,x)D^{}_F(2,x)D^{}_F(y,y)+D^{}_F(1,y)D^{}_F(2,y)D^{}_F(x,x)\right.\\&\left.\quad+2D^{}_F(1,x)D^{}_F(2,y)D^{}_F(x,y)+2D^{}_F(1,y)D^{}_F(2,x)D^{}_F(x,y)\right\}\dd\Omega^{}_x\dd\Omega^{}_y.\end{aligned}$$
 按照上面的结论，我们画出完整的图，简并度以系数标在图的旁边
 \begin{equation}\begin{aligned}C^{(2)}_2(1,2)=\quad&\frac{1}{2}\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:2](b){};\diagram*{(a)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$x$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$y$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\quad+\quad\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:2](b){};\diagram*{(a)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[dot,scale=.5,label=above:$y$](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$x$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\\&+\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$x$](d){};\vertex[right=1cm of d,dot,scale=.5,label=below:2](b){};\diagram*{(a)--(d)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$y$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\quad+\quad\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](d){};\vertex[right=1cm of d,dot,scale=.5,label=below:2](b){};\diagram*{(a)--(d)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex[coordinate](c){};\vertex[below=1cm of c,dot,scale=.5,label=below:$x$](d){};\vertex[below=0.8cm of c,coordinate](e){};\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\\&+2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=3cm of a,dot,scale=.5,label=above:2](b){};\vertex[above right=.5cm of a,dot,scale=.5,label=above:$x$](c){};\vertex[below left=.5cm of b,dot,scale=.5,label=below:$y$](d){};\diagram*{(a)--(c)--(d)--(b)};\end{feynman}})\quad+\quad2\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:1](a){};\vertex[right=3cm of a,dot,scale=.5,label=above:2](b){};\vertex[above right=.5cm of a,dot,scale=.5,label=above:$y$](c){};\vertex[below left=.5cm of b,dot,scale=.5,label=below:$x$](d){};\diagram*{(a)--(c)--(d)--(b)};\end{feynman}})\end{aligned}\label{Sndbv-*+++6354..--**}\end{equation}
 注意只有最后的两张图是连通的，其余均非连通。不难发现一个拓扑性质：连通图的简并度恒比非连通的大，并且道路连通分支越多，简并度越小。现在来看四次幂作用$\Lambda^{}_{\text{int}}=\lambda\psi^4$的传播子，方便起见，下面只讨论一级修正(\ref{gff84ver})。这里参考上面的结论，直接画图
@@ -10708,9 +10708,9 @@ $$\mathfrak D^{(1)}_4(y,y,y,1,2,3)=i\lambda\int_{\mathscr M}\mel**{0}{\mathbb T\
 $$\mathfrak D^{(1)}_4(y,y,y,1,2,3)\implies D^{}_F(1,y)\mathfrak D^{(1)}_4(y,y,2,3).$$具体图就不画了，和上一张图完全一样，只是单圈所处的边不同。\end{itemize}
 这些图本质上和四点函数是完全一样的，忽略它们剩下的就是我们所要求的，简单分析一下：三个外点配对两个$z$和一个$y$，这样不会涉及到只含$y$的四点函数，剩下的两对$y$和$z$构成一个圈，将图记为
 \begin{equation}Y(1,y,y,y,2,3)=\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$1$](a){};\vertex[right=1cm of a,dot,label=right:$y$](b){};\vertex[right=1cm of b,dot,label=right:$z$](c){};\vertex[above right=1cm of c,dot,label=right:$2$](d){};\vertex[below right=1cm of c,dot,label=right:$3$](e){};\diagram*{(a)--(b)--[half left](c)--[half left](b),(d)--(c)--(e)};\end{feynman}}=D^{}_F(1,y)\int D^2_F(y,z)D^{}_F(z,2)D^{}_F(z,3)\dd\Omega^{}_z.\label{hfj8--//}\end{equation}
-这是全连通六点函数不同于\textsl{Wick}定理确定的图，回到解(\ref{8SG1/45764h})，直接写出我们所关心的一级级修正部分
+这是全连通六点函数不同于\textsl{Wick}定理确定的图，回到解(\ref{8SG1/45764h})，直接写出我们所关心的一级修正部分
 \begin{equation}\mathfrak D^{(2)}_4(x,1,2,3)\propto\int D^{}_F(x,y)Y(1,y,y,y,2,3)\dd\Omega^{}_x=\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=left:$1$](a){};\vertex[below right=1cm of a,dot](b){};\vertex[right=1cm of b,dot](c){};\vertex[above right=1cm of c,dot,label=right:$2$](d){};\vertex[below right=1cm of c,dot,label=right:$3$](e){};\vertex[below left=1cm of b,dot,label=left:$x$](f){};\diagram*{(a)--(b)--[half left](c)--[half left](b),(d)--(c)--(e),(b)--(f)};\end{feynman}}.\label{BD1243/*/*}\end{equation}
-可见其相较于一级修正(\ref{5478..4'})，在去掉外腿后的中间部分多了一个顶点。令$1=2=3=y$，这样就确定了$\mathfrak D(x,y,y,y)$的二级修正，回代入式(\ref{2500hj})就得到全连通传播子的三级修正，这里我们提出自能部分
+可见其相较于一级修正(\ref{5478..4'})，在去掉外腿后的中间部分多了一个顶点。令$1=2=3=y$，这样就确定了$\mathfrak D(x,y,y,y)$的二级修正，回代入式(\ref{2500hj})就得到全连通传播子的三级修正，这里我们提出自能
 \begin{equation}\Sigma^{(3)}\propto\tikz[baseline=-.5ex]{\begin{feynman}[inline=a.base]\vertex[dot](a){};\vertex[right=1cm of a,dot](b){};\vertex[right=1cm of b,dot](c){};\diagram*{(a)--[half left](b)--[half left](c)--(b)--(a)--[half left](c)};\end{feynman}}.\end{equation}
 关于其具体的计算这里就不介绍了，读者可以参考第\ref{V34578//}节的过程自行计算，当然其结构和日落图是一样的，同样也只有三个动量参与计算过程。\\
 \\
@@ -11031,7 +11031,7 @@ $$-\square\mqty(G^{++}_{KG}&G^{+-}_{KG}\\G^{-+}_{KG}&G^{--}_{KG})(x,y)=\mqty(1&0
 以及相应的\textsl{BD}级数解
 \begin{equation}\begin{aligned}\mathfrak C^{lm}&(x,y)=G^{lm}_{KG}(x,y)+\sum_{n,k}\int G^{lk}_{KG}(x,c)\Sigma^{kn}(c,z)G^{nm}_{KG}(z,y)\dd\Omega^{}_z\dd\Omega^{}_c\\&+\sum_{n^{}_1,n^{}_2,n^{}_3,n^{}_4}\int G^{ln^{}_1}_{KG}(x,a)\Sigma^{n^{}_1n^{}_2}(a,b)G^{n^{}_2n^{}_3}_{KG}(b,c)\Sigma^{n^{}_3n^{}_4}(c,d)G^{n^{}_4m}_{KG}(d,y)\dd\Omega^4\\&+\cdots.\end{aligned}\end{equation}
 为了直观的展示结果，这里具体的写出分量$\mathfrak C^{++}$，对\textsl{BD}级数取到一级近似
-$$\begin{aligned}\mathfrak C^{++}(x,y)=&G^{++}_{KG}(x,y)+\int \Big\{G^{++}_{KG}(x,c)\Sigma^{++}(c,z)G^{++}_{KG}(z,y)+G^{++}_{KG}(x,c)\Sigma^{+-}(c,z)G^{-+}_{KG}(z,y)\\&+G^{+-}_{KG}(x,c)\Sigma^{-+}(c,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,c)\Sigma^{--}(c,z)G^{-+}_{KG}(z,y)\Big\}\dd\Omega^{}_z\dd\Omega^{}_c.\end{aligned}$$
+$$\begin{aligned}\mathfrak C^{++}(x,y)=&G^{++}_{KG}(x,y)+\int \left\{G^{++}_{KG}(x,c)\Sigma^{++}(c,z)G^{++}_{KG}(z,y)+G^{++}_{KG}(x,c)\Sigma^{+-}(c,z)G^{-+}_{KG}(z,y)\right.\\&\left.+G^{+-}_{KG}(x,c)\Sigma^{-+}(c,z)G^{++}_{KG}(z,y)+G^{+-}_{KG}(x,c)\Sigma^{--}(c,z)G^{-+}_{KG}(z,y)\right\}\dd\Omega^{}_z\dd\Omega^{}_c.\end{aligned}$$
 当然更好的选择是矩阵形式，积分用核形式写出卷积化简
 \begin{equation}\begin{aligned}&\text{\textsl{Dyson}方程：}i\hat{\sigma}^{}_3\square\bm{\mathfrak C}^K=\vb{I}+\vb{\Sigma}^K\circledast\bm{\mathfrak C}^K,\quad\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\bm{\mathfrak C}^K,\\&\text{\textsl{BD}级数：}\bm{\mathfrak C}^K=\vb{G}^K_{KG}+\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\vb{G}^K_{KG}+\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\vb{G}^K_{KG}\circledast\vb{\Sigma}^K\circledast\vb{G}^K_{KG}+\cdots.\end{aligned}\label{Yat623457}\end{equation}
 关于自能矩阵$\vb{\Sigma}^K$的图含义，以及\textsl{SK}形式的\textit{1PI}这里就不再重新计算了，根据之前的结论可知，这些都可以直接从第\ref{1pL//-..][rG}节直接得到。但需要说明的是，目前为止我们一直都处于回路规则中，并非\textsl{RA}规则，因此这里的\textit{1PI}是回路图，式(\ref{UGYU[0274378][})现在写为
@@ -11194,7 +11194,7 @@ $$\mathscr W\qty[\mathfrak C^{+-}](p,x)\approx\delta\qty(p^2)\qty{\theta\qty(p^0
 \\
 最后我们总结一下所用到的各类近似：
 \begin{enumerate}\item 在\textsl{Dyson}方程中，左侧导数部分$p^2\star\mathscr W\qty[\mathfrak C^{-+}]$的星积取梯度近似
-$$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的。\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$，这里我们已经将质量壳约束纳入近似中。\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了。\end{enumerate}
+$$\displaystyle\star=1+\frac{i}{2}\qty(\overleftarrow{\pdv{x^\mu}}\overrightarrow{\pdv{p^{}_\mu}}-\overleftarrow{\pdv{p^{}_\mu}}\overrightarrow{\pdv{x^\mu}}).$$其中的正则坐标都是协变的；\label{Xheish//}\item 对于右侧函数的卷积部分，$\mathscr W[\Sigma]\star\mathscr W\qty[\mathfrak C]$的星积取零级近似$\star=1$\label{CV7873//*}；\item 在计算第\ref{Xheish//}个近似中的导数时，对$\displaystyle\pdv{p^2}{x^\mu}$取无质量在壳近似$\abs{\vb{p}}=E^{}_{\vb{p}}-U(\vb{r})\implies p^2\approx 2p^0U\approx 0$；\item 对于全连通\textsl{Wightman}函数$\mathfrak C^<,\ \mathfrak C^>$的\textsl{Wigner}变换，对于相互作用下的色散律，按在壳近似取准粒子近似$$\mathscr W\qty[\mathfrak C^<](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)f(p,x),\quad \mathscr W\qty[\mathfrak C^>](p,x)\approx\delta\qty(p^2)\theta\qty(p^0)(\pm f(p,x)+1).$$其中$\mathfrak C^<=\mathfrak C^{+-}$，$\mathfrak C^>=\mathfrak C^{-+}$，这里我们已经将质量壳约束纳入近似中。\label{Meiifiab}；\item 在计算第\ref{CV7873//*}个近似后的函数乘积时，取\textsl{UU}近似$$\mathscr W\qty[\mathfrak C^{++}-\mathfrak C^{--}]\approx\mathscr W\qty[\mathfrak C^{-+}-\mathfrak C^{+-}],\quad \mathscr W\qty[\Sigma^{--}-\Sigma^{++}]\approx-\mathscr W\qty[\Sigma^{-+}-\Sigma^{+-}].$$其中我们已经将已知的关系带入了。\end{enumerate}
 基于这些近似，我们从\textsl{SK}形式得到了\textsl{Boltzmann}动理方程，可见其约束还是很多的，为了处理更一般的非平衡量子系统，我们就需要逐步放开这些约束。关于\textsl{UU}碰撞积分的图解法，可以参考\cite{Ld3k}\S 95，这里就不展开了。\\
 \\
 通过上述推导，我们看到宏观物理定律，是如何从微观量子场的关联函数中涌现出来的。这里主要涉及到两个近似：第\ref{Xheish//}个和第\ref{Meiifiab}个。后续我们会看到，这两个近似实际上是典型的粗粒化过程，它们将关联函数中最主要的统计性质提出，并在大范围的统计均值下得到宏观结论，这就是重整化的目标。
@@ -11369,7 +11369,7 @@ $$\qty(k^2_1-m^2_0)x+\qty(\qty(k-k^{}_1)^2-m^2_0)(1-x)=xk^2-2xkk^{}_1+k^2_1-m^2_
 由于积分变量是$k^{}_1$，因此我们用配分法将其单独提出，给出
 $$\qty(k^{}_1-xk)^2+x(x-1)k^2-m^2_0=a^2-f,\quad a=k^{}_1-xk,\quad f(k)=-x(x-1)k^2+m^2_0.$$
 在对$k^{}_1$积分时$k$不变，因此动量体元变换为$\dd^4k^{}_1=\dd^4a$，则算上$i\epsilon$后我们得到外圈的积分
-\begin{equation}I(k)=\bigintsss\qty(\frac{\dd k^{}_1}{2\pi})^4\frac{1}{\qty(k^2_1-m^2_0)\qty[\qty(k-k^{}_1)^2-m^2_0]}=\bigintsss\qty(\frac{\dd a}{2\pi})^4\bigintsss_0^1\frac{\dd x}{\qty(a^2-f)^2}.\end{equation}
+\begin{equation}I(k)=\bigintsss\qty(\frac{\dd k^{}_1}{2\pi})^4\frac{1}{\qty(k^2_1-m^2_0)\qty[\qty(k-k^{}_1)^2-m^2_0]}=\bigintsss\qty(\frac{\dd a}{2\pi})^4\bigintsss_0^1\frac{\dd x}{\qty(a^2-f)^2}.\label{TPIHNiiu7}\end{equation}
 现在按照前面的操作，对$a$取\textsl{Wick}旋转(\ref{JIrsg11})记为$a^{}_E=k^{}_{1,E}-xk^{}_E$，其模为$a^2_E=l^2=-a^2$。动量体元通过(\ref{ZZefPI[[})变换，我们得到
 $$I(k)=\frac{i}{16\pi^2}\int_0^1\dd x\int_0^\infty\frac{l^2\dd\qty(l^2)}{\qty(l^2+f)^2}=\frac{i}{16\pi^2}\int_0^1\dd x\int_f^\infty\frac{(u-f)\dd u}{u^2}=\frac{i}{16\pi^2}\int_0^1\dd x\eval{\qty(\ln u-\frac{f}{u})}_f^\infty.$$
 可以看到，对$u$的积分得到的第二项是收敛的，在正规化时可以忽略，对$\ln u$取上截断$\Lambda^2$后我们得到
@@ -11463,7 +11463,7 @@ $$\mathfrak C(x\pm i0)=\int_{-\infty}^\infty\frac{i\rho(a)\dd a}{x-a\pm i0}=i\pv
 可见主值部分是传播子的虚部，而\textsl{KL}谱分布是实部，也就是
 \begin{equation}\Im\mathfrak C(x\pm i0)=\pv\int_{-\infty}^\infty\frac{\rho^{}_{\text{cont}}(a)\dd a}{x-a},\quad \Re\mathfrak C(x)=\Re\mathfrak C(x+i0)=-\pi\rho^{}_{\text{cont}}(x).\label{SuiTke}\end{equation}
 虚部在微虚下不变，因此我们得到差值
-\begin{equation}\mathfrak C(x+i0)-\mathfrak C(x-i0)=-2i\pi\rho(x)=2i\Re\mathfrak C(x).\end{equation}
+\begin{equation}\mathfrak C(x+i0)-\mathfrak C(x-i0)=-2i\pi\rho(x)=2i\Re\mathfrak C(x).\label{Dufnv11v}\end{equation}
 由此\textsl{Cauchy}积分公式最终的结果给出
 \begin{equation}\mathfrak C(p)=\frac{1}{2\pi i}\int_{4m^2}^\infty\dd x\frac{\mathfrak C(x+i0)-\mathfrak C(x-i0)}{p^2-x}=\frac{1}{\pi}\int_{4m^2}^\infty\frac{\Re\mathfrak C(x)\dd x}{p^2-x}.\label{VSDFG345H}\end{equation}
 这个结论称为传播子的色散律(\textsl{M.Gell-Mann}，\textsl{M.L.Goldberger}，\textsl{W.E.Thirring}，1954)，或者我们可以直接从式(\ref{SuiTke})写出虚部和实部之间的关系
@@ -11553,19 +11553,60 @@ $$I^{}_2(\beta)=\frac{1}{2\pi^2\beta^2}\bigintsss_0^\infty\frac{\sqrt{y^2-\beta^
 这个积分的收敛性是显然的，可见热涨落自能的发散性主要由温度控制。比如考察高温情形$\beta\to0$，分母变为$\sqrt{y^2-\beta^2m^2_0}\approx y$，积分变为一阶\textsl{Debye}函数(\ref{leloh})，不妨计算一下
 \begin{equation}W^{}_1(x=1)=\int_0^\infty\frac{y\dd y}{\exp(y)-1}=\sum_{n=1}^\infty\int_0^\infty y\exp(-ny)\dd y=\Gamma(2)\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}.\end{equation}
 其中将分母写为等比数列$a^{}_n=\exp(-ny)$的极限和，这是容易证明的，当然注意比值$q\neq\exp(y)$否则部分和发散。于是热涨落自能积分在高温下为
-\begin{equation}I^{}_2(T\to\infty)=\frac{1}{2\pi^2\beta^2}W^{}_1(1)=\frac{T^2}{12}\to\infty.\end{equation}
+\begin{equation}I^{}_2(T\to\infty)=\frac{1}{2\pi^2\beta^2}W^{}_1(1)=\frac{T^2}{12}\to\infty.\label{6554=-;L}\end{equation}
 结果依旧是发散的，但这和紫外发散没有任何关联，完全是由场所处的热浴决定的，符合热涨落的性质。总结一下，我们写出高温蝌蚪图的自能修正
 \begin{equation}\Sigma^{(1)}_M=12\lambda\qty{I^{}_1(\Lambda)+I^{}_2(T\to\infty)}=\frac{3\lambda}{2\pi^2}\qty{\Lambda^2-\frac{m^2_0}{2}\ln(\frac{\Lambda^2}{m^2_0})}+\lambda T^2+\text{Convergence}.\end{equation}
 由于\textsl{Dyson}方程(\ref{FGDGOhuhu776})在结构上和零温场完全一致，因此质量的重整化依旧由自洽性方程(\ref{RT..'647})给出，当然此处应做替换$i\Sigma\to\Sigma^{}_M$，我们得到
 \begin{equation}\delta^{(1)}m^2=\Sigma^{(1)}_M=\delta^{(1)}m^2_{T=0}+\delta^{(1)}m^2_T=\frac{3\lambda}{2\pi^2}\qty{\Lambda^2-\frac{m^2_0}{2}\ln(\frac{\Lambda^2}{m^2_0})}+\lambda T^2.\end{equation}
 其中零温质量重整化和式(\ref{Zdhg123==--})是类似的，而热浴导致的重整化为$\delta^{(1)}m^2_T\propto T^2$。值得说明的是，这里我们依旧处于在热静系中，对于协变热浴的质量修正这里不展开，读者可以参考\cite{eC..25a}\S 1.8。\\
 \\
-由于$\Sigma^{(1)}_M$和动量无关，因此重整化常数$Z=1$，它的改变根据零温场的计算，依赖于二级日落图修正。根据第\ref{ty78/**/y99r}节的温度动量\textsl{Feynman}规则，顶点处四维\textsl{Matsubara}动量$k^\mu_M=\qty(\zeta^{}_s,\vb{p})$守恒，方便起见用式(\ref{123[OUHG]]})的另一种布局
+由于$\Sigma^{(1)}_M$和动量无关，因此重整化常数$Z=1$，它的改变参考零温场的计算，依赖于二级日落图修正。根据第\ref{ty78/**/y99r}节的温度动量\textsl{Feynman}规则，顶点处四维\textsl{Matsubara}动量$k^\mu_M=\qty(\zeta^{}_s,\vb{p})$守恒，方便起见我们采用式(\ref{123[OUHG]]})的另一种布局
 \begin{equation}\Sigma^{(2)}_M(\zeta^{}_s,\vb{p})\propto\scalebox{0.8}{\tikz[scale=0.2,baseline=-.5ex]{\begin{feynman}[inline=a.base,small]\vertex[coordinate](a){};\vertex[right=2cm of a,dot](c){};\vertex[right=3cm of c,dot](b){};\vertex[right=2cm of b,coordinate](d){};\diagram*{(a)--[charged scalar,momentum={\(p^\mu_M\)}](c)--[charged scalar,momentum={\(p^\mu_M-k^\mu_M\)}](b)--[charged scalar,momentum={\(p^\mu_M\)}](d),(c)--[charged scalar,half left,momentum={\(k^\mu_M-k^\mu_{M,1}\)}](b),(c)--[charged scalar,half right,momentum={\(k^\mu_{M,1}\)}](b)};\end{feynman}}}.\end{equation}
 按照温度动量\textsl{Feynman}规则，每条线就代表一个$D^M_F\qty(\zeta^{}_s,\vb{p})$，这里涉及到三个温度传播子乘积因而系数为$T^{-2}$，我们写出自能的二级修正
-\begin{equation}\Sigma^{(2)}_M=\sum_{s,u}\bigintss\frac{T(2\pi)^{-6}\dd^3 k\dd^3k^{}_1}{\qty(\zeta^2_s+\abs{\vb{k}^{}_1}^2)\qty{\qty(\zeta^{}_u-\zeta^{}_s)^2+\abs{\vb{k}-\vb{k}^{}_1}^2}\qty{\qty(\zeta^{}_p-\zeta^{}_u)^2+\abs{\vb{p}-\vb{k}}^2}}.\end{equation}
-
-
+\begin{equation}\Sigma^{(2)}_M=\sum_{s,u}\bigintss\frac{T(2\pi)^{-6}\dd^3 k\dd^3k^{}_1}{\qty{\zeta^2_s+\omega^2\qty(\vb{k}^{}_1)}\qty{\qty(\zeta^{}_u-\zeta^{}_s)^2+\omega^2\qty(\vb{k}-\vb{k}^{}_1)}\qty{\qty(\zeta^{}_p-\zeta^{}_u)^2+\omega^2\qty(\vb{p}-\vb{k})}}.\label{VNM9746jd//}\end{equation}
+其中三个裸频率的色散律为
+\begin{equation}\omega^2\qty(\vb{k}^{}_1)=\abs{\vb{k}^{}_1}^2+m^2_0,\quad \omega^2\qty(\vb{k}-\vb{k}^{}_1)=\abs{\vb{k}-\vb{k}^{}_1}^2+m^2_0,\quad \omega^2\qty(\vb{p}-\vb{k})=\abs{\vb{p}-\vb{k}}^2+m^2_0.\label{pO323-=o--}\end{equation}
+这个积分依旧可以拆分为两个独立的积分，参考式(\ref{Gecdf-/454})，其中$I\qty(k^\mu_M)$是外圈积分。若我们此处完全照搬第\ref{V34578//}节的内容，对外圈积分引入\textsl{Feynman}参数化得到
+$$I\qty(k^\mu_M)=\frac{\beta^4}{(2\pi)^4}\sum_s\bigintsss\bigintsss_0^1\dd x\qty{\qty[s^2+\frac{\omega^2\qty(\vb{k}^{}_1)}{(2\pi T)^2}](1-x)+\qty[\qty(u-s)^2+\frac{\omega^2\qty(\vb{k}-\vb{k}^{}_1)}{(2\pi T)^2}]x}^{-2}\frac{\dd^3k^{}_1}{(2\pi)^3}.$$
+可见其最终的\textsl{Matsubara}频率求和变为
+$$I\qty(k^\mu_M)\sim\sum_s\int_0^1\dd x\qty(s^2-2xus+\cdots)^{-2},$$
+这个计算是十分复杂的，因为我们无法将其化为形如零温式(\ref{TPIHNiiu7})的简洁表述，因此需要特定的处理。我们先将外圈积分的分母在复平面内，分解为分式积
+$$\begin{aligned}I\qty(k^\mu_M)=&\int\frac{\beta^2\dd^3 k^{}_1}{(2\pi)^5}\sum_s\qty{\qty(s+i\frac{\omega\qty(\vb{k}^{}_1)}{2\pi T})\qty(s-i\frac{\omega\qty(\vb{k}^{}_1)}{2\pi T})\qty(s-u+i\frac{\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi T})\qty(s-u-i\frac{\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi T})}^{-1}\\=&-\frac{\beta^2}{(2\pi)^5}\int\frac{\pi^2\dd^3 k^{}_1}{\beta^2\omega\qty(\vb{k}^{}_1)\omega\qty(\vb{k}-\vb{k}^{}_1)}\\&\quad\qquad\qquad\times\sum_s\qty{\qty(s+i\frac{\beta\omega\qty(\vb{k}^{}_1)}{2\pi})^{-1}-\qty(s-i\frac{\beta\omega\qty(\vb{k}^{}_1)}{2\pi})^{-1}}\\&\qquad\qquad\qquad\qquad\times\qty{\qty(s-u+i\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi})^{-1}-\qty(s-u-i\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi})^{-1}}.\end{aligned}$$
+利用\textsl{Poisson}求和公式(\ref{gOA..*OAG})，我们可以证明复数域的求和定理
+\begin{equation}\frac{1}{\pi}\sum_s\frac{1}{s+a+ix}\frac{1}{s+b+iy}=\frac{\coth[\pi(x-ia)]-\coth[\pi(y-ib)]}{x-ia-y+ib},\quad\forall a,b\in\mathbb R.\end{equation}
+对于双曲余切函数，其在$\mathbb C$上具有半周期性
+$$\coth(x+i\pi n)=\frac{e^{x+i\pi n}+e^{-x-i\pi n}}{e^{x+i\pi n}-e^{-x-i\pi n}}=\frac{e^{i\pi n}}{e^{-i\pi n}}\frac{e^x+e^{-x}}{e^x-e^{-x}}=\coth(x),\quad \forall n\in\mathbb Z.$$
+同时根据定义双曲余切函数是奇函数$\coth(-x)=-\coth(x)$，注意在积分中$u\in\mathbb Z$，于是外圈积分对于$s$的\textsl{Matsubara}频率求和给出
+$$\begin{aligned}I\qty(k^\mu_M)=&\frac{-\pi^2}{(2\pi)^5}\int\frac{\dd^3 k^{}_1}{\omega\qty(\vb{k}^{}_1)\omega\qty(\vb{k}-\vb{k}^{}_1)}\\&\times\left\{\frac{\pi}{\dfrac{\beta\omega\qty(\vb{k}^{}_1)}{2\pi}-\dfrac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi}-iu}\qty[\coth(\frac{\beta\omega\qty(\vb{k}^{}_1)}{2})-\coth(\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2})]\right.\\&\left.\qquad+\frac{\pi}{\dfrac{\beta\omega\qty(\vb{k}^{}_1)}{2\pi}+\dfrac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi}+iu}\qty[\coth(\frac{\beta\omega\qty(\vb{k}^{}_1)}{2})-\coth(\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2})]\right.\\&\left.\qquad-\frac{\pi}{\dfrac{\beta\omega\qty(\vb{k}^{}_1)}{2\pi}+\dfrac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi}-iu}\qty[\coth(\frac{\beta\omega\qty(\vb{k}^{}_1)}{2})+\coth(\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2})]\right.\\&\left.\qquad-\frac{\pi}{\dfrac{\beta\omega\qty(\vb{k}^{}_1)}{2\pi}-\dfrac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2\pi}+iu}\qty[\coth(\frac{\beta\omega\qty(\vb{k}^{}_1)}{2})+\coth(\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2})]\right\}.\end{aligned}$$
+在合并同类项之后，我们最终得到外圈积分的\textsl{Matsubara}频率求和，这里分离出下一级的求和参数$u$
+\begin{equation}\begin{aligned}I\qty(\zeta^{}_u,\vb{k})=&\frac{\pi^2}{\beta}\int\frac{\dd^3k^{}_1}{(2\pi)^3}\frac{1}{\omega\qty(\vb{k}^{}_1)\omega\qty(\vb{k}-\vb{k}^{}_1)}\\&\times\left\{i\zeta^{}_u\coth(\frac{\beta\omega\qty(\vb{k}^{}_1)}{2})\qty[\frac{1}{\qty[\omega\qty(\vb{k}^{}_1)+\omega\qty(\vb{k}-\vb{k}^{}_1)]^2+\zeta^2_u}-\frac{1}{\qty[\omega\qty(\vb{k}^{}_1)-\omega\qty(\vb{k}-\vb{k}^{}_1)]^2+\zeta^2_u}]\right.\\&\left.+\coth(\frac{\beta\omega\qty(\vb{k}-\vb{k}^{}_1)}{2})\qty[\frac{\omega\qty(\vb{k}^{}_1)+\omega\qty(\vb{k}-\vb{k}^{}_1)}{\qty[\omega\qty(\vb{k}^{}_1)+\omega\qty(\vb{k}-\vb{k}^{}_1)]^2+\zeta^2_u}+\frac{\omega\qty(\vb{k}^{}_1)-\omega\qty(\vb{k}-\vb{k}^{}_1)}{\qty[\omega\qty(\vb{k}^{}_1)-\omega\qty(\vb{k}-\vb{k}^{}_1)]^2+\zeta^2_u}]\right\}.\end{aligned}\label{*/220..}\end{equation}
+当然若我们只关注外圈，即$k^\mu_M=\qty(\zeta^{}_u,\vb{k})$是最终外动量，则上述同类项的合并还有其余的方式，比如可以将$\omega\qty(\vb{k}^{}_1)\pm\zeta^{}_u$看作一个整体，将$\vb{k}$单独分离。这样可以得到一个更对称的形式，具体可以参考\cite{eC..25a} \S1.7，这里就不介绍了。\\
+\\
+现在让我们来分析一下这个结果。首先注意到，这个合并明显的确定了其实部和虚部，并且其明确的指出了解析延拓的方向：令$i\zeta^{}_u\to\omega^{}_0\in\mathbb C$，则$I\qty(\omega^{}_0,\vb{k})$的两项在结构上就完全一致。简记
+$$\omega\qty(\vb{k}^{}_1)=\omega^{}_1,\quad \omega\qty(\vb{k}-\vb{k}^{}_1)=\omega^{}_2,\quad \coth(\frac{\beta\omega^{}_1}{2})=A,\quad \coth(\frac{\beta\omega^{}_2}{2})=B,$$
+外圈积分的解析延拓为
+\begin{equation}I\qty(\omega^{}_0,\vb{k})=\frac{\pi^2}{\beta}\int\frac{\dd^3k^{}_1}{(2\pi)^3}\frac{1}{\omega^{}_1\omega^{}_2}\qty{\frac{\omega^{}_0A+B\qty(\omega^{}_1+\omega^{}_2)}{\qty(\omega^{}_1+\omega^{}_2)^2-\omega^2_0}-\frac{\omega^{}_0A-B\qty(\omega^{}_1-\omega^{}_2)}{\qty(\omega^{}_1-\omega^{}_2)^2-\omega^2_0}}.\label{Cong''[OK}\end{equation}
+这个积分有两个明显的极点，我们用四维动量$\vb{k}^a=\qty(\omega^{}_0,\vb{k})$表示
+\begin{equation}k^2_{\pm}=\omega^2_0-\abs{\vb{k}}^2=\qty(\omega^{}_1\pm\omega^{}_2)^2-\abs{\vb{k}}^2.\end{equation}
+对两个频率带入色散律(\ref{pO323-=o--})，对于加号情形不难得到一个下限
+\begin{equation}k^2_+\geq	k^2_+\qty(\vb{k}^{}_1=\vb{0})=2\omega^2_0+2\omega^2_0=\qty(2\omega^{}_0)^2.\end{equation}
+这对应零温场条件(\ref{/841..9--*})，根据定义这就是多粒子的分支割线，其解析性请参考图 \ref{JIf--v//*/-55}。所以加号对应的极点是本质上零温的，也说明日落图修正和单圈修正一样，其中一部分给出零温紫外发散。自然的，减号情形就对应热涨落极点，通过\textsl{Cauchy-Schwartz}不等式不难得到上限
+\begin{equation}k^2_-\leq	k^2_+\qty(\vb{k}^{}_1=\vb{0})=2\omega^2_0-2\omega^2_0=0.\end{equation}
+可见上限为零，当然热涨落的$k^2$类空是必然的，因为在热场中其本质是\textsl{Eculidean}动量，定义参考\textsl{Wick}旋转(\ref{JIrsg11})。但是我们能看到热场的一个奇景：积分在动量原点处不解析。这其实是容易理解的，$k^2=0$说明相互作用产生零质量粒子，对于电磁场这就是第\ref{DFgg//}节中所描述的辐射现象，因此原点处的非解析性实际上就解释为，热场在不停的对外辐射，符合其接入热浴的效果。在割线附近微虚，我们不难得到
+\begin{equation}I^*\qty(\omega^{}_0)=I\qty(\omega^*_0),\quad 2\Im I\qty(\omega^{}_0)=I\qty(\omega^{}_0+i0)-I\qty(\omega^{}_0-i0).\end{equation}
+参考零温传播子的等式(\ref{Dufnv11v})，本质上这反映了分支割线处的间断，可以直接从原式(\ref{*/220..})读出。对于更一般的情形，我们给出割线图 \ref{FSHB..54400}
+\begin{center}\begin{tikzpicture}[scale=.8]\pgfmathsetmacro{\a}{4}\pgfmathsetmacro{\b}{2}\draw(\b,0)--(\a,0);\fill(\a,0)circle(2pt)node[above]{$\qty(m^{}_1+m^{}_2)^2$};\fill(\b,0)circle(2pt)node[below]{$\qty(m^{}_1-m^{}_2)^2$};\draw[decorate,decoration={zigzag,segment length=6pt,amplitude=2pt}](\a,0)--(\a+3,0)node[right]{$\Re k^2$};\draw[decorate,decoration={zigzag,segment length=6pt,amplitude=2pt}](-4+\b,0)--(\b,0);\draw(0,-2)--(0,2)node[right]{$\Im k^2$};\node at(\a+1,1.6){$k=\qty(\omega^{}_0=i\zeta^{}_u,\vb{k})$};\end{tikzpicture}\captionof{figure}{日落图外圈积分$I\qty(k^\mu_M)$在解析延拓下\\ 关于复变量$k^2$的割线结构图，此处两个传播子的裸质量任意}\label{FSHB..54400}\end{center}
+其中，外圈两个传播子各自的裸频率色散律为
+\begin{equation}\omega^2\qty(\vb{k}^{}_1)=\abs{\vb{k}^{}_1}^2+m^2_1,\quad \omega^2\qty(\vb{k}-\vb{k}^{}_1)=\abs{\vb{k}-\vb{k}^{}_1}^2+m^2_2.\end{equation}
+可以清晰的看到，原点必然处于分支割线上，其符合我们在第\ref{YtebVV}节中所做的计算，因为可以证明推迟传播子很好的避开了这个问题。关于原点的非解析性，在后续的热场计算中也会经常遇到，详情可以参考第\ref{VYgx00..34}节，这里不展开。\\
+\\
+目前形式并不适合进一步的和内线积分(\ref{VNM9746jd//})，所以第二步我们考虑用占有数重写这个积分。回顾到双曲余切和\textsl{BE}分布的关系(\ref{WodiYF6653})，我们引入记号
+$$A=\coth(\frac{\beta\omega^{}_1}{2})=1+2\expval{n^{}_1},\quad B=\coth(\frac{\beta\omega^{}_2}{2})=1+2\expval{n^{}_2},$$
+则从式(\ref{Cong''[OK})我们得到
+\begin{equation}\begin{aligned}I\qty(\omega^{}_0,\vb{k})=\frac{\pi^2}{\beta}\int\frac{\dd^3k^{}_1}{(2\pi)^3}&\left\{\frac{1}{\omega^{}_1+\omega^{}_2-\omega^{}_0}+2\frac{\omega^{}_0\expval{n^{}_1}+\expval{n^{}_2}\qty(\omega^{}_1+\omega^{}_2)}{\qty(\omega^{}_1+\omega^{}_2)^2-\omega^2_0}\right.\\&\left.\quad+\frac{1}{\omega^{}_1-\omega^{}_2+\omega^{}_0}+2\frac{\expval{n^{}_2}\qty(\omega^{}_1-\omega^{}_2)-\omega^{}_0\expval{n^{}_1}}{\qty(\omega^{}_1-\omega^{}_2)^2-\omega^2_0} \right\}.\end{aligned}\end{equation}
+整体而言，它可以分成三部分：
+\begin{enumerate}\item 和占有数无关的两项，根据\textsl{BdD}定理它们来自于$s=0$的\textsl{Matsubara}频率$$\frac{1}{\omega^{}_1+\omega^{}_2-\omega^{}_0}+\frac{1}{\omega^{}_1-\omega^{}_2+\omega^{}_0}.$$这对应真空态，因而最终结果由零温日落图修正确定，是积分(\ref{VNM9746jd//})的零温紫外发散部分；\item 外圈离散频率只出现在分母上的两项，只和$\expval{n^{}_2}$相关$$\expval{n^{}_2}\qty{\frac{\omega^{}_1+\omega^{}_2}{\qty(\omega^{}_1+\omega^{}_2)^2-\omega^2_0}+\frac{\omega^{}_1-\omega^{}_2}{\qty(\omega^{}_1-\omega^{}_2)^2-\omega^2_0}}=\expval{n\qty(\omega^{}_2)}\qty{\frac{\omega^{}_1+\omega^{}_2}{\qty(\omega^{}_1+\omega^{}_2)^2+\zeta^2_u}+\frac{\omega^{}_1-\omega^{}_2}{\qty(\omega^{}_1-\omega^{}_2)^2+\zeta^2_u}}.$$以类似的记号，在积分(\ref{VNM9746jd//})中给出\textsl{Matsubara}频率求和$$\sum_{\pm}\sum_u\frac{\pi^2\expval{n\qty(\omega^{}_2)}}{\qty{\omega^2_{\pm}+\zeta^2_u}\qty{\qty(\zeta^{}_p-\zeta^{}_u)^2+\omega^2_3}},\quad \omega^{}_{\pm}=\omega^{}_1\pm\omega^{}_2,\quad \omega^{}_3=\omega\qty(\vb{p}-\vb{k}).$$这个求和结构和外圈积分$I$是完全一致的，因此可以仿照上文处理，只需要做代换$$\omega^{}_1\to\omega^{}_2,\quad \omega^{}_2\to\omega^{}_3,\quad \omega^{}_0=i\zeta^{}_p;\quad \expval{n^{}_1}\to\expval{n^{}_2},\quad \expval{n^{}_2}\to \expval{n^{}_3}$$即可。最终对形如$\expval{n^{}_2}\expval{n^{}_3}$乘积的项做空间动量积分，其在高温下的发散性可以参考式(\ref{6554=-;L})；\item 分母也涉及外圈离散频率的两项，只和$\expval{n^{}_1}$相关$$\frac{\omega^{}_0\expval{n^{}_1}}{\qty(\omega^{}_1+\omega^{}_2)^2-\omega^2_0}-\frac{\omega^{}_0\expval{n^{}_1}}{\qty(\omega^{}_1-\omega^{}_2)^2-\omega^2_0}=\frac{i\zeta^{}_u\expval{n^{}_1}}{\qty(\omega^{}_1+\omega^{}_2)^2+\zeta^2_u}-\frac{i\zeta^{}_u\expval{n^{}_1}}{\qty(\omega^{}_1-\omega^{}_2)^2+\zeta^2_u}.$$此时积分(\ref{VNM9746jd//})中\textsl{Matsubara}频率求和为$$\sum_{\pm}\text{sgn}(\pm)\sum_u\frac{i\pi^2\zeta^{}_u\expval{n^{}_1}}{\qty{\omega^2_{\pm}+\zeta^2_u}\qty{\qty(\zeta^{}_p-\zeta^{}_u)^2+\omega^2_3}}.$$\end{enumerate}
+这意味着现在分母关于$\zeta^{}_u$是一个三次型，其\textsl{Matsubara}频率求和较为复杂，
 
 
 
