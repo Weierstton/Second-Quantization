@@ -10180,7 +10180,7 @@ $$D^{}_F(1,2)=\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_I(1)\hat{\psi}^{}_I(2)}}{0},
 按照一般原理，传播子由式(\ref{utile11})确定，因为外场$J$和相互作用无关，因此结论不变
 \begin{equation}C(1,2)=-\eval{\qty(\frac{1}{Z}\pdv{Z(J)}{J(1)}{J(2)})}_{J=0}=-\frac{1}{Z(0)}\eval{\pdv{Z(J)}{J^{}_1}{J^{}_2}}_{J=0}.\end{equation}
 由于这是相关函数的统计基础，因而后续一切和其相关的理论，对于相互作用场都适用。比如\textsl{SD}方程，其通用的实标量场形式由式(\ref{hu7t54nm7})确定，当时我们明确指出这个方程适用于任意的场。对于相互作用场，带入$\Lambda=\Lambda^{}_{\text{free}}+\Lambda^{}_{\text{int}}$以及真空态$\ket{0}\rightarrow\ket{\Omega}$，我们就得到相互作用场的\textsl{SD}方程
-\begin{equation}\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\qty(\hat{\Lambda}^{}_{\text{free}}+\hat{\Lambda}^{}_{\text{int}})\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{\Omega}=i\sum_k\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\cdots\hat{\psi}^{}_{k-1}\delta^{}_{kx}\hat{\psi}^{}_{k+1}\cdots\hat{\psi}^{}_n}}{\Omega}.\label{DSdfyo---n}\end{equation}
+\begin{equation}\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\qty(\hat{\Lambda}^{}_{\text{free}}+\hat{\Lambda}^{}_{\text{int}})\qty(\hat{\psi}^{}_x)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{\Omega}=i\sum_k\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\cdots\hat{\psi}^{}_{k-1}\delta^{}_{kx}\hat{\psi}^{}_{k+1}\cdots\hat{\psi}^{}_n}}{\Omega}.\label{DSdfyo---n}\end{equation}
 其中$\delta^{}_{\psi}$是场的\textsl{EL}导数。对于两点函数和自由\textsl{KG}场，实标量场对应真中性粒子$m=0$，注意这里仍然处于\textsl{Heisenberg}绘景，上式变为
 \begin{equation}\square\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_x\hat{\psi}^{}_1}}{\Omega}=-i\delta^{}_{1x}+\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_x)\hat{\psi}^{}_1}}{\Omega}.\end{equation}
 这个方程的解可以写为\textsl{LS}方程，暂时将\textsl{KG}的\textsl{Green}函数记为核$\varPi^{}_{KG}$，则我们得到
@@ -10728,21 +10728,21 @@ $$\mathfrak D^{(1)}_4(y,y,y,1,2,3)\implies D^{}_F(1,y)\mathfrak D^{(1)}_4(y,y,2,
 回顾到在第\ref{1pL//-..][rG}节中，我们引入了单粒子可约与不可约的概念，其中\textit{1PI}直观来讲就是无法再拆分的图。它们完全匹配上面关于$\mathfrak D^{}_4(1,2,3,4)$的两个表述，其中第\ref{Scv11+}点对应可约，第\ref{Sc2441+}点对应不可约。所以我们将满足第\ref{Sc2441+}点，去掉四个自由外腿后剩下的部分称为\textbf{四点\textit{1PI}}，直观的来讲它就是四点形式的自能。\\
 \\
 根据第\ref{Sc2441+}点，每一个四点\textit{1PI}的顶点数和修正级数相同，并且它们通过$\mathfrak D^{}_4(1,2,3,4)$的\textsl{SD}方程构成一个无穷级数。由于每一个四点\textit{1PI}四周都连接四条外腿，因此将外腿提出后可以对四点\textit{1PI}级数求和，记级数的总和为$\varPi$，则最终全连通四点函数可以写作
-\begin{equation}\mathfrak D^{}_4(4)=D^{}_FD^{}_F\hat{\varPi}D^{}_FD^{}_F.\label{sufFH}\end{equation}
-现在我们来定义这个算符$\hat{\varPi}$，方便起见将第$n$级修正的四点\textit{1PI}按顶点数记为$\varPi^{(n)}\qty(x^{}_1,x^{}_2,\ldots,x^{}_n)$，则一级修正(\ref{5478..4'})可以写作
-$$\mathfrak D^{(1)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega,$$
+\begin{equation}\mathfrak D^{}_4(1,2,3,4)=D^{}_FD^{}_F\hat{\varPi}^{}_4D^{}_FD^{}_F.\label{sufFH}\end{equation}
+现在我们来定义这个算符$\hat{\varPi}$，方便起见将第$n$级修正的四点\textit{1PI}按顶点数记为$\varPi^{(n)}_4\qty(x^{}_1,x^{}_2,\ldots,x^{}_n)$，则一级修正(\ref{5478..4'})可以写作
+$$\mathfrak D^{(1)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(1)}_4(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega,$$
 二级修正(\ref{BD1243/*/*})写作
-$$\mathfrak D^{(2)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(2)}(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2,$$
+$$\mathfrak D^{(2)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(2)}_4(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2,$$
 其余的就不写了。所以算符式(\ref{sufFH})可以具体打开为
-\begin{equation}\begin{aligned}&\mathfrak D^{}_4(1,2,3,4)\\&=\int D^{}_F(1,x)D^{}_F(2,x)\qty{\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega+\varPi^{(2)}(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2+\cdots}\\&=D^{}_F(1)D^{}_F(2)\circledast\qty{\varPi^{(1)}+\varPi^{(2)}+\cdots}\circledast D^{}_F(3)D^{}_F(4)=D^{}_FD^{}_F\circledast\varPi\circledast D^{}_FD^{}_F.\end{aligned}\label{NMT756==}\end{equation}
+\begin{equation}\begin{aligned}&\mathfrak D^{}_4(1,2,3,4)\\&=\int D^{}_F(1,x)D^{}_F(2,x)\qty{\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega+\varPi^{(2)}_4(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2+\cdots}\\&=D^{}_F(1)D^{}_F(2)\circledast\qty{\varPi^{(1)}_4+\varPi^{(2)}_4+\cdots}\circledast D^{}_F(3)D^{}_F(4)=D^{}_FD^{}_F\circledast\varPi^{}_4\circledast D^{}_FD^{}_F.\end{aligned}\label{NMT756==}\end{equation}
 也就是说，算符$\hat{\varPi}$作用到外腿上的本征值为$\varPi$，参照自能(\ref{UGYU[0274378][})可以定义为
-\begin{equation}\varPi=\text{Sum of all 4-point \textit{1PI} with 4 external legs}.\label{gRG-*000}\end{equation}
+\begin{equation}\varPi^{}_4=\text{Sum of all 4-point \textit{1PI} with 4 external legs}.\label{gRG-*000}\end{equation}
 基于顶点数和修正级数相同这一特点，我们称$\varPi^{(n)}$为\textbf{顶点修正 \textit{Vertex Correction}}，级数总和$\varPi$称为\textbf{顶点函数}。这就是全连通四点函数的结果，在形式上和\textsl{BD}级数(\ref{UYRIERY})的一级修正是一样的。并且按照性质(\ref{ors//2VB})，我们可以直接得到其和有效作用量的关系
-\begin{equation}\varPi(1,2,3,4)=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\pdv{\eta^{}_4}\Gamma^{}_{\text{int}}(\eta)}_{\eta=0}.\label{ZZXrgt}\end{equation}
+\begin{equation}\varPi^{}_4(1,2,3,4)=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\pdv{\eta^{}_4}\Gamma^{}_{\text{int}}(\eta)}_{\eta=0}.\label{ZZXrgt}\end{equation}
 这是不依赖于具体的相互作用的，同时也说明顶点函数和自能处于同一个理论框架内。按照这个公式，我们不难得到$\varPi$的物理含义，回顾到在第\ref{ha--yyub*}节中，式(\ref{CG;P1Y[]f})指出准经典近似下$\Gamma(\eta)\approx S(\psi)$，因此对于经典四次相互作用场我们得到
-$$\varPi^{}_{cl}(1,2,3,4)=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\pdv{\eta^{}_4}\qty(\lambda\eta^4)}_{\eta=0}=-24\lambda\delta^{}_{12}\delta^{}_{23}\delta^{}_{34}.$$
+$$\varPi^{cl}_4(1,2,3,4)=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\pdv{\eta^{}_4}\qty(\lambda\eta^4)}_{\eta=0}=-24\lambda\delta^{}_{12}\delta^{}_{23}\delta^{}_{34}.$$
 考虑量子修正后，我们在形式上得到
-\begin{equation}\varPi\propto\lambda+\text{quantum corrections}.\end{equation}
+\begin{equation}\varPi^{}_4\propto\lambda+\text{quantum corrections}.\end{equation}
 因此顶点函数确定了相互作用系数$\lambda$的修正，一般我们称之为\textbf{耦合常数}，比如\textsl{Ising}模型中式(\ref{65gg/--})确定的张量$J^{ij}$就是典型的耦合常数。关于\textsl{Ising}模型，我们在第\ref{VYgx00..34}节中会看到顶点函数在其中的作用。\\
 \\
 现在我们来证明，$\varPi$的引入的确可以不依赖于具体的相互作用。回到四点\textsl{SD}方程(\ref{8SG1/45764h})，暂时不指定相互作用形式
@@ -11267,7 +11267,7 @@ $$\abs{\mel**{\Omega}{\hat{\psi}(0)}{2}}^2\delta\qty((2m)^2-m^2),\quad q^2=(2m)^
 这就是式(\ref{ZxxCr})中常数$Z$的定义，也就是重整化常数。对比式(\ref{Vbdhr76})，我们看到$m^*$应该理解为单粒子实际观测质量$m$，这是实验测量的有限数值，由此我们精确定义了单粒子的测量。在裸场理解下，系数$Z$有更深层的含义，此时定义(\ref{Nfwf5647})应该写作
 \begin{equation}Z=\abs{\mel**{\Omega}{\hat{\psi}^{}_{\text{bare}}(0)}{1}}^2.\label{VV33'][00--}\end{equation}
 从二次量子化算符的角度，这就是真空中产生单粒子的概率密度。为了将此矩阵元归一化，我们需要引入\textbf{物理场}$\psi^{}_{\text{phy}}$，使得
-\begin{equation}\psi^{}_{\text{bare}}=\sqrt{Z}\psi^{}_{\text{phy}},\end{equation}
+\begin{equation}\psi^{}_{\text{bare}}=\sqrt{Z}\psi^{}_{\text{phy}},\label{0.21*/5=-=}\end{equation}
 这样其相应的矩阵元就给出
 \begin{equation}\abs{\mel**{\Omega}{\hat{\psi}^{}_{\text{phy}}(0)}{1}}^2=\frac{1}{Z}\abs{\mel**{\Omega}{\hat{\psi}^{}_{\text{bare}}(0)}{1}}^2=1.\end{equation}
 也就是说，重整化常数$Z$充当了裸场和物理场之间的归一化放缩因子，因此在英文层面“重整化”直译就是“重归一化”，这就是术语的来源。并且式(\ref{Vb--r76})说明重整化后，相互作用传播子和自由传播子相差一个系数$Z$，因此所谓重整化就是：将相互作用的裸场通过因子$Z$归一化为自由场，并利用极点移动$m\to m^{}_0$将全连通传播子调整为自由传播子形式，从而提取出可观测的物理参数。\\
@@ -13285,8 +13285,8 @@ $$\ket{2^{}_I}=A\hat{a}^\dagger_e\hat{a}^\dagger_f\ket{\Omega},\quad \ket{n^{}_I
 其中$A$和$B$为归一化系数，当然后续会自然约去。根据式(\ref{Mjg;;L]3498})，两者的内积确定散射矩阵元，将相互作用真空利用式(\ref{zhenbkong1})变为自由真空，我们得到
 \begin{equation}\mathfrak S^{}_{fi}=\mel**{n^{}_I}{\hat{\mathfrak S}}{2^{}_I}=\frac{\displaystyle\mel**{0}{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}\hat{a}^\dagger_e\hat{a}^\dagger_f}{0}}{\displaystyle\mel**{0}{\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}}{0}}.\label{hPf/0pb}\end{equation}
 这是精确的散射矩阵元，以相互作用绘景的\textsl{Dyson}级数表示的结果。为了计算这个量，我们需要将分母的占有数算符变为场位形算符并放入时序乘积中，以便用\textsl{Wick}定理打开。由于每个占有数算符对应无穷远处的自由粒子，为了计算方便，我们暂时不加说明的，直接将用相互作用绘景下的场位形算符替换，考虑到各自的时间限制我们有
-\begin{equation}\begin{aligned}&\hat{a}\to \hat{\psi}^-_I(x)=\sum_{\vb{p}}\frac{1}{\sqrt{2E^{}_{\vb{p}}}}\hat{a}^{}_{\vb{p}}\exp(-ipx)=\hat{\psi}^{}_I(x)\theta\qty(x^0),\\& \hat{a}^\dagger\to\hat{\psi}^+_I(x)=\sum_{\vb{p}}\frac{1}{\sqrt{2E^{}_{\vb{p}}}}\hat{a}^\dagger_{\vb{p}}\exp(ipx)=\hat{\psi}^{}_I(x)\theta\qty(-x^0).\end{aligned}\label{MNeurg7766}\end{equation}
-再次提醒，实标量场没有共轭算符，并且自由态必然对应相互作用绘景。利用$\theta$函数，将场位形算符纳入时序乘积中，我们得到替换
+\begin{equation}\begin{aligned}&\hat{a}\to \hat{\psi}^-_I(x)=\sum_{\vb{p}}\frac{1}{\sqrt{2E^{}_{\vb{p}}}}\hat{a}^{}_{\vb{p}}\exp(-ipx)=\hat{\psi}^{}_I\qty(x\vert x^{}_0\to\infty),\\& \hat{a}^\dagger\to\hat{\psi}^+_I(x)=\sum_{\vb{p}}\frac{1}{\sqrt{2E^{}_{\vb{p}}}}\hat{a}^\dagger_{\vb{p}}\exp(ipx)=\hat{\psi}^{}_I\qty(x\vert x^{}_0\to-\infty).\end{aligned}\label{MNeurg7766}\end{equation}
+再次提醒，实标量场没有共轭算符，并且自由态必然对应相互作用绘景。根据时间符号，将场位形算符纳入时序乘积中，我们得到替换
 $$\begin{aligned}&\mel**{0}{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}\hat{a}^\dagger_e\hat{a}^\dagger_f}{0}\\&=\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_{I,1}\hat{\psi}^{}_{I,2}\cdots\hat{\psi}^{}_{I,n}\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)\hat{\psi}^\dagger_{I,e}\hat{\psi}^\dagger_{I,f}}}{0}.\end{aligned}$$
 将其回代入矩阵元(\ref{hPf/0pb})，我们就得到一个相互作用$n+2$点函数
 \begin{equation}\begin{aligned}\mathfrak S^{}_{fi}&\sim\frac{\displaystyle\mel**{0}{\mathbb T\qty{\hat{\psi}^{}_{I,1}\hat{\psi}^{}_{I,2}\cdots\hat{\psi}^{}_{I,n}\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)\hat{\psi}^\dagger_{I,e}\hat{\psi}^\dagger_{I,f}}}{0}}{\displaystyle\mel**{0}{\mathbb T\qty{\exp(i\int_{\mathscr M}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_I)\dd\Omega)}}{0}}\\&=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\hat{\psi}^{}_2\cdots\hat{\psi}^{}_n\hat{\psi}^{}_e\hat{\psi}^{}_f}}{\Omega}=D(1,2,\ldots,n,e,f).\end{aligned}\label{Loac76G}\end{equation}
@@ -13295,7 +13295,7 @@ $$\begin{aligned}&\mel**{0}{\hat{a}^{}_1\hat{a}^{}_2\cdots\hat{a}^{}_n\mathbb T\
 如果我们直接按\textsl{Wick}定理打开，并画出对应的\textsl{Feynman}图，就能从式(\ref{;;445;=;})和式(\ref{fxf///=-p=})得到相应的散射振幅$\mathcal M^{}_{fi}=\mathcal A$的各级修正。当然对于自由粒子，其唯一的确定量是四维动量，因此散射振幅必然处于动量表象，从而我们得到振幅的计算式
 \begin{equation}\mathcal A\sim\int D(1,2,\ldots,n,e,f)\exp(i\sum_j k^{}_jx^{}_j)\prod_{j=1}^{n+2}\dd x^{}_j=D\qty(k^{}_1,k^{}_2,\ldots,k^{}_n,k^{}_e,k^{}_f).\label{Toub56}\end{equation}
 这样以来，各级修正的计算可以通过动量\textsl{Feynman}图得到。以$2\to2$的四次相互作用散射为例，我们写出其二级修正
-$$\mathcal A^{(2)}\sim\quad \tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[above left=1 cm of a,coordinate](b){};\vertex[below left=1 cm of a,coordinate](c){};\vertex[right=1 cm of a,coordinate](d){};\vertex[above right=1 cm of d,coordinate](e){};\vertex[below right=1 cm of d,coordinate](f){};\diagram*{(b)--[charged scalar](a)--[half left,charged scalar](d)--[charged scalar](e),(c)--[charged scalar](a)--[half right,charged scalar](d)--[charged scalar](f)};\end{feynman}}\quad+\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[below left=1 cm of a,coordinate](b){};\vertex[below left=1 cm of b,coordinate](c){};\vertex[above left=1 cm of a,coordinate](d){};\vertex[below right=1 cm of a,coordinate](e){};\vertex[above right=1 cm of a,coordinate](f){};\vertex[below right=1 cm of b,coordinate](g);\diagram*{(c)--[charged scalar](b)--[half left,charged scalar](g)--[half left,charged scalar](b)--[charged scalar](a)--[charged scalar](e);(d)--[charged scalar](a)--[charged scalar](f)};\end{feynman}}\quad+\quad\cdots.$$
+\begin{equation}\mathcal A^{(2)}\sim\quad	\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[above left=1 cm of a,coordinate](b){};\vertex[below left=1 cm of a,coordinate](c){};\vertex[right=1 cm of a,coordinate](d){};\vertex[above right=1 cm of d,coordinate](e){};\vertex[below right=1 cm of d,coordinate](f){};\diagram*{(b)--[charged scalar](a)--[half left,charged scalar](d)--[charged scalar](e),(c)--[charged scalar](a)--[half right,charged scalar](d)--[charged scalar](f)};\end{feynman}}\quad+\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[below left=1 cm of a,coordinate](b){};\vertex[below left=1 cm of b,coordinate](c){};\vertex[above left=1 cm of a,coordinate](d){};\vertex[below right=1 cm of a,coordinate](e){};\vertex[above right=1 cm of a,coordinate](f){};\vertex[below right=1 cm of b,coordinate](g);\diagram*{(c)--[charged scalar](b)--[half left,charged scalar](g)--[half left,charged scalar](b)--[charged scalar](a)--[charged scalar](e);(d)--[charged scalar](a)--[charged scalar](f)};\end{feynman}}\quad+\quad\cdots.\label{101.//6}\end{equation}
 这里我们没有标注动量\textsl{Feynman}规则，读者需要牢记顶点处动量守恒。可以看到这两个图都是连通图，但第二个图在其中一条外腿上有一个一级自能，它其实并不参与具体的散射。因此在这一级我们想保留的，只有第一个图，其余的都应该抛弃，或者以某种方式并入不同级修正。\\
 \\
 现在我们来考察如何剔除这些多于信息，最终的目标是建立相互作用多点关联函数的动量表象和散射振幅之间的精确等式，也就是
@@ -13307,23 +13307,42 @@ $$\pdv{J(k)}=\int\pdv{J(x)}{J(k)}\pdv{J(x)}\dd x=\int\dd x\exp(-ikx)\pdv{J(x)}.$
 利用这个导数，根据式(\ref{Toub56})便可以从时空点函数得到其动量表象
 \begin{equation}D\qty(k^{}_1,k^{}_2,\ldots,k^{}_n,k^{}_e,k^{}_f)=\frac{i^{2n+2}}{Z(0)}\eval{\pdv{J\qty(k^{}_1)}\pdv{J\qty(k^{}_2)}\cdots\pdv{J\qty(k^{}_n)}\pdv{J\qty(k^{}_e)}\pdv{J\qty(k_f)}Z(J)}_{J(k)=0}.\end{equation}
 对生成函数代入非连通图的指数化(\ref{GDQERQPDhu})，经过类似的计算，我们可以从式(\ref{889/dfg-*-/FFG})得到全连通多点函数
-\begin{equation}\mathfrak D\qty(k^{}_1,k^{}_2,\ldots,k^{}_n,k^{}_e,k^{}_f)=(-1)^{n+1}\eval{\pdv{J\qty(k^{}_1)}\pdv{J\qty(k^{}_2)}\cdots\pdv{J\qty(k_f)}W(J)}_{J(k)=0}.\end{equation}
+\begin{equation}F(\mathcal A)=\mathfrak D\qty(k^{}_1,k^{}_2,\ldots,k^{}_n,k^{}_e,k^{}_f)=(-1)^{n+1}\eval{\pdv{J\qty(k^{}_1)}\pdv{J\qty(k^{}_2)}\cdots\pdv{J\qty(k_f)}W(J)}_{J(k)=0}.\label{451//=-[}\end{equation}
 这样我们就完成了第一步：排除所有振幅中的非连通图，当然不难看到其并非我们所想要的。为了进一步排除多余的信息，我们不妨从\textsl{SD}方程出发，这是对全连通多点函数最精确的描述。相互作用\textsl{SD}方程由式(\ref{DSdfyo---n})确定，为了普适性我们记自由场方程为$\delta^{}_{\psi}\Lambda^{}_{\text{free}}=\hat{\mathcal D}^{}_x\psi(x)$，则$n$点函数的\textsl{SD}方程为
-\begin{equation}\begin{aligned}&\mel**{\Omega}{\mathbb T\qty{\qty(\hat{\mathcal D}^{}_x\hat{\psi}^{}_x)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{\Omega}=\hat{\mathcal D}^{}_x\mathfrak D(x,1,2,\ldots,n)\\&=i\sum_l\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\cdots\hat{\psi}^{}_{l-1}\delta^{}_{lx}\hat{\psi}^{}_{l+1}\cdots\hat{\psi}^{}_n}}{\Omega}-\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_x)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{\Omega}.\end{aligned}\end{equation}
-我们所需要的是动量表象，因此需要对\textsl{SD}方程做\textsl{Fourier}变换，这里一共涉及$n+1$次变换。先计算左侧关于$x$的变换
-$$\hat{\mathcal D}\qty(k^{}_x)\mathfrak D(k^{}_x,1,2,\ldots,n)=\int e^{ixk^{}_x}\hat{\mathcal D}^{}_x\mathfrak D(x,1,2,\ldots,n)\dd x=\text{边界项}-\int\qty(\hat{\mathcal D}^{}_xe^{ixk^{}_x})\mathfrak D(x,1,2,\ldots,n)\dd x.$$
-由于相位$e^{ixk^{}_x}$是场波动方程的解，因此必然有$\hat{\mathcal D}^{}_xe^{ixk^{}_x}\equiv0$，比如\textsl{KG}场$\hat{\mathcal D}^{}_x=\square^{}_x+m^2_0$，从而左侧只剩下边界项。对于右侧，我们得到
-$$\int e^{ixk^{}_x}(\text{右侧})\dd x=i\sum_l\mathfrak D(1,\ldots,l-1,l+1,\ldots,n)e^{ilk^{}_x}-\int e^{ixk^{}_x}\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_x)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{\Omega}\dd x.$$
-可见对于
-
-
-
-
-
-
-
-
-
+\begin{equation}\begin{aligned}&\mel**{\Omega}{\mathbb T\qty{\qty(\hat{\mathcal D}^{}_1\hat{\psi}^{}_1)\hat{\psi}^{}_2\cdots\hat{\psi}^{}_n}}{\Omega}=\hat{\mathcal D}^{}_x\mathfrak D(1,2,\ldots,n)\\&=i\sum_l\delta^{}_{l1}\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_2\cdots\hat{\psi}^{}_{l-1}\hat{\psi}^{}_{l+1}\cdots\hat{\psi}^{}_n}}{\Omega}-\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\psi}^{}_1)\hat{\psi}^{}_1\cdots\hat{\psi}^{}_n}}{\Omega}.\end{aligned}\end{equation}
+注意式(\ref{DSdfyo---n})中的变量$x$只是一个记号，此处直接针对$x^{}_1$计算是没有任何问题的。我们所需要的是动量表象，因此需要对\textsl{SD}方程做\textsl{Fourier}变换，这里一共涉及$n$次变换。先计算左侧关于$x^{}_1$的变换
+$$(\text{左侧})^{}_{k^{}_1}=\int e^{ix^{}_1k^{}_1}\hat{\mathcal D}^{}_1\mathfrak D(1,2,\ldots,n)\dd\Omega^{}_1=\hat{\mathcal D}\qty(k^{}_1)\mathfrak D(k^{}_1,2,\ldots,n)-\int\qty(\hat{\mathcal D}^{}_1e^{ix^{}_1k^{}_1})\mathfrak D(1,2,\ldots,n)\dd\Omega^{}_1.$$
+由于相位$e^{ixk^{}_x}$是场波动方程的解，因此必然有$\hat{\mathcal D}^{}_xe^{ixk^{}_x}\equiv0$，比如\textsl{KG}场$\hat{\mathcal D}^{}_x=\square^{}_x+m^2_0$，从而左侧只剩下边界项
+\begin{equation}\int e^{ix^{}_1k^{}_1}\hat{\mathcal D}^{}_1\mathfrak D(1,2,\ldots,n)\dd\Omega^{}_1=\hat{\mathcal D}\qty(k^{}_1)\mathfrak D(k^{}_1,2,\ldots,n).\end{equation}
+这就是最基本的\textsl{Fourier}变换的结果。对于右侧，记$\delta^{}_{\psi}\Lambda^{}_{\text{int}}\qty(\psi^{}_x)=\mathcal V^{}_x$，并记$\hat{l}$为消除变量$x^{}_l$，我们得到
+$$\int e^{ix^{}_1k^{}_1}(\text{右侧})\dd\Omega^{}_1=i\sum_l\mathfrak D\qty(2,\ldots,\hat{l},\ldots,n)e^{ix^{}_lk^{}_1}-\int e^{ix^{}_1k^{}_1}\mel**{\Omega}{\mathbb T\qty{\hat{\mathcal V}^{}_1\hat{\psi}^{}_2\cdots\hat{\psi}^{}_n}}{\Omega}\dd\Omega^{}_1.$$
+其中接触项给出一个$n-2$点函数，以及一个相位因子，第二项是相互作用部分，它和我们所需要的振幅有关，后续会看到。这里我们\emph{默认均值是取连通的}。\\
+\\
+现在我们重复上述的步骤于每一个变量，对方程两侧作用$\prod\limits_i\hat{\mathcal D}^{}_i$，将各接触项用\textsl{SD}方程展开，并对每个变量取动量表象，给出
+$$\begin{aligned}\text{左侧}&=\bigintss\prod_i^n\qty(\dd\Omega^{}_i\exp{i\sum_ix^{}_ik^{}_i}\hat{\mathcal D}^{}_i)\mathfrak D(1,\ldots,n)=\qty[\prod_i^n\hat{\mathcal D}\qty(k^{}_i)]\mathfrak D\qty(k^{}_1,k^{}_2,\ldots,k^{}_n),\\ \text{右侧}&=i^n\bigintss\prod_i^n \qty(\dd\Omega^{}_i\exp{i\sum_i x^{}_ik^{}_i})\qty[\sum_{\qty{l^{}_i\neq l^{}_j}}\delta\qty(x^{}_{l^{}_i}-x^{}_i)\mathfrak D\qty(\ldots,\hat{l}^{}_i,\hat{l}^{}_j,\ldots)]-\text{相互作用项},\\ \substack{\displaystyle\text{相互}\\ \displaystyle\text{作用项}}&=\bigintss\prod_i^n\qty(\dd\Omega^{}_i\exp{i\sum_ix^{}_ik^{}_i})\qty{\sum_{a=1} i^{a-1}\sum_{\qty{l^{}_{a-1}}}\delta\qty(x^{}_{l^{}_a}-x^{}_a)\mel**{\Omega}{\mathbb T\qty{\hat{\mathcal V}^{}_1\hat{\psi}^{}_{l^{}_a}\cdots\hat{\mathcal V}^{}_a\cdots}}{\Omega}}.\end{aligned}$$
+这个结果中，左侧的动量表象暂时是清晰的，重点是右侧的部分。先考察接触项，在目前的记号下对$x^{}_i$积分给出相位$\exp(ix^{}_{l^{}_i}k^{}_i)$。但不要忘记$x^{}_{l^{}_i}\in\qty{x^{}_i}$，其和$x^{}_i$都是多点函数的变量，因此我们会得到
+$$\int \dd\Omega^{}_i\dd\Omega^{}_{l^{}_i}\exp(ix^{}_ik^{}_i+ix^{}_{l^{}_i}k^{}_{l^{}_i})\delta\qty(x^{}_{l^{}_i}-x^{}_i)=\delta\qty(k^{}_{l^{}_i}+k^{}_i).$$
+在去除所有的变量后，零点函数为$\mathfrak D\qty(\hat{1},\ldots,\hat{n})=Z(0)/Z(0)=1$，最终这一项会给出乘积的求和
+$$\prod_i\sum_{\qty{l^{}_i\neq l^{}_j}}\delta\qty(k^{}_{l^{}_i}+k^{}_i)\delta\qty(k^{}_{l^{}_j}+k^{}_i)\equiv0,$$
+因为它不为零的情况只有$k^{}_1=\cdots=k^{}_n=0$，这是不可能的。再转向相互作用项，可以参考第\ref{Tj][p--}节的四顶点函数$\varPi^{}_4$证明，这一部分最终给出的是多顶点函数$\varPi^{}_n$的动量表象，以有效作用量表达式(\ref{ors//2VB})写作
+\begin{equation}-\text{相互作用项}=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\cdots\pdv{\eta^{}_n}\Gamma^{}_{\text{int}}(\eta)}_{\eta=0}=\varPi^{}_n\qty(k^{}_1,k^{}_2,\ldots,k^{}_n).\end{equation}
+综合前文的结论，我们写出\textsl{SD}方程的动量表象，其中算子的动量表象为$\hat{\mathcal D}^{-1}\qty(k^{}_i)=\mathfrak C\qty(k^{}_i)$，注意目前我们所处理的场是裸场$\psi^{}_{\text{bare}}$，从而多点连通函数给出
+\begin{equation}\mathfrak D\qty(k^{}_1,\ldots,k^{}_n)^{}_{\text{bare}}=\qty[\prod_i^n\hat{\mathcal D}\qty(k^{}_i)]^{-1}\varPi^{}_n\qty(k^{}_1,\ldots,k^{}_n)^{}_{\text{bare}}=\qty[\prod_i^n\mathfrak C\qty(k^{}_i)]\varPi^{}_n\qty(k^{}_1,\ldots,k^{}_n)^{}_{\text{bare}}.\label{SHnagd/00}\end{equation}
+但是根据第\ref{Dv-//*/228}节的内容我们知道，单个真实粒子满足质量壳条件$k^2=m^2$，这意味着真实的物理散射过程要求式(\ref{SHnagd/00})处于质量壳上。同时\textsl{KG}场的$\mathfrak C(k)$在质量壳上需要重整化为式(\ref{Vb--r76})，于是式(\ref{SHnagd/00})的质量壳约束给出
+\begin{equation}\mathfrak D\qty(k^{}_1,\ldots,k^{}_n)^{}_{\text{phy}}=\qty[\prod_i^n\eval{\mathfrak C\qty(k^{}_i)}_{k^2_i=m^2}]\varPi^{}_n\qty(k^{}_1,\ldots)^{}_{\text{phy}}=\qty[\prod_i^n\frac{iZ}{k^2_i-m^2+i\epsilon}]\varPi^{}_n\qty(k^{}_1,\ldots)^{}_{\text{phy}}.\label{Vfwer238[PO}\end{equation}
+回到散射过程，在式(\ref{451//=-[})中我们已经说明振幅和全连通多点函数有关，并且式(\ref{101.//6})指出外腿对应的传播子不计入振幅中。同时考虑到裸场位形的重整化由式(\ref{0.21*/5=-=})控制，参考式(\ref{Vfwer238[PO})我们写出
+$$\eval{F(\mathcal A)}_{k^2_i=m^2}=\eval{\mathfrak D\qty(k^{}_1,\ldots,k^{}_n)^{}_{\text{bare}}}_{k^2_i=m^2}=\qty(\sqrt{Z})^n\mathfrak D\qty(k^{}_1,\ldots,k^{}_n)^{}_{\text{phy}}=\qty[\prod_i^n\frac{iZ}{k^2_i-m^2+i\epsilon}]\mathcal A.$$
+其中将入射和出射粒子都放在$1$到$n$的计数中了，若将两者分离只需要相应的加入对应的动量即可，重复上述操作便能得到散射振幅的\textbf{\textsl{LSZ}约化公式 \textit{LSZ Reduction Formula}} (\textsl{H.Lehmann}，\textsl{K.Symanzik}，\textsl{W.Zimmermann}，1955)
+\begin{equation}\begin{aligned}&\mathfrak D\qty(k^{}_1,\ldots,k^{}_n,p^{}_1,\ldots,p^{}_u)^{}_{\text{phy}}=\qty[\prod_i^n\frac{i\sqrt{Z}}{k^2_i-m^2+i\epsilon}]\qty[\prod_j^u\frac{i\sqrt{Z}}{p^2_j-m^2+i\epsilon}]\mathfrak S^{}_{fi},\\&\mathfrak S^{}_{fi}=\mathcal A=\mel**{k^{}_1,\ldots,k^{}_n}{\hat{\mathfrak S}}{p^{}_1,\ldots,p^{}_u}=\qty(\sqrt{Z})^{n+u}\varPi^{}_n\qty(k^{}_1,\ldots,k^{}_n,p^{}_1,\ldots,p^{}_u)^{}_{\text{phy}}.\end{aligned}\end{equation}
+这样就完成了第二步：将所有单粒子对应的外腿上，场位形算符中不包含在占有数算符内的信息都提出，只剩下真正有效的多点\textit{1PI}的顶点函数。这就是\textsl{LSZ}约化公式所要说明的，它将一个全连通多点函数翻译为一个连着各散射粒子态的散射振幅，而散射振幅最终是以重整化后的\textit{1PI}体现的。\\
+\\
+对于\textsl{LSZ}约化公式的非路径积分证明，请参考\cite{L3p}\S7.2，这里我们不展开。根据\textsl{LSZ}约化公式，散射振幅是从全连通多点函数中去除所有外腿的结果，这个操作称为\textsl{Feynman}图的\textbf{截腿 \textit{Amputate}}，相应的图称为\textbf{截腿图}。这里展示一个典型的截腿图
+$$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[coordinate,right=6 cm of a](b){};\vertex[coordinate,below right=1.5 cm of a](c){};\vertex[coordinate,above left=2 cm of b](d){};\vertex[coordinate,left=2.5 cm of b](e){};\vertex[coordinate,above right=.8 cm of c](f){};\draw(e)ellipse(.5 and 1.3);\draw(f)ellipse(.2 and .5);\vertex[coordinate,right=.5 cm of a](n1){};\vertex[coordinate,above=.8 cm of n1](n2){};\vertex[coordinate,left=.8 cm of b](n3){};\vertex[coordinate,above=.5 cm of n3](n4){};\diagram*{(a)--(b),(c)--(d),(n1)--[half left](n2)--[half left](n1),(n3)--[half left](n4)--[half left](n3)};\draw[dashed](1.2,.8)--(1.2,-1.2);\draw[dashed](4,1.4)--(4.8,-.8);\end{feynman}}\quad\xrightarrow{\text{\large Amputate}}\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[coordinate](a){};\vertex[coordinate,right=6 cm of a](b){};\vertex[coordinate,below right=1.5 cm of a](c){};\vertex[coordinate,above left=2 cm of b](d){};\vertex[coordinate,left=2.5 cm of b](e){};\vertex[coordinate,above right=.8 cm of c](f){};\draw(e)ellipse(.5 and 1.3);\draw(f)ellipse(.2 and .5);\diagram*{(a)--(b),(c)--(d)};\end{feynman}}.$$
+其中我们去除了包含单圈发散的两个外腿，剩下的是\textit{1PI}。从这个图不难看到，实际上\textsl{LSZ}约化就是式(\ref{NMT756==})的推广，我们完全可以按照\textsl{LSZ}约化来定义顶点函数。这样我们具体写出振幅的表达式
+\begin{equation}\mathcal A=\substack{\displaystyle\text{Sum of all connected, amputated Feynman diagrams, with}\\ \\\displaystyle\text{each external point corresponds to a particle in scattering state.}}\end{equation}
+若我们将其推广至复标量场，并将反粒子纳入考量，则将动量延拓至负值后，我们得到\textbf{交叉对称性}
+\begin{equation}\eval{\mel**{\cdots\psi(\vb{p})}{\hat{\mathfrak S}}{\cdots}}_{\vb{p}=-\vb{k}}=\mel**{\cdots}{\hat{\mathfrak S}}{\psi^*(\vb{k})\cdots},\end{equation}
+其中$\psi^*$是反粒子散射态，这里我们将三维动量反向，对应反粒子。但需要强调的是，\textsl{LSZ}约化并不能用于具体的计算，因为想直接得到完整的顶点函数是不可能的，我们依旧需要通过\textsl{GML}定理打开多点关联函数，但\textsl{LSZ}约化指出修正图需要截腿。
 
 
 
@@ -13358,10 +13377,10 @@ $$\int e^{ixk^{}_x}(\text{右侧})\dd x=i\sum_l\mathfrak D(1,\ldots,l-1,l+1,\ldo
 \\
 需要强调的是，我们这里所讨论的背景依旧是平衡场，此处主要研究的是场关于平衡态的\emph{微小偏离}的演化，其主要由\emph{线性响应}反应。在第\ref{landaoo908}节中，这一条件由弱外场$h\approx0$确定，因而我们得到的是空间层面的线性响应。关于大尺度的平衡偏离，请参考第\ref{haergong}节的非平衡统计，这里不做过多的阐述。
 
-\subsection{非相对论性热力学响应}
-\noindent 作为后续相对论性场讨论的起点，我们先来考察非相对论性的热力学系统的响应。\\
+\subsection{非相对论性线性响应}
+\noindent 作为后续相对论性场讨论的起点，我们先来考察非相对论性的热力学系统的响应，并将其推广至非相对论性量子体系。\\
 \\
-和第\ref{haergong}节一样，我们从单个热力学量$x$出发，此时其为时间的函数$x=x(t)$。依旧通过关于熵的零阶热力学共轭量，我们引入和时间相关的外场
+和第\ref{landaoo908}节一样，我们从单个热力学量$x$出发，此时其为时间的函数$x=x(t)$。依旧通过关于熵的零阶热力学共轭量，我们引入和时间相关的外场
 $$h(t)\theta(t)=-\pdv{S'}{x(t)}\implies S=\int L(x,t)\dd t,\quad L(x,t)=L^{}_0-h(t)x(t)\theta(t).$$
 注意这里的$\theta(t)$函数确保了外场只在时刻$t$之后加入，这样热力学量$x(t)$的动力学表述，就和单粒子的\textsl{Lagrange}表述相同。仍然在形式上记$L^{}_0$的\textsl{EL}方程为
 $$\delta^{}_xL^{}_0=\hat{\mathcal D}^{}_tx(t)=0,$$
@@ -13763,9 +13782,7 @@ $$b^{}_{kk} = 0.$$
 同时参考结构图\ \ref{as223}可以发现，向量空间的分裂是以孤立重根为基础的，因而空间$\mathbb V^{}_{(i)}$应当作为子流形上的切空间，而非重根对应的补空间$\complement^{}_{\mathbb V^{}_{(i)}}\mathbb V^{}_{(i+1)}$是相应的法空间。这样一来，微扰对本征值的分裂体现为流形的分裂，下面我们具体讨论其几何框架。
 \subsection{覆叠空间和纤维丛}\label{xianquh556400}
 
-
-
-%\subsection{本征方程的丛结构}
+\subsection{本征方程的丛结构}
 \noindent 基于上述纤维丛理论，我们来处理本征值问题，事实上本征值的丛结构就是微扰的几何背景。方便起见，我们下文中考察实对称矩阵$\vb{A}^{}_{ab}=\vb{A}^{}_{ba}$，其所处向量空间记为$\mathbb V$。对于量子系统只需将矩阵元过渡为正则量子化算符即可，当然其允许连续谱的存在，这一点我们单独处理。\\
 \\
 对于离散的本征系统，记号和第\ref{DFVO)2)//}节保持一致，这里再次整理一下。$\vb{A}^{}_{ab}$在空间$\mathbb V$中的主值均为实数，集合记为
