@@ -19,13 +19,13 @@ The fundamental structure and physical insights comes from one of the famous and
 * Quantum field theory for absolute zero temperature.
 * Thermal field in a heat bath, including both thermodynamical equilibrium and non-equilibrum system.
 * Effective/conformal aspects of fields.
-* Quantum behavior of the gravitational fields. and a glance of the gravitational quantization.
+* Quantum behavior of the gravitational fields, and a glance of the gravitational quantization.
 
 Highly concentrated on statistical and geometrical properties of fields, and the anomalies rooted from quantum flucuation.
 
-Generally focus on the finite temperature field theory, and litte calculation of the scattering sections, so if more applications are needed, please refer to the real QFT textbooks.
+Generally focus on the finite temperature field theory, and little calculation of the scattering sections, so if more applications are needed, please refer to the real QFT textbooks.
 
-**Absoultly not for beginners !!**
+**Absolutely not for beginners !!**
 
 ## Prerequisite 
 
