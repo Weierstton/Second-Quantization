@@ -8,6 +8,13 @@ The fundamental structure and physical insights comes from one of the famous and
 
 <<Курс теоретической физики>>, or _Course of Theoretical Physics_ in english, initiated by Lev Landau and written in collaboration with his student Evgeny Lifshitz starting in the late 1930s.
 
+The major publication is the pdf file, which is
+[二次量子化.pdf](二次量子化.pdf)
+
+And the LaTex code file is
+[二次量子化.tex](二次量子化.tex),
+which is hard to read, I didn't rearrange the entire codes.
+
 # *Table of contents*
 1. [Basics](#basics)
 2. [Prerequisite](#prerequisite)
@@ -16,10 +23,13 @@ The fundamental structure and physical insights comes from one of the famous and
 
 ## Basics
 
-* Quantum field theory for absolute zero temperature.
+* Ideology of the second quantization, emerged from the 1D harmonic oscillator.
+* Landau-Ginzburg second order phase transition theory and many-body dynamics.
+* Quantum field theory for absolute zero temperature, and standard model of particles.
 * Thermal field in a heat bath, including both thermodynamical equilibrium and non-equilibrum system.
-* Effective/conformal aspects of fields.
+* Effective/conformal aspects of fields, emerged from the renormalization theory.
 * Quantum behavior of the gravitational fields, and a glance of the gravitational quantization.
+* More in appendix, with effective turbulence field theory, stochastic geometry, topology of the Feynman diagrams, and ads/cft duality.
 
 Highly concentrated on statistical and geometrical properties of fields, and the anomalies rooted from quantum flucuation.
 
