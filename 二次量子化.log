@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  12 JUN 2026 01:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  13 JUN 2026 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5872,21 +5872,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 5014--5018
 [245]
 Underfull \hbox (badness 10000) in paragraph at lines 5046--5050
 
- []
-
-
-Overfull \hbox (4.62666pt too wide) in paragraph at lines 5050--5052
-\C70/rm/m/n/10/79 Ô \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/10/66 / \C70/rm/m/n/10/67
- e \C70/rm/m/n/10/81 Í \C70/rm/m/n/10/4e é \C70/rm/m/n/10/6c € \C70/rm/m/n/10/5
-1 ˝ \C70/rm/m/n/10/5b ¸ \C70/rm/m/n/10/65 p \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/
-5b ö \C70/rm/m/n/10/4e I\T1/cmr/m/n/10 (-20) ([]9.4.130[])|\C70/rm/m/n/10/30 ^^
-B| \C70/rm/m/n/10/7c ˚ \C70/rm/m/n/10/7e ﬂ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/5
-7 ˙ \C70/rm/m/n/10/78 @ \C70/rm/m/n/10/6f ^^T \C70/rm/m/n/10/53 ^^V \C70/rm/m/n
-/10/65 π \C70/rm/m/n/10/7a  \C70/rm/m/n/10/75 1 \C70/rm/m/n/10/67 ^^@ \C70/rm/
-m/n/10/59 ' \C70/rm/m/n/10/71 µ \C70/rm/m/n/10/52 $ \C70/rm/m/n/10/63 n \C70/rm
-/m/n/10/76 Ñ\T1/cmr/m/sl/10 (-20) EL\C70/rm/m/n/10/65 π \C70/rm/m/n/10/7a $\OM
-L/cmm/m/it/10 ^^N[]\OT1/cmr/m/n/10 (-20) ^^C = \OML/cmm/m/it/10 ^^N[][] \OT1/cm
-r/m/n/10 (-20) =
  []
 
 
@@ -15396,19 +15381,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 13167--13171
  []
 
 
-Overfull \hbox (14.00069pt too wide) in paragraph at lines 13173--13175
-\C70/rm/m/n/10/51 h \C70/rm/m/n/10/5c @ \C70/rm/m/n/10/91 œ|\C70/rm/m/n/10/ff ^
-^L| \C70/rm/m/n/10/54 å \C70/rm/m/n/10/8f ì \C70/rm/m/n/10/51 ˙ \C70/rm/m/n/10/
-52 ^^F \C70/rm/m/n/10/90 S \C70/rm/m/n/10/65 ‡ \C70/rm/m/n/10/51 s|\C70/rm/m/n/
-10/30 ^^B| \C70/rm/m/n/10/56 ‡ \C70/rm/m/n/10/4e : \C70/rm/m/n/10/97 ^ \C70/rm/
-m/n/10/5f 9 \C70/rm/m/n/10/60 ' \C70/rm/m/n/10/90 S \C70/rm/m/n/10/4e ^^M \C70/
-rm/m/n/10/5f q \C70/rm/m/n/10/54 Õ \C70/rm/m/n/10/52 ø \C70/rm/m/n/10/65 c \C70
-/rm/m/n/10/5c ^^D|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/62 @ \C70/rm/m/n/10/4e 
-Â$\OML/cmm/m/it/10 s$\C70/rm/m/n/10/6c ‚ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/51 
-∆ \C70/rm/m/n/10/5b ö \C70/rm/m/n/10/60 ^^A ; \C70/rm/m/n/10/5f 9 \C70/rm/m/n/1
-0/60 ' \C70/rm/m/n/10/65 c \C70/rm/m/n/10/5c ^^D \C70/rm/m/n/10/63 / \C70/rm/m/
-n/10/5e E \C70/rm/m/n/10/4e Õ \C70/rm/m/n/10/75 1 \C70/rm/m/n/10/5f ^^O\T1/cmr/
-m/n/10 (-20) ([]13.2.66[])\C70/rm/m/n/10/78 n
+Overfull \hbox (4.00069pt too wide) in paragraph at lines 13173--13175
+\C70/rm/m/n/10/5c @ \C70/rm/m/n/10/91 œ|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/5
+4 å \C70/rm/m/n/10/8f ì \C70/rm/m/n/10/51 ˙ \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/1
+0/90 S \C70/rm/m/n/10/65 ‡ \C70/rm/m/n/10/51 s|\C70/rm/m/n/10/30 ^^B| \C70/rm/m
+/n/10/56 ‡ \C70/rm/m/n/10/4e : \C70/rm/m/n/10/97 ^ \C70/rm/m/n/10/5f 9 \C70/rm/
+m/n/10/60 ' \C70/rm/m/n/10/90 S \C70/rm/m/n/10/4e ^^M \C70/rm/m/n/10/5f q \C70/
+rm/m/n/10/54 Õ \C70/rm/m/n/10/52 ø \C70/rm/m/n/10/65 c \C70/rm/m/n/10/5c ^^D|\C
+70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/62 @ \C70/rm/m/n/10/4e Â$\OML/cmm/m/it/10 s
+$\C70/rm/m/n/10/6c ‚ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/51 ∆ \C70/rm/m/n/10/5b 
+ö \C70/rm/m/n/10/60 ^^A ; \C70/rm/m/n/10/5f 9 \C70/rm/m/n/10/60 ' \C70/rm/m/n/1
+0/65 c \C70/rm/m/n/10/5c ^^D \C70/rm/m/n/10/63 / \C70/rm/m/n/10/5e E \C70/rm/m/
+n/10/4e Õ \C70/rm/m/n/10/75 1 \C70/rm/m/n/10/5f ^^O\T1/cmr/m/n/10 (-20) ([]13.2
+.66[])\C70/rm/m/n/10/78 n
  []
 
 
@@ -15917,6 +15902,21 @@ distance' requires LuaTeX. It will be ignored. on input line 13435.
 
 
 [663]
+Overfull \hbox (20.99629pt too wide) in paragraph at lines 13435--13437
+\C70/rm/m/n/10/51 v \C70/rm/m/n/10/4f Y\T1/cmr/m/sl/10 (-20) Feynman\C70/rm/m/n
+/10/89 ƒ \C70/rm/m/n/10/52 ^^Y \C70/rm/m/n/10/54 å \C70/rm/m/n/10/5b û \C70/rm/
+m/n/10/68 ^^G \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/57 : \C70/rm/m/n/10/4e ^^@ \C7
+0/rm/m/n/10/81 Ù|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/54 ^^L \C70/rm/m/n/10/68
+ 7 \C70/rm/m/n/10/57 ( \C70/rm/m/n/10/98 v \C70/rm/m/n/10/70 π \C70/rm/m/n/10/5
+9 ^^D \C70/rm/m/n/10/52 ® \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/5b à \C70/rm/m/n/1
+0/60 R|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/62 ^^Q \C70/rm/m/n/10/4e Ï \C70/rm
+/m/n/10/5c 1 \C70/rm/m/n/10/4e ^^M \C70/rm/m/n/10/91 Õ \C70/rm/m/n/10/59 ^^M \C
+70/rm/m/n/10/4e Ü|\C70/rm/m/n/10/30 ^^B| \C70/rm/m/n/10/52 M \C70/rm/m/n/10/4e 
+^^@ \C70/rm/m/n/10/98 y \C70/rm/m/n/10/75 (\T1/cmr/m/sl/10 (-20) Wick \C70/rm/m
+/n/10/5b ö \C70/rm/m/n/10/74 ^^F\T1/cmr/m/n/10 (-20) ([]10.5.95[])\C70/rm/m/n/1
+0/5c U
+ []
+
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
 tance' requires LuaTeX. It will be ignored. on input line 13439.
@@ -16764,33 +16764,171 @@ Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling
 distance' requires LuaTeX. It will be ignored. on input line 13497.
 
 
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
-
 
 [668]
 
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13501.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13501--13505
+
+ []
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 13513.
+
+
+
 [669]
-Underfull \hbox (badness 10000) in paragraph at lines 13530--13533
+
+[670]
+Underfull \hbox (badness 10000) in paragraph at lines 13548--13551
 
  []
 
 
 
-[670
+[671
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13551--13555
+Underfull \hbox (badness 10000) in paragraph at lines 13569--13573
 
  []
 
 
+Overfull \hbox (3.63919pt too wide) in paragraph at lines 13580--13581
+\C70/rm/m/n/10/75 1 \C70/rm/m/n/10/4e é\T1/cmr/m/sl/10 (-20) Green\C70/rm/m/n/1
+0/51 ˝ \C70/rm/m/n/10/65 p \C70/rm/m/n/10/89 „ \C70/rm/m/n/10/66 / \C70/rm/m/n/
+10/4e Â \C70/rm/m/n/10/53 w \C70/rm/m/n/10/79 Ô \C70/rm/m/n/10/76 Ñ \C70/rm/m/n
+/10/5f b ^^O \C70/rm/m/n/10/4f S \C70/rm/m/n/10/73 ∞ \C70/rm/m/n/10/76 Ñ|\C70/r
+m/m/n/10/ff ^^L| \C70/rm/m/n/10/56 ‡ \C70/rm/m/n/10/6b d \C70/rm/m/n/10/4e Œ \C
+70/rm/m/n/10/98 ë \C70/rm/m/n/10/57 ﬂ \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/10/91 œ
+ \C70/rm/m/n/10/51 ˙ \C70/rm/m/n/10/53 — \C70/rm/m/n/10/66 / \C70/rm/m/n/10/67 
+^^@ \C70/rm/m/n/10/52 ) \C70/rm/m/n/10/4e é \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/1
+0/67 ê \C70/rm/m/n/10/76 Ñ|\C70/rm/m/n/10/30 ^^B| \C70/rm/m/n/10/62 ^^Q \C70/rm
+/m/n/10/4e Ï \C70/rm/m/n/10/53 ÷ \C70/rm/m/n/10/98 ë \C70/rm/m/n/10/57 ﬂ \C70/r
+m/m/n/10/53 ÿ \C70/rm/m/n/10/63 b|\C70/rm/m/n/10/ff ^^L| $\OML/cmm/m/it/10 ^^R\
+OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 (-20) )$\C70/rm/m/n/10/
+96 P
+ []
 
-[671]
 
-[672
 
-]
+[672]
 
 [673
 
@@ -16799,32 +16937,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 13551--13555
 [674
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13631--13632
+
+[675
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 13654--13655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13632--13632
+Underfull \hbox (badness 10000) in paragraph at lines 13655--13655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13632--13632
+Underfull \hbox (badness 10000) in paragraph at lines 13655--13655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13632--13632
+Underfull \hbox (badness 10000) in paragraph at lines 13655--13655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13632--13632
+Underfull \hbox (badness 10000) in paragraph at lines 13655--13655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13632--13632
+Underfull \hbox (badness 10000) in paragraph at lines 13655--13655
 
  []
 
@@ -16835,11 +16977,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13633 ...áçÂ§çÊé®ÂØºÔºåÈúÄË¶ÅÊ≥®ÊÑè„ÄÇ\clearpage
+l.13656 ...áçÂ§çÊé®ÂØºÔºåÈúÄË¶ÅÊ≥®ÊÑè„ÄÇ\clearpage
                                                    [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13638--13641
+Underfull \hbox (badness 10000) in paragraph at lines 13661--13664
 
  []
 
@@ -16850,46 +16992,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13654 ...\beta}a^{\dt{\gamma}}_{\alpha\sigma},$$
+l.13677 ...\beta}a^{\dt{\gamma}}_{\alpha\sigma},$$
                                                    [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13655--13659
+Underfull \hbox (badness 10000) in paragraph at lines 13678--13682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13659--13665
+Underfull \hbox (badness 10000) in paragraph at lines 13682--13688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13659--13665
+Underfull \hbox (badness 10000) in paragraph at lines 13682--13688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13665--13677
+Underfull \hbox (badness 10000) in paragraph at lines 13688--13700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13665--13677
+Underfull \hbox (badness 10000) in paragraph at lines 13688--13700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13665--13677
+Underfull \hbox (badness 10000) in paragraph at lines 13688--13700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13665--13677
+Underfull \hbox (badness 10000) in paragraph at lines 13688--13700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13665--13677
+Underfull \hbox (badness 10000) in paragraph at lines 13688--13700
 
  []
 
@@ -16900,24 +17042,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13677 \subsection
+l.13700 \subsection
                    {Ëá™Êóã s=2 ÁöÑÁ≤íÂ≠ê} [3]
-Underfull \hbox (badness 10000) in paragraph at lines 13679--13682
+Underfull \hbox (badness 10000) in paragraph at lines 13702--13705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13679--13682
+Underfull \hbox (badness 10000) in paragraph at lines 13702--13705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13684--13688
+Underfull \hbox (badness 10000) in paragraph at lines 13707--13711
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13690--13694
+Underfull \hbox (badness 10000) in paragraph at lines 13713--13717
 
  []
 
@@ -16928,15 +17070,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13694 \begin{equation}
+l.13717 \begin{equation}
                         L\qty(A^{}_{ik},C)=\kappa^2A^{}_{ik}A^{}_{ik}+\pdv{A...
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 13702--13706
+Underfull \hbox (badness 10000) in paragraph at lines 13725--13729
 
  []
 
 
-Overfull \hbox (11.02467pt too wide) in paragraph at lines 13706--13710
+Overfull \hbox (11.02467pt too wide) in paragraph at lines 13729--13733
 \C70/rm/m/n/10/8f Ÿ \C70/rm/m/n/10/66 / \C70/rm/m/n/10/51 s \C70/rm/m/n/10/4e é
 $\OML/cmm/m/it/10 A$\C70/rm/m/n/10/54 å$\OML/cmm/m/it/10 C$\C70/rm/m/n/10/76 Ñ 
 \C70/rm/m/n/10/7e ø \C70/rm/m/n/10/60 ' \C70/rm/m/n/10/9f P \C70/rm/m/n/10/6b !
@@ -16952,22 +17094,22 @@ OML/cmm/m/it/10 A$\C70/rm/m/n/10/54 å$\OML/cmm/m/it/10 C$\C70/rm/m/n/10/5c 1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13706--13710
+Underfull \hbox (badness 10000) in paragraph at lines 13729--13733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13716--13725
+Underfull \hbox (badness 10000) in paragraph at lines 13739--13748
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13716--13725
+Underfull \hbox (badness 10000) in paragraph at lines 13739--13748
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13716--13725
+Underfull \hbox (badness 10000) in paragraph at lines 13739--13748
 
  []
 
@@ -16978,10 +17120,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13725 \begin{equation}
+l.13748 \begin{equation}
                         C=0,\label{13.1}\end{equation}\begin{equation}\pdv{C...
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 13736--13739
+Underfull \hbox (badness 10000) in paragraph at lines 13759--13762
 
  []
 
@@ -16992,7 +17134,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13739 $$
+l.13762 $$
           i\varPi^{}_k=\pdv{x^{}_k}-\frac{ie}{hc}\phi^{}_k,$$ [6]
 
 
@@ -17000,14 +17142,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13758 ...v{f^{}_{lk}}{x^{}_l}C=0.\end{aligned}$$
+l.13781 ...v{f^{}_{lk}}{x^{}_l}C=0.\end{aligned}$$
                                                    [7]
-Underfull \hbox (badness 10000) in paragraph at lines 13760--13764
+Underfull \hbox (badness 10000) in paragraph at lines 13783--13787
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13775--13780
+Underfull \hbox (badness 10000) in paragraph at lines 13798--13803
 
  []
 
@@ -17018,7 +17160,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13780 \begin{equation}
+l.13803 \begin{equation}
                         \begin{aligned}L=&\kappa\qty{a^{*\gamma}_{\ \dt{\alp...
 [8]
 
@@ -17027,14 +17169,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13799 ...{\beta}}-3\varPi^2 d^{\dt{\alpha}}=0,$$
+l.13822 ...{\beta}}-3\varPi^2 d^{\dt{\alpha}}=0,$$
                                                    [9]
-Underfull \hbox (badness 10000) in paragraph at lines 13803--13807
+Underfull \hbox (badness 10000) in paragraph at lines 13826--13830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13821--13825
+Underfull \hbox (badness 10000) in paragraph at lines 13844--13848
 
  []
 
@@ -17045,14 +17187,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13827 \subsection
+l.13850 \subsection
                    {Êó†ÈùôË¥®ÈáèÁöÑÁ≤íÂ≠ê} [10]
-Underfull \hbox (badness 10000) in paragraph at lines 13837--13841
+Underfull \hbox (badness 10000) in paragraph at lines 13860--13864
 
  []
 
 
-Overfull \hbox (2.28873pt too wide) in paragraph at lines 13841--13845
+Overfull \hbox (2.28873pt too wide) in paragraph at lines 13864--13868
 \C70/rm/m/n/10/8f Ÿ \C70/rm/m/n/10/7c { \C70/rm/m/n/10/4f < \C70/rm/m/n/10/4e é
  \C70/rm/m/n/10/75 5 \C70/rm/m/n/10/78 ¡ \C70/rm/m/n/10/52 ø \C70/rm/m/n/10/76 
 Ñ\T1/cmr/m/sl/10 (-20) Lorentz \C70/rm/m/n/10/67 a \C70/rm/m/n/10/4e ˆ|\C70/rm/
@@ -17067,12 +17209,12 @@ instein\C70/rm/m/n/10/5f ^^U
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13841--13845
+Underfull \hbox (badness 10000) in paragraph at lines 13864--13868
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13847--13851
+Underfull \hbox (badness 10000) in paragraph at lines 13870--13874
 
  []
 
@@ -17083,14 +17225,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13851 \subsubsection
+l.13874 \subsubsection
                       {Ëá™Êóã s=3/2} [11]
-Underfull \hbox (badness 10000) in paragraph at lines 13858--13862
+Underfull \hbox (badness 10000) in paragraph at lines 13881--13885
 
  []
 
 
-Overfull \hbox (4.40987pt too wide) in paragraph at lines 13863--13866
+Overfull \hbox (4.40987pt too wide) in paragraph at lines 13886--13889
 \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/65 π \C70/rm/m/n/10/7a |\C70/rm/m/n/10/30 ^
 ^B| \C70/rm/m/n/10/71 6 \C70/rm/m/n/10/54 ^^N \C70/rm/m/n/10/53 Ô \C70/rm/m/n/1
 0/4e Â \C70/rm/m/n/10/90 ^^Z \C70/rm/m/n/10/8f « \C70/rm/m/n/10/90 ^^B \C70/rm/
@@ -17106,7 +17248,7 @@ msy/m/n/10 ^^@\OML/cmm/m/it/10 i []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13863--13866
+Underfull \hbox (badness 10000) in paragraph at lines 13886--13889
 
  []
 
@@ -17117,19 +17259,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13866 ...m}}\Biggr]&,\end{aligned}\end{equation}
+l.13889 ...m}}\Biggr]&,\end{aligned}\end{equation}
                                                    [12]
-Underfull \hbox (badness 10000) in paragraph at lines 13869--13872
+Underfull \hbox (badness 10000) in paragraph at lines 13892--13895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13874--13877
+Underfull \hbox (badness 10000) in paragraph at lines 13897--13900
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13881--13885
+Underfull \hbox (badness 10000) in paragraph at lines 13904--13908
 
  []
 
@@ -17140,10 +17282,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13885 \begin{equation}
+l.13908 \begin{equation}
                         \pdv[2]{A^{}_k}{x_4}-\delta^{}_{k4}\pdv[2]{A^{}_k}{x...
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 13903--13907
+Underfull \hbox (badness 10000) in paragraph at lines 13926--13930
 
  []
 
@@ -17154,9 +17296,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13913 ...ight\}\label{tur--+an5**}\end{equation}
+l.13936 ...ight\}\label{tur--+an5**}\end{equation}
                                                    [14]
-Underfull \hbox (badness 10000) in paragraph at lines 13943--13946
+Underfull \hbox (badness 10000) in paragraph at lines 13966--13969
 
  []
 
@@ -17167,7 +17309,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13946 
+l.13969 
          [15]
 
 
@@ -17175,19 +17317,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13955 ...ography}\makeatother\endgroup\clearpage
+l.13978 ...ography}\makeatother\endgroup\clearpage
                                                    [16]
-Underfull \hbox (badness 10000) in paragraph at lines 13957--13962
+Underfull \hbox (badness 10000) in paragraph at lines 13980--13985
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13957--13962
+Underfull \hbox (badness 10000) in paragraph at lines 13980--13985
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13965--13968
+Underfull \hbox (badness 10000) in paragraph at lines 13988--13991
 
  []
 
@@ -17198,17 +17340,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13980 \begin{equation}
+l.14003 \begin{equation}
                         \vb{A}\qty(\expval{\vb{e}^{(i)}})=\lambda^{(0)}_i\ex...
 [17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13982--13986
+Underfull \hbox (badness 10000) in paragraph at lines 14005--14009
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13996--14000
+Underfull \hbox (badness 10000) in paragraph at lines 14019--14023
 
  []
 
@@ -17219,9 +17361,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14000 ...da^{(0)}_i}.\label{dolla}\end{equation}
+l.14023 ...da^{(0)}_i}.\label{dolla}\end{equation}
                                                    [18]
-Underfull \hbox (badness 10000) in paragraph at lines 14012--14016
+Underfull \hbox (badness 10000) in paragraph at lines 14035--14039
 
  []
 
@@ -17232,9 +17374,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14024 ...b{f}^{(i)})=\lambda^{}_i\vb{f}^{(i)}.$$
+l.14047 ...b{f}^{(i)})=\lambda^{}_i\vb{f}^{(i)}.$$
                                                    [19]
-Underfull \hbox (badness 10000) in paragraph at lines 14032--14036
+Underfull \hbox (badness 10000) in paragraph at lines 14055--14059
 
  []
 
@@ -17245,9 +17387,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14044 ...p)\equiv0,\label{wox7gr,}\end{equation}
+l.14067 ...p)\equiv0,\label{wox7gr,}\end{equation}
                                                    [20]
-Underfull \hbox (badness 10000) in paragraph at lines 14046--14050
+Underfull \hbox (badness 10000) in paragraph at lines 14069--14073
 
  []
 
@@ -17258,14 +17400,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14063 ...vb{e}^{(j)}=\vb{B}\qty(\vb{e}^{(i)}).$$
+l.14086 ...vb{e}^{(j)}=\vb{B}\qty(\vb{e}^{(i)}).$$
                                                    [21]
-Underfull \hbox (badness 10000) in paragraph at lines 14071--14075
+Underfull \hbox (badness 10000) in paragraph at lines 14094--14098
 
  []
 
 
-Overfull \hbox (2.3964pt too wide) in paragraph at lines 14077--14079
+Overfull \hbox (2.3964pt too wide) in paragraph at lines 14100--14102
 \C70/rm/m/n/10/96 ˆ \C70/rm/m/n/10/7e ß Ÿ \C70/rm/m/n/10/51 ˙ \C70/rm/m/n/10/53
  ü \C70/rm/m/n/10/7b Ä \C70/rm/m/n/10/5e v \C70/rm/m/n/10/4e ^^[$\U/rsfs/m/n/10
  T[]$|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/75 Y \C70/rm/m/n/10/7e Ÿ \C70/rm/m/
@@ -17286,9 +17428,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14083 ...^{(\xi);0}).\label{fqf21}\end{equation}
+l.14106 ...^{(\xi);0}).\label{fqf21}\end{equation}
                                                    [22]
-Underfull \hbox (badness 10000) in paragraph at lines 14097--14101
+Underfull \hbox (badness 10000) in paragraph at lines 14120--14124
 
  []
 
@@ -17299,14 +17441,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14105 ...B]=\dim\qty(\mathbb V^{}_{(1)})\geq2.$$
+l.14128 ...B]=\dim\qty(\mathbb V^{}_{(1)})\geq2.$$
                                                    [23]
-Underfull \hbox (badness 10000) in paragraph at lines 14113--14117
+Underfull \hbox (badness 10000) in paragraph at lines 14136--14140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14123--14127
+Underfull \hbox (badness 10000) in paragraph at lines 14146--14150
 
  []
 
@@ -17317,14 +17459,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14127 \subsection
+l.14150 \subsection
                    {ÂàÜË£Ç‰∏õÁöÑÂ≠êÊµÅÂΩ¢ÁêÜËÆ∫} [24]
-Underfull \hbox (badness 10000) in paragraph at lines 14128--14131
+Underfull \hbox (badness 10000) in paragraph at lines 14151--14154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14137--14141
+Underfull \hbox (badness 10000) in paragraph at lines 14160--14164
 
  []
 
@@ -17335,9 +17477,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14145 ...plus\text{Span}\qty{\vb{f}^{(\eta)}}.$$
+l.14168 ...plus\text{Span}\qty{\vb{f}^{(\eta)}}.$$
                                                    [25]
-Underfull \hbox (badness 10000) in paragraph at lines 14158--14162
+Underfull \hbox (badness 10000) in paragraph at lines 14181--14185
 
  []
 
@@ -17348,14 +17490,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.26}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14170 ...c^{}_{i\eta}\vb{e}^{(i)},\end{equation}
+l.14193 ...c^{}_{i\eta}\vb{e}^{(i)},\end{equation}
                                                    [26]
-Underfull \hbox (badness 10000) in paragraph at lines 14176--14180
+Underfull \hbox (badness 10000) in paragraph at lines 14199--14203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14183--14186
+Underfull \hbox (badness 10000) in paragraph at lines 14206--14209
 
  []
 
@@ -17366,14 +17508,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14190 ...},\quad \vb{f}^{(i)}(0)=\vb{e}^{(i)},$$
+l.14213 ...},\quad \vb{f}^{(i)}(0)=\vb{e}^{(i)},$$
                                                    [27]
-Underfull \hbox (badness 10000) in paragraph at lines 14198--14202
+Underfull \hbox (badness 10000) in paragraph at lines 14221--14225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14208--14212
+Underfull \hbox (badness 10000) in paragraph at lines 14231--14235
 
  []
 
@@ -17384,10 +17526,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.28}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14212 \begin{equation}
+l.14235 \begin{equation}
                         \vb{K}^{}_{ab}(t)=\vb{T}^{}_{a;b}(t)=\vb{A}^{}_{ab}(...
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 14220--14222
+Underfull \hbox (badness 10000) in paragraph at lines 14243--14245
 
  []
 
@@ -17398,7 +17540,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14230 \clearpage
+l.14253 \clearpage
                    [29]
 
 
@@ -17406,7 +17548,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.30}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14253 \clearpage
+l.14276 \clearpage
                   \begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}...
 [30
 
@@ -17417,12 +17559,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.31}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14271 \bibitem{L5}
+l.14294 \bibitem{L5}
                      Schwartz, Matthew D. (2014). Quantum Field Theory and t...
 [31
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 14277--14278
+Underfull \hbox (badness 10000) in paragraph at lines 14300--14301
 []\C70/rm/m/n/10/54 h \C70/rm/m/n/10/73 Ø\T1/cmr/m/n/10 (+20) _pericyclic. \C70
 /rm/m/n/10/74 ^^F \C70/rm/m/n/10/8b ∫ \C70/rm/m/n/10/52 õ \C70/rm/m/n/10/5b f\T
 1/cmr/m/n/10 (+20) . \C70/rm/m/n/10/74 ^^F \C70/rm/m/n/10/8b ∫ \C70/rm/m/n/10/7
@@ -17438,7 +17580,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.32}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14285 \bibitem{Bvufpp}
+l.14308 \bibitem{Bvufpp}
                          N.P. Landsman; Ch.G. van Weert.\emph{Real- and imag...
 [32]
 
@@ -17447,28 +17589,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.33}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14297 \end{document}
+l.14320 \end{document}
                        [33] (./‰∫åÊ¨°ÈáèÂ≠êÂåñ.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `‰∫åÊ¨°ÈáèÂ≠êÂåñ.out' has not changed.
-(rerunfilecheck)             Checksum: 051FA8C585950DE435C723AC140701EC;39543.
+(rerunfilecheck)             Checksum: D23A2B2CF95F41E2ED1E4DA281850183;40092.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 4761 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 71700 strings out of 467799
- 1601929 string characters out of 5425587
- 2429643 words of memory out of 5000000
- 93166 multiletter control sequences out of 15000+600000
+ 71822 strings out of 467799
+ 1604569 string characters out of 5425587
+ 2432774 words of memory out of 5000000
+ 93276 multiletter control sequences out of 15000+600000
  880251 words of font info for 1158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,24n,96p,5215b,4733s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -17623,10 +17761,10 @@ ype1/public/cm-super/sfti0800.pfb><d:/Program Files (x86)/texlive/2025/texmf-di
 st/fonts/type1/public/cm-super/sfti0900.pfb><d:/Program Files (x86)/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><d:/Program Files (x86)/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on ‰∫åÊ¨°ÈáèÂ≠êÂåñ.pdf (721 pages, 6187785 bytes).
+Output written on ‰∫åÊ¨°ÈáèÂ≠êÂåñ.pdf (722 pages, 6202151 bytes).
 PDF statistics:
- 13943 PDF objects out of 15390 (max. 8388607)
- 12649 compressed objects within 127 object streams
- 4693 named destinations out of 5155 (max. 500000)
- 148097 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 13983 PDF objects out of 15390 (max. 8388607)
+ 12688 compressed objects within 127 object streams
+ 4704 named destinations out of 5155 (max. 500000)
+ 148129 words of extra memory for PDF output out of 154059 (max. 10000000)
 
