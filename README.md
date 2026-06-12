@@ -54,9 +54,9 @@ Second version will change dramtically the structure, and of course the prerequi
 
 ## Latest update
 
-The LSZ reduction formula from the renormalization theory, and the beginning of the linear reponse theory.
+The Scattering theory of two coupling Dirac fields, such as Bhabha and Møller scattering calculation, and the linear reponse theory of near-equilibrum field.
 
-Scattering theory of two coupling Dirac fields coming next.
+Scattering in the external field and statistical dissipation theory coming next.
 
 
 
