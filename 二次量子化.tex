@@ -1,7 +1,7 @@
 \documentclass[twoside,10pt]{article}\usepackage[utf8]{inputenc}\usepackage[T2A,T1]{fontenc}\newcommand{\rusa}[1]{{\fontencoding{T2A}\selectfont #1}}\renewcommand{\refname}{参考文献}\makeatletter\renewcommand{\@biblabel}[1]{\thesection.#1}\makeatother\usepackage{ctex,physics,slashed,bm,bigints,amssymb,mathrsfs,amsmath,extarrows}\usepackage[hidelinks]{hyperref}\urlstyle{rm}\usepackage{geometry}\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.2cm,bottom=2cm}\usepackage[demo]{graphicx}\usepackage{booktabs,array,paralist,verbatim,subfig,accents,titlepic}
 \usepackage{fancyhdr}\pagestyle{fancy}\renewcommand{\headrulewidth}{2pt}\fancyhead[LO,RE]{\rightmark}\fancyhead[LE,RO]{\leftmark}\renewcommand{\footrulewidth}{1pt}\fancyfoot[L]{\small\textit{physics series}}\numberwithin{equation}{subsection}\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\rmfamily\romannumeral #1}}
 \usepackage{arydshln,sectsty,nicematrix,microtype}\setlength{\dashlinedash}{1.5pt}\allsectionsfont{\sffamily\mdseries\upshape}\linespread{1.5}
-\usepackage{tikz,capt-of,tikz-3dplot,pgfplots,siunitx,ifthen,xcolor,pifont}\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing,angles,quotes,patterns,decorations.pathmorphing}\colorlet{mydarkblue}{blue!30!black}\colorlet{myred}{red!50!black}\colorlet{mydarkred}{red!60!black}\tikzset{midarr/.style={decoration={markings,mark=at position #1 with{\arrow{stealth}}},postaction={decorate}},midarr/.default=0.5}\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.03*\ymax) --++ (#2-180:0.06*\ymax)}
+\usepackage{tikz,capt-of,tikz-3dplot,pgfplots,siunitx,ifthen,xcolor,pifont,tikz-cd}\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing,angles,quotes,patterns,decorations.pathmorphing}\colorlet{mydarkblue}{blue!30!black}\colorlet{myred}{red!50!black}\colorlet{mydarkred}{red!60!black}\tikzset{midarr/.style={decoration={markings,mark=at position #1 with{\arrow{stealth}}},postaction={decorate}},midarr/.default=0.5}\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.03*\ymax) --++ (#2-180:0.06*\ymax)}
 \usepackage{tocbibind}\usepackage[compat=1.1.0]{tikz-feynman}\usepackage[title,titletoc]{appendix}\renewcommand{\appendixpagename}{附录}\renewcommand{\appendixtocname}{附录}\renewcommand{\appendixname}{}
 \usepackage[titles,subfigure]{tocloft}\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape}\newcommand*{\dt}[1]{\accentset{\mbox{\small\bfseries .}}{#1}}\newcommand*{\ddt}[1]{\accentset{\mbox{\small\bfseries ..}}{#1}}\newcommand*{\dddt}[1]{\accentset{\mbox{\small\bfseries ...}}{#1}}\usepackage{simpler-wick}
 \title{二次量子化理论概述\\ 及其在场论中的应用介绍（第一版）\\[1ex]\large ——朗道十卷部分导读}\author{Schlichting\\}\date{2024/10/04 - \the\year/\ifnum\month<10 0\fi\the\month/\ifnum\day<10 0\fi\the\day}\begin{document}
@@ -13676,7 +13676,7 @@ $$\mathcal A^{(2)}_{fi}(u=\vb{q}^2)=-4im^2\bm{w}^*_4\bm{w}^*_3U\qty(\vb{p}^{}_1,
 \subsubsection{Dirac场的顶点函数和束缚态散射}
 \noindent 上面我们详细分析了双电子自由散射的情形，得到了\textsl{Møller}散射和\textsl{Bhabha}散射的可观测量以及辐射修正初步。但根据第\ref{CHoeei**--}节我们看到，超导体中\textsl{Cooper}对是一对电子的束缚态，因此这里不妨花一点时间，来讨论双电子束缚态的散射。\\
 \\
-由于是双电子，起始点依旧是四点函数。但由于现在是束缚态，因此我们不能直接使用
+由于是双电子，起始点依旧是四点函数。但由于现在是束缚态，因此我们不能直接使用\textsl{LSZ}约化，但全连通四点函数的\textsl{Dyson}方程是永远成立的。
 
 
 
@@ -14169,10 +14169,14 @@ $$b^{}_{kk} = 0.$$
 
 \subsection{覆叠空间}\label{xi5467uh5400}
 \noindent 在正文的几何中，我们大量使用了张量丛这个概念，比如切丛和余切丛。虽然它们的定义是非常直观的，但这种具象性也限制了其推广到更一般的丛上，为此我们需要从中总结出一个抽象的数学结构，从而使我们可以更为广泛的使用丛的概念。为了防止过于抽象的引入，我们先考察一个较为具体的丛结构：覆叠空间。
-\subsubsection{定义和其基本群}
-\noindent 考虑两个拓扑空间$E$和$B$，以及它们之间的一个满射$\pi:E\to B$。称$(E,B,\pi)$为一个\textbf{覆叠空间 \textit{Covering Space}}，若$\pi^{-1}$将$B$上的一个开集$U$映射为$E$中若干不相交的开集$\qty{K^{}_i\vert i\in\mathscr A,\ K^{}_i\cap K^{}_j=\varnothing}=\pi^{-1}(U)$，并且$U\cong K^{}_i,\ \forall i$。称$B$为\textbf{底空间}，$E$为\textbf{全空间}，$\pi$为\textbf{覆叠映射}。不难想到，对于$\forall p\in U$，$\pi^{-1}$将其映射为$E$中的一系列的点$\qty{p^{}_i\in K^{}_i}=\pi^{-1}(p)$，它构成了$E$的一个离散子集，称为点$p$处的\textbf{纤维 \textit{Fibre}}，一般记为$F(p)=\pi^{-1}(p)$。在后续表述中，记覆叠空间为
+\subsubsection{定义和其基本群}\label{xi5sdfg5400}
+\noindent 考虑两个拓扑空间$E$和$B$，以及它们之间的一个满射$\pi:E\to B$。称$(E,B,\pi)$为一个\textbf{覆叠空间 \textit{Covering Space}}，若$\pi^{-1}$将$B$上的一个开集$U$映射为$E$中若干不相交的开集$\qty{O^{}_i\vert i\in\mathscr A,\ O^{}_i\cap O^{}_j=\varnothing}=\pi^{-1}(U)$，并且$U\cong O^{}_i,\ \forall i$。称$B$为\textbf{底空间}，$E$为\textbf{全空间}，$\pi$为\textbf{覆叠映射}。不难想到，对于$\forall p\in U$，$\pi^{-1}$将其映射为$E$中的一系列的点$\qty{p^{}_i\in O^{}_i}=\pi^{-1}(p)$，它构成了$E$的一个离散子集，称为点$p$处的\textbf{纤维 \textit{Fibre}}，一般记为$F(p)=\pi^{-1}(p)$。在后续表述中，记覆叠空间为
 \begin{equation}F\hookrightarrow E\xrightarrow{\pi} B.\label{ERGDFG10}\end{equation}
-其中$\hookrightarrow$表示纤维$F$嵌入$E$中，是单射的记号。由于我们看到$\pi\circ F(p)=p$，因此对于此纤维中的一点我$a$们也可以写作$a\in F(\pi(a))$，其中$\pi(a)=p$。\\
+其中$\hookrightarrow$表示纤维$F$嵌入$E$中，是单射的记号。由于我们看到$\pi\circ F(p)=p$，因此对于此纤维中的一点$a$我们也可以写作$a\in F(\pi(a))$，其中$\pi(a)=p$。同时在局部上不难证明，开邻域$U\in\mathscr N(p)$的纤维给出
+\begin{equation}\pi^{-1}(U)\cong U\times F(p),\quad\forall U\in\mathscr N(p).\label{564thy00}\end{equation}
+这被称为\textbf{局部平凡性 \textit{Local Triviality}}，它指出覆叠空间在局部上体现为底空间和纤维的乘积空间，从而其所有性质均由乘积拓扑控制。若$U=B$为整个底空间，则称此覆叠空间为\textbf{平凡的 \textit{Trivial}}，也就是
+\begin{equation}E=B\times F.\end{equation}
+这里我们默认了一个引理，就是对于平凡空间纤维处处相等，$\forall p,p'\in B$，$F(p)=F\qty(p')$。这当然是及其特殊的情况，一般来说纤维是依赖底空间中的点的，从而不同的局部平凡化之间会给出不同的覆叠，产生极为复杂的几何结构。具体的分析可以参考第\ref{twtg40][]}节，这是后续丛理论的起点之一。\\
 \\
 根据上述定义，覆叠空间的概念是非常直观的：将纸一层一层互相堆叠，最底下的一张纸是底空间，整个纸堆是全空间，纤维是贯穿这个纸堆的一根针。在形式上，我们完全可以将它看作一类特殊的商空间，其商映射是局部同胚的。当然在物理上，更常见的是群作用产生的商空间，比如离散的单参变换群。在拓扑空间$X$中，令\emph{离散群}$G$自由的左作用在$X$上，自由性定义为
 \begin{equation}\forall p\in X,\quad \exists U\in\mathscr U(p),\quad gU\cap U\neq\varnothing \implies g=e\in G.\label{ADVNw539}\end{equation}
@@ -14182,7 +14186,7 @@ $$b^{}_{kk} = 0.$$
 \begin{equation}B=X/\sim=X/G=\qty{\expval{p}\vert p\in X}.\end{equation}
 这是一个底空间，定义(\ref{ADVNw539})确保了其能将$X$上的拓扑离散化，同时保留$X$的所有拓扑不变性。纤维很显然就是轨迹$F(\expval{p})=\qty{gp\vert g\in G}$，$X=E$是全空间，于是$(X,X/G,\pi)$构成一个覆叠空间。并且可以证明，此时群$G$和纤维在集合意义上同构，取一个映射
 $$\varphi:G\to F(\expval{p})\quad \varphi(g)=gp,\quad \forall g\in G,$$
-其单射性由自由性(\ref{ADVNw539})确定，满射性由上述定义保证，因此是一个双射。当然这种同构可以延伸为群同构，但这依赖于单位元$e$在纤维上的选择。比如我们让$p=e$，则纤维$F(\expval{p})$就构成一个群，此时群$G$和纤维群同构。对于\emph{连续群}作用，我们称相应的连续覆叠空间为\textbf{纤维丛 \textit{Fiber bundle}}。\\
+其单射性由自由性(\ref{ADVNw539})确定，满射性由上述定义保证，因此是一个双射。当然这种同构可以延伸为群同构，但这依赖于单位元$e$在纤维上的选择。比如我们让$p\to e$，则纤维$F(\expval{p})$就构成一个群，此时群$G$和纤维群同构。对于\emph{连续群}作用，我们称相应的连续覆叠空间为\textbf{纤维丛 \textit{Fiber bundle}}。\\
 \\
 基于上述定义，我们可以引入\textbf{\textsl{Hopf}纤维化 \textit{Hopf Fibration}}的概念，这是示性类一个典型的应用场景。考虑一个三维单位超球$S^3$，其定义为$\mathbb R^4$中的超曲面
 $$S^3=\qty{(a,b,c,d)\in\mathbb R^4\middle\vert a^2+b^2+c^2+d^2=1}.$$
@@ -14194,15 +14198,17 @@ $$z^{}_1\sim z^{}_2 \quad \text{iff}\quad z^{}_1=e^{i\theta}z^{}_2,\quad \theta\
 \begin{equation}S^3/U(1)=\qty{\qty(z^{}_1,z^{}_2)\in\mathbb C^2\middle\vert\abs{z^{}_1}^2=\abs{z^{}_2}^2=\frac{1}{2}}\cong S^2.\end{equation}
 其和二维球面同胚，因为可以用两个相位来表示
 $$S^3/U(1)=\qty{(\alpha,\beta)\in[0,\pi]\times[0,2\pi]\middle\vert z^{}_1=\frac{\exp(i\alpha)}{2},\quad z^{}_2=\frac{\exp(i\beta)}{2}}.$$
-纤维自然是$F(\expval{z})=\exp(i\alpha)z$，若我们定义单位元$1=e\in U(1)$，则我们有$F(\expval{z})\cong U(1)\cong S^1$。于是覆叠空间按照记号(\ref{ERGDFG10})写作
+纤维自然是$F(\expval{z})=\exp(i\alpha)z$，若我们定义单位元$1\to e\in U(1)$，则我们有$F(\expval{z})\cong U(1)\cong S^1$。于是覆叠空间按照记号(\ref{ERGDFG10})写作
 \begin{equation}S^1\hookrightarrow S^3\to S^2.\end{equation}
 也就是说，三维单位超球$S^3$可以看作以$S^2$为底，以$S^1$为纤维的纤维丛，这就是\textsl{Hopf}纤维化。我们后续会看到，这是一个扭曲的纤维丛，其\textsl{Stiefel-Whitney}数$w\qty(S^2)=1$。\\
 \\
-现在我们来讨论覆叠空间的拓扑性质。从映射开始，引入另一个拓扑空间$X$，以及两个连续映射
-$$f: X\to B,\quad \tilde f: X\to E.$$
-我们称$\tilde f$是$f$上的一个\textbf{提升 \textit{Lift}}，若两者满足关系$f=\pi\circ\tilde f$。参考\cite{CV25--}的定理$5.1$，这个提升是唯一确定的，若$X$连通，且$\exists x\in X$使得所有提升在该点处的值相等。由此我们可以构造该映射的同伦$H:X\times I\to B$的提升$\tilde H$如下
+现在我们来讨论覆叠空间的拓扑性质，方便起见，下面我们只讨论全局平凡的覆叠空间，普适情形请参考第\ref{twtg40][]}节。从映射开始，引入另一个拓扑空间$X$，以及两个连续映射
+$$f: X\to B,\quad \tilde f: X\to E=B\times F.$$
+我们称$\tilde f$是$f$上的一个\textbf{提升 \textit{Lift}}，若两者满足关系$f=\pi\circ\tilde f$，也即有以下交换图
+\begin{equation}\begin{tikzcd}[scale=2]& E \arrow[d,"\pi"] \\X \arrow[r,"f"] \arrow[ur,"\tilde f"] & B \end{tikzcd}.\end{equation}
+参考\cite{CV25--}的定理$5.1$，这个提升是唯一确定的，若$X$连通，且$\exists x\in X$使得所有提升在该点处的值相等。由此我们可以构造该映射的同伦$H:X\times I\to B$的提升$\tilde H$如下
 \begin{equation}H(x,0)=\pi\circ \tilde f(x)\implies \tilde H(x,0)=\tilde f(x),\quad \forall x\in B.\end{equation}
-这一概念的应用是道路的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条路径。令其起点为$f(0)=b$，则根据唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
+这一概念的应用是道路的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条路径。令其起点为$f(0)=b$，则根据唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$，一个直观的证明请参考第\ref{twtg40][]}节。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
 \begin{equation}\forall f,g:[0,1]\to B,\quad f\,\dt{\cong}\,g\implies \tilde f\,\dt{\cong}\,\tilde g.\end{equation}
 需要强调的是，由于覆叠映射是满射，因此一条闭合回路$f(0)=(1)$在提升后并不能保证$\tilde f(0)=\tilde f(1)$。一般而言，$B$的一个闭路类$\expval{\alpha}$在提升后只会得到$E$中的一个普通道路类$\expval{\tilde\alpha}$，我们只能确定$\pi\circ\tilde\alpha(0)=\alpha(0)$。令起点为$\tilde\alpha(0)=a\in F(\pi(a))$，相应的道路类集合
 $$L(a)=\qty{\expval{\tilde\alpha}\middle\vert \tilde\alpha(0)=a,\quad \tilde\alpha(1)\in F(\pi(a))},$$
@@ -14214,11 +14220,11 @@ $$L(a)=\qty{\expval{\tilde\alpha}\middle\vert \tilde\alpha(0)=a,\quad \tilde\alp
 \\
 上述等价理论的特例是全空间$E$的自同构，称为\textbf{覆叠变换 \textit{Covering Transformation}}，它是覆叠映射$\pi$的同胚提升。由于同胚性和自映射，不难看到覆叠变换的逆和乘积仍给出覆叠变换，因此令恒等变换$\mathrm{id}:E\to E$为单位元，则所有的覆叠变换构成一个群，称为\textbf{覆叠变换群}
 \begin{equation}\mathscr D(E,\pi)=\qty{h:E\to E\middle\vert h\ \text{同胚},\quad \pi\circ h=\pi}.\end{equation}
-根据定义，覆叠变换是保纤维的，它只在同一个纤维上变换，最终投影到底空间中的同一个点。于是在指定单位元后，纤维和覆叠变换群同构
-\begin{equation}F(b)\cong \mathscr D(E,\pi).\end{equation}
+根据定义，覆叠变换是保纤维的，它只在同一个纤维上变换，最终投影到底空间中的同一个点。同胚性保证了覆叠变换群遍历整个纤维，于是在指定单位元后，纤维和覆叠变换群同构
+\begin{equation}F(b)\cong \mathscr D(E,\pi).\label{dfygrhy0}\end{equation}
 这里简单介绍思路，选取$E$中的任意一个点$a\in F(b)$，则$\mathscr D(E,\pi)$对$a$的作用生成一个完整的纤维$F(b)$，且这是同胚的。于是令单位元$e=a$，并引入群乘法
-$$(f(a))\cdot(g(a))=(fg(a)),\quad \forall f,g\in \mathscr D(E,\pi)\implies f(a),g(a)\in F(b),$$
-这样同胚就扩充为同构$F(b)\cong\mathscr D(E,\pi)$。于是我们可以将此覆叠空间记为
+$$(f(a))\cdot(g(a))=fg(a),\quad \forall f,g\in \mathscr D(E,\pi)\implies f(a),g(a)\in F(b),$$
+这样同胚就扩充为同构$F(b)\cong\mathscr D(E,\pi)$。如果我们考虑群作用下的商空间$B=E/G$，这样的结论是十分自然的，因为纤维本身就是群$G$。于是我们可以将此覆叠空间记为
 \begin{equation}\mathscr D(E,\pi)\hookrightarrow E\xrightarrow{\pi}B,\end{equation}
 称为\textbf{正则覆叠空间 \textit{Canonical Covering Space}}。需要说明的是，并非所有的覆叠空间都是正则的，因为覆叠变换群的大小一般小于纤维大小。同时可以证明，覆叠变换需要满足以下的性质
 \begin{equation}\forall a,a'\in \pi(a)=b,\quad \exists h\in\mathscr D(E,\pi) \ \text{使得}\ h(a)=a' \iff K^{}_a=K^{}_{a'}.\end{equation}
@@ -14235,12 +14241,103 @@ $$\varPi^{}_1\qty(\mathbb{RP}^{n\ge2})=\mathbb Z^{}_2=F(b).$$
 万有覆叠的万有性在于，它是同一个底空间上最大的覆叠空间。设$\qty(\tilde E,B,\tilde\pi)$是万有覆叠，$(E,B,\pi)$是任意覆叠，则存在覆叠映射$\varpi:\tilde E\to E$使得
 \begin{equation}\pi\circ\varpi=\tilde\pi\end{equation}
 从提升的角度，这说明$\varpi$是万有覆叠的提升，从而任意覆叠都可以从万有覆叠提升得到，因此万有覆叠是虽有覆叠空间的覆叠。从拓扑学的角度，我们只需要计算出万有覆叠，就能得到该底空间的所有覆叠结构，这在连续群的情形下非常有用。
-\subsubsection{高维同伦群和其长正合序列}
-\noindent 上文中我们详细分析了覆叠空间的基本群$\varPi^{}_1$，现在我们来讨论高维基本群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了论高维基本群，它是$S^n$到拓扑空间$X$的同伦类
+\subsubsection{局部平凡性和单值性}\label{twtg40][]}
+\noindent 上文中我们简要的介绍了覆叠空间，引入了局部平凡性这个概念，并建立了道路提升的唯一性。当然我们也提到，事实上全局平凡空间是极为特殊的，上述拓扑分析应当限制在局部平凡空间内。通过对前文拓扑结构的重新审视，我们便可以得到全局平凡性的判据，并将其和提升的唯一性关联。\\
+\\
+从定义出发，局部平凡性确定了一个同胚(\ref{564thy00})，这里我们明确写出
+\begin{equation}T^{}_U:\pi^{-1}(U)\to U\times F(p),\quad T^{}_U(x)=\qty(\pi(x),S^{}_U(x)),\quad \forall x\in \pi^{-1}(U).\end{equation}
+其中映射$S^{}_U:\pi^{-1}(U)\to F(p)$和流形上的局部同胚映射$\varphi^{}_U:U\to\mathbb R^n$完全一致，可以看作覆叠空间在纤维上的局部坐标。对于群作用的商空间$B=E/G$，局部平凡化还可以定义为
+\begin{equation}\begin{aligned}& T'_U=\qty(\pi,Y^{}_U):\pi^{-1}(U)\to U\times G,\quad Y^{}_U:\pi^{-1}(U)\to G\\&\implies Y^{}_U(gx)=gY^{}_U(x),\quad \forall x\in \pi^{-1}(U),\quad \forall g\in G.\end{aligned}\end{equation}
+这样我们就有群元的对应关系，比如令$S^{}_U(x)\iff Y^{}_U(x)=e$，从而$T^{}_U$和$T'_U$是一一对应的。由于$S^{}_U$一定存在，因此局部平凡空间必然是正则的，从而不难看到局部平凡化并不是唯一确定的。同时由于局部平凡性完全由底空间的点$p$确定，因此我们可以引入一个连续映射$\sigma$，使得其在$U$上取值在$\pi^{-1}(U)$内
+\begin{equation}\sigma:U\to E,\quad \pi(\sigma(p))=p\implies \sigma(U)=\pi^{-1}(U).\end{equation}
+我们称此连续映射为\textbf{局部截面 \textit{Local Section}}，和张量丛的截面也就是张量场是完全一致的。不难证明，局部截面和$T^{}_U$是一一对应的，从而可以将其推广到全局平凡
+\begin{equation}T^{}_B:\pi^{-1}(B)\to B\times F(p)=E\iff \exists\sigma:B\to E.\end{equation}
+因此，一个直接的平凡性判据为：局部平凡空间不存在全局平凡的截面。以\textsl{Hopf}纤维化为例，假设其是全局平凡的，则通过局部平凡化$T^{}_{S^2}$定义全局截面为
+$$\sigma:S^2\to S^3,\quad S^2\times S^1\cong S^3\implies T^{}_{S^2}\qty(p,e^{i\alpha})=\sigma(p)\cdot e^{i\alpha},\quad p\in S^2.$$
+将$e^{i\alpha}$看作回路，则等号右侧给出了$S^3$上以$\sigma(p)$为基点的闭路类，于是我们得到$\varPi^{}_1\qty(S^3,\sigma(p))=\mathbb Z$。这不符合一般的结论$\varPi^{}_1\qty(S^3)=0$，因此\textsl{Hopf}纤维化非全局平凡。就像前文说的，这是一个扭曲的纤维丛，截面只能对每个点单独指定。\\
+\\
+上述的判据并非构造性的，因此不便于使用，为此我们需要一个更直观的角度。由于局部平凡性依赖于邻域的选择，因此同一点的不同邻域会给出不同的局部平凡化，但对于该点$p$而言其纤维是不变的，因此两者的不同仅仅在于纤维的变换。我们来定量表述这个想法，注意一切要以覆叠空间为基础
+\begin{equation}\begin{aligned}&\forall U,V\in\mathscr N(p), \quad T^{}_{U\cap V}:\pi^{-1}(U\cap V)\to U\cap V\times F(p);\\& T^{}_{U\cap V}(x)=\qty(\pi(x),S^{}_{U\cap V}(x)),\quad \forall x\in \pi^{-1}(U\cap V).\end{aligned}\end{equation}
+其中映射$S^{}_{U\cap V}\circ S^{-1}_U\in\mathscr D(U\cap V,\pi)$是一个局部覆叠变换，给出了不同局部平凡化间纤维的变换，由此定义\textbf{转移函数 \textit{Transition Function}}为
+\begin{equation}f^{}_{UV}:U\cap V\to F(p),\quad f^{}_{UV}(p)=S^{}_V\circ S^{-1}_U(x),\quad \forall x\in F(p)\implies f^{}_{UV}=S^{}_V\circ S^{-1}_U\circ\pi^{-1}.\end{equation}
+其在形式上和流形上的转移函数是完全一致的，因此也满足所有的性质。条件$\forall x\in F(p)$成立的原因是，覆叠变换群不依赖纤维上点的选择，这保证了$f^{}_{UV}$定义的合法性。不难验证，对于底空间上的一组开覆盖$\qty{U^{}_\alpha}$，转移函数满足如下性质：
+\begin{enumerate}\item\textbf{上循环条件 \textit{Cocycle Condition}}：在 $U^{}_\alpha\cap U^{}_\beta\cap U^{}_\gamma$ 上，\begin{equation}f^{}_{\alpha\gamma}(p)=f^{}_{\alpha\beta}(p)\circ f^{}_{\beta\gamma}(p),\quad \forall p\in U^{}_\alpha\cap U^{}_\beta\cap U^{}_\gamma;\label{xisGFTW4}\end{equation}\item \textbf{归一化条件}：在 $U^{}_\alpha$ 上，\begin{equation}f^{}_{\alpha\alpha}(p)=\mathrm{id}^{}_F:F(p)\to F(p).\label{ximGFu4}\end{equation}\end{enumerate}
+这一组$\qty{f^{}_{\alpha\beta}}$称为一个\textbf{\textsl{Čech}上循环}，它完全决定了覆叠空间$E$的整体拓扑结构。反之，给定离散群$G$与满足上循环条件的转移函数 
+$$f^{}_{\alpha\beta}:U^{}_\alpha\cap U^{}_\beta\to G,$$
+我们可以构造出唯一的覆叠空间$B=E/G$。因此，覆叠空间与系数在离散群$G$中的\textsl{Čech}上循环等价类一一对应。在群视角(\ref{dfygrhy0})下我们知道，正则性保证了$F(p)\cong \mathscr D(U\cap V,\pi)$，因此单位元选择的变换为
+\begin{equation}\forall a^{}_1,a^{}_2\in \pi^{-1}(U\cap V)\quad \text{s.t.}\quad Y^{}_U\qty(a^{}_1)=Y^{}_V\qty(a^{}_2)=e,\quad a^{}_2=f^{}_{UV}(p)a^{}_1.\end{equation}
+这给出了两个局部覆叠变换群之间的同构。同样的，局部截面也会随着邻域的改变而改变，不难通过上式验证其变化为
+\begin{equation}\sigma^{}_V(U\cap V)=f^{}_{UV}\sigma^{}_U(U\cap V),\quad \sigma^{}_{U,V}:U,V\to E.\end{equation}
+若截面是全局的，则可以写出$\sigma^{}_V(V)=f^{}_{BV}\sigma^{}_B(V)=S^{}_V\sigma^{}_B(V)$，或者$\sigma^{}_B=\sigma^{}_VS^{-1}_V$。再次回看\textsl{Hopf}纤维化，如果取$V$为上半球面，那么永远不存在一个$S^{-1}_V$将上半球面的截面变为全球面的截面，因此根据判据它是局部平凡的。可见转移函数提供了一个可计算的平台，我们可以通过它的性质来分析覆叠空间的拓扑性质，一如流形可以利用转移函数定义微分结构。\\
+\\
+现在来讨论局部平凡化下的基本群。在底空间点$p\in B$的开邻域$U$内，引入一条连续曲线$\gamma:I\to U$，使得$\gamma(0)=p$。现在假设其对覆叠$\pi^{-1}$的提升给出两条曲线$\tilde\gamma^{}_1$和$\tilde\gamma^{}_2$，他们的起点相同但终点不同
+$$\tilde\gamma^{}_1(0)=\tilde\gamma^{}_2(0)\in F(p),\quad\tilde\gamma^{}_1(1)\neq	\tilde\gamma^{}_2(1).$$
+根据定义，这两条曲线都是连续的，因此必然存在$t^{}_0\in I$，使得
+$$\tilde\gamma^{}_1\qty(t^-_0)=\tilde\gamma^{}_2\qty(t^-_0)=a\in F(\gamma\qty(t^{}_0)),\quad \tilde\gamma^{}_1\qty(t^+_0)\neq\tilde\gamma^{}_2\qty(t^+_0).$$
+但根据定义，$a\in\pi^{-1}(U)$的邻域$O^{}_a\qty(\subset\pi^{-1}(U))\cong U$，所以连续性要求$a$的左右极限相等，从而必然有$\tilde\gamma^{}_1=\tilde\gamma^{}_2$，也即局部道路提升的唯一性。从局部平凡化$T^{}_U$的角度，这个唯一性由$S^{}_U$的同胚性保证，比如可以将覆叠变换群取为局部单参变换群
+\begin{equation}\eval{S^{}_U}_{F(p)}\in\mathscr D(U,\pi)=\qty{\varphi^{}_t(p): F(p)\to F(p)},\end{equation}
+这样道路的提升在纤维上就是此单参变换群的轨道，进而是唯一的。于是前文中，对于闭合回路以及基本群的讨论，都可以完全移植到邻域$U$上。当然基本群是一个全局的拓扑性质，所以不妨将上述讨论推广到整个底空间$B$。最大的困难点在于，一条曲线会穿过多个邻域，我们需要计算跨邻域的情形。不妨考虑分段连续，取$B$的一个开覆盖$\qty{U^{}_i\vert0\leq i\leq n}$，并将$I$划分成一系列小段，使得
+\begin{equation}0=t^{}_0<t^{}_1<\dots<t^{}_n=1,\quad \qty{t^{}_0=0}=U^{}_0,\quad \eval{\gamma}_{\qty[t^{}_{i-1},t^{}_i]}=\gamma^{}_i:\qty[t^{}_{i-1},t^{}_i]\to U^{}_i.\end{equation}
+对这每一段在其所属邻域内提升为$\tilde\gamma^{}_i\subset \pi^{-1}\qty(U^{}_i)$，在确定了起点$\tilde\gamma^{}_i\qty(t^{}_{i-1})$后根据前文的讨论这是唯一确定的。由于提升是一个连续函数，因此这一段曲线的终点必须是相邻曲线的起点，也就是
+\begin{equation}\tilde\gamma^{}_i\qty(t^{}_i)=\tilde\gamma^{}_{i+1}\qty(t^{}_i),\quad \forall i.\label{labwvrw}\end{equation}
+通过一些简单的实分析结论，这个曲线的提升就被最开始的起点$\tilde\gamma^{}_1(0)$唯一的确定，这就是曲线提升唯一性的直观证明。在此基础之上，我们来计算提升曲线的终点，令其初始点在局部平凡化$T^{}_i=T^{}_{U^{}_i}$下为
+$$T^{}_i\qty(\tilde\gamma^{}_i\qty(t^{}_{i-1}))=\qty(\gamma^{}_i\qty(t^{}_{i-1})=b^{}_i,S^{}_i\qty(\gamma^{}_i\qty(t^{}_{i-1}))=a^{}_i).$$
+方便起见，令局部平凡化$S^{}_i$在邻域内对纤维的作用为恒等$S^{}_i=\mathrm{id}^{}_F$，也就是说在此邻域内曲线提升在纤维上是常值函数$a^{}_i$。于是整条提升曲线的起点为$a^{}_0$，在$t=t^{}_0=0$处邻域发生转变，具体的转变方式由转移函数$f^{}_{U^{}_0U^{}_1}=f^{}_{01}$确定，
+\begin{equation}f^{}_{01}\qty(\gamma^{}_0\qty(t^{}_0))=S^{}_1S^{-1}_0\qty(a^{}_0)=f^{}_{01}\qty(\gamma^{}_1\qty(t^{}_0))=a^{}_1,\label{wr245tgg}\end{equation}
+其中第二个等号用到式(\ref{labwvrw})。类似的推广到$U^{}_2$，将上述$a^{}_1$带入我们写出
+$$f^{}_{12}\qty(\gamma^{}_2\qty(t^{}_1))=a^{}_2=S^{}_2S^{-1}_1\qty(a^{}_1)=S^{}_2S^{-1}_0\qty(a^{}_0),$$
+或者我们将具体作用的点写出
+\begin{equation}a^{}_2=f^{}_{12}\qty(\gamma^{}_2\qty(t^{}_1))\circ f^{}_{01}\qty(\gamma^{}_1\qty(t^{}_0))\qty(a^{}_0).\end{equation}
+将式(\ref{wr245tgg})推广到任意的交集$U^{}_i\cap U^{}_{i+1}$中得到
+$$f^{}_{i-1,i}\qty(\gamma^{}_i\qty(t^{}_{i-1}))=S^{}_iS^{-1}_{i-1}\qty(a^{}_{i-1})=a^{}_i,$$
+并将此局部转换点反复迭代，不难得到提升曲线的总终点$a^{}_n$以初始点表示为
+\begin{equation}a^{}_n=S^{}_nS^{-1}_0\qty(a^{}_0)=f^{}_{n-1,n}\qty(\gamma^{}_n\qty(t^{}_{n-1}))\circ f^{}_{n-2,n-1}\qty(\gamma^{}_{n-1}\qty(t^{}_{n-2}))\cdots f^{}_{12}\qty(\gamma^{}_2\qty(t^{}_1))\circ f^{}_{01}\qty(\gamma^{}_1\qty(t^{}_0))\qty(a^{}_0).\end{equation}
+注意到$f^{}_{i-1,i}=f^{}_{i,i-1}$，再参考泛函积分的定义和记号，取$n\to \infty$并缩合所有的底空间曲线变量，我们可以将上式以一个简洁的形式写出
+\begin{equation}\lim_{n\to\infty} a^{}_n=\qty[\lim_{n\to\infty}f^{}_{n,n-1}\circ f^{}_{n-1,n-2}\circ\cdots f^{}_{21}\circ f^{}_{10}(\gamma)]\qty(a^{}_0).\label{527++3.}\end{equation}
+这就是一条曲线$\gamma$的提升$\tilde\gamma$在纤维上的具体公式，以始末点在纤维上的对应关系确定，需要强调的是即使局部平凡化为$S^{}_U=\mathrm{id}^{}_F$，也不能说明$a^{}_n=a^{}_0$，因为相邻平凡化在同一纤维上的转换并不是恒等映射。同时这个结论可以容易的推广到定端同伦，此处略过。当然目前$S^{}_nS^{-1}_0$没有任何含义，因为两个不同的覆叠变换群之间只有同构没有变换。\\
+\\
+将转换公式(\ref{527++3.})应用在回路上$\gamma(0)=\gamma(1)=p$，我们就得到底空间以$p$为基点的全局闭路类的提升。更进一步，因为此时$p\in U^{}_0\cap U^{}_n$，所以$\eval{S^{}_nS^{-1}_0}_{F(p)}\in\mathscr D\qty(U^{}_0,\pi)$是一个覆叠变换，进而
+$$a^{}_n=S^{}_nS^{-1}_0\qty(a^{}_0)=f^{}_{n0}\qty(a^{}_0).$$
+于是，式(\ref{527++3.})给出回路$\gamma$基点处的转移函数
+\begin{equation}f^{}_{\gamma}(p)=\lim_{n\to\infty}f^{}_{n0}(p)=\lim_{n\to\infty}f^{}_{n,n-1}\circ f^{}_{n-1,n-2}\circ\cdots f^{}_{21}\circ f^{}_{10}(\gamma).\end{equation}
+同胚$f^{}_{\gamma}$称为闭路在基点处的\textbf{单值性映射 \textit{Monodromy Map}}，在固定了起点$a\in F(p)$后，称其关于单值性映射的像$f^{}_{\gamma}(p)(a)$为闭路的\textbf{单值性}。这一术语来源自复分析，比如取去心复平面$B=\mathbb C-\qty{0}$，不难证明$\mathbb C$是其万有覆盖。回顾到欧拉公式$e^{2\pi i}=1$，以及复数的对数
+$$\forall z=re^{i\theta}\in\mathbb C-\qty{0},\quad \ln z=\ln r+i\theta,$$
+令覆叠变换为
+\begin{equation}\pi:\mathbb C\to B,\quad \pi(z)=e^z\implies \pi^{-1}(b)=\ln b=\ln r+i(\theta+2k\pi),\quad \forall b\in B,\quad k\in\mathbb Z.\end{equation}
+这样纤维的离散性就体现在复轴上。现取$B$上一个回路$\gamma=e^{i\theta}$，$0\leq\theta\leq2\pi$，令提升起点为$a=\ln 1+i0=0$，则单值性给出相位差
+\begin{equation}\qty[f^{}_{\gamma}(p)](a)-a=2\pi i+2k\pi i-0=2(k+1)\pi i,\quad k\in\mathbb Z.\end{equation}
+若$k=-1$则提升的始末点重合，而所有$k\neq-1$的情况为绕一圈之后不会回到起点，这就是复变函数的多值性，或称为非平凡单值性，因为结果仍然是唯一确定的。前面提到$f^{}_{\gamma}$在纤维上给出覆叠变换，从点的角度这是纤维上的置换$\sigma^{}_p$，现在让我们明确这个定义
+\begin{equation}\sigma^{}_p:F(p)\to F(p),\quad \forall p\in U\cap V,\quad \sigma^{}_p=\eval{f^{}_{UV}}_{F(p)}=f^{}_{UV}(p).\end{equation}
+全体置换在复合映射下构成一个有限的置换群$\mathrm{Perm}(E,p)$，此复合映射由上循环条件(\ref{xisGFTW4})确定，单位元是归一化(\ref{ximGFu4})，其维数是$\dim(F(p))!<\infty$
+\begin{equation}\mathrm{Perm}(E,p)=\qty{\sigma^{}_p\middle\vert \sigma^{}_p\circ\sigma'_p=f^{}_{ik}(p)=f^{}_{ij}(p)\circ f^{}_{jk}(p),\quad e=f^{}_{ii}}.\end{equation}
+于是根据定义我们看到$f^{}_{\gamma}(p)\in\mathrm{Perm}(E,p)$，这是前文中对于$S^{}_U$
+
+
+
+
+回到定端同伦的提升唯一性，它说明上述回路的单值性映射可以推广到闭路类$\expval{\gamma}$
+$$f^{}_{\expval{\gamma}}(p)=\lim_{n\to\infty}f^{}_{n,n-1}\circ f^{}_{n-1,n-2}\circ\cdots f^{}_{21}\circ f^{}_{10}(\expval{\gamma}).$$
+考虑两个以$p$为基点的闭路类的乘积$\expval{\alpha}\cdot\expval{\gamma}$，此时基点$p$在分段曲线下处于三个开邻域的交集内
+$$p\in U^{}_0\cap U^\gamma_n\cap U^\alpha_n,\quad \alpha^{}_n:\qty[t^{}_{n-1},t^{}_n]\to U^\alpha_n,\quad \gamma^{}_n:\qty[t^{}_{n-1},t^{}_n]\to U^\gamma_n,$$
+则单值性映射作为转移函数，必然满足上循环条件(\ref{xisGFTW4})，进而得到
+\begin{equation}f^{}_{\expval{\alpha}\cdot\expval{\gamma}}(p)=f^{}_{\expval{\alpha}}(p)\circ f^{}_{\expval{\gamma}}(p).\label{5RRT110.,hj}\end{equation}
+这体现为每个闭路类的单值性是独立的，乘积的连续性反映为连续作用。
+
+
+因此在固定提升起点$a$后，关于所有闭路类的单值性构成一个群，称为覆叠空间$E$的\textbf{单值性群}，记为$\mathrm{Mono}(E,a)$，写作
+\begin{equation}\mathrm{Mono}(E,a)=\qty{\qty[f^{}_{\expval{\gamma}}(p)](a)\middle\vert\expval{\gamma}\in \varPi^{}_1(B,p),\quad \pi(a)=p}.\end{equation}
+
+
+
+
+
+
+\subsubsection{同伦群的长正合序列}
+\noindent 在第\ref{xi5sdfg5400}节中我们详细分析了覆叠空间的基本群$\varPi^{}_1$，现在我们来讨论任意同伦群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了论高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
 $$\varPi^{}_n(X)=\qty{\expval{f}\middle\vert f\simeq g:S^n\to X}=\qty[S^n,X].$$
 根据覆叠空间的映射关系(\ref{ERGDFG10})，我们自然的就得到一个正合列的一部分
 \begin{equation}\varPi^{}_n(F)\xrightarrow{i^{}_*} \varPi^{}_n(E)\xrightarrow{\pi^{}_*} \varPi^{}_n(B).\end{equation}
-其中$i^{}_*$和$\pi^{}_*$是嵌入映射和覆叠映射相应的群诱导映射。现在我们的目标是计算出这一部分前后的群，为此不妨从低维情形出发推广，以$n=2$的\textsl{Hopf}纤维化为例。此时结尾群为$\varPi^{}_2\qty(S^2)=\mathbb Z=\qty[S^2,S^2]$，
+其中$i^{}_*$和$\pi^{}_*$是嵌入映射和覆叠映射相应的群诱导映射，证明略过。现在我们的目标是计算出这一部分前后的群，为此不妨回到最初的构造，根据定义
 
 
 
