@@ -14249,18 +14249,18 @@ $$\varPi^{}_1\qty(\mathbb{RP}^{n\ge2})=\mathbb Z^{}_2=F(b).$$
 其中映射$S^{}_U:\pi^{-1}(U)\to F(p)$和流形上的局部同胚映射$\varphi^{}_U:U\to\mathbb R^n$完全一致，可以看作覆叠空间在纤维上的局部坐标。对于群作用的商空间$B=E/G$，局部平凡化还可以定义为
 \begin{equation}\begin{aligned}& T'_U=\qty(\pi,Y^{}_U):\pi^{-1}(U)\to U\times G,\quad Y^{}_U:\pi^{-1}(U)\to G\\&\implies Y^{}_U(gx)=gY^{}_U(x),\quad \forall x\in \pi^{-1}(U),\quad \forall g\in G.\end{aligned}\end{equation}
 这样我们就有群元的对应关系，比如令$S^{}_U(x)\iff Y^{}_U(x)=e$，从而$T^{}_U$和$T'_U$是一一对应的。由于$S^{}_U$一定存在，因此局部平凡空间必然是正则的，从而不难看到局部平凡化并不是唯一确定的。同时由于局部平凡性完全由底空间的点$p$确定，因此我们可以引入一个连续映射$\sigma$，使得其在$U$上取值在$\pi^{-1}(U)$内
-\begin{equation}\sigma:U\to E,\quad \pi(\sigma(p))=p\implies \sigma(U)=\pi^{-1}(U).\end{equation}
+\begin{equation}\sigma:U\to E,\quad \pi\circ\sigma=\mathrm{id}^{}_U.\end{equation}
 我们称此连续映射为\textbf{局部截面 \textit{Local Section}}，和张量丛的截面也就是张量场是完全一致的。不难证明，局部截面和$T^{}_U$是一一对应的，从而可以将其推广到全局平凡
 \begin{equation}T^{}_B:\pi^{-1}(B)\to B\times F(p)=E\iff \exists\sigma:B\to E.\end{equation}
 因此，一个直接的平凡性判据为：局部平凡空间不存在全局平凡的截面。以\textsl{Hopf}纤维化为例，假设其是全局平凡的，则通过局部平凡化$T^{}_{S^2}$定义全局截面为
 $$\sigma:S^2\to S^3,\quad S^2\times S^1\cong S^3\implies T^{}_{S^2}\qty(p,e^{i\alpha})=\sigma(p)\cdot e^{i\alpha},\quad p\in S^2.$$
 将$e^{i\alpha}$看作回路，则等号右侧给出了$S^3$上以$\sigma(p)$为基点的闭路类，于是我们得到$\varPi^{}_1\qty(S^3,\sigma(p))=\mathbb Z$。这不符合一般的结论$\varPi^{}_1\qty(S^3)=0$，因此\textsl{Hopf}纤维化非全局平凡。就像前文说的，这是一个扭曲的纤维丛，截面只能对每个点单独指定。\\
 \\
-上述的判据并非构造性的，因此不便于使用，为此我们需要一个更直观的角度。由于局部平凡性依赖于邻域的选择，因此同一点的不同邻域会给出不同的局部平凡化，但对于该点$p$而言其纤维是不变的，因此两者的不同仅仅在于纤维的变换。我们来定量表述这个想法，注意一切要以覆叠空间为基础
-\begin{equation}\begin{aligned}&\forall U,V\in\mathscr N(p), \quad T^{}_{U\cap V}:\pi^{-1}(U\cap V)\to U\cap V\times F(p);\\& T^{}_{U\cap V}(x)=\qty(\pi(x),S^{}_{U\cap V}(x)),\quad \forall x\in \pi^{-1}(U\cap V).\end{aligned}\end{equation}
-其中映射$S^{}_{U\cap V}\circ S^{-1}_U\in\mathscr D(U\cap V,\pi)$是一个局部覆叠变换，给出了不同局部平凡化间纤维的变换，由此定义\textbf{转移函数 \textit{Transition Function}}为
-\begin{equation}f^{}_{UV}:U\cap V\to F(p),\quad f^{}_{UV}(p)=S^{}_V\circ S^{-1}_U(x),\quad \forall x\in F(p)\implies f^{}_{UV}=S^{}_V\circ S^{-1}_U\circ\pi^{-1}.\end{equation}
-其在形式上和流形上的转移函数是完全一致的，因此也满足所有的性质。条件$\forall x\in F(p)$成立的原因是，覆叠变换群不依赖纤维上点的选择，这保证了$f^{}_{UV}$定义的合法性。不难验证，对于底空间上的一组开覆盖$\qty{U^{}_\alpha}$，转移函数满足如下性质：
+上述的判据并非构造性的，因此不便于使用，为此我们需要一个更直观的角度。由于局部平凡性依赖于邻域的选择，因此同一点的不同邻域会给出不同的局部平凡化，但对于该点$p$而言其纤维是不变的，因此两者的不同仅仅在于纤维的变换。我们来定量表述这个想法
+\begin{equation}\forall U,V\in\mathscr N(p), \quad T^{}_V\circ T^{-1}_U:(U\cap V)\times F(p)\to (U\cap V)\times F(p);\quad T^{}_V\circ T^{-1}_U=\qty(\mathrm{id}^{}_{U\cap V},S^{}_V\circ S^{-1}_U).\end{equation}
+其中映射$S^{}_V\circ S^{-1}_U\in\mathscr D(U\cap V,\pi)$是一个局部覆叠变换，给出了不同局部平凡化间纤维的变换，由此定义覆叠空间的\textbf{转移函数 \textit{Transition Function}}为
+\begin{equation}f^{}_{UV}:U\cap V\to F(p),\quad f^{}_{UV}(p)=S^{}_V\circ S^{-1}_U(x),\quad \forall x\in F(p)\implies f^{}_{UV}=S^{}_V\circ S^{-1}_U\circ\pi^{-1}.\label{34535ngm...}\end{equation}
+其在形式上和流形上的转移函数是完全一致的，因此也满足所有的性质，注意这里定义在底空间上，因为覆叠空间的整体性质依旧反应在$B$上。条件$\forall x\in F(p)$成立的原因是，覆叠变换群不依赖纤维上点的选择，这保证了$f^{}_{UV}$定义在底空间上的合法性。不难验证，对于底空间上的一组开覆盖$\qty{U^{}_\alpha}$，转移函数满足如下性质：
 \begin{enumerate}\item\textbf{上循环条件 \textit{Cocycle Condition}}：在 $U^{}_\alpha\cap U^{}_\beta\cap U^{}_\gamma$ 上，\begin{equation}f^{}_{\alpha\gamma}(p)=f^{}_{\alpha\beta}(p)\circ f^{}_{\beta\gamma}(p),\quad \forall p\in U^{}_\alpha\cap U^{}_\beta\cap U^{}_\gamma;\label{xisGFTW4}\end{equation}\item \textbf{归一化条件}：在 $U^{}_\alpha$ 上，\begin{equation}f^{}_{\alpha\alpha}(p)=\mathrm{id}^{}_F:F(p)\to F(p).\label{ximGFu4}\end{equation}\end{enumerate}
 这一组$\qty{f^{}_{\alpha\beta}}$称为一个\textbf{\textsl{Čech}上循环}，它完全决定了覆叠空间$E$的整体拓扑结构。反之，给定离散群$G$与满足上循环条件的转移函数 
 $$f^{}_{\alpha\beta}:U^{}_\alpha\cap U^{}_\beta\to G,$$
@@ -14270,7 +14270,15 @@ $$f^{}_{\alpha\beta}:U^{}_\alpha\cap U^{}_\beta\to G,$$
 \begin{equation}\sigma^{}_V(U\cap V)=f^{}_{UV}\sigma^{}_U(U\cap V),\quad \sigma^{}_{U,V}:U,V\to E.\end{equation}
 若截面是全局的，则可以写出$\sigma^{}_V(V)=f^{}_{BV}\sigma^{}_B(V)=S^{}_V\sigma^{}_B(V)$，或者$\sigma^{}_B=\sigma^{}_VS^{-1}_V$。再次回看\textsl{Hopf}纤维化，如果取$V$为上半球面，那么永远不存在一个$S^{-1}_V$将上半球面的截面变为全球面的截面，因此根据判据它是局部平凡的。可见转移函数提供了一个可计算的平台，我们可以通过它的性质来分析覆叠空间的拓扑性质，一如流形可以利用转移函数定义微分结构。\\
 \\
-现在来讨论局部平凡化下的基本群。在底空间点$p\in B$的开邻域$U$内，引入一条连续曲线$\gamma:I\to U$，使得$\gamma(0)=p$。现在假设其对覆叠$\pi^{-1}$的提升给出两条曲线$\tilde\gamma^{}_1$和$\tilde\gamma^{}_2$，他们的起点相同但终点不同
+由于转移函数的计算并不清晰，我们可以从另一个角度重新表述。注意到定义(\ref{34535ngm...})说明，$f^{}_{UV}$将纤维上的点$x$变为同一纤维上的另一个点，在数学上这就是\textbf{置换 \textit{Permutation}}，其在形式上和通常的数组置换是完全一致的。我们可以在一个离散的拓扑空间$X$上，定义置换为一个自同胚
+\begin{equation}\zeta^{}_h:X\to X,\quad \zeta^{}_h(x)=h,\quad \forall h,x\in X.\end{equation}
+所有置换的集合称为\textbf{置换群}，在复合映射下构成一个群
+\begin{equation}\mathrm{Perm}(X)=\qty{\zeta^{}_p\middle\vert\forall p\in X},\quad \zeta^{-1}_p\circ\zeta^{}_p=e,\quad \zeta^{}_q\circ\zeta^{}_p\in\mathrm{Perm}(X).\end{equation}
+回到覆叠空间，将纤维$F(p)$看作离散拓扑空间，则根据定义转移函数$f^{}_{UV}(p)$就是一个置换。全体转移函数在复合映射下构成一个有限的置换群$\mathrm{Perm}(F(p))$，此复合映射由上循环条件(\ref{xisGFTW4})确定，单位元是归一化(\ref{ximGFu4})
+\begin{equation}\mathrm{Perm}(F(p))=\qty{\zeta^{}_x\middle\vert\forall x\in F(p)},\quad \zeta^{}_y\circ\zeta^{}_x=f^{}_{ik}(p)=f^{}_{ij}(p)\circ f^{}_{jk}(p),\quad e=f^{}_{ii}.\label{rysRGpioj}\end{equation}
+这是转移函数的具体表示之一，也是对局部覆叠变换群的表述修正。还是需要强调置换群是有限群，其维数是$[\mathrm{Card}(X)]!<\infty$，因此无法在连续空间，特别是流形上定义。\\
+\\
+现在来讨论局部平凡化下的路径。在底空间点$p\in B$的开邻域$U$内，引入一条连续曲线$\gamma:I\to U$，使得$\gamma(0)=p$。现在假设其对覆叠$\pi^{-1}$的提升给出两条曲线$\tilde\gamma^{}_1$和$\tilde\gamma^{}_2$，他们的起点相同但终点不同
 $$\tilde\gamma^{}_1(0)=\tilde\gamma^{}_2(0)\in F(p),\quad\tilde\gamma^{}_1(1)\neq	\tilde\gamma^{}_2(1).$$
 根据定义，这两条曲线都是连续的，因此必然存在$t^{}_0\in I$，使得
 $$\tilde\gamma^{}_1\qty(t^-_0)=\tilde\gamma^{}_2\qty(t^-_0)=a\in F(\gamma\qty(t^{}_0)),\quad \tilde\gamma^{}_1\qty(t^+_0)\neq\tilde\gamma^{}_2\qty(t^+_0).$$
@@ -14306,43 +14314,134 @@ $$\forall z=re^{i\theta}\in\mathbb C-\qty{0},\quad \ln z=\ln r+i\theta,$$
 \begin{equation}\pi:\mathbb C\to B,\quad \pi(z)=e^z\implies \pi^{-1}(b)=\ln b=\ln r+i(\theta+2k\pi),\quad \forall b\in B,\quad k\in\mathbb Z.\end{equation}
 这样纤维的离散性就体现在复轴上。现取$B$上一个回路$\gamma=e^{i\theta}$，$0\leq\theta\leq2\pi$，令提升起点为$a=\ln 1+i0=0$，则单值性给出相位差
 \begin{equation}\qty[f^{}_{\gamma}(p)](a)-a=2\pi i+2k\pi i-0=2(k+1)\pi i,\quad k\in\mathbb Z.\end{equation}
-若$k=-1$则提升的始末点重合，而所有$k\neq-1$的情况为绕一圈之后不会回到起点，这就是复变函数的多值性，或称为非平凡单值性，因为结果仍然是唯一确定的。前面提到$f^{}_{\gamma}$在纤维上给出覆叠变换，从点的角度这是纤维上的置换$\sigma^{}_p$，现在让我们明确这个定义
-\begin{equation}\sigma^{}_p:F(p)\to F(p),\quad \forall p\in U\cap V,\quad \sigma^{}_p=\eval{f^{}_{UV}}_{F(p)}=f^{}_{UV}(p).\end{equation}
-全体置换在复合映射下构成一个有限的置换群$\mathrm{Perm}(E,p)$，此复合映射由上循环条件(\ref{xisGFTW4})确定，单位元是归一化(\ref{ximGFu4})，其维数是$\dim(F(p))!<\infty$
-\begin{equation}\mathrm{Perm}(E,p)=\qty{\sigma^{}_p\middle\vert \sigma^{}_p\circ\sigma'_p=f^{}_{ik}(p)=f^{}_{ij}(p)\circ f^{}_{jk}(p),\quad e=f^{}_{ii}}.\end{equation}
-于是根据定义我们看到$f^{}_{\gamma}(p)\in\mathrm{Perm}(E,p)$，这是前文中对于$S^{}_U$
-
-
-
-
-回到定端同伦的提升唯一性，它说明上述回路的单值性映射可以推广到闭路类$\expval{\gamma}$
+若$k=-1$则提升的始末点重合，而所有$k\neq-1$的情况为绕一圈之后不会回到起点，这就是复变函数的多值性，或称为非平凡单值性，因为结果仍然是唯一确定的。回到定端同伦的提升唯一性，它说明上述回路的单值性映射可以推广到闭路类$\expval{\gamma}$
 $$f^{}_{\expval{\gamma}}(p)=\lim_{n\to\infty}f^{}_{n,n-1}\circ f^{}_{n-1,n-2}\circ\cdots f^{}_{21}\circ f^{}_{10}(\expval{\gamma}).$$
 考虑两个以$p$为基点的闭路类的乘积$\expval{\alpha}\cdot\expval{\gamma}$，此时基点$p$在分段曲线下处于三个开邻域的交集内
 $$p\in U^{}_0\cap U^\gamma_n\cap U^\alpha_n,\quad \alpha^{}_n:\qty[t^{}_{n-1},t^{}_n]\to U^\alpha_n,\quad \gamma^{}_n:\qty[t^{}_{n-1},t^{}_n]\to U^\gamma_n,$$
 则单值性映射作为转移函数，必然满足上循环条件(\ref{xisGFTW4})，进而得到
 \begin{equation}f^{}_{\expval{\alpha}\cdot\expval{\gamma}}(p)=f^{}_{\expval{\alpha}}(p)\circ f^{}_{\expval{\gamma}}(p).\label{5RRT110.,hj}\end{equation}
-这体现为每个闭路类的单值性是独立的，乘积的连续性反映为连续作用。
-
-
-因此在固定提升起点$a$后，关于所有闭路类的单值性构成一个群，称为覆叠空间$E$的\textbf{单值性群}，记为$\mathrm{Mono}(E,a)$，写作
-\begin{equation}\mathrm{Mono}(E,a)=\qty{\qty[f^{}_{\expval{\gamma}}(p)](a)\middle\vert\expval{\gamma}\in \varPi^{}_1(B,p),\quad \pi(a)=p}.\end{equation}
-
-
-
-
-
+这体现为每个闭路类的单值性是独立的，乘积的连续性反映为连续作用。同时根据定义(\ref{rysRGpioj})不难证明$f^{}_{\expval{\gamma}}(p)\in\mathrm{Perm}(F(p))$，这样条件(\ref{5RRT110.,hj})就是基本群$\varPi^{}_1(B,p)$和置换群之间的同态关系，记同态映射为
+\begin{equation}\rho:\varPi^{}_1(B,p)\to \mathrm{Perm}(F(p)),\quad \rho(\expval{\gamma})=f^{}_{\expval{\gamma}}(p),\quad \forall \expval{\gamma}\in\varPi^{}_1(B,p).\end{equation}
+但它并不是双射，因为此时路径的提升并不唯一，一个闭路类的提升可以和另一个不同的闭路类提升重合。在固定提升起点$a$后，置换的选择减少，不难证明必须要满足条件
+$$\zeta^{}_m(m)=a,\quad \forall m\in F(p),$$
+同构升格为同态
+\begin{equation}\rho^{}_a:\varPi^{}_1(B,p)\to \mathrm{Perm}(F(p)),\quad \rho^{}_a(\expval{\gamma})=\qty[f^{}_{\expval{\gamma}}(p)](a),\quad a\in F(p),\quad\forall \expval{\gamma}\in\varPi^{}_1(B,p).\end{equation}
+这样单值性映射确定了关于$a$的单值性，所有不同闭路类的单值性构成置换群的子群，称为覆叠空间$E$的\textbf{单值性群}，记为$\mathrm{Mono}(E,a)$，写作
+\begin{equation}\mathrm{Mono}(E,a)=\qty{\rho^{}_a(\expval{\gamma})\middle\vert\forall\expval{\gamma}\in \varPi^{}_1(B,p),\pi(a)=p}=\rho^{}_a\qty[\varPi^{}_1(B,p)]\subset \mathrm{Perm}(F(p)).\end{equation}
+可以证明对于万有覆叠空间，单值性群同构于覆叠变换群$\mathrm{Mono}(E,a)\cong\mathscr D(E)$，因为此时置换会不重复的遍历整个纤维。进一步的，若单值性群是平凡的$\mathrm{Mono}(E,a)=0$，则覆叠空间是全局平凡的，因为此时底空间单连通使得全空间整体可缩。这意味着万有覆叠空间是最不平凡的覆叠空间，而这种不平凡性正是示性类的来源。\\
+\\
+上面我们分析了覆叠空间的单值性，实际上这些分析也适用于连续的纤维丛，比如主丛和伴丛。事实上除了万有覆叠空间，一般的覆叠空间的单值性群是较难计算的，因为我们无法定量描述终点的位置信息，这是由于在离散环境下纤维间的移动是不可定量的。\\
+\\
+但在主丛上，纤维间的移动由联络确定，也就是平行移动，此时单值性就由联络沿闭路的叠加给出，而单值性群给出和乐群，在第\ref{CadFHHG}节中会有介绍。联络取值在\textsl{Lie}代数上，对于非\textsl{Abel}的群，式(\ref{527++3.})对联络的逐点复合就给出\textsl{Wilson}环，这些都是计算单值性群的有利手段。
 
 \subsubsection{同伦群的长正合序列}
-\noindent 在第\ref{xi5sdfg5400}节中我们详细分析了覆叠空间的基本群$\varPi^{}_1$，现在我们来讨论任意同伦群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了论高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
+\noindent 在第\ref{xi5sdfg5400}节中，我们详细分析了覆叠空间的基本群$\varPi^{}_1$，现在我们来讨论任意同伦群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
 $$\varPi^{}_n(X)=\qty{\expval{f}\middle\vert f\simeq g:S^n\to X}=\qty[S^n,X].$$
 根据覆叠空间的映射关系(\ref{ERGDFG10})，我们自然的就得到一个正合列的一部分
 \begin{equation}\varPi^{}_n(F)\xrightarrow{i^{}_*} \varPi^{}_n(E)\xrightarrow{\pi^{}_*} \varPi^{}_n(B).\end{equation}
 其中$i^{}_*$和$\pi^{}_*$是嵌入映射和覆叠映射相应的群诱导映射，证明略过。现在我们的目标是计算出这一部分前后的群，为此不妨回到最初的构造，根据定义
 
 
+\subsubsection{同伦群的长正合序列}
+\noindent 上文中我们详细分析了覆叠空间的基本群 $\varPi^{}_1$ 与单值性结构。现在我们将视角推广到任意维同伦群 $\varPi^{}_n\ (n\ge 1)$。回顾第~\ref{234200.05}节中的定义，拓扑空间 $X$ 的 $n$ 维同伦群由球面映射的同伦类给出：
+\begin{equation}
+\varPi^{}_n(X,x_0)=\qty{\expval{f}\middle\vert f:S^n\to X,\ f(\ast)=x_0},
+\end{equation}
+其中 $\ast\in S^n$ 为基点。当 $n=1$ 时，这退化为闭路类群；当 $n\ge 2$ 时，$\varPi^{}_n(X)$ 总是交换群。对于覆叠空间
+\begin{equation}
+F\hookrightarrow E\xrightarrow{\pi} B,
+\end{equation}
+自然存在三个映射序列：嵌入映射 $i:F\hookrightarrow E$、覆叠映射 $\pi:E\to B$，以及基点选取 $p_0:\ast\mapsto b_0\in B$。这些映射诱导出同伦群的同态：
+\begin{equation}
+\cdots\xrightarrow{i_*} \varPi^{}_n(E,e_0)\xrightarrow{\pi_*} \varPi^{}_n(B,b_0)\xrightarrow{\partial} \varPi^{}_{n-1}(F,e_0)\xrightarrow{i_*} \varPi^{}_{n-1}(E,e_0)\xrightarrow{\pi_*}\cdots
+\label{eq:LES}
+\end{equation}
+其中 $e_0\in F(b_0)\subset E$ 为固定的基点。本节的目标是严格证明这一序列的\textbf{正合性}，并由此导出覆叠空间在高维同伦群上的核心性质。\\
+\\
+长正合序列中最不平凡的一项是边缘同态 $\partial:\varPi^{}_n(B,b_0)\to\varPi^{}_{n-1}(F,e_0)$。其构造如下：取代表元 $[\gamma]\in\varPi^{}_n(B,b_0)$，选取具体映射 $\gamma:(S^n,\ast)\to(B,b_0)$。由于 $S^n$ 可以等同于单位区间的 $n$ 重乘积 $I^n$ 将边界 $\partial I^n$ 坍缩为一点，我们可以将 $\gamma$ 视为一个映射
+\begin{equation}
+\gamma:I^n\to B,\quad \gamma(\partial I^n)=b_0.
+\end{equation}
+根据覆叠空间的性质，由于 $I^n$ 可缩，其上的任何映射都可以唯一提升。具体地，取 $e_0\in\pi^{-1}(b_0)$，存在唯一的提升 $\tilde\gamma:I^n\to E$ 使得 $\pi\circ\tilde\gamma=\gamma$ 且 $\tilde\gamma(\partial I^n)\subset F(b_0)$。然而，与闭路提升不同，当 $n\ge 2$ 时，$\partial I^n$ 不再是零维点，而是一个 $(n-1)$ 维球面 $S^{n-1}$。因此 $\tilde\gamma$ 在边界上的限制给出映射
+\begin{equation}
+\tilde\gamma|_{\partial I^n}:S^{n-1}\to F(b_0)\subset E,
+\end{equation}
+其像完全落在纤维 $F(b_0)$ 中。定义
+\begin{equation}
+\partial[\gamma]=\qty[\tilde\gamma|_{\partial I^n}]\in\varPi^{}_{n-1}(F,e_0).
+\end{equation}
+可以验证，$\partial$ 不依赖于代表元的选取：若 $\gamma\simeq\gamma'$ 通过同伦 $H:I^n\times I\to B$，则 $H$ 的提升给出 $\tilde\gamma$ 与 $\tilde\gamma'$ 之间的同伦，且边界映射的同伦类保持不变。因此 $\partial$ 是良定义的群同态。\\
+\\
+我们逐对验证序列~\eqref{eq:LES} 的正合性。只需证明以下三个包含关系：
+\begin{enumerate}
+    \item $\operatorname{im} i_*=\ker\pi_*$；
+    \item $\operatorname{im}\pi_*=\ker\partial$；
+    \item $\operatorname{im}\partial=\ker i_*$。
+\end{enumerate}
+
+\textbf{(i) $\operatorname{im} i_*=\ker\pi_*$。} 对任意 $[\alpha]\in\varPi^{}_n(F,e_0)$，有 $\pi_*(i_*[\alpha])=[\pi\circ\alpha]=b_0$（常值映射），故 $\operatorname{im} i_*\subset\ker\pi_*$。反之，若 $[\beta]\in\ker\pi_*$，则 $\pi\circ\beta\simeq c_{b_0}$（常值映射）。由于 $I^n$ 可缩，$\beta$ 可同伦形变使其像完全落在纤维 $F(b_0)$ 内，从而 $[\beta]\in\operatorname{im} i_*$。
+
+\textbf{(ii) $\operatorname{im}\pi_*=\ker\partial$。} 若 $[\beta]=\pi_*[\tilde\beta]$，取提升 $\tilde\beta:I^n\to E$，则 $\partial[\beta]=[\tilde\beta|_{\partial I^n}]$。由于 $\tilde\beta$ 整体定义在 $I^n$ 上，其在边界上的限制同伦于常值映射（将 $I^n$ 收缩到边界上一点即可），故 $\partial[\beta]=0$。反之，若 $\partial[\gamma]=0$，则 $\tilde\gamma|_{\partial I^n}\simeq c_{e_0}$。利用同伦延拓性质，可将 $\tilde\gamma$ 修改为在整个 $I^n$ 上映射到 $E$ 的映射 $\tilde\beta$，使得 $\pi\circ\tilde\beta=\gamma$，从而 $[\gamma]=\pi_*[\tilde\beta]$。
+
+\textbf{(iii) $\operatorname{im}\partial=\ker i_*$。} 若 $[\alpha]=\partial[\gamma]$，则 $i_*[\alpha]=[\tilde\gamma|_{\partial I^n}]$ 在 $E$ 中可延拓为 $\tilde\gamma:I^n\to E$，故 $i_*[\alpha]=0$。反之，若 $i_*[\alpha]=0$，则 $\alpha:S^{n-1}\to F(b_0)$ 可延拓为 $\tilde\beta:I^n\to E$。令 $\gamma=\pi\circ\tilde\beta$，则 $\partial[\gamma]=[\alpha]$，证毕。\\
+\\
+当 $n=1$ 时，序列退化为
+\begin{equation}
+\varPi^{}_1(F)\xrightarrow{i_*} \varPi^{}_1(E)\xrightarrow{\pi_*} \varPi^{}_1(B)\xrightarrow{\partial} \varPi^{}_0(F)\xrightarrow{i_*} \varPi^{}_0(E).
+\end{equation}
+由于纤维 $F$ 是离散空间，$\varPi^{}_1(F)=0$，且 $\varPi^{}_0(F)$ 是纤维的连通分支集合（即纤维本身作为集合）。此时 $\pi_*$ 是单射——这正是我们在前文（第~\ref{xi5467uh5400}节）中通过道路提升唯一性得到的结论：$\pi_*:\varPi^{}_1(E,e_0)\hookrightarrow\varPi^{}_1(B,b_0)$ 的像 $K^{}_{e_0}$ 是子群。同时，$\partial$ 将闭路类映射到其在纤维上的终点与起点的差，这正是单值性映射的雏形。而 $\varPi^{}_0(E)\cong\varPi^{}_0(B)$（因为 $\pi$ 是满射且局部同胚），故序列在 $\varPi^{}_0$ 处终止。\\
+\\
+当 $n\ge 2$ 时，纤维 $F$ 是离散空间，其 $(n-1)$ 维同伦群消失：
+\begin{equation}
+\varPi^{}_{n-1}(F)=0\quad (n\ge 2).
+\end{equation}
+代入长正合序列~\eqref{eq:LES}，得到
+\begin{equation}
+0=\varPi^{}_n(F)\xrightarrow{i_*} \varPi^{}_n(E)\xrightarrow{\pi_*} \varPi^{}_n(B)\xrightarrow{\partial=0} 0.
+\end{equation}
+由此立即得到\textbf{同构}：
+\begin{equation}
+\pi_*:\varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B),\quad \forall n\ge 2.
+\label{eq:higher-homotopy-isom}
+\end{equation}
+这一结果具有深刻的几何含义：覆叠映射在"抹平"基本群的同时，完全保留了所有高阶同伦信息。换言之，覆叠空间 $E$ 与底空间 $B$ 在二维及以上同伦群上没有任何区别。\\
+\\
+以万有覆叠为例：设 $(\tilde B,B,\tilde\pi)$ 为 $B$ 的万有覆叠，则 $\varPi^{}_1(\tilde B)=0$。长正合序列给出
+\begin{equation}
+0\longrightarrow \varPi^{}_n(\tilde B)\xrightarrow{\cong} \varPi^{}_n(B)\longrightarrow 0\quad (n\ge 2),
+\end{equation}
+即 $\varPi^{}_n(\tilde B)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个"干净"的空间 $\tilde B$，其高阶同伦群与 $B$ 完全相同。例如，对于实射影空间 $\mathbb{RP}^n\ (n\ge 2)$，其万有覆叠为 $S^n$，从而
+\begin{equation}
+\varPi^{}_k(\mathbb{RP}^n)\cong\varPi^{}_k(S^n),\quad \forall k\ge 2.
+\end{equation}
+特别地，$\varPi^{}_n(\mathbb{RP}^n)\cong\mathbb Z$（当 $n$ 为奇数）或 $\mathbb Z_2$（当 $n$ 为偶数），这直接继承自球面。\\
+\\
+长正合序列在 $n=1$ 处的结构与我们此前讨论的单值性表示密切相关。回顾第~\ref{twtg40}节中定义的单值性映射 $\rho_a:\varPi^{}_1(B,b_0)\to\operatorname{Perm}(F)$，以及单值性群 $\mathrm{Mono}(E,a)\subset\operatorname{Perm}(F)$。从长正合序列的角度看，$\partial:\varPi^{}_1(B)\to\varPi^{}_0(F)$ 正是单值性映射的代数本质：$\partial$ 将闭路类 $[\gamma]$ 送到纤维中起点与终点的差，而这一差值在固定起点 $a$ 后，恰好给出了 $\rho_a([\gamma])$。因此，单值性群可以重新表述为
+\begin{equation}
+\mathrm{Mono}(E,a)=\partial\qty(\varPi^{}_1(B,b_0))\subset\varPi^{}_0(F)\cong F(b_0),
+\end{equation}
+其中 $\varPi^{}_0(F)$ 被视为带有基点 $a$ 的传递 $G$-集。这一视角将此前"转移函数沿闭路的路径有序乘积"的几何描述，完全纳入了同伦论的正合框架。\\
+\\
+长正合序列并非覆叠空间所独有。对于任意纤维丛 $F\hookrightarrow E\xrightarrow{\pi} B$，只要纤维 $F$、全空间 $E$、底空间 $B$ 都是"好"的拓扑空间（例如 CW 复形），就存在同伦群的长正合序列，且边缘同态的构造完全相同。区别在于：当纤维 $F$ 不是离散空间时，$\varPi^{}_{n-1}(F)$ 一般非零，因此 $\pi_*:\varPi^{}_n(E)\to\varPi^{}_n(B)$ 不再是同构，而是一个"几乎同构"——其核与余核由纤维的同伦群精确控制。\\
+\\
+这一推广在物理中极为重要。例如，对于主丛 $G\hookrightarrow P\xrightarrow{\pi} M$，纤维是李群 $G$（连通），其同伦群 $\varPi^{}_k(G)$ 可能非零。此时长正合序列给出了 $\varPi^{}_k(M)$、$\varPi^{}_k(P)$ 与 $\varPi^{}_{k-1}(G)$ 之间的精确关系，是研究拓扑缺陷、瞬子以及异常（anomaly）的核心工具。我们将在第~\ref{CadFHHG}节中看到，当引入联络后，这一代数信息进一步与微分几何的曲率联系起来。\\
+\\
+作为应用，我们利用长正合序列计算 Hopf 纤维化 $S^1\hookrightarrow S^3\to S^2$ 的同伦群。写出序列的片段：
+\begin{equation}
+\varPi^{}_2(S^1)\longrightarrow \varPi^{}_2(S^3)\longrightarrow \varPi^{}_2(S^2)\xrightarrow{\partial} \varPi^{}_1(S^1)\longrightarrow \varPi^{}_1(S^3).
+\end{equation}
+已知 $\varPi^{}_2(S^1)=0$（因为 $S^1$ 是一维的），$\varPi^{}_1(S^3)=0$（因为 $S^3$ 单连通），$\varPi^{}_1(S^1)\cong\mathbb Z$。序列正合给出
+\begin{equation}
+0\longrightarrow \varPi^{}_2(S^3)\longrightarrow \varPi^{}_2(S^2)\xrightarrow{\partial} \mathbb Z\longrightarrow 0.
+\end{equation}
+若 $\varPi^{}_2(S^3)=0$（可独立证明或通过 $S^3$ 单连通且 $H^2(S^3)=0$ 推出），则 $\partial$ 是同构，从而 $\varPi^{}_2(S^2)\cong\mathbb Z$。这正是 Hopf 纤维化作为示性类载体的拓扑根源：边缘同态 $\partial$ 的非平凡性直接反映了纤维丛的扭曲程度。事实上，$\partial$ 正是第一 \textsl{Chern} 类在同伦层面的体现（在引入上同调后我们将看到 $c_1$ 与 $\partial$ 对偶）。\\
+\\
+综上所述，覆叠空间的同伦群长正合序列将基本群的子群结构（通过 $\partial:\varPi^{}_1(B)\to\varPi^{}_0(F)$）、高维同伦群的同构（$\varPi^{}_n(E)\cong\varPi^{}_n(B),\ n\ge 2$）以及单值性表示统一在同一个代数框架中。这一框架不仅为计算拓扑不变量提供了强大工具，而且为从覆叠空间过渡到一般纤维丛的同伦论奠定了坚实基础。在后续讨论标架丛与主丛时，我们将看到，长正合序列是连接拓扑扭曲与几何联络的桥梁。
 
 
-\subsection{标架丛和主丛}
+
+
+\subsection{标架丛和主丛}\label{CadFHHG}
 
 \subsection{主丛的伴丛}
 
