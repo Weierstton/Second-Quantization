@@ -286,7 +286,6 @@
 \contentsline {subsubsection}{\numberline {C.1.1}定义和其基本群}{17}{subsubsection.1.C.1.1}%
 \contentsline {subsubsection}{\numberline {C.1.2}局部平凡性和单值性}{21}{subsubsection.1.C.1.2}%
 \contentsline {subsubsection}{\numberline {C.1.3}同伦群的长正合序列}{26}{subsubsection.1.C.1.3}%
-\contentsline {subsubsection}{\numberline {C.1.4}同伦群的长正合序列}{26}{subsubsection.1.C.1.4}%
 \contentsline {subsection}{\numberline {C.2}标架丛和主丛}{29}{subsection.1.C.2}%
 \contentsline {subsection}{\numberline {C.3}主丛的伴丛}{29}{subsection.1.C.3}%
 \contentsline {subsection}{\numberline {C.4}联络和曲率}{29}{subsection.1.C.4}%

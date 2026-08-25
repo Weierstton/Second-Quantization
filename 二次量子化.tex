@@ -14206,9 +14206,9 @@ $$S^3/U(1)=\qty{(\alpha,\beta)\in[0,\pi]\times[0,2\pi]\middle\vert z^{}_1=\frac{
 $$f: X\to B,\quad \tilde f: X\to E=B\times F.$$
 我们称$\tilde f$是$f$上的一个\textbf{提升 \textit{Lift}}，若两者满足关系$f=\pi\circ\tilde f$，也即有以下交换图
 \begin{equation}\begin{tikzcd}[scale=2]& E \arrow[d,"\pi"] \\X \arrow[r,"f"] \arrow[ur,"\tilde f"] & B \end{tikzcd}.\end{equation}
-参考\cite{CV25--}的定理$5.1$，这个提升是唯一确定的，若$X$连通，且$\exists x\in X$使得所有提升在该点处的值相等。由此我们可以构造该映射的同伦$H:X\times I\to B$的提升$\tilde H$如下
-\begin{equation}H(x,0)=\pi\circ \tilde f(x)\implies \tilde H(x,0)=\tilde f(x),\quad \forall x\in B.\end{equation}
-这一概念的应用是道路的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条路径。令其起点为$f(0)=b$，则根据唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$，一个直观的证明请参考第\ref{twtg40][]}节。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
+参考\cite{CV25--}的定理$5.1$，这个提升是唯一确定的，称为\textbf{提升唯一性}，若$X$连通，且$\exists x\in X$使得所有提升在该点处的值相等。由此我们可以构造该映射的同伦$H:X\times I\to B$的提升$\tilde H$如下
+\begin{equation}H(x,0)=\pi\circ \tilde f(x)=f(x)\implies \tilde H(x,0)=\tilde f(x),\quad \forall x\in B.\label{fcw4rCV}\end{equation}
+这个提升是唯一确定的，称为\textbf{同伦提升定理}。这一概念的应用是道路类的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条路径。令其起点为$f(0)=b$，则根据唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$，一个直观的证明请参考第\ref{twtg40][]}节。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
 \begin{equation}\forall f,g:[0,1]\to B,\quad f\,\dt{\cong}\,g\implies \tilde f\,\dt{\cong}\,\tilde g.\end{equation}
 需要强调的是，由于覆叠映射是满射，因此一条闭合回路$f(0)=(1)$在提升后并不能保证$\tilde f(0)=\tilde f(1)$。一般而言，$B$的一个闭路类$\expval{\alpha}$在提升后只会得到$E$中的一个普通道路类$\expval{\tilde\alpha}$，我们只能确定$\pi\circ\tilde\alpha(0)=\alpha(0)$。令起点为$\tilde\alpha(0)=a\in F(\pi(a))$，相应的道路类集合
 $$L(a)=\qty{\expval{\tilde\alpha}\middle\vert \tilde\alpha(0)=a,\quad \tilde\alpha(1)\in F(\pi(a))},$$
@@ -14300,7 +14300,7 @@ $$f^{}_{12}\qty(\gamma^{}_2\qty(t^{}_1))=a^{}_2=S^{}_2S^{-1}_1\qty(a^{}_1)=S^{}_
 $$f^{}_{i-1,i}\qty(\gamma^{}_i\qty(t^{}_{i-1}))=S^{}_iS^{-1}_{i-1}\qty(a^{}_{i-1})=a^{}_i,$$
 并将此局部转换点反复迭代，不难得到提升曲线的总终点$a^{}_n$以初始点表示为
 \begin{equation}a^{}_n=S^{}_nS^{-1}_0\qty(a^{}_0)=f^{}_{n-1,n}\qty(\gamma^{}_n\qty(t^{}_{n-1}))\circ f^{}_{n-2,n-1}\qty(\gamma^{}_{n-1}\qty(t^{}_{n-2}))\cdots f^{}_{12}\qty(\gamma^{}_2\qty(t^{}_1))\circ f^{}_{01}\qty(\gamma^{}_1\qty(t^{}_0))\qty(a^{}_0).\end{equation}
-注意到$f^{}_{i-1,i}=f^{}_{i,i-1}$，再参考泛函积分的定义和记号，取$n\to \infty$并缩合所有的底空间曲线变量，我们可以将上式以一个简洁的形式写出
+注意到$f^{}_{i-1,i}=f^{}_{i,i-1}$，再参考泛函积分的定义和记号，取$n\to \infty$并缩合所有的底空间曲线变量，我们可以将上式以一个简洁的有序乘积写出
 \begin{equation}\lim_{n\to\infty} a^{}_n=\qty[\lim_{n\to\infty}f^{}_{n,n-1}\circ f^{}_{n-1,n-2}\circ\cdots f^{}_{21}\circ f^{}_{10}(\gamma)]\qty(a^{}_0).\label{527++3.}\end{equation}
 这就是一条曲线$\gamma$的提升$\tilde\gamma$在纤维上的具体公式，以始末点在纤维上的对应关系确定，需要强调的是即使局部平凡化为$S^{}_U=\mathrm{id}^{}_F$，也不能说明$a^{}_n=a^{}_0$，因为相邻平凡化在同一纤维上的转换并不是恒等映射。同时这个结论可以容易的推广到定端同伦，此处略过。当然目前$S^{}_nS^{-1}_0$没有任何含义，因为两个不同的覆叠变换群之间只有同构没有变换。\\
 \\
@@ -14332,114 +14332,73 @@ $$\zeta^{}_m(m)=a,\quad \forall m\in F(p),$$
 \\
 上面我们分析了覆叠空间的单值性，实际上这些分析也适用于连续的纤维丛，比如主丛和伴丛。事实上除了万有覆叠空间，一般的覆叠空间的单值性群是较难计算的，因为我们无法定量描述终点的位置信息，这是由于在离散环境下纤维间的移动是不可定量的。\\
 \\
-但在主丛上，纤维间的移动由联络确定，也就是平行移动，此时单值性就由联络沿闭路的叠加给出，而单值性群给出和乐群，在第\ref{CadFHHG}节中会有介绍。联络取值在\textsl{Lie}代数上，对于非\textsl{Abel}的群，式(\ref{527++3.})对联络的逐点复合就给出\textsl{Wilson}环，这些都是计算单值性群的有利手段。
+但在主丛上，纤维间的移动由联络确定，也就是平行移动，此时单值性就由联络沿闭路的叠加给出，而单值性群给出和乐群，在第\ref{CadFHHG}节中会有介绍。联络取值在\textsl{Lie}代数上，对于非\textsl{Abel}的群，式(\ref{527++3.})对联络的逐点有序乘积就给出\textsl{Wilson}环，这些都是计算单值性群的有利手段。
 
 \subsubsection{同伦群的长正合序列}
-\noindent 在第\ref{xi5sdfg5400}节中，我们详细分析了覆叠空间的基本群$\varPi^{}_1$，现在我们来讨论任意同伦群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
-$$\varPi^{}_n(X)=\qty{\expval{f}\middle\vert f\simeq g:S^n\to X}=\qty[S^n,X].$$
-根据覆叠空间的映射关系(\ref{ERGDFG10})，我们自然的就得到一个正合列的一部分
-\begin{equation}\varPi^{}_n(F)\xrightarrow{i^{}_*} \varPi^{}_n(E)\xrightarrow{\pi^{}_*} \varPi^{}_n(B).\end{equation}
-其中$i^{}_*$和$\pi^{}_*$是嵌入映射和覆叠映射相应的群诱导映射，证明略过。现在我们的目标是计算出这一部分前后的群，为此不妨回到最初的构造，根据定义
-
-
-\subsubsection{同伦群的长正合序列}
-\noindent 上文中我们详细分析了覆叠空间的基本群 $\varPi^{}_1$ 与单值性结构。现在我们将视角推广到任意维同伦群 $\varPi^{}_n\ (n\ge 1)$。回顾第~\ref{234200.05}节中的定义，拓扑空间 $X$ 的 $n$ 维同伦群由球面映射的同伦类给出：
-\begin{equation}
-\varPi^{}_n(X,x_0)=\qty{\expval{f}\middle\vert f:S^n\to X,\ f(\ast)=x_0},
-\end{equation}
-其中 $\ast\in S^n$ 为基点。当 $n=1$ 时，这退化为闭路类群；当 $n\ge 2$ 时，$\varPi^{}_n(X)$ 总是交换群。对于覆叠空间
-\begin{equation}
-F\hookrightarrow E\xrightarrow{\pi} B,
-\end{equation}
-自然存在三个映射序列：嵌入映射 $i:F\hookrightarrow E$、覆叠映射 $\pi:E\to B$，以及基点选取 $p_0:\ast\mapsto b_0\in B$。这些映射诱导出同伦群的同态：
-\begin{equation}
-\cdots\xrightarrow{i_*} \varPi^{}_n(E,e_0)\xrightarrow{\pi_*} \varPi^{}_n(B,b_0)\xrightarrow{\partial} \varPi^{}_{n-1}(F,e_0)\xrightarrow{i_*} \varPi^{}_{n-1}(E,e_0)\xrightarrow{\pi_*}\cdots
-\label{eq:LES}
-\end{equation}
-其中 $e_0\in F(b_0)\subset E$ 为固定的基点。本节的目标是严格证明这一序列的\textbf{正合性}，并由此导出覆叠空间在高维同伦群上的核心性质。\\
+\noindent 在第\ref{xi5sdfg5400}节中，我们详细分析了覆叠空间的基本群$\varPi^{}_1$ 与单值性结构，现在我们将视角推广到任意维同伦群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
+$$\varPi^{}_n\qty(X,x^{}_0)=\qty{\expval{f}\middle\vert f\simeq g:S^n\to X,\ f(\ast)=x^{}_0}=\qty[S^n,X],$$
+其中$\ast\in S^n$为基点$x^{}_0$在球面上的对应点。基于覆叠空间的映射关系(\ref{ERGDFG10})
+$$F\xrightarrow{i}E\xrightarrow{\pi}B,$$
+我们自然的得到一个正合列的一部分
+\begin{equation}\varPi^{}_n(F,a)\xrightarrow{i^{}_*} \varPi^{}_n(E,a)\xrightarrow{\pi^{}_*} \varPi^{}_n(B,p).\label{24BNh---}\end{equation}
+其中$\varPi^{}_n(F,a)=\eval{\varPi^{}_n(E,a)}_F$是全空间基本群在纤维上的限制，$a\in F(p)$，$i^{}_*$和$\pi^{}_*$是嵌入映射和覆叠映射相应的群诱导映射，满足$\Im i^{}_*=\ker\pi^{}_*$。这不难证明，以下是一个简单的思路：
+\begin{itemize}\item$\Im i^{}_*\subset\ker\pi^{}_*=\pi^{-1}_*(p):\forall \expval{\gamma}\in\varPi^{}_n(F,a),\quad i^{}_*\expval{\gamma}(t)\in F(p),\quad \forall t\in S^n\implies \pi^{}_*\qty(i^{}_*\expval{\gamma})=p.$\item$\ker\pi^{}_*\subset\Im i^{}_*:\forall \expval{\alpha}\in\ker\pi^{}_*=\pi^{-1}_*(p),\quad \expval{\alpha}(t)\in F(p),\quad \forall t\in S^n\implies \expval{\alpha}\in\Im i^{}_*.$
+\end{itemize}
+现在我们的目标是计算出这一部分前后的群，为此不妨回到最初的构造。根据定义$S^n\cong I^n/\partial l^n$是将$I^n$的边界$\partial I^n$缩为基点$\ast$得到的，因此一个高维同伦类也可以看作基点映射
+\begin{equation}\forall \expval{\gamma}\in \varPi^{}_n(B,p),\quad \gamma:\qty(I^n/\partial l^n,\ast)\to (B,p),\quad \gamma\qty(\partial I^n)=p.\end{equation}
+根据提升唯一性定理，在固定了一个提升点$a\in F(p)$之后，上述高维同伦类的代表元$\gamma$存在一个唯一的提升$\tilde\gamma:S^n\to E$，使得$\pi\circ\tilde\gamma=\gamma$，于是
+$$\tilde\gamma\qty(\partial I^n)\subset\pi^{-1}\qty[\gamma\qty(\partial I^n)]=F(p).$$
+利用$n$维复形不难证明$\partial I^n\cong S^{n-1}$，从而$\tilde\gamma$在边界上的限制给出映射
+\begin{equation}\eval{\tilde\gamma}_{\partial I^n}:S^{n-1}\to F(p)\implies\varPi^{}_{n-1}(F,a).\end{equation}
+根据同伦提升的唯一性(\ref{fcw4rCV})，我们可以将上述映射推广到该代表元所在的同伦类，定义\textbf{边缘算子}为
+\begin{equation}\partial^{}_*:\varPi^{}_n(B,p)\to\varPi^{}_{n-1}(F,a),\quad \partial^{}_*\expval{\gamma}=\expval{\eval{\tilde\gamma}_{\partial I^n}}\in\varPi^{}_{n-1}(F,a),\quad a=\expval{\tilde\gamma}(0).\label{4534hbm./.}\end{equation}
+这是一个群同态，因为两边群的大小不一定相同。注意这里的边缘算子和同调中的边缘算子不完全一样，因为同调的边缘算子还依赖定向，此处是自然的。\\
 \\
-长正合序列中最不平凡的一项是边缘同态 $\partial:\varPi^{}_n(B,b_0)\to\varPi^{}_{n-1}(F,e_0)$。其构造如下：取代表元 $[\gamma]\in\varPi^{}_n(B,b_0)$，选取具体映射 $\gamma:(S^n,\ast)\to(B,b_0)$。由于 $S^n$ 可以等同于单位区间的 $n$ 重乘积 $I^n$ 将边界 $\partial I^n$ 坍缩为一点，我们可以将 $\gamma$ 视为一个映射
-\begin{equation}
-\gamma:I^n\to B,\quad \gamma(\partial I^n)=b_0.
-\end{equation}
-根据覆叠空间的性质，由于 $I^n$ 可缩，其上的任何映射都可以唯一提升。具体地，取 $e_0\in\pi^{-1}(b_0)$，存在唯一的提升 $\tilde\gamma:I^n\to E$ 使得 $\pi\circ\tilde\gamma=\gamma$ 且 $\tilde\gamma(\partial I^n)\subset F(b_0)$。然而，与闭路提升不同，当 $n\ge 2$ 时，$\partial I^n$ 不再是零维点，而是一个 $(n-1)$ 维球面 $S^{n-1}$。因此 $\tilde\gamma$ 在边界上的限制给出映射
-\begin{equation}
-\tilde\gamma|_{\partial I^n}:S^{n-1}\to F(b_0)\subset E,
-\end{equation}
-其像完全落在纤维 $F(b_0)$ 中。定义
-\begin{equation}
-\partial[\gamma]=\qty[\tilde\gamma|_{\partial I^n}]\in\varPi^{}_{n-1}(F,e_0).
-\end{equation}
-可以验证，$\partial$ 不依赖于代表元的选取：若 $\gamma\simeq\gamma'$ 通过同伦 $H:I^n\times I\to B$，则 $H$ 的提升给出 $\tilde\gamma$ 与 $\tilde\gamma'$ 之间的同伦，且边界映射的同伦类保持不变。因此 $\partial$ 是良定义的群同态。\\
+我们进一步来分析边缘算子的性质。比如考察核空间$\ker\partial^{}_*$，其元素为
+$$\ker\partial^{}_*=\qty{\expval{\gamma}\middle\vert\partial^{}_*(\expval{\gamma})=a}\implies\tilde\gamma\qty(\partial I^n)=a.$$
+这和单值性类似，进而我们可以将其推广为映射$\tilde\gamma: S^n\to E$，使得$\pi\circ\expval{\tilde\gamma}=\expval{\gamma}$，于是$\ker\partial^{}_*\subset\Im \pi^{}_*$。反之证明类似，可以得到$\Im \pi^{}_*\subset\ker\partial^{}_*$，从而我们得到
+\begin{equation}\Im \pi^{}_*=\ker\partial^{}_*.\end{equation}
+于是我们得到序列(\ref{24BNh---})右侧的正合部分
+\begin{equation}\varPi^{}_n(E,a)\xrightarrow{\pi^{}_*} \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*}\varPi^{}_{n-1}(F,a).\end{equation}
+因为$\varPi^{}_{n-1}(F,a)$同样可以诱导一个自然正合列$\varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a)$，因此我们现在来看边缘算子的像$\Im\partial^{}_*$。对于$\expval{\gamma}\in\varPi^{}_n(B,p)$，我们计算
+$$i^{}_*\qty(\partial^{}_*\expval{\gamma})=i^{}_*\expval{\eval{\tilde\gamma}_{\partial I^n}}=\expval{\eval{i\circ\tilde\gamma}_{\partial I^n}}=a,$$
+其中$i\circ\tilde\gamma$为$E$中的映射提升，但其限制在边缘上按照同伦类的定义只能给出基点，因此$\Im\partial^{}_*\subset\ker i^{}_*$。反之亦然，这里我们就略过了，请读者参考\cite{LdnbPF}定理$225.6$的证明，这里直接给出结论$\ker i^{}_*\subset\Im\partial^{}_*$。于是我们得到
+\begin{equation}\ker i^{}_*=\Im\partial^{}_*\implies \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*}\varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a).\end{equation}
+这样我们就得到三个正合关系
+\begin{enumerate}\item $\Im i^{}_*=\ker\pi^{}_*$；\item $\Im \pi^{}_*=\ker\partial^{}_*$；\item $\ker i^{}_*=\Im\partial^{}_*$。\end{enumerate}
+这些关系对任意维的同伦群都适用，因此我们得到一个长正合序列
+\begin{equation}\cdots\xrightarrow{i^{}_*} \varPi^{}_n(E,a)\xrightarrow{\pi^{}_*} \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*} \varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a)\xrightarrow{\pi^{}_*}\cdots.\end{equation}
+其中$a\in F(p)$。这也称为\textbf{\textsl{Serre}序列}，是计算纤维丛同伦群最强大的工具。事实上在上述证明中，我们并未用到任何覆叠空间的离散性，因此\textsl{Serre}序列也适用于纤维丛。这一推广在物理中极为重要，是研究拓扑缺陷、瞬子以及异常的核心工具。我们将在第\ref{CadFHHG}节中看到，当引入联络后，这一代数信息进一步与微分几何的曲率联系起来。\\
 \\
-我们逐对验证序列~\eqref{eq:LES} 的正合性。只需证明以下三个包含关系：
-\begin{enumerate}
-    \item $\operatorname{im} i_*=\ker\pi_*$；
-    \item $\operatorname{im}\pi_*=\ker\partial$；
-    \item $\operatorname{im}\partial=\ker i_*$。
-\end{enumerate}
-
-\textbf{(i) $\operatorname{im} i_*=\ker\pi_*$。} 对任意 $[\alpha]\in\varPi^{}_n(F,e_0)$，有 $\pi_*(i_*[\alpha])=[\pi\circ\alpha]=b_0$（常值映射），故 $\operatorname{im} i_*\subset\ker\pi_*$。反之，若 $[\beta]\in\ker\pi_*$，则 $\pi\circ\beta\simeq c_{b_0}$（常值映射）。由于 $I^n$ 可缩，$\beta$ 可同伦形变使其像完全落在纤维 $F(b_0)$ 内，从而 $[\beta]\in\operatorname{im} i_*$。
-
-\textbf{(ii) $\operatorname{im}\pi_*=\ker\partial$。} 若 $[\beta]=\pi_*[\tilde\beta]$，取提升 $\tilde\beta:I^n\to E$，则 $\partial[\beta]=[\tilde\beta|_{\partial I^n}]$。由于 $\tilde\beta$ 整体定义在 $I^n$ 上，其在边界上的限制同伦于常值映射（将 $I^n$ 收缩到边界上一点即可），故 $\partial[\beta]=0$。反之，若 $\partial[\gamma]=0$，则 $\tilde\gamma|_{\partial I^n}\simeq c_{e_0}$。利用同伦延拓性质，可将 $\tilde\gamma$ 修改为在整个 $I^n$ 上映射到 $E$ 的映射 $\tilde\beta$，使得 $\pi\circ\tilde\beta=\gamma$，从而 $[\gamma]=\pi_*[\tilde\beta]$。
-
-\textbf{(iii) $\operatorname{im}\partial=\ker i_*$。} 若 $[\alpha]=\partial[\gamma]$，则 $i_*[\alpha]=[\tilde\gamma|_{\partial I^n}]$ 在 $E$ 中可延拓为 $\tilde\gamma:I^n\to E$，故 $i_*[\alpha]=0$。反之，若 $i_*[\alpha]=0$，则 $\alpha:S^{n-1}\to F(b_0)$ 可延拓为 $\tilde\beta:I^n\to E$。令 $\gamma=\pi\circ\tilde\beta$，则 $\partial[\gamma]=[\alpha]$，证毕。\\
+现在让我们考察覆叠空间的具体情形。因为纤维$F(p)$是离散点集，因此它没有高维同伦群$\varPi^{}_{n\ge1}(f)=0$，而其零维同伦群是纤维的连通分支集合，也就是其本身
+\begin{equation}\varPi^{}_0(F)=\qty{\expval{f}:S^0=\qty{1,-1}\to F}\cong F.\end{equation}
+当$n=1$时，序列退化为
+\begin{equation}0=\varPi^{}_1(F)\xrightarrow{i^{}_*}\varPi^{}_1(E)\xrightarrow{\pi^{}_*}\varPi^{}_1(B)\xrightarrow{\partial^{}_*}\varPi^{}_0(F)\xrightarrow{i^{}_*} \varPi^{}_0(E)\xrightarrow{\pi^{}_*}\varPi^{}_0(B)\to 0.\end{equation}
+根据正合性此时$\varPi^{}_1$群部分的$\pi^{}_*$是单射，这也就是第\ref{xi5467uh5400}节中，我们通过对道路提升的分析，得到的底空间和全空间基本群之间的结论：$\pi^{}_*\qty(\varPi^{}_1(E,a))$是$\varPi^{}_1(B,p)$的子群。同时$\partial^{}_*$根据定义给出
+\begin{equation}\partial^{}_*\expval{\gamma}=\expval{\tilde\gamma\qty(\partial I^1)}=\expval{\tilde\gamma}(1)-\expval{\tilde\gamma}(0),\label{DgbY,,.}\end{equation}
+这是闭路类的提升在纤维上的始末点差，是单值性映射的雏形。而序列的终止处说明$\varPi^{}_0(E)\cong\varPi^{}_0(B)$，这是显然的因为$\pi$是满射且局部同胚。当$n\ge 2$时，注意$\varPi^{}_{n\ge1}(f)=0$则长正合序列变为
+\begin{equation}0=\varPi^{}_n(F)\xrightarrow{i^{}_*} \varPi^{}_n(E)\xrightarrow{\pi^{}_*} \varPi^{}_n(B)\xrightarrow{\partial^{}_*}0.\end{equation}
+由此立即得到同构
+\begin{equation}\pi_*:\varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B),\quad \forall n\ge 2.\end{equation}
+这一结果的几何含义是，覆叠映射完全保留了所有高阶同伦信息。以万有覆叠为例，设$\qty(E,B,\pi)$为$B$的万有覆叠，则$\varPi^{}_1(E)=0$，长正合序列退化为
+\begin{equation}0\longrightarrow \varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B)\longrightarrow 0\quad (n\ge 2),\end{equation}
+即$\varPi^{}_n(E)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个空间$E$，其高阶同伦群与$B$完全相同。例如，对于实射影空间$\mathbb{RP}^{n\ge2}$，其万有覆叠为$S^n$，从而
+\begin{equation}\varPi^{}_k(\mathbb{RP}^n)\cong\varPi^{}_k\qty(S^n),\quad \forall k\ge 2.\end{equation}
+特别地，$\varPi^{}_n(\mathbb{RP}^n)\cong\mathbb Z$，当$n$为奇数；或$\mathbb Z^{}_2$，当$n$为偶数，这直接继承自球面。\\
 \\
-当 $n=1$ 时，序列退化为
-\begin{equation}
-\varPi^{}_1(F)\xrightarrow{i_*} \varPi^{}_1(E)\xrightarrow{\pi_*} \varPi^{}_1(B)\xrightarrow{\partial} \varPi^{}_0(F)\xrightarrow{i_*} \varPi^{}_0(E).
-\end{equation}
-由于纤维 $F$ 是离散空间，$\varPi^{}_1(F)=0$，且 $\varPi^{}_0(F)$ 是纤维的连通分支集合（即纤维本身作为集合）。此时 $\pi_*$ 是单射——这正是我们在前文（第~\ref{xi5467uh5400}节）中通过道路提升唯一性得到的结论：$\pi_*:\varPi^{}_1(E,e_0)\hookrightarrow\varPi^{}_1(B,b_0)$ 的像 $K^{}_{e_0}$ 是子群。同时，$\partial$ 将闭路类映射到其在纤维上的终点与起点的差，这正是单值性映射的雏形。而 $\varPi^{}_0(E)\cong\varPi^{}_0(B)$（因为 $\pi$ 是满射且局部同胚），故序列在 $\varPi^{}_0$ 处终止。\\
+前面提到，$\varPi^{}_1(B)\xrightarrow{\partial^{}_*}\varPi^{}_0(F)$确定了闭路类提升的始末点差(\ref{DgbY,,.})，而在选定一个起点$a=\expval{\tilde\gamma}(0)$后，这就给出了单值性。因此边缘映射$\partial^{}_*$和群同态$\rho^{}_a$的角色是十分类似的，我们完全可以将单值性群重新表述为
+\begin{equation}\mathrm{Mono}(E,a)=\partial^{}_*\qty(\varPi^{}_1(B,p))(a)\subset\varPi^{}_0(F)\cong F(p).\end{equation}
+其中$\varPi^{}_0(F)$被视为将基点$a$看作单位元的群。这一视角将此前转移函数沿闭路的路径有序乘积的几何描述，完全纳入了同伦论的正合框架。\\
 \\
-当 $n\ge 2$ 时，纤维 $F$ 是离散空间，其 $(n-1)$ 维同伦群消失：
-\begin{equation}
-\varPi^{}_{n-1}(F)=0\quad (n\ge 2).
-\end{equation}
-代入长正合序列~\eqref{eq:LES}，得到
-\begin{equation}
-0=\varPi^{}_n(F)\xrightarrow{i_*} \varPi^{}_n(E)\xrightarrow{\pi_*} \varPi^{}_n(B)\xrightarrow{\partial=0} 0.
-\end{equation}
-由此立即得到\textbf{同构}：
-\begin{equation}
-\pi_*:\varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B),\quad \forall n\ge 2.
-\label{eq:higher-homotopy-isom}
-\end{equation}
-这一结果具有深刻的几何含义：覆叠映射在"抹平"基本群的同时，完全保留了所有高阶同伦信息。换言之，覆叠空间 $E$ 与底空间 $B$ 在二维及以上同伦群上没有任何区别。\\
+作为应用，我们利用长正合序列计算\textsl{Hopf}纤维化$S^1\hookrightarrow S^3\to S^2$的同伦群。写出序列的片段：
+\begin{equation}\varPi^{}_2\qty(S^1)\xrightarrow{i^{}_*}\varPi^{}_2\qty(S^3)\xrightarrow{\pi^{}_*}\varPi^{}_2(S^2)\xrightarrow{\partial^{}_*} \varPi^{}_1\qty(S^1)\xrightarrow{i^{}_*}\varPi^{}_1(S^3).\end{equation}
+已知$\varPi^{}_2\qty(S^1)=0$，$\varPi^{}_1\qty(S^3)=0$，$\varPi^{}_1\qty(S^1)\cong\mathbb Z$。于是序列正合退化为
+\begin{equation}0\longrightarrow \varPi^{}_2\qty(S^3)\xrightarrow{\pi^{}_*}\varPi^{}_2\qty(S^2)\xrightarrow{\partial^{}_*}\mathbb Z\longrightarrow 0.\end{equation}
+不难证明$\varPi^{}_2(S^3)=0$，则 $\partial^{}_*$是同构，从而$\varPi^{}_2(S^2)\cong\mathbb Z$。这正是\textsl{Hopf}纤维化作为示性类载体的拓扑根源：边缘同态$\partial^{}_*$ 的非平凡性直接反映了纤维丛的扭曲程度。事实上，$\partial^{}_*$正是第一\textsl{Chern}类$c^{}_1$在同伦层面的体现，两者互为对偶关系。类似的对于$n=3$，我们可以得到
+$$\varPi^{}_3\qty(S^3)\cong\varPi^{}_3\qty(S^2)\cong\mathbb Z,$$
+这是计算高维球面的高维同伦群$\varPi^{}_n\qty(S^m)$在$n>m$时的一个重要的方法。\\
 \\
-以万有覆叠为例：设 $(\tilde B,B,\tilde\pi)$ 为 $B$ 的万有覆叠，则 $\varPi^{}_1(\tilde B)=0$。长正合序列给出
-\begin{equation}
-0\longrightarrow \varPi^{}_n(\tilde B)\xrightarrow{\cong} \varPi^{}_n(B)\longrightarrow 0\quad (n\ge 2),
-\end{equation}
-即 $\varPi^{}_n(\tilde B)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个"干净"的空间 $\tilde B$，其高阶同伦群与 $B$ 完全相同。例如，对于实射影空间 $\mathbb{RP}^n\ (n\ge 2)$，其万有覆叠为 $S^n$，从而
-\begin{equation}
-\varPi^{}_k(\mathbb{RP}^n)\cong\varPi^{}_k(S^n),\quad \forall k\ge 2.
-\end{equation}
-特别地，$\varPi^{}_n(\mathbb{RP}^n)\cong\mathbb Z$（当 $n$ 为奇数）或 $\mathbb Z_2$（当 $n$ 为偶数），这直接继承自球面。\\
-\\
-长正合序列在 $n=1$ 处的结构与我们此前讨论的单值性表示密切相关。回顾第~\ref{twtg40}节中定义的单值性映射 $\rho_a:\varPi^{}_1(B,b_0)\to\operatorname{Perm}(F)$，以及单值性群 $\mathrm{Mono}(E,a)\subset\operatorname{Perm}(F)$。从长正合序列的角度看，$\partial:\varPi^{}_1(B)\to\varPi^{}_0(F)$ 正是单值性映射的代数本质：$\partial$ 将闭路类 $[\gamma]$ 送到纤维中起点与终点的差，而这一差值在固定起点 $a$ 后，恰好给出了 $\rho_a([\gamma])$。因此，单值性群可以重新表述为
-\begin{equation}
-\mathrm{Mono}(E,a)=\partial\qty(\varPi^{}_1(B,b_0))\subset\varPi^{}_0(F)\cong F(b_0),
-\end{equation}
-其中 $\varPi^{}_0(F)$ 被视为带有基点 $a$ 的传递 $G$-集。这一视角将此前"转移函数沿闭路的路径有序乘积"的几何描述，完全纳入了同伦论的正合框架。\\
-\\
-长正合序列并非覆叠空间所独有。对于任意纤维丛 $F\hookrightarrow E\xrightarrow{\pi} B$，只要纤维 $F$、全空间 $E$、底空间 $B$ 都是"好"的拓扑空间（例如 CW 复形），就存在同伦群的长正合序列，且边缘同态的构造完全相同。区别在于：当纤维 $F$ 不是离散空间时，$\varPi^{}_{n-1}(F)$ 一般非零，因此 $\pi_*:\varPi^{}_n(E)\to\varPi^{}_n(B)$ 不再是同构，而是一个"几乎同构"——其核与余核由纤维的同伦群精确控制。\\
-\\
-这一推广在物理中极为重要。例如，对于主丛 $G\hookrightarrow P\xrightarrow{\pi} M$，纤维是李群 $G$（连通），其同伦群 $\varPi^{}_k(G)$ 可能非零。此时长正合序列给出了 $\varPi^{}_k(M)$、$\varPi^{}_k(P)$ 与 $\varPi^{}_{k-1}(G)$ 之间的精确关系，是研究拓扑缺陷、瞬子以及异常（anomaly）的核心工具。我们将在第~\ref{CadFHHG}节中看到，当引入联络后，这一代数信息进一步与微分几何的曲率联系起来。\\
-\\
-作为应用，我们利用长正合序列计算 Hopf 纤维化 $S^1\hookrightarrow S^3\to S^2$ 的同伦群。写出序列的片段：
-\begin{equation}
-\varPi^{}_2(S^1)\longrightarrow \varPi^{}_2(S^3)\longrightarrow \varPi^{}_2(S^2)\xrightarrow{\partial} \varPi^{}_1(S^1)\longrightarrow \varPi^{}_1(S^3).
-\end{equation}
-已知 $\varPi^{}_2(S^1)=0$（因为 $S^1$ 是一维的），$\varPi^{}_1(S^3)=0$（因为 $S^3$ 单连通），$\varPi^{}_1(S^1)\cong\mathbb Z$。序列正合给出
-\begin{equation}
-0\longrightarrow \varPi^{}_2(S^3)\longrightarrow \varPi^{}_2(S^2)\xrightarrow{\partial} \mathbb Z\longrightarrow 0.
-\end{equation}
-若 $\varPi^{}_2(S^3)=0$（可独立证明或通过 $S^3$ 单连通且 $H^2(S^3)=0$ 推出），则 $\partial$ 是同构，从而 $\varPi^{}_2(S^2)\cong\mathbb Z$。这正是 Hopf 纤维化作为示性类载体的拓扑根源：边缘同态 $\partial$ 的非平凡性直接反映了纤维丛的扭曲程度。事实上，$\partial$ 正是第一 \textsl{Chern} 类在同伦层面的体现（在引入上同调后我们将看到 $c_1$ 与 $\partial$ 对偶）。\\
-\\
-综上所述，覆叠空间的同伦群长正合序列将基本群的子群结构（通过 $\partial:\varPi^{}_1(B)\to\varPi^{}_0(F)$）、高维同伦群的同构（$\varPi^{}_n(E)\cong\varPi^{}_n(B),\ n\ge 2$）以及单值性表示统一在同一个代数框架中。这一框架不仅为计算拓扑不变量提供了强大工具，而且为从覆叠空间过渡到一般纤维丛的同伦论奠定了坚实基础。在后续讨论标架丛与主丛时，我们将看到，长正合序列是连接拓扑扭曲与几何联络的桥梁。
-
-
-
+综上所述，覆叠空间的同伦群长正合序列将基本群的子群结构，以及单值性表示统一在同一个代数框架中。这一框架不仅为计算拓扑不变量提供了强大工具，而且为从覆叠空间过渡到一般纤维丛的同伦论奠定了坚实基础。在后续讨论标架丛与主丛时，我们将看到，长正合序列是连接拓扑扭曲与几何联络的桥梁。
 
 \subsection{标架丛和主丛}\label{CadFHHG}
 
@@ -14784,6 +14743,9 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \bibitem{Cvqe12} Rammer, J. (2007). Quantum Field Theory of Non-equilibrium States. Cambridge: Cambridge University Press. ISBN 978-0-511-61895-6.
 \bibitem{NbCF} Roger G. Newton. \emph{Optical theorem and beyond}. Am. J. Phys. 1 July 1976; 44 (7): 639–642. \url{https://doi.org/10.1119/1.10324}.
 \bibitem{Lbnlp} Philippe, Francesco.; Pierre, Mathieu.; David, Sénéchal. (1996). Conformal Field Theory. (1st ed.). Springer-Verlag New York, Inc. ISBN 978-0-387-94785-3.
+\bibitem{DFfrf} Spanier, Edwin H. (1966). Algebraic Topology. (1st ed.). McGraw-Hill Book Company. ISBN 978-0-387-90646-1.
+\bibitem{agfsgl} Hatcher, Allen. (2001). Algebraic Topology. NY: Cambridge University Press. ISBN 978-0-521-79540-0.
+\bibitem{LdnbPF} Fridel, Stefan. (2024). Lecture notes on topology. \url{https://friedl.app.uni-regensburg.de/papers/1t-total-public-october-7-2024.pdf}.
 \bibitem{BdpF} R.K. Pathria; Paul D. Beale. (2021). Statistical Mechanics. (4th ed.). Academic Press. ISBN 978-0-08-102692-2. DOI: 10.1016/C2017-0-01713-5.
 \bibitem{Ch--3} Chandrasekhar, S. 黑洞的数学理论（第一版）. 卢炬甫 译. 中国: 高等教育出版社. 2018. ISBN 978-7-04-049097-8.
 \bibitem{Linif} W.H. Dickhoff; R.J. Charity. \emph{Recent developments for the optical model of nuclei}. 2019. Progress in Particle and Nuclear Physics. 105; 252-299. \url{https://doi.org/10.1016/j.ppnp.2018.11.002}.
