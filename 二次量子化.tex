@@ -12239,7 +12239,7 @@ $$\lim\limits_{v\to 0}C^{i}=0,\quad \qty(g^{\mu}_l+C^{\mu})u^{}_{\mu}=0\implies 
 $$\begin{aligned}\Delta P^{\mu}_g&=\int g^{\mu}\dd s=\frac{2e^2}{3c}\int\qty(\dv[2]{u^{\mu}}{s}-u^{\mu}u^{}_{\nu}\dv[2]{u^{\nu}}{s})\dd s\\&=\frac{2e^2}{3c}\eval{\qty(\dv{u^{\mu}}{s}-u^{\mu}u^{}_{\nu}\dv{u^{\nu}}{s})}_{\partial\mathscr M}+\frac{2e^2}{3c}\int\dv{u^{}_{\nu}}{s}\dv{u^{\nu}}{s}u^{\mu}\dd s\\&=\frac{2e^2}{3c}\int\dv{u^{}_{\nu}}{s}\dv{u^{\nu}}{s}\dd{x}^{\mu}.\end{aligned}$$
 对比辐射动量(\ref{xse660})，我们看到$\Delta P^{\mu}_g+\Delta P^{\mu}=0$，再次证明了上述为阻尼效应。\\
 \\
-和前文中的理解类似，该力同样只能以扰动出现在若外场中，我们也能用类似式(\ref{AFggb})的思路，以外场表示上述的力。引入电荷的四维运动方程(\ref{shi337})，我们给出速度的一阶导和二阶导
+和前文中的理解类似，该力同样只能以扰动出现在外场中，我们也能用类似式(\ref{AFggb})的思路，以外场表示上述的力。引入电荷的四维运动方程(\ref{shi337})，我们给出速度的一阶导和二阶导
 $$\dv{u^{\mu}}{s}=\frac{e}{mc^2}F^{\mu\nu}u^{}_{\nu}\implies\dv[2]{u^{\mu}}{s}=\frac{e}{mc^2}\qty(\dv{F^{\mu\nu}}{s}u^{}_{\nu}+F^{\mu\nu}\dv{u^{}_{\nu}}{s})=\frac{e}{mc^2}\partial^{}_{\gamma}F^{\mu\nu}u^{}_{\nu}u^{}_{\gamma}+\frac{e^2}{m^2c^4}F^{\mu\nu}F^{}_{\nu\delta}u^{\delta}.$$
 带入式(\ref{dairrru})，并注意$F^{\mu\nu}$的反对称性，我们得到外场下的\textbf{\textsl{Landau-Lifchitz}阻尼力}
 \begin{equation}\vb{g}^{A}=\frac{2e^3}{3mc^3}\partial_C\vb{F}^{AB}u^{}_Bu^C-\frac{2e^4}{3m^2c^5}\vb{F}^{AB}\vb{F}^{}_{CB}u^C+\frac{2e^4}{3m^2c^5}\qty(\vb{F}^{BC}u^{}_C)\qty(\vb{F}^{}_{BD}u^D)u^A.\end{equation}
@@ -12733,9 +12733,9 @@ $$\dv{\vb{M}}{t}=\sum_am^{}_a\vb{r}^{}_a\cp\dv{\vb{v}^{}_a}{t}=\sum_a\frac{e^{}_
 \begin{equation}\dv{\vb{v}}{t}=\frac{e}{mc}\vb{v}\cp\vb{H}=-\bm{\omega}\cp\vb{v},\quad\bm{\omega}=\frac{e\vb{H}}{mc}.\end{equation}
 可见速度的进动频率比角动量的少一半，但值得注意的是根据式(\ref{mus''})我们看到$\bm{\omega}=\bm{\Omega}^{}_s$，说明速度和极化矢量之间相对静止，无论是否存在量子效应或者相对论效应都成立，我们后续会看到。\\
 \\
-现在让我们过渡到相对论性量子效应。在相对论环境中，三维空间矢量$\bm{\zeta}^a$应该替换为四维复极化时空矢量$\vb{a}^A$，同样由式(\ref{RSVS5C})定义，并满足正交性条件(\ref{Rcv5C})。此时自旋演化方程(\ref{mus''})应该用世界线$\gamma(s)$的切向量给出，即
+现在让我们过渡到相对论性量子效应。在相对论中，三维空间矢量$\bm{\zeta}^a$应该替换为四维复极化时空矢量$\vb{a}^A$，同样由式(\ref{RSVS5C})定义，并满足正交性条件(\ref{Rcv5C})。此时自旋演化方程(\ref{mus''})应该用世界线$\gamma(s)$的切向量给出，即
 $$\dv{\bm{\zeta}}{t}\rightarrow\dv{\vb{a}^A}{s}.$$
-我们先将三维形式用四维物理量表示，比如磁场$\vb{H}$应该用电磁场张量$\vb{F}^{AB}$替换。根据其矩阵形式(\ref{tFFVan})，我们用空间分量$\vb{F}^{ab}$写出方程(\ref{mus''})叉积的三维空间形式
+先将三维形式用四维物理量表示，比如磁场$\vb{H}$应该用电磁场张量$\vb{F}^{AB}$替换。根据其矩阵形式(\ref{tFFVan})，我们用空间分量$\vb{F}^{ab}$写出方程(\ref{mus''})叉积的三维空间形式
 $$(\bm{\zeta}\cp\vb{H})^a=\frac{1}{2}\bm{\epsilon}^{abc}\bm{\zeta}^{}_b\bm{\epsilon}^{}_{cde}\vb{F}^{de}=-\frac{1}{2}\bm{\zeta}^{}_b\vb{F}^{de}\qty(\delta^a_d\delta^b_e-\delta^a_e\delta^b_d)=-\bm{\zeta}^{}_b\vb{F}^{ab},$$
 其中用到了$\epsilon-\delta$等式。这个结论其实从微分几何的角度推导非常简单，这里简单展示一下：
 $$\bm{\zeta}\cp\vb{H}=-\star\qty(\bm{\zeta}\wedge*\vb{F})=-\star\qty(\expval{\bm{\zeta},\vb{F}}\bm{\eta})=-\vb{F}(\bm{\zeta}),$$
@@ -14150,16 +14150,30 @@ $$b^{}_{kk} = 0.$$
 \noindent 在正文的叙述中，我们从直观的角度引入了许多\textsl{Feynman}图的几何性质，以此来简化计算以及分析物理结构。但其实，\textsl{Feynman}图的几何性质是其拓扑的自然体现，包括但不限于\textit{1PI}结构的涌现，可重整化判据，以及重整化的分析等。为此我们将从代数拓扑的角度，详细分析这些几何结构的来源，以及对应的物理特性。
 
 \subsection{基础同调性和发散探测}\label{VA-850SG}
-\noindent 我们知道，\textsl{Feynman}图是由许多的线段构成的，每一条线段都对应了一个传播子，当然在计算振幅时需要截外腿只写出极化旋量。而在几何中，这被称为一个\textbf{一维复形}，它的拓扑不变量是一维同调群。我们后续会看到，图的发散性就是由同调探测的。\\
-\\
-首先，我们需要扩充线段的定义。考虑$n+1$维欧式空间$\mathbb R^{n+1}$，在其中任取$n+1$个点构成一个点集$\qty{a^{}_0,\ldots,a^{}_n}$。我们称它们处于\textbf{一般位置}，
+\noindent 我们知道，\textsl{Feynman}图是由许多的线段构成的，每一条线段都对应了一个传播子，当然在计算振幅时需要截外腿只写出极化旋量。而在几何中，这被称为一个\textbf{一维复形}，它的拓扑不变量是一维同调群。我们后续会看到，图的发散性就是由同调探测的。
+\subsubsection{单形，复形和边缘算子}
+首先，我们需要扩充线段的定义，让其成为一个可计算的几何对象。考虑$n+1$维欧式空间$\mathbb R^{n+1}$，在其中任取$n+1$个点构成一个点集，记为$\qty{a^{}_0,\ldots,a^{}_n}$。我们称它们处于\textbf{一般位置}，
 
 
+\subsubsection{同调类与同调群}
+
+\subsubsection{Feynman图的同调}
 
 
 
 \subsection{同伦和图的等价性}\label{234200.05}
+\subsubsection{映射和空间的同伦}
+\subsubsection{同伦群和同调的同伦不变}
+\subsubsection{映射度和不动点}
+\subsubsection{Feynman图的同伦}
+
 \subsection{上同调和发散理论}
+\subsubsection{奇异上同调群}
+\subsubsection{同调代数引入}
+\subsubsection{微分流形上的de Rham上同调}
+\subsubsection{Feynman图的de Rham上同调表示}
+\subsubsection{de Rham上同调的发散理论}
+
 \subsection{可重整化理论的拓扑判据}
 \subsection{1PI结构的几何本质}
 \subsection{重整化群的涌现}
@@ -14179,7 +14193,7 @@ $$b^{}_{kk} = 0.$$
 这里我们默认了一个引理，就是对于平凡空间纤维处处相等，$\forall p,p'\in B$，$F(p)=F\qty(p')$。这当然是及其特殊的情况，一般来说纤维是依赖底空间中的点的，从而不同的局部平凡化之间会给出不同的覆叠，产生极为复杂的几何结构。具体的分析可以参考第\ref{twtg40][]}节，这是后续丛理论的起点之一。\\
 \\
 根据上述定义，覆叠空间的概念是非常直观的：将纸一层一层互相堆叠，最底下的一张纸是底空间，整个纸堆是全空间，纤维是贯穿这个纸堆的一根针。在形式上，我们完全可以将它看作一类特殊的商空间，其商映射是局部同胚的。当然在物理上，更常见的是群作用产生的商空间，比如离散的单参变换群。在拓扑空间$X$中，令\emph{离散群}$G$自由的左作用在$X$上，自由性定义为
-\begin{equation}\forall p\in X,\quad \exists U\in\mathscr U(p),\quad gU\cap U\neq\varnothing \implies g=e\in G.\label{ADVNw539}\end{equation}
+\begin{equation}\forall p\in X,\quad \exists U\in\mathscr N(p),\quad gU\cap U\neq\varnothing \implies g=e\in G.\label{ADVNw539}\end{equation}
 也就是说，非单位元的作用必然导致开邻域的分离，这是离散纤维的基础。再次基础上，定义群作用为等价关系，则等价类就是轨道
 \begin{equation}\forall p\in X,\quad p\sim gp\in X,\quad \forall g\in G\implies \expval{p}=\qty{p\sim gp\vert g\in G}.\end{equation}
 这样，我们就定义群作用下的商空间为
@@ -14197,7 +14211,7 @@ $$z^{}_1\sim z^{}_2 \quad \text{iff}\quad z^{}_1=e^{i\theta}z^{}_2,\quad \theta\
 不难看到，此时两者模相等，因此商空间是
 \begin{equation}S^3/U(1)=\qty{\qty(z^{}_1,z^{}_2)\in\mathbb C^2\middle\vert\abs{z^{}_1}^2=\abs{z^{}_2}^2=\frac{1}{2}}\cong S^2.\end{equation}
 其和二维球面同胚，因为可以用两个相位来表示
-$$S^3/U(1)=\qty{(\alpha,\beta)\in[0,\pi]\times[0,2\pi]\middle\vert z^{}_1=\frac{\exp(i\alpha)}{2},\quad z^{}_2=\frac{\exp(i\beta)}{2}}.$$
+$$S^3/U(1)=\qty{(\alpha,\beta)\in[0,\pi]\times[0,2\pi]\middle\vert z^{}_1=\frac{\exp(i\alpha)}{\sqrt{2}},\quad z^{}_2=\frac{\exp(i\beta)}{\sqrt{2}}}.$$
 纤维自然是$F(\expval{z})=\exp(i\alpha)z$，若我们定义单位元$1\to e\in U(1)$，则我们有$F(\expval{z})\cong U(1)\cong S^1$。于是覆叠空间按照记号(\ref{ERGDFG10})写作
 \begin{equation}S^1\hookrightarrow S^3\to S^2.\end{equation}
 也就是说，三维单位超球$S^3$可以看作以$S^2$为底，以$S^1$为纤维的纤维丛，这就是\textsl{Hopf}纤维化。我们后续会看到，这是一个扭曲的纤维丛，其\textsl{Stiefel-Whitney}数$w\qty(S^2)=1$。\\
@@ -14276,7 +14290,7 @@ $$f^{}_{\alpha\beta}:U^{}_\alpha\cap U^{}_\beta\to G,$$
 \begin{equation}\mathrm{Perm}(X)=\qty{\zeta^{}_p\middle\vert\forall p\in X},\quad \zeta^{-1}_p\circ\zeta^{}_p=e,\quad \zeta^{}_q\circ\zeta^{}_p\in\mathrm{Perm}(X).\end{equation}
 回到覆叠空间，将纤维$F(p)$看作离散拓扑空间，则根据定义转移函数$f^{}_{UV}(p)$就是一个置换。全体转移函数在复合映射下构成一个有限的置换群$\mathrm{Perm}(F(p))$，此复合映射由上循环条件(\ref{xisGFTW4})确定，单位元是归一化(\ref{ximGFu4})
 \begin{equation}\mathrm{Perm}(F(p))=\qty{\zeta^{}_x\middle\vert\forall x\in F(p)},\quad \zeta^{}_y\circ\zeta^{}_x=f^{}_{ik}(p)=f^{}_{ij}(p)\circ f^{}_{jk}(p),\quad e=f^{}_{ii}.\label{rysRGpioj}\end{equation}
-这是转移函数的具体表示之一，也是对局部覆叠变换群的表述修正。还是需要强调置换群是有限群，其维数是$[\mathrm{Card}(X)]!<\infty$，因此无法在连续空间，特别是流形上定义。\\
+这是转移函数的具体表示之一，也是对局部覆叠变换群的表述修正。还是需要强调置换群是有限群，其维数是$[\mathrm{Card}(X)]!<\infty$，因此无法在连续空间，特别是微分流形上定义。\\
 \\
 现在来讨论局部平凡化下的路径。在底空间点$p\in B$的开邻域$U$内，引入一条连续曲线$\gamma:I\to U$，使得$\gamma(0)=p$。现在假设其对覆叠$\pi^{-1}$的提升给出两条曲线$\tilde\gamma^{}_1$和$\tilde\gamma^{}_2$，他们的起点相同但终点不同
 $$\tilde\gamma^{}_1(0)=\tilde\gamma^{}_2(0)\in F(p),\quad\tilde\gamma^{}_1(1)\neq	\tilde\gamma^{}_2(1).$$
@@ -14400,15 +14414,49 @@ $$\varPi^{}_3\qty(S^3)\cong\varPi^{}_3\qty(S^2)\cong\mathbb Z,$$
 \\
 综上所述，覆叠空间的同伦群长正合序列将基本群的子群结构，以及单值性表示统一在同一个代数框架中。这一框架不仅为计算拓扑不变量提供了强大工具，而且为从覆叠空间过渡到一般纤维丛的同伦论奠定了坚实基础。在后续讨论标架丛与主丛时，我们将看到，长正合序列是连接拓扑扭曲与几何联络的桥梁。
 
+\subsubsection{覆叠空间的同调和上同调}
+\noindent 上面我们仔细地分析了覆叠空间的同伦性，并得到了同伦群的长正合序列。当然由于群乘法是复合运算，使得同伦群的计算较为复杂，我们不妨转向看似更为简单的同调性，同时梳理一下覆叠空间的上同调，为后续的分类空间和拓扑示性类做一定的铺垫。\\
+\\
+对于基本群，我们是通过道路提升的唯一性，得到全空间的基本群的投影是底空间基本群的子群。
+
+
+
+
+
+
+
 \subsection{标架丛和主丛}\label{CadFHHG}
+\subsubsection{流形上的标架丛}
+\subsubsection{Lie群回顾}
+
+\subsubsection{内禀对称性的主丛}
+\subsubsection{截面和规范变换}
+
 
 \subsection{主丛的伴丛}
-
+\subsubsection{伴丛和矢量丛}
+\subsubsection{切丛和余切丛}
+\subsubsection{SU(2)群的旋量丛}
 \subsection{联络和曲率}
+\subsubsection{Abel联络和规范势}
+\subsubsection{非Abel联络和Wilson圈}
+\subsubsection{曲率和规范场强}
+\subsubsection{矢量丛上的联络}
+\subsubsection{基本粒子的标准模型}
 \subsection{分类空间}
-
-
+\subsubsection{Stiefel流形和分类空间}
+\subsubsection{拓扑空间的分类映射}
+\subsubsection{纤维丛的分类}
+\subsubsection{分类空间的上同调}
 \subsection{示性类理论引入}
+\subsubsection{Gauss-Bonnet定理}
+\subsubsection{矢量丛的拓扑示性类}
+\subsubsection{Stiefel-Whitney类}
+\subsubsection{主丛上的代数示性类}
+\subsubsection{复矢量丛的陈类}
+\subsubsection{Riemann流形上的陈类}
+
+
 
 \section{矩阵微扰的几何结构}\label{ha324ong}
 \noindent 在第\ref{DFVO))//}节中我们给出了关于矩阵的本征微扰分析，最后我们看到微扰导致了向量空间的层级分裂结构，每一级都对应了相应的近似。通过第\ref{Y><><)))}节的子流形理论不难看到，这种层级结构和子流形是比较类似的，我们简单的概括一下。\\
