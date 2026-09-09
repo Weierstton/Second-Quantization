@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  27 AUG 2026 01:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  9 SEP 2026 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2383,6 +2383,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--55
 [7]
 
 [8]
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+
 
 [9])
 \tf@toc=\write5
@@ -17766,7 +17769,70 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
                    \relax 
 l.14147 ...ography}\makeatother\endgroup\clearpage
                                                    [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14164.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14168--14172
+
+ []
 
 
 
@@ -17775,24 +17841,109 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14183 
-         [17
+l.14172 \begin{enumerate}\item
+                               面封闭性：\begin{equation}\forall \Delta...
+[17
 
 ]
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 14174.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14174--14178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14182--14186
+
+ []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14188 ...w{\pi} B.\label{ERGDFG10}\end{equation}
-                                                   [18]
-Underfull \hbox (badness 10000) in paragraph at lines 14192--14196
+l.14186 $$
+          \Delta^3=(a,b,c)\implies \mathbb A=\qty{\vb{e}^{}_1=b-a,\vb{e}^{}_...
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 14205--14211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14202--14206
+Underfull \hbox (badness 10000) in paragraph at lines 14205--14211
 
  []
 
@@ -17803,9 +17954,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14208 ...}_1}^2+\abs{z^{}_2}^2=1}.\end{equation}
-                                                   [19]
-Underfull \hbox (badness 10000) in paragraph at lines 14216--14220
+l.14211 \begin{itemize}\item
+                             $n$维实开球：$B^n=\qty{x\in\mathbb R^n\mid...
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 14217--14221
 
  []
 
@@ -17816,14 +17968,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14230 ...^{}_1(X,x)\subset K^{}_a.\end{equation}
-                                                   [20]
-Underfull \hbox (badness 10000) in paragraph at lines 14232--14236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14246--14250
+l.14223 \begin{equation}
+                        X^1=X^0\bigcup\qty(\bigcup_\alpha D^1_\alpha)/\sim=X...
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 14228--14231
 
  []
 
@@ -17834,9 +17982,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14250 ...rrow E\xrightarrow{\pi}B.\end{equation}
+l.14233 ...ightarrow{\Delta^n}\to X.\end{equation}
                                                    [21]
-Underfull \hbox (badness 10000) in paragraph at lines 14259--14262
+Underfull \hbox (badness 10000) in paragraph at lines 14235--14239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14247--14251
 
  []
 
@@ -17847,14 +18000,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14270 ...a(p)\cdot e^{i\alpha},\quad p\in S^2.$$
+l.14253 ...1=n^{}_2=\cdots=n^{}_k=0.\end{equation}
                                                    [22]
-Underfull \hbox (badness 10000) in paragraph at lines 14270--14274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14284--14288
+Underfull \hbox (badness 10000) in paragraph at lines 14269--14273
 
  []
 
@@ -17865,12 +18013,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14288 \begin{equation}
-                        \zeta^{}_h:X\to X,\quad \zeta^{}_h(x)=h,\quad \foral...
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 14292--14296
+l.14277 ...\overrightarrow{\sigma}),\end{equation}
+                                                   [23]
+Underfull \hbox (badness 10000) in paragraph at lines 14283--14286
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -17879,27 +18029,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14306 ...\gamma^{}_i\qty(t^{}_{i-1}))=a^{}_i).$$
-                                                   [24]
-Underfull \hbox (badness 10000) in paragraph at lines 14318--14322
-
- []
-
-
+l.14325 \clearpage
+                   [24]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14328 ...in B,\quad k\in\mathbb Z.\end{equation}
-                                                   [25]
-Underfull \hbox (badness 10000) in paragraph at lines 14344--14350
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14344--14350
+l.14325 \clearpage
+                   [25]
+Underfull \hbox (badness 10000) in paragraph at lines 14337--14341
 
  []
 
@@ -17910,9 +18050,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.26}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14350 
-         [26]
-Underfull \hbox (badness 10000) in paragraph at lines 14368--14372
+l.14345 ...{\expval{p}\vert p\in X}.\end{equation}
+                                                   [26
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14347--14351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14361--14365
 
  []
 
@@ -17923,10 +18070,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14372 $$
-          \ker\partial^{}_*=\qty{\expval{\gamma}\middle\vert\partial^{}_*(\e...
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 14384--14388
+l.14369 ...ll x\in B.\label{fcw4rCV}\end{equation}
+                                                   [27]
+Underfull \hbox (badness 10000) in paragraph at lines 14377--14381
 
  []
 
@@ -17937,19 +18083,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.28}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14392 ...gamma}(0),\label{DgbY,,.}\end{equation}
+l.14387 ...rrow E\xrightarrow{\pi}B,\end{equation}
                                                    [28]
-Underfull \hbox (badness 10000) in paragraph at lines 14400--14404
+Underfull \hbox (badness 10000) in paragraph at lines 14391--14395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14404--14408
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14412--14416
+Underfull \hbox (badness 10000) in paragraph at lines 14404--14407
 
  []
 
@@ -17960,24 +18101,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14417 \subsubsection
-                      {覆叠空间的同调和上同调} [29]
-Underfull \hbox (badness 10000) in paragraph at lines 14418--14421
+l.14409 ...rall g\in G.\end{aligned}\end{equation}
+                                                   [29]
+Underfull \hbox (badness 10000) in paragraph at lines 14415--14419
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14462--14467
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14462--14467
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -17986,9 +18114,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.30}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14467 
-         [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+l.14425 ...eta}:U^{}_\alpha\cap U^{}_\beta\to G,$$
+                                                   [30]
+Underfull \hbox (badness 10000) in paragraph at lines 14429--14433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14437--14441
+
+ []
 
 
 
@@ -17997,9 +18132,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.31}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14467 
-         [31]
-Overfull \vbox (11.68741pt too high) has occurred while \output is active []
+l.14445 ...i^{}_t(p): F(p)\to F(p)},\end{equation}
+                                                   [31]
+Underfull \hbox (badness 10000) in paragraph at lines 14463--14467
+
+ []
 
 
 
@@ -18008,22 +18145,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.32}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14467 
-         [32]
+l.14467 $$
+          a^{}_n=S^{}_nS^{-1}_0\qty(a^{}_0)=f^{}_{n0}\qty(a^{}_0).$$ [32]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.33}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14486 ...})=\lambda^{(0)}_i\mathbb V^{}_{(0)}.$$
+l.14489 ...bset \mathrm{Perm}(F(p)).\end{equation}
                                                    [33]
-Underfull \hbox (badness 10000) in paragraph at lines 14486--14490
+Underfull \hbox (badness 10000) in paragraph at lines 14489--14495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14500--14504
+Underfull \hbox (badness 10000) in paragraph at lines 14489--14495
 
  []
 
@@ -18034,10 +18171,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.34}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14508 $$
-          \vb{X}:\qty{\theta^{(0)}_k}^{\complement}\rightarrow\mathscr T^{\p...
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 14516--14520
+l.14509 ...}\qty[\gamma\qty(\partial I^n)]=F(p).$$
+                                                   [34]
+Underfull \hbox (badness 10000) in paragraph at lines 14513--14517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14529--14533
 
  []
 
@@ -18048,9 +18189,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.35}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14528 ...b{f}^{(i)})=\lambda^{}_i\vb{f}^{(i)}.$$
-                                                   [35]
-Underfull \hbox (badness 10000) in paragraph at lines 14536--14540
+l.14533 \begin{equation}
+                        \varPi^{}_0(F)=\qty{\expval{f}:S^0=\qty{1,-1}\to F}\...
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 14545--14549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14549--14553
 
  []
 
@@ -18061,11 +18208,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.36}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14548 ...p)\equiv0,\label{wox7gr,}\end{equation}
+l.14555 ...athbb Z\longrightarrow 0.\end{equation}
                                                    [36]
-Underfull \hbox (badness 10000) in paragraph at lines 14550--14554
+Underfull \hbox (badness 10000) in paragraph at lines 14557--14561
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14563--14566
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -18074,14 +18229,100 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.37}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14567 ...vb{e}^{(j)}=\vb{B}\qty(\vb{e}^{(i)}).$$
-                                                   [37]
-Underfull \hbox (badness 10000) in paragraph at lines 14575--14579
+l.14605 \clearpage
+                   [37]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.38}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14605 \clearpage
+                   [38]
+Underfull \hbox (badness 10000) in paragraph at lines 14607--14612
 
  []
 
 
-Overfull \hbox (2.3964pt too wide) in paragraph at lines 14581--14583
+Underfull \hbox (badness 10000) in paragraph at lines 14607--14612
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.39}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14629 \begin{equation}
+                        \vb{A}\qty(\expval{\vb{e}^{(i)}})=\lambda^{(0)}_i\ex...
+[39
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14631--14635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14645--14649
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.40}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14649 ...da^{(0)}_i}.\label{dolla}\end{equation}
+                                                   [40]
+Underfull \hbox (badness 10000) in paragraph at lines 14661--14665
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.41}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14673 ...b{f}^{(i)})=\lambda^{}_i\vb{f}^{(i)}.$$
+                                                   [41]
+Underfull \hbox (badness 10000) in paragraph at lines 14681--14685
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.42}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14693 ...p)\equiv0,\label{wox7gr,}\end{equation}
+                                                   [42]
+Underfull \hbox (badness 10000) in paragraph at lines 14695--14699
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.43}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14712 ...vb{e}^{(j)}=\vb{B}\qty(\vb{e}^{(i)}).$$
+                                                   [43]
+Underfull \hbox (badness 10000) in paragraph at lines 14720--14724
+
+ []
+
+
+Overfull \hbox (2.3964pt too wide) in paragraph at lines 14726--14728
 \C70/rm/m/n/10/96 � \C70/rm/m/n/10/7e � � \C70/rm/m/n/10/51 � \C70/rm/m/n/10/53
  � \C70/rm/m/n/10/7b � \C70/rm/m/n/10/5e v \C70/rm/m/n/10/4e ^^[$\U/rsfs/m/n/10
  T[]$|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/75 Y \C70/rm/m/n/10/7e � \C70/rm/m/
@@ -18098,107 +18339,13 @@ T1/cmr/bx/n/10 (-20) f[]$\C70/rm/m/n/10/76 �
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.38}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14587 ...^{(\xi);0}).\label{fqf21}\end{equation}
-                                                   [38]
-Underfull \hbox (badness 10000) in paragraph at lines 14601--14605
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.39}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14609 ...B]=\dim\qty(\mathbb V^{}_{(1)})\geq2.$$
-                                                   [39]
-Underfull \hbox (badness 10000) in paragraph at lines 14617--14621
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14627--14631
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.40}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14631 \subsubsection
-                      {分裂丛的子流形理论} [40]
-Underfull \hbox (badness 10000) in paragraph at lines 14632--14635
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14641--14645
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.41}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14649 ...plus\text{Span}\qty{\vb{f}^{(\eta)}}.$$
-                                                   [41]
-Underfull \hbox (badness 10000) in paragraph at lines 14662--14666
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.42}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14674 ...c^{}_{i\eta}\vb{e}^{(i)},\end{equation}
-                                                   [42]
-Underfull \hbox (badness 10000) in paragraph at lines 14680--14684
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.43}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14692 ...a_{\ ;b}.\label{hanbsoq1}\end{equation}
-                                                   [43]
-Underfull \hbox (badness 10000) in paragraph at lines 14702--14706
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14712--14716
-
- []
-
-
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.44}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14716 \begin{equation}
-                        \vb{K}^{}_{ab}(t)=\vb{T}^{}_{a;b}(t)=\vb{A}^{}_{ab}(...
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 14724--14726
+l.14732 ...^{(\xi);0}).\label{fqf21}\end{equation}
+                                                   [44]
+Underfull \hbox (badness 10000) in paragraph at lines 14746--14750
 
  []
 
@@ -18209,31 +18356,125 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.45}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14734 \clearpage
-                   [45]
+l.14754 ...B]=\dim\qty(\mathbb V^{}_{(1)})\geq2.$$
+                                                   [45]
+Underfull \hbox (badness 10000) in paragraph at lines 14762--14766
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14772--14776
+
+ []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.46}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14753 \clearpage
-                  \begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}...
-[46
+l.14776 \subsubsection
+                      {分裂丛的子流形理论} [46]
+Underfull \hbox (badness 10000) in paragraph at lines 14777--14780
 
-]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14786--14790
+
+ []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.47}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14771 \bibitem{L5}
-                     Schwartz, Matthew D. (2014). Quantum Field Theory and t...
-[47
+l.14794 ...plus\text{Span}\qty{\vb{f}^{(\eta)}}.$$
+                                                   [47]
+Underfull \hbox (badness 10000) in paragraph at lines 14807--14811
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.48}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14819 ...c^{}_{i\eta}\vb{e}^{(i)},\end{equation}
+                                                   [48]
+Underfull \hbox (badness 10000) in paragraph at lines 14825--14829
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.49}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14837 ...a_{\ ;b}.\label{hanbsoq1}\end{equation}
+                                                   [49]
+Underfull \hbox (badness 10000) in paragraph at lines 14847--14851
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14857--14861
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.50}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14861 \begin{equation}
+                        \vb{K}^{}_{ab}(t)=\vb{T}^{}_{a;b}(t)=\vb{A}^{}_{ab}(...
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 14869--14871
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.51}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14879 \clearpage
+                   [51]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.52}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14898 \clearpage
+                  \begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}...
+[52
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 14777--14778
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.53}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14916 \bibitem{L5}
+                     Schwartz, Matthew D. (2014). Quantum Field Theory and t...
+[53
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14922--14923
 []\C70/rm/m/n/10/54 h \C70/rm/m/n/10/73 �\T1/cmr/m/n/10 (+20) _pericyclic. \C70
 /rm/m/n/10/74 ^^F \C70/rm/m/n/10/8b � \C70/rm/m/n/10/52 � \C70/rm/m/n/10/5b f\T
 1/cmr/m/n/10 (+20) . \C70/rm/m/n/10/74 ^^F \C70/rm/m/n/10/8b � \C70/rm/m/n/10/7
@@ -18245,78 +18486,83 @@ aidu . com / s /
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.48}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.54}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14786 \bibitem{Bvufpp}
+l.14931 \bibitem{Bvufpp}
                          N.P. Landsman; Ch.G. van Weert.\emph{Real- and imag...
-[48]
+[54]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.49}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.55}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14802 \end{document}
-                       [49] (./二次量子化.aux)
+l.14949 \bibitem{CVN9875}
+                          JUNO Collaboration. \emph{Measurement of reactor n...
+[55]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.56}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14951 \end{document}
+                       [56] (./二次量子化.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `二次量子化.out' has not changed.
-(rerunfilecheck)             Checksum: 45E23AD7D2203C235F10243A1AC4B300;47214.
+(rerunfilecheck)             Checksum: 204E2B7D3720D5B708B69783038E1A4A;47408.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 4762 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 72772 strings out of 467799
- 1630735 string characters out of 5425587
- 2470763 words of memory out of 5000000
- 94015 multiletter control sequences out of 15000+600000
- 880941 words of font info for 1163 fonts, out of 8000000 for 9000
+ 72864 strings out of 467799
+ 1632152 string characters out of 5425587
+ 2471038 words of memory out of 5000000
+ 94046 multiletter control sequences out of 15000+600000
+ 881479 words of font info for 1166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,24n,102p,5307b,4733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
-indows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.t
-tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
-simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
-s/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c
-:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhe
-i.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fon
-ts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Win
-dows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf
-><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/si
-mkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/
-Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/
-Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.
-ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
-/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windo
-ws/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><
-c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/sims
-un.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fo
-nts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wi
-ndows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.tt
-f><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
-imkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows
-/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:
-/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei
-.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Font
-s/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wind
-ows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf>
-<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/sim
-kai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/F
-onts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/W
 indows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.t
-tf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/
-simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Window
-s/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c
+tf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
+simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
+s/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c
+:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simka
+i.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fon
+ts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Win
+dows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf
+><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/si
+mhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/
+Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/
+Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.
+ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts
+/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windo
+ws/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><
+c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simk
+ai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
+nts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wi
+ndows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.tt
+f><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
+imhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows
+/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:
+/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei
+.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Font
+s/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wind
+ows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf>
+<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/sim
+kai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/F
+onts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/W
+indows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.t
+tf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/
+simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Window
+s/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c
 :/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhe
 i.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fon
 ts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Win
@@ -18329,8 +18575,8 @@ ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts
 /simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windo
 ws/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><
 c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simh
-ei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
-nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Wi
+ei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
+nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
 ndows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.tt
 f><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/s
 imkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows
@@ -18340,7 +18586,7 @@ imkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows
 s/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wind
 ows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf>
 <c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/sim
-kai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
+kai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/F
 onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
 indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
 tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
@@ -18357,11 +18603,11 @@ Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.
 ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
 /simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
 ws/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><
-c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simh
+c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simh
 ei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fo
 nts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Wi
 ndows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.tt
-f><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
+f><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
 imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
 /Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
 /Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
@@ -18370,75 +18616,76 @@ s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
 ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
 sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
-onts/simsun.ttc><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbsy10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Program Files (x86)/texlive/2025/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><d:/Program Files (x86)/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><d:/Program Files (x
-86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Progr
-am Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex
-7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb><d:/Program Files (x86)/texlive/2025/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Program Files (x86)/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><d:/Program Files (x8
-6)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><d:/Progr
-am Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmi
-b7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr5.pfb><d:/Program Files (x86)/texlive/2025/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Program Files (x86)/texlive/20
-25/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Program Files (x86)/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><d:/Program File
-s (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/P
-rogram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
-.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy9.pfb><d:/Program Files (x86)/texlive/2025/texmf-d
-ist/fonts/type1/public/amsfonts/euler/eufb10.pfb><d:/Program Files (x86)/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><d:/Program File
-s (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><d:
-/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msam10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msam5.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam7.pfb><d:/Program Files (x86)/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/Program Files (x
-86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><d:/P
-rogram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><
-d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs7.pf
+onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><d:/Program Files (x86)/texlive/20
+25/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><d:/Program Files (x86
+)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Program
+ Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><
+d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1
+/public/amsfonts/cmextra/cmex7.pfb><d:/Program Files (x86)/texlive/2025/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Program Files (x86)/texlive/2
+025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Program Files (x86
+)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/Program 
+Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d
+:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi9.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmib10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1
+/public/amsfonts/cmextra/cmmib7.pfb><d:/Program Files (x86)/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Program Files (x86)/texlive/2
+025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Program Files (x86)
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/Program Fi
+les (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/P
+rogram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy5.pfb><d:/Program Files (x86)/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Program Files (x86)/texlive/202
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Program Files (x86)/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><d:/Program Fil
+es (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufb10.pfb><
+d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/eule
+r/eufm10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public
+/amsfonts/euler/eufm7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb><d:/Program Files (x86)/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb><d:/Program Files (x86
+)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><d:/Pro
+gram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msbm7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/t
+ype1/public/rsfs/rsfs10.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fon
+ts/type1/public/rsfs/rsfs7.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/
+fonts/type1/public/cm-super/sfbi0700.pfb><d:/Program Files (x86)/texlive/2025/t
+exmf-dist/fonts/type1/public/cm-super/sfbi0900.pfb><d:/Program Files (x86)/texl
+ive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb><d:/Program Files 
+(x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbl1000.pfb><d:/Prog
+ram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pf
 b><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/s
-fbi0700.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/
-cm-super/sfbi0900.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/typ
-e1/public/cm-super/sfbi1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist
-/fonts/type1/public/cm-super/sfbl1000.pfb><d:/Program Files (x86)/texlive/2025/
-texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb><d:/Program Files (x86)/tex
-live/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><d:/Program Files
- (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:/Pro
-gram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.p
+fbx0900.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/
+cm-super/sfbx1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/typ
+e1/public/cm-super/sfbx1200.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist
+/fonts/type1/public/cm-super/sfrm0700.pfb><d:/Program Files (x86)/texlive/2025/
+texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/Program Files (x86)/tex
+live/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><d:/Program Files
+ (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/Pro
+gram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.p
 fb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/
-sfrm0700.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public
-/cm-super/sfrm0800.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm0900.pfb><d:/Program Files (x86)/texlive/2025/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb><d:/Program Files (x86)/texlive/2025
-/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/Program Files (x86)/te
-xlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><d:/Program File
-s (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl0700.pfb><d:/Pr
-ogram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1000.
+sfrm1728.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public
+/cm-super/sfsl0700.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/ty
+pe1/public/cm-super/sfsl1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dis
+t/fonts/type1/public/cm-super/sfss1000.pfb><d:/Program Files (x86)/texlive/2025
+/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><d:/Program Files (x86)/te
+xlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><d:/Program File
+s (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><d:/Pr
+ogram Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0900.
 pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super
-/sfss1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/publi
-c/cm-super/sfss1200.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/t
-ype1/public/cm-super/sfti0700.pfb><d:/Program Files (x86)/texlive/2025/texmf-di
-st/fonts/type1/public/cm-super/sfti0800.pfb><d:/Program Files (x86)/texlive/202
-5/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><d:/Program Files (x86)/t
-exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><d:/Program Fil
-es (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on 二次量子化.pdf (751 pages, 6381485 bytes).
+/sfti1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/publi
+c/cm-super/sfti1200.pfb>
+Output written on 二次量子化.pdf (758 pages, 6427444 bytes).
 PDF statistics:
- 14620 PDF objects out of 15390 (max. 8388607)
- 13288 compressed objects within 133 object streams
- 4893 named destinations out of 5155 (max. 500000)
- 148545 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 14731 PDF objects out of 15390 (max. 8388607)
+ 13390 compressed objects within 134 object streams
+ 4948 named destinations out of 5155 (max. 500000)
+ 148561 words of extra memory for PDF output out of 154059 (max. 10000000)
 
