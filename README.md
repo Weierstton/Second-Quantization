@@ -29,15 +29,21 @@ which is hard to read, I didn't rearrange the entire codes.
 * Thermal field in a heat bath, including both thermodynamical equilibrium and non-equilibrum system.
 * Effective/conformal aspects of fields, emerged from the renormalization theory.
 * Quantum behavior of the gravitational fields, and a glance of the gravitational quantization.
-* More in appendix, with effective turbulence field theory, stochastic geometry, topology of the Feynman diagrams, and ads/cft duality.
-
+* More in appendix, with
+   * Effective turbulence field theory
+   * Stochastic geometry and dynamical phase transition
+   * Algebraic topology, fiber bundles, charateristic classes 
+   * Topology of the Feynman diagrams
+   * AdS/CFT correspodence, Gravity/CMT duality
+   * ect ...
+   
 Highly concentrated on statistical and geometrical properties of fields, and the anomalies rooted from quantum flucuation.
 
 Generally focus on the finite temperature field theory, and little calculation of the scattering sections, so if more applications are needed, please refer to the real QFT textbooks.
 
 **Absolutely not for beginners !!**
 
-## Prerequisite 
+## Prerequisits 
 
 * Differential Geometry : Basic understanding of the language of tensors fields, covariant derivatives, exterior forms, symplectic forms, and a little fiber bundles.
 * Free particle dynamics : Action, Lagrangian, Hamiltonian, least action principle, canonical equations, Hamilton-Jacobi theory, small vibration dynamics.
@@ -54,10 +60,11 @@ Second version will change dramtically the structure, and of course the prerequi
 
 ## Latest update
 
-The Scattering theory of two coupling Dirac fields, such as Bhabha and Møller scattering calculation, and the linear reponse theory of near-equilibrum field.
+The Scattering theory of bounded state -- the Bethe-Slapter equation, and the linear reponse theory of near-equilibrum field.
+Appendix for homology theory, and covering space.
 
 Scattering in the external field and statistical dissipation theory coming next.
 
 
 
-***All advises and corrections are welcome !***
+***All advises and corrections in Chinese, English and French are welcome !***
