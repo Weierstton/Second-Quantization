@@ -10700,7 +10700,7 @@ $$\begin{aligned}\mathfrak C^{}_4(x,1)=&D^{}_F(x,1)+12i\lambda\qty(\tikz[baselin
 \begin{equation}\Sigma^{(2)}(y,z)=288(i\lambda)^2\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=left:$y$](a){};\vertex[right=1cm of a,dot,label=right:$z$](b){};\diagram*{(a)--[half left](b)--[half left](a)--(b)};\end{feynman}}\propto D^3_F(y,z).\label{VVGUI2342}\end{equation}
 关于日落图确定的二级自能的计算，请参考第\ref{V34578//}节，而图$(A)$和图$(B)$与单圈物理性相同的拓扑背景，请参考附录\ref{Ydfghmh}，这里就都略过了。\\
 \\
-现在让我们回顾一下，对于全连通相互作用四点函数$\mathfrak D^{(0)}(y,y,y,1)$，我们计算了其一级修正(\ref{85478/*003})，得到了按\textsl{Wick}定理展开的一级修正部分，以及一个日落图。一个自然的问题就是，其精确形式是什么，直观的想法就是从\textsl{SD}方程计算。这里计算通常的全连通四点函数，对式(\ref{DSdfyo---n})取三个场位形给出
+现在让我们回顾一下，对于全连通相互作用四点函数$\mathfrak D(y,y,y,1)$，我们计算了其一级修正(\ref{85478/*003})，得到了按\textsl{Wick}定理展开的一级修正部分，以及一个日落图。一个自然的问题就是，其精确形式是什么，直观的想法就是从\textsl{SD}方程计算。这里计算通常的全连通四点函数，对式(\ref{DSdfyo---n})取三个场位形给出
 \begin{equation}\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\qty(\hat{\Lambda}^{}_{\text{free}}+\hat{\Lambda}^{}_{\text{int}})\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3}}{\Omega}_{\text{conn}}=i\sum_k^3\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\cdots\delta^{}_{kx}\cdots\hat{\psi}^{}_3}}{\Omega}_{\text{conn}}.\end{equation}
 此处我们默认计算的是全连通部分，按\textsl{KG}场打开我们得到全连通四点函数的演化方程
 \begin{equation}\square\mathfrak D(x,1,2,3)=\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\hat{\Lambda}^{}_{\text{int}}\hat{\psi}^{}_1\hat{\psi}^{}_2\hat{\psi}^{}_3}}{\Omega}_{\text{conn}}-i\qty{\delta^{}_{1x}\mathfrak C(2,3)+\delta^{}_{2x}\mathfrak C(1,3)+\delta^{}_{3x}\mathfrak C(1,2)}.\end{equation}
@@ -10734,7 +10734,7 @@ $$\mathfrak D^{(1)}_4(y,y,y,1,2,3)\implies D^{}_F(1,y)\mathfrak D^{(1)}_4(y,y,2,
 \item 其中一部分由\textsl{Wick}定理确定，可以将其分解为传播子$D^{}_F$和全连通$2n$点函数的一级修正$\mathfrak D^{(1)}_4(2n)$的乘积，而我们知道$\mathfrak D^{}_4(2n)$确定了上一级修正，因而每一级修正的图都和上一级的在物理性质上相同。这些项构成一个级数，最终的结果形如$\mathfrak C(1,2)\mathfrak C(3,4)$，\label{Scv11+}\item 另一部分和\textsl{Wick}定理无关，是全连通多点函数独有的结构，其严格区分了自由态和相互作用态。它不可拆分为$D^{}_F\mathfrak D^{(1)}_4(2n)$的乘积形式，包含自由传播子大于一的幂次项，并且一定包含四个自由外腿$D^{}_F(1,a)D^{}_F(2,b)D^{}_F(c,3)D^{}_F(d,4)$。若去掉这四个外腿，剩下部分的顶点数和修正的级数一致，比如一级修正对应单顶点，三级修正对应三顶点等。\label{Sc2441+}\end{enumerate}
 回顾到在第\ref{1pL//-..][rG}节中，我们引入了单粒子可约与不可约的概念，其中\textit{1PI}直观来讲就是无法再拆分的图。它们完全匹配上面关于$\mathfrak D^{}_4(1,2,3,4)$的两个表述，其中第\ref{Scv11+}点对应可约，第\ref{Sc2441+}点对应不可约。所以我们将满足第\ref{Sc2441+}点，去掉四个自由外腿后剩下的部分称为\textbf{四点\textit{1PI}}，直观的来讲它就是四点形式的自能。\\
 \\
-根据第\ref{Sc2441+}点，每一个四点\textit{1PI}的顶点数和修正级数相同，并且它们通过$\mathfrak D^{}_4(1,2,3,4)$的\textsl{SD}方程构成一个无穷级数。由于每一个四点\textit{1PI}四周都连接四条外腿，因此将外腿提出后可以对四点\textit{1PI}级数求和，记级数的总和为$\varPi$，算上零级修正的自由四点函数$D^{}_4$，则最终全连通四点函数可以写作
+根据第\ref{Sc2441+}点，每一个四点\textit{1PI}的顶点数和修正级数相同，并且它们通过$\mathfrak D^{}_4(1,2,3,4)$的\textsl{SD}方程构成一个无穷级数。由于每一个四点\textit{1PI}四周都连接四条外腿，因此将外腿提出后可以对四点\textit{1PI}级数求和，记级数的总和为$\varPi$，算上零级修正的自由四点函数$\mathfrak D^{(0)}_4=D^{}_4$，则最终全连通四点函数可以写作
 \begin{equation}\mathfrak D^{}_4(1,2,3,4)=D^{}_4+D^{}_FD^{}_F\hat{\varPi}^{}_4D^{}_FD^{}_F.\label{sufFH}\end{equation}
 现在我们来定义这个算符$\hat{\varPi}$，方便起见将第$n$级修正的四点\textit{1PI}按顶点数记为$\varPi^{(n)}_4\qty(x^{}_1,x^{}_2,\ldots,x^{}_n)$，则一级修正(\ref{5478..4'})可以写作
 $$\mathfrak D^{(1)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(1)}_4(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega,$$
@@ -13676,12 +13676,8 @@ $$\mathcal A^{(2)}_{fi}(u=\vb{q}^2)=-4im^2\bm{w}^*_4\bm{w}^*_3U\qty(\vb{p}^{}_1,
 \subsubsection{Dirac场的顶点函数和束缚态散射}
 \noindent 上面我们详细分析了双电子自由散射的情形，得到了\textsl{Møller}散射和\textsl{Bhabha}散射的可观测量以及辐射修正初步。但根据第\ref{CHoeei**--}节我们看到，超导体中\textsl{Cooper}对是一对电子的束缚态，因此这里不妨花一点时间，来讨论双电子束缚态的散射。\\
 \\
-由于是双电子，起始点依旧是四点函数。但由于现在是束缚态，因此我们不能直接使用\textsl{LSZ}约化，但全连通四点函数的\textsl{Dyson}方程是永远成立的。
+由于是双电子，起始点依旧是四点函数。但由于现在是束缚态，因此我们不能直接使用\textsl{LSZ}约化，但全连通四点函数的\textsl{SD}方程是永远成立的。
 
-
-
-
-\subsubsection{非全同粒子的散射}
 
 
 \subsection{外场中的散射理论}\label{Zcbrr.,599}
@@ -13762,9 +13758,6 @@ $$h^{}_\omega=\varphi^{}_\omega x^{}_\omega=\varphi^{}_\omega \alpha^{}_\omega h
 \subsubsection{响应的量子表述}
 
 \subsubsection{Kubo公式}
-
-
-
 
 \subsection{耗散的统计性质}\label{Vnh.,.,789}
 \subsection{零温场的响应}
@@ -14180,7 +14173,7 @@ $$K^r=\qty{\Delta^m\in K\middle\vert m\le r},$$
 $$K=K^{}_1\cup K^{}_2, \quad K^{}_1\cap K^{}_2=\varnothing.$$
 反之称为连通的。一个连同子复形$L$称为$K$的\textbf{连通分支}，若$K/L$也是子复形，本质上就是其最大连通子复形。需要强调的是，由于复形只是定义有组合结构的集合，它并不是一个拓扑结构，因此复形本身不是拓扑空间，此处的连通性和连通分支和拓扑空间上的是不同的。但单形是欧式空间的子集，于是一个简单的构造方法就是取$K$中所有单形的并集
 \begin{equation}\abs{K}=\bigcup_{\Delta^n\in K}\Delta^n.\end{equation}
-这样$\abs{K}$就是欧式空间的一个子集，称为一个\textbf{多面体 \textit{Polyhedron}}，比如$\abs{Bd\Delta^n}=\partial\Delta^n$。参考拓扑流形，我们称一个拓扑空间$X$是\textbf{可剖分的 \textit{Decomposable}}，若存在一个复形$K$使得$X\cong\abs{K}$，此同胚映射$\varphi$和复形$K$的偶对$(K,\varphi)$称为$X$的一个\textbf{三角剖分 \textit{Triangulation}}。比如$S^n$和$T^n$都是可剖分的，\textsl{Môbius}带也是可剖分的，这就引出了曲面分类定理。当然三角剖分并不是唯一的，类似仿紧的开加细，我们同样也可以对三角剖分加细并重新剖分，例如按照重心的\textbf{重剖分}，这里就略过了。\\
+这样$\abs{K}$就是欧式空间的一个子集，称为一个\textbf{多面体 \textit{Polyhedron}}，比如$\abs{Bd\Delta^n}=\partial\Delta^n$。参考拓扑流形，我们称一个拓扑空间$X$是\textbf{可剖分的 \textit{Decomposable}}，若存在一个复形$K$使得$X\cong\abs{K}$，此同胚映射$\varphi$和复形$K$的偶对$(K,\varphi)$称为$X$的一个\textbf{三角剖分 \textit{Triangulation}}。比如$S^n$和$T^n$都是可剖分的，\textsl{Môbius}带也是可剖分的，这就引出了曲面分类定理。当然三角剖分并不是唯一的，类似仿紧的开加细，我们同样也可以对三角剖分加细并重新剖分，例如按照重心的重分，定义请参考第\ref{NfG30780-}节，这里就略过了。\\
 \\
 让我们回到欧式空间，作为一个仿射向量空间，其自然存在定向，而单形作为子集自然的具有诱导定向。当然作为凸集它不是仿射空间，不能直接将$\mathbb R^n$的定向限制到其上得到，因此虽然单形的顶点集是仿射空间，我们依旧无法根据\textsl{Jacobi}行列式符号确定定向。但顶点顺序本身就构成一个定向，比如选取仿射空间为
 $$\Delta^3=(a,b,c)\implies \mathbb A=\qty{\vb{e}^{}_1=b-a,\vb{e}^{}_2=c-b,\vb{e}^{}_3=a-c}.$$
@@ -14203,7 +14196,9 @@ $$\Delta^{3''}=(b,c,a)\implies \mathbb A''=\qty{\vb{e}''_1=c-b=\vb{e}^{}_2,\vb{e
 $$\overrightarrow{\Delta^n}=a^{}_0a^{}_1a^{}_2\cdots a^{}_n,\quad \vec{t}=a^{}_0a^{}_1\cdots \hat{a}^{}_i\cdots a^{}_n,$$
 其中$\hat{a}^{}_i$代表去掉该顶点。则根据置换不难得到$\overrightarrow{\Delta^n}=(-1)^ia^{}_i\vec{t}$，相关数为
 $$\qty[\overrightarrow{\Delta^n};\vec{t}]=(-1)^i\qty[a^{}_i\vec{t};\vec{t}]=(-1)^i\implies (-1)^i\qty[\vec{t};\overrightarrow{\Delta^n}]=1,$$
-因为$\qty[a^{}_i\vec{t};\vec{t}]\equiv1$，无论$i$的值。因此$(-1)^i\vec{t}=(-1)^ia^{}_0a^{}_1\cdots \hat{a}^{}_i\cdots a^{}_n$是$\overrightarrow{\Delta^n}$的正向面，这是一个非常有用的结论，后面会使用到。将上述性质推广，特别是第(\ref{5DFH.00**})条正交性，我们可以利用相关数得到任意维面的定向，这里就不再叙述了。\\
+因为$\qty[a^{}_i\vec{t};\vec{t}]\equiv1$，无论$i$的值。因此
+\begin{equation}(-1)^i\vec{t}=(-1)^ia^{}_0a^{}_1\cdots \hat{a}^{}_i\cdots a^{}_n\label{SF.044E4}\end{equation}
+是$\overrightarrow{\Delta^n}$的正向面，这是一个非常有用的结论，后面会使用到。将上述性质推广，特别是第(\ref{5DFH.00**})条正交性，我们可以利用相关数得到任意维面的定向，这里就不再叙述了。\\
 \\
 对于通常的几何图形，比如正方体棱锥之类，单纯复形便足以精确描述其几何特征，因为他们的一维组成都是直线。但对于实心圆或者球面，如果我们取其三角剖分，则需要大量的三角形，这使得$K$作为一个有限集可能无法给出精确结果。甚至于射影空间$\mathbb {RP}^n$，其三角剖分是非常困难的，因为等价类的拓扑结构施加了很多约束。\\
 \\
@@ -14223,7 +14218,7 @@ $$\qty[\overrightarrow{\Delta^n};\vec{t}]=(-1)^i\qty[a^{}_i\vec{t};\vec{t}]=(-1)
 \begin{equation}X^1=X^0\bigcup\qty(\bigcup_\alpha D^1_\alpha)/\sim=X^0\bigcup\qty(\bigcup_\alpha e^1_\alpha),\quad p\sim f^{}_\alpha(p),\quad \forall p\in S^0.\end{equation}
 我们继续往上贴二维胞腔$\qty{e^2_\alpha}$，在弱拓扑和有限闭包性下得到二维骨架
 \begin{equation}X^2=X^1\bigcup\qty(\bigcup_\alpha D^2_\alpha)/\sim=X^1\bigcup\qty(\bigcup_\alpha e^2_\alpha),\quad p\sim f^{}_\alpha(p).\end{equation}
-我们可以持续迭代，一直到一个有限维骨架$X^n=X$，按照定义这个骨架是一个拓扑空间。当然在弱拓扑下，可以迭代得到一个无限维的骨架$X^\infty$，所有骨架的并集$X$称为一个\textbf{\textsl{CW}复形}，默认为$T^{}_2$空间，其中$C$是有限闭包性，$W$是弱拓扑。这里再总结一下\textsl{CW}复形的构造过程：
+我们可以持续迭代，一直到一个有限维骨架$X^n=X$，按照定义这个骨架是一个拓扑空间。当然在弱拓扑下，可以迭代得到一个无限维的骨架$X^\infty$，所有骨架的并集$X$称为一个\textbf{\textsl{CW}复形}(\textsl{J. H. C. Whitehead}，1949)，默认为$T^{}_2$空间，其中$C$是有限闭包性，$W$是弱拓扑。这里再总结一下\textsl{CW}复形的构造过程：
 \begin{enumerate}[\quad(1)]\item 在一个$T^{}_2$空间$Y$中，取一系列向上包含的闭子集$$X^0\subset X^1\subset X^2\subset \cdots\cdots;$$\item 令闭子集$X^0$为零维骨架，是一个具有离散弱拓扑的点集，默认无限可数；\item 引入$n$维胞腔$e^n_\alpha$，在有限闭包的前提下，$n$维骨架的迭代公式为\begin{equation}X^n=X^{n-1}\bigcup\qty(\bigcup_\alpha D^n_\alpha)/\sim=X^{n-1}\bigcup\qty(\bigcup_\alpha e^n_\alpha),\quad p\sim f^{}_\alpha(p),\quad \forall p\in S^{n-1}.\end{equation}每个骨架均具有弱拓扑；\item 一个\textbf{无限维\textsl{CW}复形}是直到无限维的所有骨架的并\begin{equation}X=\bigcup_n X^n.\end{equation}这是一个具有弱拓扑的拓扑空间；\item $X$的拓扑为：$\forall A\subset X$，$A$是开集或者闭集$\iff A\cap X^n$是$X^n$中的开集或者闭集，$\forall n$。\label{23WERT950//}\end{enumerate}
 若$X=X^n$对于$n<\infty$，则称其为\textbf{有限维\textsl{CW}复形}，$n$的最小值称为其维数$\dim X=n$，此时条件(\ref{23WERT950//})就不再需要了。关于\textsl{CW}复形的具体拓扑性质分析，请参考\cite{agfsgl}附录$A$，具体例子比如实射影空间的剖分，可以参考\cite{SG*/00}\S3，这里就不介绍了。\\
 \\
@@ -14231,9 +14226,13 @@ $$\qty[\overrightarrow{\Delta^n};\vec{t}]=(-1)^i\qty[a^{}_i\vec{t};\vec{t}]=(-1)
 $$\gamma:\Delta^1\to X,$$
 这是$X$的一维子空间，具有限制拓扑，且定向和此单形的定向一致。由于此映射除了连续性和保定向外，没有其余限制，因此它比单形更普适，并且自带拓扑结构。推广这一想法，我们定义拓扑空间$X$上的$n$维\textbf{奇异单形 \textit{Singular Simplex}}为一个具有定向的连续映射
 \begin{equation}\sigma:\overrightarrow{\Delta^n}\to X.\end{equation}
-它直接给单形指定了一个拓扑，并且自然的向低维兼容，比\textsl{CW}复形的额外拓扑构造要简单的多。需要说明的是，奇异单形的维数和像无关，因为虽然允许浸入映射，但像的最大维数和单形的维数相等，而奇异单形包含所有的此类映射，因此维数应当取像维数的最大值，也即$n$维。类似的可以得到奇异单形的面
+它直接给单形指定了一个拓扑，并且自然的向低维兼容，比\textsl{CW}复形的额外拓扑构造要简单的多。需要说明的是，奇异单形的维数和像无关，因为虽然允许浸入映射，但像的最大维数和单形的维数相等，而奇异单形包含所有的此类映射，因此维数应当取像维数的最大值，也即$n$维。类似的可以得到单形的奇异面
 \begin{equation}\sigma\circ \psi^{}_t:t\to X,\quad \psi^{}_t:t\to \Delta^n,\quad t\prec \Delta^n.\end{equation}
-其拓扑是低一维的限制拓扑，对于曲面可以理解为其边界，同样定向和单形面的定向一致。这样我们就将单形和一族无限可数映射相对应，虽然在连续性限制下无法将复形对应为一个映射，但所有奇异单形的集合在事实上确定了一个形如复形的结构，这是我们后续计算同调上同调的基础。\\
+其拓扑是低一维的限制拓扑，对于曲面可以理解为其边界，同样定向和单形面的定向一致。但需要强调，奇异单形上无法定义相关数，因为作为映射单形和面没有直接的关系，相关数必然为零。但顶点乘积的表示依旧成立，比如对于$n-1$维面，将映射$\psi^{}_t$写为
+\begin{equation}\psi^{}_t(t)=\psi^{}_i\qty(a^{}_0a^{}_1\cdots \hat{a}^{}_i\cdots a^{}_n)=a^{}_0a^{}_1\cdots a^{}_i\cdots a^{}_n,\quad \vec{t}=a^{}_0a^{}_1\cdots \hat{a}^{}_i\cdots a^{}_n,\end{equation}
+则根据结论(\ref{SF.044E4})我们得到奇异顺向面
+\begin{equation}\overrightarrow{\theta}=(-1)^i\sigma\circ \psi^{}_i.\label{Ffav35==}\end{equation}
+这样我们就将单形和一族无限可数映射相对应，虽然在连续性限制下无法将复形对应为一个映射，但所有奇异单形的集合在事实上确定了一个形如复形的结构，这是我们后续计算同调上同调的基础。\\
 \\
 现在让我们进一步讨论定向的单形。对于复形$K$上所有定向$q$维单形的集合$S^{}_q(K)$，一个自然的想法就是将这些单形按定向拼接起来，比如一维单形之间可以引入路径乘法
 $$\overrightarrow{\Delta^1_1}\times\overrightarrow{\Delta}^1_2=\begin{cases}\overrightarrow{\Delta^1_1},\quad 0\le t\le 1/2;&\\ \overrightarrow{\Delta^1_2},\quad 1/2< t\le 1.\end{cases}$$
@@ -14266,25 +14265,25 @@ $$s=n^{}_1\overrightarrow{\Delta^q_1}+n^{}_2\overrightarrow{\Delta^q_2}+\cdots=\
 可以验证在对偶下，直和变为直积$(F\cong H)^*\cong F^*\times H^*$，注意是直积不是张量积。将群$F$的\textbf{秩}定义为对偶群$F^*$的维数$\mathrm{rank}F=\dim F^*$，我们有分解定理
 \begin{equation}\mathrm{rank}F=\mathrm{rank}H+\mathrm{rank}(F/H).\end{equation}
 同时不难注意到挠子群的对偶$T^*_F=\qty{\varphi(f)=0\middle\vert0=\varphi(0)=r\varphi(f)}$，从而有
-\begin{equation}\mathrm{rank}F=\dim T^*_F+\dim\qty(F/T^{}_F)^*=\dim\qty(F/T^{}_F)^*.\end{equation}
+\begin{equation}\mathrm{rank}F=\dim T^*_F+\dim\qty(F/T^{}_F)^*=\dim\qty(F/T^{}_F)^*.\label{we6Hrt}\end{equation}
 可见对偶群可以极大的简化计算，这实际上就是上同调的定义，我们之后会看到。关于交换群的其余内容，会在下文中借具体场景逐一展示，这里就不展开了。\\
 \\
 在介绍了单形的链群后，我们来讨论定向奇异单形的链群。由于现在没有复形，因此所有的奇异单形都是从$\overrightarrow{\Delta^n}$映射到空间$X$，不同的映射给出不同的奇异单形。将$X$上所有定向$q$维奇异单形的集合记为
-\begin{equation}S^{}_q(X)=\qty{\sigma:\Delta^n\to X\middle\vert \overrightarrow{\sigma}=\sigma\qty(\overrightarrow{\Delta^n}),\overleftarrow{\sigma}=\sigma\qty(\overleftarrow{\Delta^n})},\end{equation}
+\begin{equation}S^{\mathrm{sin}}_q(X)=\qty{\sigma:\Delta^n\to X\middle\vert \overrightarrow{\sigma}=\sigma\qty(\overrightarrow{\Delta^n}),\overleftarrow{\sigma}=\sigma\qty(\overleftarrow{\Delta^n})},\end{equation}
 需要说明的是这是无限群，本质上这是映射空间，当然我们依旧可以引入一个有限多元线性整系数式
 $$s=\sum_in^{}_i\sigma^{}_i,\quad n^{}_i\in \mathbb Z,\quad 1\le i\le \infty.$$
-于是$S^{}_q(X)$上的\textbf{$\bm{q}$维奇异链}就可以定义为
-\begin{equation}s:S^{}_q(X)\to\mathbb Z,\quad s\qty(\overleftarrow{\sigma})=-s\qty(\overrightarrow{\sigma}),\end{equation}
-所有$q$维奇异链的集合在函数的加法下构成一个\textbf{整系数$\bm{q}$维奇异链群}$C^{}_q(X;\mathbb Z)$，类似单纯理论(\ref{B345gh.})定义为
-\begin{equation}C^{}_q(X;\mathbb Z)=\qty{s:S^{}_q(X)\to\mathbb Z}=\mathbb Z\qty[S^{}_q(X)],\end{equation}
-相应的群结构就不展示了，和单纯性一样。但不同的是，此时基$S^{}_q(X)$是无限的，因此奇异链群只是生成交换群，但这并不妨碍我们定义链群，因为无限链是不符合$X$上的拓扑。
+于是$S^{\mathrm{sin}}_q(X)$上的\textbf{$\bm{q}$维奇异链}就可以定义为
+\begin{equation}s:S^{\mathrm{sin}}_q(X)\to\mathbb Z,\quad s\qty(\overleftarrow{\sigma})=-s\qty(\overrightarrow{\sigma}),\end{equation}
+所有$q$维奇异链的集合在函数的加法下构成一个\textbf{整系数$\bm{q}$维奇异链群}$C^{\mathrm{sin}}_q(X;\mathbb Z)$，类似单纯理论(\ref{B345gh.})定义为
+\begin{equation}C^{\mathrm{sin}}_q(X;\mathbb Z)=\qty{s:S^{\mathrm{sin}}_q(X)\to\mathbb Z}=\mathbb Z\qty[S^{\mathrm{sin}}_q(X)],\end{equation}
+相应的群结构就不展示了，和单纯性一样。但不同的是，此时基$S^{\mathrm{sin}}_q(X)$是无限的，因此奇异链群只是生成交换群，但这并不妨碍我们定义链群，因为无限链是不符合$X$上的拓扑。
 
-\subsubsection{边缘算子与同调}
+\subsubsection{边缘算子与同调}\label{NfG30780-}
 \noindent 上面我们引入了链和链群，作为单形的组合，我们自然可以讨论链的面。首先不难注意到，链的面不能直接在式(\ref{B345gh.})中，将单形$\Delta^n$用其面$\phi^m$替换得到，因为一方面单形到面的限制并不保定向，从而式(\ref{B345gh.})不成立，另一方面我们根本无法确定定向面之间的相加方式。\\
 \\
 为此不妨从群的角度分析，根据定义$q$维链群是由$q$维定向单形集合$S^{}_q(K)$生成的，而$m$维定向面$\phi^{m<q}$的集合$S^{}_m(K)$同样可以作为生成元组，生成$m$维链群$C^{}_m(K;\mathbb Z)=\mathbb Z\qty[S^{}_m(K)]$。这样，我们就可以通过线性扩张，比如构造
 $$S^{}_q(K)\to C^{}_m(K;\mathbb Z)\implies C^{}_q(K;\mathbb Z)\to C^{}_m(K;\mathbb Z),$$
-得到定向面的链群。这个构造可以通过相关数(\ref{234PG[]''})得到，根据定义(\ref{25PINCo})其确定了$q$维定向单形$\Delta^q$的$q-1$维面的诱导定向，引入$K$上的一个映射
+得到定向面的链群。这个构造可以通过相关数(\ref{234PG[]''})得到，根据定义(\ref{25PINCo})其确定了$q$维定向单形$\Delta^q$的一个$q-1$维面的诱导定向，引入$K$上的一个映射
 \begin{equation}\tilde{\partial}^{}_q\Delta^q:S^{}_{q-1}(K)\to \mathbb Z,\quad \partial^{}_q\Delta^q(t)=\qty[\Delta^q;t],\quad \forall t\in S^{}_{q-1}(K).\label{er	46iuyey}\end{equation}
 不难看到$\tilde{\partial}^{}_q\Delta^q(-t)=-\qty[t;\Delta^q]=-\tilde{\partial}^{}_q\Delta^q(t)$，因此我们得到
 \begin{equation}\tilde{\partial}^{}_q\Delta^q\in C^{}_{q-1}(K;\mathbb Z),\end{equation}
@@ -14340,14 +14339,110 @@ $$S^1_1=S^1_2+\partial^{}_1D^1\implies S^1_1\sim S^1_2,\quad \expval{S^1}\in H^{
 \begin{equation}C^{}_q(K;G)=\qty{s:S^{}_q(K)\to G\middle\vert s\qty(\overrightarrow{\Delta^n})=-s\qty(\overleftarrow{\Delta^q_i}),\forall \Delta^n\in S^{}_q(K)}.\end{equation}
 我们希望其保留加法作为群作用，因此系数群$G$必然为交换群，则线性组合(\ref{3460011})写作
 \begin{equation}s=\sum_ig^{}_i\Delta^n_i,\quad g^{}_i\in G.\end{equation}
-此时相关数也应取值到群$G$中，
+此时相关数也应取值到群$G$中，定义为$\forall t\in S^{}_{q-1}(K)$，
+\begin{equation}\qty[g\Delta^q_i;t]=\begin{cases}\pm g,\quad t=\pm\Delta^q_i;&\\ 0, \quad t\neq\pm\Delta^q_i \end{cases}\end{equation}
+其中$\overleftarrow{\Delta^q_i}=-\Delta^q_i$。这样我们就可以定义边缘链$\partial^{}_q(gc)\in C^{}_{q-1}(K;G)$为
+$$\partial^{}_q(gc)(t)=\qty[gc;t],\quad \forall t\in S^{}_{q-1}(K),c\in S^{}_q(K),$$
+将其线性扩张为边缘算子$\partial^{}_q:C^{}_q(K;G)\to C^{}_{q-1}(K;G)$，满足\textsl{Poincaré}第零引理$\partial^{}_q\circ\partial^{}_{q+1}\equiv0$。这样我们就得到以$G$为系数的同调群$H^{}_q(K;G)$，不难计算对于连通复形$K$有$H^{}_0(K;G)=G$。我们后续会看到，在光滑流形上同调群的系数为实数，这是由光滑性决定的，其不含挠子群。\\
+\\
+上述介绍的单纯同调是从单形出发的，它无法推广到任意拓扑空间，为此需要建立自带拓扑的\textbf{奇异同调论 \textit{Singular Homology}}。根据之前的结论，奇异单形不存在相关数，顺向面只能通过式(\ref{Ffav35==})确定，于是从奇异单形的整系数链群$C^{\mathrm{sin}}_q(X;\mathbb Z)$出发，利用结论(\ref{Lid213400f})得到边缘链
+\begin{equation}\partial^{}_q\sigma=\sum_{\overrightarrow{\theta}}\theta=\sum_i(-1)^i\sigma\circ \psi^{}_i,\quad \sigma\in C^{}_q(X;\mathbb Z).\end{equation}
+虽然$S^{}_q(X;\mathbb Z)$是无限可数的，但生成链群$C^{}_q(X;\mathbb Z)$的基是有限集，因此交换群的线性扩张依旧成立，给出\textbf{奇异边缘算子}
+\begin{equation}\partial^{\mathrm{sin}}_q:C^{}_q(X;\mathbb Z)\to C^{}_{q-1}(X;\mathbb Z).\end{equation}
+它同样满足\textsl{Poincaré}第零引理，因为这是定向自身的性质，和映射无关，并和链群构成\textbf{奇异链复形}
+\begin{equation}C^{\mathrm{sin}}_*(X;\mathbb Z)=\qty{C^{}_q(X;\mathbb Z);\partial^{\mathrm{sin}}_q\middle\vert q\in\mathbb Z}.\end{equation}
+由此我们得到拓扑空间$X$上的\textbf{奇异同调群}
+\begin{equation}H^{\mathrm{sin}}_q(X;\mathbb Z)=Z^{\mathrm{sin}}_q(X;\mathbb Z)/B^{\mathrm{sin}}_q(X;\mathbb Z),\end{equation}
+其中奇异闭链群$Z^{\mathrm{sin}}_q(X;\mathbb Z)$和奇异边缘链群$B^{\mathrm{sin}}_q(X;\mathbb Z)$都适配$X$上的拓扑结构，从而我们可以自由的讨论群$H^{\mathrm{sin}}_q(X;\mathbb Z)$的拓扑性质。当然整系数奇异同调群也存在挠子群，所以我们同样可以扩充为任意交换群$G$作为系数的同调群，这里就不赘述了。\\
+\\
+我们知道，一个可剖分的拓扑空间$X$通过三角剖分，和一个复形对应，这给出了$X$上了单纯同调。同时它自身的定义有奇异同调，一个显然的问题是，这两个同调之间是什么关系。为了解答这个问题，我们需要引入一些额外的概念。\\
+\\
+由于拓扑空间一般是连续的，因此为了精准描述其结构，我们需要非常一个精细的剖分。设$K$和$Y$都是可剖分空间$X$的剖分，满足
+$$\forall \Delta^n\in Y\implies \Delta^n\subset s\in K,\quad \abs{K}=\abs{Y},$$
+则称$Y$是$K$的一个\textbf{重分 \textit{Subdivision}}。一种特殊的重分是\textbf{重心重分}，在单形$\Delta^n$中\textbf{重心 \textit{Barycenter}}定义为坐标为$\qty(\dfrac{1}{n+1},\dfrac{1}{n+1},\cdots,\dfrac{1}{n+1})$的点，记为
+\begin{equation}\Delta^*=\sum_i\frac{1}{n+1}a^{}_i,\quad \Delta^n=\qty(a^{}_0,\cdots,a^{}_n).\end{equation}
+比如一维单形的重心是其中点，二维单形的重心就是三角形的通常重心。一个$n$维复形$K$的重心重分是一个复形，记为$RbK$，定义为
+\begin{equation}RbK=\qty{\qty(\Delta^*_0,\Delta^*_1,\cdots,\Delta^*_n)\middle\vert \Delta^{}_i\in K,\Delta^{}_0\prec\Delta^{}_1\prec\cdots\prec\Delta^{}_n}.\end{equation}
+其中点集$\qty{\Delta^*_0,\Delta^*_1,\cdots,\Delta^*_n}$处于一般位置的原因是，面的规则相处性导致这些子空间线性无关，自然的也体现在各重心上。可以证明，重心重分是一个重分，满足$\abs{RbK}=\abs{K}$，证明请参考\cite{CV25--}。通过重心重分，我们就得到一个较为精细的复形，这和拓扑空间覆盖的加细是完全一致的。我们也可以多次重分迭代得到更精细的复形，记$l$次迭代后的重心重分为$(Rb)^lK$。\\
+\\
+由于一个单形$\Delta^n$也可以作为一个复形，因此取值在可剖分空间$X$上的奇异单形$\sigma:\Delta^n\to X$，应当看作复形间的映射。当然复形的组合结构也给出了许多约束，这里引入\textbf{单纯映射}的概念：对于复形$K$和$Y$之间的单纯映射$f:K\to Y$满足
+\begin{enumerate}[\quad (1)]\item 顶点对应：$\forall a\in K^0$，$f(a)\in Y^0$；\item 顶点约束：$\forall \Delta^n=\qty(a^{}_0,\cdots,a^{}_0)\in K$，$f\qty(\Delta^n)=\qty(f\qty(a^{}_0),\cdots,f\qty(a^{}_0))\in Y$；\item 保面性：$\forall t\prec r\in K$，$f(t)\prec f(r)\in Y$；\item 非退化性：$\forall h\in K$，\quad $\dim f(h)\le\dim h$。\end{enumerate}
+若其逆映射$f^{-1}:Y\to K$也是单纯映射，则成为\textbf{单纯同构}。单纯映射诱导了多边形之间的映射，这里不加证明的使用一个结论，$\forall p\in\abs{K}$，存在$K$中的一个唯一的单形$s=\qty(a^{}_0,\cdots,a^{}_0)\in K$使得
+$$p\in s,\quad p=\sum_i\lambda^{}_ia^{}_i.$$
+此单形称为点$p$在复形$K$中的\textbf{承载单形}，记为$\mathrm{Car}^{}_K(p)$，于是诱导映射$\bar{f}:\abs{K}\to\abs{Y}$可以定义为
+\begin{equation}\bar{f}(p)=\sum_i\lambda^{}_if\qty(a^{}_i),\quad p\in\qty(a^{}_0,\cdots,a^{}_0)=\mathrm{Car}^{}_K(p).\end{equation}
+这是一个连续映射，证明请参考\cite{CV25--}的命题$7.1$。既然空间可以三角剖分为一个复形，我们自然要探讨空间之间的映射和单纯映射之间的关联。取两个可剖分空间$X\cong\abs{K}$和$L\cong \abs{Y}$，引入连续映射$\zeta:X\to L$和单纯映射$f:K\to Y$，称$f$是$\zeta$的\textbf{单纯逼近 \textit{Simplicial Approximation}}若满足
+\begin{equation}\bar{f}(x)\in\mathrm{Car}^{}_K\zeta(x),\forall x\in X.\end{equation}
+我们后续会证明，单纯逼近的近似性由同伦确定$\zeta\cong\bar{f}$。可以证明，单纯逼近满足复合律，也就是
+$$\forall \zeta\circ\beta:X\to Y \to Z,\quad \bar{f}\circ\bar{g}: K\to Y\to D\ \text{是单纯逼近},\quad Z\cong\abs{D}.$$
+结合重心重分的加细，我们得到\textbf{单纯逼近定理}：依旧是两个可剖分空间$X\cong\abs{K}$和$L\cong \abs{Y}$以及连续映射$\zeta:X\to L$，对于一个足够大的$l$值，必然存在$\zeta$的单纯逼近
+\begin{equation}f:(Rb)^lK\to Y.\end{equation}
+这个定理的证明略显复杂，但从紧致性的角度考虑，它和列紧性与仿紧性的等价性证明是一样的，这里就不展开了。在拓扑层面，我们可以通过同伦定性的证明，留在第\ref{234200.05}节说明。\\
+\\
+利用上面得到的概念，我们来证明，单纯同调和奇异同调在可剖分空间$X$上等价。回到$X$上的$q$维奇异单形$\sigma:\Delta^q\to X$，令$X$的三角剖分为$X\cong\abs{K}$，则一方面可以令奇异单形和$K$中的单形一一对应
+$$\sigma^{}_i:\Delta^q\to X,\quad \sigma^{}_i\qty(\Delta^q)=s^{}_i\in X,$$
+从而$X$上的单纯链群可以对应到奇异链群
+$$c=\sum_in^{}_is^{}_iC^{}_q(X;\mathbb Z) \longleftrightarrow c^{\mathrm{sin}}=\sum_in^{}_i\sigma^{}_i\in C^{\mathrm{sin}}_q(X;\mathbb Z).$$
+当然由于映射并不保维数，所以上述对应只针对保维数的奇异单形有效
+\begin{equation}c\longleftrightarrow c^{\mathrm{sin}}\iff\sigma^{}_i\qty(\Delta^q)\in S^{}_q(X),\end{equation}
+这并不包括其余的$q$维定向奇异单形，因此单纯链群是奇异链群的子群
+\begin{equation}C^{}_q(X;\mathbb Z)\subset C^{\mathrm{sin}}_q(X;\mathbb Z).\end{equation}
+不难证明在包含映射$i^{}_q:C^{}_q(X;\mathbb Z)\to C^{\mathrm{sin}}_q(X;\mathbb Z)$下，闭链群和边缘链群也保持相同的子群关系，因此我们得到同调群
+\begin{equation}H^{}_q(X;\mathbb Z)\subset H^{\mathrm{sin}}_q(X;\mathbb Z).\label{Cvegh4lkj/]]}\end{equation}
+另一方面，根据单纯逼近定理，存在一个关于$\sigma$的单纯逼近
+$$f:(Rb)^l\Delta^q=R\to K.$$
+这是一个单纯映射，根据定义它将$R$中的单形$s$映射为$K$中的单形，可以令奇异单形和单纯映射在$s$上的限制相等
+$$\eval{\sigma}_s=\eval{f}_s,$$
+从而不同的奇异单形对应不同的单纯映射$\sigma^{}_i=f^{}_i$。同样的考察闭链，由于单纯映射的顶点限制不要求单形的对应，所以奇异闭链只能覆盖$K$中构成闭链的顶点集
+$$\begin{aligned}&\forall c^{\mathrm{sin}}=\sum_in^{}_if^{}_i\in Z^{\mathrm{sin}}_q(X;\mathbb Z),\quad \qty(c^{\mathrm{sin}}(s))^0=\qty{a^{}_0,\cdots,a^{}_q}\subset K^0\\& \text{使得}\ \sum_{i=0}^q(-1)^ia^{}_0\cdots\hat{a}^{}_i \cdots a^{}_q=0\implies c^{\mathrm{sin}}(s)\in Z^{}_q(X;\mathbb Z),\quad \forall s\in R.\end{aligned}$$
+当然这里更严格的表述需要依赖链同伦，这里暂不给出，具体可以参考第\ref{23R50.05}节。根据对应关系，我们得到奇异闭链群是单纯闭链群的子群$Z^{\mathrm{sin}}_q(X;\mathbb Z)\subset Z^{}_q(X;\mathbb Z)$，类似的可以证明边缘群也符合同样的子群结果，从而
+\begin{equation}H^{\mathrm{sin}}_q(X;\mathbb Z)\subset H^{}_q(X;\mathbb Z).\label{Cveg2kj/]]}\end{equation}
+两个集合互相包含，唯一的可能性就是两者相等，对于群而言就是同构，从而综合(\ref{Cvegh4lkj/]]})和(\ref{Cveg2kj/]]})给出
+\begin{equation}H^{}_q(X;\mathbb Z)\cong H^{\mathrm{sin}}_q(X;\mathbb Z).\end{equation}
+这样单纯同调和奇异同调在可剖分空间上等价，而奇异同调是更广泛的，因为其并不依赖于空间的可剖分。后续在不引起歧义的情况下，我们默认同调指的是奇异同调，并隐藏奇异记号$\mathrm{sin}$，和单纯同调在记号上一致
+\begin{equation}\mathrm{Notation :} H^{\mathrm{sin}}_q(X;\mathbb Z)= H^{}_q(X;\mathbb Z).\end{equation}
+需要强调的是，上述证明并不涉及链群的同构，因为在重心重分后，讨论奇异链群本身并没有意义，因为单纯映射是针对顶点集定义的，其天然的可以表示边缘算子$\partial^{}_qc$。因此直接计算闭链和边缘链是更简单的选择，因为事实上同调群并不直接依赖于链群。\\
+\\
+关于\textsl{CW}复形的同调，也称为\textbf{胞腔同调 \textit{Cellular Homology}}，这里就不介绍了，有兴趣的读者可以参考\cite{Strwb}的\S\RomanNumeralCaps{5}。这里只简单的提一下，胞腔同调在拓扑上是严格定义的，但其计算依赖奇异同调，而根据上文可以过渡到更具象的单纯同调，因此在物理上胞腔同调并不是一个广泛使用的工具。
+
+\subsubsection{同调群的计算和拓扑性质}
+\noindent 上面我们通过代数结构，较为详细的建立了同调等价和同调群，现在我们进一步的探究其拓扑性质，同时对一些简单的空间计算其同调群。\\
+\\
+紧接着上文对复形间同调的讨论，我们进一步来考察同调间的映射。首先是链的映射，假设两个拓扑空间$X$和$Y$之间的连续映射$f:X\to Y$，引入映射$f^{}_q:S^{}_q(X)\to C^{}_q(Y;\mathbb Z)$，定义为
+\begin{equation}\forall c\qty(:\overrightarrow{\Delta^q}\to X)\in S^{}_q(X),\quad f^{}_q(c)=f\circ c:\overrightarrow{\Delta^q}\to Y\implies C^{}_q(Y;\mathbb Z)=\mathbb Z\qty[\qty{f^{}_q(c)}].\label{ft--*ge0}\end{equation}
+利用自由交换群的线性扩张，我们得到一个同态$f^{}_q:C^{}_q(X;\mathbb Z)\to C^{}_q(Y;\mathbb Z)$，容易证明它和边缘算子构成一个交换图
+\begin{equation}\begin{tikzcd}[row sep=2cm,column sep=2cm] C^{}_q(X;\mathbb Z) \arrow[r,"\partial^{}_q"]\arrow[d,"f^{}_q"]& C^{}_{q-1}(X;\mathbb Z)\arrow[d,"f^{}_{q-1}"]\\C^{}_q(Y;\mathbb Z) \arrow[r,"\partial^{}_q"]&C^{}_{q-1}(X;\mathbb Z) \end{tikzcd}.\end{equation}
+也就是
+\begin{equation}\partial^{}_q\circ f^{}_q=f^{}_{q-1}\circ\partial^{}_q,\quad \forall q\in\mathbb Z.\label{WETGERG}\end{equation}
+从而所有维数同态的集合构成了链复形之间的映射
+\begin{equation}\qty{f^{}_q:C^{}_q(X;\mathbb Z)\to C^{}_q(Y;\mathbb Z)\middle\vert\partial^{}_q f^{}_q=f^{}_{q-1}\partial^{}_q, q\in\mathbb Z}:C^{}_*(X;\mathbb Z)\to C^{}_*(Y;\mathbb Z),\end{equation}
+称为\textbf{链映射}。由于和边缘算子的交换性(\ref{WETGERG})，$X$中的闭链群和边缘链群在链映射下，都被嵌入到$Y$的相应的群中作为子群
+\begin{equation}f^{}_q\qty[Z^{}_q(X;\mathbb Z)]\subset Z^{}_q(Y;\mathbb Z),\quad f^{}_q\qty[B^{}_q(X;\mathbb Z)]\subset B^{}_q(Y;\mathbb Z).\label{Gtrf0.ewrg}\end{equation}
+比如对于闭链$c\in Z^{}_q(X;\mathbb Z)$有
+$$\partial^{}_q\circ f^{}_q(c)=0\implies f^{}_q(c)\in Z^{}_q(Y;\mathbb Z),\quad f^{}_{q-1}\circ\partial^{}_q(c)\equiv0,$$
+因此必然是映射到子群。当然因为\textsl{Poincaré}第零引理依旧成立，同调等价和正规子群的性质不变，因此单纯映射就诱导了同调群的同态
+\begin{equation}f^{}_{*q}:H^{}_q(X;\mathbb Z)\to H^{}_q(Y;\mathbb Z),\quad f^{}_{*q}(\expval{z})=\expval{f^{}_q(z)},\quad \forall\expval{z}\in H^{}_q(X;\mathbb Z).\end{equation}
+需要强调，因为子群性质(\ref{Gtrf0.ewrg})，所以此映射是同态$f^{}_{*q}\qty[H^{}_q(X;\mathbb Z)]\subset H^{}_q(Y;\mathbb Z)$而不是同构。同调群的同态也满足复合性
+\begin{equation}(f\circ b)^{}_{*q}=f^{}_{*q}\circ b^{}_{*q}:H^{}_q(X;\mathbb Z)\to H^{}_q(Y;\mathbb Z)\to H^{}_q(L;\mathbb Z).\end{equation}
+这个请读者自证。当然上述推导对于任意交换系数群$G$的同调群均适用，这里就不再展开了，读者可以自行构造。\\
+\\
+若$f$是同胚，则我们有逆同态$f^{-1}_q:C^{}_q(Y;G)\to C^{}_q(X;G)$，定义为式(\ref{ft--*ge0})的逆
+$$\forall c\in S^{}_q(Y),\quad f^{-1}_q(c)=f^{-1}\circ c:\overrightarrow{\Delta^q}\to X\implies C^{}_q(X;G)=G\qty[\qty{f^{}_q(c)}].$$
+其集合构成了链映射的逆$\qty{f^{-1}_q}:C^{}_*(Y;G)\to C^{}_*(X;G)$，从而得到闭链群和边缘链群的包含关系
+$$f^{-1}_q\qty[Z^{}_q(Y;G)]\subset Z^{}_q(X;G),\quad f^{-1}_q\qty[B^{}_q(Y;G)]\subset B^{}_q(X;G).$$
+结合性质(\ref{Gtrf0.ewrg})可知，此时诱导映射$f^{}_{*q}:H^{}_q(X;G)\to H^{}_q(Y;G)$是同构
+\begin{equation}H^{}_q(X;G)\cong H^{}_q(Y;G),\end{equation}
+同胚下群的同构就是拓扑不变，于是我们就得到
+\begin{center}\emph{$q$维同调群$H^{}_q(X;G)$是拓扑不变量。}\end{center}
+由此我们引入空间$X$关于系数群$G$的$q$维\textbf{\textsl{Betti}数}(\textsl{E.Betti G.}，1871)，定义为$q$维同调群的秩
+\begin{equation}\beta^{}_q(X;G)=\mathrm{rank}H^{}_q(X;G).\end{equation}
+其由式(\ref{we6Hrt})定义，注意是对偶群的维数，为了消除挠子群的影响。根据结论，这是一个拓扑不变量，它引出了拓扑学中最深刻的结论之一。利用\textsl{CW}复形，我们引入空间$X$的\textbf{\textsl{Euler}示性数}
 
 
 
 
 
-\subsubsection{同调群的性质和拓扑含义}
-
+为了计算同调群，我们来讨论相对同调，方便起见这里只考虑单纯同调。
 为此先定义群的\textbf{正合序列 \textit{Exact Sequence}}。取一组群$\qty{A^{}_i}$和一组同态$\qty{f^{}_i}$，指标集$i\in\mathscr I$，定义为一个序列
 \begin{equation}\cdots\to A^{}_{i-1}\xrightarrow{f^{}_{i-1}}A^{}_i\xrightarrow{f^{}_i}A^{}_{i+1}\xrightarrow{f^{}_{i+1}}\cdots.\label{Sd[v56==-}\end{equation}
 若态映射满足\textbf{正合性 \textit{Exactness}}
@@ -14357,14 +14452,14 @@ $$0\to A^{}_1\xrightarrow{f^{}_1}A^{}_2\xrightarrow{f^{}_2}A^{}_3\xrightarrow{f^
 则称为群组的\textbf{短正合序列 \textit{Short Exact Sequence, SES}}。
 
 
-
 \subsubsection{Feynman图的同调}
+
 
 
 
 \subsection{同伦和图的等价性}\label{234200.05}
 \subsubsection{映射和空间的同伦}
-\subsubsection{同伦群和同调的同伦不变}
+\subsubsection{同伦群和同调的同伦不变}\label{23R50.05}
 \subsubsection{映射度和不动点}
 \subsubsection{辫群和扭结}
 \subsubsection{Feynman图的同伦}
@@ -14422,7 +14517,7 @@ $$S^3/U(1)=\qty{(\alpha,\beta)\in[0,\pi]\times[0,2\pi]\middle\vert z^{}_1=\frac{
 现在我们来讨论覆叠空间的拓扑性质，方便起见，下面我们只讨论全局平凡的覆叠空间，普适情形请参考第\ref{twtg40][]}节。从映射开始，引入另一个拓扑空间$X$，以及两个连续映射
 $$f: X\to B,\quad \tilde f: X\to E=B\times F.$$
 我们称$\tilde f$是$f$上的一个\textbf{提升 \textit{Lift}}，若两者满足关系$f=\pi\circ\tilde f$，也即有以下交换图
-\begin{equation}\begin{tikzcd}[scale=2]& E \arrow[d,"\pi"] \\X \arrow[r,"f"] \arrow[ur,"\tilde f"] & B \end{tikzcd}.\end{equation}
+\begin{equation}\begin{tikzcd}[row sep=2cm,column sep=2cm]& E \arrow[d,"\pi"] \\X \arrow[r,"f"] \arrow[ur,"\tilde f"] & B \end{tikzcd}.\end{equation}
 参考\cite{CV25--}的定理$5.1$，这个提升是唯一确定的，称为\textbf{提升唯一性}，若$X$连通，且$\exists x\in X$使得所有提升在该点处的值相等。由此我们可以构造该映射的同伦$H:X\times I\to B$的提升$\tilde H$如下
 \begin{equation}H(x,0)=\pi\circ \tilde f(x)=f(x)\implies \tilde H(x,0)=\tilde f(x),\quad \forall x\in B.\label{fcw4rCV}\end{equation}
 这个提升是唯一确定的，称为\textbf{同伦提升定理}。这一概念的应用是道路类的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条路径。令其起点为$f(0)=b$，则根据唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$，一个直观的证明请参考第\ref{twtg40][]}节。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
@@ -14453,8 +14548,8 @@ $$(f(a))\cdot(g(a))=fg(a),\quad \forall f,g\in \mathscr D(E,\pi)\implies f(a),g(
 \begin{equation}\varPi^{}_1(B,b)\hookrightarrow E\xrightarrow{\pi}B.\end{equation}
 也就是说，这个覆叠空间以底空间的基本群为纤维，称为\textbf{万有覆叠空间 \textit{Universal Covering}}，或也可以称为$\varPi^{}_1(B,b)$—丛。对于连通底空间$B$，万有覆叠保证了
 $$\varPi^{}_1(B)\cong \mathscr D(E,\pi),$$
-这样可以从覆叠变换计算基本群。比如对于$n$维实射影空间$\mathbb{RP}^n=S^n/\mathbb Z^{}_2$，我们知道对于高维球其基本群为是平凡的$\varPi^{}_1\qty(S^n)=\qty{e}$，则$S^{n\ge2}$是$\mathbb{RP}^n$的万有覆盖。其覆叠变换不难看到是$\mathbb Z^{}_2$，从而我们有
-$$\varPi^{}_1\qty(\mathbb{RP}^{n\ge2})=\mathbb Z^{}_2=F(b).$$
+这样可以从覆叠变换计算基本群。比如对于$n$维实射影空间$\mathbb{R}P^n=S^n/\mathbb Z^{}_2$，我们知道对于高维球其基本群为是平凡的$\varPi^{}_1\qty(S^n)=\qty{e}$，则$S^{n\ge2}$是$\mathbb{R}P^n$的万有覆盖。其覆叠变换不难看到是$\mathbb Z^{}_2$，从而我们有
+$$\varPi^{}_1\qty(\mathbb{R}P^{n\ge2})=\mathbb Z^{}_2=F(b).$$
 万有覆叠的万有性在于，它是同一个底空间上最大的覆叠空间。设$\qty(\tilde E,B,\tilde\pi)$是万有覆叠，$(E,B,\pi)$是任意覆叠，则存在覆叠映射$\varpi:\tilde E\to E$使得
 \begin{equation}\pi\circ\varpi=\tilde\pi\end{equation}
 从提升的角度，这说明$\varpi$是万有覆叠的提升，从而任意覆叠都可以从万有覆叠提升得到，因此万有覆叠是虽有覆叠空间的覆叠。从拓扑学的角度，我们只需要计算出万有覆叠，就能得到该底空间的所有覆叠结构，这在连续群的情形下非常有用。
@@ -14599,9 +14694,9 @@ $$i^{}_*\qty(\partial^{}_*\expval{\gamma})=i^{}_*\expval{\eval{\tilde\gamma}_{\p
 \begin{equation}\pi_*:\varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B),\quad \forall n\ge 2.\end{equation}
 这一结果的几何含义是，覆叠映射完全保留了所有高阶同伦信息。以万有覆叠为例，设$\qty(E,B,\pi)$为$B$的万有覆叠，则$\varPi^{}_1(E)=0$，长正合序列退化为
 \begin{equation}0\longrightarrow \varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B)\longrightarrow 0\quad (n\ge 2),\end{equation}
-即$\varPi^{}_n(E)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个空间$E$，其高阶同伦群与$B$完全相同。例如，对于实射影空间$\mathbb{RP}^{n\ge2}$，其万有覆叠为$S^n$，从而
-\begin{equation}\varPi^{}_k(\mathbb{RP}^n)\cong\varPi^{}_k\qty(S^n),\quad \forall k\ge 2.\end{equation}
-特别地，$\varPi^{}_n(\mathbb{RP}^n)\cong\mathbb Z$，当$n$为奇数；或$\mathbb Z^{}_2$，当$n$为偶数，这直接继承自球面。\\
+即$\varPi^{}_n(E)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个空间$E$，其高阶同伦群与$B$完全相同。例如，对于实射影空间$\mathbb{R}P^{n\ge2}$，其万有覆叠为$S^n$，从而
+\begin{equation}\varPi^{}_k(\mathbb{R}P^n)\cong\varPi^{}_k\qty(S^n),\quad \forall k\ge 2.\end{equation}
+特别地，$\varPi^{}_n(\mathbb{R}P^n)\cong\mathbb Z$，当$n$为奇数；或$\mathbb Z^{}_2$，当$n$为偶数，这直接继承自球面。\\
 \\
 前面提到，$\varPi^{}_1(B)\xrightarrow{\partial^{}_*}\varPi^{}_0(F)$确定了闭路类提升的始末点差(\ref{DgbY,,.})，而在选定一个起点$a=\expval{\tilde\gamma}(0)$后，这就给出了单值性。因此边缘映射$\partial^{}_*$和群同态$\rho^{}_a$的角色是十分类似的，我们完全可以将单值性群重新表述为
 \begin{equation}\mathrm{Mono}(E,a)=\partial^{}_*\qty(\varPi^{}_1(B,p))(a)\subset\varPi^{}_0(F)\cong F(p).\end{equation}
