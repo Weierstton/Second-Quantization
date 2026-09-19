@@ -553,7 +553,7 @@ $$\psi=\dfrac{1}{\sqrt{2}}\qty(\psi^{}_{1a}\psi^{}_{2b}-\psi^{}_{1b}\psi^{}_{2a}
 \\
 对比两个定义式不难发现，费米子系统$\kappa=-1$为奇宇称，玻色子系统$\kappa=1$为偶宇称，也就是说两者对称性相反。这一点也就造成了一个现象：若$\psi^{}_1=\psi^{}_2$，则我们必有$\psi\equiv0$，也就是说两个费米子在同一能级中的概率为0。而这也就给占有数划定了一个边界：$0\leq n\leq 1$，但自然条件为$n \in \mathbb N^{*}$，因此易知$n=0/1$，只能取两个值，也就是所谓的不相容原理的由来。\\
 \\
-观察波函数式可以看到，这里的奇宇称可以用置换符号表示为$\kappa=-1=sgn\qty(\sigma\pmqty{1&2\\2&1})$，其本质为奇置换，和行列式的值是一样的。这一点可以很容易的推广至$N$个费米子系统上，记系统集合参数为$\xi$，则其总波函数的奇置换性可以由\textbf{\textsl{Slater}行列式}表示为
+观察波函数式可以看到，这里的奇宇称可以用置换符号表示为$\kappa=-1=\text{sgn}\qty(\sigma\pmqty{1&2\\2&1})$，其本质为奇置换，和行列式的值是一样的。这一点可以很容易的推广至$N$个费米子系统上，记系统集合参数为$\xi$，则其总波函数的奇置换性可以由\textbf{\textsl{Slater}行列式}表示为
 \begin{equation}\psi(\xi)=A\mdet{\psi^{}_1(\xi^{}_1) & \psi^{}_2(\xi^{}_1) & \cdots & \psi^{}_N(\xi^{}_1) \\ \psi^{}_1(\xi^{}_2) & \psi^{}_2(\xi^{}_2) & \cdots & \psi^{}_N(\xi^{}_2) \\ \vdots & \vdots & \ddots & \vdots \\ \psi^{}_1(\xi^{}_N) & \psi^{}_2(\xi^{}_N) & \cdots & \psi^{}_N(\xi^{}_N)}.\label{slater}\end{equation}
 这里的归一化系数为$A=\dfrac{1}{\sqrt{N}}$。容易看到此波函数还是反对称的，并且仍满足不相容原理。\\
 \\
@@ -595,9 +595,9 @@ $$(-1)^{\sum(i+1,k-1)}\longleftrightarrow\sqrt{N^{}_iN^{}_k},$$
 \\
 对于产生算符$\hat{c}^{\dagger}_i$，其在$N^{}_i$处产生一个粒子$\ket{i}$，而原先该能级处是无粒子的，即$\hat{c}^{\dagger}_i\ket{0^{}_i}=A\ket{1^{}_i}$，因此在总波函数中原先这一项是不包含在排列中，而现在就要算进去，最终符号和是否新排列为奇置换有关。我们可以讨论一下这个操作会波及到多少能级：\\
 \\
-以初始排列$\sigma=\pmqty{4&6}$为例，取插入的数是$i=5$，若新排列为$\sigma=\pmqty{4&i&6}$，则依旧是偶置换，所以其符号给出$sgn(\sigma)=1$，但如果新排列为$\sigma=\pmqty{i&4&6}$则为奇置换，$sgn(\sigma)=-1$。但若考虑初始排列$\sigma=\pmqty{3&4&6}$，则$\sigma=\pmqty{i&3&4&6}$是偶置换，而$\sigma=\pmqty{3&i&4&6}$是奇置换。由此可见置换的奇偶性和比插入的这个数小的数的个数有关，具体一点可以表达为$sgn(\sigma)=(-1)^{\sum(1,i-1)}$，这里个数以占有数和表示。\\
+以初始排列$\sigma=\pmqty{4&6}$为例，取插入的数是$i=5$，若新排列为$\sigma=\pmqty{4&i&6}$，则依旧是偶置换，所以其符号给出$\text{sgn}(\sigma)=1$，但如果新排列为$\sigma=\pmqty{i&4&6}$则为奇置换，$\text{sgn}(\sigma)=-1$。但若考虑初始排列$\sigma=\pmqty{3&4&6}$，则$\sigma=\pmqty{i&3&4&6}$是偶置换，而$\sigma=\pmqty{3&i&4&6}$是奇置换。由此可见置换的奇偶性和比插入的这个数小的数的个数有关，具体一点可以表达为$\text{sgn}(\sigma)=(-1)^{\sum(1,i-1)}$，这里个数以占有数和表示。\\
 \\
-类比上述例子，不难看出此处产生粒子的操作和插入数字的效果是一样的，因而我们此处的归一化态常数为$A=sgn(\sigma)=(-1)^{\sum(1,i-1)}$，也就类似$E^{}_0$和$E^{}_i$之间跃迁的归一化系数。而消灭粒子是反向操作，由操作的对称性易知系数一样。因此我们有新的定义式：
+类比上述例子，不难看出此处产生粒子的操作和插入数字的效果是一样的，因而我们此处的归一化态常数为$A=\text{sgn}(\sigma)=(-1)^{\sum(1,i-1)}$，也就类似$E^{}_0$和$E^{}_i$之间跃迁的归一化系数。而消灭粒子是反向操作，由操作的对称性易知系数一样。因此我们有新的定义式：
 \begin{itemize}\item\textbf{产生算符 \textit{Creation}}：$\hat{c}^{\dagger}$\begin{equation}\hat{c}^{\dagger}_i\ket{\ldots,0^{}_i,\ldots\ldots}=(-1)^{\sum(1,i-1)}\ket{\ldots,1^{}_i,\ldots\ldots}.\end{equation}\item\textbf{湮没算符 \textit{Annilation}}：$\hat{c}$\begin{equation}\hat{c}^{}_i\ket{\ldots,1^{}_i,\ldots\ldots}=(-1)^{\sum(1,i-1)}\ket{\ldots,0^{}_i,\ldots\ldots}.\end{equation}\end{itemize}
 它们的矩阵元满足如下的公式：
 \begin{equation}\mel**{0^{}_i}{\hat{c}^{}_i}{1^{}_i}=\mel**{1^{}_i}{\hat{c}^{\dagger}_i}{0^{}_i}=(-1)^{\sum(1,i-1)}.\end{equation}
@@ -4629,7 +4629,7 @@ $$\eta^{}_*h\sim \alpha(T-T^{}_c)\eta^2_*\rightarrow \alpha(T-T^{}_c)\eta^{}_*\s
 \begin{equation}h^{}_t=Q(\eta^{}_t)=\sqrt{\qty(\frac{2\alpha}{3})^3\frac{\abs{T-T^{}_c}^3}{B}}.\label{htt--}\end{equation}
 但是我们知道在$h=0$时，系统遵循自发相变，序参量在$T<T^{}_c$时的取值由式(\ref{jie5678})控制，这里我们同样记为$\pm\eta^{}_0$。从图中看到，$\eta^{}_*=0$同样也是一个解，但这个解通过图\ \ref{gygtunmn}可以看到，其对应的是非稳定态，因此是需要舍弃的。\\
 \\
-其余在$0\leq\abs{h}\leq h^{}_t$中的解可以通过图\ \ref{qwegkljmn}和图\ \ref{gygkljmn}处理，此处为$h=B$。对于外场符号$sgn(h)=\pm1$下我们看到，根的符号若相反$sgn(\eta^{}_*)=\mp1$，则它们对应的是极小值，因此是\textbf{亚稳态 \textit{Meta-stability}}，记为$\eta^{me}_*$。只有符号相同$sgn(\eta^{}_*)=\pm1$才是最小值的稳定态，记为$\eta^{st}_*$。这里以图 \ref{gN665D-*-*/HFB}给出$h>0$时的演化过程
+其余在$0\leq\abs{h}\leq h^{}_t$中的解可以通过图\ \ref{qwegkljmn}和图\ \ref{gygkljmn}处理，此处为$h=B$。对于外场符号$\text{sgn}(h)=\pm1$下我们看到，根的符号若相反$\text{sgn}(\eta^{}_*)=\mp1$，则它们对应的是极小值，因此是\textbf{亚稳态 \textit{Meta-stability}}，记为$\eta^{me}_*$。只有符号相同$\text{sgn}(\eta^{}_*)=\pm1$才是最小值的稳定态，记为$\eta^{st}_*$。这里以图 \ref{gN665D-*-*/HFB}给出$h>0$时的演化过程
 \begin{center}\tikz{\begin{axis}[xmin=-5.5,xmax=5.5,ymin=-7,ymax=3,axis lines=center,axis on top=false,restrict y to domain=-20:30,ylabel=$G^{}_{mf}{(h>0)}$,xlabel=$\eta$,ticks=none,height=0.45\textwidth]\addplot[draw=blue!50!green,thin,domain=-5:5,samples=200]{-1-.5*\x-.5*\x^2+\x^4/14)}node[blue!50!green,left=3,scale=1,below]at(axis cs:-1.5,-1){$h=0.5$};\addplot[draw=mydarkred,thin,domain=-5:5,samples=200]{-1-\x-.5*\x^2+\x^4/14)}node[mydarkred,left=10,scale=1,below]at(axis cs:3,-4){$h=1$};\addplot[draw=red!50!green,thin,domain=-5:5,samples=200]{-1-2*\x-.5*\x^2+\x^4/14)}node[red!50!green,left=3,scale=1,below]at(axis cs:-.6,2){$h=2$};\draw[dotted,blue,thick](axis cs:-1.6,-1.02)--(axis cs:-1.6,0)node[blue,scale=1,above]{$\eta^{me}_*$};\end{axis}}\captionof{figure}{$T<T^{}_c$时\textsl{Landau}展开对于不同$h>0$的形式}\label{gN665D-*-*/HFB}\end{center}
 可以看到，随着外场$h$的增大，稳态解$\eta^{st}_*\to+\infty$，而亚稳态解$\eta^{me}_*\rightarrow0$并逐渐消失。不难想到这里的亚稳态有两个边界：$h=0$时取到$-\eta^{}_0$，以及完全消失等价于亚稳态和非稳态的临界，也就是$-\eta^{}_t$。相应的$h<0$的情况就不展开了，只要取对称即可。所以在外场下$T<T^{}_c$时的根分为三个部分：
 \begin{enumerate}[\quad1、]\item 在区间$\displaystyle	 h\in \qty(-\infty,0\right]\bigcup\left[0,\infty)$内，临界序参量取到$\displaystyle	\eta^{}_*\in \qty(-\infty,-\eta^{}_0\right]\bigcup\left[\eta^{}_0,\infty)$，对应系统的稳定态；\item 在区间$\displaystyle h\in \qty[0^+,h^{}_t]\bigcup\qty[-h^{}_t,0^-]$内，临界序参量取到$\displaystyle	\eta^{}_*\in \qty[-\eta^{}_0,-\eta^{}_t]\bigcup\qty[\eta^{}_t,\eta^{}_0]$，对应系统的亚稳定态；\item 在区间$\displaystyle	 h\in \qty[-h^{}_t,h^{}_t]$内，临界序参量取到$\displaystyle	\eta^{}_*\in \qty[-\eta^{}_t,\eta^{}_t]$，对应系统的非稳定态。\end{enumerate}
@@ -5371,7 +5371,7 @@ $$\braket{\vb{k}\mu}{\vb{k}\nu}=\delta^{}_{\mu\nu}.$$
 于是我们看到，在\textsl{Bloch}定理下，能量由两个量子化控制：动量和分支，并且不同分支对应不同的能量。当然因为在动量表象中能量的主要指标依旧是动量，所以不同分支划分了不同的能级区域，在同一个区域中能级由动量划分。这样的划分称为\textbf{能带 \textit{Energy Band}}，是周期势能的直接结果，可以从量子力学导出，这里不展开。\\
 \\
 当然我们需要强调，在每一个能带中能量是按\textsl{RL}量子化的，而\textsl{RL}是\textsl{DL}的对偶，所以事实上这里的动量一定是准动量，其和非介质中粒子的动量的性质是不同的。晶格中的能带就构成了声子的基本动力学背景，当然这一性质适用的场景远不止固体。
-\subsubsection{相互作用的二次量子化计算}
+\subsubsection{相互作用的二次量子化计算}\label{w4rSG44=}
 \noindent 这里我们来进一步分析此势能。由于势能的周期性，我们必然得到势能是偶函数，因为前文中的原点选择是任意的格点，而周期性意味着原点的选择不会影响到势能的形式，这是偶函数的性质。于是在单粒子势能关于相对位移的展开式中，只能出现偶数次项，即
 $$U(\vb{r})=U(\vb{0})+\frac{1}{2}\partial^{}_a\partial^{}_bU(\vb{0})x^ax^b+\frac{1}{4!}\partial^{}_a\partial^{}_b\partial^{}_c\partial^{}_dU(\vb{0})x^ax^bx^cx^d+\cdots,$$
 其中一次项的消失是平衡位置的定义，其余奇数次项的消失目前仅是偶函数的要求。现在我们具体分析偶数次项，精确到四次项给出方程
@@ -6117,7 +6117,7 @@ $$\rho^{}_s\propto\abs{t}^{\nu}.$$
 \\
 当然上述算符的对角化只是其单独的结果，对于系统我们更希望的是将其看作对于能量的微扰。在玻色子系统中，我们使用\textsl{Bogoliubov}变换计算了玻色子的能量关于碰撞的微扰，这里我们也采用同样的方法。不失一般性的，我们用色散关系$E^{}_{\vb{k}}=\omega(\vb{k})$表示单个费米子的能量，对势能$U$带入式(\ref{sgsdg})，则系统的总\textit{Hamiltonian}算符写为
 \begin{equation}\hat{H}=\sum\limits_{\vb{k},\sigma}\omega(\vb{k})\hat{a}^{\dagger}_{\vb{k}\sigma}\hat{a}^{}_{\vb{k}\sigma}+\frac{U^{}_0}{2V}\sum\limits_{\forall\vb{k},\sigma}\hat{a}^{\dagger}_{\vb{k}'_1\sigma'_1}\hat{a}^{\dagger}_{\vb{k}'_2\sigma'_2}\hat{a}^{}_{\vb{k}^{}_2\sigma^{}_2}\hat{a}^{}_{\vb{k}^{}_1\sigma^{}_1},\end{equation}
-其中$\hat{a}$依旧代表真实费米子的二次量子化算符。当然我们之前已经证明，只有自旋相反的两个费米子才能在慢速碰撞极限下散射，因此我们可以化简该式，按书上写为
+其中$\hat{a}$依旧代表真实费米子的二次量子化算符。当然我们在第\ref{w4rSG44=}节中已经证明，只有自旋相反的两个费米子才能在慢速碰撞极限下散射，因此我们可以化简该式，按书上写为
 \begin{equation}\hat{H}=\sum\limits_{\vb{k},\sigma}\omega(\vb{k})\hat{a}^{\dagger}_{\vb{k}\sigma}\hat{a}^{}_{\vb{k}\sigma}+\frac{U^{}_0}{V}\sum\limits_{\forall\vb{k}}\hat{a}^{\dagger}_{\vb{k}'_1,+}\hat{a}^{\dagger}_{\vb{k}'_2,-}\hat{a}^{}_{\vb{k}^{}_2,-}\hat{a}^{}_{\vb{k}^{}_1,+}.\end{equation}
 而我们知道对于费米子而言，在绝对零度时由于不相容性导致$\mu(T=0)\neq0$，在统计物理中我们给出其为系统的费米能$\mu(T=0)=E^{}_F=\omega(\vb{k}^{}_F)$，所以费米子系统的对角化和玻色子系统的对角化必然是有所不同的。为了考虑到这个现象，我们用有效\textit{Hamiltonian}算符计算能量，其定义式(\ref{dingyiii})在这里写为
 \begin{equation}\hat{H}^{\textit{eff}}=\hat{H}-\mu\hat{N}=\hat{H}-\mu\sum\limits_{\vb{k},\sigma}\hat{a}^{\dagger}_{\vb{k}\sigma}\hat{a}^{}_{\vb{k}\sigma}.\end{equation}
@@ -6213,38 +6213,36 @@ $$E^{}_f=E^{}_i-\abs{U^{}_0}<E^{}_i\implies U(r)\sim -\frac{\alpha}{r}.$$
 \begin{equation}\frac{\abs{U^{}_0}}{4\pi^2}\bigintsss\frac{k^2\dd\vb{k}}{E(\vb{k})}=1,\end{equation}
 这样能确保方程有解。关于这个积分方程的解和旋子的处理类似，对于旋子我们将积分取$k^2=k^2_0$得到结果(\ref{hsadf--f})，这里也是类似的操作，只不过是取$k^2=k^2_F$并变为对$\phi$的积分，最后我们得到
 \begin{equation}\Delta^{}_0=\tilde{\sigma}\exp(-\frac{2\pi^2}{m\abs{U^{}_0}k^{}_F})=\tilde{\sigma}\exp(-\frac{2}{\abs{U^{}_0}\upsilon^{}_F}),\label{wcnn?/-}\end{equation}
-其中$\tilde{\sigma}\sim\mu$是截断能量，$\upsilon^{}_F=\dfrac{mk^{}_F}{\pi^2}$是\textsl{Fermi}面上的态密度。可见基态的能隙呈指数性质，这和旋子的结论是类似的。当然对于\textsl{Cooper}对而言，每个粒子都贡献了一个能隙$\Delta$，所以\textsl{Cooper}对的总能隙是$2\Delta$，相当于是\textsl{Cooper}对的束缚能。并且由于近似$\tilde{\sigma}\sim\mu$，所以不难得出
-$$\Delta^{}_0\sim\mu\exp(-2)\ll\mu,$$
-也就是此束缚能是一个小量，侧面证明了\textsl{Cooper}对和能隙无关的事实。\\
+其中$\tilde{\sigma}\sim\mu$是截断能量，$\upsilon^{}_F=\dfrac{mk^{}_F}{\pi^2}$是\textsl{Fermi}面上的态密度。可见基态的能隙呈指数性质，这和旋子的结论是类似的。当然对于\textsl{Cooper}对而言，每个粒子都贡献了一个能隙$\Delta$，所以\textsl{Cooper}对的总能隙是$2\Delta$，相当于是\textsl{Cooper}对的束缚能。需要强调的是能隙是一个宏观统计量，实际上单个\textsl{Cooper}对的束缚能是很小的，读者可以自行计算。\\
 \\
-基于\textsl{Cooper}对这一结论，让我们重新回顾有效\textit{Hamiltonian}算符(\ref{goddamn})。如果我们将\textsl{Cooper}对等效为一个费米子$\mathfrak{F}$，则我们可以将拥有相反动量和自旋的占有数算符做对应，使它们能给出$\mathfrak{F}$的占有数算符。也就是说，我们可以将式(\ref{goddamn})写为
+基于\textsl{Cooper}对这一结论，让我们重新回顾有效\textit{Hamiltonian}算符(\ref{goddamn})。因为自旋相反，因此如果我们将\textsl{Cooper}对等效为一个零自旋玻色子$\mathfrak{F}$，则我们可以将拥有相反动量和自旋的占有数算符做对应，使它们能给出$\mathfrak{F}$的占有数算符。也就是说，我们可以将式(\ref{goddamn})写为
 $$\hat{H}^{\textit{eff}}=\sum\limits_{\vb{k},\sigma}\phi(\vb{k})\hat{a}^{\dagger}_{\vb{k}\sigma}\hat{a}^{}_{\vb{k}\sigma}+\frac{U^{}_0}{V}\sum\limits_{\forall\vb{k}}\qty(\hat{a}^{\dagger}_{\vb{k}',+}\hat{a}^{\dagger}_{-\vb{k}',-})\qty(\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}),$$
-其中算符$\hat{a}^{}_{-\vb{k},-}\longleftrightarrow\hat{a}^{}_{\vb{k},+}$相互对应，这样我们就可以类比声子使用平均场近似。当然由于不相容原理的限制，我们无法取基态为类似式(\ref{shiyanss})一样的数值并取微扰，但是依旧可以取其均值。关于费米子的平均场我们可以参考\textsl{Ising}模型的涨落平均，其中我们对磁矩$\vb{m}$按均值展开为式(\ref{dabus54i})，这里也是类似的，只不过磁矩变为$\mathfrak{F}$的算符，定义相应均值为
-\begin{equation}\mathscr B=\frac{1}{V}\sum_{\vb{k}}\expval{\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}}=\sum_{\vb{k}}\expval{\hat{a}^{\dagger}_{-\vb{k},-}\hat{a}^{\dagger}_{\vb{k},+}}\qty(=\expval{\vb{m}}).\label{fhbcbi}\end{equation}
-这里取的是单位体积的均值，此时自由费米气体的平均场近似表述为
-\begin{equation}\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}=\mathscr B\hat{\vb{I}}+\delta\hat{\mathscr B}^{}_{\vb{k}},\quad\hat{a}^{\dagger}_{-\vb{k},-}\hat{a}^{\dagger}_{\vb{k},+}=\mathscr B\hat{\vb{I}}+\delta\hat{\mathscr B}^{\dagger}_{\vb{k}},\end{equation}
-带入式(\ref{goddamn})给出相互作用耦合项的平均场形式
-$$\begin{aligned}\qty(\hat{a}^{\dagger}_{-\vb{k},-}\hat{a}^{\dagger}_{\vb{k},+})\qty(\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+})&=\qty(\mathscr B+\delta\hat{\mathscr B}^{\dagger}_{\vb{k}'})\qty(\mathscr B+\delta\hat{\mathscr B}^{}_{\vb{k}})\\&=\qty(\mathscr B^2+\mathscr B\qty(\delta\hat{\mathscr B}^{}_{\vb{k}})+\qty(\delta\hat{\mathscr B}^{\dagger}_{\vb{k}'})\mathscr B+o\qty(\qty(\delta\hat{\mathscr B}^{\dagger}_{\vb{k}'})\qty(\delta\hat{\mathscr B}^{}_{\vb{k}}))).\end{aligned}$$
-关于涨落乘积项，因为在形式上$\mathscr B=\sum\limits_{\vb{k}}\expval{N^{}_{\vb{k}}(\mathfrak{F})}$是等效费米子$\mathfrak{F}$的平均粒子数，所以必然满足相对涨落定理，因此可以忽略。类似于涨落平均的处理，我们将涨落用$\mathscr B$和$\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}$表示，就能得到耦合项的线性平均场近似式
-\begin{equation}\qty(\hat{a}^{\dagger}_{-\vb{k},-}\hat{a}^{\dagger}_{\vb{k},+})\qty(\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+})=\mathscr B\qty(\hat{a}^{\dagger}_{\vb{k}',+}\hat{a}^{\dagger}_{-\vb{k}',-}+\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+})-\mathscr B^2\qty(=\expval{\sigma^{}_i\sigma^{}_j}).\end{equation}
-不难发现上式在形式上和式(\ref{dabus53i})是完全相同的。于是和\textsl{Heisenberg}能的线性近似式(\ref{CAOhsg////dfh})一样，将上述近似带入式(\ref{goddamn})，我们也得到有效\textit{Hamiltonian}算符的线性近似式为
+其中算符$\hat{a}^{}_{-\vb{k},-}\longleftrightarrow\hat{a}^{}_{\vb{k},+}$相互对应，这样我们就可以类比声子使用平均场近似。引入记号
+\begin{equation}\hat{b}^{\dagger}_{\vb{k}}=\hat{a}^{\dagger}_{\vb{k},+}\hat{a}^{\dagger}_{-\vb{k},-},\quad \hat{b}^{}_{\vb{k}}=\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}.\end{equation}
+作为玻色子$\mathfrak{F}$的占有数算符，则不难计算其对易关系
+$$\comm{\hat{b}^{}_{\vb{k}}}{\hat{b}^{}_{\vb{k}'}}=\comm{\hat{b}^{\dagger}_{\vb{k}}}{\hat{b}^{\dagger}_{\vb{k}'}}=0,\quad \comm{\hat{b}^{}_{\vb{k}}}{\hat{b}^{\dagger}_{\vb{k}'}}=\delta(\vb{k}-\vb{k}')\qty(1-\expval{n^{}_{\vb{k},+}}-\expval{n^{}_{-\vb{k},-}}).$$
+也就是说它并不是完全遵守玻色对易，因此只能是等效粒子。由于不相容原理的限制，我们无法取基态为类似式(\ref{shiyanss})一样的数值并取微扰，但依旧可以取其均值。具体思路可以参考\textsl{Ising}模型的涨落平均，其中我们对磁矩$\vb{m}$按均值展开为式(\ref{dabus54i})，这里是将磁矩变为$\mathfrak{F}$的算符，定义自由费米气体的平均场为
+\begin{equation}\hat{b}^{}_{\vb{k}}=\mathscr B(T)\hat{\vb{I}}+\delta\hat{\mathscr B}^{}_{\vb{k}},\quad\hat{b}^{\dagger}_{\vb{k}}=\mathscr B(T)\hat{\vb{I}}+\delta\hat{\mathscr B}^{\dagger}_{\vb{k}},\end{equation}
+这里的$\mathscr B(T)$是这两个算符的量子和系综均值，其和$\mathfrak{F}$的动量无关，和温度的关系来自系综均值，暂时不明确具体形式，量级估计可以参考式(\ref{fgDV,.,g})。带入式(\ref{goddamn})，我们得到相互作用耦合项的平均场形式
+$$\begin{aligned}\hat{b}^{\dagger}_{\vb{k}'}\hat{b}^{}_{\vb{k}}&=\qty(\mathscr B+\delta\hat{\mathscr B}^{\dagger}_{\vb{k}'})\qty(\mathscr B+\delta\hat{\mathscr B}^{}_{\vb{k}})\\&=\mathscr B^2+\mathscr B\qty(\delta\hat{\mathscr B}^{}_{\vb{k}})+\qty(\delta\hat{\mathscr B}^{\dagger}_{\vb{k}'})\mathscr B+o\qty(\qty(\delta\hat{\mathscr B}^{\dagger}_{\vb{k}'})\qty(\delta\hat{\mathscr B}^{}_{\vb{k}})).\end{aligned}$$
+关于涨落乘积项，我们这里假设其满足相对涨落定理，因此可以忽略。类似于涨落平均的处理，我们将涨落用$\mathscr B$和$\qty{\hat{b}^{}_{\vb{k}},\hat{b}^{\dagger}_{\vb{k}}}$表示，就能得到耦合项的线性平均场近似式
+\begin{equation}\hat{b}^{\dagger}_{\vb{k}'}\hat{b}^{}_{\vb{k}}=\mathscr B\qty(\hat{b}^{\dagger}_{\vb{k}'}+\hat{b}^{}_{\vb{k}})-\mathscr B^2\qty(=\expval{\sigma^{}_i\sigma^{}_j}).\end{equation}
+不难发现上式在形式上和式(\ref{dabus53i})是完全相同的，于是和\textsl{Heisenberg}能的线性近似式(\ref{CAOhsg////dfh})一样，将上述近似带入式(\ref{goddamn})并回到算符$\qty{\hat{a},\hat{a}^\dagger}$，我们得到有效\textit{Hamiltonian}算符的线性近似式为
 \begin{equation}\hat{H}^{\textit{eff}}=\sum\limits_{\vb{k},\sigma}\phi(\vb{k})\hat{a}^{\dagger}_{\vb{k}\sigma}\hat{a}^{}_{\vb{k}\sigma}-\mathscr B\frac{\abs{U^{}_0}}{V}\sum\limits_{\forall\vb{k}}\qty(\hat{a}^{\dagger}_{\vb{k}',+}\hat{a}^{\dagger}_{-\vb{k}',-}+\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}-\mathscr B).\end{equation}
 注意对于\textsl{Cooper}对我们证明了$U^{}_0<0$。这是一个明显的二次型，于是我们使用正规幺正的\textsl{Nambu}形式，按照式(\ref{namnpp3})给出\textsl{Bogoliubov}变换
 $$\pmqty{\hat{c}^{}_{\vb{k},+}\\ \hat{c}^{\dagger}_{-\vb{k},-}}=\pmqty{u^{}_{\vb{k}}&-v^{}_{\vb{k}}\\ v^*_{\vb{k}}&u^*_{\vb{k}}}\pmqty{\hat{a}^{}_{\vb{k},+}\\ \hat{a}^{\dagger}_{-\vb{k},-}},$$
 则在\textsl{Nambu}基$\Psi^{}_{\vb{k}}=\begin{pmatrix}\hat{a}^{}_{\vb{k},+}\\ \hat{a}^{\dagger}_{-\vb{k},-}\end{pmatrix}$下，有效\textit{Hamiltonian}算符的二次型给出
-\begin{equation}\hat{H}^{\textit{eff}}=\sum_{\vb{k}}\Psi^{\dagger}_{\vb{k}}\tilde{\vb{Y}}\Psi^{}_{\vb{k}}+\mathscr B^2\frac{\abs{U^{}_0}}{V},\quad \tilde{\vb{Y}}=\pmqty{\phi(\vb{k})&-\mathscr B\dfrac{\abs{U^{}_0}}{V}\\ -\mathscr B\dfrac{\abs{U^{}_0}}{V}&-\phi(\vb{k}) }.\end{equation}
+\begin{equation}\hat{H}^{\textit{eff}}=\sum_{\vb{k}}\Psi^{\dagger}_{\vb{k}}\tilde{\vb{Y}}\Psi^{}_{\vb{k}}+\sum_{\vb{k}}\mathscr B^2\frac{\abs{U^{}_0}}{V},\quad \tilde{\vb{Y}}=\pmqty{\phi(\vb{k})&-\mathscr B\dfrac{\abs{U^{}_0}}{V}\\ -\mathscr B\dfrac{\abs{U^{}_0}}{V}&-\phi(\vb{k})}.\end{equation}
 我们知道，\textsl{Bogoliubov}方程就是能量矩阵$\tilde{\vb{Y}}$的对角化方程，能谱$E(\vb{k})$则是$\tilde{\vb{Y}}$的双重简并主值，于是我们得到
 \begin{equation}E(\vb{k})=\sqrt{\phi(\vb{k})^2+\qty(\mathscr B\frac{\abs{U^{}_0}}{V})^2}.\end{equation}
 对比已知的能谱(\ref{nengppo><))})我们立马看到，能隙$\Delta$在平均场下写为
-\begin{equation}\Delta=\mathscr B\frac{\abs{U^{}_0}}{V}=\frac{\abs{U^{}_0}}{V^2}\sum_{\vb{k}}\expval{\hat{a}^{}_{-\vb{k},-}\hat{a}^{}_{\vb{k},+}}.\label{dufuhhcx|}\end{equation}
-其余的内容都完全相同，需要强调的是关于$\Delta$的归一化方程应使用变换替换$\hat{c}^{}_{-\vb{k},-}\hat{c}^{}_{\vb{k},+}$后，在准粒子的占有数表象中计算，这里就不再展开了。注意到均值$\mathscr B$类似密度矩阵，所以我们可以在平均场下确定束缚对满足的空间约束。对式(\ref{dufuhhcx|})带入$\mathfrak{F}$的平均占有数$\mathscr B\approx\expval{N^{}_{\vb{k}}(\mathfrak{F})}$，我们近似得到积分
-$$\Delta(r)=\frac{\abs{U^{}_0}}{V(2\pi)^3}\int\expval{N^{}_{\vb{k}}(\mathfrak{F})}\exp(2i\vb{k}\cdot\vb{r})\dd^3\vb{k}=\frac{\abs{U^{}_0}}{V(2\pi)^3}\int\frac{\exp(2i\vb{k}\cdot\vb{r})}{\exp(\beta k^2/2m^*)+1}\dd^3\vb{k},$$
-其中相位系数是取近似值$\expval{N^{}_{\vb{k}}(\mathfrak{F})}$时，通过\textsl{Paserval}定理得到，$m^*$是等效费米子$\mathfrak{F}$的质量。鉴于这里是慢速碰撞$k\ll1$，所以我们对分母展开到一阶得到
-$$\Delta(r)=\frac{\abs{U^{}_0}}{V(2\pi)^3}\int\frac{\exp(2i\vb{k}\cdot\vb{r})}{2+\beta k^2/2m^*}\dd^3\vb{k}=\frac{2m^*\abs{U^{}_0}}{V(2\pi)^3}\int\frac{\exp(i\vb{k}\cdot(2\vb{r}))}{4m^*T+ k^2}\dd^3\vb{k}.$$
-可以看到这个积分和式(\ref{gangtt22n})是类似的，此处“关联半径”有$\xi^{-2}=4m^*T$。我们可以立即从式(\ref{MacDo})得到三维的结果为
-\begin{equation}\Delta(r,T)=\frac{m^*\abs{U^{}_0}}{2\pi Vr}\exp(2r\sqrt{4m^*T}).\end{equation}
-根据前文中的定义$\Delta(T=0)=\Delta^{}_0$，于是我们从式(\ref{wcnn?/-})得到\textsl{Cooper}对在空间上约束量级为
-\begin{equation}l^{}_0=\frac{m^*\abs{U^{}_0}}{2\pi V\Delta^{}_0}\sim \frac{1}{k^{}_F}\exp(-\frac{2\pi^2}{\abs{U^{}_0}mk^{}_F}).\label{xaigga}\end{equation}
+\begin{equation}\Delta(T)=\mathscr B(T)\frac{\abs{U^{}_0}}{V}.\label{dufuhhcx|}\end{equation}
+其余的内容都完全相同，需要强调的是关于$\Delta$的归一化方程应使用变换替换$\hat{c}^{}_{-\vb{k},-}\hat{c}^{}_{\vb{k},+}$后，在准粒子的占有数表象中计算，这里就不再展开了。同时注意到此时均值能量为
+$$E^{}_{mean}(T)=\sum_{\vb{k}}\mathscr B^2(T)\dfrac{\abs{U^{}_0}}{V},$$
+这应当是一个收敛量，并且根据定义$\mathscr B$和动量无关，因此对于低温极限在量级上我们选择
+\begin{equation}\lim_{T\to 0}\mathscr B^2\sim \frac{1}{l^2(T)k^2_F}\implies \mathscr B\sim \frac{1}{l(T)k^{}_F}.\label{fgDV,.,g}\end{equation}
+其中$l(T)$是一个和温度有关的距离参数，是为了消除$\mathscr B$对动量的依赖性。这样我们就可以在平均场下确定束缚对满足的空间约束，根据前文中的定义$\Delta(T=0)=\Delta^{}_0$，在低温下$\abs{U^{}_0}/V\sim \tilde{\sigma}$为截断能量，于是我们从式(\ref{wcnn?/-})得到\textsl{Cooper}对在空间上约束量级为
+\begin{equation}l^{}_0=l(T=0)=\frac{\abs{U^{}_0}}{V}\frac{1}{k^{}_F\Delta^{}_0}\sim \frac{1}{k^{}_F}\exp(\frac{2}{\abs{U^{}_0}\upsilon^{}_F}).\label{xaigga}\end{equation}
 这个距离称为\textbf{相干距离 \textit{Coherent Distance}}，于是我们得到
 \begin{center}\emph{一对具有对等相反动量和自旋的费米子能构成\textsl{Cooper}对当且当$r=\abs{\vb{r}^{}_1-\vb{r}^{}_2}\sim l^{}_0$。}\end{center}
 所以\textsl{Cooper}对的形成有空间约束，并且由于$l^{}_0$一般而言远大于原子间距，因此实际上这个约束还是比较强的。\\
@@ -13492,7 +13490,7 @@ $$\mathfrak S^{(2)}_{fi}\sim-\frac{e^2}{2}\gamma^\mu\gamma^\nu\int\dd\Omega^2 D^
 \begin{equation}\mathfrak S^{(2)}_{fi}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.7](o){};\vertex[below left=1.5cm of o](a);\vertex[below right=1.5cm of o](b);\vertex[dot,scale=.7,above=1.5cm of o](c){};\vertex[above left=1.5cm of c](d);\vertex[above right=1.5cm of c](e);\diagram*{(a)--[fermion,momentum=$p^{}_{i1}$](o)--[fermion,momentum=$p^{}_{f3}$](b),(o)--[photon,momentum=$q$](c),(e)--[fermion,momentum=$p^{}_{f4}$](c)--[fermion,momentum=$p^{}_{i2}$](d)};\end{feynman}}\quad+\cdots.\end{equation}
 读者可以根据\textsl{QED}的动量\textsl{Feynman}规则，自行思考此图对应的散射过程，并根据动量守恒判断其交叉道和相应的\textsl{Mandelstam}不变量，其定义参考第\ref{Tadfi///}节末尾。\\
 \\
-我们不妨花一点时间，单独来分析这个动量图。首先它是一个标准的二级修正图，其包含两个顶点。其次从复形的角度，这是一个由五个一维单形构成的单纯复形，并且在任意两个点之间只存在唯一的一条通路，这在拓扑学中称为树，因此这个图也称为\textbf{树状图}。记虚光子的动量为$q$，则动量守恒指出
+我们不妨花一点时间，单独来分析这个动量图。首先它是一个标准的二级修正图，其包含两个顶点。其次从复形的角度，这是一个由五个一维单形构成的单纯复形，并且在任意两个点之间只存在唯一的一条通路。这在拓扑学中称为树，具体定义请参考附录\ref{GD35-**84}节，因此这个图也称为\textbf{树状图}。记虚光子的动量为$q$，则动量守恒指出
 \begin{equation}p^{}_{f3}-p^{}_{i1}=q=p^{}_{i2}-p^{}_{f4}.\end{equation}
 同时由动量规则不难看到，$p^{}_{i1}$和$p^{}_{f3}$对应粒子即电子$e^-$，$p^{}_{i2}$和$p^{}_{f4}$对应反粒子即正电子$e^+$，在每个顶点处总电荷$Q=0$，符合电荷守恒律。于是我们总结这个图的两个性质：
 \begin{itemize}\item 其\textsl{Mandelstam}不变量为$\qty(p^{}_{i1}-p^{}_{f3})^2=q^2=t$，这是一个$t$道图；\item 它的入射和出射粒子均为$e^-+e^+$，反应式为\begin{equation}e^-+e^+\to e^-+e^+.\end{equation}这称为正负电子对的\textbf{\textsl{Bhabha}散射}(\textsl{H.J.Bhabha}，1936，印度塔塔基础研究院创始人)，它当然不止有$t$道图；\item 若我们将$p^{}_{i2}$和$p^{}_{f4}$变向，则它们也对应电子$e^-$，反应式为\begin{equation}e^-+e^-\to e^-+e^-.\end{equation}这称为电子对的\textbf{\textsl{Møller}散射}(\textsl{C.Møller},1932)，它现在对应的仍旧是$t$道图，当然也不止$t$道图。\end{itemize}
@@ -14047,7 +14045,7 @@ $$\left.\begin{aligned}&a^{0\dt{\gamma}}_{\ \alpha\beta}=p_{\alpha}^{\ \dt{\gamm
 \subsubsection{任意自旋的一般情况}\label{889847//*}
 \noindent 为了建立带有相互作用的任意自旋粒子理论，人们再次首先寻找一个变分原理，从中可以推导出(\cite{BGF1})中的方程。然后可以通过适当修改拉格朗日函数来引入相互作用。例如，电磁场的影响可以通过将$-i\pdv*{x^{}_k}$ 替换为$\varPi^{}_k$来描述。在推广我们已用于描述自旋值$2$和$3/2$的方法时，我们必须再次引入辅助场，它们在无外力情况下作为场方程的结果而消失。为了说明该方法，讨论整数自旋的情况就足够了。\\
 \\
-我们从秩为$f$的张量$A^{f}_{ik\ldots l}$出发，该张量的所有指标都是对称的，并且其迹$A^f_{ii\ldots l}$为零 (无迹全对称)。我们进一步引入秩为 $f-2,\ldots,s,\ldots,1,0$的辅助场，这些场同样都是全对称且无迹；可能有多个具有相同秩的场，我们将用一个索引$t$来区分它们。因此，出现在拉格朗日函数中的一般场我们将表示为 $A^{st}_{ik\ldots l}$，其中 $i,k,\ldots,l$是张量指标，场关于这些指标是对称的，而$t$用于区分秩为$s$的不同场。索引$s$取值$0,1,\ldots,f-2,f$。通常，与一个秩为$s$的场$A^s$相关联的有$s+1$种粒子，即自旋为$s,s-1,\ldots,1,0$的粒子。拉格朗日量必须如此构造，以至于最终只出现自旋为$f$的粒子。或者我们可以说，作为场方程的结果，所有对应于自旋$f-1,\ldots,1,0$的粒子的场都消失。对于$L$我们选择如下形式：
+我们从秩为$f$的张量$A^f_{ik\ldots l}$出发，该张量的所有指标都是对称的，并且其迹$A^f_{ii\ldots l}$为零 (无迹全对称)。我们进一步引入秩为 $f-2,\ldots,s,\ldots,1,0$的辅助场，这些场同样都是全对称且无迹；可能有多个具有相同秩的场，我们将用一个索引$t$来区分它们。因此，出现在拉格朗日函数中的一般场我们将表示为 $A^{st}_{ik\ldots l}$，其中 $i,k,\ldots,l$是张量指标，场关于这些指标是对称的，而$t$用于区分秩为$s$的不同场。索引$s$取值$0,1,\ldots,f-2,f$。通常，与一个秩为$s$的场$A^s$相关联的有$s+1$种粒子，即自旋为$s,s-1,\ldots,1,0$的粒子。拉格朗日量必须如此构造，以至于最终只出现自旋为$f$的粒子。或者我们可以说，作为场方程的结果，所有对应于自旋$f-1,\ldots,1,0$的粒子的场都消失。对于$L$我们选择如下形式：
 \begin{equation}\begin{aligned}L=\sum_s\sum_t\Biggl[\kappa^2A^{st}_{ik\ldots}A^{st}_{ik\ldots}+a_1^{st}\pdv{A^{st}_{ik\ldots}}{x^{}_l}\pdv{A^{st}_{ik\ldots}}{x^{}_l}+a_2^{st}\pdv{A^{s+1,t}_{ik\ldots}}{x^{}_i}\pdv{A^{s+1,t}_{lk\ldots}}{x^{}_l}& \\+\sum_r\qty{a_3^{s,tr}\pdv{A^{st}_{ik\ldots}}{x^{}_l}A^{s+1,r}_{il\ldots}+a_4^{s,tr}\pdv{A^{st}_{il\ldots}}{x^{}_k}\pdv{A^{s+2,r}_{mikl\ldots}}{x^{}_m}}\Biggr]&,\end{aligned}\end{equation}
 其中$a_1^{st},a_2^{st} a_3^{st,r},a_4^{st,r}$是常数，必须选择这些常数使得自旋为$s$的粒子不出现。为了获得必要数量的常数，我们引入辅助场，其数量由下表给出：
 \begin{center}\begin{tabular}{|c|c|c|c|}\hline$s$&秩为$s$的场数量&需要移除的自旋$s$粒子的数量&可供使用的常数数量\\ \hline$f-1$&0&1&1\\$f-2$&1&2&2\\$f-3$&1&3& 3\\$f-4$&1&4&4\\$f-5$&2&6&7\\$f-6$&3&9&14\\$\cdots$&$\cdots$&$\cdots$&$\cdots$\\$f-n$&$n-3$&$3+(n-2)(n-3)/2$&$2(n-3)^2-n+2$\\ \hline\end{tabular}\\\end{center}
@@ -14142,17 +14140,17 @@ $$b^{}_{kk} = 0.$$
 \section{Feynman图的拓扑结构}\label{Ydfghmh}
 \noindent 在正文的叙述中，我们从直观的角度引入了许多\textsl{Feynman}图的几何性质，以此来简化计算以及分析物理结构。但其实，\textsl{Feynman}图的几何性质是其拓扑的自然体现，包括但不限于\textit{1PI}结构的涌现，可重整化判据，以及重整化的分析等。为此我们将从代数拓扑的角度，详细分析这些几何结构的来源，以及对应的物理特性。
 
-\subsection{基础同调性和发散探测}\label{VA-850SG}
+\subsection{同调和发散探测}\label{VA-850SG}
 \noindent 我们知道，\textsl{Feynman}图是由许多的线段构成的，每一条线段都对应了一个传播子，当然在计算振幅时需要截外腿只写出极化旋量。而在几何中，这被称为一个\textbf{一维复形}，它的拓扑不变量是一维同调群。我们后续会看到，图的发散性就是由同调探测的。
-\subsubsection{单形和复形}
-\noindent 首先，我们需要扩充线段的定义，让其成为一个可计算的几何对象。考虑$n+1$维欧式空间$\mathbb R^{n+1}$，在其中任取$n+1$个点构成一个点集，记为$A=\qty{a^{}_0,\ldots,a^{}_n}\subset\mathbb R^{n+1}$。我们称它们处于\textbf{一般位置}，若仿射向量组
+\subsubsection{单形和复形}\label{FAGewtSG}
+\noindent 首先，我们需要扩充线段的定义，让其成为一个可计算的几何对象。考虑$n$维欧式空间$\mathbb R^n$，在其中任取$n+1$个点构成一个点集，记为$A=\qty{a^{}_0,\ldots,a^{}_n}\subset\mathbb R^n$。我们称它们处于\textbf{一般位置}，若仿射向量组
 $$\qty{\vb{e}^{}_1=a^{}_1-a^{}_0,\vb{e}^{}_2=a^{}_2-a^{}_0,\cdots\cdots,\vb{e}^{}_n=a^{}_n-a^{}_0}$$
 线性无关。或者可以用一个数组$\qty{\lambda^{}_i}$来表示，满足条件
 \begin{equation}\sum_{i=0}^n\lambda^{}_i=0,\quad \sum_{i=0}^n\lambda^{}_ia^{}_i=0\implies \lambda^{}_1=\lambda^{}_2=\cdots=\lambda^{}_n=0.\end{equation}
 推广这个数组，我们定义点集$A$的\textbf{凸包}为
 \begin{equation}A^c=\qty{x=\sum_{a\in A}\lambda^{}_aa\middle\vert\lambda^{}_a\ge0,\text{只有有限个非零},\sum_{a\in A}\lambda^{}_a=1}.\end{equation}
-由此，我们定义欧式空间中的一个\textbf{$\bm{n}$维单形 \textit{n-Simplex}}为处于一般位置的点集$A\subset\mathbb R^{n+1}$的凸包，每个单点$a^{}_i$称为其\textbf{顶点}，记为
-\begin{equation}\Delta^n=(A)=\qty{x=\sum_{i=0}^n\lambda^{}_ia^{}_i\middle\vert a^{}_i\in A,\lambda^{}_i\ge0,\sum_{i=0}^n\lambda^{}_i=1}\subset\mathbb R^{n+1}.\end{equation}
+由此，我们定义欧式空间中的一个\textbf{$\bm{n}$维单形 \textit{n-Simplex}}为处于一般位置的点集$A\subset\mathbb R^n$的凸包，每个单点$a^{}_i$称为其\textbf{顶点}，记为
+\begin{equation}\Delta^n=(A)=\qty{x=\sum_{i=0}^n\lambda^{}_ia^{}_i\middle\vert a^{}_i\in A,\lambda^{}_i\ge0,\sum_{i=0}^n\lambda^{}_i=1}\subset\mathbb R^n.\end{equation}
 单形的详细术语是\textbf{单纯形 \textit{Simplicial Shape}}，这里的单纯性指的是没有额外的约束，是最简单的结构。比如线段是一维单形，包含内部的三角形是二维单形，三棱锥是三维单形
 $$\Delta^0=\tikz{\begin{feynman}\vertex[dot](a){};\end{feynman}},\quad \Delta^1=\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,right=1 cm of a](b){};\diagram*{(a)--(b)};\end{feynman}},\quad \Delta^2=\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,right=.5 cm of a](b);\vertex[dot,right=.5 cm of b](c){};\vertex[dot,above=0.5 cm of b](d){};\diagram*{(a)--(c)--(d)--(a)};\end{feynman}},\quad \cdots\cdots$$
 可以证明$\forall x\in\Delta^n$，其对应了唯一的数组$\qty{\lambda^{}_1,\lambda^{}_2,\cdots,\lambda^{}_n}$，称为点$x$关于点集$A$的\textbf{坐标}。基于坐标我们可以分类点，比如顶点为只有一个$\lambda^{}_i$非零。由于向量组$\qty{\vb{e}^{}_i=a^{}_i-a^{}_0}$线性无关，因此它张成一个子空间$L^{}_0$，不难证明其凸包构成一个$n-1$维单形，且和$a^{}_0$无关
@@ -14208,13 +14206,13 @@ $$\qty[\overrightarrow{\Delta^n};\vec{t}]=(-1)^i\qty[a^{}_i\vec{t};\vec{t}]=(-1)
 \begin{equation}\mathscr M-X=\bigcup_{\alpha\in\mathscr A}e^n_\alpha,\quad e^n_\alpha\cong B^n,\quad \forall \alpha\in\mathscr A.\end{equation}
 这样的一个开子集被称为一个\textbf{$\bm{n}$维胞腔 \textit{n-Cellular}}，$0$维胞腔就是一个点，它们通过\textbf{特征映射}$f^{}_\alpha$粘贴到$X$上，定义为一个同胚
 \begin{equation}\forall \alpha\in\mathscr A,\quad f^{}_\alpha:D^n\to \overline{e^n_\alpha}\implies D^n\cong\overline{e^n_\alpha},\quad f^{}_\alpha\qty(B^n)=e^n_\alpha,\quad f^{}_\alpha\qty(S^{n-1})\subset X.\end{equation}
-可以看到，此同胚通过将圆盘内部变为胞腔，将边界映射到$X$上完成粘贴，从而覆盖整个$\mathscr M$。如果指标集$\mathscr A$有限可数，则不难证明$e^n_\alpha\cong\Delta^n$，事实上他们是同伦的，但对于无限可数胞依旧存在，只是需要重新界定开集。对于一个拓扑空间$Y$，其关于子开集$O$的\textbf{弱拓扑 \textit{Weak Topology}}定义为
+可以看到，此同胚通过将圆盘内部变为胞腔，将边界映射到$X$上完成粘贴，从而覆盖整个$\mathscr M$。如果指标集$\mathscr A$有限可数，则可以证明$e^n_\alpha\cong\Delta^n$，事实上他们是同伦的，但对于无限可数胞依旧存在，只是需要重新界定开集。对于一个拓扑空间$Y$，其关于子开集$O$的\textbf{弱拓扑 \textit{Weak Topology}}定义为
 \begin{equation}\forall A\subset Y,\quad A\in\mathscr T^w(Y)\iff A\cap O\in\mathscr T^w(Y) \ \text{且}\  f^{-1}_\alpha(A)\in\mathscr T\qty(\mathbb R^n),\quad \forall \alpha\in\mathscr A.\end{equation}
 其中$\mathscr T^w(Y)$是$Y$的弱拓扑，上述定义将$O$改为闭集$X$则对闭集也成立。弱拓扑简化了开集的限制，现在只要求对交集封闭，同时能通过特征映射还原为欧式开球即可，不要求并集封闭，从而确保了仿紧性的成立。\\
 \\
 上述定义说明，弱拓扑下胞腔是对单形的推广，这样便可以推广骨架。我们知道$K^0$是复形$K$的顶点集，不妨依旧从此概念开始，只是我们取任意点集$X^0$，赋有离散拓扑。按照定义这是$0$维胞腔集，现在通过特征映射往上贴一维胞腔$\qty{e^1_\alpha}$，定义具有弱拓扑的商空间为一维骨架
 \begin{equation}X^1=X^0\bigcup\qty(\bigcup_\alpha D^1_\alpha)/\sim\cong X^0\bigcup\qty(\bigcup_\alpha e^1_\alpha),\quad p\sim f^{}_\alpha(p),\quad \forall p\in S^0.\end{equation}
-这是一个闭集，具象的来讲，这就是对$X^0$的每个点附一个开球。可以看到，此处的商空间和胞腔并集之间是同胚而非相等，因为特征映射的像$f^{}_\alpha\qty(S^1)$可以包含无限多个点，弱拓扑可以相同但空间并非严格相等。为了避免可能的问题，我们引入\textbf{有限闭包性 \textit{Closure-finite}}，令一维胞腔闭包$\overline{e^1_\alpha}$的边界在特征映射的像，只包含有限个零位胞腔，从而得到严格相等
+这是一个闭集，具象的来讲，这就是对$X^0$的每个点附一个开球。可以看到，此处的商空间和胞腔并集之间是同胚而非相等，因为特征映射的像$f^{}_\alpha\qty(S^1)$可以包含无限多个点，弱拓扑可以相同但空间并非严格相等。为了避免可能的问题，我们引入\textbf{有限闭包性 \textit{Closure-finite}}，令一维胞腔闭包$\overline{e^1_\alpha}$的边界在特征映射的像，只包含有限个零维胞腔，从而得到严格相等
 \begin{equation}X^1=X^0\bigcup\qty(\bigcup_\alpha D^1_\alpha)/\sim=X^0\bigcup\qty(\bigcup_\alpha e^1_\alpha),\quad p\sim f^{}_\alpha(p),\quad \forall p\in S^0.\end{equation}
 我们继续往上贴二维胞腔$\qty{e^2_\alpha}$，在弱拓扑和有限闭包性下得到二维骨架
 \begin{equation}X^2=X^1\bigcup\qty(\bigcup_\alpha D^2_\alpha)/\sim=X^1\bigcup\qty(\bigcup_\alpha e^2_\alpha),\quad p\sim f^{}_\alpha(p).\end{equation}
@@ -14246,9 +14244,9 @@ $$s=n^{}_1\overrightarrow{\Delta^q_1}+n^{}_2\overrightarrow{\Delta^q_2}+\cdots=\
 \begin{equation}\begin{aligned}&C^{}_q(K;\mathbb Z)=\qty{s:S^{}_q(K)\to\mathbb Z\middle\vert \qty(s^{}_1+s^{}_2)\qty(\overrightarrow{\Delta^q_i})=s^{}_1\qty(\overrightarrow{\Delta^q_i})+s^{}_2\qty(\overrightarrow{\Delta^q_i})},\\& s^{-1}\qty(\overrightarrow{\Delta^q_i})=s\qty(\overleftarrow{\Delta^q_i})=-s\qty(\overrightarrow{\Delta^q_i})\implies s+s^{-1}=0.\end{aligned}\label{B345gh.}\end{equation}
 由于这是加法群，因此这是一个交换群$s^{}_1+s^{}_2=s^{}_2+s^{}_1$，同时式(\ref{3460011})的线性组合形式也提醒我们，可以将每个单形看作一个基向量，则$S^{}_q(K)$就是一组有限基，它的整系数线性组合生成了群$C^{}_q(K;\mathbb Z)$。像此类交换群称为\textbf{有限生成交换群}，相应的基称为\textbf{生成元组}，和\textsl{Lie}群的生成元是类似的。\\
 \\
-这里我们简单扩展一下交换群和基的概念。一个交换群$F$称为\textbf{自由交换群}，若存在一个子集$A\subset F$称为$F$的\textbf{基}，使得$\forall x\in F$可以\emph{唯一的}表示为$A$中有限个元素的\emph{整系数}线性组合
+这里我们简单扩展一下交换群和基的概念。一个加法交换群$F$称为\textbf{自由交换群}，若存在一个子集$A\subset F$称为$F$的\textbf{基}，使得$\forall x\in F$可以\emph{唯一的}表示为$A$中有限个元素的\emph{整系数}线性组合
 \begin{equation}x=\sum_{i=1}^kn^{}_ia^{}_i,\quad a^{}_i\in A,\quad n^{}_i\in\mathbb Z.\end{equation}
-唯一性使得零元的定义为
+此线性结构的合理性来源是群的交换性，因为两个群元的和不依赖顺序，类似向量。唯一性使得零元的定义为
 \begin{equation}0=\sum_{i=1}^kn^{}_ia^{}_i \iff n^{}_1=n^{}_2=\cdots=n^{}_k=0.\end{equation}
 若$A$自身就是有限集，则$F$称为\textbf{有限基自由交换群}。自由交换群可以通过基实现\textbf{线性扩张}，取另一个自由交换群$H$以及映射$\theta:A\to H$和同态$\varphi:F\to H$，则$\theta$到同态$\varphi$的\emph{唯一的}线性扩张定义为
 \begin{equation}\varphi\qty(\sum_{i=1}^kn^{}_ia^{}_i)=\sum_{i=1}^kn^{}_i\theta\qty(a^{}_i).\end{equation}
@@ -14258,14 +14256,14 @@ $$s=n^{}_1\overrightarrow{\Delta^q_1}+n^{}_2\overrightarrow{\Delta^q_2}+\cdots=\
 \begin{equation}C^{}_q(K;\mathbb Z)=\mathbb Z\qty[S^{}_q(K)].\end{equation}
 它和有限基自由交换群的区别在于，其零元不是由系数唯一确定的，比如整数域有$1-1=2-2=0$，可以证明有限生成交换群是有限基自由交换群的商群，这里略过。零元的不唯一性自然的引入群的\textbf{挠 \textit{Torsion}}概念，定义有限生成交换群元$f$为\textbf{有限阶}的，若其满足
 \begin{equation}\exists r\in\mathbb N,\quad rf=0\in F.\end{equation}
-记$T^{}_F$为$F$中所有有限阶元素的集合，称为$F$的挠子群，可以证明非挠部分的商群$F/T^{}_F$为自由交换群。交换群的直和和普通群的直积相同，即
+记$\mathrm{Tor}^{}_F$为$F$中所有有限阶元素的集合，称为$F$的挠子群，可以证明非挠部分的商群$F/\mathrm{Tor}^{}_F$为自由交换群。交换群的直和和普通群的直积相同，即
 \begin{equation}F^{}_1\oplus F^{}_2=\qty{\qty(x^{}_1,x^{}_2)\middle\vert x^{}_i\in F^{}_i},\quad \qty(x^{}_1,x^{}_2)+\qty(y^{}_1,y^{}_2)=\qty(x^{}_1+y^{}_1,x^{}_2+y^{}_2).\end{equation}
-可以证明，我们有$F\cong T^{}_F\oplus\qty(F/T^{}_F)$，因此若群存在挠子群，则这个群可以分解为挠子群和非挠部分的和。为了消除挠子群的零元影响，我们考虑对偶群，和线性空间类似，有限生成交换群$F$的对偶群定义为到实数群$\mathbb R$的同态的集合，并定义有加法和数乘
+可以证明，我们有$F\cong \mathrm{Tor}^{}_F\oplus\qty(F/\mathrm{Tor}^{}_F)$，因此若群存在挠子群，则这个群可以分解为挠子群和非挠部分的和。为了消除挠子群的零元影响，我们考虑对偶群，和线性空间类似，有限生成交换群$F$的对偶群定义为到实数群$\mathbb R$的同态的集合，并定义有加法和数乘
 \begin{equation}F^*=\qty{\varphi:F\to\mathbb R},\quad (\varphi+\zeta)(f)=\varphi(f)+\zeta(f),\quad (a\varphi)(f)=a\varphi(f),\quad \forall \varphi,\zeta\in F^*, a\in\mathbb R,f\in F.\end{equation}
 可以验证在对偶下，直和变为直积$(F\cong H)^*\cong F^*\times H^*$，注意是直积不是张量积。将群$F$的\textbf{秩}定义为对偶群$F^*$的维数$\mathrm{rank}F=\dim F^*$，我们有分解定理
-\begin{equation}\mathrm{rank}F=\mathrm{rank}H+\mathrm{rank}(F/H).\end{equation}
-同时不难注意到挠子群的对偶$T^*_F=\qty{\varphi(f)=0\middle\vert0=\varphi(0)=r\varphi(f)}$，从而有
-\begin{equation}\mathrm{rank}F=\dim T^*_F+\dim\qty(F/T^{}_F)^*=\dim\qty(F/T^{}_F)^*.\label{we6Hrt}\end{equation}
+\begin{equation}\mathrm{rank}F=\mathrm{rank}H+\mathrm{rank}(F/H).\label{Af2ADF][}\end{equation}
+同时不难注意到挠子群的对偶$\mathrm{Tor}^*_F=\qty{\varphi(f)=0\middle\vert0=\varphi(0)=r\varphi(f)}$，从而有
+\begin{equation}\mathrm{rank}F=\dim T^*_F+\dim\qty(F/\mathrm{Tor}^{}_F)^*=\dim\qty(F/\mathrm{Tor}^{}_F)^*.\label{we6Hrt}\end{equation}
 可见对偶群可以极大的简化计算，这实际上就是上同调的定义，我们之后会看到。关于交换群的其余内容，会在下文中借具体场景逐一展示，这里就不展开了。\\
 \\
 在介绍了单形的链群后，我们来讨论定向奇异单形的链群。由于现在没有复形，因此所有的奇异单形都是从$\overrightarrow{\Delta^n}$映射到空间$X$，不同的映射给出不同的奇异单形。将$X$上所有定向$q$维奇异单形的集合记为
@@ -14339,8 +14337,10 @@ $$S^1_1=S^1_2+\partial^{}_1D^1\implies S^1_1\sim S^1_2,\quad \expval{S^1}\in H^{
 \begin{equation}C^{}_q(K;G)=\qty{s:S^{}_q(K)\to G\middle\vert s\qty(\overrightarrow{\Delta^n})=-s\qty(\overleftarrow{\Delta^q_i}),\forall \Delta^n\in S^{}_q(K)}.\end{equation}
 我们希望其保留加法作为群作用，因此系数群$G$必然为交换群，则线性组合(\ref{3460011})写作
 \begin{equation}s=\sum_ig^{}_i\Delta^n_i,\quad g^{}_i\in G.\end{equation}
+类似的我们也可以记生成关系为
+\begin{equation}C^{}_q(K;G)=G\qty[S^{}_q(K)].\end{equation}
 此时相关数也应取值到群$G$中，定义为$\forall t\in S^{}_{q-1}(K)$，
-\begin{equation}\qty[g\Delta^q_i;t]=\begin{cases}\pm g,\quad t=\pm\Delta^q_i;&\\ 0, \quad t\neq\pm\Delta^q_i \end{cases}\end{equation}
+\begin{equation}\qty[g\Delta^q_i;t]=\begin{cases}\pm g,\quad t=\pm\Delta^q_i;&\\ 0, \quad t\neq\pm\Delta^q_i.\end{cases}\end{equation}
 其中$\overleftarrow{\Delta^q_i}=-\Delta^q_i$。这样我们就可以定义边缘链$\partial^{}_q(gc)\in C^{}_{q-1}(K;G)$为
 $$\partial^{}_q(gc)(t)=\qty[gc;t],\quad \forall t\in S^{}_{q-1}(K),c\in S^{}_q(K),$$
 将其线性扩张为边缘算子$\partial^{}_q:C^{}_q(K;G)\to C^{}_{q-1}(K;G)$，满足\textsl{Poincaré}第零引理$\partial^{}_q\circ\partial^{}_{q+1}\equiv0$。这样我们就得到以$G$为系数的同调群$H^{}_q(K;G)$，不难计算对于连通复形$K$有$H^{}_0(K;G)=G$。我们后续会看到，在光滑流形上同调群的系数为实数，这是由光滑性决定的，其不含挠子群。\\
@@ -14405,10 +14405,10 @@ $$\begin{aligned}&\forall c^{\mathrm{sin}}=\sum_in^{}_if^{}_i\in Z^{\mathrm{sin}
 \\
 关于\textsl{CW}复形的同调，也称为\textbf{胞腔同调 \textit{Cellular Homology}}，这里就不介绍了，有兴趣的读者可以参考\cite{Strwb}的\S\RomanNumeralCaps{5}。这里只简单的提一下，胞腔同调在拓扑上是严格定义的，但其计算依赖奇异同调，而根据上文可以过渡到更具象的单纯同调，因此在物理上胞腔同调并不是一个广泛使用的工具。
 
-\subsubsection{同调群的计算和拓扑性质}
+\subsubsection{同调群的计算和拓扑性质}\label{GD35-**84}
 \noindent 上面我们通过代数结构，较为详细的建立了同调等价和同调群，现在我们进一步的探究其拓扑性质，同时对一些简单的空间计算其同调群。\\
 \\
-紧接着上文对复形间同调的讨论，我们进一步来考察同调间的映射。首先是链的映射，假设两个拓扑空间$X$和$Y$之间的连续映射$f:X\to Y$，引入映射$f^{}_q:S^{}_q(X)\to C^{}_q(Y;\mathbb Z)$，定义为
+紧接着上文对复形间同调的讨论，我们进一步来考察同调间的映射。从链的映射出发，假设两个拓扑空间$X$和$Y$之间的连续映射$f:X\to Y$，引入映射$f^{}_q:S^{}_q(X)\to C^{}_q(Y;\mathbb Z)$，定义为
 \begin{equation}\forall c\qty(:\overrightarrow{\Delta^q}\to X)\in S^{}_q(X),\quad f^{}_q(c)=f\circ c:\overrightarrow{\Delta^q}\to Y\implies C^{}_q(Y;\mathbb Z)=\mathbb Z\qty[\qty{f^{}_q(c)}].\label{ft--*ge0}\end{equation}
 利用自由交换群的线性扩张，我们得到一个同态$f^{}_q:C^{}_q(X;\mathbb Z)\to C^{}_q(Y;\mathbb Z)$，容易证明它和边缘算子构成一个交换图
 \begin{equation}\begin{tikzcd}[row sep=2cm,column sep=2cm] C^{}_q(X;\mathbb Z) \arrow[r,"\partial^{}_q"]\arrow[d,"f^{}_q"]& C^{}_{q-1}(X;\mathbb Z)\arrow[d,"f^{}_{q-1}"]\\C^{}_q(Y;\mathbb Z) \arrow[r,"\partial^{}_q"]&C^{}_{q-1}(X;\mathbb Z) \end{tikzcd}.\end{equation}
@@ -14436,11 +14436,159 @@ $$f^{-1}_q\qty[Z^{}_q(Y;G)]\subset Z^{}_q(X;G),\quad f^{-1}_q\qty[B^{}_q(Y;G)]\s
 \begin{center}\emph{$q$维同调群$H^{}_q(X;G)$是拓扑不变量。}\end{center}
 由此我们引入空间$X$关于系数群$G$的$q$维\textbf{\textsl{Betti}数}(\textsl{E.Betti G.}，1871)，定义为$q$维同调群的秩
 \begin{equation}\beta^{}_q(X;G)=\mathrm{rank}H^{}_q(X;G).\end{equation}
-其由式(\ref{we6Hrt})定义，注意是对偶群的维数，为了消除挠子群的影响。根据结论，这是一个拓扑不变量，它引出了拓扑学中最深刻的结论之一。利用\textsl{CW}复形，我们引入空间$X$的\textbf{\textsl{Euler}示性数}
+其由式(\ref{we6Hrt})定义，注意是对偶群的维数，为了消除挠子群的影响。根据结论，这是一个拓扑不变量，它引出了拓扑学中最深刻的结论之一。利用有限\textsl{CW}复形，我们引入$n$维空间$X$的\textbf{\textsl{Euler}示性数 \textit{Euler Charateristics}}。假设$q$维胞腔$e^n_\alpha$共有$l^{}_q$个，则\textsl{Euler}示性数定义为所有$l^{}_q$的交错和
+\begin{equation}\chi(X)=\sum_{q=0}^n(-1)^ql^{}_q.\label{VBAF67}\end{equation}
+取交错和的原因可以这样定性的考察，假设零维骨架$X^0$有$l^{}_0$个点，每增加一个一维胞腔即一个线段会使得两个点等价，从而一维胞腔对总“有效自由胞腔”的贡献是$-l^{}_1$。二维胞腔则是创造一个空洞，它增加了连通性，从而贡献是$l^{}_2$。类似的我们得到奇数维胞腔的贡献为负，偶数维是正，从而总贡献就是交错和。一个著名的例子便是二维多面体$\abs{K}$的\textsl{Euler}示性数，写作
+\begin{equation}\chi(\abs{K})=V-E+F=2.\end{equation}
+其中$V=l^{}_0$是$K$的顶点数，$E=l^{}_1$是边数，$F=l^{}_2$是面数。这个公式的证明随处可见，这里就不介绍了。同样的根据\textsl{CW}复形，我们有结论$l^{}_q=\beta^{}_q(X;\mathbb Z)$，从而式(\ref{VBAF67})给出\textbf{\textsl{Euler-Poincaré}定理}
+\begin{equation}\chi(X;\mathbb Z)=\sum_{q=0}^n(-1)^q\beta^{}_q(X;\mathbb Z).\end{equation}
+需要说明的是，这个定义对于任意交换系数群$G$都有效，但一般$\chi(X;G)$的含义和整系数是不同的，除了某些特殊情况。这里给出一个不依赖\textsl{CW}复形的证明，利用式(\ref{Af2ADF][})，记$\mathrm{rank}Z^{}_q=z^{}_q$和$\mathrm{rank}B^{}_q=b^{}_q$，我们得到
+$$H^{}_q=Z^{}_q/B^{}_q\implies \mathrm{rank}Z^{}_q=\mathrm{rank}B^{}_q+\mathrm{rank}H^{}_q\implies \beta^{}_q=z^{}_q-b^{}_q.$$
+不难证明对于单纯链有$\mathrm{rank}C^{}_q=l^{}_q$，同时由定义$Z^{}_q=\ker\partial^{}_q$和$B^{}_{q-1}=\Im\partial^{}_q$，可以通过分解定理证明此时有
+$$B^{}_{q-1}\cong C^{}_q/Z^{}_q \implies b^{}_{q-1}+z^{}_q=l^{}_q,$$
+进而两式相减的交错和给出
+$$\begin{aligned}&l^{}_q-\beta^{}_q=b^{}_{q-1}+z^{}_q-z^{}_q+b^{}_q=b^{}_{q-1}+b^{}_q\\&\implies \chi-\sum_{q=0}^n(-1)^q\beta^{}_q=\sum_{q=0}^n(-1)^q\qty(b^{}_{q-1}+b^{}_q)=b^{}_{-1}+(-1)^nb^{}_n.\end{aligned}$$
+由定义对于$n$维空间$b^{}_n\equiv0$，同时按照设定不存在$-1$维边缘链$b^{}_{-1}=0$，于是我们就得到
+$$\chi(X;G)-\sum_{q=0}^n(-1)^q\beta^{}_q(X;G)=0.$$
+这是代数拓扑中最重要的公式之一，它揭示了拓扑空间的\textsl{Euler}示性数是拓扑不变量，并且不依赖于单形的分布，从单纯同调的视角就是不依赖于具体的三角剖分，从而它可以作为同胚的判据。当然其作用不止于此，由于其取决于同调群，此代数结构可以推广至向量场，并自然的出现在\textsl{Gauss-Bonnet}定理中，具体请参考第\ref{Dfsf.32/-*}节。\\
+\\
+现在我们不妨计算几个具体空间的\textsl{Euler}示性数。为此先考察零维同调群$H^{}_0(X;\mathbb Z)$的几何含义，根据定义这是商群$H^{}_0(X)=\ker\partial^{}_0/\Im\partial^{}_1$。由约定$C^{}_{-1}(X)=0$，从而
+$$Z^{}_0(X;\mathbb Z)=C^{}_0(X;\mathbb Z)\cong\bigoplus_{p\in X^0}\mathbb Z(p).$$
+而$\partial^{}_1:C^{}_1\to C^{}_0$，因此边缘链群$B^{}_0$同构于$X^0$中能相互连通的两个点的集合，从而$H^{}_0(X;\mathbb Z)$就是以连通性为等价关系的商点集，按照定义这些等价类$\expval{z^{}_i}$是连通分支。对于连通分支我们有\textbf{直和分解定理}
+\begin{equation}H^{}_q(X)\cong H^{}_q(\expval{z^{}_1})\oplus H^{}_q(\expval{z^{}_2})\oplus\cdots=\bigoplus_{i}\oplus H^{}_q(\expval{z^{}_i})\quad \forall q\in\mathbb Z,\end{equation}
+而每个连通分支的零维同调群带入$Z^{}_0(\expval{z^{}_i};\mathbb Z)$给出
+\begin{equation}H^{}_0(\expval{z^{}_i})=Z^{}_0/B^{}_0\cong\mathbb Z\qty(\expval{z^{}_i})=\mathbb Z.\end{equation}
+于是设$X$共有$k$个连通分支，注意此时$\mathbb Z$作为交换群其直和按约定就是普通群的直积，我们就得到
+\begin{equation}H^{}_0(X;\mathbb Z)=\bigoplus_{i=1}^k\oplus \mathbb Z(\expval{z^{}_i})=\mathbb Z^k,\quad \beta^{}_0=k=\text{连通分支数}.\end{equation}
+对于一个全连通空间，它只有一个连通分支$k=1$，从而给出
+\begin{equation}H^{}_0(X;\mathbb Z)=\mathbb Z,\quad \beta^{}_0=1.\end{equation}
+其次是一维同调群$H^{}_1$，由定义这是商群$\ker\partial^{}_1/\Im\partial^{}_2$。方便起见我们只考察一维复形$	K$，则其无二维链给出$C^{}_2(K)=0\implies \Im\partial^{}_2=0$，于是$H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)$为闭链群。根据定义一维复形$K$是若干整系数有向紧线段的和，称其为\textbf{树}，若$K$连通且去掉任意的一个单形都会破坏其连通性，比如
+$$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below left=1cm of a](b){};\vertex[dot,above left=1cm of a](c){};\vertex[dot,right=2cm of a](d){};\vertex[dot,below right=1cm of d](e){};\vertex[dot,above right=2cm of e](f){};\vertex[dot,right=2cm of e](g){};\diagram*{(b)--[fermion](a),(c)--[fermion](a)--[fermion](d)--[fermion](e)--[fermion](f),(e)--[fermion](g)};\end{feynman}}.$$
+可以看到这和动量\textsl{Feynman}图类似，具体分析我们放在第\ref{*/G568700}节。为后续表述方便再引入一些名词，称一维复形$L$是\textbf{一维简单链}，若其可以写成如下形式
+$$L=a^{}_0a^{}_1+a^{}_1a^{}_2+\cdots+a^{}_{n-1}a^{}_n,\quad a^{}_i\neq a^{}_j,\forall 0\le i,j\le n.$$
+它成为一维闭链若$a^{}_n=a^{}_0$。于是根据定义树不能包含闭链，因为闭链是全连通的，去掉任意的一个线段$a^{}_ia^{}_{i+1}$都不会影响这两点之间的连通性，同时它也引出结论
+\begin{center}任意的一维闭链都可以分解为若干一维简单链的和。\end{center}
+对于一个任意的全连通一维复形$K$，其必然包含树$T$，而其中最大的树满足$K^0=T^0$，根据上述结论，它自然会将$K$中的闭链$z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+a^{}_ia^{}_0$拆分为一个不属于树的定向线段$s^{}_i=a^{}_ia^{}_0\in S^{}_1(K-T)$和在树内的简单链$z^{}_i-s^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i\in S^{}_1(T)$的和。假设$K-T$中有$l$个定向线段$s^{}_i$，$1\le i\le l$，将按此方法确定的一维闭链的集合记为
+$$A=\qty{z^{}_1,z^{}_2,\cdots.z^{}_l},\quad z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+s^{}_i\in Z^{}_1(K;\mathbb Z).$$
+根据构造，我们有$z^{}_i\qty(s^{}_j)=\delta^{}_{ij}$。同时令$\forall z\in Z^{}_1(K;\mathbb Z)$，$z\qty(s^{}_i)=n^{}_i$，则得到
+$$\qty(z-\sum_{i=1}^ln^{}_iz^{}_i)\qty(s^{}_j)=0\implies z=\sum_{i=1}^ln^{}_iz^{}_i.$$
+于是我们得到结论，$A$是一维闭链群的生成元组
+\begin{equation}Z^{}_1(K;\mathbb Z)=\mathbb Z\qty[A]=\mathbb Z\qty[z^{}_1,z^{}_2,\cdots.z^{}_l].\end{equation}
+当然也可以进一步证明此线性组合的唯一性，就是$z=0\iff n^{}_1=n^{}_2=\cdots=n^{}_l=0$，从而$A$成为闭链群的基，这里不再叙述。每个生成元都对应了一个整系数$n^{}_i$，而一个生成元产生一维多边形$\abs{K}$中的一个一维洞，从而一维同调群为
+\begin{equation}H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)\cong\bigoplus_{z^{}_i\in A}\mathbb Z=\mathbb Z^l,\quad \beta^{}_1=l=\text{一维洞个数}.\end{equation}
+当然我们可以推广到任意维数的拓扑空间，只需要将上述一维复形$K$换成一维骨架$K^0$即可，其余内容不变。从而我们看到，$H^{}_1$表征了拓扑空间的一维洞的分布情况，其深度参与了二维闭曲面的分类。更高维的同调群这里就不统一计算了，因为较为复杂，下面以具体空间给出具体结果。\\
+\\
+对于$n$维球面$S^n=\qty{\abs{\vb{r}}=1\middle\vert\vb{r}\in\mathbb R^n}$，可以证明其和$n+1$维单形的边界同胚
+$$f:\partial\Delta^{n+1}\to S^n,\quad \forall x\in \partial\Delta^{n+1},\quad f(x)=\frac{\vb{x}}{\abs{\vb{x}}^2}.$$
+同时由第\ref{FAGewtSG}节可知$\abs{Bd\Delta^{n+1}}=\partial\Delta^{n+1}$，因此由拓扑不变我们得到
+\begin{equation}H^{}_q\qty(S^n;\mathbb Z)\cong H^{}_q\qty(Bd\Delta^{n+1};\mathbb Z).\end{equation}
+首先根据定义$Bd\Delta^{n+1}$是连通复形，从而由前文结论
+\begin{equation}H^{}_0\qty(Bd\Delta^{n+1};\mathbb Z)=\mathbb Z.\end{equation}
+其次$C^{}_n\qty(Bd\Delta^{n+1})=0$，从而$H^{}_n\qty(Bd\Delta^{n+1})=Z^{}_n\qty(Bd\Delta^{n+1})$。边缘自身是唯一的$n$维链，且是闭链，所以此闭链群只有一个生成元，得到
+\begin{equation}H^{}_n\qty(Bd\Delta^{n+1};\mathbb Z)=\mathbb Z\qty[Bd\Delta^{n+1}]=\mathbb Z.\end{equation}
+对于其余维的群，不难从骨架的定义计算，它们的闭链群和边缘链群相等，这也可以用同伦中的可缩形得到，从而
+\begin{equation}H^{}_q\qty(Bd\Delta^{n+1};\mathbb Z)=0,\quad 1\le q\le n-1.\end{equation}
+于是我们就得到球面的整系数同调群
+\begin{equation}H^{}_q\qty(S^n;\mathbb Z)\cong H^{}_q\qty(Bd\Delta^{n+1};\mathbb Z)=\begin{cases}\mathbb Z,\quad q=0,n&\\ 0,\quad1\le q\le n-1.\end{cases}\end{equation}
+对于$n=2$的二维闭球面，我们得到$H^{}_0\qty(S^2)=H^{}_2\qty(S^2)=\mathbb Z$，$H^{}_1\qty(S^2)=0$，于是其\textsl{Euler}示性数为
+\begin{equation}\chi\qty(S^2)=1-0+1=2.\end{equation}
+这正是经典结果，并且它说明二维球面和二维多面体同胚，这是我们可以直观感受到的。再考察二维环面$T^2=S^1\times S^1$，连通性使得$H^{}_0\qty(T^2;\mathbb Z)=\mathbb Z$，二维闭链群的基就是其本身给出$H^{}_2\qty(T^2;\mathbb Z)=\mathbb Z$。一维闭链群有两个生成元，对应了两个$S^1$，从而$H^{}_1\qty(T^2;\mathbb Z)=\mathbb Z\oplus\mathbb Z$，于是
+\begin{equation}H^{}_0\qty(T^2;\mathbb Z)=H^{}_2\qty(T^2;\mathbb Z)=\mathbb Z,\quad H^{}_1\qty(T^2;\mathbb Z)=\mathbb Z^2.\end{equation}
+具体证明这里略过，可以参考\cite{CV25--}的例$4$，从而其\textsl{Euler}示性数为
+\begin{equation}\chi\qty(T^2)=1-2+1=0.\end{equation}
+类似的，我们直接给出二维实射影空间$\mathbb RP^2=S^2/\mathbb Z^{}_2$的同调群
+\begin{equation}H^{}_0\qty(\mathbb RP^2;\mathbb Z)=\mathbb Z,\quad H^{}_1\qty(\mathbb RP^2;\mathbb Z)=\mathbb Z^{}_2,\quad H^{}_2\qty(\mathbb RP^2;\mathbb Z)=0\implies \chi\qty(\mathbb RP^2)=1-0+0=1.\end{equation}
+注意其一维同调群是$\mathbb Z^{}_2\cong S^0$，因为其直线在$\mathbb Z^{}_2$作用下等价，从而闭链群是二阶挠的。这里我们就不计算高维情形了，事实上对于三维流形，其同调群的计算是非常复杂的，这会是我们在拓扑量子场论中最主要的拓扑场景。\\
+\\
+对于这些闭曲面的连通和，比如
+$$\Sigma=T^2\# T^2\# T^2\# \cdots=kT^2,\quad \Theta=\mathbb RP^2\#\mathbb RP^2\#\cdots=m\mathbb RP^2.$$
+关于连通和的定义请参考\cite{SG*/00}\S4，可以计算得到他们的同调群
+\begin{equation}\begin{aligned}&H^{}_0\qty(\Sigma;\mathbb Z)=H^{}_0\qty(\Theta;\mathbb Z)=\mathbb Z \implies \beta^{}_0\qty(\Sigma;\mathbb Z)=\beta^{}_0\qty(\Theta;\mathbb Z)=1;\\& H^{}_2\qty(\Sigma;\mathbb Z)=\mathbb Z,\quad H^{}_2\qty(\Theta;\mathbb Z)=0\implies \beta^{}_2\qty(\Sigma;\mathbb Z)=1,\quad \beta^{}_2\qty(\Theta;\mathbb Z)=0;\\& H^{}_1\qty(\Sigma;\mathbb Z)=\mathbb Z^{2k},\quad H^{}_1\qty(\Theta;\mathbb Z)=\mathbb Z^{m-1}\oplus\mathbb Z^{}_2\implies \beta^{}_1\qty(\Sigma;\mathbb Z)=2k,\quad \beta^{}_1\qty(\Theta;\mathbb Z)=m-1.\end{aligned}\end{equation}
+于是它们的\textsl{Euler}示性数为
+\begin{equation}\chi\qty(\Sigma)=1-(2k)+1=2(1-k),\quad \chi\qty(\Theta)=1-(m-1)+0=2-m,\end{equation}
+从而我们定义二维紧致闭曲面的\textbf{亏格 \textit{Genus}}为一维\textsl{Betti}数中的变量
+\begin{equation}g(\Sigma)=k\implies \chi\qty(\Sigma)=2(1-g),\quad g(\Theta)=m\implies \chi\qty(\Theta)=2-m.\end{equation}
+这就是经典的闭曲面分类定理的核心结果，即一个二维闭曲面必然同胚于$S^2$或$gT^2$或$g\mathbb RP^2$，其严格的证明便是通过同调论得到。关于开曲面的同调，这里我们不展开，一些简单的叙述会在第\ref{FVGtyhv}节中阐述。\\
+\\
+最后我们来讨论乘积空间的同调群。上面我们不加证明的，将两个$S^1$看作$B^{}_1\qty(T^2)$的两个生成元，从而得到$H^{}_1\qty(T^2)$，现在我们来考察其正确性。取两个拓扑空间$X$和$Y$，它们各自有链复形$C^{}_*(X;G)$和$C^{}_*(Y;G)$。它们的乘积空间也有链复形$C^{}_*(X\times Y;G)$，每个$q$维链群都是有限生成交换群，定义为
+\begin{equation}\begin{aligned}&C^{}_*(X\times Y;G)=\qty{C^{}_q(X\times Y;G);\partial^{}_q\middle\vert q\in\mathbb Z},\quad C^{}_q(X\times Y;G)=G\qty[S^{}_q(X\times Y)];\\&S^{}_q(X\times Y)=\qty{\sigma:\pm\overrightarrow{\Delta^q}\to X\times Y},\quad \partial^{}_q:C^{}_q(X\times Y;G)\to C^{}_{q-1}(X\times Y;G).\end{aligned}\end{equation}
+并且乘积拓扑要求其生成元和$C^{}_*(X)$和$C^{}_*(Y)$有关，但不难看到不能简单的将两个群做直和，因为乘积拓扑不允许偶对生成元，并且也不能直接将两个同维链求和，因为它们的拓扑不同。为此，我们需要找到一个将链偶对变成单个链的方法。\\
+\\
+一个将偶对变成单值的方法便是做张量积，考虑到群的交换约束，我们先引入交换群的张量积。取两个整系数交换群$A$和$B$，设它们的生成为
+$$A=\mathbb Z\qty[a^{}_1,a^{}_2,\cdots,a^{}_m],\quad B=\mathbb Z\qty[b^{}_1,b^{}_2,\cdots,b^{}_n].$$
+定义两者的\textbf{整系数张量积}$A\otimes^{}_{\mathbb Z}B$为一个生成交换群，满足
+\begin{itemize}\item 整系数双线性性：$\forall u^{}_1,u^{}_2\in A,v^{}_1,v^{}_2\in B, k\in\mathbb Z$，使得$ku^{}_i\in A$且$kv^{}_i\in B$，\begin{equation}\begin{aligned}&\qty(u^{}_1+u^{}_2)\otimes v^{}_1=u^{}_1\otimes v^{}_1+u^{}_2\otimes v^{}_1;\\& u^{}_1\otimes \qty(v^{}_1+v^{}_2)=u^{}_1\otimes v^{}_1+u^{}_1\otimes v^{}_2;\\& \qty(ku^{}_1)\otimes v^{}_1=u^{}_1\otimes\qty(kv^{}_1)=k\qty(u^{}_1\otimes v^{}_1).\end{aligned}\label{123=-***--}\end{equation}\item 零元约束：$\forall \sum\limits_i m^{}_ia^{}_i=0\in A,\quad \sum\limits_i n^{}_ib^{}_i=0\in B$，使得\begin{equation}\qty(\sum\limits_i m^{}_ia^{}_i)\otimes v=\sum\limits_i m^{}_i\qty(a^{}_i\otimes v)=0,\quad u\otimes\qty(\sum\limits_i n^{}_ib^{}_i)=0,\quad \forall u\in A,v\in B.\end{equation} \item	生成元：$A\otimes^{}_{\mathbb Z}B\sim F=\mathbb Z\qty[\qty{a^{}_i\otimes b^{}_j}\middle\vert 1\le i\le m,1\le j\le n]$。\end{itemize}
+于是整系数张量积就是生成交换群$F$模去双线性性和零元约束的商群，给出
+\begin{equation}\begin{aligned}&A\otimes^{}_{\mathbb Z}B=\mathbb Z\qty[\qty{a^{}_i\otimes b^{}_j}\middle\vert 1\le i\le m,1\le j\le n]/R,\\& R=\qty{\text{整系数双线性性},0^{}_A\otimes b=a\otimes 0^{}_B=0}.\end{aligned}\end{equation}
+比如$\mathbb Z^{}_m\otimes^{}_{\mathbb Z}\mathbb Z^{}_n$，它们的生成元都是$1$，所以$F=\mathbb Z[1^{}_m\otimes 1^{}_n]$，它自然满足双线性性。对于零元，注意到$m\cdot 1^{}_m=0$和$n\cdot 1^{}_n=0$，于是零元约束给出
+$$m\cdot \qty(1^{}_m\otimes 1^{}_n)=mx=0,\quad n\cdot \qty(1^{}_m\otimes 1^{}_n)=nx=0,\forall x\in F.$$
+这样商群$F/R$要求$\forall x\in F$，满足$x\mod m=0$同时$x\mod n=0$，结果取决于$m$和$n$之间的最大公约数$\mathrm{gcd}(m,n)$，它等于$1$说明两者互素，通式结果为
+\begin{equation}\mathbb Z^{}_m\otimes^{}_{\mathbb Z}\mathbb Z^{}_n=\mathbb Z^{}_{\mathrm{gcd}(m,n)}.\end{equation}
+当然我们可以扩展这一概念，对于两个任意系数的交换群$A=G\qty[\cdots]$和$B=G\qty[\cdots]$，张量积定义为一个$T-$双线性映射
+$$\otimes^{}_T: A\times B\to A\otimes^{}_TB,\quad (a,b)\mapsto a\otimes b\in T[\cdots].$$
+双线性关系只需将式(\ref{123=-***--})中的系数变为$k\in T$即可，也同样满足零元约束。但由于偶对中变量的位置要求$ka\in A$且$kb\in B$，因此事实上我们必须有$T=G$，否则生成关系冲突，从而正确的定义是一个$G$-张量积
+\begin{equation}\otimes^{}_G: A\times B\to A\otimes^{}_GB=G[\cdots],\quad A=G\qty[\cdots],\quad B=G\qty[\cdots].\end{equation}
+即张量积的系数群应和两个交换群的系数群保持一致，其余内容和整系数张量积一致。一个重要的应用便是\textbf{整系数群的实系数化}，将实数域$\mathbb R$看作一个整系数交换群，则我们得到一个张量积$V=\mathbb Z[J]\otimes^{}_{\mathbb Z}\mathbb R$。若我们额外引入实数积法则
+\begin{equation}\forall c\in \mathbb Z[J],r\in \mathbb R\implies c\otimes r\in V,\quad \lambda\cdot(c\otimes r)=c\otimes(\lambda r),\quad \forall \lambda\in\mathbb R,\end{equation}
+则群$V$成为一个实系数交换群，并保持原整系数交换群的生成元。因为上述法则将整系数乘法扩充为实系数乘法，群$V$给出$\mathbb R$模，且$J\otimes 1=J$，于是我们得到
+\begin{equation}\mathbb Z[J]\otimes^{}_{\mathbb Z}\mathbb R=\mathbb R[J].\end{equation}
+注意这里是整系数张量积而不是实系数，因为实系数在群$\mathbb Z\qty[J]$中没有任何定义。实系数群的优势在于，其没有挠子群，因为对于整系数群中的有限阶元素$rf=0$，在实数积法则和零元约束下给出
+$$rf=0\implies f\otimes \lambda=rf\otimes \frac{\lambda}{r}=0\otimes \frac{\lambda}{r}=0\in \mathbb R[J].$$
+也就是说，$\mathrm{Tor}(\mathbb Z[J])\otimes^{}_{\mathbb Z}\mathbb R=\mathrm{Tor}(\mathbb R[J])=0$。对于同调群，我们就有
+\begin{equation}H^{}_q(X;\mathbb Z)\otimes^{}_{\mathbb Z}\mathbb R=H^{}_q(X;\mathbb R),\quad \forall q\in\mathbb Z.\end{equation}
+从而不难得到\emph{实系数同调群无挠}。还是需要强调，这个结论只对同调群的实系数化有效，若想将系数群换为任意的交换群，我们还需要额外的定理，这里就不介绍了。\\
+\\
+回到链复形$C^{}_*(X\times Y;G)$，不难看到目前唯一的选择就是取张量积，但一个自然的问题就是，两个链的张量积是什么。方便起见这里用单纯同调，则可以按照张量代数，将定向单形集看作对偶向量空间，两个可剖分空间链群$C^{}_i(X;G)$和$C^{}_j(Y;G)$的$G-$张量积定义为
+\begin{equation}\begin{aligned}&C^{}_i(X;G)\otimes^{}_GC^{}_j(Y;G):S^{}_i(X)\times S^{}_j(Y)\to G,\\& \forall c\otimes d\in C^{}_i(X;G)\otimes^{}_GC^{}_j(Y;G),\quad c\in C^{}_i(X;G),\quad d\in C^{}_j(Y;G),\\&c\otimes d\qty(a,b)=c(a)+d(b)=g^{}_a+ g^{}_b=g,\quad \forall a\in S^{}_i(X),b\in S^{}_j(Y).\end{aligned}\label{Vgr56--9w}\end{equation}
+现在我们不加证明的使用单形的\textbf{\textsl{Eilenberg-Zilber}定理}，它指出两个定向单形集$S^{}_i(X)$和$S^{}_j(Y)$的乘积，同构于乘积空间$X\times Y$上的$i+j$维定向单形集
+$$S^{}_i(X)\times S^{}_j(Y)\cong S^{}_{i+j}(X\times Y),$$
+从而定义(\ref{Vgr56--9w})给出一个链群同态，称为\textbf{\textsl{Eilenberg-Zilber}同态}
+\begin{equation}\mathrm{EZ}:C^{}_i(X;G)\otimes^{}_GC^{}_j(Y;G)\to C^{}_{i+j}(X\times Y;G),\quad \mathrm{EZ}(c\otimes d)=\sum_ig^{}_is^{}_i,\quad s^{}_i\in S^{}_{i+j}(X\times Y).\end{equation}
+这里式同态而不是同构，主要就是挠子群的影响，对于无挠的情形这给出同构。现在考察边缘算子，对三个链群各自引入记号$\partial^X_i$，$\partial^Y_j$和$\partial^{X\times Y}_{i+j}$，我们从式(\ref{Lid223400f})得到顶点表示
+\begin{equation}\partial^{X\times Y}_{i+j}(u)=\sum_{\alpha=0}^{i+j}(-1)^\alpha u^{}_0\cdots \hat{u}^{}_\alpha\cdots u^{}_{i+j}\in C^{}_{i+j-1}(X\times Y;G),\quad u=u^{}_0u^{}_1\cdots \cdots u^{}_{i+j}.\label{FGWgtrRT}\end{equation}
+此时\textsl{EZ}同态给出$C^{}_{i-1}\otimes^{}_GC^{}_j\to C^{}_{i+j-1}$和$C^{}_i\otimes^{}_GC^{}_{j-1}\to C^{}_{i+j-1}$两种可能，取定向单形$c=c^{}_0c^{}_1\cdots c^{}_i$和$d=d^{}_0d^{}_1\cdots d^{}_j$，将上述同态定义为对单形取边缘后，按张量积$(c,d)\mapsto c\otimes d$的顺序带入式(\ref{FGWgtrRT})替换相应的点，比如第一种情形为
+$$\textsl{EZ}\qty[\qty(\partial^X_ic)\otimes d]=\sum_{l=0}^i(-1)^l c^{}_0\cdots \hat{c}^{}_l\cdots c^{}_id^{}_0\cdots d^{}_j.$$
+第二种情形就是将上面去掉点$c^{}_l$的操作改为去掉点$d^{}_k$，但这里需要注意符号。因为我们希望结果是顺向面，也就是$c\otimes d=d^{}_k\qty(c\otimes \qty(\partial^Y_jd))$，所以在置换的时候，点$d^{}_k$首先需要完整的经过单形$c$，这样就增加了一个置换系数$\text{sgn}\qty[\sigma\qty(d^{}_k,c)]=(-1)^i$，从而我们得到
+$$\textsl{EZ}\qty[(-1)^ic\otimes \qty(\partial^Y_jd)]=(-1)^{2i}\sum_{k=0}^j(-1)^k c^{}_0\cdots c^{}_id^{}_0\cdots \hat{d}^{}_k\cdots d^{}_j.$$
+两者求和得到式(\ref{FGWgtrRT})完整的$\qty{u^{}_i}$逐点替换，并令$i+j$维链同态$u=\textsl{EZ}(c\otimes d)$，从而同态给出边缘算子的展开
+$$\partial^{X\times Y}_{i+j}(u)=\partial^{X\times Y}_{i+j}\qty[\textsl{EZ}(c\otimes d)]=\textsl{EZ}\qty[\qty(\partial^X_ic)\otimes d+(-1)^ic\otimes \qty(\partial^Y_jd)].$$
+\textsl{EZ}同态和边缘算子对易，于是我们得到边缘算子的展开
+\begin{equation}\partial^{X\times Y}_{i+j}(c\otimes d)=\qty(\partial^X_ic)\otimes d+(-1)^ic\otimes \qty(\partial^Y_jd).\label{FAetySF}\end{equation}
+这里我们再次看到和外微分相关的性质：$\dd(\alpha\wedge\beta)=(\dd\alpha)\wedge\beta+(-1)^i\alpha\wedge(\dd\beta)$。不难验证其满足\textsl{Poincaré}第零引理(\ref{wrt70811})，进而可以将\textsl{EZ}同态推广到链复形$C^{}_*(X;G)\otimes^{}_GC^{}_*(Y;G)\to C^{}_*(X\times Y;G)$，这里就不展开了。\\
+\\
+对于同调群的张量积，也可以类似上述构造得到。比如闭链群$Z^{}_i$和边缘链群$B^{}_i$，通过展开式(\ref{FAetySF})，我们会回到\textsl{EZ}同态
+$$Z^{}_i(X;G)\otimes^{}_GZ^{}_j(Y;G)\to Z^{}_{i+j}(X\times Y;G),\quad B^{}_i(X;G)\otimes^{}_GB^{}_j(Y;G)\to B^{}_{i+j}(X\times Y;G).$$
+对于同调群，它会涉及到相对同调的商群计算，当然我们仍然会得到同态。这里我们只考察无挠的同调群，比如前文中已证明的实系数同调群，此时\textsl{EZ}同态扩张为同构，这样我们就得到乘积空间实系数同调的\textbf{\textsl{Kunnëth}定理}(\textsl{H. Künneth}，1923)
+\begin{equation}H^{}_{i+j}(X\times Y;\mathbb R)\cong H^{}_i(X;\mathbb R)\otimes^{}_{\mathbb R}H^{}_j(Y;\mathbb R).\end{equation}
+进一步的，假设我们固定维数和$i+j=n$，这样有若干种不同的张量积组合，每一种组合都对应一个\textsl{EZ}同构。同时由边缘算子的展开(\ref{FAetySF})可以看到，总同构一定是所有情形的和，交换群元的加法变为交换群之间的直和，于是我们得到固定维数的\textsl{Kunnëth}定理
+\begin{equation}H^{}_n(X\times Y;\mathbb R)\cong \bigoplus_{i+j=n} H^{}_i(X;\mathbb R)\otimes^{}_{\mathbb R}H^{}_j(Y;\mathbb R).\end{equation}
+关于任意系数群，特别是带挠的整系数同调群的\textsl{Kunnëth}定理，可以参见第\ref{FVGtyhv}节，这里就不给出了。对于奇异同调的情形，因为我们已经证明了奇异同调和单纯同调在可剖分空间上等价，因此这里的\textsl{Kunnëth}定理也必然适用于奇异同调，可以完全照用。当然作为映射，仍需要注意其定义域和取值的问题，比如\textsl{EZ}定理中$S^{}_{i+j}(X\times Y)$的定义域和乘积$S^{}_i(X)\times S^{}_j(Y)$之间的关系，因为乘积定义在多边形$\Delta^i_X\times\Delta^j_Y$上，而另一个定义在单形$\Delta_{X\times Y}^{i+j}$上，两者之间差一个单形选择映射，这都需要读者自行补充。
+
+\subsubsection{映射度和不动点}
+
+\noindent 上文中我们较为详细的介绍了同调论的一些计算，当然这些计算依然仅限于具体的抽象图形，或者用来考察拓扑空间的性质。但我们也不难发现一些特殊之处，比如$H^{}_n\qty(S^n;\mathbb Z)\cong\mathbb Z$，这是因为$n$维闭链群的生成元只有它本身一个，且$H^{}_n$是拓扑不变量。这提醒我们，或许可以将该唯一生成元当作工具，来探测自同胚的一些性质。
 
 
 
 
+
+
+
+\subsubsection{Feynman图的同调}\label{*/G568700}
+
+
+
+
+\subsection{同伦和图的等价性}\label{234200.05}
+\subsubsection{映射和空间的同伦}
+\subsubsection{同伦群和同调的同伦不变}\label{23R50.05}
+\subsubsection{辫群和扭结概览}
+\subsubsection{扭结的环绕数}
+\subsubsection{Feynman图的同伦}
+
+\subsection{上同调和发散理论}
+\subsubsection{奇异上同调群}
+\subsubsection{同调代数引入}\label{FVGtyhv}
 
 为了计算同调群，我们来讨论相对同调，方便起见这里只考虑单纯同调。
 为此先定义群的\textbf{正合序列 \textit{Exact Sequence}}。取一组群$\qty{A^{}_i}$和一组同态$\qty{f^{}_i}$，指标集$i\in\mathscr I$，定义为一个序列
@@ -14451,22 +14599,6 @@ $$f^{-1}_q\qty[Z^{}_q(Y;G)]\subset Z^{}_q(X;G),\quad f^{-1}_q\qty[B^{}_q(Y;G)]\s
 $$0\to A^{}_1\xrightarrow{f^{}_1}A^{}_2\xrightarrow{f^{}_2}A^{}_3\xrightarrow{f^{}_3}A^{}_4\xrightarrow{f^{}_4}0,$$
 则称为群组的\textbf{短正合序列 \textit{Short Exact Sequence, SES}}。
 
-
-\subsubsection{Feynman图的同调}
-
-
-
-
-\subsection{同伦和图的等价性}\label{234200.05}
-\subsubsection{映射和空间的同伦}
-\subsubsection{同伦群和同调的同伦不变}\label{23R50.05}
-\subsubsection{映射度和不动点}
-\subsubsection{辫群和扭结}
-\subsubsection{Feynman图的同伦}
-
-\subsection{上同调和发散理论}
-\subsubsection{奇异上同调群}
-\subsubsection{同调代数引入}
 \subsubsection{微分流形上的de Rham上同调}\label{Ddfg..*-*}
 \subsubsection{Feynman图的de Rham上同调表示}
 \subsubsection{de Rham上同调的发散理论}
@@ -14548,8 +14680,8 @@ $$(f(a))\cdot(g(a))=fg(a),\quad \forall f,g\in \mathscr D(E,\pi)\implies f(a),g(
 \begin{equation}\varPi^{}_1(B,b)\hookrightarrow E\xrightarrow{\pi}B.\end{equation}
 也就是说，这个覆叠空间以底空间的基本群为纤维，称为\textbf{万有覆叠空间 \textit{Universal Covering}}，或也可以称为$\varPi^{}_1(B,b)$—丛。对于连通底空间$B$，万有覆叠保证了
 $$\varPi^{}_1(B)\cong \mathscr D(E,\pi),$$
-这样可以从覆叠变换计算基本群。比如对于$n$维实射影空间$\mathbb{R}P^n=S^n/\mathbb Z^{}_2$，我们知道对于高维球其基本群为是平凡的$\varPi^{}_1\qty(S^n)=\qty{e}$，则$S^{n\ge2}$是$\mathbb{R}P^n$的万有覆盖。其覆叠变换不难看到是$\mathbb Z^{}_2$，从而我们有
-$$\varPi^{}_1\qty(\mathbb{R}P^{n\ge2})=\mathbb Z^{}_2=F(b).$$
+这样可以从覆叠变换计算基本群。比如对于$n$维实射影空间$\mathbb RP^n=S^n/\mathbb Z^{}_2$，我们知道对于高维球其基本群为是平凡的$\varPi^{}_1\qty(S^n)=\qty{e}$，则$S^{n\ge2}$是$\mathbb RP^n$的万有覆盖。其覆叠变换不难看到是$\mathbb Z^{}_2$，从而我们有
+$$\varPi^{}_1\qty(\mathbb RP^{n\ge2})=\mathbb Z^{}_2=F(b).$$
 万有覆叠的万有性在于，它是同一个底空间上最大的覆叠空间。设$\qty(\tilde E,B,\tilde\pi)$是万有覆叠，$(E,B,\pi)$是任意覆叠，则存在覆叠映射$\varpi:\tilde E\to E$使得
 \begin{equation}\pi\circ\varpi=\tilde\pi\end{equation}
 从提升的角度，这说明$\varpi$是万有覆叠的提升，从而任意覆叠都可以从万有覆叠提升得到，因此万有覆叠是虽有覆叠空间的覆叠。从拓扑学的角度，我们只需要计算出万有覆叠，就能得到该底空间的所有覆叠结构，这在连续群的情形下非常有用。
@@ -14694,9 +14826,9 @@ $$i^{}_*\qty(\partial^{}_*\expval{\gamma})=i^{}_*\expval{\eval{\tilde\gamma}_{\p
 \begin{equation}\pi_*:\varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B),\quad \forall n\ge 2.\end{equation}
 这一结果的几何含义是，覆叠映射完全保留了所有高阶同伦信息。以万有覆叠为例，设$\qty(E,B,\pi)$为$B$的万有覆叠，则$\varPi^{}_1(E)=0$，长正合序列退化为
 \begin{equation}0\longrightarrow \varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B)\longrightarrow 0\quad (n\ge 2),\end{equation}
-即$\varPi^{}_n(E)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个空间$E$，其高阶同伦群与$B$完全相同。例如，对于实射影空间$\mathbb{R}P^{n\ge2}$，其万有覆叠为$S^n$，从而
-\begin{equation}\varPi^{}_k(\mathbb{R}P^n)\cong\varPi^{}_k\qty(S^n),\quad \forall k\ge 2.\end{equation}
-特别地，$\varPi^{}_n(\mathbb{R}P^n)\cong\mathbb Z$，当$n$为奇数；或$\mathbb Z^{}_2$，当$n$为偶数，这直接继承自球面。\\
+即$\varPi^{}_n(E)\cong\varPi^{}_n(B)$。因此，万有覆叠不仅简化了基本群的计算，还提供了一个空间$E$，其高阶同伦群与$B$完全相同。例如，对于实射影空间$\mathbb RP^{n\ge2}$，其万有覆叠为$S^n$，从而
+\begin{equation}\varPi^{}_k(\mathbb RP^n)\cong\varPi^{}_k\qty(S^n),\quad \forall k\ge 2.\end{equation}
+特别地，$\varPi^{}_n(\mathbb RP^n)\cong\mathbb Z$，当$n$为奇数；或$\mathbb Z^{}_2$，当$n$为偶数，这直接继承自球面。\\
 \\
 前面提到，$\varPi^{}_1(B)\xrightarrow{\partial^{}_*}\varPi^{}_0(F)$确定了闭路类提升的始末点差(\ref{DgbY,,.})，而在选定一个起点$a=\expval{\tilde\gamma}(0)$后，这就给出了单值性。因此边缘映射$\partial^{}_*$和群同态$\rho^{}_a$的角色是十分类似的，我们完全可以将单值性群重新表述为
 \begin{equation}\mathrm{Mono}(E,a)=\partial^{}_*\qty(\varPi^{}_1(B,p))(a)\subset\varPi^{}_0(F)\cong F(p).\end{equation}
@@ -14726,28 +14858,29 @@ $$\varPi^{}_3\qty(S^3)\cong\varPi^{}_3\qty(S^2)\cong\mathbb Z,$$
 \subsection{标架丛和主丛}\label{CadFHHG}
 \subsubsection{流形上的标架丛}
 \subsubsection{Lie群回顾}
-
 \subsubsection{内禀对称性的主丛}
 \subsubsection{截面和规范变换}
-
 
 \subsection{主丛的伴丛}
 \subsubsection{伴丛和矢量丛}
 \subsubsection{切丛和余切丛}
-\subsubsection{SU(2)群的旋量丛}
+\subsubsection{Spin(n)丛和旋量丛}
+\subsubsection{Clifford丛和旋量模}
+\subsubsection{旋量—张量伴丛}
 \subsection{联络和曲率}
 \subsubsection{Abel联络和规范势}
 \subsubsection{非Abel联络和Wilson圈}
 \subsubsection{曲率和规范场强}
 \subsubsection{矢量丛上的联络}
 \subsubsection{基本粒子的标准模型}
+\subsection{鬼场和BRST上同调}
 \subsection{分类空间}
 \subsubsection{Stiefel流形和分类空间}
 \subsubsection{拓扑空间的分类映射}
 \subsubsection{纤维丛的分类}
 \subsubsection{分类空间的上同调}
 \subsection{示性类理论引入}
-\subsubsection{Gauss-Bonnet定理}
+\subsubsection{Gauss-Bonnet定理}\label{Dfsf.32/-*}
 \subsubsection{矢量丛的拓扑示性类}
 \subsubsection{Stiefel-Whitney类}
 \subsubsection{主丛上的代数示性类}
