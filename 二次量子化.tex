@@ -10830,7 +10830,7 @@ $$\frac{\exp(2\pi i(s-u))-1}{2\pi iT(s-u)}=\frac{2\pi i\epsilon}{2\pi iT\epsilon
 $$C^{(n)}\qty(\zeta^{}_s,\vb{p})\sim T^{n-1}\qty{D^M_F\qty(\zeta^{}_s,\vb{p})}^n\propto T,$$
 读者可以自行计算。其余的修正就不一一介绍了，常用的相互作用展开至二级修正都可以在第\ref{chFf456..6**hg}节中查到，只需要参考上文做相应的修改即可。\\
 \\
-在此基础上，我们来讨论平衡热场的\textbf{温度\textsl{Feynman}规则}。按照上面的介绍，不难看到温度空间\textsl{Feynman}规则和零温场是完全一致的，比如自由热传播子就由式(\ref{lahuerganfi})确定为
+在此基础上，我们来讨论平衡热场的\textbf{温度\textsl{Feynman}规则}。按照上文观点，不难看到温度空间\textsl{Feynman}规则和零温场是完全一致的，比如自由热传播子就由式(\ref{lahuerganfi})确定为
 $$D^M_F(x,y)=\tikz[baseline=-0.5ex]{\begin{feynman}\vertex[dot,label=below:$x$](a){};\vertex[right=2cm of a,dot,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}}.$$
 对于平方相互作用的一级修正，我们从式(\ref{Tev-*ff-++})得到
 $$C^{M;(1)}_2(x,y)=\quad\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--(b)};\end{feynman}}\quad\tikz[baseline=(e)]{\begin{feynman}\vertex(c);\vertex[below=1cm of c,dot,scale=.5,label=below:$z$](d){};\vertex[below=0.8cm of c](e);\diagram*{(d)--[half left](c)--[half left](d)};\end{feynman}})\quad+\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.5,label=below:$x$](a){};\vertex[right=1cm of a,dot,scale=.5,label=below:$z$,label=above:$(-\lambda)$](d){};\vertex[right=1cm of d,dot,scale=.5,label=below:$y$](b){};\diagram*{(a)--(d)--(b)};\end{feynman}}$$
@@ -14137,13 +14137,14 @@ $$b^{}_{kk} = 0.$$
 \bibitem{BGF6} v. d. Waerden 1932 \emph{Die gruppentheoretische Methode \\in der Quantenmechanik}, p. 83. Berlin: Springer.
 \end{thebibliography}\makeatother\endgroup\clearpage
 
-\section{Feynman图的拓扑结构}\label{Ydfghmh}
-\noindent 在正文的叙述中，我们从直观的角度引入了许多\textsl{Feynman}图的几何性质，以此来简化计算以及分析物理结构。但其实，\textsl{Feynman}图的几何性质是其拓扑的自然体现，包括但不限于\textit{1PI}结构的涌现，可重整化判据，以及重整化的分析等。为此我们将从代数拓扑的角度，详细分析这些几何结构的来源，以及对应的物理特性。
+\section{代数拓扑引入和Feynman图的拓扑发散}\label{Ydfghmh}
+\noindent 在正文的叙述中，我们从直观的角度引入了许多\textsl{Feynman}图的几何性质，以此来简化计算以及分析物理结构。但其实，\textsl{Feynman}图的几何性质是其拓扑的自然体现，包括但不限于\textit{1PI}结构的涌现，发散与可重整化判据，以及重整化群的引入等。同时弦论的出现提升了\textsl{Feynman}图的维数，而点粒子的\textsl{Feynman}规则已不足以直观的描述这些图，为此我们将从代数拓扑的角度，详细定义高维\textsl{Feynman}图，分析这些几何结构的来源，以及对应的物理特性。
 
 \subsection{同调和发散探测}\label{VA-850SG}
-\noindent 我们知道，\textsl{Feynman}图是由许多的线段构成的，每一条线段都对应了一个传播子，当然在计算振幅时需要截外腿只写出极化旋量。而在几何中，这被称为一个\textbf{一维复形}，它的拓扑不变量是一维同调群。我们后续会看到，图的发散性就是由同调探测的。
+\noindent 我们知道，点粒子\textsl{Feynman}图是由许多的线段构成的，每一条线段都对应了一个传播子，而在几何中，这被称为一个\textbf{一维复形}，它的拓扑不变量是零维和一维同调群。同时，若将粒子推广为更高维的物理对象，比如弦论中的弦和膜，虽然它们的\textsl{Feynman}图更加复杂，但在拓扑上它们实际就是高维复形，其拓扑不变量就是高维同调群。我们后续会看到，图的发散性就是由同调探测的，无论\textsl{Feynman}图的维数。
+
 \subsubsection{单形和复形}\label{FAGewtSG}
-\noindent 首先，我们需要扩充线段的定义，让其成为一个可计算的几何对象。考虑$n$维欧式空间$\mathbb R^n$，在其中任取$n+1$个点构成一个点集，记为$A=\qty{a^{}_0,\ldots,a^{}_n}\subset\mathbb R^n$。我们称它们处于\textbf{一般位置}，若仿射向量组
+\noindent 为了考察图的几何性质，我们需要扩充其定义，让其成为一个可计算的几何对象，任意维\textsl{Feynman}图的定义在第\ref{sg--fG4}节。考虑$n$维欧式空间$\mathbb R^n$，在其中任取$n+1$个点构成一个点集，记为$A=\qty{a^{}_0,\ldots,a^{}_n}$。我们称它们处于\textbf{一般位置}，若仿射向量组
 $$\qty{\vb{e}^{}_1=a^{}_1-a^{}_0,\vb{e}^{}_2=a^{}_2-a^{}_0,\cdots\cdots,\vb{e}^{}_n=a^{}_n-a^{}_0}$$
 线性无关。或者可以用一个数组$\qty{\lambda^{}_i}$来表示，满足条件
 \begin{equation}\sum_{i=0}^n\lambda^{}_i=0,\quad \sum_{i=0}^n\lambda^{}_ia^{}_i=0\implies \lambda^{}_1=\lambda^{}_2=\cdots=\lambda^{}_n=0.\end{equation}
@@ -14274,7 +14275,7 @@ $$s=\sum_in^{}_i\sigma^{}_i,\quad n^{}_i\in \mathbb Z,\quad 1\le i\le \infty.$$
 \begin{equation}s:S^{\mathrm{sin}}_q(X)\to\mathbb Z,\quad s\qty(\overleftarrow{\sigma})=-s\qty(\overrightarrow{\sigma}),\end{equation}
 所有$q$维奇异链的集合在函数的加法下构成一个\textbf{整系数$\bm{q}$维奇异链群}$C^{\mathrm{sin}}_q(X;\mathbb Z)$，类似单纯理论(\ref{B345gh.})定义为
 \begin{equation}C^{\mathrm{sin}}_q(X;\mathbb Z)=\qty{s:S^{\mathrm{sin}}_q(X)\to\mathbb Z}=\mathbb Z\qty[S^{\mathrm{sin}}_q(X)],\end{equation}
-相应的群结构就不展示了，和单纯性一样。但不同的是，此时基$S^{\mathrm{sin}}_q(X)$是无限的，因此奇异链群只是生成交换群，但这并不妨碍我们定义链群，因为无限链是不符合$X$上的拓扑。
+相应的群结构就不展示了，和单纯性一样。但不同的是，此时基$S^{\mathrm{sin}}_q(X)$是无限的，因此奇异链群只是生成交换群，但这并不妨碍我们定义链群，因为无限链是不符合$X$上的拓扑的。
 
 \subsubsection{边缘算子与同调}\label{NfG30780-}
 \noindent 上面我们引入了链和链群，作为单形的组合，我们自然可以讨论链的面。首先不难注意到，链的面不能直接在式(\ref{B345gh.})中，将单形$\Delta^n$用其面$\phi^m$替换得到，因为一方面单形到面的限制并不保定向，从而式(\ref{B345gh.})不成立，另一方面我们根本无法确定定向面之间的相加方式。\\
@@ -14400,10 +14401,26 @@ $$\begin{aligned}&\forall c^{\mathrm{sin}}=\sum_in^{}_if^{}_i\in Z^{\mathrm{sin}
 两个集合互相包含，唯一的可能性就是两者相等，对于群而言就是同构，从而综合(\ref{Cvegh4lkj/]]})和(\ref{Cveg2kj/]]})给出
 \begin{equation}H^{}_q(X;\mathbb Z)\cong H^{\mathrm{sin}}_q(X;\mathbb Z).\end{equation}
 这样单纯同调和奇异同调在可剖分空间上等价，而奇异同调是更广泛的，因为其并不依赖于空间的可剖分。后续在不引起歧义的情况下，我们默认同调指的是奇异同调，并隐藏奇异记号$\mathrm{sin}$，和单纯同调在记号上一致
-\begin{equation}\mathrm{Notation :} H^{\mathrm{sin}}_q(X;\mathbb Z)= H^{}_q(X;\mathbb Z).\end{equation}
+\begin{equation}\mathrm{Notation : } H^{\mathrm{sin}}_q(X;\mathbb Z)= H^{}_q(X;\mathbb Z).\end{equation}
 需要强调的是，上述证明并不涉及链群的同构，因为在重心重分后，讨论奇异链群本身并没有意义，因为单纯映射是针对顶点集定义的，其天然的可以表示边缘算子$\partial^{}_qc$。因此直接计算闭链和边缘链是更简单的选择，因为事实上同调群并不直接依赖于链群。\\
 \\
 关于\textsl{CW}复形的同调，也称为\textbf{胞腔同调 \textit{Cellular Homology}}，这里就不介绍了，有兴趣的读者可以参考\cite{Strwb}的\S\RomanNumeralCaps{5}。这里只简单的提一下，胞腔同调在拓扑上是严格定义的，但其计算依赖奇异同调，而根据上文可以过渡到更具象的单纯同调，因此在物理上胞腔同调并不是一个广泛使用的工具。
+
+\subsubsection{任意维Feynman图的定义}\label{sg--fG4}
+\noindent 在系统性的建立了单形复形，链复形和同调之后，让我们回到\textsl{Feynman}图。在开头我们提到，\textsl{Feynman}图是一个复形，但这并不准确，因为动量图是有向线段，其更像一维链。并且高维\textsl{Feynman}图无法直观的画出，这就要求我们从抽象角度，定义广义的\textsl{Feynman}图。\\
+\\
+为了得到一些启发，我们先来考察点粒子的\textsl{Feynman}图。对于空间\textsl{Feynman}图，若其中不包含圈图，这就是点和线段的集合，并且它们是规则相处的，因此这必然是一个一维复形。但对于圈图，比如
+$$\tikz{\begin{feynman}\diagram*{};\end{feynman}} $$
+
+
+
+根据定义，一维复形$K$是若干整系数有向紧线段的和，称其为\textbf{树}，若$K$连通且去掉任意的一个单形都会破坏其连通性，比如
+$$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below left=1cm of a](b){};\vertex[dot,above left=1cm of a](c){};\vertex[dot,right=2cm of a](d){};\vertex[dot,below right=1cm of d](e){};\vertex[dot,above right=2cm of e](f){};\vertex[dot,right=2cm of e](g){};\diagram*{(b)--[fermion](a),(c)--[fermion](a)--[fermion](d)--[fermion](e)--[fermion](f),(e)--[fermion](g)};\end{feynman}}.$$
+可以看到这和动量\textsl{Feynman}图类似，具体分析我们放在第\ref{*/G568700}节。为后续表述方便再引入一些名词，称一维复形$L$是\textbf{一维简单链}，若其可以写成如下形式
+$$L=a^{}_0a^{}_1+a^{}_1a^{}_2+\cdots+a^{}_{n-1}a^{}_n,\quad a^{}_i\neq a^{}_j,\forall 0\le i,j\le n.$$
+它成为一维闭链若$a^{}_n=a^{}_0$。于是根据定义树不能包含闭链，因为闭链是全连通的，去掉任意的一个线段$a^{}_ia^{}_{i+1}$都不会影响这两点之间的连通性，同时它也引出结论
+\begin{center}任意的一维闭链都可以分解为若干一维简单链的和。\end{center}
+
 
 \subsubsection{同调群的计算和拓扑性质}\label{GD35-**84}
 \noindent 上面我们通过代数结构，较为详细的建立了同调等价和同调群，现在我们进一步的探究其拓扑性质，同时对一些简单的空间计算其同调群。\\
@@ -14455,20 +14472,16 @@ $$\chi(X;G)-\sum_{q=0}^n(-1)^q\beta^{}_q(X;G)=0.$$
 现在我们不妨计算几个具体空间的\textsl{Euler}示性数。为此先考察零维同调群$H^{}_0(X;\mathbb Z)$的几何含义，根据定义这是商群$H^{}_0(X)=\ker\partial^{}_0/\Im\partial^{}_1$。由约定$C^{}_{-1}(X)=0$，从而
 $$Z^{}_0(X;\mathbb Z)=C^{}_0(X;\mathbb Z)\cong\bigoplus_{p\in X^0}\mathbb Z(p).$$
 而$\partial^{}_1:C^{}_1\to C^{}_0$，因此边缘链群$B^{}_0$同构于$X^0$中能相互连通的两个点的集合，从而$H^{}_0(X;\mathbb Z)$就是以连通性为等价关系的商点集，按照定义这些等价类$\expval{z^{}_i}$是连通分支。对于连通分支我们有\textbf{直和分解定理}
-\begin{equation}H^{}_q(X)\cong H^{}_q(\expval{z^{}_1})\oplus H^{}_q(\expval{z^{}_2})\oplus\cdots=\bigoplus_{i}\oplus H^{}_q(\expval{z^{}_i})\quad \forall q\in\mathbb Z,\end{equation}
+\begin{equation}H^{}_q(X)\cong H^{}_q(\expval{z^{}_1})\oplus H^{}_q(\expval{z^{}_2})\oplus\cdots=\bigoplus_{i} H^{}_q(\expval{z^{}_i})\quad \forall q\in\mathbb Z,\end{equation}
 而每个连通分支的零维同调群带入$Z^{}_0(\expval{z^{}_i};\mathbb Z)$给出
 \begin{equation}H^{}_0(\expval{z^{}_i})=Z^{}_0/B^{}_0\cong\mathbb Z\qty(\expval{z^{}_i})=\mathbb Z.\end{equation}
 于是设$X$共有$k$个连通分支，注意此时$\mathbb Z$作为交换群其直和按约定就是普通群的直积，我们就得到
 \begin{equation}H^{}_0(X;\mathbb Z)=\bigoplus_{i=1}^k\oplus \mathbb Z(\expval{z^{}_i})=\mathbb Z^k,\quad \beta^{}_0=k=\text{连通分支数}.\end{equation}
 对于一个全连通空间，它只有一个连通分支$k=1$，从而给出
 \begin{equation}H^{}_0(X;\mathbb Z)=\mathbb Z,\quad \beta^{}_0=1.\end{equation}
-其次是一维同调群$H^{}_1$，由定义这是商群$\ker\partial^{}_1/\Im\partial^{}_2$。方便起见我们只考察一维复形$	K$，则其无二维链给出$C^{}_2(K)=0\implies \Im\partial^{}_2=0$，于是$H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)$为闭链群。根据定义一维复形$K$是若干整系数有向紧线段的和，称其为\textbf{树}，若$K$连通且去掉任意的一个单形都会破坏其连通性，比如
-$$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below left=1cm of a](b){};\vertex[dot,above left=1cm of a](c){};\vertex[dot,right=2cm of a](d){};\vertex[dot,below right=1cm of d](e){};\vertex[dot,above right=2cm of e](f){};\vertex[dot,right=2cm of e](g){};\diagram*{(b)--[fermion](a),(c)--[fermion](a)--[fermion](d)--[fermion](e)--[fermion](f),(e)--[fermion](g)};\end{feynman}}.$$
-可以看到这和动量\textsl{Feynman}图类似，具体分析我们放在第\ref{*/G568700}节。为后续表述方便再引入一些名词，称一维复形$L$是\textbf{一维简单链}，若其可以写成如下形式
-$$L=a^{}_0a^{}_1+a^{}_1a^{}_2+\cdots+a^{}_{n-1}a^{}_n,\quad a^{}_i\neq a^{}_j,\forall 0\le i,j\le n.$$
-它成为一维闭链若$a^{}_n=a^{}_0$。于是根据定义树不能包含闭链，因为闭链是全连通的，去掉任意的一个线段$a^{}_ia^{}_{i+1}$都不会影响这两点之间的连通性，同时它也引出结论
-\begin{center}任意的一维闭链都可以分解为若干一维简单链的和。\end{center}
-对于一个任意的全连通一维复形$K$，其必然包含树$T$，而其中最大的树满足$K^0=T^0$，根据上述结论，它自然会将$K$中的闭链$z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+a^{}_ia^{}_0$拆分为一个不属于树的定向线段$s^{}_i=a^{}_ia^{}_0\in S^{}_1(K-T)$和在树内的简单链$z^{}_i-s^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i\in S^{}_1(T)$的和。假设$K-T$中有$l$个定向线段$s^{}_i$，$1\le i\le l$，将按此方法确定的一维闭链的集合记为
+其次是一维同调群$H^{}_1$，由定义这是商群$\ker\partial^{}_1/\Im\partial^{}_2$。方便起见我们只考察一维复形$	K$，则其无二维链给出$C^{}_2(K)=0\implies \Im\partial^{}_2=0$，于是
+$$H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)$$
+为闭链群。引入第\ref{sg--fG4}节中树的概念，对于一个任意的全连通一维复形$K$，其必然包含树$T$，而其中最大的树满足$K^0=T^0$，根据上述结论，它自然会将$K$中的闭链$z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+a^{}_ia^{}_0$拆分为一个不属于树的定向线段$s^{}_i=a^{}_ia^{}_0\in S^{}_1(K-T)$和在树内的简单链$z^{}_i-s^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i\in S^{}_1(T)$的和。假设$K-T$中有$l$个定向线段$s^{}_i$，$1\le i\le l$，将按此方法确定的一维闭链的集合记为
 $$A=\qty{z^{}_1,z^{}_2,\cdots.z^{}_l},\quad z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+s^{}_i\in Z^{}_1(K;\mathbb Z).$$
 根据构造，我们有$z^{}_i\qty(s^{}_j)=\delta^{}_{ij}$。同时令$\forall z\in Z^{}_1(K;\mathbb Z)$，$z\qty(s^{}_i)=n^{}_i$，则得到
 $$\qty(z-\sum_{i=1}^ln^{}_iz^{}_i)\qty(s^{}_j)=0\implies z=\sum_{i=1}^ln^{}_iz^{}_i.$$
@@ -14478,9 +14491,7 @@ $$\qty(z-\sum_{i=1}^ln^{}_iz^{}_i)\qty(s^{}_j)=0\implies z=\sum_{i=1}^ln^{}_iz^{
 \begin{equation}H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)\cong\bigoplus_{z^{}_i\in A}\mathbb Z=\mathbb Z^l,\quad \beta^{}_1=l=\text{一维洞个数}.\end{equation}
 当然我们可以推广到任意维数的拓扑空间，只需要将上述一维复形$K$换成一维骨架$K^0$即可，其余内容不变。从而我们看到，$H^{}_1$表征了拓扑空间的一维洞的分布情况，其深度参与了二维闭曲面的分类。更高维的同调群这里就不统一计算了，因为较为复杂，下面以具体空间给出具体结果。\\
 \\
-对于$n$维球面$S^n=\qty{\abs{\vb{r}}=1\middle\vert\vb{r}\in\mathbb R^n}$，可以证明其和$n+1$维单形的边界同胚
-$$f:\partial\Delta^{n+1}\to S^n,\quad \forall x\in \partial\Delta^{n+1},\quad f(x)=\frac{\vb{x}}{\abs{\vb{x}}^2}.$$
-同时由第\ref{FAGewtSG}节可知$\abs{Bd\Delta^{n+1}}=\partial\Delta^{n+1}$，因此由拓扑不变我们得到
+对于$n$维球面$S^n=\qty{\abs{\vb{r}}=1\middle\vert\vb{r}\in\mathbb R^n}$，可以证明其和$n+1$维单形的边界同胚。同时由第\ref{FAGewtSG}节可知单形的边缘骨架是其边缘$\abs{Bd\Delta^{n+1}}=\partial\Delta^{n+1}$，因此由拓扑不变我们得到
 \begin{equation}H^{}_q\qty(S^n;\mathbb Z)\cong H^{}_q\qty(Bd\Delta^{n+1};\mathbb Z).\end{equation}
 首先根据定义$Bd\Delta^{n+1}$是连通复形，从而由前文结论
 \begin{equation}H^{}_0\qty(Bd\Delta^{n+1};\mathbb Z)=\mathbb Z.\end{equation}
@@ -14562,28 +14573,28 @@ $$Z^{}_i(X;G)\otimes^{}_GZ^{}_j(Y;G)\to Z^{}_{i+j}(X\times Y;G),\quad B^{}_i(X;G
 \begin{equation}H^{}_{i+j}(X\times Y;\mathbb R)\cong H^{}_i(X;\mathbb R)\otimes^{}_{\mathbb R}H^{}_j(Y;\mathbb R).\end{equation}
 进一步的，假设我们固定维数和$i+j=n$，这样有若干种不同的张量积组合，每一种组合都对应一个\textsl{EZ}同构。同时由边缘算子的展开(\ref{FAetySF})可以看到，总同构一定是所有情形的和，交换群元的加法变为交换群之间的直和，于是我们得到固定维数的\textsl{Kunnëth}定理
 \begin{equation}H^{}_n(X\times Y;\mathbb R)\cong \bigoplus_{i+j=n} H^{}_i(X;\mathbb R)\otimes^{}_{\mathbb R}H^{}_j(Y;\mathbb R).\end{equation}
-关于任意系数群，特别是带挠的整系数同调群的\textsl{Kunnëth}定理，可以参见第\ref{FVGtyhv}节，这里就不给出了。对于奇异同调的情形，因为我们已经证明了奇异同调和单纯同调在可剖分空间上等价，因此这里的\textsl{Kunnëth}定理也必然适用于奇异同调，可以完全照用。当然作为映射，仍需要注意其定义域和取值的问题，比如\textsl{EZ}定理中$S^{}_{i+j}(X\times Y)$的定义域和乘积$S^{}_i(X)\times S^{}_j(Y)$之间的关系，因为乘积定义在多边形$\Delta^i_X\times\Delta^j_Y$上，而另一个定义在单形$\Delta_{X\times Y}^{i+j}$上，两者之间差一个单形选择映射，这都需要读者自行补充。
-
-\subsubsection{映射度和不动点}
-
-\noindent 上文中我们较为详细的介绍了同调论的一些计算，当然这些计算依然仅限于具体的抽象图形，或者用来考察拓扑空间的性质。但我们也不难发现一些特殊之处，比如$H^{}_n\qty(S^n;\mathbb Z)\cong\mathbb Z$，这是因为$n$维闭链群的生成元只有它本身一个，且$H^{}_n$是拓扑不变量。这提醒我们，或许可以将该唯一生成元当作工具，来探测自同胚的一些性质。
-
-
-
-
-
-
+关于任意系数群，特别是带挠的整系数同调群的\textsl{Kunnëth}定理，可以参见第\ref{FVGtyhv}节，这里就不给出了。对于奇异同调，因为我们已经证明了它和单纯同调在可剖分空间上等价，因此这里的\textsl{Kunnëth}定理也必然适用于奇异同调，可以完全照用。\\
+\\
+当然作为映射，仍需要注意其定义域和取值的问题，比如\textsl{EZ}定理中$S^{}_{i+j}(X\times Y)$的定义域和乘积$S^{}_i(X)\times S^{}_j(Y)$之间的关系，因为乘积定义在多边形$\Delta^i_X\times\Delta^j_Y$上，而另一个定义在单形$\Delta_{X\times Y}^{i+j}$上，两者之间差一个单形选择映射，这都需要读者自行补充。
 
 \subsubsection{Feynman图的同调}\label{*/G568700}
 
 
 
 
+
+
+
 \subsection{同伦和图的等价性}\label{234200.05}
 \subsubsection{映射和空间的同伦}
-\subsubsection{同伦群和同调的同伦不变}\label{23R50.05}
+\subsubsection{基本群和同伦群}
+
+\subsubsection{同调的同伦性与映射度}\label{23R50.05}
+\noindent 我们在第\ref{GD35-**84}节中介绍了同调群的一些计算，当然这依然仅限于考察拓扑空间的性质，但我们也不难发现一些特殊之处，比如$H^{}_n\qty(S^n;\mathbb Z)\cong\mathbb Z$，这是因为$n$维闭链群的生成元只有它本身一个。且$H^{}_n$是拓扑不变量，这提醒我们，或许可以将该唯一生成元当作工具，来探测同胚的一些性质。\\
+\\
+从$S^n$的自同态$f:S^n\to S^n$开始，它诱导了最高维同调群同态$f^{}_{*n}:H^{}_n\qty(S^n;\mathbb Z)\to H^{}_n\qty(S^n;\mathbb Z)$，这里我们只考察
 \subsubsection{辫群和扭结概览}
-\subsubsection{扭结的环绕数}
+
 \subsubsection{Feynman图的同伦}
 
 \subsection{上同调和发散理论}
@@ -14603,7 +14614,6 @@ $$0\to A^{}_1\xrightarrow{f^{}_1}A^{}_2\xrightarrow{f^{}_2}A^{}_3\xrightarrow{f^
 \subsubsection{Feynman图的de Rham上同调表示}
 \subsubsection{de Rham上同调的发散理论}
 
-\subsection{可重整化理论的拓扑判据}
 \subsection{1PI结构的几何本质}
 \subsection{重整化群的涌现}
 
@@ -14884,9 +14894,8 @@ $$\varPi^{}_3\qty(S^3)\cong\varPi^{}_3\qty(S^2)\cong\mathbb Z,$$
 \subsubsection{矢量丛的拓扑示性类}
 \subsubsection{Stiefel-Whitney类}
 \subsubsection{主丛上的代数示性类}
-\subsubsection{复矢量丛的陈类}
-\subsubsection{Riemann流形上的陈类}
-
+\subsubsection{矢量丛的陈类}
+\subsubsection{陈类框架下的拓扑非平凡性和拓扑反常}
 
 \clearpage
 \section{矩阵微扰的几何结构}\label{ha324ong}
@@ -15174,8 +15183,9 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \section{湍流的统计场论}\label{Y6TY--,mh}
 
 \section{拓扑量子场论引入}\label{Y6fghn.--,mh}
-
-
+\subsection{Chern-Simons理论}
+\subsubsection{联络的Chern-Simons作用量}
+\subsubsection{扭结的环绕数}
 \section{黑洞热力学}\label{Y,<>,.,''}
 
 \section{共形场论和全息原理}\label{664L;kmh}
