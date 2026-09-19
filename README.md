@@ -16,24 +16,30 @@ And the LaTex code file is
 which is hard to read, I didn't rearrange the entire codes.
 
 # *Table of contents*
-1. [Basics](#basics)
+1. [General contents](#general-contents)
 2. [Prerequisite](#prerequisite)
 3. [Version information](#version-information)
 4. [Latest update](#latest-update)
 
-## Basics
+## General contents
 
 * Ideology of the second quantization, emerged from the 1D harmonic oscillator.
 * Landau-Ginzburg second order phase transition theory and many-body dynamics.
-* Quantum field theory for absolute zero temperature, and standard model of particles.
+* Superfluid and superconductor as condensed matter exemples.
+* Path integral and partition functional as the core concept of the statistical behavior of fields.
+* Spinors and its origins, from the non relativistic quantum dynamics in the magnetic field.
+* Classical electromagnetic radiation review.
+* Quantum field theory for absolute zero temperature, quantum electrodynamics and standard model of particles.
 * Thermal field in a heat bath, including both thermodynamical equilibrium and non-equilibrum system.
 * Effective/conformal aspects of fields, emerged from the renormalization theory.
+* Riemannian and symplectic geometry, 3+1 hamiltonian description of the gravitational field, and first analyse on the black holes.
 * Quantum behavior of the gravitational fields, and a glance of the gravitational quantization.
 * More in appendix, with
    * Effective turbulence field theory
    * Stochastic geometry and dynamical phase transition
    * Algebraic topology, fiber bundles, charateristic classes 
    * Topology of the Feynman diagrams
+   * Black hole thermodynamics
    * AdS/CFT correspodence, Gravity/CMT duality
    * ect ...
    
@@ -60,7 +66,8 @@ Second version will change dramtically the structure, and of course the prerequi
 
 ## Latest update
 
-The Scattering theory of bounded state -- the Bethe-Slapter equation, and the linear reponse theory of near-equilibrum field.
+The Scattering theory of bounded state -- the Bethe-Salpeter equation.
+Corrections on the BSC theory of Fermi liquid model in superconductor.
 Appendix for homology theory, and covering space.
 
 Scattering in the external field and statistical dissipation theory coming next.
