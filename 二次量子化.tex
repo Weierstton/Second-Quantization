@@ -1475,7 +1475,15 @@ $$\hat{N}^{}_{\vb{k}\alpha}=\hat{\vb{c}}^{\dagger}_{\vb{k}\alpha}\hat{\vb{c}}^{}
 \begin{equation}\hat{H}=\sum\limits_{\vb{k}\alpha}\hbar\omega^{}_{\vb{k}}\qty(\hat{N}^{}_{\vb{k}\alpha}+\dfrac{1}{2}\hat{\vb{I}}),\label{bijnon(()}\end{equation}
 相应的本征值为
 \begin{equation}E=\hbar\omega^{}_{\vb{k}}\sum\limits_{\vb{k}\alpha}\qty(N^{}_{\vb{k}\alpha}+\dfrac{1}{2}).\end{equation}
-其余的内容这里就不计算了，在形式上和谐振子模型均保持一致。
+其余的内容这里就不计算了，在形式上和谐振子模型均保持一致。需要强调，上述我们依旧处于非相对论背景，所以可以只讨论矢量势的量子化。\\
+\\
+当然也可以直接从四维电磁场给出量子化，称为\textbf{\textsl{Gupta-Bleuler}形式化}。它的一个显而易见问题就是，式(\ref{kudouhxzbcd})说明正则动量的时间分量$\varpi^{}_0=0$，按照二次量子化的一般原则，它是不能量子化为算符的。为此我们可以对电磁场\textit{Lagrangian}(\ref{6576fc})加一个散度项
+\begin{equation}\Lambda(\lambda)=-\dfrac{1}{16\pi}F^{}_{\mu\nu}F^{\mu\nu}-\frac{\lambda}{8\pi}\qty(\partial^{}_\mu A^\mu)^2,\end{equation}
+这样无源\textsl{EL}方程为
+\begin{equation}\square A^{}_\mu+(1-\lambda)\partial^{}_\mu\qty(\partial^{}_\nu A^\nu)=0.\end{equation}
+从而我们看到，波动方程$\square A^{}_\mu=0$不需要洛伦兹规范$\partial^{}_\mu A^\mu=0$，只需要$\lambda=1$即可。相应的，正则动量的时间分量给出
+\begin{equation}\varpi^{}_0(\lambda)=\pdv{\Lambda(\lambda)}{\qty(\partial^{}_t A^0)}=-\frac{\lambda}{4\pi}\partial^{}_\mu A^\mu\neq0,\end{equation}
+其非零。从而我们可以取算符$\hat{A}^\mu$，进而得到相应的四维量子电磁波场。具体的理论可以参考\cite{Lwer[]]}，这里不做过多叙述，我们依旧以本征振动模型为基础。
 
 \subsection{基于狭义相对论的修正}
 \noindent 简单分析一下上述的二次量子化操作不难发现，矢势算符$\hat{\vb{A}}^{}_{\vb{k}\alpha}$是时间的直接函数，而能级$E^{}_N$是通过定态\textsl{Schrödinger}方程$\hat{H}\ket{N}=E^{}_N\ket{N}$算出来的，一切看起来都是在非相对论体系下进行的。但是经典体系在定态情况下，算符和时间无关，看似相对论体系和经典体系在量子化下无法统一。\\
@@ -4166,7 +4174,9 @@ $$\expval{N}=-\partial^{}_{\mu}J=-T\beta\sum_n\frac{\exp(-\dfrac{E^{}_n-\mu}{T})
 \begin{equation}\mu(T=0)=E^{}_F\propto k_F^2,\end{equation}
 称为\textbf{\textsl{Fermi}能}。在波矢空间中，$k^{}_F=const$对应了一个球面，称为\textbf{\textsl{Fermi}面}，其中包含了系统内所有的费米子，并且球面内每一个态$k^{}_n$均占满了$g=2s+1$个费米子，也就是简并度，因而粒子数$N=V\expval{N^{}_F}$对应了
 $$\Omega=\frac{1}{g}N=\frac{N}{2s+1}=\frac{V}{2s+1}\expval{N^{}_F}=\frac{V}{2s+1}\rho^{}_{x=k^{}_F}$$
-个微态，其中$\expval{N^{}_F}$是\textbf{\textsl{Fermi}占有数密度}。\\
+个微态，其中$\expval{N^{}_F}$是\textbf{\textsl{Fermi}占有数密度}。这里我们邀请读者自行验证，\textsl{FD}分布可以通过式(\ref{huoZGSsfh})，在巨正则系综$\hat{\vb{w}}=Z^{-1}\exp(-\beta\hat{H}^{\textit{eff}})$下，令$\hat{f}=\hat{N}^{}_n=\hat{c}^\dagger_n\hat{c}^{}_n$得到
+\begin{equation}\expval{N^{}_n}=\frac{1}{Z}\tr{\exp(-\beta\hat{H}+\beta\mu\hat{N})\hat{c}^\dagger_n \hat{c}_n},\end{equation}
+其中$\qty{\hat{c},\hat{c}^\dagger}$是费米反对易占有数算符。这实际上就是自旋—统计定理的另一种表述方式，因为只有反对易性才能得到\textsl{FD}分布。\\
 \\
 可以注意到，因为在\textsl{Fermi}面内没有空余态，所以粒子无法跃迁，因此我们可以断定所有粒子均处于相应的基态。这是合理的，因为根据能量均分定理(\ref{IKBBB)DSF(})得到
 $$T=0\implies E(T=0)=\frac{d}{2}T=0,$$
@@ -4192,7 +4202,7 @@ $$\expval{E}(T=0)=g\int\frac{k^2}{2m}\dd^3\vb{r}\qty(\frac{\dd\vb{p}}{2\pi})^3(T
 \begin{equation}\expval{E}=\frac{3}{2}PV.\end{equation}
 这个结论事实上是\textsl{Boltzmann}能量均分定理的一个推论，在三维下应用式(\ref{IKBBB)DSF(})我们得到
 $$\expval{E}=\frac{3}{2}PV=\frac{3}{2}T\implies PV=T,$$
-也就是单位摩尔理想气体的物态方程，所以从能量反向推导简并压也是可行的。因此这里我们建议读者从热力学的角度出发推导，将这个物理现象理解为一个准静态过程，对电子取$g=2s+1=2$计算出\textsl{Fermi}面微元内的元功$\dd{W}=\dd{E}=P\dd{V}$，从而得到相应的结论
+也就是单位摩尔理想气体的物态方程，所以从能量反向推导简并压也是可行的。因此这里我们建议读者从热力学角度出发推导，将这个物理现象理解为一个准静态过程，对电子取$g=2s+1=2$计算出\textsl{Fermi}面微元内的元功$\dd{W}=\dd{E}=P\dd{V}$，从而得到相应的结论
 $$P^{}_{FD}\qty(T=0,s=\frac{1}{2})=\frac{1}{5m}\qty(3\pi^2)^{2/3}\expval{N^{}_F}^{5/3}.$$
 这个推导思路可以参考\cite{L3} \S5.3，此处我们不赘述。\\
 \\
@@ -4220,7 +4230,9 @@ $$\exp{-\beta(E^{}_n-\mu)}\leq1\iff\beta(E^{}_n-\mu)=\frac{E^{}_n-\mu}{T}>0\iff\
 \begin{equation}J=-T\ln{\Xi}=T\sum_n\ln(1-\exp{-\frac{E^{}_n-\mu}{T}}),\label{JJBSD][*}\end{equation}
 从而得到平均占有数分布为
 \begin{equation}\expval{N^{}_n}(T)=-\partial^{}_{\mu}J=\frac{\exp{-\beta(E^{}_n-\mu)}}{1-\exp{-\beta(E^{}_n-\mu)}}=\frac{1}{\exp{\beta(E^{}_n-\mu)}-1}.\end{equation}
-这一分布称为\textbf{\textsl{Bose-Einstein}分布}，对应的统计规律称为\textbf{\textsl{Bose-Einstein}统计}。不难看到对于平均占有数，\textsl{BE}分布和\textsl{FD}分布两者只在符号上有所差异，但是体现的现象是截然不同的。这里我们先考察$\mu(T)$的单调性，取连续谱的粒子数
+这一分布称为\textbf{\textsl{Bose-Einstein}分布}，对应的统计规律称为\textbf{\textsl{Bose-Einstein}统计}。不难看到对于平均占有数，\textsl{BE}分布和\textsl{FD}分布两者只在符号上有所差异，但是体现的现象是截然不同的。同样的我们邀请读者自行验证，\textsl{BE}分布可以通过计算
+\begin{equation}\expval{N^{}_n}=\frac{1}{Z}\tr{\exp(-\beta\hat{H}+\beta\mu\hat{N})\hat{c}^\dagger_n \hat{c}_n}\end{equation}
+得到其中$\qty{\hat{c},\hat{c}^\dagger}$是玻色对易占有数算符，并且只有对易性才能得到\textsl{BE}分布，这就是$+1$和$-1$的深层含义。这里我们先考察$\mu(T)$的单调性，取连续谱的粒子数
 \begin{equation}N\propto\int\expval{N}(\vb{r},\vb{p})\dd{V}=\int_0^{\infty}\qty(\exp{\frac{k^2-\mu(T)}{T}}-1)^{-1}k^2\dd{k},\end{equation}
 当降低温度$T$，若此时$\mu(T)$单调递增将会导致$\lim\limits_{T\to 0}\mu(T)=-\infty$，从而使得粒子数趋于$0$。这是不可能的，因为已经存在的粒子不会因为温度的改变而离开。所以$\mu(T)$只能单调递减，也就是$\lim\limits_{T\to0}\mu=\mu^{}_{max}=0$。这也就意味着，当温度不断下降时我们有
 $$\lim\limits_{T\to0}E^{}_n(T)=E^{}_0=0,\quad \lim\limits_{T\to0}\mu(T)=0\implies\lim\limits_{T\to0}\expval{N^{}_n}(T)=\infty.$$
@@ -4342,7 +4354,7 @@ $$I(T,\omega)=E(T,\omega)\implies\dfrac{A}{B\exp(-\beta\omega)-C}=\dfrac{1}{\pi^
 \\
 当然上述的\textsl{Einstein}关系是通过热平衡给出的，但是自发的发射在事实上不需要依靠热平衡的先决条件。所以理论上\textsl{Einstein}关系可以不依赖热平衡导出，请参考第\ref{yonghur}节，这也是量子场论的建立基础之一。并且我们在统计物理中已经应用了一些二次量子化的结论，包括使用产生—湮灭算符来计算配分函数。可以看到从二次量子化的角度出发，统计物理的理解就变得十分简单，这是因为统计物理和二次量子化一样，都重点关注粒子数的变化。
 
-\subsection{铁磁—顺磁相变：二维Ising模型和平均场论}\label{wohoooi}
+\subsection{铁磁—顺磁相变：2D经典Ising模型和平均场}\label{wohoooi}
 \noindent 上面我们比较系统性的介绍了统计物理，我们看到费米体系和玻色体系在低温时均有相变产生。这里我们用统计物理，从微观的角度来研究一个物体中的简单现象：铁磁—顺磁相变，并且给出一个相变理论中的重要方法：平均场理论。
 \subsubsection{物体的磁性与晶格}
 \noindent 首先介绍一下何为材料的铁磁态与顺磁态。对于一个金属物体，一般而言其是不带磁性的，比如铁块。但是若我们使用一个强磁铁去靠近这个铁块，比如钕磁铁Nd$_2$Fe$_{14}$B，则铁块一定会被吸到磁铁上。对于铁块的这种状态称为\textbf{顺磁性 \textit{Paramagnetic}}，施加外部磁场后会使得顺磁体产生磁场，并且该磁场和外场相同，也就是顺着外场。而本身就带有磁性的钕磁铁称为\textbf{铁磁性 \textit{Ferromagnetic}}，它不受外部磁场的影响。\\
@@ -4395,7 +4407,9 @@ $$\mathcal{H}^{}_{s}=\frac{1}{4}(E^{}_{aa}+E^{}_{bb}-2E^{}_{ab})\sum_i\sum_j\sig
 \begin{equation}\mathcal{H}^{}_{s}=-J^{ij}\sigma^{}_i\sigma^{}_j,\label{65gg/--}\end{equation}
 其中$\textbf{J}^{cd}$称为\textbf{自旋—自旋耦合张量}，是固体物理中的一个重要系数。不难看到这样的一个形式在物理中是比较常见的，还有比如流场尾迹分析中的等价质量，导电材料中的介电系数张量，刚性旋转体的转动惯量张量等。在这种形式下我们得到晶格的总能量为
 \begin{equation}\mathcal{H}^{}_{hei}(\sigma,H)=-J\sum_i\sum_j\sigma^{}_i\sigma^{}_j-H\sum_i\sigma^{}_i,\end{equation}
-称为\textbf{\textsl{Heisenberg}能量}，是二维\textsl{Ising}模型的基本能量，后续我们统一取$N$个格点代表$N$个电子。同时在不引起歧义的情况下，为方便起见我们统一记磁矩为$\vb{m}$，不再区分宏观磁矩和自旋磁矩，因为\textsl{Ising}模型只涉及自旋。
+称为\textbf{\textsl{Heisenberg}能量}，是二维\textsl{Ising}模型的基本能量，后续我们统一取$N$个格点代表$N$个电子。同时在不引起歧义的情况下，为方便起见我们统一记磁矩为$\vb{m}$，不再区分宏观磁矩和自旋磁矩，因为\textsl{Ising}模型只涉及自旋。\\
+\\
+当然需要说明的是，这里所推导的\textsl{Heisenberg}能量是经典的，因为我们只考察了垂直于晶格平面$z$向的自旋耦合，它的本征值就是$\qty{\pm1}$。因此只要有变量能取到$\qty{\pm1}$，则我们都可以定义相应的\textsl{Ising}模型，其\textsl{Heisenberg}能量并不涉及量子效应。在真实的量子\textsl{Ising}模型中，\textsl{Heisenberg}能量需要通过严格计算自旋耦合得到，具体可以参考第\ref{ARFWEF4002}节。
 \subsubsection{Ising模型和自洽性方程}\label{woh3ooi}
 \noindent 得到了能量之后我们就可以计算正则系综了，首当其冲的便是\textsl{Heisenberg}能量下二维\textsl{Ising}模型的配分函数$Z=\sum\limits_a\exp(-\beta E^{}_{hei,a})$。这里不难看到问题所在：如何在$\mathcal{H}^{}_{hei}(\sigma,H)$中体现宏观态指标$a$？我们知道电子能级和自旋值有关，此处就体现为$\sigma^{}_i=\pm1$，所以宏观态指标$a$可以用自旋值集合$\qty{\sigma^{}_i}$表示，因此配分函数写作
 \begin{equation}Z=\sum\limits_{\qty{\sigma^{}_i}}\exp{-\beta \mathcal{H}^{}_{hei}(\sigma)}=\sum\limits_{\qty{\sigma^{}_i}}\exp{-\beta\qty(-J\sum_i\sum_j\sigma^{}_i\sigma^{}_j-H\sum_i\sigma^{}_i)}.\end{equation}
@@ -10756,18 +10770,20 @@ $$\mathfrak D^{(1)}_4(y,y,y,1,2,3)\implies D^{}_F(1,y)\mathfrak D^{(1)}_4(y,y,2,
 \item 其中一部分由\textsl{Wick}定理确定，可以将其分解为传播子$D^{}_F$和全连通$2n$点函数的一级修正$\mathfrak D^{(1)}_4(2n)$的乘积，而我们知道$\mathfrak D^{}_4(2n)$确定了上一级修正，因而每一级修正的图都和上一级的在物理性质上相同。这些项构成一个级数，最终的结果形如$\mathfrak C(1,2)\mathfrak C(3,4)$，\label{Scv11+}\item 另一部分和\textsl{Wick}定理无关，是全连通多点函数独有的结构，其严格区分了自由态和相互作用态。它不可拆分为$D^{}_F\mathfrak D^{(1)}_4(2n)$的乘积形式，包含自由传播子大于一的幂次项，并且一定包含四个自由外腿$D^{}_F(1,a)D^{}_F(2,b)D^{}_F(c,3)D^{}_F(d,4)$。若去掉这四个外腿，剩下部分的顶点数和修正的级数一致，比如一级修正对应单顶点，三级修正对应三顶点等。\label{Sc2441+}\end{enumerate}
 回顾到在第\ref{1pL//-..][rG}节中，我们引入了单粒子可约与不可约的概念，其中\textit{1PI}直观来讲就是无法再拆分的图。它们完全匹配上面关于$\mathfrak D^{}_4(1,2,3,4)$的两个表述，其中第\ref{Scv11+}点对应可约，第\ref{Sc2441+}点对应不可约。所以我们将满足第\ref{Sc2441+}点，去掉四个自由外腿后剩下的部分称为\textbf{四点\textit{1PI}}，直观的来讲它就是四点形式的自能。\\
 \\
-根据第\ref{Sc2441+}点，每一个四点\textit{1PI}的顶点数和修正级数相同，并且它们通过$\mathfrak D^{}_4(1,2,3,4)$的\textsl{SD}方程构成一个无穷级数。由于每一个四点\textit{1PI}四周都连接四条外腿，因此将外腿提出后可以对四点\textit{1PI}级数求和，记级数的总和为$\varPi^{}_4$，算上零级修正的自由四点函数$\mathfrak D^{(0)}_4=D^{}_4$，则最终全连通四点函数可以写作
-\begin{equation}\mathfrak D^{}_4(1,2,3,4)=D^{}_4+D^{}_FD^{}_F\hat{\varPi}^{}_4D^{}_FD^{}_F.\label{sufFH}\end{equation}
-当然需要注意，这里的$D^{}_4$的展开需要和后面的外腿相配，即外腿的顺序是有限制的。现在我们来定义这个算符$\hat{\varPi}$，方便起见将第$n$级修正的四点\textit{1PI}按顶点数记为$\varPi^{(n)}_4\qty(x^{}_1,x^{}_2,\ldots,x^{}_n)$，则一级修正(\ref{5478..4'})可以写作
+根据第\ref{Sc2441+}点，每一个四点\textit{1PI}的顶点数和修正级数相同，并且它们通过$\mathfrak D^{}_4(1,2,3,4)$的\textsl{SD}方程构成一个无穷级数。由于每一个四点\textit{1PI}四周都连接四条外腿，因此将外腿提出后可以对四点\textit{1PI}级数求和，记级数的总和为$\varPi^{}_4$，算上零级修正的自由四点函数$\mathfrak D^{(0)}_4$，则最终全连通四点函数可以写作
+\begin{equation}\mathfrak D^{}_4(1,2,3,4)=\mathfrak D^{(0)}_4+D^{}_FD^{}_F\hat{\varPi}^{}_4D^{}_FD^{}_F.\label{sufFH}\end{equation}
+当然需要注意，这里的$\mathfrak D^{(0)}_4$的展开需要和后面部分的外腿相配，因为外腿的动量方向是唯一的。比如假设后面部分外点$1$的动量流向外点$3$，那么展开式只能为
+\begin{equation}\mathfrak D^{(0)}_4(1,2,3,4)=D^{}_F(1,3)D^{}_F(2,4).\label{Asfg77FG}\end{equation}
+现在我们来定义这个算符$\hat{\varPi}$，方便起见将第$n$级修正的四点\textit{1PI}按顶点数记为$\varPi^{(n)}_4\qty(x^{}_1,x^{}_2,\ldots,x^{}_n)$，则一级修正(\ref{5478..4'})可以写作
 $$\mathfrak D^{(1)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(1)}_4(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega,$$
 二级修正(\ref{BD1243/*/*})写作
 $$\mathfrak D^{(2)}(1,2,3,4)=\int D^{}_F(1,x)D^{}_F(2,x)\varPi^{(2)}_4(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2,$$
 其余的就不写了。所以算符式(\ref{sufFH})可以具体打开为
-\begin{equation}\begin{aligned}&\mathfrak D^{}_4(1,2,3,4)-D^{}_4(1,2,3,4)\\&=\int D^{}_F(1,x)D^{}_F(2,x)\qty{\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega+\varPi^{(2)}_4(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2+\cdots}\\&=D^{}_F(1)D^{}_F(2)\circledast\qty(\varPi^{(1)}_4+\varPi^{(2)}_4+\cdots)\circledast D^{}_F(3)D^{}_F(4)=D^{}_FD^{}_F\circledast\varPi^{}_4\circledast D^{}_FD^{}_F.\end{aligned}\label{NMT756==}\end{equation}
+\begin{equation}\begin{aligned}&\mathfrak D^{}_4(1,2,3,4)-\mathfrak D^{(0)}_4(1,2,3,4)\\&=\int D^{}_F(1,x)D^{}_F(2,x)\qty{\varPi^{(1)}(x)D^{}_F(x,3)D^{}_F(x,4)\dd\Omega+\varPi^{(2)}_4(x,y)D^{}_F(y,3)D^{}_F(y,4)\dd\Omega^2+\cdots}\\&=D^{}_F(1)D^{}_F(2)\circledast\qty(\varPi^{(1)}_4+\varPi^{(2)}_4+\cdots)\circledast D^{}_F(3)D^{}_F(4)=D^{}_FD^{}_F\circledast\varPi^{}_4\circledast D^{}_FD^{}_F.\end{aligned}\label{NMT756==}\end{equation}
 也就是说，算符$\hat{\varPi}$作用到外腿上的本征值为$\varPi$，参照自能(\ref{UGYU[0274378][})可以定义为
 \begin{equation}\varPi^{}_4=\text{Sum of all 4-point \textit{1PI} with 4 external legs}.\label{gRG-*000}\end{equation}
-基于顶点数和修正级数相同这一特点，我们称$\varPi^{(n)}$为\textbf{顶点修正 \textit{Vertex Correction}}，级数总和$\varPi$称为\textbf{顶点函数}。这就是全连通四点函数的结果，在形式上和\textsl{BD}级数(\ref{UYRIERY})的一级修正是一样的，一般在不引起歧义的情况下也会按\textsl{BD}级数简写为
-\begin{equation}\mathfrak D^{}_4=D^{}_4+D^{}_4\varPi^{}_4D^{}_4.\end{equation}
+基于顶点数和修正级数相同这一特点，我们称$\varPi^{(n)}$为\textbf{顶点修正 \textit{Vertex Correction}}，级数总和$\varPi$称为\textbf{顶点函数}。这就是全连通四点函数的结果，在形式上和\textsl{BD}级数(\ref{UYRIERY})的一级修正是一样的，一般在不引起歧义的情况下，根据展开式(\ref{Asfg77FG})的选择按\textsl{BD}级数将式(\ref{sufFH})简写为
+\begin{equation}\mathfrak D^{}_4=\mathfrak D^{(0)}_4+\mathfrak D^{(0)}_4\varPi^{}_4\mathfrak D^{(0)}_4.\end{equation}
 并且按照性质(\ref{ors//2VB})，我们可以直接得到其和有效作用量的关系
 \begin{equation}i\varPi^{}_4(1,2,3,4)=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\pdv{\eta^{}_4}\Gamma^{}_{\text{int}}(\eta)}_{\eta=0}.\label{ZZXrgt}\end{equation}
 这是不依赖于具体的相互作用的，同时也说明顶点函数和自能处于同一个理论框架内。按照这个公式，我们不难得到$\varPi$的物理含义，回顾到在第\ref{ha--yyub*}节中，式(\ref{CG;P1Y[]f})指出准经典近似下$\Gamma(\eta)\approx S(\psi)$，因此对于经典四次相互作用场我们得到
@@ -10777,9 +10793,9 @@ $$i\varPi^{cl}_4(1,2,3,4)=-\eval{\pdv{\eta^{}_1}\pdv{\eta^{}_2}\pdv{\eta^{}_3}\p
 因此顶点函数确定了相互作用系数$\lambda$的修正，一般我们称之为\textbf{耦合常数}，比如\textsl{Ising}模型中式(\ref{65gg/--})确定的张量$J^{ij}$就是典型的耦合常数。关于\textsl{Ising}模型，我们在第\ref{VYgx00..34}节中会看到顶点函数在其中的作用。\\
 \\
 现在我们来证明，$\varPi$的引入的确可以不依赖于具体的相互作用。回到四点\textsl{SD}方程(\ref{8SG1/45764h})，暂时不指定相互作用形式
-$$\mathfrak D^{}_4(1,2,3,4)=D^{}_4(1,2,3,4)+\int D^{}_F(1,x)\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\Lambda^{}_{\text{int}}\qty(\psi^{}_x)\psi^{}_2\psi^{}_3\psi^{}_4}}{\Omega}_{\text{conn}}\dd\Omega^{}_x.$$
+$$\mathfrak D^{}_4(1,2,3,4)=\mathfrak D^{(0)}_4(1,2,3,4)+\int D^{}_F(1,x)\mel**{\Omega}{\mathbb T\qty{\delta^{}_{\psi}\Lambda^{}_{\text{int}}\qty(\psi^{}_x)\psi^{}_2\psi^{}_3\psi^{}_4}}{\Omega}_{\text{conn}}\dd\Omega^{}_x.$$
 注意到式(\ref{NMT756==})中，除了\textsl{SD}方程自带的$D^{}_F(1,x)$，还显含一个$D^{}_F(2,x)$，因此我们将\textsl{SD}方程写作
-\begin{equation}\mathfrak D^{}_4(1,2,3,4)=D^{}_4(1,2,3,4)+\int D^{}_F(1,x)D^{}_F(2,x)K(x,x,y,z)\mathfrak D^{}_4(y,z,3,4)\dd\Omega^x.\label{PPouIIG}\end{equation}
+\begin{equation}\mathfrak D^{}_4(1,2,3,4)=\mathfrak D^{(0)}_4(1,2,3,4)+\int D^{}_F(1,x)D^{}_F(2,x)K(x,x,y,z)\mathfrak D^{}_4(y,z,3,4)\dd\Omega^x.\label{PPouIIG}\end{equation}
 这就确定了级数递推，我们最终会得到以下的卷积形式
 $$\qty(K+K\circledast D^2_F\circledast K+ K\circledast D^2_F\circledast K\circledast D^2_F\circledast K+\cdots)\circledast D^{}_4(y,z,3,4),\quad  D^2_F=D^{}_F\circledast D^{}_F.$$
 因为$y$和$z$是内点，在连通图中一定要接到外点，因此$D^{}_4$的展开只有$D^{}_4(y,z,3,4)=D^{}_F(y,3)D^{}_F(z,4)$。定义顶点函数及其修正为
@@ -13464,7 +13480,9 @@ $$S^{\tilde{i}\tilde{j}(2)}_D(a,b)=\frac{(-ie)^2}{2}\bigintsss\dd\Omega^{}_x\dd\
 $$\begin{aligned}&\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)\hat{A}^{}_\mu(x)\hat{\overline{\bm{\psi}}}(y)\gamma^\nu\hat{\bm{\psi}}(y)\hat{A}^{}_\nu(y)}\\&=\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)\hat{\overline{\bm{\psi}}}(y)\hat{\bm{\psi}}(y)}\mathbb T\qty{\gamma^\mu\hat{A}^{}_\mu(x)\gamma^\nu\hat{A}^{}_\nu(y)}.\end{aligned}$$
 为了计算总真空矩阵元，需要在其中插入一组真空态$\dyad{0}{0}$。虽然在理论上，此处完备的占有数态还包括双粒子数态，但\textsl{Parseval}性质使得其矩阵元恒为零。再将$\gamma$矩阵提出，于是我们得到
 \begin{equation}S^{\tilde{i}\tilde{j}(2)}_D(a,b)=-\frac{e^2}{2}\gamma^\mu\gamma^\nu\bigintsss\dd\Omega^2\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)\hat{\overline{\bm{\psi}}}(y)\hat{\bm{\psi}}(y)}}{0}\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(x)\hat{A}^{}_\nu(y)}}{0}.\label{JIggf,-*..}\end{equation}
-需要说明的是，这里提出$\gamma$矩阵只是形式上的，具体计算截面时仍应放回，比如参考式(\ref{Niyovw554})。从第二项就是式(\ref{pHgf015--})确定的自由光子传播子，在\textsl{Feynman}规范下以动量\textsl{Feynman}图表示为
+需要说明的是，这里提出$\gamma$矩阵只是形式上的，具体计算截面时仍应放回，比如参考式(\ref{Niyovw554})。并且$\gamma$矩阵的乘积应理解为张量积
+\begin{equation}\gamma^\mu\gamma^\nu=\gamma^\mu\otimes\gamma^\nu=\gamma^\mu_{\tilde{i}\tilde{j}}\gamma^\nu_{\tilde{k}\tilde{l}}.\end{equation}
+只是为了方便，将其简写为乘积，读者务必要将此简写和相应代数的乘积定义(\ref{fpij3458})区分。从第二项就是式(\ref{pHgf015--})确定的自由光子传播子，在\textsl{Feynman}规范下以动量\textsl{Feynman}图表示为
 \begin{equation}D^{\mu\nu}_{P,F}(k)=\frac{4\pi i\eta^{\mu\nu}}{k^2+i0}=\quad\tikz[baseline=.5ex]{\begin{feynman}\vertex(a);\vertex[right=2 cm of a](b);\diagram*{(a)--[photon,momentum=$k$](b)};\end{feynman}}.\end{equation}
 其余\textsl{Feynman}规则和实标量场一致，同样在顶点处动量守恒，我们就不重复了。前一项用\textsl{Wick}定理(\ref{qefrGGH})展开，缩并由\textsl{Dirac}传播子(\ref{VBXgrfg508=})确定，注意费米反对易性，我们得到连通部分
 \begin{equation}\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_a\hat{\bm{\psi}}^{}_b\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_x\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y}}{0}_{\text{conn}}=-8S^{}_R(a,x)S^{}_R(x,y)S^{}_R(y,b).\label{Qdghe67}\end{equation}
@@ -13503,7 +13521,7 @@ $$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale
 在量子场论\textsl{QFT}中，上述根据电磁相互作用算符(\ref{Qe569''})确定的\textsl{Dirac}场的耦合理论，就称为量子电动力学\textsl{QED}。这里我们总结一下\textsl{QED}的动量\textsl{Feynman}规则：演化方向从左往右，
 \begin{enumerate}\item $\varPi^{\text{phy}}_{m+n}$中的虚光子：$D^{\mu\nu}_{P,F}(k)=\dfrac{4\pi i\eta^{\mu\nu}}{k^2+i0}=\quad\tikz[baseline=.5ex]{\begin{feynman}\vertex(a);\vertex[right=2 cm of a](b);\diagram*{(a)--[photon,momentum=$k$](b)};\end{feynman}}$，这里用的是\textsl{Feynman}规范；\item 半自旋费米子的传播子：$\dfrac{i\qty(\slashed{p}+m)}{p^2-m^2_0+i0}=\quad\tikz[baseline=.5ex]{\begin{feynman}\vertex(a);\vertex[right=2 cm of a](b);\diagram*{(a)--[fermion,momentum=$p$](b)};\end{feynman}}$，这里应当使用粒子的裸质量$m^{}_0$；\item 每个顶点处满足动量和电荷守恒，包含两条粒子线和一条光子线；\item 对于自旋为$\upsilon=\pm\dfrac{1}{2}$的入射正粒子：\quad $\hat{\bm{\psi}}^{}_{\vb{p}\upsilon}\ket{\vb{p},\upsilon}=\vb{u}^{}_{\vb{p}(\upsilon)}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:$(\upsilon)$](a);\vertex[dot,scale=.7,right=1.5 cm of a](b){};\vertex[above right=1 cm of b](c);\vertex[below right=1 cm of b](d);\diagram*{(a)--[fermion,momentum=$\vb{p}$](b)--(c),(b)--[photon](d)};\end{feynman}}$；\item 对于自旋为$\upsilon$的出射正粒子：\quad $\bra{\vb{p},\upsilon}\hat{\overline{\bm{\psi}}}^{}_{\vb{p}\upsilon}=\overline{\vb{u}}^{}_{\vb{p}(\upsilon)}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:$(\upsilon)$](a);\vertex[dot,scale=.7,left=1.5 cm of a](b){};\vertex[above left=1 cm of b](c);\vertex[below left=1 cm of b](d);\diagram*{(c)--(b)--[fermion,momentum=$\vb{p}$](a),(b)--[photon](d)};\end{feynman}}$；\item 对于自旋为$\upsilon=\pm\dfrac{1}{2}$的入射反粒子：\quad $\hat{\bm{\psi}}^{}_{\vb{p}\upsilon}\ket{-\vb{p},\upsilon}=\vb{u}^{}_{-\vb{p}(\upsilon)}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:$(\upsilon)$](a);\vertex[dot,scale=.7,right=1.5 cm of a](b){};\vertex[above right=1 cm of b](c);\vertex[below right=1 cm of b](d);\diagram*{(c)--(b)--[fermion,momentum'=$\vb{p}$](a),(b)--[photon](d)};\end{feynman}}$；\item 对于自旋为$\upsilon$的出射反粒子：\quad $\bra{-\vb{p},\upsilon}\hat{\overline{\bm{\psi}}}^{}_{\vb{p}\upsilon}=\overline{\vb{u}}^{}_{\vb{p}(\upsilon)}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[label=below:$(\upsilon)$](a);\vertex[dot,scale=.7,left=1.5 cm of a](b){};\vertex[above left=1 cm of b](c);\vertex[below left=1 cm of b](d);\diagram*{(a)--[fermion,momentum'=$\vb{p}$](b)--(c),(b)--[photon](d)};\end{feynman}}$；\item 顶点电磁耦合系数：\quad$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.7](o){};\vertex[above left=1.5cm of o](a);\vertex[below left=1.5cm of o](b);\vertex[right=1.5cm of o](c);\diagram*{(a)--[fermion](o)--[fermion](b),(o)--[photon](c)};\end{feynman}}\quad=-ie\gamma^\mu$；\item 旋量的\textsl{Grassmann}性使得图带有符号，和空间形式缩并时的置换有关。\end{enumerate}
 其余的内容和实标量的动量\textsl{Feynman}规则一致，这里就不做过多介绍了，请回顾第\ref{acrF55][][pp[}节。这些是后面会大量使用到的内容，希望读者能够牢记。当然此处我们不加证明的，直接套用了实标量场的\textsl{LSZ}约化，这实际上是允许的，因为它在形式上和场位形无关，前文中我们也有说明。在第\ref{dsjbas66543+3.}节中我们会证明这一点，这里略过。下面来看一些具体的例子。
-\subsubsection{电子对的散射矩阵}
+\subsubsection{电子对的散射矩阵}\label{Ff4tg.}
 \noindent 不失一般性的，我们从一对高速电子的散射出发，比如电子—电子散射$\qty(e^--e^-)$，或者电子—正电子散射$\qty(e^--e^+)$。方便起见，我们假设出射粒子也是一对，比如记入射粒子的四维动量$p^{}_{i1}$和$p^{}_{i2}$，出射粒子的动量$p^{}_{f3}$和$p^{}_{f4}$。\\
 \\
 根据\textsl{LSZ}约化，我们可以直接得到完整的散射矩阵，以图(\ref{NB,m56877})表示
@@ -13700,15 +13718,15 @@ $$\mathcal A^{(2)}_{fi}(u=\vb{q}^2)=-4im^2\bm{w}^*_4\bm{w}^*_3U\qty(\vb{p}^{}_1,
 \\
 关于\textsl{Bhabha}散射的修正，我们这里就不叙述了，读者可以参考\cite{L42}的\S 83。这里做简单说明，\textsl{Bhabha}振幅根据式(\ref{Minsifg})，其涉及$s$道，这和$t$道或者$u$道的形结构都不相同，因而不能直接将$t$道反对称化，具体计算细节请自行查看。
 \subsubsection{Dirac场的束缚态散射}
-\noindent 上面我们详细分析了双电子自由散射的情形，得到了\textsl{Møller}散射和\textsl{Bhabha}散射的可观测量以及辐射修正初步。但根据第\ref{CHoeei**--}节我们看到，超导体中\textsl{Cooper}对是一对电子的束缚态，因此这里不妨花一点时间，来讨论双电子束缚态的散射。\\
+\noindent 上面我们详细分析了双电子自由散射的情形，得到了\textsl{Møller}散射和\textsl{Bhabha}散射的可观测量以及辐射修正初步。但根据第\ref{CHoeei**--}节我们看到，超导体中\textsl{Cooper}对是一对电子的束缚态，因此这里不妨花一点时间，来讨论双电子束缚态的散射。我们这里假设束缚态在散射后依旧保持束缚，但耦合强度会产生变化。\\
 \\
 由于是双电子，起始点依旧是四点函数。但由于现在是束缚态，因此我们不能直接使用\textsl{LSZ}约化，但全连通四点函数的\textsl{SD}方程是永远成立的。这一点可以通过路径积分的变分验证，计算三场$\overline{\bm{\psi}}\bm{\psi}\bm{\psi}$的积分
 $$\delta\int \mathcal D\bm{\psi}\mathcal D\overline{\bm{\psi}}\exp(iS\qty[\bm{\psi},\overline{\bm{\psi}}])\overline{\bm{\psi}}^{}_1\bm{\psi}^{}_2\bm{\psi}^{}_3=0.$$
 这里我们只对场$\bm{\psi}$求变分，得到
 $$\int\dd\Omega^{}_x\delta\bm{\psi}(x) \qty(\int\mathcal D\bm{\psi}\mathcal D\overline{\bm{\psi}}\exp(iS)\qty{i\delta^{}_{\bm{\psi}}\Lambda\qty[\bm{\psi}(x),\overline{\bm{\psi}}]\overline{\bm{\psi}}^{}_1\bm{\psi}^{}_2\bm{\psi}^{}_3+\overline{\bm{\psi}}^{}_1\bm{\psi}^{}_3\delta^{}_{2x}-\overline{\bm{\psi}}^{}_1\bm{\psi}^{}_3\delta^{}_{3x}})=0.$$
 此处的自由场是\textsl{Dirac}场，变分给出$\delta^{}_{\bm{\psi}}\Lambda^{}_{Dirac}(x)=i\partial^{}_\mu\overline{\bm{\psi}}(x)\gamma^\mu-m$，假设这里为零质量费米子。则在除以$Z$后，我们得到四点函数的\textsl{SD}方程
-\begin{equation}\begin{aligned}&\partial^{}_\mu\expval{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\gamma^\mu \hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}=\mathfrak D(x,1,2,3)\overleftarrow{\slashed{\partial}}\\&=\delta^{}_{2x}S^{}_D(2,3)-\delta^{}_{3x}S^{}_D(1,2)-i\expval{\mathbb T\qty{\delta^{}_{\bm{\psi}}\hat{\Lambda}^{}_{\text{int}}\qty[\bm{\psi}(x)]\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}.\end{aligned}\end{equation}
-这里方便起见，我们省略了双旋量指标。可以看到，这和式(\ref{qed23ET100})在形式上是完全一致的，因此完全可以在实标量场中讨论。对于任意相互作用，解由式(\ref{PPouIIG})确定，在散射中对于确定的反应粒子态，由\textsl{LSZ}约化具体打开真空四点函数$D^{}_4=D^{}_FD^{}_F$，卷积形式给出
+\begin{equation}\begin{aligned}&\partial^{}_\mu\expval{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\gamma^\mu \hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}=\mathfrak D(x,1,2,3)\overleftarrow{\slashed{\partial}}\\&=\delta^{}_{2x}S^{}_D(1,3)-\delta^{}_{3x}S^{}_D(1,2)-i\expval{\mathbb T\qty{\delta^{}_{\bm{\psi}}\hat{\Lambda}^{}_{\text{int}}\qty[\bm{\psi}(x)]\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}.\end{aligned}\label{DdV3413f}\end{equation}
+这里方便起见，我们省略了双旋量指标。可以看到，这和式(\ref{qed23ET100})在形式上是完全一致的，因此完全可以在实标量场中讨论。对于任意相互作用，解由式(\ref{PPouIIG})确定，在散射中对于确定的反应粒子态，根据式(\ref{Asfg77FG})选择零级四点函数的展开$\mathfrak D^{(0)}_4=D^{}_FD^{}_F$，卷积形式给出
 \begin{equation}\mathfrak D^{}_4=D^{}_FD^{}_F+D^{}_FD^{}_F\circledast K\circledast \mathfrak D^{}_4.\label{Pdjw460}\end{equation}
 可以反解出四点函数，不难得到
 \begin{equation}\mathfrak D^{}_4=\frac{1}{\qty(D^{}_FD^{}_F)^{-1}-K}.\label{Pdjw461}\end{equation}
@@ -13723,7 +13741,7 @@ $$t^{}_3,t^{}_4>t^{}_1,t^{}_2\implies \begin{aligned}&\mel**{\Omega}{\hat{\psi}(
 这里没有必要使用算符的移动(\ref{Fr53SsfgGF})，因为最终结果是上述四项匹配\textsl{Heaviside}函数的和，算符移动没有意义。合并同类项后，记束缚态动量为$\vb{P}^{}_B$，我们从式(\ref{Ff435..})得到相互作用四点函数
 \begin{equation}\begin{aligned}D(1,2,3,4)&=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}(1)\hat{\psi}(2)\hat{\psi}(3)\hat{\psi}(4)}}{\Omega}\\&=\int\mel**{\Omega}{\mathbb T\qty{\hat{\psi}(1)\hat{\psi}(2)}}{2^{}_B}\mel**{2^{}_B}{\mathbb T\qty{\hat{\psi}(3)\hat{\psi}(4)}}{\Omega}\frac{\dd^3\vb{P}^{}_B}{(2\pi)^3}\frac{1}{2E^{}_{\vb{P}}\qty(2^{}_B)}.\end{aligned}\end{equation}
 记束缚态$\ket{2^{}_B}$和相互作用真空态$\ket{\Omega}$之间的连通振幅为
-\begin{equation}\chi^{}_P(1,2)=\mel**{2^{}_B}{\mathbb T\qty{\hat{\psi}(1)\hat{\psi}(2)}}{\Omega}_{\text{conn}},\quad \chi^*_P(1,2)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}(1)\hat{\psi}(2)}}{2^{}_B}_{\text{conn}},\end{equation}
+\begin{equation}\chi^{}_P(1,2)=\mel**{2^{}_B}{\mathbb T\qty{\hat{\psi}(1)\hat{\psi}(2)}}{\Omega}_{\text{conn}},\quad \chi^*_P(1,2)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}(1)\hat{\psi}(2)}}{2^{}_B}_{\text{conn}},\label{R36-/0}\end{equation}
 称为\textbf{\textsl{Bethe-Salpeter}振幅}。并记束缚态质量为$M^{}_B$，我们不加证明的写出连通四点函数
 \begin{equation}\mathfrak D^{}_4(1,2,3,4)=\bigintsss\frac{\dd^3\vb{P}^{}_B}{(2\pi)^3}\frac{\chi^*_P(1,2)\chi^{}_P(3,4)}{2\sqrt{\vb{P}^2_B+M^2_B}}=\bigintsss\frac{\dd^4P^{}_B}{(2\pi)^4}\frac{\chi^*_P(1,2)\chi^{}_P(3,4)}{P^2_B-M^2_B}.\label{RQ75*ERT}\end{equation}
 其中最后一步用到级数和(\ref{Pdjw461})，事实上这是用束缚态反猜的，在形式上类似\textsl{Feynman}传播子给出奇点位置，数学上的严格推导可以参考\cite{L6.-*}\S10.2.1。注意\textsl{BS}振幅是束缚态动量的函数，同时两个共轭振幅对应入射态和出射态，可以直观的理解为束缚态的散射函数。\\
@@ -13733,7 +13751,7 @@ $$\begin{aligned}\bigintsss\frac{\dd^4P^{}_B}{(2\pi)^4}\frac{\chi^*_P(1,2)\chi^{
 将这两个粒子各自的质量记为$m^{}_1$和$m^{}_2$，对两侧的坐标$x^{}_1$和$x^{}_2$作用算符$\square+m^2$得到
 $$\begin{aligned}&\bigintsss\frac{\dd^4P^{}_B}{(2\pi)^4}\frac{1}{P^2_B-M^2_B}\chi^{}_P(3,4)\qty{\qty(\square^{}_{x_1}+m^2_1)\qty(\square^{}_{x_2}+m^2_2)\chi^*_P(1,2)}\\&=\delta^{}_{13}\delta^{}_{24}+\bigintsss \dd\Omega^{}_a\dd\Omega^{}_bK(1,2,a,b)\bigintsss\frac{\dd^4P^{}_B}{(2\pi)^4}\frac{\chi^*_P(a,b)\chi^{}_P(3,4)}{P^2_B-M^2_B}.\end{aligned}$$
 现在考察极限$P^2_B=M^2_B$处的留数，此时$\delta^{}_{ij}$解析因此没有贡献，约去$\chi^{}_P(3,4)$得到共轭振幅方程
-\begin{equation}\qty(\square^{}_{x_1}+m^2_1)\qty(\square^{}_{x_2}+m^2_2)\chi^*_P(1,2)=\int \dd\Omega^{}_a\dd\Omega^{}_bK(1,2,a,b)\chi^*_P(a,b).\end{equation}
+\begin{equation}\qty(\square^{}_{x_1}+m^2_1)\qty(\square^{}_{x_2}+m^2_2)\chi^*_P(1,2)=\int \dd\Omega^{}_a\dd\Omega^{}_bK(1,2,a,b)\chi^*_P(a,b).\label{Wfvsfwf}\end{equation}
 类似的，我们得到振幅方程，这里写为\textsl{Green}函数法
 \begin{equation}\chi^{}_P(1,2)=\int \dd\Omega^4 D^{}_F\qty(1,y;m^{}_1)D^{}_F\qty(2,z;m^{}_2)K(y,z,a,b)\chi^{}_P(a,b).\label{Rov435==}\end{equation}
 不妨用图表示，其中阴影部分代表振幅
@@ -13745,7 +13763,7 @@ $$R^{}_m=\frac{x^{}_1+x^{}_2}{2},\quad r=x^{}_1-x^{}_2.$$
 这样，我们就可以相对质心系，得到振幅的动量表象
 \begin{equation}\chi\qty(P^{}_B,p)=\int \chi^{}_P(1,2)\exp(iR^{}_mp+irP^{}_B)\dd^4R^{}_m\dd^4r.\end{equation}
 注意这里的动量表象有两个变量，因为这是由两个粒子构成的，有两个自由度。按照上述定义，我们不妨写出相应的动量图
-\begin{equation}\tikz[baseline=-.1cm]{\begin{feynman}\vertex[blob,scale=1.5](a){};\vertex[above left=1.5 cm of a](b);\vertex[below left=1.5 cm of a](c);\diagram*{(b)--[scalar,momentum=$p^{}_1$](a),(c)--[scalar,momentum'=$p^{}_2$](a)};\end{feynman}}\quad =\quad \tikz[baseline=-.1cm]{\pgfmathsetmacro{\r}{1}\pgfmathsetmacro{\c}{2}\begin{feynman}\draw(\c,0)circle(\r);\node at(\c,0){$K$};\draw[dashed](0,.5)--({\c-sqrt(\r^2-.5^2)},.5)node[midway,above]{$\underrightarrow{\ \ p^{}_1\ \ }$};\draw[dashed](0,-.5)--({\c-sqrt(\r^2-.5^2)},-.5)node[midway,below]{$\overrightarrow{\ \ p^{}_2\ \ }$};\coordinate(a)at({\c+sqrt(\r^2-.8^2)},.8);\coordinate(b)at({\c+sqrt(\r^2-.8^2)},-.8);\vertex[blob,scale=1.5](c)at(4.5,0){};\diagram*{(a)--[scalar,momentum=$k^{}_1$](c),(b)--[scalar,momentum'=$k^{}_2$](c)};\end{feynman}}.\end{equation}
+\begin{equation}\tikz[baseline=-.1cm]{\begin{feynman}\vertex[blob,scale=1.5](a){};\vertex[above left=1.5 cm of a](b);\vertex[below left=1.5 cm of a](c);\diagram*{(b)--[scalar,momentum=$p^{}_1$](a),(c)--[scalar,momentum'=$p^{}_2$](a)};\end{feynman}}\quad =\quad \tikz[baseline=-.1cm]{\pgfmathsetmacro{\r}{1}\pgfmathsetmacro{\c}{2}\begin{feynman}\draw(\c,0)circle(\r);\node at(\c,0){$K$};\vertex(g)at(0,.5);\vertex(h)at({\c-sqrt(\r^2-.5^2)},.5);\vertex(gg)at(0,-.5);\vertex(hh)at({\c-sqrt(\r^2-.5^2)},-.5);\vertex(a)at({\c+sqrt(\r^2-.8^2)},.8);\vertex(b)at({\c+sqrt(\r^2-.8^2)},-.8);\vertex[blob,scale=1.5](c)at(4.5,0){};\diagram*{(g)--[scalar,momentum=$p^{}_1$](h),(gg)--[scalar,momentum'=$p^{}_2$](hh),(a)--[scalar,momentum=$k^{}_1$](c),(b)--[scalar,momentum'=$k^{}_2$](c)};\end{feynman}}.\label{Df5fdg}\end{equation}
 其中$k^{}_1$和$k^{}_2$是束缚态在相互作用下的动量交换，它们保持$P^{}_B$不变，同时相对均值$k$为积分内动量给出
 \begin{equation}P^{}_B=k^{}_1+k^{}_2,\quad k=\frac{k^{}_1-k^{}_2}{2}.\end{equation}
 从图中可以容易看到，四点函数$K$的动量表象由两部分构成：左侧连接远场束缚态$\qty(P^{}_B,p)$，右侧连接相互作用束缚态$\qty(P^{}_B,k)$，因此它的动量表象可以写为
@@ -13754,27 +13772,69 @@ $$R^{}_m=\frac{x^{}_1+x^{}_2}{2},\quad r=x^{}_1-x^{}_2.$$
 \begin{equation}\chi\qty(P^{}_B,p)=D^{}_F\qty(\frac{P^{}_B}{2}+p)D^{}_F\qty(\frac{P^{}_B}{2}-p)\bigintsss \qty(\frac{\dd k}{2\pi})^4K\qty(P^{}_B,p,k)\chi\qty(P^{}_B,k).\label{XSE2E*.}\end{equation}
 所有参数在前文均已定义，读者可自行查看。此\textsl{BS}振幅的递推式称为\textbf{\textsl{Bethe-Salpeter}方程}(\textsl{H.Bethe}，\textsl{E.Salpeter}，1951)，是描述束缚态散射的基础性方程。\\
 \\
-当然上面的计算存在问题，那就是传播子的发散问题。虽然在四点函数的引入(\ref{RQ75*ERT})时这并不显然，但取留数后的递推方程(\ref{Rov435==})展示的非常清楚，并且在画动量图时，我们实际上画的是截腿后的。为此我们需要处理这个问题，类似\textsl{LSZ}约化(\ref{LsCgqe22})，通过\textsl{KG}算符引入截腿振幅
+当然上面的计算存在问题，那就是传播子的发散。虽然在四点函数的引入(\ref{RQ75*ERT})时这并不显然，但取留数后的递推方程(\ref{Rov435==})展示的非常清楚，并且在画动量图时，我们实际上画的是截腿后的。为此我们需要处理这个问题，类似\textsl{LSZ}约化(\ref{LsCgqe22})，通过\textsl{KG}算符引入截腿振幅
 \begin{equation}\mathcal M^{}_P(1,2)=\qty(\square^{}_{x_1}+m^2)\qty(\square^{}_{x_2}+m^2)\chi^{}_P(1,2),\end{equation}
 这里默认两粒子全同。这样$\chi^{}_P(1,2)=D^{}_FD^{}_F\mathcal M^{}_P(1,2)$，相应的动量表象为
 \begin{equation}\chi\qty(P^{}_B,p)=D^{}_F\qty(\frac{P^{}_B}{2}+p)D^{}_F\qty(\frac{P^{}_B}{2}-p)\mathcal M\qty(P^{}_B,p),\end{equation}
 带入式(\ref{XSE2E*.})，我们得到截腿的\textsl{BS}方程
-\begin{equation}\mathcal M\qty(P^{}_B,p)=\bigintsss \qty(\frac{\dd k}{2\pi})^4K\qty(P^{}_B,p,k)D^{}_F\qty(\frac{P^{}_B}{2}+k)\mathcal M\qty(P^{}_B,k)D^{}_F\qty(\frac{P^{}_B}{2}-k).\label{XSE22asfdE*.}\end{equation}
+\begin{equation}\mathcal M\qty(P^{}_B,p)=\bigintsss \qty(\frac{\dd k}{2\pi})^4K\qty(P^{}_B,p,k)D^{}_F\qty(\frac{P^{}_B}{2}+k)D^{}_F\qty(\frac{P^{}_B}{2}-k)\mathcal M\qty(P^{}_B,k).\label{XSE22asfdE*.}\end{equation}
 相应的动量图为
 \begin{equation}\tikz[baseline=-.1cm]{\begin{feynman}\vertex[blob,scale=1.5,fill=black](a){};\vertex[above=.3 cm of a](m);\vertex[below=.3 cm of a](n);\vertex[left=1.5 cm of m](b);\vertex[left=1.5 cm of n](c);\diagram*{(b)--[scalar](m),(c)--[scalar](n)};\end{feynman}}\quad =\quad \tikz[baseline=-.1cm]{\pgfmathsetmacro{\r}{1}\pgfmathsetmacro{\c}{2}\pgfmathsetmacro{\h}{.4}\begin{feynman}\draw(\c,0)circle(\r);\node at(\c,0){$K$};\draw(0,.5)--({\c-sqrt(\r^2-.5^2)},.5);\draw(0,-.5)--({\c-sqrt(\r^2-.5^2)},-.5);\coordinate(a)at({\c+sqrt(\r^2-\h^2)},\h);\coordinate(b)at({\c+sqrt(\r^2-\h^2)},-\h);\vertex[empty dot,scale=2.5](x)at({\c+sqrt(\r^2-\h^2)+.8},\h){};\vertex[empty dot,scale=2.5](y)at({\c+sqrt(\r^2-\h^2)+.8},-\h){};\vertex(j)at(5,\h){};\vertex(i)at(5,-\h);\vertex[blob,scale=1.5,fill=black](c)at(5,0){};\diagram*{(a)--[scalar](x)--[scalar](j),(b)--[scalar](y)--[scalar](i)};\end{feynman}}.\end{equation}
-其中空心圆代表截腿的传播子，实心圆是截腿\textsl{BS}振幅，这样\textsl{BS}方程就不会发散，一般在文献中更多的会使用这个方程，它更符合散射过程。\\
+其中空心圆代表截腿的传播子，实心圆是截腿\textsl{BS}振幅，这样\textsl{BS}方程就不会在外腿处发散，一般在文献中更多的会使用这个方程，它更符合散射过程。\\
 \\
-现在让我们回到\textsl{Dirac}场，
-
-
-
-
-
-
-
-
+让我们回到\textsl{Dirac}场，此时四点函数是一个四阶旋量，具体写出旋量指标
+$$\mathfrak D^{\tilde{i}\tilde{j}\tilde{k}\tilde{l}}_4(1,2,3,4)=\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}_1\hat{\overline{\bm{\psi}}}^{\tilde{j}}_2\hat{\bm{\psi}}^{\tilde{k}}_3\hat{\bm{\psi}}^{\tilde{l}}_4}}{\Omega}.$$
+类似的，我们插入束缚态$\ket{2^{}_B}$，并按照式(\ref{R36-/0})写出\textsl{BS}振幅
+\begin{equation}\chi^{\tilde{i}\tilde{j}}_P(1,2)=\mel**{2^{}_B}{\mathbb T\qty{\hat{\bm{\psi}}^{\tilde{i}}_1\hat{\bm{\psi}}^{\tilde{j}}_2}}{\Omega}_{\text{conn}},\quad \overline{\chi}^{\tilde{i}\tilde{j}}_P(1,2)=\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}_1\hat{\overline{\bm{\psi}}}^{\tilde{j}}_2}}{2^{}_B}_{\text{conn}}.\end{equation}
+注意现在的共轭是\textsl{Dirac}共轭，并且振幅都是二阶双旋量。我们不加证明的，直接从式(\ref{RQ75*ERT})给出束缚态奇点处的连通四点函数
+\begin{equation}\mathfrak D^{\tilde{i}\tilde{j}\tilde{k}\tilde{l}}_4(1,2,3,4)=\bigintsss\frac{\dd^4P^{}_B}{(2\pi)^4}\frac{\overline{\chi}^{\tilde{i}\tilde{j}}_P(1,2)\chi^{\tilde{k}\tilde{l}}_P(3,4)}{\slashed{P}^{}_B-M^{}_B}.\end{equation}
+同时由于前文已经证明，实标量场和的\textsl{Dirac}场四点\textsl{SD}方程在形式上一致，因此我们直接参考式(\ref{Pdjw460})写出卷积形式，这里明确双旋量指标
+\begin{equation}\mathfrak D^{\tilde{i}\tilde{j}\tilde{k}\tilde{l}}_4=S^{\tilde{i}\tilde{j}}_DS^{\tilde{k}\tilde{l}}_D+S^{\tilde{i}\tilde{m}}_DS^{\tilde{j}\tilde{n}}_D\circledast K^{}_{\tilde{m}\tilde{n}\tilde{u}\tilde{v}}\circledast \mathfrak D^{\tilde{u}\tilde{v}\tilde{k}\tilde{l}}_4.\end{equation}
+双旋量指标也满足求和约定，因此这里$\tilde{m},\tilde{n},\tilde{u},\tilde{v}$都是求和指标，其中$K^{}_{\tilde{i}\tilde{j}\tilde{k}\tilde{l}}$是\textsl{Dirac}场的相互作用函数。带入连通四点函数做类似的操作，不难参考式(\ref{Rov435==})得到振幅的递推，我们写出
+\begin{equation}\chi^{\tilde{i}\tilde{j}}_P(1,2)=\int \dd\Omega^4 S^{\tilde{i}\tilde{m}}_D\qty(1,y;m)S^{\tilde{j}\tilde{n}}_D\qty(2,z;m)K^{}_{\tilde{m}\tilde{n}\tilde{u}\tilde{v}}(y,z,a,b)\chi^{\tilde{u}\tilde{v}}_P(a,b).\end{equation}
+但需要注意，\textsl{Dirac}共轭振幅不能直接套用式(\ref{Wfvsfwf})，因为共轭旋量的方程(\ref{congcty})作用在右侧，因此我们得到
+\begin{equation}\overline{\chi}^{\tilde{m}\tilde{n}}_P(1,2)\qty(i\overleftarrow{\slashed{\partial}}^{}_1+m)^{}_{\tilde{i}\tilde{m}}\qty(i\overleftarrow{\slashed{\partial}}^{}_2+m)^{}_{\tilde{j}\tilde{n}}=K^{}_{\tilde{i}\tilde{j}\tilde{u}\tilde{v}}(y,z,a,b)\overline{\chi}^{\tilde{u}\tilde{v}}_P(a,b).\end{equation}
+自然的，其\textsl{Green}函数表示也应将\textsl{Dirac}传播子作用到右侧，振幅放在左侧，这里就省略时空点和旋量指标了
+$$\overline{\chi}^{}_P=\overline{\chi}^{}_P\circledast K \circledast S^{}_DS^{}_D.$$
+后续我们就不考虑共轭振幅了，读者可以自行按照上述法则和记号，写出对应的理论。对于动量表象，需要说明的是，\textsl{Dirac}场作为复函数场是有反粒子的，因此我们可以得到两种情况。仍以电子为例，对于$e^--e^-$束缚态，其动量图和式(\ref{Df5fdg})是完全一致的，因此其\textsl{BS}方程就是式(\ref{XSE2E*.})的旋量形式
+\begin{equation}\chi^{\tilde{i}\tilde{j}}_{e^-e^-}\qty(P^{}_B,p)=S^{\tilde{i}\tilde{m}}_D\qty(\frac{P^{}_B}{2}+p)S^{\tilde{j}\tilde{n}}_D\qty(\frac{P^{}_B}{2}-p)\bigintsss \qty(\frac{\dd k}{2\pi})^4K^{}_{\tilde{m}\tilde{n}\tilde{u}\tilde{v}}\qty(P^{}_B,p,k)\chi^{\tilde{u}\tilde{v}}_{e^-e^-}\qty(P^{}_B,k).\end{equation}
+而对于$e^--e^+$束缚态，反粒子的动量相反，因此其动量图为
+\begin{equation}\tikz[baseline=-.1cm]{\begin{feynman}\vertex[blob,scale=1.5](a){};\vertex[above left=1.5 cm of a](b);\vertex[below left=1.5 cm of a](c);\diagram*{(b)--[fermion,momentum=$p^{}_1$](a),(c)--[anti fermion,momentum'=$p^{}_2$](a)};\end{feynman}}\quad =\quad \tikz[baseline=-.1cm]{\pgfmathsetmacro{\r}{1}\pgfmathsetmacro{\c}{2}\begin{feynman}\draw(\c,0)circle(\r);\node at(\c,0){$K$};\vertex(g)at(0,.5);\vertex(h)at({\c-sqrt(\r^2-.5^2)},.5);\vertex(gg)at(0,-.5);\vertex(hh)at({\c-sqrt(\r^2-.5^2)},-.5);\vertex(a)at({\c+sqrt(\r^2-.8^2)},.8);\vertex(b)at({\c+sqrt(\r^2-.8^2)},-.8);\vertex[blob,scale=1.5](c)at(4.5,0){};\diagram*{(g)--[fermion,momentum=$p^{}_1$](h),(gg)--[anti fermion,momentum'=$p^{}_2$](hh),(a)--[fermion,momentum=$k^{}_1$](c),(b)--[anti fermion,,momentum'=$k^{}_2$](c)};\end{feynman}}.\end{equation}
+也就是说在计算时，粒子$2$的动量表象为$-p^{}_2=p-P^{}_B/2$，因此\textsl{BS}方程为
+\begin{equation}\chi^{\tilde{i}\tilde{j}}_{e^-e^+}\qty(P^{}_B,p)=S^{\tilde{i}\tilde{m}}_D\qty(p+\frac{P^{}_B}{2})S^{\tilde{j}\tilde{n}}_D\qty(p-\frac{P^{}_B}{2})\bigintsss \qty(\frac{\dd k}{2\pi})^4K^{}_{\tilde{m}\tilde{n}\tilde{u}\tilde{v}}\qty(P^{}_B,p,k)\chi^{\tilde{u}\tilde{v}}_{e^-e^+}\qty(P^{}_B,k).\end{equation}
+对于截腿振幅$\mathcal M\qty(P^{}_B,p)$，可以从式(\ref{XSE22asfdE*.})得到截腿\textsl{BS}方程，这里直接给出结果
+\begin{equation}\begin{aligned}&\mathcal M^{\tilde{i}\tilde{j}}_{e^-e^-}\qty(P^{}_B,p)=\bigintsss \qty(\frac{\dd k}{2\pi})^4K^{}_{\tilde{m}\tilde{n}\tilde{u}\tilde{v}}\qty(P^{}_B,p,k)S^{\tilde{i}\tilde{m}}_D\qty(\frac{P^{}_B}{2}+k)S^{\tilde{j}\tilde{n}}_D\qty(\frac{P^{}_B}{2}-k)\mathcal M^{\tilde{u}\tilde{v}}_{e^-e^-}\qty(P^{}_B,k).\\&\mathcal M^{\tilde{i}\tilde{j}}_{e^-e^+}\qty(P^{}_B,p)=\bigintsss \qty(\frac{\dd k}{2\pi})^4K^{}_{\tilde{m}\tilde{n}\tilde{u}\tilde{v}}\qty(P^{}_B,p,k)S^{\tilde{i}\tilde{m}}_D\qty(k+\frac{P^{}_B}{2})S^{\tilde{j}\tilde{n}}_D\qty(k-\frac{P^{}_B}{2})\mathcal M^{\tilde{u}\tilde{v}}_{e^-e^+}\qty(P^{}_B,k).\end{aligned}\label{2342fcv80}\end{equation}
+这就是\textsl{Dirac}场束缚态的基本运动方程，可以看到它主要由函数$K$控制，因此下一步便是在电磁相互作用下，计算这个函数。\\
+\\
+方便起见，我们这里只考察$K$的最低阶近似，对于高级修正的计算和物理含义请参考第\ref{tyujy;p456=-..5}节。回到\textsl{SD}方程(\ref{DdV3413f})，带入电磁相互作用算符(\ref{Qe569''})的\textsl{EL}导数
+$$\delta^{}_{\bm{\psi}}\hat{\Lambda}^{}_{\text{int}}=-e\hat{\overline{\bm{\psi}}}\gamma^\mu\hat{A}^{}_\mu,$$
+我们得到四点函数的方程 
+\begin{equation}\qty(i\slashed{\partial}+m)\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}{\Omega}=\delta^{}_{2x}S^{}_D(1,3)-\delta^{}_{3x}S^{}_D(1,2)+ie\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\slashed{\hat{A}}\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}{\Omega}.\end{equation}
+可以看到，右侧的相互作用项给出一个五点函数，这是因为此时\textsl{Dirac}场只和电磁场相互作用了一次。为此我们选择近似，将左侧的四点函数写为修正和，右侧函数按\textsl{GML}定理打开
+\begin{equation}\begin{aligned}\sum_{i=0}\mathfrak D^{(i)}_4(x,1,2,3)=&S^{}_D(x,2)S^{}_D(1,3)-S^{}_D(x,3)S^{}_D(1,2)\\&-ieS^{}_D(x,y)\circledast \mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_y\slashed{\hat{A}}\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3\exp(-ie\int\hat{\overline{\bm{\psi}}}^{}_z\gamma^\mu\hat{\bm{\psi}}^{}_z\hat{A}^{}_\mu\dd\Omega^{}_z)}}{0}.\end{aligned}\end{equation}
+对于零级近似$i=0$，由于$\Lambda^{}_{\text{int}}\ll1$已经是一级修正，因此忽略这一项得到\textsl{Wick}定理，在散射中可以取为
+$$\mathfrak D^{(0)}_4(x,1,2,3)=S^{}_D(x,2)S^{}_D(1,3),$$
+也就是式(\ref{Asfg77FG})。对于一级修正，右侧\textsl{GML}展开为$\exp(\cdots)=1$剩下五点函数，因此恒为零$\mathfrak D^{(1)}_4=0$。对于二级修正，考虑到式(\ref{W1tr-/**--})将双旋量和四维势分离，我们得到
+$$\mathfrak D^{(2)}_4(x,1,2,3)=(-ie)^2\int S^{}_D(x,y)\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_y\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3\hat{\overline{\bm{\psi}}}^{}_z\hat{\bm{\psi}}^{}_z}}{0}\gamma^\mu\gamma^\nu\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(y)\hat{A}^{}_\nu(z)}}{0}\dd\Omega^2.$$
+取打开的连通部分，并对光子传播子取\textsl{Feynman}规范，我们得到
+\begin{equation}\mathfrak D^{(2)}_4(x,1,2,3)=-e^2\int \dd\Omega^2 S^{}_D(x,y)S^{}_D(1,z)\qty(\gamma^\mu\otimes\gamma^{}_\mu) D^{}_P(y,z)S^{}_D(y,2)S^{}_D(z,3).\end{equation}
+其中$D^{}_P=\eta^{}_{\mu\nu}D^{\mu\nu}_P$是光子传播子的标量，同时以防读者忘记这里将$\gamma$矩阵的张量积明确写出。现在对比解(\ref{Pdjw460})，同样写出其二级修正
+\begin{equation}\mathfrak D^{(2)}_4=S^{}_DS^{}_D\circledast \qty[K^{(2)}\circledast \mathfrak D^{(0)}_4+K^{(1)}\circledast \mathfrak D^{(1)}_4+K^{(0)}\circledast \mathfrak D^{(2)}_4].\end{equation}
+按照零级四点函数的展开$\mathfrak D^{(0)}_4=S^{}_DS^{}_D$以及$\mathfrak D^{(1)}_4=0$，我们不难得到$K$的对应
+\begin{equation}K^{(0)}=0,\quad K^{(2)}=-e^2\gamma^\mu\otimes\gamma^{}_\mu D^{}_P.\end{equation}
+也就是说，函数$K$没有零级近似，因为此时没有相互作用，根据\textsl{SD}方程$K$当然不存在。其二级修正和$\gamma$矩阵的积以及光子传播子相关，在数值上它是树状图中的光子线
+$$\tikz{\begin{feynman}\vertex[dot](a);\vertex[dot,right=3 cm of a](b){};\vertex[dot,right=3 cm of b](c);\vertex[dot,below=2 cm of a](d);\vertex[dot,right=3 cm of d](e){};\vertex[dot,right=3 cm of e](f);\diagram*{(a)--[fermion,momentum=$p^{}_1$](b)--[fermion,momentum=$k^{}_1$](c),(d)--[fermion,momentum=$p^{}_2$](e)--[fermion,momentum=$k^{}_2$](f),(b)--[photon,momentum'=$k$](e)};\end{feynman}\coordinate(mK)at($(b)!0.5!(e)$);\draw[rounded corners=4pt]($(mK)+(0.6cm,1.2cm)$)rectangle($(mK)+(-0.6cm,-1.2cm)$);\node[right=1.3cm of mK,yshift=0.4cm](Klabel){$K^{(2)}$};\draw[->](Klabel.west)--($(mK)+(0.4cm,0.1cm)$);}$$
+这是合理的，因为四点函数二级修正就是树状图，细节请读者回顾第\ref{Ff4tg.}节。在定义(\ref{Pdjw460})中，树状图的四个外腿就对应$K$两侧的传播子，除去外腿后$K$就只能对应光子线，这必然是二级修正。在动量表象中，记电子的动量差为$k$，则有
+\begin{equation}K^{(2)}(k)=-\frac{e^2}{k^2}\gamma^\mu\otimes\gamma^{}_\mu.\end{equation}
+带入式(\ref{2342fcv80})，我们得到截腿\textsl{BS}方程的二级修正，方便起见这里省略双旋量指标
+\begin{equation}\begin{aligned}&\mathcal M^{(2)}_{e^-e^-}\qty(P^{}_B,p)=-\bigintsss\qty(\frac{\dd k}{2\pi})^4\frac{e^2}{k^2}S^{}_D\qty(\frac{P^{}_B}{2}+k)\gamma^\mu\otimes\gamma^{}_\mu S^{}_D\qty(\frac{P^{}_B}{2}-k)\mathcal M^{}_{e^-e^-}\qty(P^{}_B,k).\\&\mathcal M^{(2)}_{e^-e^+}\qty(P^{}_B,p)=-\bigintsss\qty(\frac{\dd k}{2\pi})^4\frac{e^2}{k^2}S^{}_D\qty(k+\frac{P^{}_B}{2})\gamma^\mu\otimes\gamma^{}_\mu S^{}_D\qty(k-\frac{P^{}_B}{2})\mathcal M^{}_{e^-e^+}\qty(P^{}_B,k).\end{aligned}\end{equation}
+这就是\textsl{Dirac}场束缚态散射的最低阶运动方程，它在结构上是较为简单的，因此是可以求解的。更高级的修正这里就不展示了，读者可以自行尝试。值得一提的是，若对比顶点函数定义(\ref{sufFH})，在\textsl{Dirac}场我们得到$\varPi^{}_4=K^{(2)}+\cdots$，也就是说$K^{(2)}$同时也是$\varPi^{}_4$的最低近似，后续我们会看到。
 
 \subsection{外场中的散射理论}\label{Zcbrr.,599}
+\noindent 上文中，我们详细分析了两个\textsl{Dirac}场之间的耦合，出发点是电子的散射等价于一个电子在另一个电子产生的电磁辐射中运动，这一点通过树状图可以清晰的看到。但这些计算只对真空成立，因为真实环境中必然存在外场，它们会对散射施加额外的效应。不妨重新回到第\ref{Cv234=-u.}节的设定，假设存在一个外场，我们需要讨论它和单粒子的耦合会如何参与到散射中。\\
+\\
+或者更进一步，如果系统处于热浴中，那么这个外场就是其余所有运动粒子产生的场的总和，它和温度相关。由于这些问题过于复杂，因此这一部分我们只给出一些理论框架，具体应用和计算会在后文中逐一展示。
+
 \subsubsection{实标量场和电磁场的耦合}
 \subsubsection{Dirac场和外场的耦合}
 \subsubsection{热场中的散射}
@@ -13863,12 +13923,13 @@ $$h^{}_\omega=\varphi^{}_\omega x^{}_\omega=\varphi^{}_\omega \alpha^{}_\omega h
 \section{重整化和临界理论}\label{VYgx00..34}
 \subsection{Casimir效应和截断频率}\label{M+-+00.RG}
 \subsection{Ising模型和空间重整化}
+\subsubsection{量子Ising模型}\label{ARFWEF4002}
 \subsection{Wilson重整化群理论}\label{bh-gg0..34}
 \subsection{圈图修正与动量重整化}\label{0cbcx778dy550r8}
 \subsubsection{Feynman参数化公式的证明}\label{0cb66++-r8}
 
 
-\subsection{Higgs机制和自发对称性破缺}
+\subsection{自发对称性破缺和Higgs机制}
 \subsection{实标量场的临界指数}\label{JuticaG6Y9//}
 \subsection{有效场论的一般框架}
 \subsection{共形场论引入}
@@ -15319,7 +15380,8 @@ $$\vb{A}(t)\vb{e}^{(i)}(t)=\lambda^{(0)}_i(t)\vb{e}^{(i)}(t).$$
 \bibitem{Bishop1980TensorAO} Bishop, Richard L.; Goldberg, Samuel I. (1980). Tensor Analysis on Manifolds. (1th ed.). Dover Publication Inc, Nwe York. ISBN 978-0486-64039-6.
 \bibitem{L6hh} Davidson, Sacha.; Gambino, Paolo.; Laine, Mikko.; Neubert, Matthias.; Salomon, Christophe. (2020). Effective Field Theory in Particle Physics and Cosmology: Lecture Notes of the Les Houches Summer School: Volume 108, July 2017. Oxford University Press. ISBN 978-0-198-85574-3
 \bibitem{PTCP5a} Domb, Cyril.; Green, Melville S. (1976). Phase Transitions and Critical Phenomena Vol. 5a. (1st ed.). Academic Press INC. ISBN 978-0-122-20305-4.
-\bibitem{xURFgmm} Weyl, Hermann. (1930). Quantenmechanik und Gruppentheorie. (2nd ed.). \\ Translated by Robertson Howard P. (1950). Zeitschrift für Physik. ISSN 0044-3328. \url{https://doi.org/10.1007/BF02055756}. 
+\bibitem{xURFgmm} Weyl, Hermann. (1930). Quantenmechanik und Gruppentheorie. (2nd ed.). \\ Translated by Robertson Howard P. (1950). Zeitschrift für Physik. ISSN 0044-3328. \url{https://doi.org/10.1007/BF02055756}.
+\bibitem{Lwer[]]} W.H. Klink. \emph{Point form electrodynamics and the Gupta–Bleuler formalism}. (2003). Nuclear Physics A, Vol 716; 158 - 168. ISSN 0375-9474.
 \bibitem{CV25--} 尤承业. 基础拓扑学讲义. （第一版）. 北京大学出版社. 1997. ISBN 978-7-3010-3103-2.
 \bibitem{xIASFD} Bessis, D.; Itzykson, C.;Zuber, J. B. \emph{Quantum field theory techniques in graphical enumeration}. 1980. Advances in Applied Mathematics, Vol 1, Issue 2; 109-157. ISSN 0196-8858. \url{https://doi.org/10.1016/0196-8858(80)90008-1}.
 \bibitem{eC..25a} Das, Ashok K. (1997). Finite Temperature Field Theory. (1st ed.). World Scientific New York. ISBN 978-981-02-2856-9, 978-981-4498-23-4.
