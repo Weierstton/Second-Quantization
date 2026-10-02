@@ -132,7 +132,7 @@
 \\
 但是我们应该注意一个非常重要的点，态的能量是有边界的，之前已经说过此处$E\geq 0$，也就是说在某一态下$E-n\hbar\omega\geq 0$，但是前文的推导并没有涉及到这一问题，也就是说理论上能量可以减少到无穷小，因此为了解决这一个缺陷，就必须让这种势头在某一个节点打住，例如在$n^{}_0$处，使得之后的算符
 $$ \forall n\geq n^{}_0,\quad \hat{y}=\hat{a}^n\implies E(n)-\hbar\omega n^{}_0=const\geq 0.$$
-称这样的态为\textbf{基态 \textit{Fondamental}}，因为$n$是正整数所以一般基态指$n^{}_0=0$的态，对应波函数记为$\ket{\psi^{}_0}=\ket{0}$，能量为$E(0)=E^{}_0$。相应的，称$n\neq0$的态为\textbf{激发态 \textit{Excited}}，和基态的能量差值$\Delta E=E(n)-E(0)$称为\textbf{元激发}。\\
+称这样的态为\textbf{基态 \textit{Fondamental}}，因为$n$是正整数所以一般基态指$n^{}_0=0$的态，对应波函数记为$\ket{\psi^{}_0}=\ket{0}$，能量为$E(0)=E^{}_0$。相应的，称$n\neq0$的态为\textbf{激发态 \textit{Excited State}}，和基态的能量差值$\Delta E=E(n)-E(0)$称为\textbf{元激发}。\\
 \\
 使得上述操作成立的最简单的办法就是令基态满足
 \begin{equation}\hat{a}\ket{0}=0,\end{equation}
@@ -196,7 +196,7 @@ $$\hat{a}\ket{N^{}_{9}}=\sqrt{N^{}_{9}}\ket{N^{}_{9}-1},$$
 反之算符$\hat{a}^{\dagger}$给出
 \begin{equation}\hat{a}^{\dagger}\ket{N^{}_1, N^{}_2,\ldots,N^{}_{9},\ldots\ldots}=\sqrt{N^{}_{9}+1}\ket{N^{}_1,\ldots,N^{}_{9}+1,\ldots\ldots}.\end{equation}
 将该子系统的结果推广至总系统，定义单个子系统的两个和粒子数相关的算符：
-\begin{itemize}\item\textbf{产生算符 \textit{Creation}}：$\hat{a}^{\dagger}_{\nu}$\begin{equation} \hat{a}^{\dagger}_{\nu}\ket{N^{}_1, N^{}_2,\ldots,N^{}_{\nu},\ldots\ldots}=\sqrt{N^{}_{\nu}+1}\ket{N^{}_1,\ldots,N^{}_{\nu}+1,\ldots\ldots},\end{equation}\item\textbf{湮没算符 \textit{Annilation}}：$\hat{a}^{}_{\nu}$\begin{equation}\hat{a}^{}_{\nu}\ket{N^{}_1, N^{}_2,\ldots,N^{}_{\nu},\ldots\ldots}=\sqrt{N^{}_{\nu}}\ket{N^{}_1,\ldots,N^{}_{\nu}-1,\ldots\ldots}.\end{equation}\end{itemize}
+\begin{itemize}\item\textbf{产生算符 \textit{Creation}}：$\hat{a}^{\dagger}_{\nu}$\begin{equation} \hat{a}^{\dagger}_{\nu}\ket{N^{}_1, N^{}_2,\ldots,N^{}_{\nu},\ldots\ldots}=\sqrt{N^{}_{\nu}+1}\ket{N^{}_1,\ldots,N^{}_{\nu}+1,\ldots\ldots},\label{D234eopi'}\end{equation}\item\textbf{湮没算符 \textit{Annilation}}：$\hat{a}^{}_{\nu}$\begin{equation}\hat{a}^{}_{\nu}\ket{N^{}_1, N^{}_2,\ldots,N^{}_{\nu},\ldots\ldots}=\sqrt{N^{}_{\nu}}\ket{N^{}_1,\ldots,N^{}_{\nu}-1,\ldots\ldots}.\end{equation}\end{itemize}
 它们满足在相应的子系统中，和阶梯算符的表现一致，比如相应粒子数的本征方程
 \begin{equation}\hat{a}^{\dagger}_{\nu}\hat{a}^{}_{\nu}\ket{N^{}_1, N^{}_2,\ldots,N^{}_{\nu},\ldots\ldots}=N^{}_{\nu}\ket{N^{}_1,\ldots,N^{}_{\nu},\ldots\ldots},\quad \hat{a}^{\dagger}_{\nu}\hat{a}^{}_{\nu}=\hat N^{}_{\nu},\label{niyaoshi}\end{equation}
 但要注意它们并不相同：阶梯算符只作用于一个单独的子系统，而这里的两个算符是跨系统当中的一个子系统的。\\
@@ -207,7 +207,7 @@ $$\hat{a}\ket{N^{}_{9}}=\sqrt{N^{}_{9}}\ket{N^{}_{9}-1},$$
 
 \subsection{谐振子系统的二次量子化}
 
-\noindent 上文中所说的，将不同能级所包含的粒子数作为变量，并通过产生\&湮没算符升降对应粒子数的方法，就称为\textbf{二次量子化 \textit{Second Quantization}}。\\
+\noindent 上文中所说的，将不同能级所包含的粒子数作为变量，并通过产生和湮没算符升降对应粒子数的方法，就称为\textbf{二次量子化 \textit{Second Quantization}}。\\
 \\
 这里我们也可以很清晰的看到术语的来源：所谓的\textbf{一次量子化 \textit{First Quantization}}就是通常意义上的\textbf{正则量子化 \textit{Canonical Quantization}}，是将系统的可观测物理量用\textsl{Hilbert}空间$\mathscr H$中的相应算符表示，例如
 $$\vb{r}\rightarrow\hat{\vb{r}},\quad \vb{p}\rightarrow \hat{\vb{p}}=-i\hbar\partial^{}_{\vb{r}}=-i\hbar\grad,\quad \vb{L}\rightarrow\hat{\vb{L}}=\hat{\vb{r}}\cp\hat{\vb{p}},\quad \cdots.$$
@@ -218,6 +218,10 @@ $$\vb{r}\rightarrow\hat{\vb{r}},\quad \vb{p}\rightarrow \hat{\vb{p}}=-i\hbar\par
 在系统量子化之后，能级就确定了，但能级中所含的粒子数是可变的。在统计力学中，各能级所含粒子数称为\textbf{占有数 \textit{Occupation Number}}，这里我们也采用这个术语，对应的本征态$\ket{N^{}_i}$称为\textbf{占有数态}，在此态下系统的力学表述称为\textbf{占有数表象 \textit{Occupation Representation}}。占有数是天生量子化的，与自然数集一一对应，因此在确定能级中改变占有数的行为就是二次量子化，这里的二次是相对于第一步的正则量子化而言的。对于二次量子化的纯代数理解，请读者参考\textsl{Hermann Weyl}的著作\cite{xURFgmm} \RomanNumeralCaps{4}.\S11的内容，里面有非常详细的说明。 \\
 \\
 在很多文献中，一般称占有数态为\textbf{\textsl{Fock}态}，称占有数表象为\textbf{\textsl{Fock}表象}，态空间为\textbf{\textsl{Fock}空间}。这是由苏联物理学家\textsl{\rusa{В.А.Фок}}于1932年提出的概念，本文为了明确这个态的物理含义，还是使用占有数态这一术语。\\
+\\
+在二次量子化表述下，让我们重新回顾\textbf{激发 \textit{Excitation}}的概念。单个谐振子模型中，激发态是$\ket{n\neq 0}$，也就是不处于基态的态，它是以能量为判据的。而对于多个谐振子模型的集合，对于占有数态就变为
+\begin{equation}\ket{0,0,\ldots,0,N^{}_i\neq 0,0,\ldots,0},\end{equation}
+其中$N^{}_i$可以通过产生算符的作用增加数值。由于$N^{}_i$是粒子数，因此该占有数态就描述了处于此激发态的粒子的集合，我们称为\textbf{粒子的激发}。因此在二次量子化中，粒子并不天然存在，它们只是系统的激发态，单个激发由式(\ref{D234eopi'})确定。所以本文中所有的粒子，都默认以激发态理解，后续若无必要则不会反复提及，但读者应当牢记，从粒子到激发态的转换，是现代物理学最重要的思想革命之一。\\
 \\
 在占有数表象下，相应能级的占有数通过式(\ref{niyaoshi})确定，因此称$\hat N^{}_{\nu}$为\textbf{占有数算符 \textit{Occupation Operator}}。同时我们看到，对于两个态关于\textit{Hamiltonian}算符的内积为
 $$\mel**{m}{\hat{H}}{n}=H^{}_{mn}\in\mathbb R,\quad E^{}_n=H^{}_{nn}$$
@@ -1635,7 +1639,7 @@ $$\rho\in\mathscr{T}^0_{\ 0,\frac{1}{2}}(\mathscr H)=\mathbb{R},$$
 \\
 但是这个问题并不是最重要的，因为前文说了场并没有波函数，我们所关心的只是张量形式，因此旋量就是目前我们最完美的选择。后续我们会看到旋量在相对论体系下的巨大作用。然而三维旋量本身其实并不是时空协变的，也就是说它和四维旋量之间依旧有差别的，这一点我们马上就会看到。关于旋量具体的内容在群论中再谈，这里就形式化的介绍一下。
 
-\subsection{光子：量子化电磁场}\label{uguygy90}
+\subsection{光子：量子化电磁场的激发}\label{uguygy90}
 
 \noindent 现在我们来讨论一下上述二次量子化给出的结果。\\
 \\
@@ -1647,9 +1651,9 @@ $$\rho\in\mathscr{T}^0_{\ 0,\frac{1}{2}}(\mathscr H)=\mathbb{R},$$
 \begin{equation}\comm{\hat{\vb{c}}^{}_{\vb{k}\alpha}}{\hat{\vb{c}}^{\dagger}_{\vb{k}\alpha}}=\hat{\vb{I}}\rightarrow\comm{\hat{\vb{c}}^{}_{\vb{k}\alpha}}{\hat{\vb{c}}^{\dagger}_{\vb{k}\alpha}}=\vb{0}.\label{Dfugs**..}\end{equation}
 也就是说重整化将产生—湮灭算符的对易子从单位化变为$0$，这其实就是重整化在二次量子化中的表现，对于所有的玻色子系统均是这样，读者可以自行检验非相对论部分的结论。在重整化下相应的能量和动量就改为
 \begin{equation}E^{}_N=\sum\limits_{\vb{k}\alpha}\hbar\omega^{}_{\vb{k}}N^{}_{\vb{k}\alpha},\quad \vb{P}^{}_N=\sum\limits_{\vb{k}\alpha}\hbar\vb{k}N^{}_{\vb{k}\alpha}.\label{rerhgj}\end{equation}
-以此为基础，我们就可以建立所谓\textbf{光子 \textit{Photon}}或者\textbf{辐射量子}的概念，光子是粒子化电磁场的结果，每一个光子携带$\epsilon=\hbar\omega$的能量和$\vb{p}=\hbar\omega^{}_{\vb{k}}\vb{n}$的动量，每个光子以波矢$\vb{k}$区分，相当于非相对论体系下的粒子记号$a$。这个是量子场论建立的核心概念之一，一般在记号上记光子为$\gamma$。相较于经典体系的谐振子模型，其不同粒子之间的区分依靠固有频率，不同光子之间依靠波矢或者说动量区分。因为一般研究系统时会涉及到无数的光子，所以我们可以整体的称为\textbf{光子场 \textit{Photon Field}}。\\
+以此为基础，我们就可以建立所谓\textbf{光子 \textit{Photon}}或者\textbf{辐射量子}的概念，光子是电磁场的激发态，每一个光子携带$\epsilon=\hbar\omega$的能量和$\vb{p}=\hbar\omega^{}_{\vb{k}}\vb{n}$的动量，每个光子以波矢$\vb{k}$区分，相当于非相对论体系下的粒子记号$a$。这个是量子场论建立的核心概念之一，在记号上记光子为$\gamma$。相较于经典体系的谐振子模型，其不同粒子之间的区分依靠固有频率，不同光子之间依靠波矢或者说动量区分。因为一般研究系统时会涉及到无数的光子，所以我们可以整体的称为\textbf{光子场 \textit{Photon Field}}。\\
 \\
-这个概念的诞生其实可以追溯到前牛顿时期，当时主流科学界普遍认为光是由微小的物体构成的，这个理论被称为\textbf{光粒子说}，利用该理论可以解释许多光的现象，比如光的反射，折射，小孔成像等，\textsl{Sir. Issac Newton}便是这一理论的拥护者。而在这之后，随着\textsl{Christian Huygens，Augustin Fresnel，Siméon D.Poisson}等物理学家做的一系列实验表明，光其实有波动性，并用这个理论解释了光粒子说无法解释的现象比如\textsl{Newton}环之后，主流学界便抛弃了粒子说，这个新理论被称为\textbf{光波动说}，随后\textsl{Maxwell}又根据电磁理论证明光是电磁波，从而彻底推广了这一理论。\\
+这个概念的诞生其实可以追溯到前牛顿时期，当时主流科学界普遍认为光是由微小的物体构成的，这个理论被称为\textbf{光粒子说}，利用该理论可以解释许多光的现象，比如光的反射，折射，小孔成像等，\textsl{Sir. Issac Newton}便是这一理论的拥护者。而在这之后，随着\textsl{C.Huygens，A.Fresnel，Siméon D.Poisson}等物理学家做的一系列实验表明，光其实有波动性，并用这个理论解释了光粒子说无法解释的现象比如\textsl{Newton}环之后，主流学界便抛弃了粒子说，这个新理论被称为\textbf{光波动说}，随后\textsl{Maxwell}又根据电磁理论证明光是电磁波，从而彻底推广了这一理论。\\
 \\
 可是随着科学技术的不断创新，实验方法也有了许多突破，其中最重要的便是19世纪末发现的\textbf{光电效应 \textsl{Photoelectric Effect}}。这一现象是无法用光波动说解释的，但光粒子说是可以解释的，即认为光作为粒子将金属中的电子通过弹性碰撞打了出去。可是光波动说是经过无数实验证实了的，贸然抛弃自然的不可能的，由此在1905年\textsl{Albert Einstein}提出了光量子假设，现代称之为\textbf{光的波粒二象性 \textit{Particle-wave Duality}}，也就是说这两个理论对于光都成立。正是这一假设加上对于\textsl{Planck}黑体辐射公式新的理解导致了量子力学的诞生，也为量子场论奠定了基础。\\
 \\
@@ -1927,7 +1931,9 @@ $$T^c_{00}=\qty[\qty(-ip^\mu)\qty(ip^{}_\mu)+m^2]\psi\psi^*=C^2\qty(p^\mu p^{}_\
 \begin{equation}\psi=\dfrac{1}{\sqrt{2E^{}_{\vb{p}}}}e^{-ix^{\mu}p^{}_{\mu}}.\label{UY89++-342}\end{equation}
 角动量这里先不求了，在后文中有需要时再给出，读者也可自行计算，权当练习。\\
 \\
-现在讨论一下场的四维流密度$J^{\mu}$，这一部分是对前文中第\ref{uguygy90}节最后关于光子概率流密度问题的解答。上文在处理\textsl{Laplace}核时用物理学公理消去了\textsl{Dirichlet}积分的边界项$\partial^{}_i\qty(y\partial^iy)\implies\displaystyle\oint_{\partial{\mathbb R^n}} y\partial^iy\dd{S}^{}_i$，得出结论(\ref{0ok})。但是我们需要强调的是，物理学公理只适用于整个场的边界，如果我们取场的局部研究那么公理就失效了，因为我们无法确定该局部场的边界是否是整个场的边界。于是我们取局部空间$\mathscr U\subset\mathbb R^n$，使得$y\ \&\ \partial^{}_{\mu}y(\partial{\mathscr U})\neq0$，则边界项就写作
+现在讨论一下场的四维流密度$J^{\mu}$，这一部分是对前文中第\ref{uguygy90}节最后关于光子概率流密度问题的解答。上文在处理\textsl{Laplace}核时用物理学公理消去了\textsl{Dirichlet}积分的边界项
+$$\int\partial^{}_i\qty(y\partial^iy)\dd\Omega=\displaystyle\oint_{\partial{\mathbb R^n}} y\partial^iy\dd{S}^{}_i=0,$$
+得出结论(\ref{0ok})。但是我们需要强调的是，物理学公理只适用于整个场的边界，如果我们取场的局部研究那么公理就失效了，因为我们无法确定该局部场的边界是否是整个场的边界。于是我们取局部空间$\mathscr U\subset\mathbb R^n$，使得$y,\partial^{}_{\mu}y(\partial{\mathscr U})\neq0$，则边界项就写作
 \begin{equation}\int_{\mathscr U}\partial^{}_i\qty(y\partial^iy)\dd{x}=\oint_{\partial{\mathscr U}} y\partial^iy\dd{S}^{}_i=\oint_{\partial{\mathscr U}} \zeta^i\dd{S}^{}_i,\end{equation}
 其中$\bm{\zeta}=\zeta^ie^{}_i=y\partial^iye^{}_i \in \mathscr T^1_{\ 0}(\mathscr U)$。\\
 \\
@@ -1959,7 +1965,7 @@ $$Q=\int_{\partial{\mathscr U}} \zeta^0\dd{S}^{}_0=\int_{\partial{\mathscr U}} \
 \begin{equation}h=\varpi\partial^{}_ty-\Lambda=\dfrac{1}{2}\qty{(\partial^{}_ty)^2+\partial^{}_iy\partial^iy}=\dfrac{1}{2}\qty{\varpi^2+\partial^{}_iy\partial^iy},\quad H=\int h \dd{V},\label{hammiii}\end{equation}
 对于空间项我们仍然有约化\textsl{Laplace}核
 $$\dfrac{1}{2}\partial^{}_iy\partial^iy=\partial^{}_i\qty(y\partial^iy)-y\partial^{}_i\partial^iy=-y\partial^{}_i\partial^iy,$$
-于是$H$对位形的偏导数（这里其实是变分导数$\dfrac{\delta}{\delta y}$，具体数学细节不展开了，符号上可以认为和偏导相同）给出$\dfrac{\partial H}{\partial y}=\partial^{}_i\partial^iy$。最终我们得到单位体积($\dd{V}$)下场的正则方程为
+于是$H$对位形的偏导数(这里其实是变分导数$\fdv*{y}$，具体数学细节不展开了，符号上可以认为和偏导相同)给出$\dfrac{\partial H}{\partial y}=\partial^{}_i\partial^iy$。最终我们得到单位体积$\dd{V}$下场的正则方程为
 \begin{equation}\pdv{H}{\varpi}=\varpi=\partial^{}_ty,\quad \pdv{H}{y}=-\partial^{}_i\partial^iy=-\partial^{}_t\varpi=-\partial^{}_t\partial^ty,\label{oioij}\end{equation}
 第一式是正则位形动量密度定义，第二式就是波动方程$-\partial^{}_i\partial^iy+\partial^{}_t\partial^ty=\square y=0$，和\textsl{Lagrange}表述的结果相同。\\
 \\
@@ -1972,7 +1978,7 @@ $$\dfrac{1}{2}\partial^{}_iy\partial^iy=\partial^{}_i\qty(y\partial^iy)-y\partia
 \begin{equation}Q=i\int_{\partial{\mathscr U}}\qty(\psi\varpi^*-\psi^*\varpi)\dd{V}.\end{equation}
 我们可以通过\textsl{Poisson}括号验证，带入定义(\ref{obihbshcb566})并注意动量和位形的共轭性，我们得到
 $$\begin{aligned}-i\pb{Q}{H}&=-i\int\qty(\pdv{Q}{\psi^*}\pdv{H}{\varpi}+\pdv{Q}{\psi}\pdv{H}{\varpi^*}-\pdv{H}{\psi^*}\pdv{Q}{\varpi}-\pdv{H}{\psi}\pdv{Q}{\varpi^*})\dd V\\&=\int\qty(\varpi^*\partial^{}_t\psi-\varpi\partial^{}_t\psi^*+\psi\partial^{}_t\varpi^*-\psi^*\partial^{}_t\varpi)\dd V\\&=\int\qty(\psi\partial^{}_t\varpi^*-\psi^*\partial^{}_t\varpi)\dd V=\int\qty(\psi\bm{\Delta}\psi^*-\psi^*\bm{\Delta}\psi)\dd V=0.\end{aligned}$$
-因此我们得到$\dv*{Q}{t}=$，从而证明$Q$是守恒量。并且我们也可以看到荷反对称化的原因，一方面是保证了其对称性，另一方面是和\textsl{Poisson}括号的反对称性匹配。\\
+因此我们得到$\dv*{Q}{t}=0$，从而证明$Q$是守恒量。并且我们也可以看到荷反对称化的原因，一方面是保证了其对称性，另一方面是和\textsl{Poisson}括号的反对称性匹配。\\
 \\
 最后我们讨论一下场的规范不变性。在第\ref{oiuhgf}节中我们提到过，当电磁场作为外场时其规范性允许粒子的波函数给出如式(\ref{okjh06})的变换，它在波函数上添加了一个额外的相位。对于\textsl{KG}场也是一样的。我们知道，波函数本身就只能精确到一个相位，旋量也不例外，特别是这里还是类似于波函数的零秩旋量$\psi$。于是我们可以将此规范写成
 \begin{equation}\psi\rightarrow\tilde{\psi}=e^{i\alpha}\psi,\quad \tilde{\psi}^{*}=e^{-i\alpha}\psi^{*},\label{guiff65}\end{equation}
@@ -1990,7 +1996,7 @@ $$\pb{\psi(\alpha)}{Q}=\int\qty(\pdv{\psi}{\psi^*}\pdv{Q}{\varpi}+\pdv{\psi}{\ps
 
 \subsection{Klein-Gordon场的二次量子化}\label{yhbi23}
 
-\noindent 基于上面的讨论，我们来考虑\textsl{KG}场的二次量子化表述。按照第\ref{bbboh}节的内容，我们这里有两个方案：从产生和湮灭算符$\hat{c}^{\dagger},\ \hat{c}$的定义开始，逐步构造场的二次量子化体系；或者从位形对应的算符$\hat{\psi}^{\dagger},\ \hat{\psi}$入手去构造。后续我们均以\textbf{位形算符}这个术语来描述场旋量对应的四维位形在二次量子化下的算符。\\
+\noindent 基于上面的讨论，我们来考虑\textsl{KG}场的二次量子化表述。按照第\ref{bbboh}节的内容，我们这里有两个方案：从产生和湮灭算符$\qty{\hat{c}^{\dagger},\hat{c}}$的定义开始，逐步构造场的二次量子化体系；或者从位形对应的算符$\qty{\hat{\psi}^{\dagger},\hat{\psi}}$入手去构造。后续我们均以\textbf{位形算符}这个术语来描述场旋量对应的四维位形在二次量子化下的算符。\\
 \\
 这里回顾我们在经典玻色子系统结尾处对于两者应用范围的评价。对于经典玻色子系统，这两个方法是等价的，它们并没有应用上的限制。但是在相对论领域就不同了，在第\ref{0964j}节的最后我们曾指出，\textsl{FKG}方程允许负能解$\ket{E^{}_-}$的存在，也就是说\textsl{KG}场的负能级也有非零的占有数。\\
 \\
@@ -2096,7 +2102,7 @@ $$\partial^{}_{\mu}\hat{\psi}^{}_{\vb{p}}=\dfrac{-i}{\sqrt{2E}}p^{}_{\mu}\qty(\h
 \begin{equation}\hat{H}^{}_{KG}=\sum_{\vb{p}}E^{}_{\vb{p}}\qty(\hat{N}^{}_{\vb{p}}+\hat{\bar{N}}^{}_{\vb{p}}),\label{ffvxd}\end{equation}
 也就是取$\comm{\hat{c}^{}_{\vb{p}}}{\hat{c}^{\dagger}_{\vb{p}}}=0$，自然的看到能量和动量为
 \begin{equation}\begin{aligned}&E=\sum_{\vb{p}}E^{}_{\vb{p}}\qty(N^{}_{\vb{p}}+\bar{N}^{}_{\vb{p}}),\\&\vb{P}=\sum_{\vb{p}}\vb{P}^{}_{\vb{p}}\qty(N^{}_{\vb{p}}+\bar{N}^{}_{\vb{p}}).\end{aligned}\label{gghpq}\end{equation}
-动量的计算就不再展开了，和光子场是完全一样的。至此\textsl{KG}场的二次量子化完全处于我们的掌控之中。\\
+动量的计算就不再展开了，和光子场是完全一样的。至此\textsl{KG}场的二次量子化完全处于我们的掌控之中，这里再次提醒读者，这里所说的粒子和反粒子都是\textsl{KG}场的激发态，可以统一称为\textbf{场激发}，反粒子只是相反的激发。\\
 \\
 随后我们来看四维流密度$J^{\mu}$，它的二次量子化算符在形式上为
 \begin{equation}\hat{J}^{\mu}=i\qty(\hat{\psi}\partial^{\mu}\hat{\psi}^{\dagger}-\hat{\psi}^{\dagger}\partial^{\mu}\hat{\psi}),\label{gjkoou}\end{equation}
@@ -2106,7 +2112,7 @@ $$\partial^{}_{\mu}\hat{\psi}^{}_{\vb{p}}=\dfrac{-i}{\sqrt{2E}}p^{}_{\mu}\qty(\h
 \begin{equation}\hat{Q}=\sum_{\vb{p}}\qty(\hat{N}^{}_{\vb{p}}-\hat{\bar{N}}^{}_{\vb{p}}),\label{jk..yADFA}\end{equation}
 其本征值是场的守恒荷
 \begin{equation}Q=\sum_{\vb{p}}\qty(N^{}_{\vb{p}}-\bar{N}^{}_{\vb{p}})=const,\label{jkhby77}\end{equation}
-也就是粒子总数和反粒子总数之差守恒。一方面，系统总粒子数守恒$\implies$两者的和守恒，另一方面荷守恒$\implies$两者的差守恒，因此我们得出粒子总数$N=\sum\limits_{\vb{p}}N^{}_{\vb{p}}$和反粒子总数$\bar{N}=\sum\limits_{\vb{p}}\bar{N}^{}_{\vb{p}}$各自守恒，这也印证了我们之前的理论，也就是粒子荷反粒子是两种不同的粒子，并且成对出现 (虽然这有点马后炮的意思)。\\
+也就是粒子总数和反粒子总数之差守恒。一方面，系统总粒子数守恒$\implies$两者的和守恒，另一方面荷守恒$\implies$两者的差守恒，因此我们得出粒子总数$N=\sum\limits_{\vb{p}}N^{}_{\vb{p}}$和反粒子总数$\bar{N}=\sum\limits_{\vb{p}}\bar{N}^{}_{\vb{p}}$各自守恒，这也印证了我们之前的理论，也就是粒子和反粒子是两种不同的粒子，并且成对出现 (虽然这有点马后炮的意思)。\\
 \\
 现在让我们讨论一下这个荷对应了什么物理量。
 \begin{itemize}\item 首先能明确的是，它是粒子和反粒子的内禀属性，与系统$\mathscr S^{}_{p\bar{p}}$和\textsl{KG}场是无关的，因为这个守恒流对应的是粒子本身的\textsl{Noether}定理，这一点由场的规范不变性体现为旋量的附加相可以看出；\item 其次能明确的是，这个物理量对于粒子和反粒子而言，应该是数值相同但符号相反的，类似于作用力和反作用力。因为在式(\ref{jkhby77})中对于两者的数量是做差而不是求和，求和式可以参考能量(\ref{gghpq})，之前已经证明粒子和反粒子能量相同因此取数量和。\end{itemize}
@@ -2154,7 +2160,7 @@ $$\comm{\hat{a}^{}_{\vb{p}}}{\hat{b}^{}_{\vb{p}}}\equiv0,\quad \cdots,\quad \com
 \begin{equation}\vb{Y}^{}_{\vb{p}}=\vb{\Gamma}^{\dagger}_{\vb{p}}\mathbb{E}^{}_{\vb{p}}\vb{\Gamma}^{}_{\vb{p}}.\label{boghh66}\end{equation}
 这些结论和离散谱的形式完全一致，只不过在连续谱下需要以动量表征能级。当然目前我们只考虑自由玻色子，所以\textit{Hamiltonian}是自然对角化的。当然我们依旧需要强调，\textsl{Bogoliubov}变换前后的算符不一定描述相同的粒子，因为对应能量的改变会导致占有数的改变，而占有数和算符直接相关，所以变换实际上也对应到了新粒子上。\\
 \\
-最后我们补充一下光子的情况。在光子的二次量子化过程中，我们只使用了一套二次量子化算符。这并非判断上的失误，这其实是光子独有的属性。对于光子，二次量子化算符最终写作式(\ref{wllls})，只用了一套算符$\hat{c},\hat{c}^{\dagger}$，这表明对于光子而言，其粒子和反粒子是相同的。我们称这一类粒子为\textbf{真中性粒子 \textit{True Netural Particle}}，用以区别粒子和反粒子对组成的\textbf{电中性粒子系统}。因为少了一套算符，所以对于其\textit{Lagrangian}相当于只取\textsl{KG}场的一半，即
+最后我们补充一下光子的情况。在光子的二次量子化过程中，我们只使用了一套二次量子化算符。这并非判断上的失误，这其实是光子独有的属性。对于光子，二次量子化算符最终写作式(\ref{wllls})，只用了一套算符$\qty{\hat{c},\hat{c}^{\dagger}}$，这表明对于光子而言，其粒子和反粒子是相同的。我们称这一类粒子为\textbf{真中性粒子 \textit{True Netural Particle}}，用以区别粒子和反粒子对组成的\textbf{电中性粒子系统}。因为少了一套算符，所以对于其\textit{Lagrangian}相当于只取\textsl{KG}场的一半，即
 \begin{equation}\hat{\Lambda}^{}_{TNP}=\dfrac{1}{2}\hat{\Lambda}^{}_{KG}=\dfrac{1}{2}\qty(\partial^{}_{\mu}\hat{\psi}\partial^{\mu}\hat{\psi}^{\dagger}-m^2\hat{\psi}\hat{\psi}^{\dagger}),\end{equation}
 其中位形算符为
 \begin{equation}\hat{\psi}=\sum_{\vb{p}}\dfrac{1}{\sqrt{2E}}\qty(\hat{c}^{}_{\vb{p}}e^{-ix^{\mu}p^{}_{\mu}}+\hat{c}^{\dagger}_{\vb{p}}e^{ix^{\mu}p^{}_{\mu}}).\end{equation}
@@ -2983,13 +2989,13 @@ $$\vb{u}^{\tilde{i}}_{(\upsilon)},\quad \upsilon=1/2.$$
 \\
 在1928年\textsl{Paul Dirac}发表了线性\textsl{Dirac}方程(\ref{congcty})，并在1929年末发表了一篇文章试图解释其中的负能解，并指出这个负能粒子貌似带有和电子相反的电荷，这是通过加入外场比如磁场可以得出的结论，这一结论随后发展为\textbf{\textsl{Dirac}负能海}。彼时通过实验人们已经知道，根据定义电子$\qty(^{-1}_{\ 0}\text{e}^-)$带负电，质子$\qty(^1_1\text{p})$带正电，因而\textsl{Dirac}认为该粒子是质子。但是\textsl{Robert Oppenheimer}指出若这是事实，那么氢原子($^2_1$H)会立马爆炸，因为根据原子模型，电子围绕着质子旋转，它们之间为电磁相互作用。若质子对应负能解，则此时原子核就是负能海，而电子因为电磁势能的原因，为了平衡核子的负能必然会不断往外跑导致原子解体。\textsl{Dirac}接受了这一说法，并在1931年发表了对于反电子的预测。\\
 \\
-由此，\textsl{Richard Feynman}在回溯了\textsl{FKG}方程之后提出，“反电子是时间逆行的粒子”这一说法，并推广这一概念为\textbf{反粒子}，从而诞生了产生-湮灭概念，这和我们在\textsl{KG}场中的分析过程是一致的。随后1932年\textsl{Carl Anderson}在实验上证明了该粒子的存在，并将其起名为\textbf{正电子 \textit{Positron}}，我们记为$\qty(^{-1}_{\ 0}\text{e}^+)$。这是世界上第一个被发现的反物质，他也因此获得1938年诺贝尔物理学奖，从而确定此理论是正确的。\\
+由此，\textsl{Richard Feynman}在回溯了\textsl{FKG}方程之后提出，“反电子是时间逆行的粒子”这一说法，并推广这一概念为\textbf{反粒子}，从而诞生了产生—湮灭概念，这和我们在\textsl{KG}场中的分析过程是一致的。随后1932年\textsl{Carl Anderson}在实验上证明了该粒子的存在，并将其起名为\textbf{正电子 \textit{Positron}}，我们记为$\qty(^{-1}_{\ 0}\text{e}^+)$。这是世界上第一个被发现的反物质，他也因此获得1938年诺贝尔物理学奖，从而确定此理论是正确的。\\
 \\
 但这个理论的作用不止于此。我们提到\textsl{Dirac}场对于非零质量粒子和零质量粒子的表现是不同的，零质量粒子的\textsl{Dirac}方程最早是由大数学家\textsl{Hermann Weyl}在1929年提出的，也就是前文给出的\textsl{Weyl}方程，但是因为当时并没有实验数据支撑而束之高阁。关于$s=\dfrac{1}{2}$的粒子存在的假说最早是在1931年由\textsl{Wolfgang Pauli}在研究\textbf{$\bm{\beta}$衰变}时提出的，主要是为了凑出$\beta$衰变中只产生电子而导致的能量、动量以及自旋角动量不守恒，并且这是一种质量非常小的电中性粒子。随着1932年\textsl{James Chadwick}在实验中发现中子($^1_0$n)的存在，\textsl{Pauli}之前在$\beta$衰变中预言的额外电中性粒子被\textsl{Enrico Fermi}命名为\textbf{中微子 \textit{Neutrino}}，用以区别大质量的\textbf{中子 \textit{Neutron}}，记为$\nu$。\\
 \\
 这一情况就导致了之前\textsl{Weyl}方程的重启。在1942年中国核物理学家王淦昌院士提出用\textbf{电子俘获 \textit{Electron capture}}来观察中微子，随后1956年通过该方法成功观测到了电中微子$\nu^{}_e$，也就是\textsl{Pauli}在$\beta$衰变中预言的那个额外电中性粒子。于是借助\textsl{Weyl}方程，在1952年由\textsl{Landau}，\textsl{Abdus Salam}等科学家发展的中微子理论逐渐浮出水面，进一步扩充了\textsl{Dirac}场，并且在理论上证明了$\beta$衰变依旧符合传统的守恒定律。但是早在1928年物理学家\textsl{Richard Threlkeld Cox}就发现$\bm{\beta}$衰变的宇称不守恒性，这一点并没有因为中微子的加入而消失。于是在1956年由李政道院士和杨振宁院士共同发表了划时代的论文\textbf{《弱相互作用中的宇称守恒质疑》}，深入的发展了中微子的极化理论，并首次打破了物理学一贯以来的守恒律治天下的成见，这一事实在1957由吴健雄女士通过实验证明。\\
 \\
-可以看到\textsl{Dirac}场基本上撑起了半个粒子物理领域，是粒子物理发展史中一个不可或缺的模型。
+可以看到\textsl{Dirac}场基本上撑起了半个粒子物理领域，是粒子物理发展史中一个不可或缺的模型。同时，从粒子实体到场激发态的思想革命，解决了反粒子的存在问题，本质上这只是场的相反激发，它并非是非物理的，而是我们一直在用正激发理解反激发，这当然是错误的。
 
 \subsection{Dirac场的二次量子化}\label{DFBGRW99}
 
@@ -12490,7 +12496,7 @@ $$i\gamma^2\qty{\bm{\gamma}^A\qty(\hat{\vb{P}}^{}_A+\frac{e}{c}\vb{A}^{}_A)}^T\g
 当然线性形式的结构较为简单，并不能体现系统所有的变化，所以我们接下来讨论波动方程。方便起见，我们类似式(\ref{kelint1})引入\textbf{四维协变导数}如下
 \begin{equation}\hat{\mathfrak{D}}^A=\hat{\vb{P}}^A-\frac{e}{c}\hat{\vb{A}}^A=i\hbar\qty(\partial^A+\frac{ie}{c\hbar}\vb{A}^A)=\qty(\hat{\mathcal{H}}-\frac{e}{c}\varphi,\hat{\mathbb{D}}^a),\label{Z23CBN}\end{equation}
 不难验证其三维协变形式就是式(\ref{kelint1})，于是\textsl{Dirac}方程(\ref{no2s1})就可以写为
-\begin{equation}\qty{\bm{\gamma}^A\hat{\mathfrak{D}}^{}_A-mc}\bm{\psi}=\qty(\hat{\slashed{\mathfrak{D}}}-mc)\bm{\psi}=0,\label{n32s1}\end{equation}
+\begin{equation}\qty(\bm{\gamma}^A\hat{\mathfrak{D}}^{}_A-mc)\bm{\psi}=\qty(\hat{\slashed{\mathfrak{D}}}-mc)\bm{\psi}=0,\label{n32s1}\end{equation}
 也就是将\textsl{Feynman}偏导做替换$\slashed{\partial}\rightarrow\hat{\slashed{\mathbb{D}}}$，这是非常合理的。但是其对易性被矢势改变，我们利用式(\ref{UHs]].**})以及对易子的双线性性得到
 $$\begin{aligned}\comm{\hat{\mathfrak{D}}^A}{\hat{\mathfrak{D}}^B}f&=\comm{\hat{\vb{P}}^A-\frac{e}{c}\hat{\vb{A}}^A}{\hat{\vb{P}}^B-\frac{e}{c}\hat{\vb{A}}^B}f=-\frac{e}{c}\qty(\comm{\hat{\vb{P}}^A}{\hat{\vb{A}}^B}+\comm{\hat{\vb{A}}^A}{\hat{\vb{P}}^B})f\\&=-i\hbar\frac{e}{c}\qty(\comm{\partial^A}{\vb{A}^B}+\comm{\vb{A}^A}{\partial^B})f\\&=-i\hbar\frac{e}{c}\qty{\partial^A\qty(\vb{A}^Bf)-\partial^B\qty(\vb{A}^Af)+\vb{A}^A\partial^Bf-\vb{A}^B\partial^Af}\\&=-i\hbar\frac{e}{c}\qty(\partial^A\vb{A}^B-\partial^B\vb{A}^A)f.\end{aligned}$$
 需要注意，在计算对易子时场的偏导项$\partial^A(\vb{A}^B)$必须要通过对测试函数$f$的作用得到，类似计算位形-动量对易式(\ref{YUhb7O})的方法。不难看到这就是逆变电磁场张量$\vb{F}^{AB}=\partial^A\vb{A}^B-\partial^B\vb{A}^A$，于是四维协变导数的对易子为
@@ -13422,13 +13428,14 @@ $$s\geq 2m^2_0\implies K^2_s=1-\qty(\frac{2m^{}_0}{\sqrt{s}})^2<0\implies K^{}_s
 而$s\geq 2m^2_0$根据图(\ref{Xciwh44[[L})就是$s$的分支割线，根据第\ref{YtebVV}节的分析，在割线处传播子虚部为割线的间断差，这同样可以推广到顶点函数。这样通过\textsl{LSZ}约化，顶点函数在分支割线处的间断差就确定了振幅的虚部。另一方面，总截面可以从式(\ref{WSTG4-*50})积分得到，只需将式(\ref{VSG689})的角元换为协变相空间体元即可
 $$\sigma=\int\dd \Phi^{}_n\abs{\mathcal A}^2=\int \Phi^{}_n\abs{\mathcal A\qty(\vb{n}^{}_a,\vb{n}^{}_c)}^2,$$
 其定义参考第\ref{Tadfi///}节。通过$\hat{\mathfrak S}$在分支割线处的幺正性，类似的写出式(\ref{Le.258//})的协变形式，我们自然就得到光学定理。
-\subsection{Dirac场之间的耦合}\label{dinm,a665rb2}
+
+\subsection{Dirac场的激发自耦合}\label{dinm,a665rb2}
 \noindent 在前文中我们介绍了相互作用散射理论，并以实标量场为例刨析了\textsl{Feynman}图和振幅的关联。但真实粒子都是费米子，比如电子$e^-$和质子$p^+$都是半自旋费米子，并且我们从第\ref{DFgg//}节中看到，电磁波场也就是光子的产生，实际来源于这些带电费米子的运动。\\
 \\
-在第\ref{Cv234=-u.}节中，我们详细分析了单个半自旋费米子在外电磁场中的动力学，现在我们来讨论两个半自旋费米子在对方产生的电磁场中的动力学，并为后续理论做一些简要的铺垫。关于\textsl{Dirac}场的关联函数理论请参考第\ref{GDHU,mm;lk}节，相互作用理论下只需要将真空自由态改为相应的相互作用绘景态即可，我们就不重复介绍了。
+在第\ref{Cv234=-u.}节中，我们详细分析了单个半自旋费米子在外电磁场中的动力学，现在我们来讨论两个半自旋费米子在对方产生的电磁场中的动力学，并为后续理论做一些简要的铺垫。需要强调的是，这两个费米子\emph{来自同一个\textsl{Dirac}场}，只是场的两个不同激发态，因此这是\textbf{激发自耦合 \textit{Excited Self-coupling}}。关于\textsl{Dirac}场的关联函数理论请参考第\ref{GDHU,mm;lk}节，相互作用理论下只需要将真空自由态$\ket{0}$改为相应的相互作用绘景态$\ket{\Omega}$即可，我们就不重复介绍了。
 
 \subsubsection{电磁相互作用算符}
-\noindent 由于现在电磁场是由粒子的运动产生，因此其可以用有源\textsl{Maxwell}方程表示，它由一个四维电流密度$\vb{j}^A$控制。因为在场的计算中，基本的研究对象是\textit{Lagrangian}密度，因此我们需要从电磁耦合作用量(\ref{ewfEE})中提出$\Lambda^{}_{\text{int}}$。\\
+\noindent 由于现在电磁场是由粒子的运动产生，因此可以用有源\textsl{Maxwell}方程表示，它由一个四维电流密度$\vb{j}^A$控制。因为在场的计算中，基本的研究对象是\textit{Lagrangian}密度，因此我们需要从电磁耦合作用量(\ref{ewfEE})中提出$\Lambda^{}_{\text{int}}$。\\
 \\
 回顾到电磁耦合作用量$S^{}_{\textit{pf}}$，其在\textsl{Gauss}单位制下的形式为
 $$S^{}_{\textit{pf}}=-e\int_{\mathscr I}\bm{\omega}=-e\int_{\mathscr I}A^{}_{\mu}\dd{x}^{\mu},$$
@@ -13484,11 +13491,11 @@ $$\begin{aligned}&\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\b
 \begin{equation}\gamma^\mu\gamma^\nu=\gamma^\mu\otimes\gamma^\nu=\gamma^\mu_{\tilde{i}\tilde{j}}\gamma^\nu_{\tilde{k}\tilde{l}}.\end{equation}
 只是为了方便，将其简写为乘积，读者务必要将此简写和相应代数的乘积定义(\ref{fpij3458})区分。从第二项就是式(\ref{pHgf015--})确定的自由光子传播子，在\textsl{Feynman}规范下以动量\textsl{Feynman}图表示为
 \begin{equation}D^{\mu\nu}_{P,F}(k)=\frac{4\pi i\eta^{\mu\nu}}{k^2+i0}=\quad\tikz[baseline=.5ex]{\begin{feynman}\vertex(a);\vertex[right=2 cm of a](b);\diagram*{(a)--[photon,momentum=$k$](b)};\end{feynman}}.\end{equation}
-其余\textsl{Feynman}规则和实标量场一致，同样在顶点处动量守恒，我们就不重复了。前一项用\textsl{Wick}定理(\ref{qefrGGH})展开，缩并由\textsl{Dirac}传播子(\ref{VBXgrfg508=})确定，注意费米反对易性，我们得到连通部分
+其余\textsl{Feynman}规则和实标量场一致，同样在顶点处动量守恒，我们就不重复了。前一项用\textsl{Wick}定理展开，缩并由\textsl{Dirac}传播子(\ref{VBXgrfg508=})确定，注意费米反对易性，我们得到连通部分
 \begin{equation}\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_a\hat{\bm{\psi}}^{}_b\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_x\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y}}{0}_{\text{conn}}=-8S^{}_R(a,x)S^{}_R(x,y)S^{}_R(y,b).\label{Qdghe67}\end{equation}
 其中简并度系数包含了$x$和$y$之间的对称性，这是很明显的，当$\hat{\overline{\bm{\psi}}}\hat{\bm{\psi}}$整体移动时置换次数是偶数。现在引入\textsl{Dirac}场的空间\textsl{Feynman}图，将连通部分(\ref{Qdghe67})写作
 $$\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_a\hat{\bm{\psi}}^{}_b\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_x\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y}}{0}_{\text{conn}}=-8\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=below:$a$](a){};\vertex[right=1cm of a,dot,label=below:$x$](b){};\vertex[right=1cm of b,dot,label=below:$y$](c){};\vertex[right=1cm of c,dot,label=below:$b$](d){};\diagram*{(a)--(b)--(c)--(d)};\end{feynman}}).$$
-注意现在图自带负号，这是反对易性导致的。不难写出相应的动量图，其中单个\textsl{Dirac}传播子根据式(\ref{POI.,.;;LK})为
+注意现在图自带负号，这是费米反对易性导致的，请读者自行验证。不难写出相应的动量图，其中单个\textsl{Dirac}传播子根据式(\ref{POI.,.;;LK})为
 \begin{equation}\frac{i\qty(\slashed{p}+m)}{p^2-m^2+i0}=\quad\tikz[baseline=.5ex]{\begin{feynman}\vertex(a);\vertex[right=2 cm of a](b);\diagram*{(a)--[fermion,momentum=$p$](b)};\end{feynman}}.\end{equation}
 同时应当满足顶点动量守恒，于是二级修正(\ref{JIggf,-*..})的连通动量图为
 \begin{equation}\mathfrak C^{(2)}_D(p)=\frac{8e^2}{2}\gamma^\mu\gamma^\nu\qty(\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex(a);\vertex[right=2cm of a](b);\vertex[right=2cm of b](c);\vertex[right=2cm of c](d);\diagram*{(a)--[fermion,momentum=$p$](b)--[fermion,momentum'=$p-k$](c)--[fermion,momentum=$p$](d),(b)--[half left,photon,momentum=$k$](c)};\end{feynman}}).\end{equation}
@@ -13584,7 +13591,7 @@ $$\mathcal A^{(2)}=-4\pi i\eta^{}_{\mu\nu}e^2 \gamma^\mu\gamma^\nu\qty[\frac{1}{
 \subsubsection{非极化振幅的有效截面}
 \noindent 由于我们重点关注二次量子化，因此不会大量的涉及有效截面的计算。当然为了理论的完整性，这里我们介绍上述电子耦合的有效截面计算，以及相应的技巧。\\
 \\
-回顾到式(\ref{WSTG4-*50})指出，有效截面和振幅呈模平方关系，因此目前我们要计算的是\textsl{Møller}散射和\textsl{Bhabha}散射的$\abs{\mathcal A}^2$。方便起见我们统一采用\textsl{Feynman}规范，则两个散射的振幅的特征结构为
+回顾到式(\ref{WSTG4-*50})指出，有效截面和振幅呈模平方关系，因此目前需要计算的是\textsl{Møller}散射和\textsl{Bhabha}散射的$\abs{\mathcal A}^2$。方便起见我们统一采用\textsl{Feynman}规范，则两个散射的振幅的特征结构为
 $$\mathcal A^{(2)}_{\textsl{Møller}}\sim \eta^{}_{\mu\nu}e^2\gamma^\mu\gamma^\nu\overline{\vb{u}}_{p^{}_{f4}}\vb{u}_{p^{}_{i2}}\overline{\vb{u}}_{p^{}_{f3}}\vb{u}_{p^{}_{i1}},\quad \mathcal A^{(2)}_{\textsl{Bhabha}}\sim \eta^{}_{\mu\nu}e^2\gamma^\mu\gamma^\nu\overline{\vb{u}}_{-p^{}_{i2}}\vb{u}_{-p^{}_{f4}}\overline{\vb{u}}_{p^{}_{f3}}\vb{u}_{p^{}_{i1}}.$$
 为了简化后续的表述，我们引入新记号，对于同一个粒子保持相同的符号
 \begin{equation}\vb{u}_{p^{}_{i1}}=\vb{u},\quad \vb{u}_{p^{}_{i2}}=\vb{v},\quad\vb{u}_{-p^{}_{f4}}=\vb{w}, \quad \overline{\vb{u}}_{p^{}_{f3}}=\overline{\vb{u}},\quad \overline{\vb{u}}_{p^{}_{f4}}=\overline{\vb{v}},\quad \overline{\vb{u}}_{-p^{}_{i2}}=\overline{\vb{w}},\end{equation}
@@ -13717,6 +13724,7 @@ $$\mathcal A^{(2)}_{fi}(u=\vb{q}^2)=-4im^2\bm{w}^*_4\bm{w}^*_3U\qty(\vb{p}^{}_1,
 此相互作用$U^{}_{Breit}$的解释是显然的，前三项分别对应了式(\ref{hi33gdd})的宏观辐射场相互作用，以及一个荷质比的点源修正，具体的匹配只需在质心系下考察即可。第四项用具体自旋和角动量写作$\hat{\vb{S}}\cdot\hat{\vb{L}}$，显然是轨道—自旋耦合，第五项是$\hat{\vb{S}}^{}_1\cdot\hat{\vb{S}}^{}_2$，是自旋—自旋耦合。这样我们就完成了电磁辐射的初步低速修正。\\
 \\
 关于\textsl{Bhabha}散射的修正，我们这里就不叙述了，读者可以参考\cite{L42}的\S 83。这里做简单说明，\textsl{Bhabha}振幅根据式(\ref{Minsifg})，其涉及$s$道，这和$t$道或者$u$道的形结构都不相同，因而不能直接将$t$道反对称化，具体计算细节请自行查看。
+
 \subsubsection{Dirac场的束缚态散射}
 \noindent 上面我们详细分析了双电子自由散射的情形，得到了\textsl{Møller}散射和\textsl{Bhabha}散射的可观测量以及辐射修正初步。但根据第\ref{CHoeei**--}节我们看到，超导体中\textsl{Cooper}对是一对电子的束缚态，因此这里不妨花一点时间，来讨论双电子束缚态的散射。我们这里假设束缚态在散射后依旧保持束缚，但耦合强度会产生变化。\\
 \\
@@ -13830,12 +13838,60 @@ $$\tikz{\begin{feynman}\vertex[dot](a);\vertex[dot,right=3 cm of a](b){};\vertex
 \begin{equation}\begin{aligned}&\mathcal M^{(2)}_{e^-e^-}\qty(P^{}_B,p)=-\bigintsss\qty(\frac{\dd k}{2\pi})^4\frac{e^2}{k^2}S^{}_D\qty(\frac{P^{}_B}{2}+k)\gamma^\mu\otimes\gamma^{}_\mu S^{}_D\qty(\frac{P^{}_B}{2}-k)\mathcal M^{}_{e^-e^-}\qty(P^{}_B,k).\\&\mathcal M^{(2)}_{e^-e^+}\qty(P^{}_B,p)=-\bigintsss\qty(\frac{\dd k}{2\pi})^4\frac{e^2}{k^2}S^{}_D\qty(k+\frac{P^{}_B}{2})\gamma^\mu\otimes\gamma^{}_\mu S^{}_D\qty(k-\frac{P^{}_B}{2})\mathcal M^{}_{e^-e^+}\qty(P^{}_B,k).\end{aligned}\end{equation}
 这就是\textsl{Dirac}场束缚态散射的最低阶运动方程，它在结构上是较为简单的，因此是可以求解的。更高级的修正这里就不展示了，读者可以自行尝试。值得一提的是，若对比顶点函数定义(\ref{sufFH})，在\textsl{Dirac}场我们得到$\varPi^{}_4=K^{(2)}+\cdots$，也就是说$K^{(2)}$同时也是$\varPi^{}_4$的最低近似，后续我们会看到。
 
-\subsection{外场中的散射理论}\label{Zcbrr.,599}
-\noindent 上文中，我们详细分析了两个\textsl{Dirac}场之间的耦合，出发点是电子的散射等价于一个电子在另一个电子产生的电磁辐射中运动，这一点通过树状图可以清晰的看到。但这些计算只对真空成立，因为真实环境中必然存在外场，它们会对散射施加额外的效应。不妨重新回到第\ref{Cv234=-u.}节的设定，假设存在一个外场，我们需要讨论它和单粒子的耦合会如何参与到散射中。\\
+\subsection{与外场的耦合理论}\label{Zcbrr.,599}
+\noindent 上文中，我们详细分析了\textsl{Dirac}场的自耦合，出发点是电子的散射等价于一个电子在另一个电子产生的电磁辐射中运动，这一点通过树状图可以清晰的看到。但这些计算只对真空成立，因为真实环境中必然存在外场，它们会对散射施加额外的效应。不妨重新回到第\ref{Cv234=-u.}节的设定，假设存在一个外场，我们需要讨论它和单粒子的耦合会如何参与到演化中。下面称和外场耦合的场为\textbf{目标场}。\\
 \\
-或者更进一步，如果系统处于热浴中，那么这个外场就是其余所有运动粒子产生的场的总和，它和温度相关。由于这些问题过于复杂，因此这一部分我们只给出一些理论框架，具体应用和计算会在后文中逐一展示。
+上述分析还是处于经典外场，从量子化的角度，我们当然也可以讨论量子外场的影响，此时量子外场指的是和目标场不同的场。或者更进一步，如果目标场处于热浴中，那么这个外场就是其余所有运动粒子产生的场的总和，它和温度相关。在\textsl{Dirac}场中，这就是电荷云对电磁波的热散射。由于这些问题过于复杂，因此这一部分我们只给出一些理论框架，具体应用和计算会在后文中逐一展示。
 
-\subsubsection{实标量场和电磁场的耦合}
+\subsubsection{标量场和外场的耦合}
+\noindent 作为框架的起点，我们来分析标量场的情形。从最简单的模型开始，令一个实标量场$\varphi$和一个复标量场$\qty{\psi,\psi^*}$耦合。这是对实标量场自耦合的推广，比如第\ref{DFVO))//}节中$\psi^2$和$\psi^4$的相互作用。假设目标场是自由复\textsl{KG}场，考虑到\textit{Lagrangian}是实数，我们可以写出三次相互作用
+\begin{equation}\Lambda^{}_{2,2^*}\qty(\psi,\psi^*,\varphi)=\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi\abs{\psi}^2,\end{equation}
+其中相互作用项是一个三次型，实标量场是外场
+\begin{equation}\Lambda^{}_{\textit{int}}\qty(\varphi,\psi,\psi^*)=\lambda\varphi\abs{\psi}^2.\end{equation}
+当然我们也可以取其余形式，只需注意复标量场必然是$\qty(\abs{\psi}^2)^n$。从经典场论的角度，在第\ref{yhbi23}节的最后我们证明了，实场和复场的一大区别在于实场不带电，复场带电$Q$，相应的\textsl{Noether}流为式(\ref{liumidubab})，这里重新写出
+$$J^{\mu}=i\qty(\psi\partial^{\mu}\psi^*-\psi^*\partial^{\mu}\psi),\quad \partial^{}_\mu J^{\mu}=0.$$
+由于复标量场是$U(1)$不变的，因此做变换(\ref{guiff65})并计算变分$\delta\Lambda^{}_{2,2^*}=0$，相互作用中的$\abs{\psi}^2$依旧会保证给出$\partial^{}_\mu J^{\mu}\delta\alpha=0$，这是恒成立的。所以我们看到，此相互作用不会影响复场的带电性，因为事实上它只给复场加了一个有效质量
+$$\Lambda^{}_{mass}=m^*(m,\varphi)\abs{\psi}^2,\quad m^*(m,\varphi)=\lambda\varphi-m^2.$$
+而质量项对荷没有贡献，因此和实标量场的耦合不会改变电荷分布，因此不会改变粒子和反粒子数。\\
+\\
+现在让我们讨论其量子化，不妨从路径积分入手。
+
+
+
+
+假设一个复标量场$\qty{\psi,\psi^*}$和一个电磁场$\vb{A}^A$耦合，在电磁场中导数$\partial$变为四维协变导数(\ref{Z23CBN})，同时算上电磁场自身，我们得到系统的总\textit{Lagrangian}
+\begin{equation}\begin{aligned}\Lambda^{}_{sqed}\qty(\psi,\psi^*,\vb{A}^A)&=\hat{\mathfrak{D}}^*_A\psi^*\hat{\mathfrak{D}}^A\psi-m^2\psi^*\psi-\dfrac{1}{16\pi}\vb{F}^{}_{AB}\vb{F}^{AB}\\&=\abs{\partial^{}_\mu\psi}^2-\qty(m^2-e^2A^2)\abs{\psi}^2+ie\vb{A}^A\qty(\psi^*\partial^{}_A\psi-\psi\partial^{}_A\psi^*)-\dfrac{1}{16\pi}\vb{F}^{}_{AB}\vb{F}^{AB}.\end{aligned}\end{equation}
+其中简写$A^2=\vb{A}^A\vb{A}^{}_A$是四维模方。相应的量子化称为\textbf{\textsl{标量电动力学} \textit{Scalar QED}}这里采用复标量场的原因是，$\vb{A}^A$具有$U(1)$规范性，这要求耦合场也由相同规范性。而$U(1)$规范性要求场带电，
+
+
+不难看到，在无外电磁场时，系统回到\textsl{KG}场
+$$\Lambda^{}_{sqed}\qty(\psi,\psi^*,\vb{A}^A=\vb{0})=\Lambda^{}_{KG}\qty(\psi,\psi^*),$$
+因此一个自然的想法，就是判断外场是否可以当作微扰。这里需要两个判据，分别解决协变导数的耦合以及电磁场自身，
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsubsection{Dirac场和外场的耦合}
 \subsubsection{热场中的散射}
 \subsubsection{热场动力学引入}
