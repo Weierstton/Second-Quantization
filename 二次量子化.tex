@@ -7877,7 +7877,7 @@ $$\begin{matrix}\text{磁\textsl{Ising}系统}&\quad&\quad&\text{量子系统}\\
 \begin{equation}\exp{\frac{i}{\hbar}\qty(\Gamma(\bm{\eta})-\int\vb{J}\cdot\bm{\eta}\dd\Omega)}=\bigintsss\exp{\frac{i}{\hbar}\qty(S[\vb{q}(x)]-\int\vb{J}(x)\cdot\vb{q}(x)\dd\Omega)}\mathscr D\vb{q}(x).\label{ChoYUf}\end{equation}
 可见若场是经典的，也就是$\hbar\to0$，则取准经典近似到零级给出
 \begin{equation}\exp{\frac{i}{\hbar}\qty(\Gamma(\bm{\eta})-\int\vb{J}\cdot\bm{\eta}\dd\Omega)}\approx\exp{\frac{i}{\hbar}\qty(S^{}_{\text{min}}(\vb{q})-\int\vb{J}\cdot\vb{q}\dd\Omega)}\implies\Gamma(\bm{\eta})\approx S^{}_{\text{min}}(\vb{q}),\label{CG;P1Y[]f}\end{equation}
-和作用量相同，因而称为有效作用量。于是后续动力学分析完全可以按照\textsl{LG}理论的思路，涨落可以额外单独处理，这就是统计场论的雏形。\\
+和作用量相同，因而称为有效作用量。于是后续动力学分析完全可以按照\textsl{LG}理论的思路，涨落可以额外单独处理，这就是统计场论的雏形。这里需要强调，有效作用量的定义是热力学意义上的，读者应当和第\ref{Zcbrr.,599}节中引入的\emph{耦合有效作用量}做严格区分，两者虽然都是有效作用量，且形式上相似，但来源完全不同。\\
 \\
 虽然我们通过路径积分间接定义了有效作用量，但由于序参量并不显含于积分中，因此我们希望能给出$\Gamma$的显含解析式。以下推导参考\cite{L3p} \S 11.4。式(\ref{ChoYUf})确定了其间接表达式，根据\textsl{LG}理论的一般逻辑，我们从非涨落的经典场方程开始，不是一般性的这里假设\textit{Lagrangian}和位形梯度无关，则场方程给出
 $$\pdv{\Lambda}{\vb{q}}(x)=\vb{J}(x),\quad\vb{q}=\qty(q^i) .$$
@@ -7912,7 +7912,7 @@ $$\begin{aligned}Z(\vb{J})=&\exp{\frac{i}{\hbar}\int\qty[\Lambda^{}_1-\vb{J}^{}_
 方程的解$\bm{\eta}^{}_0$对应了系统在无外场下的稳定真空均值，这和\textsl{Landau}理论中的自发相变点一致。由于$\vb{J}=\vb{0}$，因而现在$\Gamma=F$。一般而言对于真空，我们要求真空态满足时空平移对称性，更进一步的满足\textsl{Lorentz}对称性，则$\bm{\eta}$和时空无关。此时自由焓对时空的体积分就给出
 $$G(\bm{\eta})=\Gamma(\bm{\eta})=\int g(\bm{\eta})\dd\Omega=V\mathfrak Tg(\bm{\eta}),$$
 其中$V$是所考察的场区域$\mathscr S$的空间体积，$\mathfrak T$是该区域的时间。为此定义\textbf{有效势}
-\begin{equation}U^{}_{\text{eff}}(\bm{\eta})=g(\bm{\eta})=\frac{\Gamma(\bm{\eta})}{V\mathfrak T}\implies\Gamma(\bm{\eta})=V\mathfrak TU^{}_{\text{eff}}(\bm{\eta}),\quad U^{}_{\text{eff}}\qty(\bm{\eta}^{}_0)=\frac{F}{V\mathfrak T}.\end{equation}
+\begin{equation}U^{}_{\textit{eff}}(\bm{\eta})=g(\bm{\eta})=\frac{\Gamma(\bm{\eta})}{V\mathfrak T}\implies\Gamma(\bm{\eta})=V\mathfrak TU^{}_{\textit{eff}}(\bm{\eta}),\quad U^{}_{\textit{eff}}\qty(\bm{\eta}^{}_0)=\frac{F}{V\mathfrak T}.\end{equation}
 可见对于稳定点，这实际上就是自由能密度，此方程的每个解都是无外场下平移不变的。典型的有效势如图 \ref{gN665D-*-*/HFB}所示，其中相互作用由$\bm{\eta}^4$表示，我们后面会分析。根据有效势极小原理，方程存在一个亚稳态解$\bm{\eta}^{me}_*$，对于经典场其会自发的演化到稳定态，而量子场则通过量子隧穿衰变得到。同时局部极大值应通过\textsl{Maxwell}构造消去，这里就具体展开了。\\
 \\
 现在我们讨论自由能和有效作用量下的多点函数表述，以波函数场为例。按照式(\ref{utile11})，我们代入自由能定义得到
@@ -10542,7 +10542,7 @@ $$C^{(2)}_2(1,2)=\frac{1}{2}F^{}_1\times \qty(F^{}_2)^2+F^{}_1\times F^{}_4+2F^{
 为了和其余的连通分支区分，我们用$B^{}_i$来记真空泡泡，通过$u$—顶点单圈修正不难想到，路径积分完全由真空泡泡构成，因此下面只需要讨论真空泡泡即可。写出实标量场的路径积分
 $$Z(0)=\bigintsss\mathscr D\psi\exp(iS^{}_{KG}+i\int\Lambda^{}_{\text{int}}[\psi(x)]\dd\Omega^{}_x)=\bigintsss\mathscr D\psi\exp(iS^{}_{KG})\qty{1+\sum_{n=1}^\infty\frac{1}{n!}\qty(i\int\Lambda^{}_{\text{int}}(\psi)\dd\Omega)^n},$$
 这里我们令相互作用\textsl{Lagrangian}只和场位形有关，和导数$\grad\psi$无关。同样的记自由路径积分为$Z^{}_{KG}(0)$，我们得到
-\begin{equation}Z(0)=Z^{}_{KG}(0)+\sum_{n=1}^\infty\frac{1}{n!}\bigintsss\mathscr D\psi\exp(iS^{}_{KG})\qty(i\int\Lambda^{}_{\text{int}}(\psi)\dd\Omega)^n.\end{equation}
+\begin{equation}Z(0)=Z^{}_{KG}(0)+\sum_{n=1}^\infty\frac{1}{n!}\bigintsss\mathscr D\psi\exp(iS^{}_{KG})\qty(i\int\Lambda^{}_{\text{int}}(\psi)\dd\Omega)^n.\label{d-gGGpfjf..}\end{equation}
 按照\textsl{GML}定理(\ref{HFghx98//F///*})写出相互作用多点函数，对分母取到零级近似$Z^{}_{KG}(0)$，则我们得到
 \begin{equation}\frac{Z(0)}{Z^{}_{KG}(0)}=1+\sum_{n=1}^\infty\frac{i^n}{n!}\int\mel**{0}{\mathbb T\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_1)\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_2)\cdots\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_n)}}{0}\dd\Omega^{}_1\dd\Omega^{}_2\cdots\dd\Omega^{}_n.\label{d-gGGG--...}\end{equation}
 通常对于场而言，$\Lambda^{}_{\text{int}}$是位形的多项式$\Lambda^{}_{\text{int}}=\sum\limits_\alpha\lambda^{}_\alpha\psi^{2\alpha}$，因此被积函数$\mel**{0}{\mathbb T\qty{\hat{\Lambda}^{}_{\text{int}}\qty(\psi^{}_1)\cdots}}{0}$是一个多点函数，根据\textsl{Wick}定理可以展开为若干只包含顶点的传播子的积。按照定义，展开式由若干真空泡泡构成，这些泡泡的集合称为\textbf{真空泡泡基}，记为$\mathfrak B=\qty{B^{}_i\vert i\in\mathscr A}$。推广式(\ref{f-+EWT--***})，设任意的泡泡$B^{}_i$在某一非连通图$K$中出现的次数为$l^{}_i$，则图$K$中$B^{}_i$因子写作
@@ -13170,10 +13170,10 @@ $$\sigma=\frac{1}{j^{}_0}\oint \vb{j}^{}_s\cdot\dd\vb{S}=-\frac{2m}{k}\int W(r)\
 \begin{equation}\Im \mathcal A\qty(\vb{k},\vb{k})=\frac{k}{4\pi}\sigma^{}_{tot}.\label{76tfGFV}\end{equation}
 这一点可以通过分波法严格证明，请参考\cite{L1}\S142。在一级\textsl{Born}近似下，非弹性道截面为
 \begin{equation}\sigma^{(1)}_{ine}=\frac{2m}{k}\int W(r)\dd V.\label{JufG69.3}\end{equation}
-关于光学势更具体的理论，可以参考\cite{Linif}。现在我们引入一个等效势$U^{}_{\text{eff}}$，使得其在一级\textsl{Born}近似下确定无散射的振幅
-\begin{equation}\mathcal A^{(0)}_{el}(0,E)=-\frac{m}{2\pi}\int U^{}_{\text{eff}}(r)\rho^{}_s\dd V.\end{equation}
+关于光学势更具体的理论，可以参考\cite{Linif}。现在我们引入一个等效势$U^{}_{\textit{eff}}$，使得其在一级\textsl{Born}近似下确定无散射的振幅
+\begin{equation}\mathcal A^{(0)}_{el}(0,E)=-\frac{m}{2\pi}\int U^{}_{\textit{eff}}(r)\rho^{}_s\dd V.\end{equation}
 这里我们将波矢用能量$E$代表。假设入射是粒子数为$N$的粒子束，我们就得到一个在介质中散射的平均恒定势能
-\begin{equation}\expval{U^{}_{\text{eff}}}=\frac{N}{V}\int U^{}_{\text{eff}}(r)\rho^{}_s\dd V=-\frac{2\pi}{m}\frac{N}{V}\mathcal A^{(0)}_{el}(0,E).\end{equation}
+\begin{equation}\expval{U^{}_{\textit{eff}}}=\frac{N}{V}\int U^{}_{\textit{eff}}(r)\rho^{}_s\dd V=-\frac{2\pi}{m}\frac{N}{V}\mathcal A^{(0)}_{el}(0,E).\end{equation}
 这是把介质中所有$N$个粒子的等效势能场，对介质的体积$V$求平均得到的。我们可以简单的认为，这同样是一种平均场理论，由于非弹性道的吸收而导致的衰减由$\mathcal A^{(0)}_{el}(0,E)$确定，进而这个平均恒定势能决定了介质的散射性质。\\
 \\
 现在我们来考察低能$s$波散射，关于微扰的量级条件(\ref{Tdfgh//PNC})不变。在光学势模型下，散射振幅仍由散射长度(\ref{Y;;L34*--/})确定，写出
@@ -13432,7 +13432,9 @@ $$\sigma=\int\dd \Phi^{}_n\abs{\mathcal A}^2=\int \Phi^{}_n\abs{\mathcal A\qty(\
 \subsection{Dirac场的激发自耦合}\label{dinm,a665rb2}
 \noindent 在前文中我们介绍了相互作用散射理论，并以实标量场为例刨析了\textsl{Feynman}图和振幅的关联。但真实粒子都是费米子，比如电子$e^-$和质子$p^+$都是半自旋费米子，并且我们从第\ref{DFgg//}节中看到，电磁波场也就是光子的产生，实际来源于这些带电费米子的运动。\\
 \\
-在第\ref{Cv234=-u.}节中，我们详细分析了单个半自旋费米子在外电磁场中的动力学，现在我们来讨论两个半自旋费米子在对方产生的电磁场中的动力学，并为后续理论做一些简要的铺垫。需要强调的是，这两个费米子\emph{来自同一个\textsl{Dirac}场}，只是场的两个不同激发态，因此这是\textbf{激发自耦合 \textit{Excited Self-coupling}}。关于\textsl{Dirac}场的关联函数理论请参考第\ref{GDHU,mm;lk}节，相互作用理论下只需要将真空自由态$\ket{0}$改为相应的相互作用绘景态$\ket{\Omega}$即可，我们就不重复介绍了。
+在第\ref{Cv234=-u.}节中，我们详细分析了单个半自旋费米子在外电磁场中的动力学，现在我们来讨论两个半自旋费米子在对方产生的电磁场中的动力学，并为后续理论做一些简要的铺垫。需要强调的是，这两个费米子\emph{来自同一个\textsl{Dirac}场}，只是场的两个不同激发态，因此这是\textbf{激发自耦合 \textit{Excited Self-coupling}}。关于\textsl{Dirac}场的关联函数理论请参考第\ref{GDHU,mm;lk}节，相互作用理论下只需要将真空自由态$\ket{0}$改为相应的相互作用绘景态$\ket{\Omega}$即可，我们就不重复介绍了。\\
+\\
+方便起见，\textbf{从本节开始，后续使用\textsl{GML}定理时，相互作用算符都会忽略角标$I$，编时乘积中只用通常的位型算符}。
 
 \subsubsection{电磁相互作用算符}
 \noindent 由于现在电磁场是由粒子的运动产生，因此可以用有源\textsl{Maxwell}方程表示，它由一个四维电流密度$\vb{j}^A$控制。因为在场的计算中，基本的研究对象是\textit{Lagrangian}密度，因此我们需要从电磁耦合作用量(\ref{ewfEE})中提出$\Lambda^{}_{\text{int}}$。\\
@@ -13450,46 +13452,48 @@ $$S^{}_{\textit{pf}}=-\int_{\mathscr M}\star\vb{j}\wedge\bm{\omega}=-\int_{\math
 对于一个相对论性粒子而言，其主要的能量来自于其自由粒子部分$mc^2$，不难看到电磁相互作用的贡献实际上是较弱的$\Lambda^{}_{\text{int}}\sim c^{-1}$，这为\textsl{QED}中将电磁作用看作微扰提供了一个经典图景。\\
 \\
 现在让我们转向量子化，在二次量子化算符形式下，电磁相互作用\textit{Lagrangian}算符(\ref{D324=-/n})给出
-\begin{equation}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{j}^\mu,\hat{A}^{}_\mu)=-\hat{j}^\mu \hat{A}^{}_\mu.\end{equation}
+\begin{equation}\hat{\Lambda}^{}_{\text{int}}\qty(\hat{j}^\mu,\hat{A}^{}_\mu)=-\hat{j}^\mu \hat{A}^{}_\mu.\label{Zedfw34004}\end{equation}
 注意在算符形式下，电流密度算符$\hat{j}^\mu$也是一个变量，因为其和粒子场位形算符$\hat{\bm{\psi}}$相关。在第\ref{dirccd}节的\textsl{Dirac}场论中，我们计算了半自旋费米子的四维\textsl{Noether}守恒流(\ref{WoIh6})，其算符形式为式(\ref{QW..*/678})，并且我们证明了相应的守恒荷$Q$就是电荷量，当然需要指出它和物理电荷量相差一个单位电荷$e$。 因此在\textsl{Dirac}场中有
 \begin{equation}\hat{j}^\mu_{Dirac}=e\hat{J}^\mu,\quad\hat{\Lambda}^{Dirac}_{\text{int}}=\hat{\Lambda}^{}_{\text{int}}\qty(\hat{\bm{\psi}},\hat{\overline{\bm{\psi}}},\hat{A}^{}_\mu)=-e\hat{\overline{\bm{\psi}}}\gamma^\mu\hat{\bm{\psi}}\hat{A}^{}_\mu.\label{Qe569''}\end{equation}
 这就是\textsl{Dirac}场的\textbf{电磁相互作用算符}，对比非相对论性相互作用算符(\ref{SFHGD56-=0OG})，可见其自动反映了旋量结构。当然我们也可以直接从四维协变导数(\ref{Z23CBN})出发，其\textsl{Dirac}方程为(\ref{n32s1})，则耦合\textit{Lagrangian}为
 $$\Lambda^{}_{p+f}=\overline{\bm{\psi}}\qty{\hat{\slashed{\mathfrak{D}}}-mc}\bm{\psi}=\overline{\bm{\psi}}\slashed{\partial}\bm{\psi}-\frac{e}{c}\hat{\overline{\bm{\psi}}}\bm{\gamma}^A\bm{\psi}\vb{A}^{}_A-mc\overline{\bm{\psi}}\bm{\psi},$$
 其中第二项就是相互作用算符。前面提到在经典图景下电磁耦合是微扰，现在来证明，这个相互作用算符可以当作微扰处理。考虑相互作用项和动能项的量级比值，在\textsl{S.I.}中我们有
 $$\frac{U}{E^{}_k}=\frac{\abs{e\hat{\overline{\bm{\psi}}}\bm{\gamma}^A\bm{\psi}\vb{A}^{}_A}}{\hbar\abs{\overline{\bm{\psi}}\slashed{\partial}\bm{\psi}}}\sim\frac{e\abs{\vb{A}^{}_A}}{\hbar}.$$
-但由于此时电磁场由另一个带电荷$e$的半自旋费米子产生，因此经典四维势应该由有源推迟势(\ref{retdd2})确定，在\textsl{S.I.}中上述比值给出
+但由于此时电磁场由另一个带电荷$e$的半自旋费米子产生，因此经典四维势应该由有源推迟势(\ref{retdd2})确定，在\textsl{S.I.}中取光速上述比值给出
 \begin{equation}\frac{U}{E^{}_k}\sim\frac{e^2}{4\pi\epsilon^{}_0\hbar c}=\alpha.\end{equation}
 这个无量纲量$\alpha$称为场的\textbf{精细结构常数 \textit{Fine Structure Constant}}，根据测量它的值大约为
 \begin{equation}\alpha\approx\frac{1}{137}\ll 1\implies U\ll E^{}_k\sim mc^2,\end{equation}
 因此我们可以断言，电磁相互作用可以当作微扰，电磁相互作用算符是微扰算符。这是\textsl{QED}理论的基础，如果$\alpha\sim 1$则我们就无法画出\textsl{Feynman}图，并分析粒子的散射过程。需要强调的是，上述分析是偏定性的，其表述并不严谨。对于线性算符，其量级分析应用\textsl{Kato-Rellich}定理替代，这里就不展开了。\\
 \\
-在确定了相互作用的微扰性之后，我们便可以讨论\textsl{Dirac}场的\textsl{Feynman}规则。从\textsl{Dirac}传播子入手，我们根据式(\ref{ganshasbu})写出其路径积分形式
-\begin{equation}S^{\tilde{i}\tilde{j}}_D(a,b)=\frac{\displaystyle\bigintsss\exp{i\int\overline{\bm{\psi}}\qty(i\slashed{\partial}-m-e\slashed{\vb{A}})\bm{\psi}\dd\Omega}\overline{\bm{\psi}}^{\tilde{i}}(a)\bm{\psi}^{\tilde{j}}(b)\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}{\displaystyle\int\exp(iS^{}_{Dirac})\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}.\end{equation}
-其中$\tilde{i}$是双旋量抽象指标。暂时忽略分母的修正，我们按相互作用打开分子的指数，其零级修正就是自由\textsl{Dirac}传播子(\ref{POI.,.;;LK})
+在确定了相互作用的微扰性之后，我们便可以讨论\textsl{Dirac}场的\textsl{Feynman}规则。按照标准流程，先写出场的路径积分，注意此时电磁场也是量子化的，因此完整的路径积分为
+\begin{equation}Z=\int\mathscr D\overline{\bm{\psi}}\mathscr D\bm{\psi}\mathscr D\vb{A}\exp{i\int\qty[\overline{\bm{\psi}}\qty(i\slashed{\partial}-m-e\slashed{\vb{A}})\bm{\psi}-\frac{1}{16\pi}F^{\mu\nu}F^{}_{\mu\nu}]\dd\Omega}.\end{equation}
+由于现在有三个位型算符，因此在计算\textsl{Dirac}传播子之前，我们来考察混合真空混合传播子，比如
+$$\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}\hat{A}^{}_\mu}}{0}(a,b)=\frac{\displaystyle\bigintsss\exp{i\int\qty[\overline{\bm{\psi}}\qty(i\slashed{\partial}-m)\bm{\psi}-\frac{1}{16\pi}F^{\mu\nu}F^{}_{\mu\nu}]\dd\Omega}\overline{\bm{\psi}}^{}(a)A^{}_\mu(b)\mathscr D\vb{A}\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}{\displaystyle\bigintsss\exp{i\int\qty[\overline{\bm{\psi}}\qty(i\slashed{\partial}-m)\bm{\psi}-\frac{1}{16\pi}F^{\mu\nu}F^{}_{\mu\nu}]\dd\Omega}\mathscr D\vb{A}\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}.$$
+不难注意到，分子上关于\textsl{Dirac}场的积分和电磁场的积分可以分离，且都是对\textsl{Gauss}积分附上一个奇函数因子，因此恒为零。同样的理由，我们得到
+\begin{equation}\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}\hat{A}^{}_\mu}}{0}=\mel**{0}{\mathbb T\qty{\hat{\bm{\psi}}\hat{A}^{}_\mu}}{0}\equiv0.\label{234fVCG}\end{equation}
+也就是说，\textsl{Dirac}场和电磁场的激发是独立传播的，符合因果律。这样按\textsl{Wick}定理打开，我们可以将此结果总结为真空中编时乘积的独立性
+\begin{equation}\mel**{0}{\mathbb T\qty{f\qty(\hat{\overline{\bm{\psi}}},\hat{\bm{\psi}})g\qty(\hat{A}^{}_\mu)}}{0}=\mel**{0}{\mathbb T\qty{f\qty(\hat{\overline{\bm{\psi}}},\hat{\bm{\psi}})}}{0}\mel**{0}{\mathbb T\qty{g\qty(\hat{A}^{}_\mu)}}{0}.\label{W1tr-/**--}\end{equation}
+回到\textsl{Dirac}传播子，我们写出其路径积分形式
+\begin{equation}S^{\tilde{i}\tilde{j}}_D(a,b)=\frac{\displaystyle\bigintsss\exp{i\int\qty[\overline{\bm{\psi}}\qty(i\slashed{\partial}-m-e\slashed{\vb{A}})\bm{\psi}-\frac{1}{16\pi}F^{\mu\nu}F^{}_{\mu\nu}]\dd\Omega}\overline{\bm{\psi}}^{\tilde{i}}(a)\bm{\psi}^{\tilde{j}}(b)\mathscr D\vb{A}\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}{\displaystyle\int\exp{i\int\qty[\overline{\bm{\psi}}\qty(i\slashed{\partial}-m-e\slashed{\vb{A}})\bm{\psi}-\frac{1}{16\pi}F^{\mu\nu}F^{}_{\mu\nu}]\dd\Omega}\mathscr D\vb{A}\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}.\end{equation}
+其中$\tilde{i}$是双旋量抽象指标。虽然由于耦合，分子上关于$\psi$的积分和$\vb{A}$的积分无法分离，但我们可以用等价的\textsl{GML}定理计算
+\begin{equation}C^{\tilde{i}\tilde{j}}(a,b)=\frac{\displaystyle\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\exp(-ie\int \hat{\overline{\bm{\psi}}}\gamma^\mu\hat{\bm{\psi}}\hat{A}^{}_\mu\dd\Omega)}}{0}}{\displaystyle\mel**{0}{\mathbb T\qty{\exp(-ie\int \hat{\overline{\bm{\psi}}}\gamma^\mu\hat{\bm{\psi}}\hat{A}^{}_\mu\dd\Omega)}}{0}}.\end{equation}
+再次提醒，这里我们\emph{忽略了算符的相互作用角标$I$，后文中也均如此}。暂时忽略分母修正，打开分子的指数，其零级修正就是自由\textsl{Dirac}传播子(\ref{POI.,.;;LK})
 $$S^{\tilde{i}\tilde{j}(0)}_D(a,b)=\bigintsss\frac{i\qty(\slashed{p}+m)^{\tilde{i}\tilde{j}}}{p^2-m^2+i0}e^{-ip(a-b)}\qty(\frac{\dd p}{2\pi})^4.$$
 一级修正为
-$$\begin{aligned}S^{\tilde{i}\tilde{j}(1)}_D(a,b)&=\frac{\displaystyle\int\mathscr D\overline{\bm{\psi}}\mathscr D\bm{\psi}\exp{iS^{(0)}_{Dirac}}\overline{\bm{\psi}}^{\tilde{i}}(a)\bm{\psi}^{\tilde{j}}(b)\qty[-ie\int\overline{\bm{\psi}}\gamma^\mu\bm{\psi}A^{}_\mu\dd\Omega]}{\displaystyle\int\exp(iS^{}_{Dirac})\mathscr D\bm{\psi}\mathscr D\overline{\bm{\psi}}}\\&=-ie\bigintsss\dd\Omega^{}_x\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)\hat{A}^{}_\mu(x)}}{0}.\end{aligned}$$
-按照一般的思路，我们可以按\textsl{Wick}定理打开，将其中非联通的部分作为分母修正忽略，剩下的就是全连通相互作用传播子。但这里有一个问题，电磁场位形$\hat{A}$也是一个算符，现在一共有五个算符，而$\hat{\bm{\psi}}$和$\hat{A}$之间没有任何的直接关联。我们先证明：这两组算符在编时乘积中是独立的，也就是
-\begin{equation}\mathbb T\qty{f\qty(\hat{\overline{\bm{\psi}}}\hat{\bm{\psi}})g\qty(\gamma^\mu\hat{A}^{}_\mu)}=\mathbb T\qty{f\qty(\hat{\overline{\bm{\psi}}}\hat{\bm{\psi}})}\mathbb T\qty{g\qty(\gamma^\mu\hat{A}^{}_\mu)}.\label{W1tr-/**--}\end{equation}
-其中$f$和$g$是关于算符的多项式。这是容易得到的，在第\ref{145ggvo}节末尾我们提到，一般默认玻色子和费米子算符对易，而此处$\hat{\bm{\psi}}$是费米算符，$\hat{A}^{}_\mu$是玻色算符，因而有
-$$\hat{\overline{\bm{\psi}}}\hat{\bm{\psi}}\qty(\gamma^\mu\hat{A}^{}_\mu)=\hat{\overline{\bm{\psi}}}\qty(\qty(\gamma^\mu\hat{A}^{}_\mu)\hat{\bm{\psi}}+\comm{\hat{\overline{\bm{\psi}}}}{\gamma^\mu\hat{A}^{}_\mu})=\hat{\overline{\bm{\psi}}}\qty(\gamma^\mu\hat{A}^{}_\mu)\hat{\bm{\psi}}.$$
-即$\hat{A}^{}_\mu$所处的位置不影响结果，因此$\hat{A}^{}_\mu$在关于$\hat{\bm{\psi}}$的编时乘积中的位置是任意的，可以从中提出。对于多个四维势算符，按照这个理解都可以提出，当然它们之间要遵循编时乘积。因而一级修正为
-\begin{equation}S^{\tilde{i}\tilde{j}(1)}_D(a,b)=-ie\bigintsss\dd\Omega^{}_x\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)}\mathbb T\qty{\gamma^\mu\hat{A}^{}_\mu(x)}}{0}.\end{equation}
-为了计算，我们按照式(\ref{Fouf24[]'})插入一组完备态
-$$D^{(1)}_D(a,b)=-ie\bigintsss\dd\Omega^{}_x\sum_{\qty{\vb{p}(\lambda)}}\frac{1}{2E^{}_{\vb{p}}(\lambda)}\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)}}{\lambda}\mel**{\lambda}{\mathbb T\qty{\gamma^\mu\hat{A}^{}_\mu(x)}}{0},$$
-不难看到由于占有数算符的作用，$\lambda=0/1$，而无论哪一种都存在一个矩阵元为零，因此一级修正恒为零。事实上这个结果可以容易的推广至多点函数(\ref{PIOIojye9800.})中，给出
+$$C^{\tilde{i}\tilde{j}(1)}(a,b)=-ie\bigintsss\dd\Omega^{}_x\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)\hat{A}^{}_\mu(x)}}{0},$$
+按照式(\ref{W1tr-/**--})给出的独立性我们得到
+\begin{equation}S^{\tilde{i}\tilde{j}(1)}_D(a,b)=-ie\bigintsss\dd\Omega^{}_x\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)}}{0}\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(x)}}{0}.\end{equation}
+单个电磁场算符的真空矩阵元恒为零$\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(x)}}{0}=0$，因此一级修正为零。这个结果可以容易的推广至多点函数(\ref{PIOIojye9800.})中，给出
 \begin{equation}D^{(1)}(a,b,\ldots)\equiv0.\label{wFAGdfv}\end{equation}
-这很合理，因为一级修正是一个奇函数，参考实标量场的理论其必然为零，这是奇函数路径积分的直接结果。\\
+这很合理，因为一级修正是一个奇函数，参考实标量场的理论其必然为零，这是奇函数路径积分的直接结果。对于更精确的计算，比如分母修正和全连通传播子，我们需要重\textsl{Dirac}场的有效理论，一些基础性的概念建立可以参考第\ref{35fV][--}节，这里不展开。\\
 \\
 现在考察二级修正
-$$S^{\tilde{i}\tilde{j}(2)}_D(a,b)=\frac{(-ie)^2}{2}\bigintsss\dd\Omega^{}_x\dd\Omega^{}_y\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)\hat{A}^{}_\mu(x)\hat{\overline{\bm{\psi}}}(y)\gamma^\nu\hat{\bm{\psi}}(y)\hat{A}^{}_\nu(y)}}{0},$$
-此时式(\ref{W1tr-/**--})写作
-$$\begin{aligned}&\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)\hat{A}^{}_\mu(x)\hat{\overline{\bm{\psi}}}(y)\gamma^\nu\hat{\bm{\psi}}(y)\hat{A}^{}_\nu(y)}\\&=\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)\hat{\overline{\bm{\psi}}}(y)\hat{\bm{\psi}}(y)}\mathbb T\qty{\gamma^\mu\hat{A}^{}_\mu(x)\gamma^\nu\hat{A}^{}_\nu(y)}.\end{aligned}$$
-为了计算总真空矩阵元，需要在其中插入一组真空态$\dyad{0}{0}$。虽然在理论上，此处完备的占有数态还包括双粒子数态，但\textsl{Parseval}性质使得其矩阵元恒为零。再将$\gamma$矩阵提出，于是我们得到
-\begin{equation}S^{\tilde{i}\tilde{j}(2)}_D(a,b)=-\frac{e^2}{2}\gamma^\mu\gamma^\nu\bigintsss\dd\Omega^2\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)\hat{\overline{\bm{\psi}}}(y)\hat{\bm{\psi}}(y)}}{0}\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(x)\hat{A}^{}_\nu(y)}}{0}.\label{JIggf,-*..}\end{equation}
+$$C^{\tilde{i}\tilde{j}(2)}(a,b)=\frac{(-ie)^2}{2}\bigintsss\dd\Omega^{}_x\dd\Omega^{}_y\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\gamma^\mu\hat{\bm{\psi}}(x)\hat{A}^{}_\mu(x)\hat{\overline{\bm{\psi}}}(y)\gamma^\nu\hat{\bm{\psi}}(y)\hat{A}^{}_\nu(y)}}{0},$$
+此时式(\ref{W1tr-/**--})给出
+\begin{equation}C^{\tilde{i}\tilde{j}(2)}(a,b)=-\frac{e^2}{2}\gamma^\mu\gamma^\nu\bigintsss\dd\Omega^2\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{\tilde{i}}(a)\hat{\bm{\psi}}^{\tilde{j}}(b)\hat{\overline{\bm{\psi}}}(x)\hat{\bm{\psi}}(x)\hat{\overline{\bm{\psi}}}(y)\hat{\bm{\psi}}(y)}}{0}\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(x)\hat{A}^{}_\nu(y)}}{0}.\label{JIggf,-*..}\end{equation}
 需要说明的是，这里提出$\gamma$矩阵只是形式上的，具体计算截面时仍应放回，比如参考式(\ref{Niyovw554})。并且$\gamma$矩阵的乘积应理解为张量积
 \begin{equation}\gamma^\mu\gamma^\nu=\gamma^\mu\otimes\gamma^\nu=\gamma^\mu_{\tilde{i}\tilde{j}}\gamma^\nu_{\tilde{k}\tilde{l}}.\end{equation}
-只是为了方便，将其简写为乘积，读者务必要将此简写和相应代数的乘积定义(\ref{fpij3458})区分。从第二项就是式(\ref{pHgf015--})确定的自由光子传播子，在\textsl{Feynman}规范下以动量\textsl{Feynman}图表示为
+只是为了方便，将其简写为乘积，读者务必要将此简写和相应代数的乘积定义(\ref{fpij3458})区分。第二个因子就是式(\ref{pHgf015--})确定的自由光子传播子，在\textsl{Feynman}规范下以动量\textsl{Feynman}图表示为
 \begin{equation}D^{\mu\nu}_{P,F}(k)=\frac{4\pi i\eta^{\mu\nu}}{k^2+i0}=\quad\tikz[baseline=.5ex]{\begin{feynman}\vertex(a);\vertex[right=2 cm of a](b);\diagram*{(a)--[photon,momentum=$k$](b)};\end{feynman}}.\end{equation}
 其余\textsl{Feynman}规则和实标量场一致，同样在顶点处动量守恒，我们就不重复了。前一项用\textsl{Wick}定理展开，缩并由\textsl{Dirac}传播子(\ref{VBXgrfg508=})确定，注意费米反对易性，我们得到连通部分
 \begin{equation}\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_a\hat{\bm{\psi}}^{}_b\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_x\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y}}{0}_{\text{conn}}=-8S^{}_R(a,x)S^{}_R(x,y)S^{}_R(y,b).\label{Qdghe67}\end{equation}
@@ -13535,9 +13539,9 @@ $$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale
 \begin{equation}\mathfrak S^{}_{fi}=\mel**{p^{}_{f3},p^{}_{f4}}{\hat{\mathfrak S}}{p^{}_{i1},p^{}_{i2}}\propto\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\def\r{1.5}\def\n{4}\vertex[circle,draw](C)at(0,0){$\varPi^{\text{phy}}_4$};\foreach\i in{3,4}{\pgfmathsetmacro{\angle}{(\i-1)*360/\n-45}\pgfmathtruncatemacro{\pp}{\i-2}\vertex(v\i)at(\angle:\r);\diagram*{(v\i)--[fermion,momentum=$p^{}_{i\pp}$](C)};}\foreach\i in{3,4}{\pgfmathsetmacro{\angle}{(\i-4)*360/\n+45}\vertex(v\i)at(\angle:\r);\diagram*{(C)--[fermion,momentum'=$p^{}_{f\i}$](v\i)};}\end{feynman}}.\end{equation}
 但是电磁相互作用的四顶点函数$\varPi^{\text{phy}}_4$我们目前一无所知，因此最简单的方法还是需要依靠\textsl{GML}定理打开全连通四点函数，参考自由多点函数(\ref{PIOIojye9800.})写出
 $$\mathfrak S^{}_{fi}\propto\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_4\hat{\overline{\bm{\psi}}}^{}_3\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_1}}{\Omega}^{}_{\text{conn}}\qty(p^{}_{i1},p^{}_{i2},p^{}_{f3},p^{}_{f4})+Amputation.$$
-由式(\ref{wFAGdfv})我们已经排除了一级修正，因此不妨直接跳到二级修正。代入电磁相互作用算符(\ref{Qe569''})，并考虑到四维势和双旋量的独立性(\ref{W1tr-/**--})，我们得到
-\begin{equation}\mathfrak S^{(2)}_{fi}\sim\frac{1}{2}\qty(-ie\gamma^\mu)\qty(-ie\gamma^\nu)\int\dd\Omega^2\expval{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_4\hat{\overline{\bm{\psi}}}^{}_3\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_1\qty(\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_x\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y)}}^{}_{\text{conn}}\expval{\mathbb T\qty{\hat{A}^{}_\mu(x)\hat{A}^{}_\nu(y)}}^{}_{\text{conn}}.\label{Q5425[[oh}\end{equation}
-这里我们省略了自由真空态。用\textsl{Wick}定理打开，我们得到空间表示
+由式(\ref{wFAGdfv})我们已经排除了一级修正，因此不妨直接跳到二级修正。代入电磁相互作用算符(\ref{Qe569''})，简记真空态内积为均值，并考虑到四维势和双旋量的独立性(\ref{W1tr-/**--})，我们得到
+\begin{equation}\begin{aligned}\mathfrak S^{(2)}_{fi}\sim\frac{1}{2}\qty(-ie\gamma^\mu)\qty(-ie\gamma^\nu)\int\dd\Omega^2&\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_4\hat{\overline{\bm{\psi}}}^{}_3\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_1\qty(\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_x\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y)}}{0}^{}_{\text{conn}}\\&\times\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(x)\hat{A}^{}_\nu(y)}}{0}^{}_{\text{conn}}.\end{aligned}\label{Q5425[[oh}\end{equation}
+方便起见，下面省略自由真空态，只用均值表示$\expval{\hat{f}}=\mel**{0}{\hat{f}}{0}$。用\textsl{Wick}定理打开，我们得到空间表示
 $$\mathfrak S^{(2)}_{fi}\sim-\frac{e^2}{2}\gamma^\mu\gamma^\nu\int\dd\Omega^2 S^{}_D(1,x)S^{}_D(3,x)D^P_{\mu\nu}(x,y)S^{}_D(y,2)S^{}_D(y,4)+\cdots.$$
 这里还不涉及自能，因此截腿操作就是将四个外点$1,2,3,4$从图中排除，并且不需要重整化。根据上述空间表达式，我们画出对应的动量图，当然这里只列举上式对应的一种图
 \begin{equation}\mathfrak S^{(2)}_{fi}=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot,scale=.7](o){};\vertex[below left=1.5cm of o](a);\vertex[below right=1.5cm of o](b);\vertex[dot,scale=.7,above=1.5cm of o](c){};\vertex[above left=1.5cm of c](d);\vertex[above right=1.5cm of c](e);\diagram*{(a)--[fermion,momentum=$p^{}_{i1}$](o)--[fermion,momentum=$p^{}_{f3}$](b),(o)--[photon,momentum=$q$](c),(e)--[fermion,momentum=$p^{}_{f4}$](c)--[fermion,momentum=$p^{}_{i2}$](d)};\end{feynman}}\quad+\cdots.\label{Q3ERaf[[]}\end{equation}
@@ -13817,13 +13821,13 @@ $$\overline{\chi}^{}_P=\overline{\chi}^{}_P\circledast K \circledast S^{}_DS^{}_
 方便起见，我们这里只考察$K$的最低阶近似，对于高级修正的计算和物理含义请参考第\ref{tyujy;p456=-..5}节。回到\textsl{SD}方程(\ref{DdV3413f})，带入电磁相互作用算符(\ref{Qe569''})的\textsl{EL}导数
 $$\delta^{}_{\bm{\psi}}\hat{\Lambda}^{}_{\text{int}}=-e\hat{\overline{\bm{\psi}}}\gamma^\mu\hat{A}^{}_\mu,$$
 我们得到四点函数的方程 
-\begin{equation}\qty(i\slashed{\partial}+m)\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}{\Omega}=\delta^{}_{2x}S^{}_D(1,3)-\delta^{}_{3x}S^{}_D(1,2)+ie\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\slashed{\hat{A}}\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}{\Omega}.\end{equation}
+\begin{equation}\qty(i\slashed{\partial}+m)\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}{\Omega}=\delta^{}_{2x}S^{}_D(1,3)-\delta^{}_{3x}S^{}_D(1,2)+ie\mel**{\Omega}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_x\hat{\slashed{\vb{A}}}\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3}}{\Omega}.\end{equation}
 可以看到，右侧的相互作用项给出一个五点函数，这是因为此时\textsl{Dirac}场只和电磁场相互作用了一次。为此我们选择近似，将左侧的四点函数写为修正和，右侧函数按\textsl{GML}定理打开
-\begin{equation}\begin{aligned}\sum_{i=0}\mathfrak D^{(i)}_4(x,1,2,3)=&S^{}_D(x,2)S^{}_D(1,3)-S^{}_D(x,3)S^{}_D(1,2)\\&-ieS^{}_D(x,y)\circledast \mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_y\slashed{\hat{A}}\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3\exp(-ie\int\hat{\overline{\bm{\psi}}}^{}_z\gamma^\mu\hat{\bm{\psi}}^{}_z\hat{A}^{}_\mu\dd\Omega^{}_z)}}{0}.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\sum_{i=0}\mathfrak D^{(i)}_4(x,1,2,3)=&S^{}_D(x,2)S^{}_D(1,3)-S^{}_D(x,3)S^{}_D(1,2)\\&-ieS^{}_D(x,y)\circledast \expval{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_y\hat{\slashed{\vb{A}}}\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3\exp(-ie\int\hat{\overline{\bm{\psi}}}^{}_z\gamma^\mu\hat{\bm{\psi}}^{}_z\hat{A}^{}_\mu\dd\Omega^{}_z)}}.\end{aligned}\end{equation}
 对于零级近似$i=0$，由于$\Lambda^{}_{\text{int}}\ll1$已经是一级修正，因此忽略这一项得到\textsl{Wick}定理，在散射中可以取为
 $$\mathfrak D^{(0)}_4(x,1,2,3)=S^{}_D(x,2)S^{}_D(1,3),$$
 也就是式(\ref{Asfg77FG})。对于一级修正，右侧\textsl{GML}展开为$\exp(\cdots)=1$剩下五点函数，因此恒为零$\mathfrak D^{(1)}_4=0$。对于二级修正，考虑到式(\ref{W1tr-/**--})将双旋量和四维势分离，我们得到
-$$\mathfrak D^{(2)}_4(x,1,2,3)=(-ie)^2\int S^{}_D(x,y)\mel**{0}{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_y\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3\hat{\overline{\bm{\psi}}}^{}_z\hat{\bm{\psi}}^{}_z}}{0}\gamma^\mu\gamma^\nu\mel**{0}{\mathbb T\qty{\hat{A}^{}_\mu(y)\hat{A}^{}_\nu(z)}}{0}\dd\Omega^2.$$
+$$\mathfrak D^{(2)}_4(x,1,2,3)=(-ie)^2\int S^{}_D(x,y)\expval{\mathbb T\qty{\hat{\overline{\bm{\psi}}}^{}_y\hat{\overline{\bm{\psi}}}^{}_1\hat{\bm{\psi}}^{}_2\hat{\bm{\psi}}^{}_3\hat{\overline{\bm{\psi}}}^{}_z\hat{\bm{\psi}}^{}_z}}\gamma^\mu\gamma^\nu\expval{\mathbb T\qty{\hat{A}^{}_\mu(y)\hat{A}^{}_\nu(z)}}\dd\Omega^2.$$
 取打开的连通部分，并对光子传播子取\textsl{Feynman}规范，我们得到
 \begin{equation}\mathfrak D^{(2)}_4(x,1,2,3)=-e^2\int \dd\Omega^2 S^{}_D(x,y)S^{}_D(1,z)\qty(\gamma^\mu\otimes\gamma^{}_\mu) D^{}_P(y,z)S^{}_D(y,2)S^{}_D(z,3).\end{equation}
 其中$D^{}_P=\eta^{}_{\mu\nu}D^{\mu\nu}_P$是光子传播子的标量，同时以防读者忘记这里将$\gamma$矩阵的张量积明确写出。现在对比解(\ref{Pdjw460})，同样写出其二级修正
@@ -13844,56 +13848,87 @@ $$\tikz{\begin{feynman}\vertex[dot](a);\vertex[dot,right=3 cm of a](b){};\vertex
 上述分析还是处于经典外场，从量子化的角度，我们当然也可以讨论量子外场的影响，此时量子外场指的是和目标场不同的场。或者更进一步，如果目标场处于热浴中，那么这个外场就是其余所有运动粒子产生的场的总和，它和温度相关。在\textsl{Dirac}场中，这就是电荷云对电磁波的热散射。由于这些问题过于复杂，因此这一部分我们只给出一些理论框架，具体应用和计算会在后文中逐一展示。
 
 \subsubsection{标量场和外场的耦合}
-\noindent 作为框架的起点，我们来分析标量场的情形。从最简单的模型开始，令一个实标量场$\varphi$和一个复标量场$\qty{\psi,\psi^*}$耦合。这是对实标量场自耦合的推广，比如第\ref{DFVO))//}节中$\psi^2$和$\psi^4$的相互作用。假设目标场是自由复\textsl{KG}场，考虑到\textit{Lagrangian}是实数，我们可以写出三次相互作用
-\begin{equation}\Lambda^{}_{2,2^*}\qty(\psi,\psi^*,\varphi)=\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi\abs{\psi}^2,\end{equation}
+\noindent 作为框架的起点，我们来分析标量场的情形。从最简单的模型开始，令一个实标量场$\varphi$和一个复标量场$\qty{\psi,\psi^*}$耦合。这是对实标量场自耦合的推广，比如第\ref{DFVO))//}节中$\psi^2$和$\psi^4$的相互作用。假设目标场是自由复\textsl{KG}场，外场是实场，考虑到\textit{Lagrangian}是实数，我们可以写出三次相互作用
+\begin{equation}\Lambda^{}_{2,1}\qty(\psi,\psi^*,\varphi)=\qty(\partial^{}_\mu\varphi)^2-m^2_\varphi\varphi^2+\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi\abs{\psi}^2,\end{equation}
 其中相互作用项是一个三次型，实标量场是外场
 \begin{equation}\Lambda^{}_{\textit{int}}\qty(\varphi,\psi,\psi^*)=\lambda\varphi\abs{\psi}^2.\end{equation}
 当然我们也可以取其余形式，只需注意复标量场必然是$\qty(\abs{\psi}^2)^n$。从经典场论的角度，在第\ref{yhbi23}节的最后我们证明了，实场和复场的一大区别在于实场不带电，复场带电$Q$，相应的\textsl{Noether}流为式(\ref{liumidubab})，这里重新写出
-$$J^{\mu}=i\qty(\psi\partial^{\mu}\psi^*-\psi^*\partial^{\mu}\psi),\quad \partial^{}_\mu J^{\mu}=0.$$
+$$j^{\mu}=i\qty(\psi\partial^{\mu}\psi^*-\psi^*\partial^{\mu}\psi),\quad \partial^{}_\mu j^{\mu}=0.$$
 由于复标量场是$U(1)$不变的，因此做变换(\ref{guiff65})并计算变分$\delta\Lambda^{}_{2,2^*}=0$，相互作用中的$\abs{\psi}^2$依旧会保证给出$\partial^{}_\mu J^{\mu}\delta\alpha=0$，这是恒成立的。所以我们看到，此相互作用不会影响复场的带电性，因为事实上它只给复场加了一个有效质量
 $$\Lambda^{}_{mass}=m^*(m,\varphi)\abs{\psi}^2,\quad m^*(m,\varphi)=\lambda\varphi-m^2.$$
 而质量项对荷没有贡献，因此和实标量场的耦合不会改变电荷分布，因此不会改变粒子和反粒子数。\\
 \\
-现在让我们讨论其量子化，不妨从路径积分入手。
+现在让我们讨论其量子化，不妨从路径积分入手，这里有两种选择，分别是将实场当作\textbf{经典外场}和\textbf{量子外场}。所谓经典外场，就是将$\varphi(x)$单纯看作时空$\mathscr M$上的实函数$\varphi^{}_{cl}\in C^\infty(\mathscr M;\mathbb R)$，而非一个\textsl{KG}场。这样\textit{Lagrangian}为
+\begin{equation}\Lambda^{}_{\varphi}\qty(\psi,\psi^*,\varphi^{}_{cl})=\Lambda^{}_{KG}\qty(\varphi^{}_{cl})+\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi^{}_{cl}\abs{\psi}^2,\end{equation}
+对应的路径积分为一个类似以$\varphi$为外场的生成函数
+\begin{equation}Z\qty(\varphi^{}_{cl})=\exp{iS^{}_0\qty(\varphi^{}_{cl})}\bigintsss\mathscr D\psi\mathscr D\psi^*\exp[i\int\dd\Omega\qty(\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi^{}_{cl}\abs{\psi}^2)].\end{equation}
+对比式(\ref{houluwaha})，虽然相互作用不是线性的，如$\vb{J}\cdot\vb{q}$形式，但在形式上是相似的。量子外场则相反，保留其作为\textsl{KG}场的部分，对其积分给出全量子化
+\begin{equation}Z=\bigintsss\mathscr D\varphi\mathscr D\psi\mathscr D\psi^*\exp[i\int\dd\Omega\qty(\qty(\partial^{}_\mu\varphi)^2-m^2_\varphi\varphi^2+\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi\abs{\psi}^2)].\label{FKUP;PO;Df}\end{equation}
+但事实上，我们还有一种量子化方式，在第\ref{ha--yyub*}节中我们引入了有效作用量$\Gamma(\bm{\eta})$，这是生成函数的自由焓。但这个量依赖和外场的线性耦合，对于非线性的相互作用，我们不妨暴力一点，直接令序参量为目标场位型
+\begin{equation}\eta^1=\psi,\quad \eta^2=\psi^*.\end{equation}
+则在量子外实场下，将线性外场设为零$\vb{J}=\vb{0}$，我们在形式上直接得到复场的有效作用量$\Gamma(\bm{\eta})=S^{}_{\textit{eff}}(\bm{\eta})$，定义为只对外场$\varphi$的部分路径积分
+\begin{equation}\exp{iS^{}_{\textit{eff}}\qty(\psi,\psi^*)}=\bigintsss\mathscr D\varphi\exp[i\int\dd\Omega\qty(\qty(\partial^{}_\mu\varphi)^2-m^2_\varphi\varphi^2+\abs{\partial^{}_\mu\psi}^2-m^2\abs{\psi}^2+\lambda\varphi\abs{\psi}^2)].\label{Zx1247011}\end{equation}
+注意我们这里是对外场积分，而线性外场的有效作用量是对场位型的积分，两者的结果是不同的。为了区分，我们将此处引入的量$S^{}_{\textit{eff}}(\bm{\eta})$称为\textbf{耦合有效作用量 \textit{Coupling Effective Action}}，因为这是来自于相互作用的非线性耦合。这里简单说明两者的区别
+\begin{itemize}\item 外场的线性耦合性：$\Gamma(\bm{\eta})$的外场和目标场的耦合是线性的$\vb{J}\cdot\vb{q}$，反映了目标场$\vb{q}$对外场的线性响应，其来源参考\textsl{LG}泛函(\ref{LGGG})。而$S^{}_{\textit{eff}}(\bm{\eta})$的外场和目标场的耦合是非线性的，比如此处是一个三次项$\lambda\varphi\abs{\psi}^2$，反应的是外场耦合的动力学；\item 外场的量子性：$\Gamma(\bm{\eta})$的外场$\vb{J}$在目前的语境下是经典矢量场，其分量只是$\mathscr M$上的函数。而$S^{}_{\textit{eff}}(\bm{\eta})$的外场$\varphi$是量子的，其量子化由它的路径积分确定，因此它也是积分变量参与积分。\item 作用量的物理含义：$\Gamma(\bm{\eta})$在热力学上就是自由焓，其在统计层面定义，具体的物理场景是场的量子涨落。而$S^{}_{\textit{eff}}(\bm{\eta})$来自非线性的部分路径积分，其在动力学上定义，具体的物理场景是目标场相对于量子外场的量子化。\end{itemize}
+可见虽然两者都是有效量，但来源和含义均不同，需要读者做严格区分。为了后续表述方便，我们简称$S^{}_{\textit{eff}}(\bm{\eta})$为\textbf{耦合作用量}，用于强调其动力学耦合的来源。关于它们的理论细节请参考第\ref{CV.,yr,,}节，这里不做过多的叙述。\\
+\\
+在引入了路径积分后，我们来讨论耦合场的具体性质，仍然将相互作用当微扰处理$\lambda\ll1$，并仍将真空自由态内积简记为均值$\mel**{0}{\hat{f}}{0}=\expval{\hat{f}}$。从经典外场开始，由于$\varphi^{}_{cl}$只是函数不是位型算符，因此在\textsl{GML}展开时它可以从编时乘积中提出，以传播子为例
+\begin{equation}\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2}}{\Omega}=D^{\psi}_F(1,2)+i\lambda\int\varphi^{}_{cl}(x)\expval{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2\hat{\psi}^\dagger_x\hat{\psi}^{}_x}}\dd\Omega+\cdots.\end{equation}
+由于它仅仅作为质量的修正出现，这个场和实场$\lambda\psi^2$在形式上是完全一致的，只是耦合系数现在是一个函数，需要和内点一起积分。对于全量子化场，此时我们有三个场位型算符$\qty{\hat{\psi}^\dagger,\hat{\psi},\hat{\varphi}}$，因此传播子除了纯复场的两点函数$\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2}}{\Omega}$，还可以计算混合传播子，比如
+$$C^{}_{\psi^*\varphi}(1,2)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\varphi}^{}_2}}{\Omega},\quad C^{}_{\psi\varphi}(1,2)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\hat{\varphi}^{}_2}}{\Omega}.$$
+当然它们恒为零
+\begin{equation}C^{}_{\psi^*\varphi}(1,2)=C^{}_{\psi\varphi}(1,2)=0,\label{FA3FFG}\end{equation}
+这可以从电荷判断，前面已经证明和实场不会改变电荷，也就是说一个传播子上电荷守恒。而实场不带电复场带电，它们必然无法构成一个传播子。我们也可以直接计算，类似式(\ref{234fVCG})的证明我们可以通过路径积分形式得到真空情形
+\begin{equation}\expval{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\varphi}^{}_2}}=\expval{\mathbb T\qty{\hat{\psi}^{}_1\hat{\varphi}^{}_2}}=0.\end{equation}
+这样，一方面奇数级修正和$\lambda\psi^3$相互作用类似，给出恒为零的奇数点函数，另一方面偶数级修正必然包含真空混合激发，比如二级修正
+$$C^{(2)}_{\psi\varphi}(1,2)=\frac{(i\lambda)^2}{2}\int\expval{\mathbb T\qty{\hat{\psi}^{}_1\hat{\varphi}^{}_2\hat{\varphi}^{}_x\hat{\psi}^\dagger_x\hat{\psi}^{}_x\hat{\varphi}^{}_y\hat{\psi}^\dagger_y\hat{\psi}^{}_y}}\dd\Omega^2.$$
+可以看到，因为展开必然包含奇数个实场$\varphi^{2n+1}$，因此\textsl{Wick}定理展开必然会包含一个$\expval{\mathbb T\qty{\hat{\psi}\hat{\varphi}}}$或共轭，它也恒为零，从而不存在混合传播子。我们转向三点函数，若只取一个实场，展开得到
+$$D^{}_{\psi^*\psi\varphi}(1,2,3)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2\hat{\varphi}^{}_3}}{\Omega}=D^{(0)}_3(1,2,3)+i\lambda\int\expval{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2\hat{\varphi}^{}_3\hat{\psi}^\dagger_x\hat{\psi}^{}_x\hat{\varphi}^{}_x}}\dd\Omega+\cdots.$$
+类似的，真空三点函数必然为零，考虑到条件(\ref{FA3FFG})我们得到一级近似
+\begin{equation}D^{}_{\psi^*\psi\varphi}(1,2,3)=i\lambda\int\expval{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2\hat{\varphi}^{}_3\hat{\psi}^\dagger_x\hat{\psi}^{}_x\hat{\varphi}^{}_x}}\dd\Omega+\cdots=i\lambda\int D^\psi_F(1,x)D^\varphi_F(3,x)D^\psi_F(x,2)\dd\Omega+\cdots.\end{equation}
+其中，我们用上角标$\psi$和$\varphi$来区分两个场的\textsl{Feynman}传播子。这里我们不加证明的画出其动量图，一般默认不带电的实场不画动量箭头，则一级修正为
+\begin{equation}D^{(1)}_{\psi^*\psi\varphi}(1,2,3)(p,k)\quad=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex(a);\vertex[dot,right=2 cm of a](b){};\vertex[dot,right=2 cm of b](c);\vertex[dot,above=1 cm of b](d);\diagram*{(a)--[charged scalar,momentum'=$p$](b)--[charged scalar,momentum'=$p+k$](c),(d)--[ scalar,momentum'=$k$](b)};\end{feynman}}.\label{pPiFG34534}\end{equation}
+当然我们也可以取两个实场，比如有$D^{}_{\psi\varphi\varphi}(1,2,3)=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^{}_1\hat{\varphi}^{}_2\hat{\varphi}^{}_3}}{\Omega}$，但依旧是电荷守恒约束使得其恒为零。其共轭也一样，可以总结为只含一个复场位型算符的关联函数恒为零
+\begin{equation}\mel**{\Omega}{\mathbb T\qty{\hat{\psi}\hat{\varphi}^n}}{\Omega}=\mel**{\Omega}{\mathbb T\qty{\hat{\psi}^\dagger\hat{\varphi}^n}}{\Omega}\equiv0.\end{equation}
+读者可以计算其余关联函数的情形，并写出低级修正的\textsl{Feynman}图，这里我们就不展开了。\\
+\\
+我们重点考察耦合作用量。由于只对$\varphi$积分，因此真正的量子场只有实场，相应的耦合系数为$\lambda\abs{\psi}^2$。我们将耦合作用量定义(\ref{Zx1247011})调整一下，提出自由复场部分
+\begin{equation}e^{iS^{}_{\textit{eff}}\qty(\psi,\psi^*)}=e^{iS^{}_{KG}\qty(\psi,\psi^*)}\bigintsss\mathscr D\varphi\exp[iS^{}_{KG}(\varphi)+i\int\lambda\varphi\abs{\psi}^2\dd\Omega]=e^{iS^{}_0\qty(\psi,\psi^*)}Z\qty(\psi,\psi^*).\end{equation}
+这样我们可以计算$S^{}_{\textit{eff}}$的修正，将$Z\qty(\psi,\psi^*)$的指数按耦合系数展开，可以参考式(\ref{d-gGGpfjf..})
+$$Z\qty(\psi,\psi^*)=Z^{\varphi}_{KG}(0)+\sum_{n=1}^\infty\frac{1}{n!}\bigintsss\mathscr D\varphi\exp[iS^{}_{KG}(\varphi)]\qty(i\int\lambda\varphi\abs{\psi}^2\dd\Omega)^n.$$
+整体除掉常数$Z^{\varphi}_{KG}(0)$，我们得到形如式(\ref{d-gGGG--...})的多点函数求和，注意现在$\abs{\psi}^2$应当作为经典场从编时乘积中提出，比如一级修正
+$$Z^{(1)}\qty(\psi,\psi^*)=i\lambda\int\mathscr D\varphi\exp[iS^{}_{KG}(\varphi)]\varphi\abs{\psi}^2\dd\Omega=i\lambda Z^{\varphi}_{KG}(0)\int\mel**{0}{\hat{\varphi}}{0}\abs{\psi}^2\dd\Omega.$$
+由于$\mel**{0}{\hat{\varphi}}{0}=0$，则一级修正为零$Z^{(1)}\qty(\psi,\psi^*)=0$。二级修正给出
+\begin{equation}\frac{Z^{(2)}\qty(\psi,\psi^*)}{Z^{\varphi}_{KG}(0)}=\frac{(i\lambda)^2}{2}\int\dd\Omega^{}_x\dd\Omega^{}_y\mel**{0}{\hat{\varphi}^{}_x\hat{\varphi}^{}_y}{0}\abs{\psi^{}_x}^2\abs{\psi^{}_y}^2=-\frac{\lambda^2}{2}\int\dd\Omega^2\abs{\psi^{}_x}^2D^\varphi_F(x,y)\abs{\psi^{}_y}^2,\end{equation}
+可以看到虽然此处有两个顶点，但它目前不接入任何外腿，只插入函数$\abs{\psi}^2$。这是合理的，因为现在$\psi$还是经典场，于是我们写出耦合作用量的二级近似
+\begin{equation}\exp{iS^{}_{\textit{eff}}\qty(\psi,\psi^*)}=Z^{\varphi}_{KG}(0)\exp{iS^{}_0\qty(\psi,\psi^*)}\qty{1-\frac{\lambda^2}{2}\int\dd\Omega^2\abs{\psi^{}_x}^2D^\varphi_F(x,y)\abs{\psi^{}_y}^2+\cdots}.\end{equation}
+也就是说，耦合作用量可以通过对外场\textsl{Feynman}图的顶点，赋予和目标场有关的耦合系数得到，这是一个非常适用的分析目标场的视角。这样我们就可以写出复场的路径积分
+\begin{equation}\begin{aligned}\frac{Z}{Z^{\varphi}_{KG}(0)}&=\bigintsss\mathscr D\psi\mathscr D\psi^*\frac{\exp{iS^{}_{\textit{eff}}\qty(\psi,\psi^*)}}{Z^{\varphi}_{KG}(0)}\\&=Z^{\psi}_{KG}(0)-\frac{\lambda^2}{2}\int\mathscr D\psi\mathscr D\psi^*\exp{iS^{}_0\qty(\psi,\psi^*)}\abs{\psi^{}_x}^2D^\varphi_F(x,y)\abs{\psi^{}_y}^2\dd\Omega^2+\cdots,\end{aligned}\end{equation}
+理论上它应该和全积分(\ref{FKUP;PO;Df})一样，请读者自行验证，比如上述一级修正的积分给出一个日落图
+\begin{equation}\frac{Z^{(1)}}{Z^{\varphi}_{KG}(0)Z^{\psi}_{KG}(0)}\quad=\quad-\frac{\lambda^2}{2}\times\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot](a){};\vertex[dot,right=3 cm of a](b){};\diagram*{(a)--[charged scalar,momentum=$p$,half left](b)--[charged scalar,momentum=$p+k$,half left](a)--[scalar,momentum=$k$](b)};\end{feynman}}.\label{pPiwf34}\end{equation}
+注意这是唯一的可能性，因为$\abs{\psi}^2$自己的缩并给出单圈，进而动量图为
+$$\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex[dot](a){};\vertex[dot,right=2 cm of a](b){};\vertex[dot,right=4 cm of b](c){};\vertex[dot,right=2 cm of c](d){};\diagram*{(b)--[charged scalar,momentum=$p$,half left](a)--[charged scalar,momentum=$p$,half left](b)--[scalar,momentum'=$k$](c)--[charged scalar,momentum=$l$,half left](d)--[charged scalar,momentum=$l$,half left](c)};\end{feynman}}\implies \begin{cases}p=p+k,&\\ l=l+k,&\\ k\neq 0.\end{cases}$$
+这是不符合动量守恒的，因此不会存在。并且容易看到，日落图(\ref{pPiwf34})其中一个顶点的局部放大就是三点函数图(\ref{pPiFG34534})。这绝不是巧合，它反映了目标场$\psi$在外场$\varphi$中传播并散射回自身的动力学，也就是外场中的自能，对比第\ref{V34578//}节中的日落自能。我们当然也可以直接从耦合作用量定义关联函数，比如传播子
+\begin{equation}C^{\textit{eff}}_{\psi}(1,2)=\expval{\mathbb T\qty{\hat{\psi}^\dagger_1\hat{\psi}^{}_2}}_{\textit{eff}}=\frac{\displaystyle \int\mathscr D\psi\mathscr D\psi^*\exp{iS^{}_{\textit{eff}}\qty(\psi,\psi^*)}\psi^*_1\psi^{}_2}{\displaystyle \int\mathscr D\psi\mathscr D\psi^*\exp{iS^{}_{\textit{eff}}\qty(\psi,\psi^*)}}.\end{equation}
+取其一级修正为分母零级和分子的一级修正，则我们回到接两个外腿的日落图，它自动包含了$\varphi$的图。可见耦合作用量在某种程度上，可以简化复杂耦合的计算，当然其功能还不止于此，具体内容请参考第\ref{CV.,yr,,}节。\\
+\\
+现在我们转向电磁耦合，假设一个复标量场$\qty{\psi,\psi^*}$和一个电磁场$\vb{A}^A$耦合，在电磁场中导数$\partial$变为四维协变导数(\ref{Z23CBN})，同时算上电磁场自身，我们得到系统的总\textit{Lagrangian}
+\begin{equation}\begin{aligned}\Lambda^{}_{sqed}\qty(\psi,\psi^*,\vb{A}^A)&=\hat{\mathfrak{D}}^*_A\psi^*\hat{\mathfrak{D}}^A\psi-m^2\psi^*\psi-\dfrac{1}{16\pi}\vb{F}^{}_{AB}\vb{F}^{AB}\\&=\abs{\partial^{}_\mu\psi}^2-\qty(m^2-e^2A^2)\abs{\psi}^2-e\vb{A}^A\vb{j}^{}_A-\dfrac{1}{16\pi}\vb{F}^{}_{AB}\vb{F}^{AB}.\end{aligned}\end{equation}
+其中简写$A^2=\vb{A}^A\vb{A}^{}_A$，$\vb{j}^{}_A$是复场的\textsl{Noether}流(\ref{liumidubab})，相应的量子化称为\textbf{\textsl{标量电动力学} \textit{Scalar QED}}。这里采用复场的原因是，$\vb{A}^A$具有$U(1)$规范性，这要求耦合场也由相同规范性，而$U(1)$规范性要求场带电，因此只能是复场。下面我们简单分析一下这个场。\\
+\\
+首先我们要做的，是识别相互作用，并判断是否可以当作微扰处理。由于此时导数项是二次型，因此相较于\textsl{Dirac}场的电磁相互作用(\ref{Zedfw34004})，这里的相互作用项多了一个有效质量
+\begin{equation}\Lambda^{}_{\text{int}}\qty(\psi,\psi^*,A^\mu)=e^2A^2\psi^*\psi-ieA^\mu\qty(\psi\partial^{}_\mu\psi^*-\psi^*\partial^{}_\mu\psi).\end{equation}
 
 
 
 
-假设一个复标量场$\qty{\psi,\psi^*}$和一个电磁场$\vb{A}^A$耦合，在电磁场中导数$\partial$变为四维协变导数(\ref{Z23CBN})，同时算上电磁场自身，我们得到系统的总\textit{Lagrangian}
-\begin{equation}\begin{aligned}\Lambda^{}_{sqed}\qty(\psi,\psi^*,\vb{A}^A)&=\hat{\mathfrak{D}}^*_A\psi^*\hat{\mathfrak{D}}^A\psi-m^2\psi^*\psi-\dfrac{1}{16\pi}\vb{F}^{}_{AB}\vb{F}^{AB}\\&=\abs{\partial^{}_\mu\psi}^2-\qty(m^2-e^2A^2)\abs{\psi}^2+ie\vb{A}^A\qty(\psi^*\partial^{}_A\psi-\psi\partial^{}_A\psi^*)-\dfrac{1}{16\pi}\vb{F}^{}_{AB}\vb{F}^{AB}.\end{aligned}\end{equation}
-其中简写$A^2=\vb{A}^A\vb{A}^{}_A$是四维模方。相应的量子化称为\textbf{\textsl{标量电动力学} \textit{Scalar QED}}这里采用复标量场的原因是，$\vb{A}^A$具有$U(1)$规范性，这要求耦合场也由相同规范性。而$U(1)$规范性要求场带电，
 
 
-不难看到，在无外电磁场时，系统回到\textsl{KG}场
-$$\Lambda^{}_{sqed}\qty(\psi,\psi^*,\vb{A}^A=\vb{0})=\Lambda^{}_{KG}\qty(\psi,\psi^*),$$
-因此一个自然的想法，就是判断外场是否可以当作微扰。这里需要两个判据，分别解决协变导数的耦合以及电磁场自身，
+\subsubsection{Dirac场和外场的耦合}\label{35fV][--}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsubsection{Dirac场和外场的耦合}
-\subsubsection{热场中的散射}
+\subsubsection{Euler-Heisenberg有效理论}
+\subsubsection{热场中的耦合}
 \subsubsection{热场动力学引入}
 
 \subsection{电磁散射的量子化}
@@ -13980,14 +14015,13 @@ $$h^{}_\omega=\varphi^{}_\omega x^{}_\omega=\varphi^{}_\omega \alpha^{}_\omega h
 \subsection{Casimir效应和截断频率}\label{M+-+00.RG}
 \subsection{Ising模型和空间重整化}
 \subsubsection{量子Ising模型}\label{ARFWEF4002}
-\subsection{Wilson重整化群理论}\label{bh-gg0..34}
 \subsection{圈图修正与动量重整化}\label{0cbcx778dy550r8}
 \subsubsection{Feynman参数化公式的证明}\label{0cb66++-r8}
 
-
+\subsection{Wilson重整化群理论}\label{bh-gg0..34}
 \subsection{自发对称性破缺和Higgs机制}
 \subsection{实标量场的临界指数}\label{JuticaG6Y9//}
-\subsection{有效场论的一般框架}
+\subsection{有效场论的一般框架}\label{CV.,yr,,}
 \subsection{共形场论引入}
 
 \clearpage

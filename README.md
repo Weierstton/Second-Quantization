@@ -69,11 +69,17 @@ Second version will change dramatically the structure, and of course the prerequ
 
 ## Latest update
 
-The Scattering theory of bounded state -- the Bethe-Salpeter equation of real scalar field and Dirac field.
-Corrections on the BCS theory of Fermi liquid model in superconductor.
+The first insight into the effective field theory, with application of complexe scalar field coupling with real scalar field, and scalar QED introduction.
+
+Corrections on the scattering theory of Dirac field, expecially on the calculation of the correlation functions.
+
 Appendix for homology theory, definition of random dimensional Feynman diagrams, and covering space.
 
-Coupling with/in the external field and statistical dissipation theory coming next.
+
+
+
+
+Dirac field coupling with external field with effective analyse, and statistical dissipation theory coming next.
 
 
 
