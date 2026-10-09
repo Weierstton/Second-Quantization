@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  9 OCT 2026 02:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  9 OCT 2026 02:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2119,35 +2119,98 @@ Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices a
 utomatically placed. You can disable this warning by setting /tikzfeynman/warn 
 luatex=false on input line 7.
 
-LaTeX Font Info:    Trying to load font information for C70+rm on input line 10
-.
-(d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/ctex/fd/c70rm.fd
-File: c70rm.fd 2022/07/14 v2.5.10 Chinese font definition (CTEX)
-)
-Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
-quanjiao) on input line 10.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 9.
 
 
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 9.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 (d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 (d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 9.
+
 (d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 9.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 9.
+
+
 
 
 (d:/Program Files (x86)/texlive/2025/texmf-dist/tex/generic/ctex/zhmap/ctex-zhm
@@ -2159,6 +2222,17 @@ ap}{UGBK.sfd}{Unicode.sfd}) [1
 
 {d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-sup
 er-t1.enc}]
+LaTeX Font Info:    Trying to load font information for C70+rm on input line 10
+.
+
+(d:/Program Files (x86)/texlive/2025/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+File: c70rm.fd 2022/07/14 v2.5.10 Chinese font definition (CTEX)
+)
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
+quanjiao) on input line 10.
+
+
+[2]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -2331,6 +2405,13 @@ l.66 ...=u^{}_Ap^A=u^2_0-\vb{u}^2$。\item \textbf
 
 ]
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.71 \clearpage
+               \section{一维定态谐振子和二次量子化原型}\label...
 [2]
 Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
@@ -19201,19 +19282,22 @@ L3 programming layer <2022/07/14>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `二次量子化.out' has not changed.
-(rerunfilecheck)             Checksum: BAD6E7F457ECDA9A60D66FBFC6C7185A;48380.
+(rerunfilecheck)             Checksum: 546CD74B5427954CA7436C6C1C92308B;48505.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 4786 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 72929 strings out of 467799
- 1632314 string characters out of 5425587
- 2445695 words of memory out of 5000000
- 93912 multiletter control sequences out of 15000+600000
- 877811 words of font info for 1154 fonts, out of 8000000 for 9000
+ 73399 strings out of 467799
+ 1640823 string characters out of 5425587
+ 2451118 words of memory out of 5000000
+ 94356 multiletter control sequences out of 15000+600000
+ 883235 words of font info for 1172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,24n,102p,5307b,4734s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
@@ -19353,25 +19437,28 @@ s/type1/public/cm-super/sfbl1000.pfb><d:/Program Files (x86)/texlive/2025/texmf
 -dist/fonts/type1/public/cm-super/sfbx0700.pfb><d:/Program Files (x86)/texlive/
 2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><d:/Program Files (x86
 )/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:/Program 
-Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><d
+Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d
 :/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0
-800.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm0900.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1200.pfb><d:/Program Files (x86)/texlive/2025/texm
-f-dist/fonts/type1/public/cm-super/sfsl0700.pfb><d:/Program Files (x86)/texlive
-/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><d:/Program Files (x8
-6)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><d:/Program
- Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><
-d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti
-0700.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-
-super/sfti0800.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/
-public/cm-super/sfti0900.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fo
-nts/type1/public/cm-super/sfti1000.pfb>
-Output written on 二次量子化.pdf (788 pages, 6559074 bytes).
+700.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm0800.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm0900.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb><d:/Program Files (x86)/texlive/2025/texm
+f-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/Program Files (x86)/texlive
+/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><d:/Program Files (x8
+6)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl0700.pfb><d:/Program
+ Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><
+d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss
+1000.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/public/cm-
+super/sfss1200.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fonts/type1/
+public/cm-super/sfti0700.pfb><d:/Program Files (x86)/texlive/2025/texmf-dist/fo
+nts/type1/public/cm-super/sfti0800.pfb><d:/Program Files (x86)/texlive/2025/tex
+mf-dist/fonts/type1/public/cm-super/sfti0900.pfb><d:/Program Files (x86)/texliv
+e/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><d:/Program Files (x
+86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on 二次量子化.pdf (789 pages, 6651197 bytes).
 PDF statistics:
- 15290 PDF objects out of 15390 (max. 8388607)
- 13912 compressed objects within 140 object streams
- 5158 named destinations out of 6186 (max. 500000)
- 136319 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 15315 PDF objects out of 15390 (max. 8388607)
+ 13929 compressed objects within 140 object streams
+ 5159 named destinations out of 6186 (max. 500000)
+ 148621 words of extra memory for PDF output out of 154059 (max. 10000000)
 
