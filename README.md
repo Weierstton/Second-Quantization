@@ -69,13 +69,11 @@ Second version will change dramatically the structure, and of course the prerequ
 
 ## Latest update
 
-The first insight into the effective field theory, with application of complexe scalar field coupling with real scalar field, and scalar QED introduction.
+The first insight into the effective field theory, with application of Dirac field coupling with electromagnetic field.
 
-Corrections on the scattering theory of Dirac field, expecially on the calculation of the correlation functions.
+Arrangement of the quantum phase transition, included in the QFT application of the condensed matter theory.
 
-Appendix for homology theory, definition of random dimensional Feynman diagrams, and covering space.
-
-
+Appendix for homotopy theory, basic definition and the fundamental group with definition + calculation. 
 
 
 

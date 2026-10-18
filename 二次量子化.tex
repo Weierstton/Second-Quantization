@@ -13091,7 +13091,7 @@ $$\mathcal A^{(0)}(\vb{q})=\frac{k}{2\pi i}\int \qty[1+\frac{i}{v}\int_{\mathbb 
 \\
 我们还可以进一步的断言，高能散射只适用于小散射角情况，这由$F$的约束控制，读者可以自行证明，或参考\cite{L1}\S126。同时关于中心散射势场下，以分波法的推导，可以参考\cite{L1}\S 131，这里就不介绍了。\\
 \\
-我们还可以讨论一下，$s$波散射中的共振现象。记$s$态的能量为$\varepsilon$，令其在势场$U$的作用范围$a$内为束缚态$\varepsilon\ll U<0$，自然的其对应负散射长度$\alpha<0$。现在令入射粒子的能量$E\sim \varepsilon$，称为负的\textbf{浅能级}。对于$s$波函数我们记为$\chi(r)=rR^{}_0$，注意现在$l=0$，则根据假设我们得到\textsl{Schrödinger}方程
+现在我们来讨论一下，$s$波散射中的共振现象。记$s$态的能量为$\varepsilon$，令其在势场$U(r)$的作用范围$a$内为束缚态$\varepsilon<0$，且远小于势能$\abs{\varepsilon}\ll \abs{U}$，自然的其对应负散射长度$\alpha<0$。现在令入射粒子的能量$E\sim \varepsilon$，称为负的\textbf{浅能级}。对于$s$波函数我们记为$\chi(r)=rR^{}_0$，注意现在$l=0$，则根据假设我们得到\textsl{Schrödinger}方程
 \begin{equation}-\frac{1}{2m}\dv[2]{\chi}{r}+U\chi=E\chi\implies \begin{cases}\displaystyle\chi''=2mU\chi,\quad r\lesssim a;&\\ \displaystyle\chi''+2mE\chi=0,\quad r\gg a.\end{cases} \end{equation}
 其中在势场范围内取$E\approx0$，在远场处取为自由波$U\approx0$，单粒子波函数$\chi$应该在这两个区域间连续。在边界条件$\chi(0)=0$下，不难写出波函数大致的表达式
 $$\chi\sim\begin{cases} \sinh(\vartheta r),\quad\vartheta^2\sim 2mU,\quad r\sim a;&\\ \sinh(kr), \quad k^2=2m\abs{E},\quad r\gg a.\end{cases}$$
@@ -13109,7 +13109,7 @@ $$R^{}_0(r)=1+\mathcal A(\theta)\frac{\exp(ik^{}_sr)}{r},\quad r\to\infty,\quad 
 \begin{equation}\chi(r)=rR^{}_0=r+\mathcal A(\theta)\exp(ikr).\end{equation}
 带入定义(\ref{..664//vg2423})，我们得到
 $$\kappa=-\eval{\frac{\chi'}{\chi}}_{r=0}=\frac{1+ik\mathcal A}{\mathcal A}.$$
-由此我们可以求得精确的低速$s$波共振散射振幅，称为\textbf{\textsl{Wigner}振幅}(\textsl{Eugene P.Wigner}，1933)
+由此我们可以求得精确的低速$s$波共振散射振幅，称为\textbf{\textsl{Wigner}振幅}(\textsl{Wigner Jenő Pál}，1933)
 \begin{equation}\mathcal A^{}_{re}(k,\varepsilon)=-\frac{1}{\kappa+ik},\label{X2IJB09=C}\end{equation}
 利用光学定理(\ref{Opfg,m..;;})，考虑到$k^2=2m\abs{E}$以及式(\ref{X212C})，我们求得总共振有效截面
 \begin{equation}\sigma^{}_{re}=\frac{4\pi}{k}\Im \mathcal A^{}_{re}=\frac{4\pi}{k^2+\kappa^2}=\frac{2\pi}{m}\frac{1}{\abs{E}+\abs{\varepsilon}}.\end{equation}
@@ -14858,7 +14858,7 @@ $$\qty(z-\sum_{i=1}^ln^{}_iz^{}_i)\qty(s^{}_j)=0\implies z=\sum_{i=1}^ln^{}_iz^{
 对于这些闭曲面的连通和，比如
 $$\Sigma=T^2\# T^2\# T^2\# \cdots=kT^2,\quad \Theta=\mathbb RP^2\#\mathbb RP^2\#\cdots=m\mathbb RP^2.$$
 关于连通和的定义请参考\cite{SG*/00}\S4，可以计算得到他们的同调群
-\begin{equation}\begin{aligned}&H^{}_0\qty(\Sigma;\mathbb Z)=H^{}_0\qty(\Theta;\mathbb Z)=\mathbb Z \implies \beta^{}_0\qty(\Sigma;\mathbb Z)=\beta^{}_0\qty(\Theta;\mathbb Z)=1;\\& H^{}_2\qty(\Sigma;\mathbb Z)=\mathbb Z,\quad H^{}_2\qty(\Theta;\mathbb Z)=0\implies \beta^{}_2\qty(\Sigma;\mathbb Z)=1,\quad \beta^{}_2\qty(\Theta;\mathbb Z)=0;\\& H^{}_1\qty(\Sigma;\mathbb Z)=\mathbb Z^{2k},\quad H^{}_1\qty(\Theta;\mathbb Z)=\mathbb Z^{m-1}\oplus\mathbb Z^{}_2\implies \beta^{}_1\qty(\Sigma;\mathbb Z)=2k,\quad \beta^{}_1\qty(\Theta;\mathbb Z)=m-1.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}&H^{}_0\qty(\Sigma;\mathbb Z)=H^{}_0\qty(\Theta;\mathbb Z)=\mathbb Z \implies \beta^{}_0\qty(\Sigma;\mathbb Z)=\beta^{}_0\qty(\Theta;\mathbb Z)=1;\\& H^{}_2\qty(\Sigma;\mathbb Z)=\mathbb Z,\quad H^{}_2\qty(\Theta;\mathbb Z)=0\implies \beta^{}_2\qty(\Sigma;\mathbb Z)=1,\quad \beta^{}_2\qty(\Theta;\mathbb Z)=0;\\& H^{}_1\qty(\Sigma;\mathbb Z)=\mathbb Z^{2k},\quad H^{}_1\qty(\Theta;\mathbb Z)=\mathbb Z^{m-1}\oplus\mathbb Z^{}_2\implies \beta^{}_1\qty(\Sigma;\mathbb Z)=2k,\quad \beta^{}_1\qty(\Theta;\mathbb Z)=m-1.\end{aligned}\label{c23rvff}\end{equation}
 于是它们的\textsl{Euler}示性数为
 \begin{equation}\chi\qty(\Sigma)=1-(2k)+1=2(1-k),\quad \chi\qty(\Theta)=1-(m-1)+0=2-m,\end{equation}
 从而我们定义二维紧致闭曲面的\textbf{亏格 \textit{Genus}}为一维\textsl{Betti}数中的变量
@@ -14981,8 +14981,8 @@ $$\forall p\stackrel{\pi}{\sim} p'\in X,\quad \forall t\in[0,1],\quad H(p,t)\sta
 则存在$Y$到$B$的强形变收缩。一个典型的例子是开曲面的收缩，考虑一个开洞的环面$T^2-D^1$，它是一个去心矩形的商空间，则这个环面的强形变收缩核是其经线和纬线的积，如下图
 \begin{center}\tikz{\useasboundingbox(-3,-1.5)rectangle(3,1.5);\draw[thick](0,0)ellipse(3 and 1.5);\begin{scope}\clip(0,-1.8)ellipse(3 and 2.5);\draw[thick](0,2.2)ellipse(3 and 2.5);\end{scope}\begin{scope}\clip(0,2.2)ellipse(3 and 2.5);\draw[thick](0,-2.2)ellipse(3 and 2.5);\end{scope}\draw[line width=1.6pt](0,0)ellipse(2.5 and 1);\draw[line width=1.6pt,dashed,domain=90:270,samples=100,smooth]plot({2.1+0.6*cos(\x)},{0.9*sin(\x)});\draw[line width=1.6pt,domain=-90:90,samples=100, smooth]plot({2.1+0.6*cos(\x)},{0.9*sin(\x)});\draw[black,thick,rotate around={-10:(0,0.6)}](0,0.6)ellipse(0.28 and 0.18);}\captionof{figure}{环面$T^2$开洞，强形变收缩核是经线和纬线的并。}\label{Ccet65=-b}\end{center}
 将这一商空间构造的强形变收缩核推广，我们得到\textbf{圆束}，它是任意闭曲面$\Sigma$去掉一点后的强形变收缩核，定义为
-\begin{equation}\bigvee_{i=1}^k S^1_i=\qty(\bigsqcup_{i=1}^{n} S^1_i)\big/ \qty(p^{}_1\sim\cdots\sim p^{}_n),\quad k=\begin{cases}2n,\quad \Sigma=nT^2;&\\ m,\quad \Sigma=m\mathbb RP^2.\end{cases}\end{equation}
-其中$p^{}_i\in S^1_i$是圆上一点，可以取为$p^{}_i=\exp(0)\in\mathbb C$。关于圆束的具体图像，可以参考\cite{agfsgl}和\cite{CV25--}，这里我们就不展示了。\\
+\begin{equation}\bigvee_{i=1}^k S^1_i=\qty(\bigsqcup_{i=1}^{n} S^1_i)\big/ \qty(p^{}_1\sim\cdots\sim p^{}_n),\quad k=\begin{cases}2n,\quad \Sigma=nT^2;&\\ m,\quad \Sigma=m\mathbb RP^2.\end{cases}\label{fwFG.52Tef}\end{equation}
+其中$sqcup$是不交并，$p^{}_i\in S^1_i$是圆上一点，可以取为$p^{}_i=\exp(0)\in\mathbb C$。关于圆束的具体图像，可以参考\cite{agfsgl}和\cite{CV25--}，这里我们就不展示了。\\
 \\
 既然同伦是映射和空间的连续变换，那我们不妨来讨论同调在同伦下的变换，还是从整系数群出发。假设$X$和$Y$之间存在一个映射类，取其中两个元素$f\cong g$，伦移为$H$。首先需要说明的是，两个映射的链同态(\ref{c234=-70})之间是无法构造伦移的，比如
 $$!! f^{}_q\cong g^{}_q: C^{}_q(X;\mathbb Z)\to C^{}_q(Y;\mathbb Z) \ \text{不存在}.!!$$
@@ -15090,8 +15090,8 @@ $$\gamma^{-1}\alpha\gamma=\expval{\bar{c}ac}\in \varPi^{}_1\qty(X,x^{}_1),\quad 
 也就是说，只要两个基点之间是道路连通的，那么连接两点的道路类的诱导映射是基本群的同构。也就是说，在一个道路连通分支内，基本群并不依赖基点，若$X$整体道路连通则一般记为$\varPi^{}_1(X)$。这样，我们定义\textbf{单连通空间}，是一个基本群为平凡群的整体道路连通空间$\varPi^{}_1(X)=\qty{e}$。比如流场$X$中的涡管$X^{}_1$，
 $$\begin{tikzpicture}[scale=.8]\pgfmathsetmacro{\r}{1}\draw[thick](0,0)circle(\r);\draw(0,0)circle(\r+1.5);\node(0,0){$X^{}_1$};\node at(1.2,1.1){$X^{}_2$};\draw[decoration={markings,mark=at position 0.2 with{\arrow[scale=2.5]{stealth}},mark=at position .6 with{\arrow[scale=2.5]{stealth}}},postaction={decorate},dashed](0,0)circle(\r+.8);\draw[decoration={markings,mark=at position .3 with{\arrow[scale=1.5]{stealth[reversed]}}},postaction={decorate},dashed](0,0)circle(.6);\draw[decoration={markings,mark=at position .3 with{\arrow[scale=1.5]{stealth[reversed]}}},postaction={decorate},dashed](-1.6,0)circle(.4);\end{tikzpicture}$$
 它将$X$分为两个连通分支$X=X^{}_1+X^{}_2$，在每个$X^{}_i$内基本群平凡因此单连通，但$X^{}_1$和$X^{}_2$中的点无法互相连通，因此基本群是
-$$\varPi^{}_1(X)=\qty{e,a},$$
-其中$a$是$X^{}_2$中绕涡管$X^{}_1$的回路。这在流场中是一个\textbf{双连通空间}，它允许有旋势流解，是一个典型的拓扑缺陷。如果子集$A$道路连通，且包含映射的诱导$i^{}_\pi$是平凡的，则称为\textbf{半单连通子集}，若$X$的每一点都有一个半单连通邻域，则$X$是\textbf{局部半单连通的}。\\
+$$\varPi^{}_1(X)=\qty{e,\alpha},$$
+其中$\alpha$是$X^{}_2$中绕涡管$X^{}_1$的闭路类。这在流场中是一个\textbf{双连通空间}，它允许有旋势流解，是一个典型的拓扑缺陷。如果子集$A$道路连通，且包含映射的诱导$i^{}_\pi$是平凡的，则称为\textbf{半单连通子集}，若$X$的每一点都有一个半单连通邻域，则$X$是\textbf{局部半单连通的}。\\
 \\
 类似同调群在同伦下有不变性，基本群也是如此。假设两个同伦的映射$f\cong g\in C(X,Y)$，对于$X$上的基点$x$，这两个映射给出不同的像$f(x)\neq g(x)$，因此得到两个不同基点的基本群。记伦移为$H$，则对于固定点$x$它确定了$Y$上一条道路$c(t)=H(x,t)$，使得$c(0)=f(x)$和$c(1)=g(x)$。记相应的道路类为$\gamma=\expval{c}$，则我们得到诱导基本群同构
 $$\gamma^{}_\#:\varPi^{}_1(Y,f(x))\cong \varPi^{}_1(Y,g(x)).$$
@@ -15133,7 +15133,7 @@ $$[R]=\qty{x\middle\vert x=\comm{a^{}_1}{b^{}_1}\comm{a^{}_2}{b^{}_2}\cdots\comm
 \begin{equation}\varPi^{}_1\qty(S^1)=\varPi^{}_1\qty(D^1-\qty{0}).\end{equation}
 我们默认这是连通空间，因此省略了基点。在复平面上，$D^1-\qty{0}$作为去心圆盘，若不考虑原点则回路解析，对于包含原点的回路$\gamma$涉及到奇点，它的特征可以用\textsl{Cauchy}积分公式给出
 $$a=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=n\in\mathbb Z.$$
-注意这个积分和回路的选择无关，只需要$\qty{0}$在其包围内即可，因此$\gamma$对应一个闭路类。而这是唯一的非平凡类，因为其余的解析曲线根据\textsl{Cauchy}定理回路积分为零，是平凡闭路类。于是我们令基本群的唯一生成元为$g$，其没有额外约束，从而基本群由式(\ref{Dd345-=-=})算得
+注意这个积分和回路的选择无关，只需要$\qty{0}$在其包围内即可，因此$\gamma$对应一个闭路类。而这是唯一的非平凡类，因为其余的解析曲线根据\textsl{Cauchy}定理回路积分为零，是平凡闭路类。于是我们令基本群的唯一生成元为$g$，这是绕$S^1$的闭路类，其没有额外约束，从而基本群由式(\ref{Dd345-=-=})算得
 \begin{equation}\varPi^{}_1\qty(S^1)=\varPi^{}_1\qty(D^1-\qty{0})=\expval{g;\varnothing}\cong\mathbb Z[g]=\mathbb Z.\label{FFwrtegWE}\end{equation}
 当然还有其余若干种等价方法，比如读者可以参考第\ref{xi5sdfg5400}节的道路提升法。这是一个相当重要的结果，它说明所有能连续变为$S^1$的闭曲线都由一个整数控制，直观的来讲就是绕$S^1$的圈数$n$，并且它严格的等于\textsl{Cauchy}积分公式。由此我们引入回路的\textbf{一维绕数 \textit{1D Winding Number}}，定义为
 \begin{equation}\mathrm{wind}^{}_1(\gamma)=\Phi(\gamma),\quad \Phi:\varPi^{}_1\qty(S^1)\to \mathbb Z,\quad \gamma\in\varPi^{}_1\qty(S^1),\end{equation}
@@ -15143,7 +15143,7 @@ $$a=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=n\in\mathbb Z.$$
 $$\mathrm{wind}^{}_1(\gamma)=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=\frac{1}{2\pi i}\int^1_0 \frac{\grad\gamma\cdot \bm{\gamma}'(t)\dd t}{\norm{\gamma(t)}},\quad \gamma:I\to S^1.$$
 由于我们永远可以扎到找到一条曲线，使得$\grad\gamma\perp \bm{\gamma}'$，因此$\mathrm{wind}^{}_1(\gamma)=\Phi(\gamma)\equiv0$，也就是说对于高维球面的基本群为平凡群
 \begin{equation}\varPi^{}_1\qty(S^n)=0,\quad n\ge 2.\end{equation}
-再考虑环面$T^2$，根据图 \ref{Ccet65=-b}我们知道$T^2\sim S^1\times S^1$是其强形变收缩核，因此有两个独立生成元$g^{}_1$和$g^{}_2$。根据上文我们知道$\mathbb Z\qty[g^{}_i]=\mathbb Z$，对于交换群式(\ref{Dd345-=-=})变为直和，因此我们得到
+再考虑环面$T^2$，根据图 \ref{Ccet65=-b}我们知道$T^2-\{p\}\sim S^1\times S^1$是其强形变收缩核，因此有两个独立生成元$g^{}_1$和$g^{}_2$。根据上文我们知道$\mathbb Z\qty[g^{}_i]=\mathbb Z$，对于交换群式(\ref{Dd345-=-=})变为直和，因此我们得到
 \begin{equation}\varPi^{}_1\qty(T^2)=\expval{g^{}_1,g^{}_2;\varnothing}=\mathbb Z\oplus\mathbb Z=\mathbb Z^2.\end{equation}
 可见$T^2\neq S^2$，因为同伦群不同，当然从同调群我们已经得到此结果。对于实射影空间$\mathbb RP^2=S^2/\mathbb Z^{}_2$，其基本群可以通过对$S^2$群添加关系得到，要求唯一生成元$g$是二阶循环的，因此
 \begin{equation}\varPi^{}_1\qty(\mathbb RP^2)=\expval{g;g^2}\cong\mathbb Z^{}_2=\qty{0,1}.\end{equation}
@@ -15151,15 +15151,60 @@ $$\mathrm{wind}^{}_1(\gamma)=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=\frac{
 \begin{center}\tikz{\pgfmathsetmacro{\r}{1.5}\draw[red](0,-\r)arc(-90:90:\r);\draw[blue](0,\r)arc(90:270:\r);\foreach \angle in{-90,-45,0,45,90}{\pgfmathsetmacro{\x}{\r*cos(\angle)}\pgfmathsetmacro{\y}{\r*sin(\angle)}\pgfmathsetmacro{\xx}{\r*cos(\angle+180)}\pgfmathsetmacro{\yy}{\r*sin(\angle+180)}\pgfmathsetmacro{\tx}{-.6*sin(\angle)}\pgfmathsetmacro{\ty}{.6*cos(\angle)}\fill(\x,\y)circle(1pt);\fill(\xx,\yy)circle(1pt);\draw[->,thick,red](\x,\y)--++(\tx,\ty);\draw[->,thick,blue](\xx,\yy)--++(\tx,\ty);}\draw[->,thick,dashed,bend left=30](0.75,0.1)to node[below]{$x\sim-x$}(-0.75,0.1);}\raisebox{1.5cm}{$\qquad\scalebox{2}{$\longrightarrow$}\qquad$}\tikz{\pgfmathsetmacro{\r}{1.5}\draw[decoration={markings,mark=at position .2 with{\arrow[scale=2.5]{stealth}},mark=at position .7 with{\arrow[scale=2.5]{stealth}}},postaction={decorate}](0,0)circle(\r);}\captionof{figure}{$\mathbb RP^2$的一个过圆心切面$\mathbb RP^1$，两个半圆定向相反，这不是一个回路，在粘合后给出一个回路。}\end{center}
 其中左侧图并不是一个回路，因为两侧定向冲突，但这是对径点可以粘合的唯一可能性，在粘合后给出回路，因此它有别于正常的回路$S^1$。当然我们其实也得到$\mathbb RP^1\cong S^1$，因此其基本群是$\varPi^{}_1\qty(\mathbb RP^1)=\mathbb Z$。可以证明的是，对于高维实射影空间，我们都有$\varPi^{}_1\qty(\mathbb RP^{n\ge2})\cong\mathbb Z^{}_2$，顶读者自行计算。\\
 \\
-在计算了环面和二维实射影空间的基本群后，我们当然希望能计算任意闭曲面的基本群。但这里有一个绕不过去的问题，
-
-
-
-
-
-
+在计算了$T^2$和$\mathbb RP^2$的基本群后，我们当然希望能计算任意闭曲面的基本群。但这里有一个绕不过去的问题，比如$2T^2=T^2\# T^2$的基本群不难证明必然是不交换的，因为存在两个拓扑缺陷。可是每个环面的基本群是$\mathbb Z^2$，因此我们需要解决如何从交换群得到非交换群，这等价为计算相应的生成元和关系。为此我们引入\textbf{\textsl{Seifert-van Kampen}定理}，以及它的一些特例。\\
+\\
+假设一个空间是两个子空间的并$X=X^{}_1\cup X^{}_2$，这三个空间都是道路连通的，且$X^{}_1$和$X^{}_2$的基本群都已知，令两个子空间的交集非空$X^{}_0=X^{}_1\cap X^{}_2\neq\varnothing$。引入包含映射的交换图
+$$\begin{tikzcd}[row sep=.4cm,column sep=1.3cm]&X^{}_1\arrow[dr,"i^{'}_1"]&\\ X^{}_0 \arrow[ur,"i^{}_1"]\arrow[dr,"i^{}_2"]\arrow[rr,"i^{}_0"]&&X\\&X^{}_2\arrow[ur,"i^{'}_2"]&\end{tikzcd},\quad \begin{cases}X^{}_0\stackrel{i^{}_1}{\hookrightarrow}X^{}_1\stackrel{i^{'}_1}{\hookrightarrow}X;&\\ X^{}_0\stackrel{i^{}_2}{\hookrightarrow}X^{}_2\stackrel{i^{'}_2}{\hookrightarrow}X&\\ X\stackrel{i^{}_0}{\hookrightarrow}X.\end{cases}\implies i^{'}_1\circ i^{}_1=i^{'}_2\circ i^{}_2=i^{}_0.$$
+选取$p\in X^{}_0$作为基点，我们得到四个基本群$\varPi^{}_1\qty(X^{}_{0,1,2},p)$和$\varPi^{}_1(X,p)$。于是\textsl{SvK}定理表述为，若$X^{}_{1,2}$均为开基，则$\varPi^{}_1(X,p)$满足交换图
+\begin{equation}\begin{tikzcd}[row sep=.4cm,column sep=1.3cm]&\varPi^{}_1\qty(X^{}_1,p)\arrow[dr,"\qty(i^{'}_1)^{}_\tau"]&\\ \varPi^{}_1\qty(X^{}_0,p) \arrow[ur,"\qty(i^{}_1)^{}_\tau"]\arrow[dr,"\qty(i^{}_2)^{}_\tau"']\arrow[rr,"\qty(i^{}_0)^{}_\tau"]&&\varPi^{}_1(X,p)\\&\varPi^{}_1\qty(X^{}_2,p)\arrow[ur,"\qty(i^{'}_2)^{}_\tau"']&\end{tikzcd},\end{equation}
+以及各子群的交换图
+\begin{equation}\begin{tikzcd}[row sep=1cm,column sep=1.3cm]\varPi^{}_1\qty(X^{}_{1,2},p)\arrow[r,"\psi^{}_{1,2}"]\arrow[dr,"\qty(i^{'}_{1,2})^{}_\tau"']&\varPi^{}_1\qty(X^{}_1,p)\mathop{\scalebox{1.5}{$\ast$}}\varPi^{}_1\qty(X^{}_2,p)\arrow[d,"\varphi^{}_0"]\\& \varPi^{}_1(X,p)\end{tikzcd},\quad \begin{tikzcd}[row sep=1cm,column sep=1.3cm]\varPi^{}_1\qty(X^{}_0,p)\arrow[r,"\psi^{}_0"]\arrow[dr,"\qty(i^{}_0)^{}_\tau"']&\varPi^{}_1\qty(X^{}_1,p)\mathop{\scalebox{1.5}{$\ast$}}\varPi^{}_1\qty(X^{}_2,p)\arrow[d,"\varphi^{}_0"]\\& \varPi^{}_1(X,p)\end{tikzcd}.\end{equation}
+其中出现的映射都是同态，$\psi^{}_{0,1,2}$是群自由乘积的同态，这实际上来自其同态定义，可以参考\cite{SG*/00}\S\RomanNumeralCaps{3}.4。需要强调的是，$\varphi^{}_0$也是同态，因为交换图说明$\varPi^{}_1\qty(X^{}_0,p)$也通过$\varphi^{}_0$进入$\varPi^{}_1(X,p)$，但它早就被$\qty(i^{}_{1,2})^{}_\tau$纳入子群了，因此它被$\varphi^{}_0$重复计算。为了得到同构，我们需要从中去除$\varPi^{}_1\qty(X^{}_0,p)$，这可以用信号传输来说明：将$\forall\alpha\in\varPi^{}_1\qty(X^{}_0,p)$类比为一个输入信号
+\begin{itemize}\item 这个信号有三个去向，分别是到两个分基站$\varPi^{}_1\qty(X^{}_{1,2},p)$，再传输到总基站$\varPi^{}_1\qty(X^{}_1,p)\mathop{\scalebox{1.5}{$\ast$}}\varPi^{}_1\qty(X^{}_2,p)$，以及对总基站的直达；\item 这个直达信号是我们所不需要的，它会在接收端接收总基站信号时造成混乱；\item 为此我们选择对其中一个分基站输入一个相应的反信号，让这个输入信号只走一个分基站，另一个分基站的反信号会在到达总基站时和此输入信号对冲，从而达到目的。\end{itemize}
+现在具体写出这个类比，反信号就是闭路类的逆$\alpha^{-1}$，对分基站的传输为$\qty(i^{}_{1,2})^{}_\tau$，自由乘积的群元之间就是通常的乘积关系，于是对于接收过程$\varphi^{}_0$有
+$$\begin{aligned}&\varphi^{}_0\qty{\qty[\psi^{}_1\circ \qty(i^{}_1)^{}_\tau](\alpha)\cdot\qty[\psi^{}_2\circ \qty(i^{}_2)^{}_\tau]\qty(\alpha^{-1})}\\&=\qty[\qty(i^{'}_1)^{}_\tau\circ \qty(i^{}_1)^{}_\tau](\alpha)\cdot\qty[\qty(i^{'}_2)^{}_\tau\circ \qty(i^{}_2)^{}_\tau]\qty(\alpha^{-1})=\qty(i^{}_0)^{}_\tau(\alpha)\qty(i^{}_0)^{}_\tau\qty(\alpha^{-1})=1^{}_{\varPi(X)}.\end{aligned}$$
+也就是说，$\qty[\psi^{}_1\circ \qty(i^{}_1)^{}_\tau](\alpha)\cdot\qty[\psi^{}_2\circ \qty(i^{}_2)^{}_\tau]\qty(\alpha^{-1})\in \ker\varphi^{}_0$，从而$\varPi^{}_1\qty(X^{}_0,p)$主要体现在$\ker\varphi^{}_0$中。这样我们只需要去除这个部分即可，一般在自由乘积的表述中会省略同态$\psi^{}_{1,2}$，令$\varPi^{}_1\qty(X^{}_0,p)$的生成元集为$A^{}_0$，定义关系为
+\begin{equation}R=\qty{\qty(i^{}_1)^{}_\tau(\alpha)\qty(i^{}_2)^{}_\tau\qty(\alpha^{-1})\middle\vert \alpha\in A^{}_0},\end{equation}
+则\textsl{SvK}定理可以用一个同构写出
+\begin{equation}\varphi:\varPi^{}_1\qty(X^{}_1,p)\mathop{\scalebox{1.5}{$\ast$}}\varPi^{}_1\qty(X^{}_2,p)/[R]\cong \varPi^{}_1(X,p).\end{equation}
+或者用母元关系表示给出，记子空间的基本群表示$\varPi^{}_1\qty(X^{}_l,p)=\expval{A^{}_l;R^{}_l}$，其中$A^{}_l$和$R^{}_l$是生成元集和关系集，最终我们得到
+\begin{equation}\varPi^{}_1(X,p)\cong\expval{A^{}_1\sqcup A^{}_2;R^{}_1\sqcup R^{}_2\sqcup R}.\label{Cc235=-c}\end{equation}
+其中$\sqcup$是不交并。一般在实际应用中，关系会有所简化，比如若$X^{}_0$单连通$\varPi^{}_1\qty(X^{}_0)=\{e\}$，则我们得到
+\begin{equation}\varPi^{}_1(X,p)\cong\varPi^{}_1\qty(X^{}_1,p)\mathop{\scalebox{1.5}{$\ast$}}\varPi^{}_1\qty(X^{}_2,p).\end{equation}
+若$X^{}_2$单连通$\varPi^{}_1\qty(X^{}_2)=\{e\}$，则我们得到
+\begin{equation}\varPi^{}_1(X,p)\cong\varPi^{}_1\qty(X^{}_1,p)/\qty[\Im\qty(i^{}_2)^{}_\tau],\quad \qty[\Im\qty(i^{}_2)^{}_\tau]=\qty[\qty(i^{}_2)^{}_\tau\qty(A^{}_0)].\end{equation}
+这两个结论请读者自行证明，或参考\cite{SG*/00}\S\RomanNumeralCaps{4}.3和\S\RomanNumeralCaps{4}.4，这里不具体计算。关于$\varphi$的同构性，也可以参考\cite{SG*/00}\S\RomanNumeralCaps{4}.2，详细证明略为困难，当然在上述构造下还是较为初等的。\\
+\\
+现在让我们给出一些复杂空间的基本群。对于圆束(\ref{fwFG.52Tef})，先考虑$k=2$情形$X=S^1_1\bigvee S^1_2$，记交集的单点为$\qty{p}=S^1_1\cap S^1_2=X^{}_0$。这是单连通的，因此我们得到
+$$\varPi^{}_1\qty(S^1_1\bigvee S^1_2,p)\cong\varPi^{}_1\qty(S^1_1,p)\mathop{\scalebox{1.5}{$\ast$}}\varPi^{}_1\qty(S^1_2,p).$$
+于是根据式(\ref{FFwrtegWE})和\textsl{SvK}定理的母元表示(\ref{Cc235=-c})，不难得到双圆的圆束基本群为
+\begin{equation}\varPi^{}_1\qty(S^1_1\bigvee S^1_2,p)\cong\expval{g^{}_1,g^{}_2;\varnothing}.\end{equation}
+将其推广到$k$个圆，我们得到
+\begin{equation}\varPi^{}_1\qty(\bigvee_{i=1}^k S^1_i,p)\cong\expval{g^{}_1,g^{}_2,\ldots,g^{}_k;\varnothing}.\end{equation}
+我们以闭曲面的基本群作为收尾，根据定义圆束是闭曲面去掉一点后的强形变收缩核，因此由同伦不变性得到
+$$\varPi^{}_1\qty(\Sigma-\{p\})\cong\expval{g^{}_1,g^{}_2,\ldots,g^{}_k;\varnothing}.$$
+我们现在要将这个点加回，这会导致关系约束的产生，这里直接给出结果，省略基点
+\begin{equation}\begin{aligned}&\varPi^{}_1\qty(m\mathbb RP^2)\cong \expval{a^{}_1,a^{}_2,\ldots,a^{}_m;a^2_1a^2_2\ldots a^2_m};\\ &\varPi^{}_1\qty(kT^2)\cong \expval{a^{}_1,b^{}_1,a^{}_2,b^{}_1,\ldots,a^{}_k,b^{}_k;\comm{a^{}_1}{b^{}_1}\comm{a^{}_2}{b^{}_2}\cdots\comm{a^{}_k}{b^{}_k}}.\end{aligned}\end{equation}
+将其交换化，我们得到
+\begin{equation}\varPi^{ab}_1\qty(m\mathbb RP^2)\cong \mathbb Z^{m-1}\oplus\mathbb Z^{}_2,\quad \varPi^{ab}_1\qty(kT^2)\cong\mathbb Z^{2k}.\end{equation}
+注意到同调群(\ref{c23rvff})的式，可以看到$\varPi^{ab}_1\qty(\Sigma)=H^{}_1\qty(\Sigma)$，这并非是一个巧合，具体的证明放在第\ref{FVGtyhv}节中给出。读者目前只需要看到，交换化后的基本群，和一维同调群之间有很深刻的关联，这是因为两者都刻画了曲面的一维“洞”，只是方式略有不同。
 
 \subsubsection{高维同伦群}\label{Ffg884tb}
+\noindent 上面我们通过闭路类，介绍了空间的基本群$\varPi^{}_1$。当然不难想到，既然一条回路只是一个一维闭链，并且任意维的同调群都是同伦不变的，那么一个高维闭链的同伦类也应该有相应的群。这就是高维同伦群，或简称\textbf{同伦群}，下面我们具体介绍。\\
+\\
+我们从回路的高维推广开始，
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

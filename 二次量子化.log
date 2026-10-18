@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  18 OCT 2026 02:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.1)  18 OCT 2026 23:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -15389,23 +15389,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 13089--13095
  []
 
 
-Overfull \hbox (6.4387pt too wide) in paragraph at lines 13089--13095
-\C70/rm/m/n/10/62 ^^Q \C70/rm/m/n/10/4e Ï \C70/rm/m/n/10/8f ÿ \C70/rm/m/n/10/53
- Ô \C70/rm/m/n/10/4e Â \C70/rm/m/n/10/8b ® ∫ \C70/rm/m/n/10/4e ^^@ |\C70/rm/m/
-n/10/ff ^^L| $\OML/cmm/m/it/10 s$\C70/rm/m/n/10/6c ‚ \C70/rm/m/n/10/65 c \C70/r
-m/m/n/10/5c ^^D \C70/rm/m/n/10/4e - \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/51 q \C7
-0/rm/m/n/10/63 / \C70/rm/m/n/10/73 ∞ \C70/rm/m/n/10/8c a|\C70/rm/m/n/10/30 ^^B|
- \C70/rm/m/n/10/8b ∞$\OML/cmm/m/it/10 s$\C70/rm/m/n/10/60 ^^A \C70/rm/m/n/10/76
- Ñ \C70/rm/m/n/10/80 ˝ \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/4e :$\OML/cmm/m/it/10
- "$|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/4e ‰ \C70/rm/m/n/10/51 v \C70/rm/m/n/
-10/57 ( \C70/rm/m/n/10/52 ø \C70/rm/m/n/10/57 :$\OML/cmm/m/it/10 U$\C70/rm/m/n/
-10/76 Ñ \C70/rm/m/n/10/4f \ \C70/rm/m/n/10/75 ( \C70/rm/m/n/10/83 ^^C \C70/rm/m
-/n/10/56 Ù$\OML/cmm/m/it/10 a$\C70/rm/m/n/10/51 Ö \C70/rm/m/n/10/4e : \C70/rm/m
-/n/10/67 _ \C70/rm/m/n/10/7f ^^Z \C70/rm/m/n/10/60 ^^A$\OML/cmm/m/it/10 " \OMS/
-cmsy/m/n/10 ^^\
- []
-
-
 
 [644]
 
@@ -19069,12 +19052,12 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15152--15155
+Underfull \hbox (badness 10000) in paragraph at lines 15152--15157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15167--15170
+Underfull \hbox (badness 10000) in paragraph at lines 15152--15157
 
  []
 
@@ -19085,17 +19068,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.50}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15170 \subsubsection
-                      {Ëæ´Áæ§ÂíåÊâ≠ÁªìÊ¶ÇËßà} [50]
+l.15157 ...rc i^{}_1=i^{'}_2\circ i^{}_2=i^{}_0.$$
+                                                   [50]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.51}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15194 \clearpage
-                   [51]
-Underfull \hbox (badness 10000) in paragraph at lines 15206--15210
+l.15169 ...R]\cong \varPi^{}_1(X,p).\end{equation}
+                                                   [51]
+Underfull \hbox (badness 10000) in paragraph at lines 15175--15179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15193--15196
 
  []
 
@@ -19106,16 +19094,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.52}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15214 ...{\expval{p}\vert p\in X}.\end{equation}
-                                                   [52
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 15216--15220
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15230--15234
+l.15211 \subsubsection
+                      {Êò†Â∞ÑÂ∫¶Âíå‰∏çÂä®ÁÇπ} [52]
+Underfull \hbox (badness 10000) in paragraph at lines 15212--15215
 
  []
 
@@ -19126,9 +19107,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.53}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15238 ...ll x\in B.\label{fcw4rCV}\end{equation}
-                                                   [53]
-Overfull \hbox (4.20522pt too wide) in paragraph at lines 15246--15248
+l.15239 \clearpage
+                   [53]
+Underfull \hbox (badness 10000) in paragraph at lines 15251--15255
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.54}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15259 ...{\expval{p}\vert p\in X}.\end{equation}
+                                                   [54
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 15261--15265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15275--15279
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.55}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15283 ...ll x\in B.\label{fcw4rCV}\end{equation}
+                                                   [55]
+Overfull \hbox (4.20522pt too wide) in paragraph at lines 15291--15293
 \C70/rm/m/n/10/56 ‡ \C70/rm/m/n/10/6b d \C70/rm/m/n/10/96 ∆ \C70/rm/m/n/10/54 ^
 ^H$[]$\C70/rm/m/n/10/67 Ñ \C70/rm/m/n/10/62 ^^P$\OT1/cmr/m/n/10 (-20) ^^E[](\OM
 L/cmm/m/it/10 B; ^^Y\OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 (-
@@ -19143,39 +19157,7 @@ mm/m/it/10 X \OMS/cmsy/m/n/10 !
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15250--15254
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.54}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15258 ...r D(E,\pi)\implies f(a),g(a)\in F(b),$$
-                                                   [54]
-Underfull \hbox (badness 10000) in paragraph at lines 15264--15268
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15278--15281
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.55}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15281 \begin{equation}
-                        T^{}_U:\pi^{-1}(U)\to U\times F(p),\quad T^{}_U(x)=\...
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 15289--15293
+Underfull \hbox (badness 10000) in paragraph at lines 15295--15299
 
  []
 
@@ -19186,15 +19168,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.56}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15297 ...}_\gamma;\label{xisGFTW4}\end{equation}
-                                                  \item \textbf{ÂΩí‰∏ÄÂåñÊù°...
-[56]
-Underfull \hbox (badness 10000) in paragraph at lines 15303--15307
+l.15303 ...r D(E,\pi)\implies f(a),g(a)\in F(b),$$
+                                                   [56]
+Underfull \hbox (badness 10000) in paragraph at lines 15309--15313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15311--15315
+Underfull \hbox (badness 10000) in paragraph at lines 15323--15326
 
  []
 
@@ -19205,17 +19186,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.57}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15317 ...+_0)\neq\tilde\gamma^{}_2\qty(t^+_0).$$
-                                                   [57]
+l.15326 \begin{equation}
+                        T^{}_U:\pi^{-1}(U)\to U\times F(p),\quad T^{}_U(x)=\...
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 15334--15338
+
+ []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.58}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15337 ...y(a^{}_0).\label{527++3.}\end{equation}
-                                                   [58]
-Underfull \hbox (badness 10000) in paragraph at lines 15337--15341
+l.15342 ...}_\gamma;\label{xisGFTW4}\end{equation}
+                                                  \item \textbf{ÂΩí‰∏ÄÂåñÊù°...
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 15348--15352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15356--15360
 
  []
 
@@ -19226,32 +19219,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.59}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15359 ...ta^{}_m(m)=a,\quad \forall m\in F(p),$$
+l.15362 ...+_0)\neq\tilde\gamma^{}_2\qty(t^+_0).$$
                                                    [59]
-Underfull \hbox (badness 10000) in paragraph at lines 15363--15369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15363--15369
-
- []
-
-
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.60}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15381 ...amma\qty(\partial I^n)=p.\end{equation}
+l.15382 ...y(a^{}_0).\label{527++3.}\end{equation}
                                                    [60]
-Underfull \hbox (badness 10000) in paragraph at lines 15387--15391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15403--15407
+Underfull \hbox (badness 10000) in paragraph at lines 15382--15386
 
  []
 
@@ -19262,15 +19240,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.61}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15407 \begin{equation}
-                        \varPi^{}_0(F)=\qty{\expval{f}:S^0=\qty{1,-1}\to F}\...
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 15419--15423
+l.15404 ...ta^{}_m(m)=a,\quad \forall m\in F(p),$$
+                                                   [61]
+Underfull \hbox (badness 10000) in paragraph at lines 15408--15414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15423--15427
+Underfull \hbox (badness 10000) in paragraph at lines 15408--15414
 
  []
 
@@ -19281,19 +19258,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.62}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15427 ...{i^{}_*}\varPi^{}_1(S^3).\end{equation}
+l.15426 ...amma\qty(\partial I^n)=p.\end{equation}
                                                    [62]
-Underfull \hbox (badness 10000) in paragraph at lines 15431--15435
+Underfull \hbox (badness 10000) in paragraph at lines 15432--15436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15437--15440
+Underfull \hbox (badness 10000) in paragraph at lines 15448--15452
 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -19302,9 +19276,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.63}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15479 \clearpage
-                   [63]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+l.15452 \begin{equation}
+                        \varPi^{}_0(F)=\qty{\expval{f}:S^0=\qty{1,-1}\to F}\...
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 15464--15468
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15468--15472
+
+ []
 
 
 
@@ -19313,9 +19295,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.64}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15479 \clearpage
-                   [64]
-Overfull \vbox (16.15732pt too high) has occurred while \output is active []
+l.15472 ...{i^{}_*}\varPi^{}_1(S^3).\end{equation}
+                                                   [64]
+Underfull \hbox (badness 10000) in paragraph at lines 15476--15480
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15482--15485
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -19324,16 +19316,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.65}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15479 \clearpage
+l.15524 \clearpage
                    [65]
-Underfull \hbox (badness 10000) in paragraph at lines 15481--15486
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15481--15486
-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -19342,19 +19327,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.66}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15503 \begin{equation}
-                        \vb{A}\qty(\expval{\vb{e}^{(i)}})=\lambda^{(0)}_i\ex...
-[66
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 15505--15509
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15519--15523
-
- []
+l.15524 \clearpage
+                   [66]
+Overfull \vbox (16.15732pt too high) has occurred while \output is active []
 
 
 
@@ -19363,9 +19338,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.67}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15523 ...da^{(0)}_i}.\label{dolla}\end{equation}
-                                                   [67]
-Underfull \hbox (badness 10000) in paragraph at lines 15535--15539
+l.15524 \clearpage
+                   [67]
+Underfull \hbox (badness 10000) in paragraph at lines 15526--15531
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15526--15531
 
  []
 
@@ -19376,9 +19356,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.68}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15547 ...b{f}^{(i)})=\lambda^{}_i\vb{f}^{(i)}.$$
-                                                   [68]
-Underfull \hbox (badness 10000) in paragraph at lines 15555--15559
+l.15548 \begin{equation}
+                        \vb{A}\qty(\expval{\vb{e}^{(i)}})=\lambda^{(0)}_i\ex...
+[68
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 15550--15554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15564--15568
 
  []
 
@@ -19389,9 +19377,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.69}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15567 ...p)\equiv0,\label{wox7gr,}\end{equation}
+l.15568 ...da^{(0)}_i}.\label{dolla}\end{equation}
                                                    [69]
-Underfull \hbox (badness 10000) in paragraph at lines 15569--15573
+Underfull \hbox (badness 10000) in paragraph at lines 15580--15584
 
  []
 
@@ -19402,14 +19390,40 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.70}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15586 ...vb{e}^{(j)}=\vb{B}\qty(\vb{e}^{(i)}).$$
+l.15592 ...b{f}^{(i)})=\lambda^{}_i\vb{f}^{(i)}.$$
                                                    [70]
-Underfull \hbox (badness 10000) in paragraph at lines 15594--15598
+Underfull \hbox (badness 10000) in paragraph at lines 15600--15604
 
  []
 
 
-Overfull \hbox (2.3964pt too wide) in paragraph at lines 15600--15602
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.71}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15612 ...p)\equiv0,\label{wox7gr,}\end{equation}
+                                                   [71]
+Underfull \hbox (badness 10000) in paragraph at lines 15614--15618
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.72}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15631 ...vb{e}^{(j)}=\vb{B}\qty(\vb{e}^{(i)}).$$
+                                                   [72]
+Underfull \hbox (badness 10000) in paragraph at lines 15639--15643
+
+ []
+
+
+Overfull \hbox (2.3964pt too wide) in paragraph at lines 15645--15647
 \C70/rm/m/n/10/96 ˆ \C70/rm/m/n/10/7e ß Ÿ \C70/rm/m/n/10/51 ˙ \C70/rm/m/n/10/53
  ü \C70/rm/m/n/10/7b Ä \C70/rm/m/n/10/5e v \C70/rm/m/n/10/4e ^^[$\U/rsfs/m/n/10
  T[]$|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/75 Y \C70/rm/m/n/10/7e Ÿ \C70/rm/m/
@@ -19426,49 +19440,13 @@ T1/cmr/bx/n/10 (-20) f[]$\C70/rm/m/n/10/76 Ñ
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.71}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15606 ...^{(\xi);0}).\label{fqf21}\end{equation}
-                                                   [71]
-Underfull \hbox (badness 10000) in paragraph at lines 15620--15624
-
- []
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.72}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15628 ...B]=\dim\qty(\mathbb V^{}_{(1)})\geq2.$$
-                                                   [72]
-Underfull \hbox (badness 10000) in paragraph at lines 15636--15640
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15646--15650
-
- []
-
-
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.73}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15650 \subsubsection
-                      {ÂàÜË£Ç‰∏õÁöÑÂ≠êÊµÅÂΩ¢ÁêÜËÆ∫} [73]
-Underfull \hbox (badness 10000) in paragraph at lines 15651--15654
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15660--15664
+l.15651 ...^{(\xi);0}).\label{fqf21}\end{equation}
+                                                   [73]
+Underfull \hbox (badness 10000) in paragraph at lines 15665--15669
 
  []
 
@@ -19479,9 +19457,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.74}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15668 ...plus\text{Span}\qty{\vb{f}^{(\eta)}}.$$
+l.15673 ...B]=\dim\qty(\mathbb V^{}_{(1)})\geq2.$$
                                                    [74]
 Underfull \hbox (badness 10000) in paragraph at lines 15681--15685
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15691--15695
 
  []
 
@@ -19492,9 +19475,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.75}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15693 ...c^{}_{i\eta}\vb{e}^{(i)},\end{equation}
-                                                   [75]
-Underfull \hbox (badness 10000) in paragraph at lines 15699--15703
+l.15695 \subsubsection
+                      {ÂàÜË£Ç‰∏õÁöÑÂ≠êÊµÅÂΩ¢ÁêÜËÆ∫} [75]
+Underfull \hbox (badness 10000) in paragraph at lines 15696--15699
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15705--15709
 
  []
 
@@ -19505,14 +19493,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.76}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15711 ...a_{\ ;b}.\label{hanbsoq1}\end{equation}
+l.15713 ...plus\text{Span}\qty{\vb{f}^{(\eta)}}.$$
                                                    [76]
-Underfull \hbox (badness 10000) in paragraph at lines 15721--15725
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15731--15735
+Underfull \hbox (badness 10000) in paragraph at lines 15726--15730
 
  []
 
@@ -19523,10 +19506,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.77}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15735 \begin{equation}
-                        \vb{K}^{}_{ab}(t)=\vb{T}^{}_{a;b}(t)=\vb{A}^{}_{ab}(...
-[77]
-Underfull \hbox (badness 10000) in paragraph at lines 15743--15745
+l.15738 ...c^{}_{i\eta}\vb{e}^{(i)},\end{equation}
+                                                   [77]
+Underfull \hbox (badness 10000) in paragraph at lines 15744--15748
 
  []
 
@@ -19537,31 +19519,63 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.78}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15753 \clearpage
-                   [78]
+l.15756 ...a_{\ ;b}.\label{hanbsoq1}\end{equation}
+                                                   [78]
+Underfull \hbox (badness 10000) in paragraph at lines 15766--15770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15776--15780
+
+ []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.79}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15773 \clearpage
-                  \begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}...
-[79
+l.15780 \begin{equation}
+                        \vb{K}^{}_{ab}(t)=\vb{T}^{}_{a;b}(t)=\vb{A}^{}_{ab}(...
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 15788--15790
 
-]
+ []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.80}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15791 \bibitem{L5}
-                     Schwartz, Matthew D. (2014). Quantum Field Theory and t...
-[80
+l.15798 \clearpage
+                   [80]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.81}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15818 \clearpage
+                  \begingroup\makeatletter\renewcommand{\@biblabel}[1]{[#1]}...
+[81
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 15798--15799
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.82}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15836 \bibitem{L5}
+                     Schwartz, Matthew D. (2014). Quantum Field Theory and t...
+[82
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 15843--15844
 []\C70/rm/m/n/10/54 h \C70/rm/m/n/10/73 Ø\T1/cmr/m/n/10 (+20) _pericyclic. \C70
 /rm/m/n/10/74 ^^F \C70/rm/m/n/10/8b ∫ \C70/rm/m/n/10/52 õ \C70/rm/m/n/10/5b f\T
 1/cmr/m/n/10 (+20) . \C70/rm/m/n/10/74 ^^F \C70/rm/m/n/10/8b ∫ \C70/rm/m/n/10/7
@@ -19573,30 +19587,30 @@ aidu . com / s /
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.81}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15806 \bibitem{eC..25a}
-                          Das, Ashok K. (1997). Finite Temperature Field The...
-[81]
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.82}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15822 \bibitem{x877DD}
-                         Edwin H. Spanier. (1994). Algebraic Topology. Sprin...
-[82]
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.83}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15829 \end{document}
-                       [83] (./‰∫åÊ¨°ÈáèÂ≠êÂåñ.aux)
+l.15851 \bibitem{eC..25a}
+                          Das, Ashok K. (1997). Finite Temperature Field The...
+[83]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.84}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15867 \bibitem{x877DD}
+                         Edwin H. Spanier. (1994). Algebraic Topology. Sprin...
+[84]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.85}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15874 \end{document}
+                       [85] (./‰∫åÊ¨°ÈáèÂ≠êÂåñ.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -19616,10 +19630,10 @@ Package rerunfilecheck Info: File `‰∫åÊ¨°ÈáèÂ≠êÂåñ.out' has not changed.
 ### simple group (level 1) entered at line 4793 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 73858 strings out of 467799
- 1649872 string characters out of 5425587
- 2451968 words of memory out of 5000000
- 94735 multiletter control sequences out of 15000+600000
+ 74041 strings out of 467799
+ 1654303 string characters out of 5425587
+ 2452169 words of memory out of 5000000
+ 94907 multiletter control sequences out of 15000+600000
  883235 words of font info for 1172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,24n,102p,5307b,4734s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -19778,10 +19792,10 @@ nts/type1/public/cm-super/sfti0800.pfb><d:/Program Files (x86)/texlive/2025/tex
 mf-dist/fonts/type1/public/cm-super/sfti0900.pfb><d:/Program Files (x86)/texliv
 e/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><d:/Program Files (x
 86)/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on ‰∫åÊ¨°ÈáèÂ≠êÂåñ.pdf (801 pages, 6726406 bytes).
+Output written on ‰∫åÊ¨°ÈáèÂ≠êÂåñ.pdf (803 pages, 6740927 bytes).
 PDF statistics:
- 15534 PDF objects out of 18468 (max. 8388607)
- 14134 compressed objects within 142 object streams
- 5238 named destinations out of 6186 (max. 500000)
+ 15561 PDF objects out of 18468 (max. 8388607)
+ 14159 compressed objects within 142 object streams
+ 5249 named destinations out of 6186 (max. 500000)
  148701 words of extra memory for PDF output out of 154059 (max. 10000000)
 

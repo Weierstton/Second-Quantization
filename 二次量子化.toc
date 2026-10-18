@@ -294,72 +294,72 @@
 \contentsline {subsection}{\numberline {B.2}同伦和图的等价性}{39}{subsection.1.B.2}%
 \contentsline {subsubsection}{\numberline {B.2.1}映射，空间和同调的同伦}{39}{subsubsection.1.B.2.1}%
 \contentsline {subsubsection}{\numberline {B.2.2}道路类和基本群}{44}{subsubsection.1.B.2.2}%
-\contentsline {subsubsection}{\numberline {B.2.3}高维同伦群}{51}{subsubsection.1.B.2.3}%
-\contentsline {subsubsection}{\numberline {B.2.4}映射度和不动点}{51}{subsubsection.1.B.2.4}%
-\contentsline {subsubsection}{\numberline {B.2.5}辫群和扭结概览}{51}{subsubsection.1.B.2.5}%
-\contentsline {subsubsection}{\numberline {B.2.6}Feynman图的同伦}{51}{subsubsection.1.B.2.6}%
-\contentsline {subsection}{\numberline {B.3}上同调和发散理论}{51}{subsection.1.B.3}%
-\contentsline {subsubsection}{\numberline {B.3.1}奇异上同调群}{51}{subsubsection.1.B.3.1}%
-\contentsline {subsubsection}{\numberline {B.3.2}同调代数引入}{51}{subsubsection.1.B.3.2}%
-\contentsline {subsubsection}{\numberline {B.3.3}微分流形上的de Rham上同调}{51}{subsubsection.1.B.3.3}%
-\contentsline {subsubsection}{\numberline {B.3.4}Feynman图的de Rham上同调表示}{51}{subsubsection.1.B.3.4}%
-\contentsline {subsubsection}{\numberline {B.3.5}de Rham上同调的发散理论}{51}{subsubsection.1.B.3.5}%
-\contentsline {subsection}{\numberline {B.4}重整化群的涌现}{51}{subsection.1.B.4}%
-\contentsline {subsubsection}{\numberline {B.4.1}nPI结构的几何本质}{51}{subsubsection.1.B.4.1}%
-\contentsline {section}{ \numberline {C}纤维丛和示性类}{52}{appendix.1.C}%
-\contentsline {subsection}{\numberline {C.1}覆叠空间}{52}{subsection.1.C.1}%
-\contentsline {subsubsection}{\numberline {C.1.1}定义和其基本群}{52}{subsubsection.1.C.1.1}%
-\contentsline {subsubsection}{\numberline {C.1.2}局部平凡性和单值性}{56}{subsubsection.1.C.1.2}%
-\contentsline {subsubsection}{\numberline {C.1.3}同伦群的长正合序列}{60}{subsubsection.1.C.1.3}%
-\contentsline {subsubsection}{\numberline {C.1.4}覆叠空间的同调和上同调}{63}{subsubsection.1.C.1.4}%
-\contentsline {subsection}{\numberline {C.2}标架丛和主丛}{65}{subsection.1.C.2}%
-\contentsline {subsubsection}{\numberline {C.2.1}流形上的标架丛}{65}{subsubsection.1.C.2.1}%
-\contentsline {subsubsection}{\numberline {C.2.2}Lie群回顾}{65}{subsubsection.1.C.2.2}%
-\contentsline {subsubsection}{\numberline {C.2.3}内禀对称性的主丛}{65}{subsubsection.1.C.2.3}%
-\contentsline {subsubsection}{\numberline {C.2.4}截面和规范变换}{65}{subsubsection.1.C.2.4}%
-\contentsline {subsection}{\numberline {C.3}主丛的伴丛}{65}{subsection.1.C.3}%
-\contentsline {subsubsection}{\numberline {C.3.1}伴丛和矢量丛}{65}{subsubsection.1.C.3.1}%
-\contentsline {subsubsection}{\numberline {C.3.2}切丛和余切丛}{65}{subsubsection.1.C.3.2}%
-\contentsline {subsubsection}{\numberline {C.3.3}Spin(n)丛和旋量丛}{65}{subsubsection.1.C.3.3}%
-\contentsline {subsubsection}{\numberline {C.3.4}Clifford丛和旋量模}{65}{subsubsection.1.C.3.4}%
-\contentsline {subsubsection}{\numberline {C.3.5}旋量—张量伴丛}{65}{subsubsection.1.C.3.5}%
-\contentsline {subsection}{\numberline {C.4}联络和曲率}{65}{subsection.1.C.4}%
-\contentsline {subsubsection}{\numberline {C.4.1}Abel联络和规范势}{65}{subsubsection.1.C.4.1}%
-\contentsline {subsubsection}{\numberline {C.4.2}非Abel联络和Wilson圈}{65}{subsubsection.1.C.4.2}%
-\contentsline {subsubsection}{\numberline {C.4.3}曲率和规范场强}{65}{subsubsection.1.C.4.3}%
-\contentsline {subsubsection}{\numberline {C.4.4}矢量丛上的联络}{65}{subsubsection.1.C.4.4}%
-\contentsline {subsubsection}{\numberline {C.4.5}基本粒子的标准模型}{65}{subsubsection.1.C.4.5}%
-\contentsline {subsection}{\numberline {C.5}鬼场和BRST上同调}{65}{subsection.1.C.5}%
-\contentsline {subsection}{\numberline {C.6}分类空间}{65}{subsection.1.C.6}%
-\contentsline {subsubsection}{\numberline {C.6.1}Stiefel流形和分类空间}{65}{subsubsection.1.C.6.1}%
-\contentsline {subsubsection}{\numberline {C.6.2}拓扑空间的分类映射}{65}{subsubsection.1.C.6.2}%
-\contentsline {subsubsection}{\numberline {C.6.3}纤维丛的分类}{65}{subsubsection.1.C.6.3}%
-\contentsline {subsubsection}{\numberline {C.6.4}分类空间的上同调}{65}{subsubsection.1.C.6.4}%
-\contentsline {subsection}{\numberline {C.7}示性类理论引入}{65}{subsection.1.C.7}%
-\contentsline {subsubsection}{\numberline {C.7.1}Gauss-Bonnet定理}{65}{subsubsection.1.C.7.1}%
-\contentsline {subsubsection}{\numberline {C.7.2}矢量丛的拓扑示性类}{65}{subsubsection.1.C.7.2}%
-\contentsline {subsubsection}{\numberline {C.7.3}Stiefel-Whitney类}{65}{subsubsection.1.C.7.3}%
-\contentsline {subsubsection}{\numberline {C.7.4}主丛上的代数示性类}{65}{subsubsection.1.C.7.4}%
-\contentsline {subsubsection}{\numberline {C.7.5}矢量丛的陈类}{65}{subsubsection.1.C.7.5}%
-\contentsline {subsubsection}{\numberline {C.7.6}陈类框架下的拓扑非平凡性和拓扑反常}{65}{subsubsection.1.C.7.6}%
-\contentsline {section}{ \numberline {D}矩阵微扰的几何结构}{66}{appendix.1.D}%
-\contentsline {subsection}{\numberline {D.1}定态本征方程的微扰}{66}{subsection.1.D.1}%
-\contentsline {subsubsection}{\numberline {D.1.1}定态本征方程的丛结构}{66}{subsubsection.1.D.1.1}%
-\contentsline {subsubsection}{\numberline {D.1.2}定态微扰和谱切丛的分裂}{69}{subsubsection.1.D.1.2}%
-\contentsline {subsubsection}{\numberline {D.1.3}分裂丛的子流形理论}{74}{subsubsection.1.D.1.3}%
-\contentsline {subsection}{\numberline {D.2}含时微扰和浸渐展开}{76}{subsection.1.D.2}%
-\contentsline {subsubsection}{\numberline {D.2.1}基本定义}{76}{subsubsection.1.D.2.1}%
-\contentsline {subsection}{\numberline {D.3}拓扑几何相}{78}{subsection.1.D.3}%
-\contentsline {subsection}{\numberline {D.4}连续谱补充说明}{78}{subsection.1.D.4}%
-\contentsline {section}{ \numberline {E}非平衡态统计}{79}{appendix.1.E}%
-\contentsline {section}{ \numberline {F}随机微分几何概论}{79}{appendix.1.F}%
-\contentsline {section}{ \numberline {G}相变的动态理论}{79}{appendix.1.G}%
-\contentsline {section}{ \numberline {H}连续介质力学补充}{79}{appendix.1.H}%
-\contentsline {section}{ \numberline {I}湍流的统计场论}{79}{appendix.1.I}%
-\contentsline {section}{ \numberline {J}拓扑量子场论引入}{79}{appendix.1.J}%
-\contentsline {subsection}{\numberline {J.1}Chern-Simons理论}{79}{subsection.1.J.1}%
-\contentsline {subsubsection}{\numberline {J.1.1}联络的Chern-Simons作用量}{79}{subsubsection.1.J.1.1}%
-\contentsline {subsubsection}{\numberline {J.1.2}扭结的环绕数}{79}{subsubsection.1.J.1.2}%
-\contentsline {section}{ \numberline {K}黑洞热力学}{79}{appendix.1.K}%
-\contentsline {section}{ \numberline {L}共形场论和全息原理}{79}{appendix.1.L}%
-\contentsline {section}{参考文献}{80}{section*.12}%
+\contentsline {subsubsection}{\numberline {B.2.3}高维同伦群}{53}{subsubsection.1.B.2.3}%
+\contentsline {subsubsection}{\numberline {B.2.4}映射度和不动点}{53}{subsubsection.1.B.2.4}%
+\contentsline {subsubsection}{\numberline {B.2.5}辫群和扭结概览}{53}{subsubsection.1.B.2.5}%
+\contentsline {subsubsection}{\numberline {B.2.6}Feynman图的同伦}{53}{subsubsection.1.B.2.6}%
+\contentsline {subsection}{\numberline {B.3}上同调和发散理论}{53}{subsection.1.B.3}%
+\contentsline {subsubsection}{\numberline {B.3.1}奇异上同调群}{53}{subsubsection.1.B.3.1}%
+\contentsline {subsubsection}{\numberline {B.3.2}同调代数引入}{53}{subsubsection.1.B.3.2}%
+\contentsline {subsubsection}{\numberline {B.3.3}微分流形上的de Rham上同调}{53}{subsubsection.1.B.3.3}%
+\contentsline {subsubsection}{\numberline {B.3.4}Feynman图的de Rham上同调表示}{53}{subsubsection.1.B.3.4}%
+\contentsline {subsubsection}{\numberline {B.3.5}de Rham上同调的发散理论}{53}{subsubsection.1.B.3.5}%
+\contentsline {subsection}{\numberline {B.4}重整化群的涌现}{53}{subsection.1.B.4}%
+\contentsline {subsubsection}{\numberline {B.4.1}nPI结构的几何本质}{53}{subsubsection.1.B.4.1}%
+\contentsline {section}{ \numberline {C}纤维丛和示性类}{54}{appendix.1.C}%
+\contentsline {subsection}{\numberline {C.1}覆叠空间}{54}{subsection.1.C.1}%
+\contentsline {subsubsection}{\numberline {C.1.1}定义和其基本群}{54}{subsubsection.1.C.1.1}%
+\contentsline {subsubsection}{\numberline {C.1.2}局部平凡性和单值性}{58}{subsubsection.1.C.1.2}%
+\contentsline {subsubsection}{\numberline {C.1.3}同伦群的长正合序列}{62}{subsubsection.1.C.1.3}%
+\contentsline {subsubsection}{\numberline {C.1.4}覆叠空间的同调和上同调}{65}{subsubsection.1.C.1.4}%
+\contentsline {subsection}{\numberline {C.2}标架丛和主丛}{67}{subsection.1.C.2}%
+\contentsline {subsubsection}{\numberline {C.2.1}流形上的标架丛}{67}{subsubsection.1.C.2.1}%
+\contentsline {subsubsection}{\numberline {C.2.2}Lie群回顾}{67}{subsubsection.1.C.2.2}%
+\contentsline {subsubsection}{\numberline {C.2.3}内禀对称性的主丛}{67}{subsubsection.1.C.2.3}%
+\contentsline {subsubsection}{\numberline {C.2.4}截面和规范变换}{67}{subsubsection.1.C.2.4}%
+\contentsline {subsection}{\numberline {C.3}主丛的伴丛}{67}{subsection.1.C.3}%
+\contentsline {subsubsection}{\numberline {C.3.1}伴丛和矢量丛}{67}{subsubsection.1.C.3.1}%
+\contentsline {subsubsection}{\numberline {C.3.2}切丛和余切丛}{67}{subsubsection.1.C.3.2}%
+\contentsline {subsubsection}{\numberline {C.3.3}Spin(n)丛和旋量丛}{67}{subsubsection.1.C.3.3}%
+\contentsline {subsubsection}{\numberline {C.3.4}Clifford丛和旋量模}{67}{subsubsection.1.C.3.4}%
+\contentsline {subsubsection}{\numberline {C.3.5}旋量—张量伴丛}{67}{subsubsection.1.C.3.5}%
+\contentsline {subsection}{\numberline {C.4}联络和曲率}{67}{subsection.1.C.4}%
+\contentsline {subsubsection}{\numberline {C.4.1}Abel联络和规范势}{67}{subsubsection.1.C.4.1}%
+\contentsline {subsubsection}{\numberline {C.4.2}非Abel联络和Wilson圈}{67}{subsubsection.1.C.4.2}%
+\contentsline {subsubsection}{\numberline {C.4.3}曲率和规范场强}{67}{subsubsection.1.C.4.3}%
+\contentsline {subsubsection}{\numberline {C.4.4}矢量丛上的联络}{67}{subsubsection.1.C.4.4}%
+\contentsline {subsubsection}{\numberline {C.4.5}基本粒子的标准模型}{67}{subsubsection.1.C.4.5}%
+\contentsline {subsection}{\numberline {C.5}鬼场和BRST上同调}{67}{subsection.1.C.5}%
+\contentsline {subsection}{\numberline {C.6}分类空间}{67}{subsection.1.C.6}%
+\contentsline {subsubsection}{\numberline {C.6.1}Stiefel流形和分类空间}{67}{subsubsection.1.C.6.1}%
+\contentsline {subsubsection}{\numberline {C.6.2}拓扑空间的分类映射}{67}{subsubsection.1.C.6.2}%
+\contentsline {subsubsection}{\numberline {C.6.3}纤维丛的分类}{67}{subsubsection.1.C.6.3}%
+\contentsline {subsubsection}{\numberline {C.6.4}分类空间的上同调}{67}{subsubsection.1.C.6.4}%
+\contentsline {subsection}{\numberline {C.7}示性类理论引入}{67}{subsection.1.C.7}%
+\contentsline {subsubsection}{\numberline {C.7.1}Gauss-Bonnet定理}{67}{subsubsection.1.C.7.1}%
+\contentsline {subsubsection}{\numberline {C.7.2}矢量丛的拓扑示性类}{67}{subsubsection.1.C.7.2}%
+\contentsline {subsubsection}{\numberline {C.7.3}Stiefel-Whitney类}{67}{subsubsection.1.C.7.3}%
+\contentsline {subsubsection}{\numberline {C.7.4}主丛上的代数示性类}{67}{subsubsection.1.C.7.4}%
+\contentsline {subsubsection}{\numberline {C.7.5}矢量丛的陈类}{67}{subsubsection.1.C.7.5}%
+\contentsline {subsubsection}{\numberline {C.7.6}陈类框架下的拓扑非平凡性和拓扑反常}{67}{subsubsection.1.C.7.6}%
+\contentsline {section}{ \numberline {D}矩阵微扰的几何结构}{68}{appendix.1.D}%
+\contentsline {subsection}{\numberline {D.1}定态本征方程的微扰}{68}{subsection.1.D.1}%
+\contentsline {subsubsection}{\numberline {D.1.1}定态本征方程的丛结构}{68}{subsubsection.1.D.1.1}%
+\contentsline {subsubsection}{\numberline {D.1.2}定态微扰和谱切丛的分裂}{71}{subsubsection.1.D.1.2}%
+\contentsline {subsubsection}{\numberline {D.1.3}分裂丛的子流形理论}{76}{subsubsection.1.D.1.3}%
+\contentsline {subsection}{\numberline {D.2}含时微扰和浸渐展开}{78}{subsection.1.D.2}%
+\contentsline {subsubsection}{\numberline {D.2.1}基本定义}{78}{subsubsection.1.D.2.1}%
+\contentsline {subsection}{\numberline {D.3}拓扑几何相}{80}{subsection.1.D.3}%
+\contentsline {subsection}{\numberline {D.4}连续谱补充说明}{80}{subsection.1.D.4}%
+\contentsline {section}{ \numberline {E}非平衡态统计}{81}{appendix.1.E}%
+\contentsline {section}{ \numberline {F}随机微分几何概论}{81}{appendix.1.F}%
+\contentsline {section}{ \numberline {G}相变的动态理论}{81}{appendix.1.G}%
+\contentsline {section}{ \numberline {H}连续介质力学补充}{81}{appendix.1.H}%
+\contentsline {section}{ \numberline {I}湍流的统计场论}{81}{appendix.1.I}%
+\contentsline {section}{ \numberline {J}拓扑量子场论引入}{81}{appendix.1.J}%
+\contentsline {subsection}{\numberline {J.1}Chern-Simons理论}{81}{subsection.1.J.1}%
+\contentsline {subsubsection}{\numberline {J.1.1}联络的Chern-Simons作用量}{81}{subsubsection.1.J.1.1}%
+\contentsline {subsubsection}{\numberline {J.1.2}扭结的环绕数}{81}{subsubsection.1.J.1.2}%
+\contentsline {section}{ \numberline {K}黑洞热力学}{81}{appendix.1.K}%
+\contentsline {section}{ \numberline {L}共形场论和全息原理}{81}{appendix.1.L}%
+\contentsline {section}{参考文献}{82}{section*.12}%
