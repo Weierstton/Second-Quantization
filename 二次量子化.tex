@@ -263,9 +263,9 @@ $$\hat{b}^{\dagger}\hat{b}=\hat{n}$$
 \\
 谐振子系统是一个非常完美的开端，在后文中我们将推广这一方法至任意的全同粒子系统，并最终发展到狭义相对论适配的程度，即量子场论。同时我们还会利用这一模型来为后文中一个非常重要的概念的引入做一个铺垫，因此必须要熟练的掌握谐振子模型。\newpage
 \section{玻色子的二次量子化}\label{bbboh}
-\noindent 上面介绍了谐振子模型的可变粒子数情况，当然这只是\emph{二次量子化}一个非常特殊的理论的一个应用而已。这里我们来介绍全同粒子的二次量子化概念。\\
+\noindent 上面介绍了谐振子模型的可变粒子数情况，当然这只是\emph{二次量子化}一个非常特殊的理论的一个应用而已。这里我们来介绍全同粒子的二次量子化概念，假设总粒子数为$N$。前文中默认谐振子模型对应的粒子都是玻色子，因此自然的先从这种粒子系统开始讨论，下文中会证明这一点。\\
 \\
-这里我们默认谐振子模型对应的粒子都是玻色子，因此自然的先从这种粒子系统开始讨论，下文中我们会证明这一点。这里我们假设总粒子数为$N$。
+我们会从玻色子的算符占有数矩阵元出发，通过引入可变占有数算符给出任意可观测量的二次量子化，以及相互作用的\textsl{Hatree-Fock}近似和\textsl{Bogoliubiv}变换。最后，将可观测量推广到波函数的二次量子化，得到波函数算符，并通过密度矩阵展示波函数算符在量子统计层面的初步应用。
 
 \subsection{玻色子系统}
 
@@ -545,7 +545,9 @@ $$\hat{\bm{\zeta}}(x,y=x)=\int\hat{\psi}^{\dagger}(\xi,x)\hat{\psi}(\xi,x)\dd\xi
 \\
 同时这里还要指出，波函数算符的应用范围要比直接定义产生和湮灭算符更广，因为产生和湮灭算符的定义需要依赖确定的占有数态，但是在某些情况下占有数的物理含义并不是非常的清晰，因此并不能定义相应的产生和湮灭算符。但是波函数算符在形式上就是将完备态的系数算符化，其定义不依赖占有数态，因而是更加自由的。\newpage
 \section{费米子的二次量子化}\label{FEIMIN}
-\noindent 上面介绍了玻色子的二次量子化理论，可以看到因为没有额外的限制，因此整体来讲是对于谐振子模型的直接推广。但是对于费米子，由于\textsl{Pauli}不相容原理，导致各能级占有数最大为1，$\forall i \in \mathbb N, N^{}_i=0 / 1$。因此若考虑能级的升降，跃迁的粒子必然会把目的能级所占的原粒子踢出该能级，而这个流浪的粒子为了保持在系统中也可能会做同样的事，导致一连串的连锁反应，自然的其理论会更加的复杂。
+\noindent 上面介绍了玻色子的二次量子化理论，可以看到因为没有额外的限制，因此整体来讲是对于谐振子模型的直接推广。但是对于费米子，由于\textsl{Pauli}不相容原理，导致各能级占有数最大为1，$\forall i \in \mathbb N, N^{}_i=0 / 1$。因此若考虑能级的升降，跃迁的粒子必然会把目的能级所占的原粒子踢出该能级，而这个流浪的粒子为了保持在系统中也可能会做同样的事，导致一连串的连锁反应，自然的其理论会更加的复杂。\\
+\\
+同样的，我们通过算符的占有数矩阵元，引入适配的可变占有数算符，以及相互作用的\textsl{Hatree-Fock}近似和\textsl{Bogoliubiv}变换。当然对于\textsl{Hatree-Fock}近似，由于不相容原理的约束，情况和玻色子相比会有显著的不同，我们会对此详细分析。
 
 \subsection{费米子系统}\label{zixuan}
 
@@ -555,13 +557,13 @@ $$\psi=\dfrac{1}{\sqrt{2}}\qty(\psi^{}_{1a}\psi^{}_{2b}-\psi^{}_{1b}\psi^{}_{2a}
 \begin{equation}\hat P\psi(\vb{r}^{}_a,\vb{r}^{}_b)=\kappa \psi(\vb{r}^{}_b,\vb{r}^{}_a),\label{parity}\end{equation}
 其必须满足条件$\hat P^2\psi(\vb{r}^{}_a,\vb{r}^{}_b)=\psi(\vb{r}^{}_a,\vb{r}^{}_b)$，则自然的可以看到
 \begin{equation}\kappa^2=1\implies\kappa=\pm 1.\label{pp}\end{equation}
-一般来讲，宇称对于系统是守恒的，也就是写作$\comm{\hat{P}}{\hat{H}}=\vb{0}$，这是默认的公理。但是我们后续会看到有一种特殊的费米子，称为中微子$\mu$，它是宇称不守恒的，当然这是后话了。\\
+一般来讲，宇称对于系统是守恒的，也就是写作$\comm{\hat{P}}{\hat{H}}=\vb{0}$，这是默认的公理。但是我们后续会看到有一种特殊的费米子，称为中微子$\mu$，它是宇称不守恒的，当然这是后话了，参见第\ref{VVNnvcgoP}节。\\
 \\
 对比两个定义式不难发现，费米子系统$\kappa=-1$为奇宇称，玻色子系统$\kappa=1$为偶宇称，也就是说两者对称性相反。这一点也就造成了一个现象：若$\psi^{}_1=\psi^{}_2$，则我们必有$\psi\equiv0$，也就是说两个费米子在同一能级中的概率为0。而这也就给占有数划定了一个边界：$0\leq n\leq 1$，但自然条件为$n \in \mathbb N^{*}$，因此易知$n=0/1$，只能取两个值，也就是所谓的不相容原理的由来。\\
 \\
 观察波函数式可以看到，这里的奇宇称可以用置换符号表示为$\kappa=-1=\text{sgn}\qty(\sigma\pmqty{1&2\\2&1})$，其本质为奇置换，和行列式的值是一样的。这一点可以很容易的推广至$N$个费米子系统上，记系统集合参数为$\xi$，则其总波函数的奇置换性可以由\textbf{\textsl{Slater}行列式}表示为
-\begin{equation}\psi(\xi)=A\mdet{\psi^{}_1(\xi^{}_1) & \psi^{}_2(\xi^{}_1) & \cdots & \psi^{}_N(\xi^{}_1) \\ \psi^{}_1(\xi^{}_2) & \psi^{}_2(\xi^{}_2) & \cdots & \psi^{}_N(\xi^{}_2) \\ \vdots & \vdots & \ddots & \vdots \\ \psi^{}_1(\xi^{}_N) & \psi^{}_2(\xi^{}_N) & \cdots & \psi^{}_N(\xi^{}_N)}.\label{slater}\end{equation}
-这里的归一化系数为$A=\dfrac{1}{\sqrt{N}}$。容易看到此波函数还是反对称的，并且仍满足不相容原理。\\
+\begin{equation}\psi(\xi)=A\mdet{\psi^{}_1\qty(\xi^{}_1) & \psi^{}_2\qty(\xi^{}_1) & \cdots & \psi^{}_N\qty(\xi^{}_1) \\ \psi^{}_1\qty(\xi^{}_2) & \psi^{}_2\qty(\xi^{}_2) & \cdots & \psi^{}_N\qty(\xi^{}_2) \\ \vdots & \vdots & \ddots & \vdots \\ \psi^{}_1\qty(\xi^{}_N) & \psi^{}_2\qty(\xi^{}_N) & \cdots & \psi^{}_N\qty(\xi^{}_N)}.\label{slater}\end{equation}
+这里的归一化系数为$A=\dfrac{1}{\sqrt{N}}$。容易看到此波函数还是反对称的，并且仍满足不相容原理，因此一般都用\textsl{Slater}行列式表示费米子系统的波函数。\\
 \\
 当然，全同粒子在内禀属性上还是可以分辨的，这里引入一个概念称为粒子的\textbf{自旋 \textit{Spin}}，其用算符$\hat{\vb{S}}$表示。它的数学性质和角动量算符$\hat{\vb{L}}$完全一样，不同的是在物理上我们无法直接观测到其具体的力学性质，只能通过外场来探测，其中\textsl{Stern-Gerlash}实验利用外磁场证实了电子自旋的存在。在欧氏空间中，算符分量表示为$\hat{\vb{S}}=\qty(\hat S^{}_x,\hat S^{}_y,\hat S^{}_z)$，满足矢量模的性质
 \begin{equation}\hat{\vb{S}}^2=\hat S_x^2+\hat S_y^2+\hat S_z^2.\label{ziyy}\end{equation}
@@ -704,7 +706,7 @@ $$\hat{c}^{}_i\hat{c}^{}_k+\hat{c}^{}_k\hat{c}^{}_i=\comm{\hat{c}^{}_i}{\hat{c}^
 
 \subsection{双粒子算符的计算}\label{145ggvo}
 
-\noindent 现在我们同样来求解势能的二级展开$\hat{U}^{(2)}$，连续谱情形请参考第\ref{ihuh3244ru..}节。同样我们需要强调，以下计算只有方法论意义。类似于玻色子系统，我们依旧是要计算$\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_l\hat{c}^{}_k$的主轴形式，但是因为费米子系统是反对易的，所以会产生一些根本性的区别。在没有其余限制条件下，我们共有
+\noindent 现在我们同样按\textsl{HF}近似求解势能的二级展开$\hat{U}^{(2)}$，连续谱情形请参考第\ref{ihuh3244ru..}节。同样我们需要强调，以下计算只有方法论意义。类似于玻色子系统，我们依旧是要计算$\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_l\hat{c}^{}_k$的主轴形式，但是因为费米子系统是反对易的，所以会产生一些根本性的区别。在没有其余限制条件下，我们共有
 $$\{i=k\neq j=l\}\cup\{i=l\neq j=k\}=2$$
 种不同的对角化配置，注意$i=j=k=l$的情况，也就是两粒子处于同一能级，在不相容原理下是不允许的。对于粒子交换的$i=l\neq j=k$情况，我们得到
 \begin{equation}\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_l\hat{c}^{}_k=\hat{c}^{\dagger}_i\hat{c}^{\dagger}_j\hat{c}^{}_i\hat{c}^{}_j=\hat{c}^{\dagger}_i\comm{\hat{c}^{}_i}{\hat{c}^{\dagger}_j}_+\hat{c}^{}_j-\hat{c}^{\dagger}_i\hat{c}^{}_i\hat{c}^{\dagger}_j\hat{c}^{}_j=-\hat{N}^{}_i\hat{N}^{}_j.\end{equation}
@@ -747,8 +749,11 @@ $$U^{(2)}_{i^{}_-j^{}_-i^{}_-j^{}_-}\hat{c}^{\dagger}_{i^{}_-}\hat{c}^{\dagger}_
 无论对易与否，它们在经典力学环境下会得出相同的结果，这里可以定性分析一下：若两者对易，则它们满足普通的测量法则，基也是共享的；若反对易，则它们满足费米子的特殊占有数法则，相当于将不同种的费米子纳入一个二次量子化系统中，因此基也共享。于是无论对易性如何，最终的结果都是一样的。(这一论断的细节可以参考\cite{L1} \S 65)\\
 \\
 由于在相对论中我们会看到粒子之间可以转化，而现实中大多数实物粒子都是费米子，因而反对易假设是更加合理的，否则就会串到玻色子上去，详情参考第\ref{DFBGRW99}节。若考虑到上述定性分析，问题就出现在测量上，粒子之间的转化会影响到测量，进而导致基的不同，而反对易就没有这一问题。当然玻色子和费米子之间必然对易，这一点从两者算符的性质区别上就可见一斑，后续我们就不再强调这一点，并且我们会看到大量的玻色对易性和费米反对易性的差别内容。\newpage
+
 \section{狭义相对论和电磁场分析}\label{YGYU453}
-\noindent 为了更好的让读者理解后面的内容，本小节规范一下文中涉及到的有关相对论和场论的记号和角标设置。关于狭义相对论的数学基础这里不涉及，具体到\textsl{Lorentz}流形上再谈。场论的话会单独做，这里就简单的过一遍概念。
+\noindent 为了更好的让读者理解后面的内容，本小节规范一下文中涉及到的有关相对论和场论的记号和角标设置。\\
+\\
+我们从相对论动力学出发，严格建立平直时空的微分几何描述，相应的单粒子动力学，以及因果律的定义。随后推广到平直时空上的场，通过变分建立\textsl{Lagrang}表述以及守恒律，并简单介绍了场的\textsl{Hamilton}表述。基于这两个表述，我们建立了电磁场理论，以及无源的电磁波场理论，重点分析了波的极化。同时由部分偏振波，我们建立\textsl{Fourier}变换，并给出了\textsl{Green}函数法。作为收尾与量子化的前瞻，我们分析电磁场中低速运动电荷的量子动力学，给出规范场的三维协变导数，以及磁场中的\textsl{Landau}能级。
 
 \subsection{相对论粒子动力学}\label{yingggu7}
 
@@ -909,9 +914,9 @@ $$J^{\mu}=J^{\mu}+\partial^{}_{\beta}\qty(K^{\beta\mu\nu}\xi^{}_{\nu}),$$
 如果$\bm{\psi}$的单参群诱导的变分场$\bm{\xi}$是\textsl{Killing}场，则我们有
 $$\pdv{\tr(\bm{\psi})}{\lambda}=\bm{\xi}\qty(\eta^{\mu\nu}\psi^{}_{\mu\nu})=\eta^{\mu\nu}\bm{\xi}\qty(\psi^{}_{\mu\nu})\qty(+\psi^{}_{\mu\nu}\bm{\xi}\qty(\eta^{\mu\nu})=0)=\eta^{\mu\nu}\qty[\mathscr{L}^{}_{\bm{\xi}}(\psi)]^{}_{\mu\nu},$$
 其中最后一步使用了沿变分场的\textsl{Lie}导数的性质，通式写为
-\begin{equation}\forall\bm{\psi}\in\mathscr T^0_{\ s}(\mathscr M),\quad \mathscr{L}^{}_{\bm{\xi}}\qty(\bm{\psi})\qty(\vb{e}^{}_1,\cdots,\vb{e}^{}_s)=\bm{\xi}\qty[\bm{\psi}\qty(\vb{e}^{}_1,\cdots,\vb{e}^{}_s)]-\sum_i\bm{\psi}\qty(\vb{e}^{}_1,\cdots,\comm{\bm{\xi}}{\vb{e}^{}_i},\cdots,\vb{e}^{}_s).\end{equation}
+\begin{equation}\forall\bm{\psi}\in\mathscr T^0_{\ s}(\mathscr M),\quad \mathscr{L}^{}_{\bm{\xi}}\qty(\bm{\psi})\qty(\vb{e}^{}_1,\ldots,\vb{e}^{}_s)=\bm{\xi}\qty[\bm{\psi}\qty(\vb{e}^{}_1,\ldots,\vb{e}^{}_s)]-\sum_i\bm{\psi}\qty(\vb{e}^{}_1,\ldots,\comm{\bm{\xi}}{\vb{e}^{}_i},\ldots,\vb{e}^{}_s).\end{equation}
 这一公式的具体证明放在第\ref{Y><><)))}节，由于$\bm{\xi}$和$\vb{e}^{}_i$分属于两组不同的基，所以$\comm{\bm{\xi}}{\vb{e}^{}_i}\equiv0$，因而我们得到
-\begin{equation}\mathscr{L}^{}_{\bm{\xi}}\qty(\bm{\psi})\qty(\vb{e}^{}_1,\cdots,\vb{e}^{}_s)\equiv\bm{\xi}\qty[\bm{\psi}\qty(\vb{e}^{}_1,\cdots,\vb{e}^{}_s)],\end{equation}
+\begin{equation}\mathscr{L}^{}_{\bm{\xi}}\qty(\bm{\psi})\qty(\vb{e}^{}_1,\ldots,\vb{e}^{}_s)\equiv\bm{\xi}\qty[\bm{\psi}\qty(\vb{e}^{}_1,\ldots,\vb{e}^{}_s)],\end{equation}
 对于二阶张量就化为
 $$\mathscr{L}^{}_{\bm{\xi}}\qty(\bm{\psi})^{}_{\mu\nu}=\bm{\xi}\qty(\psi^{}_{\mu\nu}).$$
 因为\textsl{Lie}导数保型号的特点，$\mathscr{L}^{}_{\bm{\xi}}(\bm{\psi})$依旧是二阶张量，所以结合上式我们得到
@@ -1221,7 +1226,7 @@ $$G^{}_{\vb{k}}=-\frac{1}{k^2}\implies\int\frac{1}{k^2}f^{}_{\vb{k}}e^{i\vb{k}\c
 \\
 这里我们总结\textsl{Green}函数法为：对于时空函数$f,g(x^{\mu})\in C^{\infty}(\mathscr M)$，假设其满足线性偏微分方程
 \begin{equation}\hat{\mathcal{D}}f(x^{\mu})=A(x^{\mu}),\end{equation}
-其中$\hat{\mathcal{D}}$是时空$\mathscr M$上的微分算子，借用正则量子化算符可以写为$\hat{\mathcal{D}}=\hat{\mathcal{D}}\qty(\hat{x}^{\mu},\partial^{}_{\mu},\hat{U},\cdots)$，比如局部序参量在弱外场下的微扰方程为
+其中$\hat{\mathcal{D}}$是时空$\mathscr M$上的微分算子，借用正则量子化算符可以写为$\hat{\mathcal{D}}=\hat{\mathcal{D}}\qty(\hat{x}^{\mu},\partial^{}_{\mu},\hat{U},\ldots)$，比如局部序参量在弱外场下的微扰方程为
 $$(-\bm{\Delta}+\xi^2)\bm{\Delta}\phi(\vb{r})=h(\vb{r}),$$
 其中$\xi$是关联半径，这里的微分算子就是$\hat{\mathcal{D}}=-\delta+\hat{\xi}^2$，可以参考第\ref{landtoo908}节。微分算子在几何上是纤维丛之间的线性映射，需要依靠纤维丛理论进一步的分析，本文不做过多的展开。于是\textsl{Green}函数定义为
 \begin{equation}\hat{\mathcal{D}}G(x^{\mu})=\delta(x^{\mu}),\end{equation}
@@ -1265,7 +1270,7 @@ $$(-\bm{\Delta}+\xi^2)\bm{\Delta}\phi(\vb{r})=h(\vb{r}),$$
 \\
 这一点其实是很明显，前文已经说过，带电粒子本质上是在以电磁场作为背景的系统中作为自由粒子运动，外场的规范不变性要求电磁场不变，也即背景不变，而协变导数$\hat{\mathbb{D}}$实际上就是这个伪自由粒子的动量算符，自然的这种变化在宏观上是体现不出的。\\
 \\
-但是在微观层面，粒子的波函数本身只能精确到一个相位，因为宏观层面看的是概率密度，而概率密度涉及波函数模，是不包含相位的，因而在这里的变换就会有一个相位差出现，只不过因为外场和时空有关，自然的相位差也一定和时空有关。由这个概念就可以衍生出\textbf{纤维丛 \textit{Fiber Bundle}}理论，局部规范不变性本质上是纤维丛理论的一个应用而已，这里就不展开了。\\
+但是在微观层面，粒子的波函数本身只能精确到一个相位，因为宏观层面看的是概率密度，而概率密度涉及波函数模，是不包含相位的，因而在这里的变换就会有一个相位差出现，只不过因为外场和时空有关，自然的相位差也一定和时空有关。由这个概念就可以衍生出\textbf{纤维丛 \textit{Fiber Bundle}}理论，局部规范不变性本质上是纤维丛理论的一个应用而已，这里就不展开了，具体请参见附录\ref{xianquh556400}。\\
 \\
 现在考虑两个极端情况。若$\delta\phi=2k\pi$，则$\lambda=1,\ \tilde\psi=\psi$；若$\delta\phi=(2k+1)\pi$，则$\lambda=-1,\ \tilde\psi=-\psi$。这就意味着粒子的波函数的变换可以是奇偶性变换。\\
 \\
@@ -3600,10 +3605,12 @@ $$Z^{}_{\mu\nu}=h^{}_{\mu\nu},\quad m=0,$$
 这可以看作是\textbf{引力量子化}的起点，它给出了一种量子化引力的方法，使得被认为是完全不相容的广义相对论和量子物理之间产生了直接的联系，最早的论述可以参考附录\ref{arr-hrc}。当然因为涉及到弯曲时空，所以其二次量子化所涉及到的内容，比我们之前已经讲过的电磁波场，也就是光子的二次量子化更复杂。\\
 \\
 我们这里强调，目前我们只讨论了在狭义相对论，也就是平直时空下的二次量子化，包括光子也是，但是这并不代表我们不能将这些内容放在弯曲时空下讨论。这其实就可以理解为粒子在外场下的运动，只不过此时外场的几何特性导致其研究会异常艰难。\newpage
-\section{非相对论平衡相变简介}\label{XIngagL}
+\section{经典宏观平衡相变简介}\label{XIngagL}
 \noindent 二次量子化最大的特点就是它描述了粒子数的变化过程，从而使得我们可以在细节上分析一些可变粒子数系统的宏观表现的微观机理。在这之中，最重要的一个物理学分支就是\textbf{相变 \textit{Phase Transition}}。自从1908年\textsl{Heike Kamerlingh Onnes}冷却氦气至$4.2 K$并发现了液氦，以及1911年将汞冷却到$4.2 K$以下发现超导现象以来，相变一直都是物理学的前沿阵地，其应用非常之广，不仅包括了普通物体的相变，甚至还能解释宇宙现象，这称为\textbf{宇宙学相变 \textit{Cosmic Phase Transition}}，比如宇宙微波背景辐射的产生和分布。\\
 \\
-相变使得我们对于物质结构有了更加深入的理解，并且给出了可变粒子数系统的生动例子。这里我们对经典相变理论做一个简短的说明，从最基本的热力学相变理论开始，引入相变的概念以及和可变粒子数系统的关联，并给出相变分类。随后我们进入量子领域，先给出最简单的\textsl{Ising}模型，再抽象为朗道二级相变，最后依靠前文中建立的二次量子化理论给出相变的量子化表述。我们这里不会对细节展开描述，重点是关注二次量子化的应用。虽然这里以非相对论环境为基础，但是我们会看到具体依旧会涉及到粒子反粒子模型的二次量子化。
+相变使得我们对于物质结构有了更加深入的理解，并且给出了可变粒子数系统的生动例子。这里我们对经典相变理论做一个简短的说明，从最基本的热力学相变理论开始，引入相变的概念以及和可变粒子数系统的关联，并给出相变分类。随后我们进入微观领域，先给出最简单的\textsl{Ising}模型，再抽象为朗道二级相变，最后依靠前文中建立的二次量子化理论给出相变的量子化表述。\\
+\\
+虽然这里以非相对论环境为基础，但是通过朗道模型可以直接接入场论，并得到相变的普适结论。并且需要强调的是，这里所叙述的都是经典相变模型，虽然会涉及微观描述，但最终的结果仍然是宏观统计主导，量子涨落效应被擦除，对于量子相变请参考第\ref{AffF4002}节。
 
 \subsection{经典热力学相变理论基础}\label{>***<)()(G}
 
@@ -3702,7 +3709,7 @@ $$N(\mathscr S^{}_1)=N^{}_1\neq N(\mathscr S^{}_2)=N^{}_2,\quad N(\mathscr S)=N=
 则子系统的内能为
 $$U(\mathscr S^{}_1)=U^{}_1=EN^{}_1\neq U(\mathscr S^{}_2)=U^{}_2=EN^{}_2.$$
 因为两者的内能不同所以自然各子系统的热力学函数也不同，从而系统的相不同，那么从子系统$\mathscr S^{}_1$变为子系统$\mathscr S^{}_2$也就是相变。上述的集合$\qty{\mathscr S^{}_1,\mathscr S^{}_2,a}$称为\textbf{一元二相系统}，若我们有$A$个粒子$a,b,\ldots$和$B$个子系统$\mathscr S^{}_i\subset\mathscr S,\ 1\neq i\neq B$，则集合
-$$\qty{\mathscr S^{}_1,\mathscr S^{}_2,\cdots,\mathscr S^{}_B,a^{}_1,\cdots,a^{}_A}$$
+$$\qty{\mathscr S^{}_1,\mathscr S^{}_2,\ldots,\mathscr S^{}_B,a^{}_1,\ldots,a^{}_A}$$
 称为\textbf{A元B相系统}，或者叫复相系统。于是我们就可以将粒子数作为变量加入参数空间中，从而给出一些新的量。同时因为物质守恒，所以最终两相达到平衡时各相的粒子数应该守恒，称为\textbf{相平衡}，定量写为微分形式$dN^{}_1=dN^{}_2=0$。\\
 \\
 一般在相变中取物质的量$n=\dfrac{N}{N^{}_A}$，$N^{}_A=6.02\times 10^{23}$称为\textbf{\textsl{Avogadro}常数}，$n$的单位是摩尔$mol$。这里我们重点研究一元二相系统，记各子系统的热力学参数空间为
@@ -12275,7 +12282,7 @@ $$\ddt{\vb{v}}=\frac{e}{m}\dt{\vb{E}}+\frac{e}{mc}\dt{\vb{v}}\cp\vb{H},$$
 \begin{equation}\frac{2e^3\omega}{3mc^3}\ll e\implies\lambda\gg\frac{e^2}{mc^2}=r{}_e,\quad\lambda\sim\frac{c}{\omega}.\end{equation}
 可见阻尼力只适用于辐射波长远大于经典半径$r{}_e$的电荷上。可以看到，与$r{}_e$同量级的距离会导致电磁场的内在矛盾。类似的，我们将第二项也和电场力$e\vb{E}$对比，给出
 \begin{equation}\frac{2e^4}{3m^2c^4}H\ll e\implies H\ll\frac{m^2c^4}{e^3}\text{或}\frac{c}{\omega^{}_H}\gg r^{}_e\label{zhajiii}\end{equation}
-因此扰动只适用于弱场情况，这和\textsl{Landau}理论的结论是类似的。
+因此扰动只适用于弱场情况，这和\textsl{Landau}理论的结论是类似的。一般称上述扰动条件为\textbf{\textsl{Landau-Lifshitz}近似}，当然这些只是在宏观力学下，对阻尼悖论的补救，真正物理的理解是电子自能的发散，请参考第\ref{t5fr=-..5}节。
 \subsubsection{四维辐射阻尼力}
 \noindent 在详细分析了三维\textsl{AL}力后，我们来考察其四维协变形式。后续的推导内容和第\ref{Fyyv.'3}节是十分类似的，这里我们介绍一下计算思路。\\
 \\
@@ -14008,13 +14015,20 @@ $$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=2 cm of a](b){};\vert
 \subsubsection{Compton散射}
 \subsection{电磁辐射修正}\label{dsjbas66543+3.}
 \subsubsection{真空极化的费米圈图计算}\label{tyujy;p456=-..5}
-\subsubsection{电子的自能}
+\subsubsection{电子的自能}\label{t5fr=-..5}
 \subsubsection{顶角修正}\label{t5/bB6=-..5}
 
 
 
 \subsection{基本粒子模型引入}\label{UHssB..**}
 \subsection{量子场论中的凝聚态}\label{UHYB..**}
+\subsubsection{固体中的BSC理论}
+\subsubsection{量子Ising模型}\label{ARFWEF4002}
+\subsubsection{量子相变引入}\label{AffF4002}
+\subsubsection{随机量子Ising模型}
+\subsubsection{BKT相变和Sine-Gordan场论}
+
+
 \clearpage
 
 \section{近平衡态的线性响应与耗散}\label{ha7524*g}
@@ -14085,8 +14099,12 @@ $$h^{}_\omega=\varphi^{}_\omega x^{}_\omega=\varphi^{}_\omega \alpha^{}_\omega h
 
 \section{重整化和临界理论}\label{VYgx00..34}
 \subsection{Casimir效应和截断频率}\label{M+-+00.RG}
-\subsection{Ising模型和空间重整化}
-\subsubsection{量子Ising模型}\label{ARFWEF4002}
+\subsection{Kadanoff实空间重整化}
+\subsubsection{晶格的块自旋}
+\subsubsection{经典Ising模型的空间重标度}
+\subsubsection{分形和临界几何}
+\subsubsection{KT流的空间重标度}
+\subsubsection{各向同性湍流的重整化}
 \subsection{圈图修正与动量重整化}\label{0cbcx778dy550r8}
 \subsubsection{Feynman参数化公式的证明}\label{0cb66++-r8}
 
@@ -14464,7 +14482,7 @@ $$b^{}_{kk} = 0.$$
 
 \subsubsection{单形和复形}\label{FAGewtSG}
 \noindent 为了考察图的几何性质，我们需要扩充其定义，让其成为一个可计算的几何对象，任意维\textsl{Feynman}图的定义在第\ref{sg--fG4}节。考虑$n$维欧式空间$\mathbb R^n$，在其中任取$n+1$个点构成一个点集，记为$A=\qty{a^{}_0,\ldots,a^{}_n}$。我们称它们处于\textbf{一般位置}，若仿射向量组
-$$\qty{\vb{e}^{}_1=a^{}_1-a^{}_0,\vb{e}^{}_2=a^{}_2-a^{}_0,\cdots\cdots,\vb{e}^{}_n=a^{}_n-a^{}_0}$$
+$$\qty{\vb{e}^{}_1=a^{}_1-a^{}_0,\vb{e}^{}_2=a^{}_2-a^{}_0,\ldots\ldots,\vb{e}^{}_n=a^{}_n-a^{}_0}$$
 线性无关。或者可以用一个数组$\qty{\lambda^{}_i}$来表示，满足条件
 \begin{equation}\sum_{i=0}^n\lambda^{}_i=0,\quad \sum_{i=0}^n\lambda^{}_ia^{}_i=0\implies \lambda^{}_1=\lambda^{}_2=\cdots=\lambda^{}_n=0.\end{equation}
 推广这个数组，我们定义点集$A$的\textbf{凸包}为
@@ -14473,7 +14491,7 @@ $$\qty{\vb{e}^{}_1=a^{}_1-a^{}_0,\vb{e}^{}_2=a^{}_2-a^{}_0,\cdots\cdots,\vb{e}^{
 \begin{equation}\Delta^n=(A)=\qty{x=\sum_{i=0}^n\lambda^{}_ia^{}_i\middle\vert a^{}_i\in A,\lambda^{}_i\ge0,\sum_{i=0}^n\lambda^{}_i=1}\subset\mathbb R^n.\end{equation}
 单形的详细术语是\textbf{单纯形 \textit{Simplicial Shape}}，这里的单纯性指的是没有额外的约束，是最简单的结构。比如线段是一维单形，包含内部的三角形是二维单形，三棱锥是三维单形
 $$\Delta^0=\tikz{\begin{feynman}\vertex[dot](a){};\end{feynman}},\quad \Delta^1=\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,right=1 cm of a](b){};\diagram*{(a)--(b)};\end{feynman}},\quad \Delta^2=\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,right=.5 cm of a](b);\vertex[dot,right=.5 cm of b](c){};\vertex[dot,above=0.5 cm of b](d){};\diagram*{(a)--(c)--(d)--(a)};\end{feynman}},\quad \cdots\cdots$$
-可以证明$\forall x\in\Delta^n$，其对应了唯一的数组$\qty{\lambda^{}_1,\lambda^{}_2,\cdots,\lambda^{}_n}$，称为点$x$关于点集$A$的\textbf{坐标}。基于坐标我们可以分类点，比如顶点为只有一个$\lambda^{}_i$非零。由于向量组$\qty{\vb{e}^{}_i=a^{}_i-a^{}_0}$线性无关，因此它张成一个子空间$L^{}_0$，不难证明其凸包构成一个$n-1$维单形，且和$a^{}_0$无关
+可以证明$\forall x\in\Delta^n$，其对应了唯一的数组$\qty{\lambda^{}_1,\lambda^{}_2,\ldots,\lambda^{}_n}$，称为点$x$关于点集$A$的\textbf{坐标}。基于坐标我们可以分类点，比如顶点为只有一个$\lambda^{}_i$非零。由于向量组$\qty{\vb{e}^{}_i=a^{}_i-a^{}_0}$线性无关，因此它张成一个子空间$L^{}_0$，不难证明其凸包构成一个$n-1$维单形，且和$a^{}_0$无关
 $$L^c_0=\qty{x=\sum_{i=0}^n\lambda^{}_ia^{}_i\middle\vert\lambda^{}_i\ge0,\sum_{i=0}^n\lambda^{}_i=1,\lambda^{}_0=0}\cong \Delta^{n-1}.$$
 推广这一概念到任意维数，我们便得到$\Delta^n$\textbf{边缘点}为至少存在一个$\lambda^{}_i=0$的点，其\textbf{边缘 \textit{Boundary}}为所有边缘点的集合，记为$\partial\Delta^n$。对于所有坐标非零的点称为\textbf{内点}，相应的集合称为\textbf{内部}。另一方面，$L^c_0$的顶点也都是$\Delta^n$的顶点，由此我们定义单形的\textbf{$\bm{m}$维面 \textit{m-Faces}}为
 \begin{equation}\phi^m\quad  \text{m-Simplex},\quad \qty(\phi^m)\subset\qty(\Delta^n),\quad m\le n\implies \phi^m\prec\Delta^n.\end{equation}
@@ -14571,14 +14589,18 @@ $$s=n^{}_1\overrightarrow{\Delta^q_1}+n^{}_2\overrightarrow{\Delta^q_2}+\cdots=\
 若$A$自身就是有限集，则$F$称为\textbf{有限基自由交换群}。自由交换群可以通过基实现\textbf{线性扩张}，取另一个自由交换群$H$以及映射$\theta:A\to H$和同态$\varphi:F\to H$，则$\theta$到同态$\varphi$的\emph{唯一的}线性扩张定义为
 \begin{equation}\varphi\qty(\sum_{i=1}^kn^{}_ia^{}_i)=\sum_{i=1}^kn^{}_i\theta\qty(a^{}_i).\end{equation}
 若取消唯一性限制，并令基$A$为有限集，则我们得到有限生成交换群$F$，对于整系数记为
-\begin{equation}F=\mathbb Z[A]=\mathbb Z[a^{}_1,a^{}_2,\cdots,a^{}_k],\quad A=\qty{a^{}_1,a^{}_2,\cdots,a^{}_k}.\end{equation}
+\begin{equation}F=\mathbb Z[A]=\mathbb Z[a^{}_1,a^{}_2,\ldots,a^{}_k],\quad A=\qty{a^{}_1,a^{}_2,\ldots,a^{}_k}.\end{equation}
 这样整系数$\bm{q}$维链群就记为
 \begin{equation}C^{}_q(K;\mathbb Z)=\mathbb Z\qty[S^{}_q(K)].\end{equation}
 它和有限基自由交换群的区别在于，其零元不是由系数唯一确定的，比如整数域有$1-1=2-2=0$，可以证明有限生成交换群是有限基自由交换群的商群，这里略过。零元的不唯一性自然的引入群的\textbf{挠 \textit{Torsion}}概念，定义有限生成交换群元$f$为\textbf{有限阶}的，若其满足
 \begin{equation}\exists r\in\mathbb N,\quad rf=0\in F.\end{equation}
 记$\mathrm{Tor}^{}_F$为$F$中所有有限阶元素的集合，称为$F$的挠子群，可以证明非挠部分的商群$F/\mathrm{Tor}^{}_F$为自由交换群。交换群的直和和普通群的直积相同，即
 \begin{equation}F^{}_1\oplus F^{}_2=\qty{\qty(x^{}_1,x^{}_2)\middle\vert x^{}_i\in F^{}_i},\quad \qty(x^{}_1,x^{}_2)+\qty(y^{}_1,y^{}_2)=\qty(x^{}_1+y^{}_1,x^{}_2+y^{}_2).\end{equation}
-可以证明，我们有$F\cong \mathrm{Tor}^{}_F\oplus\qty(F/\mathrm{Tor}^{}_F)$，因此若群存在挠子群，则这个群可以分解为挠子群和非挠部分的和。为了消除挠子群的零元影响，我们考虑对偶群，和线性空间类似，有限生成交换群$F$的对偶群定义为到实数群$\mathbb R$的同态的集合，并定义有加法和数乘
+于是对于有限基自由交换群$F=\mathbb Z\qty[a^{}_1,\ldots,a^{}_k]$，我们得到\textbf{直和分解定理}
+\begin{equation}F\cong \bigoplus_{i=1}^k\mathbb Z\qty[a^{}_i].\label{DG2884fgdGD}\end{equation}
+其中$\mathbb Z\qty[a^{}_i]$是$a^{}_i$的自由交换群，这是同调群的计算基础，请读者自行证明。并且不难得到
+$$F\cong \mathrm{Tor}^{}_F\oplus\qty(F/\mathrm{Tor}^{}_F),$$
+因此若群存在挠子群，则这个群可以分解为挠子群和非挠部分的和。为了消除挠子群的零元影响，我们考虑对偶群，和线性空间类似，有限生成交换群$F$的对偶群定义为到实数群$\mathbb R$的同态的集合，并定义有加法和数乘
 \begin{equation}F^*=\qty{\varphi:F\to\mathbb R},\quad (\varphi+\zeta)(f)=\varphi(f)+\zeta(f),\quad (a\varphi)(f)=a\varphi(f),\quad \forall \varphi,\zeta\in F^*, a\in\mathbb R,f\in F.\end{equation}
 可以验证在对偶下，直和变为直积$(F\cong H)^*\cong F^*\times H^*$，注意是直积不是张量积。将群$F$的\textbf{秩}定义为对偶群$F^*$的维数$\mathrm{rank}F=\dim F^*$，我们有分解定理
 \begin{equation}\mathrm{rank}F=\mathrm{rank}H+\mathrm{rank}(F/H).\label{Af2ADF][}\end{equation}
@@ -14679,18 +14701,18 @@ $$\partial^{}_q(gc)(t)=\qty[gc;t],\quad \forall t\in S^{}_{q-1}(K),c\in S^{}_q(K
 \\
 由于拓扑空间一般是连续的，因此为了精准描述其结构，我们需要非常一个精细的剖分。设$K$和$Y$都是可剖分空间$X$的剖分，满足
 $$\forall \Delta^n\in Y\implies \Delta^n\subset s\in K,\quad \abs{K}=\abs{Y},$$
-则称$Y$是$K$的一个\textbf{重分 \textit{Subdivision}}。一种特殊的重分是\textbf{重心重分}，在单形$\Delta^n$中\textbf{重心 \textit{Barycenter}}定义为坐标为$\qty(\dfrac{1}{n+1},\dfrac{1}{n+1},\cdots,\dfrac{1}{n+1})$的点，记为
-\begin{equation}\Delta^*=\sum_i\frac{1}{n+1}a^{}_i,\quad \Delta^n=\qty(a^{}_0,\cdots,a^{}_n).\end{equation}
+则称$Y$是$K$的一个\textbf{重分 \textit{Subdivision}}。一种特殊的重分是\textbf{重心重分}，在单形$\Delta^n$中\textbf{重心 \textit{Barycenter}}定义为坐标为$\qty(\dfrac{1}{n+1},\dfrac{1}{n+1},\ldots,\dfrac{1}{n+1})$的点，记为
+\begin{equation}\Delta^*=\sum_i\frac{1}{n+1}a^{}_i,\quad \Delta^n=\qty(a^{}_0,\ldots,a^{}_n).\end{equation}
 比如一维单形的重心是其中点，二维单形的重心就是三角形的通常重心。一个$n$维复形$K$的重心重分是一个复形，记为$RbK$，定义为
-\begin{equation}RbK=\qty{\qty(\Delta^*_0,\Delta^*_1,\cdots,\Delta^*_n)\middle\vert \Delta^{}_i\in K,\Delta^{}_0\prec\Delta^{}_1\prec\cdots\prec\Delta^{}_n}.\end{equation}
-其中点集$\qty{\Delta^*_0,\Delta^*_1,\cdots,\Delta^*_n}$处于一般位置的原因是，面的规则相处性导致这些子空间线性无关，自然的也体现在各重心上。可以证明，重心重分是一个重分，满足$\abs{RbK}=\abs{K}$，证明请参考\cite{CV25--}。通过重心重分，我们就得到一个较为精细的复形，这和拓扑空间覆盖的加细是完全一致的。我们也可以多次重分迭代得到更精细的复形，记$l$次迭代后的重心重分为$(Rb)^lK$。\\
+\begin{equation}RbK=\qty{\qty(\Delta^*_0,\Delta^*_1,\ldots,\Delta^*_n)\middle\vert \Delta^{}_i\in K,\Delta^{}_0\prec\Delta^{}_1\prec\cdots\prec\Delta^{}_n}.\end{equation}
+其中点集$\qty{\Delta^*_0,\Delta^*_1,\ldots,\Delta^*_n}$处于一般位置的原因是，面的规则相处性导致这些子空间线性无关，自然的也体现在各重心上。可以证明，重心重分是一个重分，满足$\abs{RbK}=\abs{K}$，证明请参考\cite{CV25--}。通过重心重分，我们就得到一个较为精细的复形，这和拓扑空间覆盖的加细是完全一致的。我们也可以多次重分迭代得到更精细的复形，记$l$次迭代后的重心重分为$(Rb)^lK$。\\
 \\
 由于一个单形$\Delta^n$也可以作为一个复形，因此取值在可剖分空间$X$上的奇异单形$\sigma:\Delta^n\to X$，应当看作复形间的映射。当然复形的组合结构也给出了许多约束，这里引入\textbf{单纯映射}的概念：对于复形$K$和$Y$之间的单纯映射$f:K\to Y$满足
-\begin{enumerate}[\quad (1)]\item 顶点对应：$\forall a\in K^0$，$f(a)\in Y^0$；\item 顶点约束：$\forall \Delta^n=\qty(a^{}_0,\cdots,a^{}_0)\in K$，$f\qty(\Delta^n)=\qty(f\qty(a^{}_0),\cdots,f\qty(a^{}_0))\in Y$；\item 保面性：$\forall t\prec r\in K$，$f(t)\prec f(r)\in Y$；\item 非退化性：$\forall h\in K$，\quad $\dim f(h)\le\dim h$。\end{enumerate}
-若其逆映射$f^{-1}:Y\to K$也是单纯映射，则成为\textbf{单纯同构}。单纯映射诱导了多边形之间的映射，这里不加证明的使用一个结论，$\forall p\in\abs{K}$，存在$K$中的一个唯一的单形$s=\qty(a^{}_0,\cdots,a^{}_0)\in K$使得
+\begin{enumerate}[\quad (1)]\item 顶点对应：$\forall a\in K^0$，$f(a)\in Y^0$；\item 顶点约束：$\forall \Delta^n=\qty(a^{}_0,\ldots,a^{}_0)\in K$，$f\qty(\Delta^n)=\qty(f\qty(a^{}_0),\ldots,f\qty(a^{}_0))\in Y$；\item 保面性：$\forall t\prec r\in K$，$f(t)\prec f(r)\in Y$；\item 非退化性：$\forall h\in K$，\quad $\dim f(h)\le\dim h$。\end{enumerate}
+若其逆映射$f^{-1}:Y\to K$也是单纯映射，则成为\textbf{单纯同构}。单纯映射诱导了多边形之间的映射，这里不加证明的使用一个结论，$\forall p\in\abs{K}$，存在$K$中的一个唯一的单形$s=\qty(a^{}_0,\ldots,a^{}_0)\in K$使得
 $$p\in s,\quad p=\sum_i\lambda^{}_ia^{}_i.$$
 此单形称为点$p$在复形$K$中的\textbf{承载单形}，记为$\mathrm{Car}^{}_K(p)$，于是诱导映射$\bar{f}:\abs{K}\to\abs{Y}$可以定义为
-\begin{equation}\bar{f}(p)=\sum_i\lambda^{}_if\qty(a^{}_i),\quad p\in\qty(a^{}_0,\cdots,a^{}_0)=\mathrm{Car}^{}_K(p).\end{equation}
+\begin{equation}\bar{f}(p)=\sum_i\lambda^{}_if\qty(a^{}_i),\quad p\in\qty(a^{}_0,\ldots,a^{}_0)=\mathrm{Car}^{}_K(p).\end{equation}
 这是一个连续映射，证明请参考\cite{CV25--}的命题$7.1$。既然空间可以三角剖分为一个复形，我们自然要探讨空间之间的映射和单纯映射之间的关联。取两个可剖分空间$X\cong\abs{K}$和$L\cong \abs{Y}$，引入连续映射$\zeta:X\to L$和单纯映射$f:K\to Y$，称$f$是$\zeta$的\textbf{单纯逼近 \textit{Simplicial Approximation}}若满足
 \begin{equation}\bar{f}(x)\in\mathrm{Car}^{}_K\zeta(x),\forall x\in X.\end{equation}
 我们后续会证明，单纯逼近的近似性由同伦确定$\zeta\cong\bar{f}$。可以证明，单纯逼近满足复合律，也就是
@@ -14714,7 +14736,7 @@ $$f:(Rb)^l\Delta^q=R\to K.$$
 这是一个单纯映射，根据定义它将$R$中的单形$s$映射为$K$中的单形，可以令奇异单形和单纯映射在$s$上的限制相等
 $$\eval{\sigma}_s=\eval{f}_s,$$
 从而不同的奇异单形对应不同的单纯映射$\sigma^{}_i=f^{}_i$。同样的考察闭链，由于单纯映射的顶点限制不要求单形的对应，所以奇异闭链只能覆盖$K$中构成闭链的顶点集
-$$\begin{aligned}&\forall c^{\mathrm{sin}}=\sum_in^{}_if^{}_i\in Z^{\mathrm{sin}}_q(X;\mathbb Z),\quad \qty(c^{\mathrm{sin}}(s))^0=\qty{a^{}_0,\cdots,a^{}_q}\subset K^0\\& \text{使得}\ \sum_{i=0}^q(-1)^ia^{}_0\cdots\hat{a}^{}_i \cdots a^{}_q=0\implies c^{\mathrm{sin}}(s)\in Z^{}_q(X;\mathbb Z),\quad \forall s\in R.\end{aligned}$$
+$$\begin{aligned}&\forall c^{\mathrm{sin}}=\sum_in^{}_if^{}_i\in Z^{\mathrm{sin}}_q(X;\mathbb Z),\quad \qty(c^{\mathrm{sin}}(s))^0=\qty{a^{}_0,\ldots,a^{}_q}\subset K^0\\& \text{使得}\ \sum_{i=0}^q(-1)^ia^{}_0\cdots\hat{a}^{}_i \cdots a^{}_q=0\implies c^{\mathrm{sin}}(s)\in Z^{}_q(X;\mathbb Z),\quad \forall s\in R.\end{aligned}$$
 根据对应关系，我们得到奇异闭链群是单纯闭链群的子群$Z^{\mathrm{sin}}_q(X;\mathbb Z)\subset Z^{}_q(X;\mathbb Z)$，类似的可以证明边缘群也符合同样的子群结果，从而
 \begin{equation}H^{\mathrm{sin}}_q(X;\mathbb Z)\subset H^{}_q(X;\mathbb Z).\label{Cveg2kj/]]}\end{equation}
 两个集合互相包含，唯一的可能性就是两者相等，对于群而言就是同构，从而综合(\ref{Cvegh4lkj/]]})和(\ref{Cveg2kj/]]})给出
@@ -14791,7 +14813,7 @@ $$\begin{aligned}&l^{}_q-\beta^{}_q=b^{}_{q-1}+z^{}_q-z^{}_q+b^{}_q=b^{}_{q-1}+b
 $$\chi(X;G)-\sum_{q=0}^n(-1)^q\beta^{}_q(X;G)=0.$$
 这是代数拓扑中最重要的公式之一，它揭示了拓扑空间的\textsl{Euler}示性数是拓扑不变量，并且不依赖于单形的分布，从单纯同调的视角就是不依赖于具体的三角剖分，从而它可以作为同胚的判据。当然其作用不止于此，由于其取决于同调群，此代数结构可以推广至向量场，并自然的出现在\textsl{Gauss-Bonnet}定理中，具体请参考第\ref{Dfsf.32/-*}节。\\
 \\
-现在我们不妨计算几个具体空间的\textsl{Euler}示性数。为此先考察零维同调群$H^{}_0(X;\mathbb Z)$的几何含义，根据定义这是商群$H^{}_0(X)=\ker\partial^{}_0/\Im\partial^{}_1$。由约定$C^{}_{-1}(X)=0$，从而
+现在我们不妨计算几个具体空间的\textsl{Euler}示性数。为此先考察零维同调群$H^{}_0(X;\mathbb Z)$的几何含义，根据定义这是商群$H^{}_0(X)=\ker\partial^{}_0/\Im\partial^{}_1$。由约定$C^{}_{-1}(X)=0$，从而由直和分解定理(\ref{DG2884fgdGD})得到
 $$Z^{}_0(X;\mathbb Z)=C^{}_0(X;\mathbb Z)\cong\bigoplus_{p\in X^0}\mathbb Z(p).$$
 而$\partial^{}_1:C^{}_1\to C^{}_0$，因此边缘链群$B^{}_0$同构于$X^0$中能相互连通的两个点的集合，从而$H^{}_0(X;\mathbb Z)$就是以连通性为等价关系的商点集，按照定义这些等价类$\expval{z^{}_i}$是连通分支。对于连通分支我们有\textbf{直和分解定理}
 \begin{equation}H^{}_q(X)\cong H^{}_q(\expval{z^{}_1})\oplus H^{}_q(\expval{z^{}_2})\oplus\cdots=\bigoplus_{i} H^{}_q(\expval{z^{}_i})\quad \forall q\in\mathbb Z,\end{equation}
@@ -14804,11 +14826,11 @@ $$Z^{}_0(X;\mathbb Z)=C^{}_0(X;\mathbb Z)\cong\bigoplus_{p\in X^0}\mathbb Z(p).$
 其次是一维同调群$H^{}_1$，由定义这是商群$\ker\partial^{}_1/\Im\partial^{}_2$。方便起见我们只考察一维复形$	K$，则其无二维链给出$C^{}_2(K)=0\implies \Im\partial^{}_2=0$，于是
 $$H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)$$
 为闭链群。引入第\ref{sg--fG4}节中树和简单闭链的概念，对于一个任意的连通一维复形$K$，其必然包含树$T$，而其中最大的树满足$K^0=T^0$，根据上述结论，它自然会将$K$中的闭链$z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+a^{}_ia^{}_0$拆分为一个不属于树的定向线段$s^{}_i=a^{}_ia^{}_0\in S^{}_1(K-T)$和在树内的简单链$z^{}_i-s^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i\in S^{}_1(T)$的和。假设$K-T$中有$l$个定向线段$s^{}_i$，$1\le i\le l$，将按此方法确定的一维闭链的集合记为
-$$A=\qty{z^{}_1,z^{}_2,\cdots.z^{}_l},\quad z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+s^{}_i\in Z^{}_1(K;\mathbb Z).$$
+$$A=\qty{z^{}_1,z^{}_2,\ldots.z^{}_l},\quad z^{}_i=a^{}_0a^{}_1+\cdots+a^{}_{i-1}a^{}_i+s^{}_i\in Z^{}_1(K;\mathbb Z).$$
 根据构造，我们有$z^{}_i\qty(s^{}_j)=\delta^{}_{ij}$。同时令$\forall z\in Z^{}_1(K;\mathbb Z)$，$z\qty(s^{}_i)=n^{}_i$，则得到
 $$\qty(z-\sum_{i=1}^ln^{}_iz^{}_i)\qty(s^{}_j)=0\implies z=\sum_{i=1}^ln^{}_iz^{}_i.$$
 于是我们得到结论，$A$是一维闭链群的生成元组
-\begin{equation}Z^{}_1(K;\mathbb Z)=\mathbb Z\qty[A]=\mathbb Z\qty[z^{}_1,z^{}_2,\cdots.z^{}_l].\end{equation}
+\begin{equation}Z^{}_1(K;\mathbb Z)=\mathbb Z\qty[A]=\mathbb Z\qty[z^{}_1,z^{}_2,\ldots.z^{}_l].\end{equation}
 当然也可以进一步证明此线性组合的唯一性，就是$z=0\iff n^{}_1=n^{}_2=\cdots=n^{}_l=0$，从而$A$成为闭链群的基，这里不再叙述。每个生成元都对应了一个整系数$n^{}_i$，而一个生成元产生一维多边形$\abs{K}$中的一个一维洞，从而一维同调群为
 \begin{equation}H^{}_1(K;\mathbb Z)=Z^{}_1(K;\mathbb Z)\cong\bigoplus_{z^{}_i\in A}\mathbb Z=\mathbb Z^l,\quad \beta^{}_1=l=\text{一维洞个数}.\end{equation}
 当然我们可以推广到任意维数的拓扑空间，只需要将上述一维复形$K$换成一维骨架$K^0$即可，其余内容不变。从而我们看到，$H^{}_1$表征了拓扑空间的一维洞的分布情况，其深度参与了二维闭曲面的分类。更高维的同调群这里就不统一计算了，因为较为复杂，下面以具体空间给出具体结果。\\
@@ -14848,11 +14870,11 @@ $$\Sigma=T^2\# T^2\# T^2\# \cdots=kT^2,\quad \Theta=\mathbb RP^2\#\mathbb RP^2\#
 并且乘积拓扑要求其生成元和$C^{}_*(X)$和$C^{}_*(Y)$有关，但不难看到不能简单的将两个群做直和，因为乘积拓扑不允许偶对生成元，并且也不能直接将两个同维链求和，因为它们的拓扑不同。为此，我们需要找到一个将链偶对变成单个链的方法。\\
 \\
 一个将偶对变成单值的方法便是做张量积，考虑到群的交换约束，我们先引入交换群的张量积。取两个整系数交换群$A$和$B$，设它们的生成为
-$$A=\mathbb Z\qty[a^{}_1,a^{}_2,\cdots,a^{}_m],\quad B=\mathbb Z\qty[b^{}_1,b^{}_2,\cdots,b^{}_n].$$
+$$A=\mathbb Z\qty[a^{}_1,a^{}_2,\ldots,a^{}_m],\quad B=\mathbb Z\qty[b^{}_1,b^{}_2,\ldots,b^{}_n].$$
 定义两者的\textbf{整系数张量积}$A\otimes^{}_{\mathbb Z}B$为一个生成交换群，满足
-\begin{itemize}\item 整系数双线性性：$\forall u^{}_1,u^{}_2\in A,v^{}_1,v^{}_2\in B, k\in\mathbb Z$，使得$ku^{}_i\in A$且$kv^{}_i\in B$，\begin{equation}\begin{aligned}&\qty(u^{}_1+u^{}_2)\otimes v^{}_1=u^{}_1\otimes v^{}_1+u^{}_2\otimes v^{}_1;\\& u^{}_1\otimes \qty(v^{}_1+v^{}_2)=u^{}_1\otimes v^{}_1+u^{}_1\otimes v^{}_2;\\& \qty(ku^{}_1)\otimes v^{}_1=u^{}_1\otimes\qty(kv^{}_1)=k\qty(u^{}_1\otimes v^{}_1).\end{aligned}\label{123=-***--}\end{equation}\item 零元约束：$\forall \sum\limits_i m^{}_ia^{}_i=0\in A,\quad \sum\limits_i n^{}_ib^{}_i=0\in B$，使得\begin{equation}\qty(\sum\limits_i m^{}_ia^{}_i)\otimes v=\sum\limits_i m^{}_i\qty(a^{}_i\otimes v)=0,\quad u\otimes\qty(\sum\limits_i n^{}_ib^{}_i)=0,\quad \forall u\in A,v\in B.\end{equation} \item	生成元：$A\otimes^{}_{\mathbb Z}B\sim F=\mathbb Z\qty[\qty{a^{}_i\otimes b^{}_j}\middle\vert 1\le i\le m,1\le j\le n]$。\end{itemize}
-于是整系数张量积就是生成交换群$F$模去双线性性和零元约束的商群，给出
-\begin{equation}\begin{aligned}&A\otimes^{}_{\mathbb Z}B=\mathbb Z\qty[\qty{a^{}_i\otimes b^{}_j}\middle\vert 1\le i\le m,1\le j\le n]/R,\\& R=\qty{\text{整系数双线性性},0^{}_A\otimes b=a\otimes 0^{}_B=0}.\end{aligned}\end{equation}
+\begin{itemize}\item 整系数双线性性：$\forall u^{}_1,u^{}_2\in A,v^{}_1,v^{}_2\in B, k\in\mathbb Z$，使得$ku^{}_i\in A$且$kv^{}_i\in B$，\begin{equation}\begin{aligned}&\qty(u^{}_1+u^{}_2)\otimes v^{}_1=u^{}_1\otimes v^{}_1+u^{}_2\otimes v^{}_1;\\& u^{}_1\otimes \qty(v^{}_1+v^{}_2)=u^{}_1\otimes v^{}_1+u^{}_1\otimes v^{}_2;\\& \qty(ku^{}_1)\otimes v^{}_1=u^{}_1\otimes\qty(kv^{}_1)=k\qty(u^{}_1\otimes v^{}_1).\end{aligned}\label{123=-***--}\end{equation}\item 零元约束：$\forall \sum\limits_i m^{}_ia^{}_i=0\in A,\quad \sum\limits_i n^{}_ib^{}_i=0\in B$，使得\begin{equation}\qty(\sum\limits_i m^{}_ia^{}_i)\otimes v=\sum\limits_i m^{}_i\qty(a^{}_i\otimes v)=0,\quad u\otimes\qty(\sum\limits_i n^{}_ib^{}_i)=0,\quad \forall u\in A,v\in B.\end{equation} \item	生成元：$A\otimes^{}_{\mathbb Z}B\implies F=\mathbb Z\qty[\qty{a^{}_i\otimes b^{}_j}\middle\vert 1\le i\le m,1\le j\le n]$。\end{itemize}
+于是整系数张量积就是生成交换群$F$模去双线性性和零元约束，将这些约束的集合记为$R$称为群的\textbf{关系 \textit{Relation}}，记其生成的最小正规子群为$[R]$，则商群就给出
+\begin{equation}\begin{aligned}&A\otimes^{}_{\mathbb Z}B=\mathbb Z\qty[\qty{a^{}_i\otimes b^{}_j}\middle\vert 1\le i\le m,1\le j\le n]/[R],\\& R=\qty{\text{整系数双线性性},0^{}_A\otimes b=a\otimes 0^{}_B=0}.\end{aligned}\label{Dfrg003..}\end{equation}
 比如$\mathbb Z^{}_m\otimes^{}_{\mathbb Z}\mathbb Z^{}_n$，它们的生成元都是$1$，所以$F=\mathbb Z[1^{}_m\otimes 1^{}_n]$，它自然满足双线性性。对于零元，注意到$m\cdot 1^{}_m=0$和$n\cdot 1^{}_n=0$，于是零元约束给出
 $$m\cdot \qty(1^{}_m\otimes 1^{}_n)=mx=0,\quad n\cdot \qty(1^{}_m\otimes 1^{}_n)=nx=0,\forall x\in F.$$
 这样商群$F/R$要求$\forall x\in F$，满足$x\mod m=0$同时$x\mod n=0$，结果取决于$m$和$n$之间的最大公约数$\mathrm{gcd}(m,n)$，它等于$1$说明两者互素，通式结果为
@@ -15012,7 +15034,7 @@ $$\begin{aligned}&H^{}_0\qty(T^2)=H^{}_0\qty(S^1\times S^1)=H^{}_0\qty(S^1;\math
 \begin{equation}H^{}_0(X;\mathbb Z)=\mathbb Z,\quad H^{}_{q\ge 1}(X;\mathbb Z)=0,\quad X\sim\qty{p}.\end{equation}
 这是一个非常重要的性质，我们在上同调中会经常用到，同时这也能帮助我们判断空间的可缩性。当然需要注意，上述条件不能推出可缩，因为同伦是映射之间的关系，复合是乘积而不是加法，这种不可交换性使得同伦比同调更精细。
 
-\subsubsection{基本群和同伦群}
+\subsubsection{道路类和基本群}
 \noindent 上面我们介绍了同伦的基本概念，并推导了同调是同伦不变量这一结论。当然同伦也可以给出群结构，但因为映射的复合是乘积，因此其结构要远比同调复杂，下面我们来详细的介绍。同样的在记号上，记$I=[0,1]$，其边缘为$\partial I=\qty{0,1}$。\\
 \\
 我们从直观的例子开始，拓扑空间$X$上的道路是一个映射$\gamma:I\to X$，\emph{它天然带有$I$的诱导定向}，作为映射我们自然可以谈论其同伦。但对于一个道路连通空间，不难证明任意两条道路都是同伦的，因此我们需要加以限制。最简单的就是固定始末点，引入伦移为
@@ -15025,16 +15047,16 @@ $$\begin{aligned}&H^{}_0\qty(T^2)=H^{}_0\qty(S^1\times S^1)=H^{}_0\qty(S^1;\math
 \\
 在继续讨论道路类和闭路类之前，我们有必要回顾一下道路的性质。一个\textbf{点道路}是拓扑空间上个一个常值映射$e(t)=x\in X$，可以看作一个基点为$x$的闭路，记为$e^{}_x$。一个道路$a(t)$的逆记为$\bar{a}:I\to X$，定义为$\bar{a}(t)=a(1-t)$。若两个道路首尾相连$a(1)=b(0)$，则可以定义道路的乘积为
 \begin{equation}ab(t)=\begin{cases}a(2t),\quad 0\le t\le 1/2;&\\ b(2t-1),\quad 1/2\le t\le 1.\end{cases}\quad \iff a(1)=b(0).\end{equation}
-不难验证性质：
+这是保定向的，不难验证性质：
 $$\bar{e}^{}_x=e^{}_x,\quad \overline{\qty(\bar{a})}=a,\quad \overline{ab}=\bar{b}\bar{a}.$$
 道路没有结合律，也就是$(ab)c\neq a(bc)$，因为按照乘法定义我们有
 $$(ab)c=(ab)(0\le t\le 1/2)\cdot c(1/2\le t\le 1),\quad a(bc)=a(0\le t\le 1/2)\cdot (bc)(1/2\le t\le 1).$$
 两者自然不同。回到道路类，我们不加证明的，给出定端同伦的几个性质，假设$a,b,c,d$是$X$上四条道路，$f:X\to Y$是连续映射
 \begin{enumerate}\item 如果$a\dt{\cong}b$，则$\bar{a}\dt{\cong}\bar{b}$，且$f\circ a\dt{\cong}f\circ b$；\item 如果$a\dt{\cong}b$和$c\dt{\cong}d$，且乘积$ac$存在，则$ac\dt{\cong}bd$；\item 如果$ab$存在，则$(f\circ a)(f\circ b)=f\circ (ab)$，且$\overline{(f\circ a)}=f\circ\bar{a}$。\label{214tb=0}\end{enumerate}
 这样我们就可以引入道路类的逆和乘积，记$\alpha=\expval{a}$，则定义其逆为$\alpha^{-1}=\expval{\bar{a}}$，两个道路类$\alpha$和$\beta$的乘积定义为$\alpha\beta=\expval{ab}$。这个定义是合理的，由上述性质可知它们不依赖与代表元$a$和$b$的选择，且连续映射$f$诱导了道路类的映射
-\begin{equation}f^{}_\pi:X/\dt{\cong}\to Y/\dt{\cong},\quad f^{}_\pi(\alpha)=\expval{f\circ a}.\label{12Defr144}\end{equation}
-条件(\ref{214tb=0}.)说明，映射$f^{}_\pi$保持乘积和逆
-\begin{equation}\expval{f\circ a}\expval{f\circ b}=f^{}_\pi(\alpha)f^{}_\pi(\beta)=f^{}_\pi(\alpha\beta),\quad f^{}_\pi\qty(\alpha^{-1})=\expval{f\circ \bar{a}}=\expval{\overline{f\circ a}}=\qty(f^{}_\pi(\alpha))^{-1}.\label{12Defr2244}\end{equation}
+\begin{equation}f^{}_\tau:X/\dt{\cong}\to Y/\dt{\cong},\quad f^{}_\tau(\alpha)=\expval{f\circ a}.\label{12Defr144}\end{equation}
+条件(\ref{214tb=0}.)说明，映射$f^{}_\tau$保持乘积和逆
+\begin{equation}\expval{f\circ a}\expval{f\circ b}=f^{}_\tau(\alpha)f^{}_\tau(\beta)=f^{}_\tau(\alpha\beta),\quad f^{}_\tau\qty(\alpha^{-1})=\expval{f\circ \bar{a}}=\expval{\overline{f\circ a}}=\qty(f^{}_\tau(\alpha))^{-1}.\label{12Defr2244}\end{equation}
 进一步的，我们考察点道路，假设道路类$\alpha$的起点和终点为$x$和$y$，相应的点道路为$e^{}_x$和$e^{}_y$。不难验证，对于其中任意一条道路$a$，我们有
 $$a\bar{a}=\begin{cases}a(2t),\quad 0\le t\le 1/2;&\\ a(2-2t),\quad 1/2\le t\le 1.\end{cases}\implies a\bar{a}(1)=a\bar{a}(0)=x,\quad a\bar{a}(t)\in a\implies a\bar{a}\dt{\cong}e^{}_x.$$
 也就是说，$a\bar{a}$作为定向闭路可以连续变为$e^{}_x$，类似的我们还有$\bar{a}a\dt{\cong}e^{}_y$，以及$e^{}_xa\dt{\cong}a\dt{\cong}ae^{}_y$，这些请读者自证。于是两边各取道路类，我们得到
@@ -15047,15 +15069,89 @@ $$(ab)c\dt{\cong}a(bc)\quad\iff\quad a(1)=b(0),\quad b(1)=c(0).$$
 \begin{enumerate}\item 式(\ref{123123144})确定了道路类的乘法和起点与终点的关系，若我们令$x=y$，则得到\begin{equation}\alpha\alpha^{-1}=\expval{e^{}_x}=\alpha^{-1}\alpha,\quad \expval{e^{}_x}\alpha=\alpha\expval{e^{}_x}=\alpha.\label{PPef//f}\end{equation}此时道路类$\alpha$是以$x$为基点的闭路类，不难看到在此结构下，$\expval{e^{}_x}$充当了单位元，$\alpha^{-1}$是逆元；\item 式(\ref{1231231erf4})说明道路类乘法有结合律，对于闭路类同样有效；\item 式(\ref{12Defr144})定义了两个空间之间的道路类映射$f^{}_{\pi}$，式(\ref{12Defr2244})说明其保持前两条性质。\end{enumerate}
 于是根据式(\ref{PPef//f})，前两条性质指出以$x$为基点的闭路类的集合构成一个群，群乘法为复合映射，称为空间$X$上\textbf{以$x$为基点的基本群 \textit{Fundamental Group}}，定义为
 \begin{equation}\varPi^{}_1(X,x)=\qty{\alpha\vert \alpha(0)=\alpha(1)=x},\quad e=\expval{e^{}_x},\quad \alpha\circ \beta=\alpha\beta.\end{equation}
-同时，诱导映射$f^{}_\pi:X/\dt{\cong}\to Y/\dt{\cong}$保持乘积和逆说明这是一个群同态，称为\textbf{诱导基本群同态}，定义为
-\begin{equation}f^{}_\pi:\varPi^{}_1(X,x)\to \varPi^{}_1(Y,f(x)),\quad f\in C(X,Y),\quad \forall x\in X.\end{equation}
-需要注意的是，映射$f$对每一个基点都能诱导一个基本群同态，因此事实上这是一族映射，我们都将其记为$f^{}_\pi$。一个简单的例子是，考虑欧式空间$\mathbb R^n$，因为以$\forall x\in\mathbb R^n$作为基点的任意两条闭路都定端同伦，因此其基本群是平凡的$\varPi^{}_1\qty(\mathbb R^n,x)=\qty{\expval{e^{}_x}}$。\\
+同时，诱导映射$f^{}_\tau:X/\dt{\cong}\to Y/\dt{\cong}$保持乘积和逆说明这是一个群同态，称为\textbf{诱导基本群同态}，定义为
+\begin{equation}f^{}_\tau:\varPi^{}_1(X,x)\to \varPi^{}_1(Y,f(x)),\quad f\in C(X,Y),\quad \forall x\in X.\end{equation}
+需要注意的是，映射$f$对每一个基点都能诱导一个基本群同态，因此事实上这是一族映射，我们都将其记为$f^{}_\tau$。一个简单的例子是，考虑欧式空间$\mathbb R^n$，因为以$\forall x\in\mathbb R^n$作为基点的任意两条闭路都定端同伦，因此其基本群是平凡的$\varPi^{}_1\qty(\mathbb R^n,x)=\qty{\expval{e^{}_x}}$。\\
 \\
 现在我们详细讨论基本群。对于基本群同态，不难证明我们有传递性，假设$f:X\to Y$和$g:Y\to Z$是两个连续映射，基点$y=f(x)$和$z=g(y)$，则复合的诱导同态等于诱导同态的复合
-\begin{equation}(g\circ f)^{}_\pi=g^{}_\pi\circ f^{}_\pi:\varPi^{}_1(X,x)\to \varPi^{}_1(Z,g\circ f(x)).\end{equation}
-因为$(g\circ f)^{}_\pi(\alpha)=\expval{g\circ f\circ a}=g^{}_\pi\expval{f\circ a}=g^{}_\pi f^{}_\pi(\alpha)$。这样令$f$为同胚，也就是$g=f^{-1}$，我们自然得到
-$$(f^{-1}\circ f)^{}_\pi=\qty(id^{}_X)^{}_\pi=f^{-1}_\pi\circ f^{}_\pi,$$
-基本群同态的逆存在，因此同态变为同构$f^{}_\pi:\varPi^{}_1(X,x)\cong\varPi^{}_1(Y,f(x))$。这说明\emph{基本群是拓扑不变量}。但目前而言基本群的定义依赖基点，我们需要考察此依赖的程度。
+\begin{equation}(g\circ f)^{}_\pi=g^{}_\tau\circ f^{}_\tau:\varPi^{}_1(X,x)\to \varPi^{}_1(Z,g\circ f(x)).\end{equation}
+因为$(g\circ f)^{}_\pi(\alpha)=\expval{g\circ f\circ a}=g^{}_\tau\expval{f\circ a}=g^{}_\tau f^{}_\tau(\alpha)$。这样令$f$为同胚，也就是$g=f^{-1}$，我们自然得到
+$$\qty(f^{-1}\circ f)^{}_\pi=\qty(id^{}_X)^{}_\pi=f^{-1}_\pi\circ f^{}_\tau,$$
+基本群同态的逆存在，因此同态变为同构$f^{}_\tau:\varPi^{}_1(X,x)\cong\varPi^{}_1(Y,f(x))$。这说明\emph{基本群是拓扑不变量}。对于子集$A\subset X$，包含映射$i:A\to X$在限制下是同胚，则我们得到同构
+\begin{equation}i^{}_\pi:\varPi^{}_1(A,x)\cong \varPi^{}_1(X,x).\end{equation}
+但目前而言基本群的定义依赖基点，我们需要考察此依赖的程度。取两个基点$x^{}_0$和$x^{}_1$并假设它们是连通的，令$x^{}_0\to x^{}_1$的道路类为$\gamma$，则不难证明
+$$\gamma^{-1}\alpha\gamma=\expval{\bar{c}ac}\in \varPi^{}_1\qty(X,x^{}_1),\quad \forall \alpha\in \varPi^{}_1\qty(X,x^{}_0).$$
+因为$\qty(\bar{c}ac)$是一条乘积道路，并且起点和终点都是$x^{}_1$。于是我们得到两个基本群之间的同态，其由道路类$\gamma$诱导
+\begin{equation}\gamma^{}_\#:\varPi^{}_1\qty(X,x^{}_0)\to \varPi^{}_1\qty(X,x^{}_1),\quad \gamma^{}_\#(\alpha)=\gamma^{-1}\alpha\gamma,\end{equation}
+并且满足条件，若$\delta$是$x^{}_1\to x^{}_2$的道路类则
+\begin{equation}\qty(\gamma\delta)^{}_\#=\delta^{}_\#\gamma^{}_\#:\varPi^{}_1\qty(X,x^{}_0)\to \varPi^{}_1\qty(X,x^{}_2).\end{equation}
+于是取$\delta=\gamma^{-1}$，我们得到$\gamma^{-1}_\#\gamma^{}_\#=\qty(\expval{e^{}_{x^{}_1}})^{}_\#=id$，这是$\varPi^{}_1\qty(X,x^{}_0)$的同构，于是道路类的诱导映射$\gamma^{}_\#$是同构
+\begin{equation}\gamma^{}_\#:\varPi^{}_1\qty(X,x^{}_0)\cong \varPi^{}_1\qty(X,x^{}_1).\label{DfgGGH3E4}\end{equation}
+也就是说，只要两个基点之间是道路连通的，那么连接两点的道路类的诱导映射是基本群的同构。也就是说，在一个道路连通分支内，基本群并不依赖基点，若$X$整体道路连通则一般记为$\varPi^{}_1(X)$。这样，我们定义\textbf{单连通空间}，是一个基本群为平凡群的整体道路连通空间$\varPi^{}_1(X)=\qty{e}$。比如流场$X$中的涡管$X^{}_1$，
+$$\begin{tikzpicture}[scale=.8]\pgfmathsetmacro{\r}{1}\draw[thick](0,0)circle(\r);\draw(0,0)circle(\r+1.5);\node(0,0){$X^{}_1$};\node at(1.2,1.1){$X^{}_2$};\draw[decoration={markings,mark=at position 0.2 with{\arrow[scale=2.5]{stealth}},mark=at position .6 with{\arrow[scale=2.5]{stealth}}},postaction={decorate},dashed](0,0)circle(\r+.8);\draw[decoration={markings,mark=at position .3 with{\arrow[scale=1.5]{stealth[reversed]}}},postaction={decorate},dashed](0,0)circle(.6);\draw[decoration={markings,mark=at position .3 with{\arrow[scale=1.5]{stealth[reversed]}}},postaction={decorate},dashed](-1.6,0)circle(.4);\end{tikzpicture}$$
+它将$X$分为两个连通分支$X=X^{}_1+X^{}_2$，在每个$X^{}_i$内基本群平凡因此单连通，但$X^{}_1$和$X^{}_2$中的点无法互相连通，因此基本群是
+$$\varPi^{}_1(X)=\qty{e,a},$$
+其中$a$是$X^{}_2$中绕涡管$X^{}_1$的回路。这在流场中是一个\textbf{双连通空间}，它允许有旋势流解，是一个典型的拓扑缺陷。如果子集$A$道路连通，且包含映射的诱导$i^{}_\pi$是平凡的，则称为\textbf{半单连通子集}，若$X$的每一点都有一个半单连通邻域，则$X$是\textbf{局部半单连通的}。\\
+\\
+类似同调群在同伦下有不变性，基本群也是如此。假设两个同伦的映射$f\cong g\in C(X,Y)$，对于$X$上的基点$x$，这两个映射给出不同的像$f(x)\neq g(x)$，因此得到两个不同基点的基本群。记伦移为$H$，则对于固定点$x$它确定了$Y$上一条道路$c(t)=H(x,t)$，使得$c(0)=f(x)$和$c(1)=g(x)$。记相应的道路类为$\gamma=\expval{c}$，则我们得到诱导基本群同构
+$$\gamma^{}_\#:\varPi^{}_1(Y,f(x))\cong \varPi^{}_1(Y,g(x)).$$
+这样，映射诱导的基本群同态$f^{}_\tau$和$g^{}_\tau$，可以证明满足交换图
+\begin{equation}\begin{tikzcd}[row sep=2cm,column sep=2cm]\varPi^{}_1(X,x) \arrow[r,"f^{}_\tau"]\arrow[dr,"g^{}_\tau"]&\varPi^{}_1(Y,f(x))\arrow[d,"\gamma^{}_\#"]\\&\varPi^{}_1(Y,g(x))\end{tikzcd}.\end{equation}
+也就是
+\begin{equation}g^{}_\tau=\gamma^{}_\#\circ f^{}_\tau:\varPi^{}_1(X,x)\to\varPi^{}_1(Y,g(x)).\end{equation}
+这说明两个同伦的映射，它们的诱导基本群同态相差一个同构，和同调层面相差一个边缘链是类似的。现在假设两个空间同伦$f:X\sim Y$，则按照定义我们有同伦逆$g$，其和恒等映射同伦根据前面的结论给出
+$$(g\circ f)^{}_\pi=g^{}_\tau\circ f^{}_\tau=\gamma^{}_\#\circ\qty(id^{}_X)^{}_\pi,\quad (f\circ g)^{}_\pi=f^{}_\tau\circ g^{}_\tau=\gamma'_\#\circ\qty(id^{}_Y)^{}_\pi.$$
+由于$\qty(id^{}_{X,Y})^{}_\pi$和$\gamma^{}_\#,\gamma'_\#$都是基本群同构，因此映射及其同伦逆的诱导$f^{}_\tau$和$g^{}_\tau$也都是同构
+\begin{equation}f^{}_\tau:\varPi^{}_1(X,x)\cong \varPi^{}_1(Y,f(x)),\quad g^{}_\tau:\varPi^{}_1(Y,y)\cong \varPi^{}_1(X,g(y)).\end{equation}
+这样我们就得到，\emph{基本群是同伦不变量}。一个直接的推论是，若$X$和$Y$均道路连通，则$\varPi^{}_1(X)\cong \varPi^{}_1(Y)$。这是一个十分有用的性质，可以极大简化我们对基本群的计算，比如对于可缩空间，其基本群就是平凡的$\varPi^{}_1(X)]\qty{e}$。\\
+\\
+上述所说的都是基本群的拓扑性质，在代数层面，需要强调的是基本群不是一个交换群。这可以从定义中看出，群元的复合由道路乘积确定，而道路自带诱导定向，且乘积是保定向的，自然的有
+$$\forall \alpha,\beta\in \varPi^{}_1(X),\quad \alpha\beta=\expval{ab}\neq\expval{ba}=\beta\alpha.$$
+因此不像同调，基本群的群元无法用生成元线性的表示，这是计算困难点的所在。为此这里简单介绍一下\textbf{自由群}理论，一个群$G$称为$n$阶\textbf{自由生成群}，若存在子集$A\subset G$使得$\forall x\in G$可以唯一的表示为
+\begin{equation}x=a^{i^{}_1}_1a^{i^{}_2}_2\cdots a^{i^{}_n}_n=\prod_{j=1}^na^{i^{}_j}_j,\quad a^{}_j\in A,\quad a^{}_j\neq a^{}_{j+1},\quad \qty(i^{}_1,\ldots,i^{}_n)\in\mathbb N^n.\end{equation}
+子集$A$称为$G$的\textbf{自由生成元组}，只要求满足基本的群结构，记此自由群为$G(A)$。这个等式可以看作乘积的线性组合，但不能给出类似直和分解定理(\ref{DG2884fgdGD})的直接计算方法，为此我们引入群的\textbf{自由乘积}，记为$\mathop{\scalebox{1.5}{$\ast$}}$，集合定义为对于一族群$\qty{G^{}_\lambda\vert \lambda\in\Lambda}$，
+\begin{equation}\mathop{\scalebox{1.5}{$\ast$}}\limits_{\lambda\in\Lambda} G^{}_\lambda=\qty{x^{}_1x^{}_2\cdots x^{}_n\middle\vert n\in\mathbb N,x^{}_i\in\qty(G^{}_\lambda-\{e\}),x^{}_i\text{和}x^{}_{i+1}\text{不在一个}G^{}_\lambda\text{内}}.\end{equation}
+具体的群乘积定义较为复杂，读者可参考\cite{CV25--}\S A.5，这里不介绍。可以证明对于一个自由生成群$G(A)$，每个生成元的自由循环群为$\mathbb Z\qty[a^{}_i]$，两者满足\textbf{乘积定理}
+\begin{equation}G(A)\cong \mathop{\scalebox{1.5}{$\ast$}}\limits_{1\le i\le n}\mathbb Z\qty[a^{}_i]\label{Dd345-=-=}.\end{equation}
+这样我们就得到了自由生成群的计算方法，和式(\ref{DG2884fgdGD})在形式上相同。当然一般的群都会有额外约束，我们依旧将这些约束的集合记为关系$R$，其生成的关于自由群$G(A)$的最小正规子群为$[R]$，则群参考式(\ref{Dfrg003..})用生成元记为
+\begin{equation}\expval{A;R}=\expval{a^{}_1,a^{}_2,\ldots.a^{}_n;R}=G(A)/[R].\end{equation}
+这称为自由生成群的\textbf{母元关系表示}，比如一个$n$阶循环群为$\mathbb Z^{}_n=\expval{x;x^n}$，也就是$e\sim x^n$。通过此表示，我们可以定义\textbf{自由群的交换化}，从加法群的对易子$\comm{a}{b}=ab-ba\equiv0$出发。我们知道加法群的逆元为
+$$a+a^{-1}=0\implies a^{-1}=-a\implies -ba=(ba)^{-1}=a^{-1}b^{-1},$$
+则对易子可以从加法群的减法推广为纯乘法，称为群的\textbf{换位子}
+\begin{equation}\forall a,b\in G,\quad \comm{a}{b}=aba^{-1}b^{-1}.\end{equation}
+同样的，加法群中的单位元$0$在乘法群中为$e=1$，从而两个对易的群元用换位子写为$\comm{a}{b}=1$。对于自由群$G(A)$，其中生成元组$A=\qty{a^{}_1,\ldots,a^{}_n,b^{}_1,\ldots,b^{}_n}$，令关系为
+\begin{equation}R=\qty{\comm{a^{}_1}{b^{}_1}\comm{a^{}_2}{b^{}_2}\cdots\comm{a^{}_k}{b^{}_k},1\le k\le n}.\end{equation} 
+其生成的最小正规子群为其自身
+$$[R]=\qty{x\middle\vert x=\comm{a^{}_1}{b^{}_1}\comm{a^{}_2}{b^{}_2}\cdots\comm{a^{}_k}{b^{}_k},1\le k\le n},$$
+这是不难证明的，因为$\forall x\in [R]$和$y\in G(A)$我们有$y^{-1}xy=\comm{y^{-1}}{x}x\in [R]$，这样我们得到一个交换群
+\begin{equation}G^{ab}(A)=\expval{a^{}_1,\ldots,a^{}_n,b^{}_1,\ldots,b^{}_n;\comm{a^{}_1}{b^{}_1}\comm{a^{}_2}{b^{}_2}\cdots\comm{a^{}_k}{b^{}_k}}.\end{equation}
+此群的交换性是容易证明的，这就是自由群的交换化，同时我们有
+\begin{equation}\qty(\mathop{\scalebox{1.5}{$\ast$}}\limits_{i=1}^nG^{}_i)^{ab}\cong\bigoplus_{i=1}^nG^{ab}_i.\end{equation}
+更多的自由群理论，请参考\cite{SG*/00}的第三章，这里就不做过多的叙述了。此表述对于\emph{任意群都有效}，因此下面我们用自由生成群的语言叙述具体空间的基本群计算。\\
+\\
+我们从$S^1$开始，选取定向后这就是一个回路，其参数形式为$S^1=\exp(2n\pi it)$，其中$n\in\mathbb Z$。从拓扑角度，可以证明$S^1$是$D^1-\{0\}$的强形变收缩核，这样根据基本群的同伦不变性我们得到
+\begin{equation}\varPi^{}_1\qty(S^1)=\varPi^{}_1\qty(D^1-\qty{0}).\end{equation}
+我们默认这是连通空间，因此省略了基点。在复平面上，$D^1-\qty{0}$作为去心圆盘，若不考虑原点则回路解析，对于包含原点的回路$\gamma$涉及到奇点，它的特征可以用\textsl{Cauchy}积分公式给出
+$$a=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=n\in\mathbb Z.$$
+注意这个积分和回路的选择无关，只需要$\qty{0}$在其包围内即可，因此$\gamma$对应一个闭路类。而这是唯一的非平凡类，因为其余的解析曲线根据\textsl{Cauchy}定理回路积分为零，是平凡闭路类。于是我们令基本群的唯一生成元为$g$，其没有额外约束，从而基本群由式(\ref{Dd345-=-=})算得
+\begin{equation}\varPi^{}_1\qty(S^1)=\varPi^{}_1\qty(D^1-\qty{0})=\expval{g;\varnothing}\cong\mathbb Z[g]=\mathbb Z.\label{FFwrtegWE}\end{equation}
+当然还有其余若干种等价方法，比如读者可以参考第\ref{xi5sdfg5400}节的道路提升法。这是一个相当重要的结果，它说明所有能连续变为$S^1$的闭曲线都由一个整数控制，直观的来讲就是绕$S^1$的圈数$n$，并且它严格的等于\textsl{Cauchy}积分公式。由此我们引入回路的\textbf{一维绕数 \textit{1D Winding Number}}，定义为
+\begin{equation}\mathrm{wind}^{}_1(\gamma)=\Phi(\gamma),\quad \Phi:\varPi^{}_1\qty(S^1)\to \mathbb Z,\quad \gamma\in\varPi^{}_1\qty(S^1),\end{equation}
+其解析式可以由\textsl{Cauchy}积分公式给出
+\begin{equation}\mathrm{wind}^{}_1(\gamma)=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=\frac{1}{2\pi i}\int^1_0 \frac{\gamma'(t)\dd t}{\gamma(t)}.\end{equation}
+这实际上就是前文中所提到的，带涡管$X^{}_1$的势流场$X$的拓扑，绕数就是涡管的环量，它是守恒的，也就是势流的\textsl{Kelvin}定律。进一步的考虑高维球面$S^{n\ge 2}$，我们将上面的一维绕数推广到$\mathbb R^n$中
+$$\mathrm{wind}^{}_1(\gamma)=\frac{1}{2\pi i}\oint_\gamma \frac{\dd z}{z}=\frac{1}{2\pi i}\int^1_0 \frac{\grad\gamma\cdot \bm{\gamma}'(t)\dd t}{\norm{\gamma(t)}},\quad \gamma:I\to S^1.$$
+由于我们永远可以扎到找到一条曲线，使得$\grad\gamma\perp \bm{\gamma}'$，因此$\mathrm{wind}^{}_1(\gamma)=\Phi(\gamma)\equiv0$，也就是说对于高维球面的基本群为平凡群
+\begin{equation}\varPi^{}_1\qty(S^n)=0,\quad n\ge 2.\end{equation}
+再考虑环面$T^2$，根据图 \ref{Ccet65=-b}我们知道$T^2\sim S^1\times S^1$是其强形变收缩核，因此有两个独立生成元$g^{}_1$和$g^{}_2$。根据上文我们知道$\mathbb Z\qty[g^{}_i]=\mathbb Z$，对于交换群式(\ref{Dd345-=-=})变为直和，因此我们得到
+\begin{equation}\varPi^{}_1\qty(T^2)=\expval{g^{}_1,g^{}_2;\varnothing}=\mathbb Z\oplus\mathbb Z=\mathbb Z^2.\end{equation}
+可见$T^2\neq S^2$，因为同伦群不同，当然从同调群我们已经得到此结果。对于实射影空间$\mathbb RP^2=S^2/\mathbb Z^{}_2$，其基本群可以通过对$S^2$群添加关系得到，要求唯一生成元$g$是二阶循环的，因此
+\begin{equation}\varPi^{}_1\qty(\mathbb RP^2)=\expval{g;g^2}\cong\mathbb Z^{}_2=\qty{0,1}.\end{equation}
+这是容易理解的，只有两种闭路：取值为$0$的是$S^2$上的正常回路，而取值为$1$的则是嵌入$S^2$的一维实射影空间$\mathbb RP^1$，如下图
+\begin{center}\tikz{\pgfmathsetmacro{\r}{1.5}\draw[red](0,-\r)arc(-90:90:\r);\draw[blue](0,\r)arc(90:270:\r);\foreach \angle in{-90,-45,0,45,90}{\pgfmathsetmacro{\x}{\r*cos(\angle)}\pgfmathsetmacro{\y}{\r*sin(\angle)}\pgfmathsetmacro{\xx}{\r*cos(\angle+180)}\pgfmathsetmacro{\yy}{\r*sin(\angle+180)}\pgfmathsetmacro{\tx}{-.6*sin(\angle)}\pgfmathsetmacro{\ty}{.6*cos(\angle)}\fill(\x,\y)circle(1pt);\fill(\xx,\yy)circle(1pt);\draw[->,thick,red](\x,\y)--++(\tx,\ty);\draw[->,thick,blue](\xx,\yy)--++(\tx,\ty);}\draw[->,thick,dashed,bend left=30](0.75,0.1)to node[below]{$x\sim-x$}(-0.75,0.1);}\raisebox{1.5cm}{$\qquad\scalebox{2}{$\longrightarrow$}\qquad$}\tikz{\pgfmathsetmacro{\r}{1.5}\draw[decoration={markings,mark=at position .2 with{\arrow[scale=2.5]{stealth}},mark=at position .7 with{\arrow[scale=2.5]{stealth}}},postaction={decorate}](0,0)circle(\r);}\captionof{figure}{$\mathbb RP^2$的一个过圆心切面$\mathbb RP^1$，两个半圆定向相反，这不是一个回路，在粘合后给出一个回路。}\end{center}
+其中左侧图并不是一个回路，因为两侧定向冲突，但这是对径点可以粘合的唯一可能性，在粘合后给出回路，因此它有别于正常的回路$S^1$。当然我们其实也得到$\mathbb RP^1\cong S^1$，因此其基本群是$\varPi^{}_1\qty(\mathbb RP^1)=\mathbb Z$。可以证明的是，对于高维实射影空间，我们都有$\varPi^{}_1\qty(\mathbb RP^{n\ge2})\cong\mathbb Z^{}_2$，顶读者自行计算。\\
+\\
+在计算了环面和二维实射影空间的基本群后，我们当然希望能计算任意闭曲面的基本群。但这里有一个绕不过去的问题，
 
 
 
@@ -15063,21 +15159,7 @@ $$(f^{-1}\circ f)^{}_\pi=\qty(id^{}_X)^{}_\pi=f^{-1}_\pi\circ f^{}_\pi,$$
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection{高维同伦群}\label{Ffg884tb}
 
 
 
@@ -15154,11 +15236,15 @@ $$f: X\to B,\quad \tilde f: X\to E=B\times F.$$
 \begin{equation}\begin{tikzcd}[row sep=2cm,column sep=2cm]& E \arrow[d,"\pi"] \\X \arrow[r,"f"] \arrow[ur,"\tilde f"] & B \end{tikzcd}.\end{equation}
 参考\cite{CV25--}的定理$5.1$，这个提升是唯一确定的，称为\textbf{提升唯一性}，若$X$连通，且$\exists x\in X$使得所有提升在该点处的值相等。由此我们可以构造该映射的同伦$H:X\times I\to B$的提升$\tilde H$如下
 \begin{equation}H(x,0)=\pi\circ \tilde f(x)=f(x)\implies \tilde H(x,0)=\tilde f(x),\quad \forall x\in B.\label{fcw4rCV}\end{equation}
-这个提升是唯一确定的，称为\textbf{同伦提升定理}。这一概念的应用是道路类的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条路径。令其起点为$f(0)=b$，则根据唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$，一个直观的证明请参考第\ref{twtg40][]}节。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
+这个提升是唯一确定的，称为\textbf{同伦提升定理}。这一概念的应用是道路类的提升，令$X=[0,1]=I$，则$f$就是$B$上的一条道路。令其起点为$f(0)=b$，则根据提升唯一性定理，在$E$上必然存在一个唯一的\textbf{道路提升}$\tilde f:[0,1]\to E$，使得$\tilde f(0)\in F(b)$，一个直观的证明请参考第\ref{twtg40][]}节。于是容易证明，$B$上的定端同伦也可以唯一的提升到$E$上
 \begin{equation}\forall f,g:[0,1]\to B,\quad f\,\dt{\cong}\,g\implies \tilde f\,\dt{\cong}\,\tilde g.\end{equation}
 需要强调的是，由于覆叠映射是满射，因此一条闭合回路$f(0)=(1)$在提升后并不能保证$\tilde f(0)=\tilde f(1)$。一般而言，$B$的一个闭路类$\expval{\alpha}$在提升后只会得到$E$中的一个普通道路类$\expval{\tilde\alpha}$，我们只能确定$\pi\circ\tilde\alpha(0)=\alpha(0)$。令起点为$\tilde\alpha(0)=a\in F(\pi(a))$，相应的道路类集合
-$$L(a)=\qty{\expval{\tilde\alpha}\middle\vert \tilde\alpha(0)=a,\quad \tilde\alpha(1)\in F(\pi(a))},$$
-自然的有$\pi^{}_*(L(a))=\Pi^{}_1(B,\pi(a))$。因为$\Pi^{}_1(E,a)\subset L(a)$，因此我们得到$\pi^{}_*:\Pi^{}_1(E,a)\to \Pi^{}_1(B,\pi(a))$是单射，记为$K^{}_a=\pi^{}_*\qty(\Pi^{}_1(E,a))$。由于一个闭路类可以在一个连通空间中任意移动而不破坏其数学结构，因此集合$\qty{K^{}_a\middle\vert a\in F(\pi(a))}$构成$\Pi^{}_1(B,\pi(a))$的子群共轭类。进一步的，若将$\pi$换成任意的连续映射$f: X\to B$且$X$道路连通，则存在其提升$\tilde f$使得
+$$L(a)=\qty{\expval{\tilde\alpha}\middle\vert \tilde\alpha(0)=a,\tilde\alpha(1)\in F(\pi(a))},$$
+自然的，我们有群同构$\pi^{}_\tau(L(a))=\Pi^{}_1(B,\pi(a))$。以此我们可以计算$S^1$的基本群，令覆叠为$\pi:\mathbb R\to S^1$，具体为$\pi(t)=\exp(i2\pi t)$。将$S^1$上的闭路写为$f(t)=\exp(2i\pi nt)$，因此定义其唯一提升为$\tilde{f}(t)=nt$，于是基本群给出
+$$L(a)=\mathbb Z\implies \pi^{}_\tau(\mathbb Z)=\mathbb Z=\Pi^{}_1\qty(S^1,a)=\Pi^{}_1\qty(S^1).$$
+这就回到结论(\ref{FFwrtegWE})，可见在覆叠空间下计算是更为方便的。因为$\Pi^{}_1(E,a)\subset L(a)$，因此我们得到
+$$\pi^{}_\tau:\Pi^{}_1(E,a)\to \Pi^{}_1(B,\pi(a))$$
+是单射同态，记为$K^{}_a=\pi^{}_\tau\qty(\Pi^{}_1(E,a))$。由于一个闭路类可以在一个连通空间中任意移动且同构(\ref{DfgGGH3E4})，因此集合$\qty{K^{}_a\middle\vert a\in F(\pi(a))}$构成$\Pi^{}_1(B,\pi(a))$的子群共轭类。进一步的，若将$\pi$换成任意的连续映射$f: X\to B$且$X$道路连通，则存在其提升$\tilde f$使得
 \begin{equation}\forall x\in X,\quad f(x)=b\in B,\quad \tilde f(x)=a\in F(b)\iff f^{}_*\Pi^{}_1(X,x)\subset K^{}_a.\end{equation}
 这称为\textbf{映射提升定理}，由此可以得到$S^{n\geq 2}$到$S^1$只有一个映射同伦类。现在假设同一个底空间$B$上定义有两个覆叠空间$(E^{}_1,B,\pi^{}_1)$和$(E^{}_2,B,\pi^{}_2)$，两者之间的同态是一个连续映射$h:E^{}_1\to E^{}_2$，满足
 \begin{equation}\pi^{}_2\circ h=\pi^{}_1.\end{equation}
@@ -15187,6 +15273,7 @@ $$\varPi^{}_1\qty(\mathbb RP^{n\ge2})=\mathbb Z^{}_2=F(b).$$
 万有覆叠的万有性在于，它是同一个底空间上最大的覆叠空间。设$\qty(\tilde E,B,\tilde\pi)$是万有覆叠，$(E,B,\pi)$是任意覆叠，则存在覆叠映射$\varpi:\tilde E\to E$使得
 \begin{equation}\pi\circ\varpi=\tilde\pi\end{equation}
 从提升的角度，这说明$\varpi$是万有覆叠的提升，从而任意覆叠都可以从万有覆叠提升得到，因此万有覆叠是虽有覆叠空间的覆叠。从拓扑学的角度，我们只需要计算出万有覆叠，就能得到该底空间的所有覆叠结构，这在连续群的情形下非常有用。
+
 \subsubsection{局部平凡性和单值性}\label{twtg40][]}
 \noindent 上文中我们简要的介绍了覆叠空间，引入了局部平凡性这个概念，并建立了道路提升的唯一性。当然我们也提到，事实上全局平凡空间是极为特殊的，上述拓扑分析应当限制在局部平凡空间内。通过对前文拓扑结构的重新审视，我们便可以得到全局平凡性的判据，并将其和提升的唯一性关联。\\
 \\
@@ -15281,14 +15368,14 @@ $$\zeta^{}_m(m)=a,\quad \forall m\in F(p),$$
 但在主丛上，纤维间的移动由联络确定，也就是平行移动，此时单值性就由联络沿闭路的叠加给出，而单值性群给出和乐群，在第\ref{CadFHHG}节中会有介绍。联络取值在\textsl{Lie}代数上，对于非\textsl{Abel}的群，式(\ref{527++3.})对联络的逐点有序乘积就给出\textsl{Wilson}环，这些都是计算单值性群的有利手段。
 
 \subsubsection{同伦群的长正合序列}
-\noindent 在第\ref{xi5sdfg5400}节中，我们详细分析了覆叠空间的基本群$\varPi^{}_1$ 与单值性结构，现在我们将视角推广到任意维同伦群$\varPi^{}_n$。在第\ref{234200.05}节中，我们通过对闭路映射的推广，得到了高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
+\noindent 在第\ref{xi5sdfg5400}节中，我们详细分析了覆叠空间的基本群$\varPi^{}_1$ 与单值性结构，现在我们将视角推广到任意维同伦群$\varPi^{}_n$。在第\ref{Ffg884tb}节中，我们通过对闭路映射的推广，得到了高维基本群，它是$S^n$到连通拓扑空间$X$的同伦类
 $$\varPi^{}_n\qty(X,x^{}_0)=\qty{\expval{f}\middle\vert f\simeq g:S^n\to X,\ f(\ast)=x^{}_0}=\qty[S^n,X],$$
 其中$\ast\in S^n$为基点$x^{}_0$在球面上的对应点。基于覆叠空间的映射关系(\ref{ERGDFG10})
 $$F\xrightarrow{i}E\xrightarrow{\pi}B,$$
 我们自然的得到一个正合列的一部分
-\begin{equation}\varPi^{}_n(F,a)\xrightarrow{i^{}_*} \varPi^{}_n(E,a)\xrightarrow{\pi^{}_*} \varPi^{}_n(B,p).\label{24BNh---}\end{equation}
-其中$\varPi^{}_n(F,a)=\eval{\varPi^{}_n(E,a)}_F$是全空间基本群在纤维上的限制，$a\in F(p)$，$i^{}_*$和$\pi^{}_*$是嵌入映射和覆叠映射相应的群诱导映射，满足$\Im i^{}_*=\ker\pi^{}_*$。这不难证明，以下是一个简单的思路：
-\begin{itemize}\item$\Im i^{}_*\subset\ker\pi^{}_*=\pi^{-1}_*(p):\forall \expval{\gamma}\in\varPi^{}_n(F,a),\quad i^{}_*\expval{\gamma}(t)\in F(p),\quad \forall t\in S^n\implies \pi^{}_*\qty(i^{}_*\expval{\gamma})=p.$\item$\ker\pi^{}_*\subset\Im i^{}_*:\forall \expval{\alpha}\in\ker\pi^{}_*=\pi^{-1}_*(p),\quad \expval{\alpha}(t)\in F(p),\quad \forall t\in S^n\implies \expval{\alpha}\in\Im i^{}_*.$
+\begin{equation}\varPi^{}_n(F,a)\xrightarrow{i^{}_*} \varPi^{}_n(E,a)\xrightarrow{\pi^{}_\tau} \varPi^{}_n(B,p).\label{24BNh---}\end{equation}
+其中$\varPi^{}_n(F,a)=\eval{\varPi^{}_n(E,a)}_F$是全空间基本群在纤维上的限制，$a\in F(p)$，$i^{}_*$和$\pi^{}_\tau$是嵌入映射和覆叠映射相应的群诱导映射，满足$\Im i^{}_*=\ker\pi^{}_\tau$。这不难证明，以下是一个简单的思路：
+\begin{itemize}\item$\Im i^{}_*\subset\ker\pi^{}_\tau=\pi^{-1}_*(p):\forall \expval{\gamma}\in\varPi^{}_n(F,a),\quad i^{}_*\expval{\gamma}(t)\in F(p),\quad \forall t\in S^n\implies \pi^{}_\tau\qty(i^{}_*\expval{\gamma})=p.$\item$\ker\pi^{}_\tau\subset\Im i^{}_*:\forall \expval{\alpha}\in\ker\pi^{}_\tau=\pi^{-1}_*(p),\quad \expval{\alpha}(t)\in F(p),\quad \forall t\in S^n\implies \expval{\alpha}\in\Im i^{}_*.$
 \end{itemize}
 现在我们的目标是计算出这一部分前后的群，为此不妨回到最初的构造。根据定义$S^n\cong I^n/\partial l^n$是将$I^n$的边界$\partial I^n$缩为基点$\ast$得到的，因此一个高维同伦类也可以看作基点映射
 \begin{equation}\forall \expval{\gamma}\in \varPi^{}_n(B,p),\quad \gamma:\qty(I^n/\partial l^n,\ast)\to (B,p),\quad \gamma\qty(\partial I^n)=p.\end{equation}
@@ -15302,28 +15389,28 @@ $$\tilde\gamma\qty(\partial I^n)\subset\pi^{-1}\qty[\gamma\qty(\partial I^n)]=F(
 \\
 我们进一步来分析边缘算子的性质。比如考察核空间$\ker\partial^{}_*$，其元素为
 $$\ker\partial^{}_*=\qty{\expval{\gamma}\middle\vert\partial^{}_*(\expval{\gamma})=a}\implies\tilde\gamma\qty(\partial I^n)=a.$$
-这和单值性类似，进而我们可以将其推广为映射$\tilde\gamma: S^n\to E$，使得$\pi\circ\expval{\tilde\gamma}=\expval{\gamma}$，于是$\ker\partial^{}_*\subset\Im \pi^{}_*$。反之证明类似，可以得到$\Im \pi^{}_*\subset\ker\partial^{}_*$，从而我们得到
-\begin{equation}\Im \pi^{}_*=\ker\partial^{}_*.\end{equation}
+这和单值性类似，进而我们可以将其推广为映射$\tilde\gamma: S^n\to E$，使得$\pi\circ\expval{\tilde\gamma}=\expval{\gamma}$，于是$\ker\partial^{}_*\subset\Im \pi^{}_\tau$。反之证明类似，可以得到$\Im \pi^{}_\tau\subset\ker\partial^{}_*$，从而我们得到
+\begin{equation}\Im \pi^{}_\tau=\ker\partial^{}_*.\end{equation}
 于是我们得到序列(\ref{24BNh---})右侧的正合部分，正合性定义参考式(\ref{v235GGH5.})
-\begin{equation}\varPi^{}_n(E,a)\xrightarrow{\pi^{}_*} \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*}\varPi^{}_{n-1}(F,a).\end{equation}
+\begin{equation}\varPi^{}_n(E,a)\xrightarrow{\pi^{}_\tau} \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*}\varPi^{}_{n-1}(F,a).\end{equation}
 因为$\varPi^{}_{n-1}(F,a)$同样可以诱导一个自然正合列$\varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a)$，因此我们现在来看边缘算子的像$\Im\partial^{}_*$。对于$\expval{\gamma}\in\varPi^{}_n(B,p)$，我们计算
 $$i^{}_*\qty(\partial^{}_*\expval{\gamma})=i^{}_*\expval{\eval{\tilde\gamma}_{\partial I^n}}=\expval{\eval{i\circ\tilde\gamma}_{\partial I^n}}=a,$$
 其中$i\circ\tilde\gamma$为$E$中的映射提升，但其限制在边缘上按照同伦类的定义只能给出基点，因此$\Im\partial^{}_*\subset\ker i^{}_*$。反之亦然，这里我们就略过了，请读者参考\cite{LdnbPF}定理$225.6$的证明，这里直接给出结论$\ker i^{}_*\subset\Im\partial^{}_*$。于是我们得到
 \begin{equation}\ker i^{}_*=\Im\partial^{}_*\implies \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*}\varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a).\end{equation}
 这样我们就得到三个正合关系
-\begin{enumerate}\item $\Im i^{}_*=\ker\pi^{}_*$；\item $\Im \pi^{}_*=\ker\partial^{}_*$；\item $\ker i^{}_*=\Im\partial^{}_*$。\end{enumerate}
+\begin{enumerate}\item $\Im i^{}_*=\ker\pi^{}_\tau$；\item $\Im \pi^{}_\tau=\ker\partial^{}_*$；\item $\ker i^{}_*=\Im\partial^{}_*$。\end{enumerate}
 这些关系对任意维的同伦群都适用，因此我们得到一个长正合序列，形式由式(\ref{Sd[v56==-})确定
-\begin{equation}\cdots\xrightarrow{i^{}_*} \varPi^{}_n(E,a)\xrightarrow{\pi^{}_*} \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*} \varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a)\xrightarrow{\pi^{}_*}\cdots.\end{equation}
+\begin{equation}\cdots\xrightarrow{i^{}_*} \varPi^{}_n(E,a)\xrightarrow{\pi^{}_\tau} \varPi^{}_n(B,p)\xrightarrow{\partial^{}_*} \varPi^{}_{n-1}(F,a)\xrightarrow{i^{}_*} \varPi^{}_{n-1}(E,a)\xrightarrow{\pi^{}_\tau}\cdots.\end{equation}
 其中$a\in F(p)$。这也称为\textbf{\textsl{Serre}序列}，是计算纤维丛同伦群最强大的工具。事实上在上述证明中，我们并未用到任何覆叠空间的离散性，因此\textsl{Serre}序列也适用于纤维丛。这一推广在物理中极为重要，是研究拓扑缺陷、瞬子以及异常的核心工具。我们将在第\ref{CadFHHG}节中看到，当引入联络后，这一代数信息进一步与微分几何的曲率联系起来。\\
 \\
 现在让我们考察覆叠空间的具体情形。因为纤维$F(p)$是离散点集，因此它没有高维同伦群$\varPi^{}_{n\ge1}(f)=0$，而其零维同伦群是纤维的连通分支集合，也就是其本身
 \begin{equation}\varPi^{}_0(F)=\qty{\expval{f}:S^0=\qty{1,-1}\to F}\cong F.\end{equation}
 当$n=1$时，序列退化为
-\begin{equation}0=\varPi^{}_1(F)\xrightarrow{i^{}_*}\varPi^{}_1(E)\xrightarrow{\pi^{}_*}\varPi^{}_1(B)\xrightarrow{\partial^{}_*}\varPi^{}_0(F)\xrightarrow{i^{}_*} \varPi^{}_0(E)\xrightarrow{\pi^{}_*}\varPi^{}_0(B)\to 0.\end{equation}
-根据正合性此时$\varPi^{}_1$群部分的$\pi^{}_*$是单射，这也就是第\ref{xi5467uh5400}节中，我们通过对道路提升的分析，得到的底空间和全空间基本群之间的结论：$\pi^{}_*\qty(\varPi^{}_1(E,a))$是$\varPi^{}_1(B,p)$的子群。同时$\partial^{}_*$根据定义给出
+\begin{equation}0=\varPi^{}_1(F)\xrightarrow{i^{}_*}\varPi^{}_1(E)\xrightarrow{\pi^{}_\tau}\varPi^{}_1(B)\xrightarrow{\partial^{}_*}\varPi^{}_0(F)\xrightarrow{i^{}_*} \varPi^{}_0(E)\xrightarrow{\pi^{}_\tau}\varPi^{}_0(B)\to 0.\end{equation}
+根据正合性此时$\varPi^{}_1$群部分的$\pi^{}_\tau$是单射，这也就是第\ref{xi5467uh5400}节中，我们通过对道路提升的分析，得到的底空间和全空间基本群之间的结论：$\pi^{}_\tau\qty(\varPi^{}_1(E,a))$是$\varPi^{}_1(B,p)$的子群。同时$\partial^{}_*$根据定义给出
 \begin{equation}\partial^{}_*\expval{\gamma}=\expval{\tilde\gamma\qty(\partial I^1)}=\expval{\tilde\gamma}(1)-\expval{\tilde\gamma}(0),\label{DgbY,,.}\end{equation}
 这是闭路类的提升在纤维上的始末点差，是单值性映射的雏形。而序列的终止处说明$\varPi^{}_0(E)\cong\varPi^{}_0(B)$，这是显然的因为$\pi$是满射且局部同胚。当$n\ge 2$时，注意$\varPi^{}_{n\ge1}(f)=0$则长正合序列变为
-\begin{equation}0=\varPi^{}_n(F)\xrightarrow{i^{}_*} \varPi^{}_n(E)\xrightarrow{\pi^{}_*} \varPi^{}_n(B)\xrightarrow{\partial^{}_*}0.\end{equation}
+\begin{equation}0=\varPi^{}_n(F)\xrightarrow{i^{}_*} \varPi^{}_n(E)\xrightarrow{\pi^{}_\tau} \varPi^{}_n(B)\xrightarrow{\partial^{}_*}0.\end{equation}
 由此立即得到同构
 \begin{equation}\pi_*:\varPi^{}_n(E)\xrightarrow{\cong} \varPi^{}_n(B),\quad \forall n\ge 2.\end{equation}
 这一结果的几何含义是，覆叠映射完全保留了所有高阶同伦信息。以万有覆叠为例，设$\qty(E,B,\pi)$为$B$的万有覆叠，则$\varPi^{}_1(E)=0$，长正合序列退化为
@@ -15337,9 +15424,9 @@ $$i^{}_*\qty(\partial^{}_*\expval{\gamma})=i^{}_*\expval{\eval{\tilde\gamma}_{\p
 其中$\varPi^{}_0(F)$被视为将基点$a$看作单位元的群。这一视角将此前转移函数沿闭路的路径有序乘积的几何描述，完全纳入了同伦论的正合框架。\\
 \\
 作为应用，我们利用长正合序列计算\textsl{Hopf}纤维化$S^1\hookrightarrow S^3\to S^2$的同伦群。写出序列的片段：
-\begin{equation}\varPi^{}_2\qty(S^1)\xrightarrow{i^{}_*}\varPi^{}_2\qty(S^3)\xrightarrow{\pi^{}_*}\varPi^{}_2(S^2)\xrightarrow{\partial^{}_*} \varPi^{}_1\qty(S^1)\xrightarrow{i^{}_*}\varPi^{}_1(S^3).\end{equation}
+\begin{equation}\varPi^{}_2\qty(S^1)\xrightarrow{i^{}_*}\varPi^{}_2\qty(S^3)\xrightarrow{\pi^{}_\tau}\varPi^{}_2(S^2)\xrightarrow{\partial^{}_*} \varPi^{}_1\qty(S^1)\xrightarrow{i^{}_*}\varPi^{}_1(S^3).\end{equation}
 已知$\varPi^{}_2\qty(S^1)=0$，$\varPi^{}_1\qty(S^3)=0$，$\varPi^{}_1\qty(S^1)\cong\mathbb Z$。于是序列正合退化为
-\begin{equation}0\longrightarrow \varPi^{}_2\qty(S^3)\xrightarrow{\pi^{}_*}\varPi^{}_2\qty(S^2)\xrightarrow{\partial^{}_*}\mathbb Z\longrightarrow 0.\end{equation}
+\begin{equation}0\longrightarrow \varPi^{}_2\qty(S^3)\xrightarrow{\pi^{}_\tau}\varPi^{}_2\qty(S^2)\xrightarrow{\partial^{}_*}\mathbb Z\longrightarrow 0.\end{equation}
 不难证明$\varPi^{}_2(S^3)=0$，则 $\partial^{}_*$是同构，从而$\varPi^{}_2(S^2)\cong\mathbb Z$。这正是\textsl{Hopf}纤维化作为示性类载体的拓扑根源：边缘同态$\partial^{}_*$ 的非平凡性直接反映了纤维丛的扭曲程度。事实上，$\partial^{}_*$正是第一\textsl{Chern}类$c^{}_1$在同伦层面的体现，两者互为对偶关系。类似的对于$n=3$，我们可以得到
 $$\varPi^{}_3\qty(S^3)\cong\varPi^{}_3\qty(S^2)\cong\mathbb Z,$$
 这是计算高维球面的高维同伦群$\varPi^{}_n\qty(S^m)$在$n>m$时的一个重要的方法。\\
