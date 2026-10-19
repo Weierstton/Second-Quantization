@@ -65,7 +65,22 @@ Generally focus on the statistical field theory, and little calculation of the s
 
 For now it's the *first version*, totally in Chinese, and in article class. 
 
-Second version will change dramatically the structure, and of course the prerequisites, considering the amount is enormous for beginners. Also adding more group theories, in the purpose concering the importance of symmetry study. 
+Second version will change dramatically the structure, and of course the prerequisites, considering the amount is enormous for beginners. 
+
+Current plan for the second version:
+
+Chapters of the main text
+1. Foundations of Quantum Mechanics and Elements of Differential Geometry.
+2. Canonical Second Quantization and the Quantization of the Electromagnetic Field.
+3. Statistical and Classical Equilibrium Phase Transitions.
+4. Free Fields and Their Statistical Theory.
+5. Second Quantization from a Geometric Perspective.
+6. Interaction field.
+7. Renormalization and Critical Theory.
+8. Gravitational Fields and Classical Black Hole Physics.
+9. An Introduction to the Quantization of Gravity.
+
+Chapters of the appendix stays the same, with slight changes into the main text, including that the fiber bubdles will go into Chapter 5 as the base of the geometrical quantization.
 
 ## Latest update
 
@@ -77,7 +92,7 @@ Appendix for homotopy theory, basic definition and the fundamental group with de
 
 
 
-Dirac field coupling with external field with effective analyse, and statistical dissipation theory coming next.
+Object field coupling with external thermal fields, and thermal field dynamics coming next.
 
 
 
