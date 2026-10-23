@@ -82,17 +82,29 @@ Chapters of the main text
 
 Chapters of the appendix stays the same, with slight changes into the main text, including that the fiber bubdles will go into Chapter 5 as the base of the geometrical quantization.
 
+1. Translation of a paper by Firez-Pauli on arbitary spin particles. (Not included in english version)
+2. Algebraic topology basics and Feynman diagram analysis.
+3. Geometric structure of matrix perturbation theory.
+4. Non-equilibrum statistics.
+5. Brief introduction on stochastic differential geometry.
+6. Dynamic phase transition.
+7. Supplementary on continuum mechanics.
+8. Effective field theory of turbulence.
+9. Introduction to topological field theory.
+10. Black hole thermodynamics.
+11. Conformal field theory and holographic theory.
+
+
 ## Latest update
 
 The first insight into the effective field theory, with application of Dirac field coupling with electromagnetic field.
 
 Arrangement of the quantum phase transition, included in the QFT application of the condensed matter theory.
 
-Appendix for homotopy theory, basic definition and the fundamental group with definition + calculation. 
+Appendix for homotopy theory, homotopy groups with definition + calculation. 
 
 
-
-Object field coupling with external thermal fields, and thermal field dynamics coming next.
+Object field coupling with external thermal fields, degree of mappings, and thermal field dynamics coming next.
 
 
 
