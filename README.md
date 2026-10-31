@@ -99,12 +99,12 @@ Chapters of the appendix stays the same, with slight changes into the main text,
 
 The first insight into the effective field theory, with application of Dirac field coupling with electromagnetic field.
 
-Arrangement of the quantum phase transition, included in the QFT application of the condensed matter theory.
+Introduction of algbraic BRST theory and chirality gauge transformation within the frame of the electromagnetic field. 
 
-Appendix for homotopy theory, homotopy groups with definition + calculation. 
+Appendix for homotopy theory, the degree of mappings, start of the braids and knots. 
 
 
-Object field coupling with external thermal fields, degree of mappings, and thermal field dynamics coming next.
+Object field coupling with external thermal fields, thermal field dynamics and the linear response theory coming next.
 
 
 

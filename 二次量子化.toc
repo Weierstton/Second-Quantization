@@ -208,69 +208,71 @@
 \contentsline {subsection}{\numberline {13.4}与外场的耦合理论}{687}{subsection.13.4}%
 \contentsline {subsubsection}{\numberline {13.4.1}标量场和外场的耦合}{687}{subsubsection.13.4.1}%
 \contentsline {subsubsection}{\numberline {13.4.2}Dirac场和外场的耦合}{693}{subsubsection.13.4.2}%
-\contentsline {subsubsection}{\numberline {13.4.3}Euler-Heisenberg有效理论}{694}{subsubsection.13.4.3}%
-\contentsline {subsubsection}{\numberline {13.4.4}热场中的耦合}{694}{subsubsection.13.4.4}%
-\contentsline {subsubsection}{\numberline {13.4.5}热场动力学引入}{694}{subsubsection.13.4.5}%
-\contentsline {subsection}{\numberline {13.5}电磁散射的量子化}{694}{subsection.13.5}%
-\contentsline {subsubsection}{\numberline {13.5.1}类氢原子和光的经典相互作用}{694}{subsubsection.13.5.1}%
-\contentsline {subsubsection}{\numberline {13.5.2}Compton散射}{694}{subsubsection.13.5.2}%
-\contentsline {subsection}{\numberline {13.6}电磁辐射修正}{694}{subsection.13.6}%
-\contentsline {subsubsection}{\numberline {13.6.1}真空极化的费米圈图计算}{694}{subsubsection.13.6.1}%
-\contentsline {subsubsection}{\numberline {13.6.2}电子的自能}{694}{subsubsection.13.6.2}%
-\contentsline {subsubsection}{\numberline {13.6.3}顶角修正}{694}{subsubsection.13.6.3}%
-\contentsline {subsection}{\numberline {13.7}基本粒子模型引入}{694}{subsection.13.7}%
-\contentsline {subsubsection}{\numberline {13.7.1}Yang-Mills理论}{694}{subsubsection.13.7.1}%
-\contentsline {subsubsection}{\numberline {13.7.2}Glashow-Salam-Weinberg电弱理论}{694}{subsubsection.13.7.2}%
-\contentsline {subsubsection}{\numberline {13.7.3}Gell-Mann强相互作用和QCD}{694}{subsubsection.13.7.3}%
-\contentsline {subsubsection}{\numberline {13.7.4}汤川耦合和粒子标准模型}{694}{subsubsection.13.7.4}%
-\contentsline {subsection}{\numberline {13.8}凝聚态量子场论}{694}{subsection.13.8}%
-\contentsline {subsubsection}{\numberline {13.8.1}固体中的BCS理论}{694}{subsubsection.13.8.1}%
-\contentsline {subsubsection}{\numberline {13.8.2}量子Ising模型}{694}{subsubsection.13.8.2}%
-\contentsline {subsubsection}{\numberline {13.8.3}量子相变引入}{694}{subsubsection.13.8.3}%
-\contentsline {subsubsection}{\numberline {13.8.4}随机量子Ising模型}{694}{subsubsection.13.8.4}%
-\contentsline {subsubsection}{\numberline {13.8.5}BKT相变和Sine-Gordon场论}{694}{subsubsection.13.8.5}%
-\contentsline {section}{\numberline {14}近平衡态的线性响应与耗散}{695}{section.14}%
-\contentsline {subsection}{\numberline {14.1}非相对论性时间线性响应}{695}{subsection.14.1}%
-\contentsline {subsubsection}{\numberline {14.1.1}热力学系统的响应}{695}{subsubsection.14.1.1}%
-\contentsline {subsubsection}{\numberline {14.1.2}响应函数的解析性质}{696}{subsubsection.14.1.2}%
-\contentsline {subsubsection}{\numberline {14.1.3}响应的量子表述}{697}{subsubsection.14.1.3}%
-\contentsline {subsubsection}{\numberline {14.1.4}Kubo公式}{697}{subsubsection.14.1.4}%
-\contentsline {subsection}{\numberline {14.2}耗散的统计性质}{697}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}零温场的响应}{697}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}热场的响应与耗散}{697}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}线性响应下的输运系数}{697}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}临界点附近的响应发散}{697}{subsection.14.6}%
-\contentsline {section}{\numberline {15}重整化和临界理论}{698}{section.15}%
-\contentsline {subsection}{\numberline {15.1}Casimir效应和截断频率}{698}{subsection.15.1}%
-\contentsline {subsection}{\numberline {15.2}Kadanoff实空间重整化}{698}{subsection.15.2}%
-\contentsline {subsubsection}{\numberline {15.2.1}晶格的块自旋}{698}{subsubsection.15.2.1}%
-\contentsline {subsubsection}{\numberline {15.2.2}经典Ising模型的空间重标度}{698}{subsubsection.15.2.2}%
-\contentsline {subsubsection}{\numberline {15.2.3}分形和临界几何}{698}{subsubsection.15.2.3}%
-\contentsline {subsubsection}{\numberline {15.2.4}KT流的空间重标度}{698}{subsubsection.15.2.4}%
-\contentsline {subsubsection}{\numberline {15.2.5}各向同性湍流的重整化}{698}{subsubsection.15.2.5}%
-\contentsline {subsection}{\numberline {15.3}圈图修正与动量重整化}{698}{subsection.15.3}%
-\contentsline {subsubsection}{\numberline {15.3.1}Feynman参数化公式的证明}{698}{subsubsection.15.3.1}%
-\contentsline {subsection}{\numberline {15.4}Wilson重整化群理论}{698}{subsection.15.4}%
-\contentsline {subsection}{\numberline {15.5}自发对称性破缺和Higgs机制}{698}{subsection.15.5}%
-\contentsline {subsection}{\numberline {15.6}实标量场的临界指数}{698}{subsection.15.6}%
-\contentsline {subsection}{\numberline {15.7}有效场论的一般框架}{698}{subsection.15.7}%
-\contentsline {subsection}{\numberline {15.8}共形场论引入}{698}{subsection.15.8}%
-\contentsline {section}{\numberline {16}非欧几何与引力场}{699}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Riemann几何概览}{699}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}辛几何与约束分析}{699}{subsection.16.2}%
-\contentsline {subsection}{\numberline {16.3}Einstein引力场论}{699}{subsection.16.3}%
-\contentsline {subsubsection}{\numberline {16.3.1}背景引力场中的介质和热力学}{699}{subsubsection.16.3.1}%
-\contentsline {subsection}{\numberline {16.4}经典黑洞理论}{699}{subsection.16.4}%
-\contentsline {subsection}{\numberline {16.5}相对论宇宙学}{699}{subsection.16.5}%
-\contentsline {subsubsection}{\numberline {16.5.1}原初宇宙的扰动}{699}{subsubsection.16.5.1}%
-\contentsline {section}{\numberline {17}弯曲时空中的量子场}{700}{section.17}%
-\contentsline {subsection}{\numberline {17.1}引力波场的二次量子化}{700}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}相对论性热场动力学}{700}{subsection.17.2}%
-\contentsline {subsection}{\numberline {17.3}Rindler时空与Unruh效应}{700}{subsection.17.3}%
-\contentsline {subsection}{\numberline {17.4}背景时空的二次量子化}{700}{subsection.17.4}%
-\contentsline {subsection}{\numberline {17.5}有效引力场论}{700}{subsection.17.5}%
-\contentsline {subsection}{\numberline {17.6}暴涨宇宙的有效场论}{700}{subsection.17.6}%
-\contentsline {subsection}{\numberline {17.7}黑洞辐射与视界动力学}{700}{subsection.17.7}%
+\contentsline {subsubsection}{\numberline {13.4.3}Euler-Heisenberg有效理论}{699}{subsubsection.13.4.3}%
+\contentsline {subsubsection}{\numberline {13.4.4}热场中的耦合}{699}{subsubsection.13.4.4}%
+\contentsline {subsubsection}{\numberline {13.4.5}热场动力学引入}{699}{subsubsection.13.4.5}%
+\contentsline {subsection}{\numberline {13.5}电磁散射的量子化}{699}{subsection.13.5}%
+\contentsline {subsubsection}{\numberline {13.5.1}类氢原子和光的经典相互作用}{699}{subsubsection.13.5.1}%
+\contentsline {subsubsection}{\numberline {13.5.2}Compton散射}{699}{subsubsection.13.5.2}%
+\contentsline {subsection}{\numberline {13.6}电磁辐射修正}{699}{subsection.13.6}%
+\contentsline {subsubsection}{\numberline {13.6.1}真空极化的费米圈图计算}{699}{subsubsection.13.6.1}%
+\contentsline {subsubsection}{\numberline {13.6.2}电子的自能}{699}{subsubsection.13.6.2}%
+\contentsline {subsubsection}{\numberline {13.6.3}顶角修正}{699}{subsubsection.13.6.3}%
+\contentsline {subsection}{\numberline {13.7}基本粒子模型引入}{699}{subsection.13.7}%
+\contentsline {subsubsection}{\numberline {13.7.1}Yang-Mills规范场}{699}{subsubsection.13.7.1}%
+\contentsline {subsection}{\numberline {13.8}局域规范变换的BRST理论}{699}{subsection.13.8}%
+\contentsline {subsubsection}{\numberline {13.8.1}Glashow-Salam-Weinberg电弱理论}{701}{subsubsection.13.8.1}%
+\contentsline {subsubsection}{\numberline {13.8.2}Gell-Mann强相互作用和QCD}{701}{subsubsection.13.8.2}%
+\contentsline {subsubsection}{\numberline {13.8.3}汤川耦合和粒子标准模型}{701}{subsubsection.13.8.3}%
+\contentsline {subsection}{\numberline {13.9}凝聚态量子场论}{701}{subsection.13.9}%
+\contentsline {subsubsection}{\numberline {13.9.1}固体中的BCS理论}{701}{subsubsection.13.9.1}%
+\contentsline {subsubsection}{\numberline {13.9.2}量子Ising模型}{701}{subsubsection.13.9.2}%
+\contentsline {subsubsection}{\numberline {13.9.3}量子相变引入}{701}{subsubsection.13.9.3}%
+\contentsline {subsubsection}{\numberline {13.9.4}随机量子Ising模型}{701}{subsubsection.13.9.4}%
+\contentsline {subsubsection}{\numberline {13.9.5}BKT相变和Sine-Gordon场论}{701}{subsubsection.13.9.5}%
+\contentsline {section}{\numberline {14}近平衡态的线性响应与耗散}{702}{section.14}%
+\contentsline {subsection}{\numberline {14.1}非相对论性时间线性响应}{702}{subsection.14.1}%
+\contentsline {subsubsection}{\numberline {14.1.1}热力学系统的响应}{702}{subsubsection.14.1.1}%
+\contentsline {subsubsection}{\numberline {14.1.2}响应函数的解析性质}{703}{subsubsection.14.1.2}%
+\contentsline {subsubsection}{\numberline {14.1.3}响应的量子表述}{704}{subsubsection.14.1.3}%
+\contentsline {subsubsection}{\numberline {14.1.4}Kubo公式}{704}{subsubsection.14.1.4}%
+\contentsline {subsection}{\numberline {14.2}耗散的统计性质}{704}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}零温场的响应}{704}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}热场的响应与耗散}{704}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}线性响应下的输运系数}{704}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}临界点附近的响应发散}{704}{subsection.14.6}%
+\contentsline {section}{\numberline {15}重整化和临界理论}{705}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Casimir效应和截断频率}{705}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Kadanoff实空间重整化}{705}{subsection.15.2}%
+\contentsline {subsubsection}{\numberline {15.2.1}晶格的块自旋}{705}{subsubsection.15.2.1}%
+\contentsline {subsubsection}{\numberline {15.2.2}经典Ising模型的空间重标度}{705}{subsubsection.15.2.2}%
+\contentsline {subsubsection}{\numberline {15.2.3}分形和临界几何}{705}{subsubsection.15.2.3}%
+\contentsline {subsubsection}{\numberline {15.2.4}KT流的空间重标度}{705}{subsubsection.15.2.4}%
+\contentsline {subsubsection}{\numberline {15.2.5}各向同性湍流的重整化}{705}{subsubsection.15.2.5}%
+\contentsline {subsection}{\numberline {15.3}圈图修正与动量重整化}{705}{subsection.15.3}%
+\contentsline {subsubsection}{\numberline {15.3.1}Feynman参数化公式的证明}{705}{subsubsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.4}Wilson重整化群理论}{705}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}自发对称性破缺和Higgs机制}{705}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}实标量场的临界指数}{705}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}有效场论的一般框架}{705}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}共形场论引入}{705}{subsection.15.8}%
+\contentsline {section}{\numberline {16}非欧几何与引力场}{706}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Riemann几何概览}{706}{subsection.16.1}%
+\contentsline {subsubsection}{\numberline {16.1.1}外代数和外形式场}{706}{subsubsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.2}辛几何与约束分析}{706}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Einstein引力场论}{706}{subsection.16.3}%
+\contentsline {subsubsection}{\numberline {16.3.1}背景引力场中的介质和热力学}{706}{subsubsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.4}经典黑洞理论}{706}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5}相对论宇宙学}{706}{subsection.16.5}%
+\contentsline {subsubsection}{\numberline {16.5.1}原初宇宙的扰动}{706}{subsubsection.16.5.1}%
+\contentsline {section}{\numberline {17}弯曲时空中的量子场}{707}{section.17}%
+\contentsline {subsection}{\numberline {17.1}引力波场的二次量子化}{707}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}相对论性热场动力学}{707}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}Rindler时空与Unruh效应}{707}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}背景时空的二次量子化}{707}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5}有效引力场论}{707}{subsection.17.5}%
+\contentsline {subsection}{\numberline {17.6}暴涨宇宙的有效场论}{707}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7}黑洞辐射与视界动力学}{707}{subsection.17.7}%
 \contentsline {section}{ 附录}{1}{section*.9}%
 \contentsline {section}{ \numberline {A}Fierz-Pauli论文的翻译}{2}{appendix.1.A}%
 \contentsline {subsection}{\numberline {\rmfamily I}引言}{2}{subsection.1.A.1}%
@@ -310,6 +312,9 @@
 \contentsline {subsubsection}{\numberline {B.3.5}de Rham上同调的发散理论}{65}{subsubsection.1.B.3.5}%
 \contentsline {subsection}{\numberline {B.4}重整化群的涌现}{65}{subsection.1.B.4}%
 \contentsline {subsubsection}{\numberline {B.4.1}nPI结构的几何本质}{65}{subsubsection.1.B.4.1}%
+\contentsline {subsubsection}{\numberline {B.4.2}de Rham外形式的重整化}{65}{subsubsection.1.B.4.2}%
+\contentsline {subsubsection}{\numberline {B.4.3}Kontsevich图复形理论}{65}{subsubsection.1.B.4.3}%
+\contentsline {subsubsection}{\numberline {B.4.4}重整化群和有效场论}{65}{subsubsection.1.B.4.4}%
 \contentsline {section}{ \numberline {C}纤维丛和示性类}{66}{appendix.1.C}%
 \contentsline {subsection}{\numberline {C.1}覆叠空间}{66}{subsection.1.C.1}%
 \contentsline {subsubsection}{\numberline {C.1.1}定义和其基本群}{66}{subsubsection.1.C.1.1}%
@@ -351,7 +356,7 @@
 \contentsline {subsubsection}{\numberline {C.7.3}Stiefel-Whitney类}{79}{subsubsection.1.C.7.3}%
 \contentsline {subsubsection}{\numberline {C.7.4}主丛上的代数示性类}{79}{subsubsection.1.C.7.4}%
 \contentsline {subsubsection}{\numberline {C.7.5}矢量丛的陈类}{79}{subsubsection.1.C.7.5}%
-\contentsline {subsubsection}{\numberline {C.7.6}陈类框架下的拓扑非平凡性和拓扑反常}{79}{subsubsection.1.C.7.6}%
+\contentsline {subsubsection}{\numberline {C.7.6}拓扑非平凡性和拓扑反常}{79}{subsubsection.1.C.7.6}%
 \contentsline {section}{ \numberline {D}矩阵微扰的几何结构}{80}{appendix.1.D}%
 \contentsline {subsection}{\numberline {D.1}定态本征方程的微扰}{80}{subsection.1.D.1}%
 \contentsline {subsubsection}{\numberline {D.1.1}定态本征方程的丛结构}{80}{subsubsection.1.D.1.1}%
@@ -361,15 +366,38 @@
 \contentsline {subsubsection}{\numberline {D.2.1}基本定义}{90}{subsubsection.1.D.2.1}%
 \contentsline {subsection}{\numberline {D.3}拓扑几何相}{92}{subsection.1.D.3}%
 \contentsline {subsection}{\numberline {D.4}连续谱补充说明}{92}{subsection.1.D.4}%
-\contentsline {section}{ \numberline {E}非平衡态统计}{93}{appendix.1.E}%
-\contentsline {section}{ \numberline {F}随机微分几何概论}{93}{appendix.1.F}%
-\contentsline {section}{ \numberline {G}相变的动态理论}{93}{appendix.1.G}%
-\contentsline {section}{ \numberline {H}连续介质力学补充}{93}{appendix.1.H}%
-\contentsline {section}{ \numberline {I}湍流的统计场论}{93}{appendix.1.I}%
-\contentsline {section}{ \numberline {J}拓扑量子场论引入}{93}{appendix.1.J}%
-\contentsline {subsection}{\numberline {J.1}Chern-Simons理论}{93}{subsection.1.J.1}%
-\contentsline {subsubsection}{\numberline {J.1.1}联络的Chern-Simons作用量}{93}{subsubsection.1.J.1.1}%
-\contentsline {subsubsection}{\numberline {J.1.2}扭结的环绕数}{93}{subsubsection.1.J.1.2}%
-\contentsline {section}{ \numberline {K}黑洞热力学}{93}{appendix.1.K}%
-\contentsline {section}{ \numberline {L}共形场论和全息原理}{93}{appendix.1.L}%
-\contentsline {section}{参考文献}{94}{section*.12}%
+\contentsline {section}{ \numberline {E}非平衡态统计}{94}{appendix.1.E}%
+\contentsline {section}{ \numberline {F}随机微分几何概论}{94}{appendix.1.F}%
+\contentsline {section}{ \numberline {G}相变的动态理论}{94}{appendix.1.G}%
+\contentsline {section}{ \numberline {H}连续介质力学补充}{94}{appendix.1.H}%
+\contentsline {section}{ \numberline {I}湍流的统计场论}{94}{appendix.1.I}%
+\contentsline {subsection}{\numberline {I.1}Kolmogrov各向同性湍流}{94}{subsection.1.I.1}%
+\contentsline {subsection}{\numberline {I.2}Kraichnan湍流场}{94}{subsection.1.I.2}%
+\contentsline {subsection}{\numberline {I.3}Kolmogrov-Zakharov波湍流}{94}{subsection.1.I.3}%
+\contentsline {subsection}{\numberline {I.4}湍流的重整化理论}{94}{subsection.1.I.4}%
+\contentsline {subsection}{\numberline {I.5}可压湍流的有效场}{94}{subsection.1.I.5}%
+\contentsline {section}{ \numberline {J}拓扑量子场论引入}{94}{appendix.1.J}%
+\contentsline {subsection}{\numberline {J.1}Chern-Simons理论}{94}{subsection.1.J.1}%
+\contentsline {subsubsection}{\numberline {J.1.1}联络的Chern-Simons作用量}{94}{subsubsection.1.J.1.1}%
+\contentsline {subsubsection}{\numberline {J.1.2}Chern-Simons量子化}{94}{subsubsection.1.J.1.2}%
+\contentsline {subsubsection}{\numberline {J.1.3}三流形不变量}{94}{subsubsection.1.J.1.3}%
+\contentsline {subsubsection}{\numberline {J.1.4}扭结的环绕数}{94}{subsubsection.1.J.1.4}%
+\contentsline {subsection}{\numberline {J.2}Schwarz型拓扑场}{94}{subsection.1.J.2}%
+\contentsline {subsubsection}{\numberline {J.2.1}Wess-Zumino-Witten模型}{94}{subsubsection.1.J.2.1}%
+\contentsline {subsubsection}{\numberline {J.2.2}量子Hall效应的有效理论}{94}{subsubsection.1.J.2.2}%
+\contentsline {subsubsection}{\numberline {J.2.3}BF理论}{94}{subsubsection.1.J.2.3}%
+\contentsline {subsubsection}{\numberline {J.2.4}Batalin-Vilkovisky量子化}{94}{subsubsection.1.J.2.4}%
+\contentsline {subsubsection}{\numberline {J.2.5}Ray-Singer扭率}{94}{subsubsection.1.J.2.5}%
+\contentsline {subsection}{\numberline {J.3}Witten型拓扑场}{94}{subsection.1.J.3}%
+\contentsline {subsubsection}{\numberline {J.3.1}拓扑$\sigma $模型}{94}{subsubsection.1.J.3.1}%
+\contentsline {subsubsection}{\numberline {J.3.2}Atiyah-Singer指标定理}{94}{subsubsection.1.J.3.2}%
+\contentsline {subsubsection}{\numberline {J.3.3}Donaldson-Witten理论}{94}{subsubsection.1.J.3.3}%
+\contentsline {subsubsection}{\numberline {J.3.4}Seiberg-Witten不变量}{94}{subsubsection.1.J.3.4}%
+\contentsline {subsection}{\numberline {J.4}Atiyah型拓扑场引入}{94}{subsection.1.J.4}%
+\contentsline {subsubsection}{\numberline {J.4.1}范畴论简介}{94}{subsubsection.1.J.4.1}%
+\contentsline {subsubsection}{\numberline {J.4.2}对称张量函子}{94}{subsubsection.1.J.4.2}%
+\contentsline {subsubsection}{\numberline {J.4.3}公理化拓扑场}{94}{subsubsection.1.J.4.3}%
+\contentsline {subsubsection}{\numberline {J.4.4}Frobenius代数和2D拓扑场}{94}{subsubsection.1.J.4.4}%
+\contentsline {section}{ \numberline {K}黑洞热力学和引力量子化}{94}{appendix.1.K}%
+\contentsline {section}{ \numberline {L}共形场论和全息原理}{94}{appendix.1.L}%
+\contentsline {section}{参考文献}{95}{section*.12}%
