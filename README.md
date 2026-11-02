@@ -97,7 +97,7 @@ Chapters of the appendix stays the same, with slight changes into the main text,
 
 ## Latest update
 
-The first insight into the effective field theory, with application of Dirac field coupling with electromagnetic field.
+Corrections on scalar QED and calculations of the effective action.
 
 Introduction of algbraic BRST theory and chirality gauge transformation within the frame of the electromagnetic field. 
 
