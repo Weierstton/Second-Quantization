@@ -10392,11 +10392,11 @@ $$D^{}_F\qty(x^{}_i,x^{}_{i+1}),\quad \prod_{i}\int D^{}_F\qty(x^{}_i,x^{}_{i+1}
 \begin{center}\begin{tabular}{c}$\qty(i=u/2,\quad u=2k)$\vspace{0.2cm}\\ \tikz{\pgfmathsetmacro{\l}{5.5}\pgfmathsetmacro{\i}{4}\pgfmathsetmacro{\d}{2}\pgfmathsetmacro{\h}{2}\node[above]at(1,\h){$1$};\node[above]at(2,\h){$2$};\node[above]at(3,\h){$\cdots$};\node[above]at(4,\h){$u-i$};\node[above]at(\l,\h){$u-i+1$};\node[above]at(\l+\d,\h){$u-i+2$};\node[above]at(\l+\d+1.5,\h){$\cdots$};\node[above]at(\l+\d+2.5,\h){$u$};\node[below]at(1,0){$1$};\node[below]at(2,0){$\cdots$};\node[below]at(\i-1,0){$i-1$};\node[below]at(\i,0){$i$};\node[below]at(\i+1,0){$i+1$};\node[below]at(\i+2,0){$i+2$};\node[below]at(\i+3,0){$\cdots$};\node[below]at(\i+4,0){$\cdots$};\node[below]at(\i+5,0){$\cdots$};\node[below]at(\l+\d+2.5,0){$u$};\draw[-,dashed](1,\h)--(\i+1,0);\draw[-,dashed](2,\h)--(\i+2,0);\node at(5.5,\h/2){$\cdots\cdots$};\draw[-,dashed](4,\h)--(\l+\d+2.5,0); \draw(\l,\h)--(\i,0);\draw(\l+\d,\h)--(\i-1,0);\draw(\l+\d+2.5,\h)--(1,0);}\\\hline$\qty(i\neq\lfloor u/2\rfloor,\quad\forall u\geq 1)$\vspace{0.2cm}\\ \tikz{\pgfmathsetmacro{\l}{5.5}\pgfmathsetmacro{\i}{4}\pgfmathsetmacro{\d}{2}\pgfmathsetmacro{\h}{2}\node[above]at(1,\h){$1$};\node[above]at(2,\h){$2$};\node[above]at(3,\h){$\cdots$};\node[above]at(4,\h){$u-i$};\node[above]at(\l,\h){$u-i+1$};\node[above]at(\l+\d,\h){$u-i+2$};\node[above]at(\l+\d+1.5,\h){$\cdots$};\node[above]at(\l+\d+2.5,\h){$u$};\node[below]at(1,0){$1$};\node[below]at(2,0){$2$};\node[below]at(3,0){$\cdots$};\node[below]at(\i,0){$i$};\node[below]at(\i+1,0){$i+1$};\node[below]at(\i+2,0){$i+2$};\node[below]at(\i+3,0){$\cdots$};\node[below]at(\i+4,0){$\cdots$};\node[below]at(\i+5,0){$\cdots$};\node[below]at(\l+\d+2.5,0){$u$};\draw[-,dashed](1,\h)--(\i+1,0);\draw[-,dashed](2,\h)--(\i+2,0);\node at(5.5,\h/2){$\cdots\cdots$};\draw[-,dashed](4,\h)--(\l+\d+2.5,0); \draw(\l,\h)--(1,0);\draw(\l+\d,\h)--(2,0);\draw(\l+\d+2.5,\h)--(\i,0);}\end{tabular}\vspace{-0.4cm}\captionof{figure}{缩并规则示意，图中整数$i\geq 1$对应时空点$x^{}_i$，每一条线对应一个\textsl{Feynman}传播子}\label{wocazhongyu545}\end{center}
 其中上图对应偶数级修正$u=2k$在$i=k$时的特殊情况，下图对应其余修正。按照这两个图，我们写出第一项为$D^{}_F(1,i+1)$的全同缩并式，不同的$i$就给出不同的全同缩并
 $$\begin{aligned}&\qty[D^{}_F(1,i+1)D^{}_F(2,i+2)\cdots D^{}_F(u-i,u)]_{\text{虚线部分}}\hspace{2cm} 1\leq i\leq u-1\\&\times\begin{cases}\qty[D^{}_F(u-i+1,1)D^{}_F(u-i+2,2)\cdots D^{}_F(u,i)]_{\text{实线部分}},\quad i\neq\lfloor u/2\rfloor,\quad \forall u\\ \qty[D^{}_F(u-i+1,i)D^{}_F(u-i+2,i-1)\cdots D^{}_F(u,1)]_{\text{实线部分}},\quad i=k,\quad u=2k.\end{cases}\end{aligned}$$
-对上式的$i$从$1$到$u-1$求和，我们就得到以\textsl{Feynman}传播子表示的各级修正，当然还要考虑到重复计数的次数$g(u)(u-1)$，也就是说实际上简并度并没有体现。在不考虑对称性的前提下，代入式(\ref{zhtuijiwang})给出
+对上式的$i$从$1$到$u-1$求和，我们就得到以\textsl{Feynman}传播子表示的各级修正，在不考虑对称性的前提下，代入式(\ref{zhtuijiwang})给出系数
+$$\frac{2u}{u!}\times 2^{u-1}=\frac{2^u}{(u-1)!}.$$
+于是我们得到
 \begin{equation}\begin{aligned}\tr(\frac{\lambda}{\square+m^2})^u=&\frac{2^u}{(u-1)!}\sum_{i\neq\lfloor u/2\rfloor}^{1\to u-1}\qty[\prod_{k=1}^{u-i} D^{}_F(k,k+i)]\qty[\prod_{k=1}^{i}D^{}_F(u-i+k,k)]\\&+\frac{2^u}{(u-1)!}\begin{cases}\displaystyle\qty[\prod_{p=1}^{u/2}D^{}_F(p,p+i)]\qty[\prod_{p=1}^{u/2} D_F(u-i+p,i-p+1)],\begin{tabular}{c}$i=u/2$,\\$u=2k$\end{tabular}\\ \displaystyle\qty[\prod_{p=1}^{u-\lfloor u/2\rfloor} D^{}_F(p,p+i)]\qty[\prod_{p=1}^{\lfloor u/2\rfloor}D^{}_F(u-i+p,p)],\begin{tabular}{c}$i=\lfloor u/2\rfloor$,\\ $u=2k+1$\end{tabular}\end{cases}\end{aligned}\label{anmian534t53}\end{equation}
-这个系数可以证明是收敛的，在微扰下$\lambda\to0$因而其收敛，而前面的一项可以取对数
-$$\lim_{u\to\infty}\ln(\frac{2^u}{(u-1)!})=\lim_{u\to\infty}\frac{u\ln2}{\ln((u-1)!)}=\lim_{u\to\infty}\frac{\ln2}{\ln u}=0.$$
-于是我们就证明了，相互作用的泛函行列式完全可以通过传播子计算得到，而不需要通过\textsl{Fourier}分量的连乘得到。这在重整化的计算中由广泛应用，对于费米子可以参考\cite{L3p} \S 9.6。\\
+于是我们就证明了，相互作用的泛函行列式完全可以通过传播子计算得到，而不需要通过\textsl{Fourier}分量的连乘得到。这在有效理论(\ref{CV.,yr,,})中有广泛应用，对于费米子可以参考第\ref{35fV]1[--}节和\cite{L3p} \S 9.6。\\
 \\
 上面我们是利用路径积分计算的，当然也可以从\textsl{Dyson}级数得到，事实上右侧就已经是\textsl{Dyson}级数下，相互作用绘景的形式了。前面我们也证明了，路径积分表述和\textsl{Dyson}级数等价，请读者自行考察相应的泛函行列式，最终必然会回到式(\ref{esgsddyann098})。
 
@@ -10475,21 +10475,21 @@ $$D^{}_F(1,z)D^{}_F(z,y)D^{}_F(x,y)=D^{}_F(1,y)D^{}_F(y,z)D^{}_F(x,z)\implies D^
 在此基础上，我们来考察泛函行列式的迹，其$u$级修正由式(\ref{zhtuijiwang})确定。前文中我们通过一些计算，得到其完整的传播子展开式(\ref{anmian534t53})，现在我们将其表示为\textsl{Feynman}图。\\
 \\
 由于这里只有\textsl{Born}级数的各级修正，因此不存在非连通图，连通分支就是图本身。且它不存在单外点，从而每个点都是顶点，进一步从配对图\ \ref{wocazhongyu545}出发，我们看到每个顶点只对应两个腿。以四级修正$u=4$为例，取式(\ref{anmian534t53})第一行的偶数情况，反向缩并的序号为$i=4/2=2$，于是得到
-$$\begin{aligned}\tr(\frac{\lambda}{\square+m^2})^4=\frac{2}{3\times 3!}\Bigl(&\qty[D^{}_F(1,2)D^{}_F(2,3)D^{}_F(3,4)D^{}_F(4,1)]^{}_{i=1}\\&+\qty[D^{}_F(1,4)D^{}_F(2,1)D^{}_F(3,2)D^{}_F(4,3)]^{}_{i=3}\\&+\qty[D^{}_F(1,3)D^{}_F(2,4)D^{}_F(3,2)D^{}_F(4,1)]^{}_{i^*=2}\Bigr).\end{aligned}$$
+$$\begin{aligned}\tr(\frac{\lambda}{\square+m^2})^4=\frac{2^4}{3!}\Bigl(&\qty[D^{}_F(1,2)D^{}_F(2,3)D^{}_F(3,4)D^{}_F(4,1)]^{}_{i=1}\\&+\qty[D^{}_F(1,4)D^{}_F(2,1)D^{}_F(3,2)D^{}_F(4,3)]^{}_{i=3}\\&+\qty[D^{}_F(1,3)D^{}_F(2,4)D^{}_F(3,2)D^{}_F(4,1)]^{}_{i^*=2}\Bigr).\end{aligned}$$
 其中最后一个就是反序缩并的结果。现在我们分别画出上述三个乘积的\textsl{Feynman}图，第一个为
 \begin{equation}D^{}_F(1,2)D^{}_F(2,3)D^{}_F(3,4)D^{}_F(4,1)=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=above left:1](a)at(135:1.5){};\vertex[dot,label=above right:$2$](b)at(45:1.5){};\vertex[dot,label=below right:$3$](c)at(-45:1.5){};\vertex[dot,label=below left:$4$](d)at(-135:1.5){};\diagram*{(a)--[quarter left](b)--[quarter left](c)--[quarter left](d)--[quarter left](a)};\end{feynman}}\label{tun..uuu56-*}\end{equation}
 这里为了美观，将前面的直线都画为圆弧，但每段圆弧依旧代表两端点之间的传播子。可以看到此连通图首尾相连，给出一个闭合回路。我们称这样的一个图为\textbf{闭环/圈 \textit{Loop}}，也可以直接称为\textbf{圈图}。事实上，内传播子$D^{}_F(x,x)$也是一个圈图，只不过其只有一个顶点。我们同样的画出其余的两个图
 $$D^{}_F(1,4)D^{}_F(2,1)D^{}_F(3,2)D^{}_F(4,3)=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=above left:$1$](a){};\vertex[right=2cm of a,dot,label=above right:$2$](b){};\vertex[below=2cm of b,dot,label=below right:$3$](c){};\vertex[left=2cm of c,dot,label=below left:$4$](d){};\diagram*{(a)--[quarter left](d)--[quarter left](c)--[quarter left](b)--[quarter left](a)};\end{feynman}}$$$$D^{}_F(1,3)D^{}_F(2,4)D^{}_F(3,2)D^{}_F(4,1)=\quad\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=above left:1](a){};\vertex[right=2cm of a,dot,label=above right:$2$](b){};\vertex[below=2cm of b,dot,label=below right:$3$](c){};\vertex[left=2cm of c,dot,label=below left:$4$](d){};\diagram*{(a)--(c)--[quarter right](b)--(d)--[quarter left](a)};\end{feynman}}$$
 根据图的同伦性不难得到，这两张图和第一张图(\ref{tun..uuu56-*})实际上是相同的，也就是传播子的空间对称性。因此从\textsl{Feynman}图的角度，这三个展开式也是全同的，从而四级修正就给出
-\begin{equation}\tr(\frac{\lambda}{\square+m^2})^4=\frac{2\times3}{3\times 3!}\times(\ref{tun..uuu56-*})=\frac{1}{3}\times\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=above left:1](a){};\vertex[right=2cm of a,dot,label=above right:$2$](b){};\vertex[below=2cm of b,dot,label=below right:$3$](c){};\vertex[left=2cm of c,dot,label=below left:$4$](d){};\diagram*{(a)--[quarter left](b)--[quarter left](c)--[quarter left](d)--[quarter left](a)};\end{feynman}}\end{equation}
+\begin{equation}\tr(\frac{\lambda}{\square+m^2})^4=\frac{2^4\times 3}{3!}\times(\ref{tun..uuu56-*})=2^3\times\tikz[baseline=(current bounding box.center)]{\begin{feynman}[inline=a.base]\vertex[dot,label=above left:1](a){};\vertex[right=2cm of a,dot,label=above right:$2$](b){};\vertex[below=2cm of b,dot,label=below right:$3$](c){};\vertex[left=2cm of c,dot,label=below left:$4$](d){};\diagram*{(a)--[quarter left](b)--[quarter left](c)--[quarter left](d)--[quarter left](a)};\end{feynman}}\end{equation}
 也就是说在对称性下，泛函行列式迹的四级修正只取决于以$i=1$开始的，按双正序缩并的首个连乘积，这个乘积最终给出一个圈图。\\
 \\
 可以验证这个结论对于$\forall u$都有效，之前的算法给出的每一项其实都全同，从而式(\ref{anmian534t53})可以大幅化简为
-$$\tr(\frac{\lambda}{\square+m^2})^u=\frac{2 g^{}_{sym}(u)}{(u-1)\times(u-1)!}\qty[\prod_{k=1}^{u-1} D^{}_F(k,k+1)]\qty[\prod_{k=1}^{i=1}D^{}_F(u-1+k,k)].$$
-对于对称性的简并度$g^{}_{sym}(u)$，是该项被求和的次数$g^{}_{sym}(u)=u-1$，等价于除以重复的计数次数。因此我们最终得到一个十分简洁的表达式
-\begin{equation}\tr(\frac{\lambda}{\square+m^2})^u=\frac{2}{(u-1)!}\prod_{k=1}^{u-1}D^{}_F(k,k+1)D^{}_F(u,1),\end{equation}
-这个系数就是式(\ref{zhtuijiwang})的系数，在第\ref{ecvgsddy550r8}节中我们会证明这一点。可以想到，这是一个闭合的\textsl{Born}修正，它也同样是一个圈图，方便起见我们省略坐标记号
-\begin{equation}\tr(\frac{\lambda}{\square+m^2})^u=\frac{2}{(u-1)!}\times\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\r}{1.6}\begin{feynman}[inline=1.base]\vertex[dot](1)at(90:\r){};\vertex[dot](2)at(120:\r){};\vertex[dot](3)at(150:\r){};\vertex[dot](4)at(180:\r){};\vertex[dot](5)at(210:\r){};\vertex[dot](6)at(240:\r){};\vertex[dot](u)at(60:\r){};\vertex[dot](v)at(30:\r){};\vertex[label={[rotate=90]$\cdots$}](k)at(0:\r+.2){};\node[label={[rotate=60]$\cdots$}](p)at(-30:\r+.2){};\node[label={[rotate=30]$\cdots$}](o)at(-60:\r+.2){};\node[label={[rotate=0]$\cdots$}](o)at(-90:\r+.2){};\diagram*{(v)--(u)--(1)--(2)--(3)--(4)--(5)--(6)};\end{feynman}}\label{liangundauy}\end{equation}
+$$\tr(\frac{\lambda}{\square+m^2})^u=\frac{2^u g^{}_{sym}(u)}{(u-1)!}\qty[\prod_{k=1}^{u-1} D^{}_F(k,k+1)]\qty[\prod_{k=1}^{i=1}D^{}_F(u-1+k,k)].$$
+对于对称性的简并度$g^{}_{sym}(u)$，是除了$i$点之外的$n-1$个点所有可能的不重复排序数，根据初等排列组合理论给出$g^{}_{sym}(u)=(u-1)!/2$。因此我们最终得到一个十分简洁的表达式
+\begin{equation}\tr(\frac{\lambda}{\square+m^2})^u=2^{u-1}\prod_{k=1}^{u-1}D^{}_F(k,k+1)D^{}_F(u,1),\end{equation}
+这个系数就是式(\ref{zhtuijiwang})的系数，可以想到这是一个闭合的\textsl{Born}修正，它也同样是一个圈图，方便起见我们省略坐标记号
+\begin{equation}\tr(\frac{\lambda}{\square+m^2})^u=2^{u-1}\times\tikz[baseline=(current bounding box.center)]{\pgfmathsetmacro{\r}{1.6}\begin{feynman}[inline=1.base]\vertex[dot](1)at(90:\r){};\vertex[dot](2)at(120:\r){};\vertex[dot](3)at(150:\r){};\vertex[dot](4)at(180:\r){};\vertex[dot](5)at(210:\r){};\vertex[dot](6)at(240:\r){};\vertex[dot](u)at(60:\r){};\vertex[dot](v)at(30:\r){};\vertex[label={[rotate=90]$\cdots$}](k)at(0:\r+.2){};\node[label={[rotate=60]$\cdots$}](p)at(-30:\r+.2){};\node[label={[rotate=30]$\cdots$}](o)at(-60:\r+.2){};\node[label={[rotate=0]$\cdots$}](o)at(-90:\r+.2){};\diagram*{(v)--(u)--(1)--(2)--(3)--(4)--(5)--(6)};\end{feynman}}\label{liangundauy}\end{equation}
 这就是泛函行列式的计算方法，称为\textbf{u顶点单圈修正 \textit{u-Vertices 1-loop Correction}}，是\textsl{Feynman}图的一个十分重要的应用，我们后续在重整化理论中会反复看到它。当然需要强调的是，这里的“单圈修正”是一种技术上的定义，不要和通常的粒子单圈修正搞混。
 
 \subsubsection{实标量场的动量Feynman规则}\label{acrF55][][pp[}
@@ -13967,13 +13967,13 @@ $$\partial^\mu J^{}_\mu=\dfrac{1}{4\pi e}\qty(\partial^{}_\nu\square A^\nu-\squa
 相较于\textsl{Dirac}场的电磁相互作用(\ref{Zedfw34004})，这里多了一个附加质量$e^2A^2$，当然从方程(\ref{bbg2OOI})也可以看到，若将\textsl{Dirac}方程恢复为波动方程，这一项会自然出现。经典场论可以完全对照第\ref{CHo33i**--}节写出，这里就不重复了，请读者自行思考。\\
 \\
 我们来处理量子化，方便起见此处只计算耦合作用量$S^{}_{\textit{eff}}\qty[\psi,\psi^*]$。由于$\vb{J}^{}_A$包含电磁场，为了积分时分离变量，我们还是从式(\ref{QsqrOID})将自由\textsl{Noether}流分离
-\begin{equation}J^\mu=eA^\mu\psi^*\psi-J^\mu_0,\quad J^\mu_0=i\qty(\psi\partial^\mu\psi^*-\psi^*\partial^\mu\psi).\end{equation}
+\begin{equation}J^\mu=eA^\mu\psi^*\psi-J^\mu_0,\quad J^\mu_0=i\qty(\psi\partial^\mu\psi^*-\psi^*\partial^\mu\psi).\label{Cref80}\end{equation}
 对于$\vb{A}$的规范选择，需要采用第\ref{F34e/,--}节中的\textsl{FaPo}框架和\textsl{t' Hooft}分布，将规范的选择变为一个自由度处理。将常系数记为$\A^{}_0$，我们写出耦合作用量
 \begin{equation}\exp{iS^{}_{\textit{eff}}\qty[\psi,\psi^*]-iS^{}_{KG}}=\A^{}_0\bigintsss\D\vb{A}\exp{i\int\qty[e^2A^2\abs{\psi}^2+\Lambda^{}_f-\frac{1}{8\pi\xi}\qty(\partial^{}_\mu A^\mu)^2-e\vb{A}^{}_A\vb{J}^A_0]\dd\Omega}.\end{equation}
 对比式(\ref{Ra345//.})不难看到，外场可以选择为$e\vb{J}^A_0$，同时多了一项$e^2A^2\abs{\psi}^2$。其\textsl{EL}导数为
 $$\delta^{}_{A^\mu}\Lambda=\frac{1}{4\pi}\qty(\eta^{}_{\mu\gamma}\square-\partial^{}_\mu\partial^{}_\gamma+\frac{1}{\xi}\partial^{}_\mu\partial^{}_\gamma+4\pi e^2\abs{\psi}^2\eta^{}_{\mu\gamma})A^\gamma=\frac{1}{4\pi}\hat{\mathcal K}^{}_{\mu\gamma}A^\gamma,$$
 于是根据式(\ref{WQs456[[})我们直接写出结果
-\begin{equation}\begin{aligned}&\exp{iS^{}_{\textit{eff}}\qty[\psi,\psi^*]-iS^{}_{KG}\qty[\psi,\psi^*]}=\A^{}_0\exp{\frac{4\pi}{2}\int \qty(eJ^{}_{\mu,0})\hat{\mathcal K}^{\mu\gamma}\qty(eJ^{}_{\gamma,0})\dd\Omega^2},\\ &\hat{\mathcal K}^{\mu\gamma}=\qty(\eta^{}_{\mu\gamma}\qty(4\pi e^2\abs{\psi}^2+\square)+\frac{1-\xi}{\xi}\partial^{}_\mu\partial^{}_\gamma)^{-1}=\qty(\hat{\mathcal F}^{}_{\mu\gamma}+4\pi e^2\abs{\psi}^2\eta^{}_{\mu\gamma})^{-1}.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}&\exp{iS^{}_{\textit{eff}}\qty[\psi,\psi^*]-iS^{}_{KG}\qty[\psi,\psi^*]}=\A^{}_0\exp{\frac{4\pi}{2}\int \qty(eJ^{}_{\mu,0})\hat{\mathcal K}^{\mu\gamma}\qty(eJ^{}_{\gamma,0})\dd\Omega^2},\\ &\hat{\mathcal K}^{\mu\gamma}=\qty(\eta^{}_{\mu\gamma}\qty(4\pi e^2\abs{\psi}^2+\square)+\frac{1-\xi}{\xi}\partial^{}_\mu\partial^{}_\gamma)^{-1}=\qty(\hat{\mathcal F}^{}_{\mu\gamma}+4\pi e^2\abs{\psi}^2\eta^{}_{\mu\gamma})^{-1}.\end{aligned}\label{Fv34g22}\end{equation}
 现在来计算逆矩阵$\hat{\mathcal K}^{\mu\gamma}$，相较于$\hat{\mathcal F}^{}_{\mu\gamma}$它多了一项$4\pi e^2\abs{\psi}^2\eta^{}_{\mu\gamma}$，因此逆矩阵必然不会像自由光子场一样简单。考虑微扰，在量级上取$e\to 0$，则这一项可以看作对$\hat{\mathcal F}^{}_{\mu\gamma}$的微扰，我们可以由\cite{L41}式(105.3)读出精确到二阶$\propto e^2$的逆矩阵
 \begin{equation}\hat{\mathcal K}^{\mu\gamma}=\hat{\mathcal F}^{\mu\gamma}-\hat{\mathcal F}^{\mu\delta}\circledast\qty(4\pi e^2\abs{\psi}^2\eta^{}_{\delta\rho})\circledast\hat{\mathcal F}^{\rho\gamma}.\end{equation}
 其中我们对式(105.3)做替换$g^{(0)kl}=\hat{\mathcal F}^{kl}$，度规微扰$h^{}_{kl}=4\pi e^2\abs{\psi}^2\eta^{}_{kl}$，其指标升降
@@ -14008,7 +14008,7 @@ $$\CC^{(2)}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex
 这实际上就是第\ref{ecvgsddy550r8}节中，式(\ref{...D.dgf46//rr})的操作，此处我们从耦合作用量再次验证了。于是对于散射，在低速近似下我们再次得到汤川势，这里就不展示了，请读者自行写出。其下一级修正是四级，我们写出
 $$Z^{(4)}\propto \int\expval{\T\qty{\hat{\overline{\bm{\psi}}}^{}_x\hat{\bm{\psi}}^{}_xD^\varphi_F(x,y)\hat{\overline{\bm{\psi}}}^{}_y\hat{\bm{\psi}}^{}_y\hat{\overline{\bm{\psi}}}^{}_a\hat{\bm{\psi}}^{}_aD^\varphi_F(a,b)\hat{\overline{\bm{\psi}}}^{}_b\hat{\bm{\psi}}^{}_b}}_{\text{conn}}\dd\Omega^4.$$
 在同伦下连通图有两种可能性，我们写出
-$$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=2 cm of a](b){};\vertex[dot,right=4 cm of a](c){};\vertex[dot,right=4 cm of b](d){};\diagram*{(a)--[fermion](c)--[fermion,half left](d)--[fermion](b)--[fermion,half left](a)--[scalar](b),(c)--[scalar](d)};\end{feynman}},\qquad \tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=2 cm of a](b){};\vertex[dot,right=4 cm of a](c){};\vertex[dot,right=4 cm of b](d){};\diagram*{(a)--[fermion](c)--[fermion](d)--[fermion](b)--[fermion](a)--[scalar](d),(c)--[scalar](b)};\end{feynman}}.$$
+\begin{equation}\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=2 cm of a](b){};\vertex[dot,right=4 cm of a](c){};\vertex[dot,right=4 cm of b](d){};\diagram*{(a)--[fermion](c)--[fermion,half left](d)--[fermion](b)--[fermion,half left](a)--[scalar](b),(c)--[scalar](d)};\end{feynman}},\qquad \tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=2 cm of a](b){};\vertex[dot,right=4 cm of a](c){};\vertex[dot,right=4 cm of b](d){};\diagram*{(a)--[fermion](c)--[fermion](d)--[fermion](b)--[fermion](a)--[scalar](d),(c)--[scalar](b)};\end{feynman}}.\label{VNHY35h8}\end{equation}
 这是一个盒图和一个交叉图，我们可以直接按\textsl{LSZ}约化，写出相应的连通四点函数。对于此圈图对应的反应是$e^--e^+$散射，以第一个盒图为例，这里我们只写卷积形式
 \begin{equation}\DD^{(4)}_{4,box}\qty(p^{}_1,p'_1,p^{}_2,p'_2)=\qty(\vb{u}^{}_{p^{}_1}S^{}_D(p'_1+q)\overline{\vb{u}}^{}_{p'_1})\circledast D^{}_F(q)\circledast\qty(\overline{\vb{v}}^{}_{p^{}_2}S^{}_D(p'_2+q)\vb{v}^{}_{p'_2})\circledast D^{}_F(p'_1-p^{}_1+q).\end{equation}
 其中积分变量是动量$q$，具体打开可以得到顶点函数$\varPi^{(2)}$的表达式，在低速近似下可以得到汤川势的高阶修正，这里就不具体写了，计算可以参考第\ref{t5/bB6=-..5}节。当然我们也可以考虑其和复标量场的耦合，此处就略过了，读者可以自行思考。\\
@@ -14085,19 +14085,33 @@ $$\begin{aligned}\Lambda^{}_{qed}\qty(\overline{\bm{\psi}},\bm{\psi},\vb{A}^A)&=
 \begin{equation}Z=\int\exp(iS^{}_{\textit{eff}}\qty[\overline{\bm{\psi}},\bm{\psi}])\D\overline{\bm{\psi}}\D\bm{\psi}=\bigintsss\exp{iS^{}_{Dirac}-\frac{ie^2}{2}\qty(\overline{\bm{\psi}}\gamma^{}_\mu\bm{\psi})\circledast D^{\mu\nu}_P\circledast\qty(\overline{\bm{\psi}}\gamma^{}_\nu\bm{\psi})}\D\overline{\bm{\psi}}\D\bm{\psi}\end{equation}
 做微扰展开，我们得到路径积分的偶数级修正，比如二级修正是一个日落图，四级修正是操场图和盒图等等。打开\textsl{Dirac}传播子并连到外点，我们就得到圈图和树状图等，对高级修正我们在形式上回到标量场的耦合，只是将\textsl{Feynman}传播子替换为光子传播子。\\
 \\
-最后我们讨论，二次波动形式的耦合。场方程由式(\ref{bbg2OOI})确定，则耦合作用量写为
-\begin{equation}\exp{iS^{}_{\textit{eff}}\qty[\overline{\bm{\psi}},\bm{\psi}]}=\bigintsss\D\vb{A}\exp[i\int\overline{\bm{\psi}}\qty(\hat{\DD}^A\hat{\DD}^{}_A-m^2-\frac{ie}{2}\bm{\sigma}^{AB}\vb{F}^{}_{AB})\bm{\psi}\dd\Omega-\frac{i}{16\pi}\int \vb{F}^2\dd\Omega ],\end{equation}
+在此基础上，我们来讨论多点函数的修正，从圈图引入外部腿的操作这里就不重复介绍了。对于传播子，其二级修正是
+\begin{equation}\CC^{(2)}=\tikz[baseline=(current bounding box.center)]{\begin{feynman}\vertex(a);\vertex[dot,right=2 cm of a](b){};\vertex[dot,right=2 cm of b](c){};\vertex[dot,right=2 cm of c](d);\diagram*{(a)--[fermion](b)--[fermion,half right](c)--[fermion](d),(b)--[photon,half left](c)};\end{feynman}}.\end{equation}
+根据普适的\textsl{Dyson}方程(\ref{UYRIERY})，中间的圈图就是电子的自能$\Sigma^{(2)}$，该计算请参考第\ref{t5fr=-..5}节。此物理现象的解释很简单：一个电子在传播的过程中，会释放一个光子并和它湮灭。这就是阻尼运动方程(\ref{;sd;;})的量子修正诠释，我们重新写出
+$$m\dt{\vb{v}}=\vb{f}=\frac{2e^2}{3c^3}\ddt{\vb{v}},$$
+在经典辐射理论下这会导致速度的发散。但在量子效应下，我们应该算上光子产生和湮灭造成的能量损失，这就平衡了固有质量$m^{}_p$。此物理图景可以参考第\ref{RTe6500}节，这里我们只做简单的说明。再看四级修正，我们直接从式(\ref{VNHY35h8})写出图，以盒图为例
+$$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=1 cm of a](b){};\vertex[dot,right=4 cm of a](c){};\vertex[dot,right=4 cm of b](d){};\vertex[left=2 cm of b](g);\vertex[right=2 cm of d](h);\diagram*{(a)--[fermion,half left](c)--[fermion](a)--[photon](b),(c)--[photon](d),(g)--[fermion](b)--[fermion](d)--[fermion](h)};\end{feynman}}.$$
+可见电子在运动过程中，产生的光子还可以再产生和湮灭一个虚电子，此效应再叠加到运动的电子上得到进一步的质量修正。对于四点函数，二级修正就是树图，这里不再赘述。对于四级修正，如果是将上图的圆顶打开，则说明两个电子在独立运动过程中交换两个光子，而交叉图给出
+$$\tikz{\begin{feynman}\vertex[dot](a){};\vertex[dot,below=2 cm of a](b){};\vertex[dot,right=4 cm of a](c){};\vertex[dot,right=4 cm of b](d){};\vertex[left=2 cm of b](g);\vertex[right=2 cm of d](h);\vertex[left=2 cm of a](i);\vertex[right=2 cm of c](k);\diagram*{(i)--[anti fermion](a)--[anti fermion](c)--[anti fermion](k),(a)--[photon](d),(c)--[photon](b),(g)--[fermion](b)--[fermion](d)--[fermion](h)};\end{feynman}}.$$
+注意圈图的动量方向，在打开后自然给出反电子的运动，因此虚光子的交叉本质上是相反运动的结果。其余内容这里就不展开了，更多奇数细节请读者参见第\ref{C3tg00}节。\\
+\\
+最后我们简单讨论，二次波动形式的耦合。场方程由式(\ref{bbg2OOI})确定，则耦合作用量写为
+\begin{equation}\exp{iS^{}_{\textit{eff}}\qty[\overline{\bm{\psi}},\bm{\psi}]}=\bigintsss\D\vb{A}\exp[i\int\overline{\bm{\psi}}\qty(\hat{\DD}^A\hat{\DD}^{}_A-m^2-\frac{ie}{2}\bm{\sigma}^{AB}\vb{F}^{}_{AB})\bm{\psi}\dd\Omega-\frac{i}{16\pi}\int \vb{F}^2\dd\Omega],\end{equation}
 这样我们就恢复到类似标量电动力学的框架。由于协变导数$\hat{\DD}$根据定义(\ref{Z23CBN})就是动量算符，因此是自伴的$\braket{\phi}{\hat{\DD}\chi}=\braket{\hat{\DD}^\dagger\phi}{\chi}$，则动能项给出
 $$\overline{\bm{\psi}}\qty(\hat{\DD}^A\hat{\DD}^{}_A\bm{\psi})=\qty(\hat{\DD}^\dagger_A\overline{\bm{\psi}})\qty(\hat{\DD}^A\bm{\psi}).$$
 也就是说该形式的展开和波动\textit{Lagrangian}的展开在结果上完全一致。于是我们得到展开式
-\begin{equation}\Lambda^{}_{qed}=\Lambda^{}_{KG}\qty(\overline{\bm{\psi}},\bm{\psi})+e\vb{A}^A\vb{J}^{}_A-\overline{\bm{\psi}}\qty(\frac{ie}{2}\bm{\sigma}^{AB}\vb{F}^{}_{AB}-e^2A^2)\bm{\psi}-\frac{1}{16\pi} \vb{F}^2,\end{equation}
+\begin{equation}\Lambda^{}_{qed}=\Lambda^{}_{KG}\qty(\overline{\bm{\psi}},\bm{\psi})+e\vb{A}^A\vb{J}^{}_A-\frac{ie}{2}\overline{\bm{\psi}}\bm{\sigma}^{AB}\bm{\psi}\vb{F}^{}_{AB}-\frac{1}{16\pi} \vb{F}^2,\end{equation}
 其中$\Lambda^{}_{KG}$就是\textsl{KG}形式的波动\textit{Lagrangian}，包含了质量项，而电流为
 \begin{equation}J^{}_\mu=\qty(\hat{\DD}^\dagger_\mu\overline{\bm{\psi}})\bm{\psi}-\overline{\bm{\psi}}\hat{\DD}^{}_\mu\bm{\psi}.\end{equation}
-需要说明的是，$\bm{\sigma}^{AB}\vb{F}^{}_{AB}$来自于协变导数的对易关系，是$\gamma$矩阵所对应的\textsl{Clifford}代数诱导的。现在一共有$6$项涉及电磁场，
-
-
-
-
+需要说明的是，$\bm{\sigma}^{AB}\vb{F}^{}_{AB}$来自于协变导数的对易关系，是$\gamma$矩阵所对应的\textsl{Clifford}代数诱导的。现在一共有$4$项涉及电磁场，同样的类似式(\ref{Cref80})分离自由\textsl{Noether}流
+$$J^{}_{0,\mu}=i\qty[\qty(\partial^{}_\mu\overline{\bm{\psi}})\bm{\psi}-\overline{\bm{\psi}}\partial^{}_\mu\bm{\psi}]=J^{}_\mu-eA^{}_\mu\overline{\bm{\psi}}\bm{\psi},$$
+则我们恢复振幅项$A^\mu\qty(e^2\overline{\bm{\psi}}\bm{\psi}\eta^{}_{\mu\nu})A^\nu$。再看额外项$\bm{\sigma}^{AB}\vb{F}^{}_{AB}$，由于$\bm{\sigma}$根据定义是反对称的，因此具体展开电磁场张量得到
+\begin{equation}\overline{\bm{\psi}}\bm{\sigma}^{AB}\bm{\psi}\vb{F}^{}_{AB}=2\overline{\bm{\psi}}\bm{\sigma}^{AB}\bm{\psi}\partial^{}_A\vb{A}^{}_B=-2i\hat{\mathscr N}^B \vb{A}^{}_B,\quad \hat{\mathscr N}^A=i\overline{\bm{\psi}}\bm{\sigma}^{AB}\bm{\psi}\partial^{}_A.\end{equation}
+于是，我们可以定义一个新的有效电流$\mathscr J^\mu$，使得它和电磁场线性耦合
+\begin{equation}e\vb{A}^A\vb{J}^{}_{0,A}-\frac{ie}{2}\overline{\bm{\psi}}\bm{\sigma}^{AB}\bm{\psi}\vb{F}^{}_{AB}=eA^{}_\mu\mathscr J^\mu,\quad \mathscr J^\mu=J^\mu_0-\hat{\mathscr N}^\mu.\end{equation}
+再将$\vb{F}^2$用算符表示为$2A^\mu\hat{\mathcal F}^{}_{\gamma\nu}A^\nu$，从而我们直接根据式(\ref{Fv34g22})得到耦合作用量
+\begin{equation}\begin{aligned}&\exp{iS^{}_{\textit{eff}}\qty[\bm{\psi},\overline{\bm{\psi}}]-iS^{}_{KG}\qty[\bm{\psi},\overline{\bm{\psi}}]}=\A^{}_0\exp{2e^2\pi\int \mathscr J^{}_\mu\hat{\mathcal K}^{\mu\gamma}\mathscr J^{}_\gamma\dd\Omega^2},\\ &\hat{\mathcal K}^{\mu\gamma}=\qty(\hat{\mathcal F}^{}_{\mu\gamma}+4\pi e^2\overline{\bm{\psi}}\bm{\psi}\eta^{}_{\mu\gamma})^{-1}=\qty(\eta^{}_{\mu\gamma}\square-\partial^{}_\mu\partial^{}_\gamma+4\pi e^2\overline{\bm{\psi}}\bm{\psi}\eta^{}_{\mu\gamma})^{-1}.\end{aligned}\end{equation}
+可以看到，由于$\bm{\sigma}^{AB}\vb{F}^{}_{AB}$的存在，电流比标量电动力学更复杂，它本质是一个算符，这里就不过多介绍了，一些相关的物理现象可参考第\ref{t57==6=-..5}节。
 
 \subsubsection{Euler-Heisenberg有效理论}\label{XwefPOO}
  
@@ -14116,11 +14130,21 @@ $$\overline{\bm{\psi}}\qty(\hat{\DD}^A\hat{\DD}^{}_A\bm{\psi})=\qty(\hat{\DD}^\d
 
 \subsection{电磁散射的量子化}
 \subsubsection{类氢原子和光的经典相互作用}
-\subsubsection{Compton散射}
+\subsubsection{Compton散射}\label{RTe6500}
+\subsubsection{电子对的湮灭和Furry定理}
+\subsubsection{同步辐射的量子效应}
+\subsubsection{极端相对论韧致辐射}
+\subsubsection{强电磁波场中的光子发射}
 \subsection{电磁辐射修正}\label{dsjbas66543+3.}
-\subsubsection{真空极化的费米圈图计算}\label{tyujy;p456=-..5}
-\subsubsection{电子的自能}\label{t5fr=-..5}
-\subsubsection{顶角修正}\label{t5/bB6=-..5}
+\subsubsection{真空极化的费米圈图}\label{tyujy;p456=-..5}
+\subsubsection{Comlomb定律的辐射修正}
+\subsubsection{Maxwell方程的辐射修正}
+\subsubsection{电子自能的重整化}\label{t5fr=-..5}
+\subsubsection{电子的顶角修正和Ward恒等式}\label{t5/bB6=-..5}
+\subsubsection{电子的电磁形状因子和反常磁矩}\label{t57==6=-..5}
+\subsubsection{外场中的辐射修正与Lamb位移}
+\subsubsection{光子的自散射}
+
 \subsection{基本粒子模型引入}\label{UHssB..**}
 \subsubsection{Yang-Mills规范场}
 \subsubsection{局域规范变换的BRST理论}\label{Ffrff34eg}
@@ -14281,7 +14305,7 @@ $$h^{}_\omega=\varphi^{}_\omega x^{}_\omega=\varphi^{}_\omega \alpha^{}_\omega h
 \subsubsection{BPHZ重整化和最小减除}
 \subsubsection{$\psi^3$理论中的单圈图}
 \subsubsection{$\psi^3$理论的高阶发散}
-\subsubsection{QED中的高阶图与重整化}
+\subsubsection{QED中的高阶图与重整化}\label{C3tg00}
 \subsubsection{红外发散和软光子辐射}
 \subsection{Wilson重整化群理论}\label{bh-gg0..34}
 \subsubsection{可重整性判据}
@@ -14356,7 +14380,11 @@ $$\hat{\mathscr P}^{}_R\gamma^\mu\hat{\mathscr P}^{}_L-\hat{\mathscr P}^{}_L\gam
 
 \subsubsection{t' Hooft反常和反常匹配}
 \subsection{有效场论的一般框架}\label{CV.,yr,,}
+\subsubsection{算符乘积的Wilson有效展开}
+\subsubsection{有效作用量的计算}
+\subsubsection{涌现理论}
 \subsubsection{QCD手征凝聚}
+\subsubsection{Efimov效应}
 \subsection{共形场论引入}
 \subsubsection{量子Hall效应}
 \subsubsection{Hall效应的量子反常}
