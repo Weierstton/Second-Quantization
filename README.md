@@ -97,11 +97,13 @@ Chapters of the appendix stays the same, with slight changes into the main text,
 
 ## Latest update
 
-Corrections on scalar QED and calculations of the effective action.
+Effective QED theory and Euler-Heisenberg effective photonic theory.
 
-Introduction of algbraic BRST theory and chirality gauge transformation within the frame of the electromagnetic field. 
+Arrangements of the renormalization group theory. 
 
-Appendix for homotopy theory, the degree of mappings, start of the braids and knots. 
+Introduction to Thermo Field Dynamics with application on fermionic systemes.
+
+Appendix for time-dependent perturbation theory and adiabatic approximation, within the frame of parameter space-time fiber and horizontal lift. 
 
 
 Object field coupling with external thermal fields, thermal field dynamics and the linear response theory coming next.
