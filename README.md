@@ -106,7 +106,7 @@ Introduction to Thermo Field Dynamics with application on fermionic systemes.
 Appendix for time-dependent perturbation theory and adiabatic approximation, within the frame of parameter space-time fiber and horizontal lift. 
 
 
-Object field coupling with external thermal fields, thermal field dynamics and the linear response theory coming next.
+Interacting thermal field dynamics and the linear response theory coming next.
 
 
 

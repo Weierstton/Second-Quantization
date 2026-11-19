@@ -4097,7 +4097,7 @@ $$\ln{V}-\dfrac{Nb}{V}\approx\ln{V}-\ln{\qty(1-\dfrac{Nb}{V})}=\ln{V-Nb},$$
 $$p^{}_n=\abs{c^{}_n}^2=c^{}_nc^*_n\implies\expval{f}=\sum_nc^{}_nc^*_n\mel**{n}{\hat{f}}{n}=\sum\limits_{n}p^{}_{nn}f^{}_{nn}.$$
 但是由于我们考虑的是局部系统，因此事实上系数$p^{}_{mn}$应该用加权的密度矩阵(\ref{speer})来表示，从而微正则系综就可以用算符$\hat{\vb{w}}$来计算概率，具体写为
 \begin{equation}p^{}_n=w^{}_{nn}=\mel**{n}{\hat{\vb{w}}}{n},\quad \expval{f}=\sum\limits_{n}w^{}_{nn}f^{}_{nn}=\sum\limits_{n}\qty(\hat{\vb{w}}\hat{f})^{}_{nn}=\tr(\hat{\vb{w}}\hat{f}).\label{huoZGSsfh}\end{equation}
-这里的$w^{}_{mn}$就是统计矩阵$\hat{w}$的能量表象，注意这里的算符实体$\hat{\vb{w}}$不处于任何表象中，一般称为\textbf{统计矩阵}，下文还是以密度矩阵称呼。可以证明，在此算符下的概率形式和式(\ref{**dfs**))})给出的概率密度是相同的，从而在一次量子化下的统计形式和经典统计形式没有任何差别。对于熵也一样，在微态概率下系统的熵$S$由\textsl{Shannon}熵表示，在量子化下其数学形式为
+这里的$w^{}_{mn}$就是$\hat{\vb{w}}$的能量表象，注意这里的算符实体$\hat{\vb{w}}$不处于任何表象中，一般称为\textbf{统计矩阵}，下文和密度矩阵混用。可以证明，在此算符下的概率形式和式(\ref{**dfs**))})给出的概率密度是相同的，从而在一次量子化下的统计形式和经典统计形式没有任何差别。对于熵也一样，在微态概率下系统的熵$S$由\textsl{Shannon}熵表示，在量子化下其数学形式为
 \begin{equation}S=-\expval{\ln{p}}=-\tr{\hat{\vb{w}}\ln(\hat{\vb{w}})},\label{BB//35--...}\end{equation}
 称为\textbf{\textsl{von Neumann}熵}，不难发现这是不依赖于基的。如果我们用式(\ref{mtt]})在二次量子化下进一步计算，我们得到对于任意参数$x$的概率和熵为
 $$p(x)=w(x,x)=\rho^{}_x,\quad S=-\tr{\hat{\vb{w}}\ln(\hat{\vb{w}})}=-\sum_x\qty{\rho^{}_x\ln(\rho^{}_x)}.$$
@@ -8911,17 +8911,17 @@ $$\delta S^{}_+-\delta S^{}_-=\int\qty(\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_
 并且在$\mathcal P^{}_1$上有坐标变换
 $$\delta\psi^{}_+(a)=\int\delta\qty(x^0-a^0)\delta^3(\vb{x}-\vb{a})\delta\psi^{}_+(x)\dd\Omega=\int\delta^4(x-a)\delta\psi^{}_+(x)\dd\Omega,$$
 我们自然得到
-\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_+(a)}=\int\D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}&\left\{\qty(i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_+(a)+\delta^4(x-a))\delta\psi^{}_+(x)\right.\\&\left.\qquad-i\delta^{}_{\psi^{}_-}\Lambda[\psi^{}_-(x)]\psi^{}_+(a)\delta\psi^{}_-(x)\right\}\dd\Omega=0.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_+(a)}=\int\D\bm{\psi}^K\exp{iS\qty[\bm{\psi}^K]}&\left\{\qty(i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_+(a)+\delta^4(x-a))\delta\psi^{}_+(x)\right.\\&\left.\qquad-i\delta^{}_{\psi^{}_-}\Lambda[\psi^{}_-(x)]\psi^{}_+(a)\delta\psi^{}_-(x)\right\}\dd\Omega=0.\end{aligned}\end{equation}
 类似的我们得到反向支的方程，同一分支上的坐标变换和正向支一致，所以我们得到
-\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_-(a)}=\int\D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}&\left\{\qty(-i\delta^{}_{\psi^{}_-}\Lambda\qty[\psi^{}_-(x)]\psi^{}_-(a)+\delta^4(x-a))\delta\psi^{}_-(x)\right.\\&\left.\qquad+i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_-(a)\delta\psi^{}_+(x)\right\}\dd\Omega=0.\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}\delta\expval{\hat{\psi}^{}_-(a)}=\int\D\bm{\psi}^K\exp{iS\qty[\bm{\psi}^K]}&\left\{\qty(-i\delta^{}_{\psi^{}_-}\Lambda\qty[\psi^{}_-(x)]\psi^{}_-(a)+\delta^4(x-a))\delta\psi^{}_-(x)\right.\\&\left.\qquad+i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_-(a)\delta\psi^{}_+(x)\right\}\dd\Omega=0.\end{aligned}\end{equation}
 将位形的变分通过\textsl{Keldysh}矢量表示为$\displaystyle\delta\bm{\psi}^K=\mqty(\delta\psi^{}_+\\ \delta\psi^{}_-)$，则这两个方程可以整理为一个矩阵方程
-\begin{equation}\int\D\bm{\psi}^Ke^{iS\qty(\bm{\psi}^K)}\vb{M}\qty(\bm{\psi}^K)\delta\bm{\psi}^K(x)\dd\Omega=0,\label{buH--//GFg-*99}\end{equation}
+\begin{equation}\int\D\bm{\psi}^K\exp{iS\qty[\bm{\psi}^K]}\vb{M}\qty(\bm{\psi}^K)\delta\bm{\psi}^K(x)\dd\Omega=0,\label{buH--//GFg-*99}\end{equation}
 其中系数矩阵为
 \begin{equation}\vb{M}\qty[\bm{\psi}^K(x),\bm{\psi}^K(a)]=\mqty(i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_+(a)+\delta^4(x-a)&-i\delta^{}_{\psi^{}_-}\Lambda\qty[\psi^{}_-(x)]\psi^{}_+(a)\\ i\delta^{}_{\psi^{}_+}\Lambda\qty[\psi^{}_+(x)]\psi^{}_-(a)&-i\delta^{}_{\psi^{}_-}\Lambda\qty[\psi^{}_-(x)]\psi^{}_-(a)+\delta^4(x-a)).\end{equation}
 现在我们按照变分原理，要求这个矩阵方程对于任意的$\delta\bm{\psi}^K$均成立，也就是要求解$\delta\bm{\psi}^K$有无穷个。\\
 \\
 我们知道对于一般的矩阵方程$\vb{A}\vb{x}=0$，要求有无穷多个解$\vb{x}$的条件是$\abs{\vb{A}}=0$，这是一个代数结论。但在这里并不成立，因为这实际上是一个嵌套在泛函积分中的矩阵方程，不满足代数性质。可以证明，对于任意的$\delta\psi^{}_{\pm}$，方程(\ref{buH--//GFg-*99})应满足的条件为
-\begin{equation}\int\D\bm{\psi}^K\exp{iS\qty(\bm{\psi}^K)}M^{}_{lm}\qty[\bm{\psi}^K(x),\bm{\psi}^K(a)]=0,\end{equation}
+\begin{equation}\int\D\bm{\psi}^K\exp{iS\qty[\bm{\psi}^K]}M^{}_{lm}\qty[\bm{\psi}^K(x),\bm{\psi}^K(a)]=0,\end{equation}
 或者我们除以$Z$并按照式(\ref{D*//FFFU--..H66uhs})写为算符的路径乘积均值
 \begin{equation}\expval{\mathbb P\qty{M^{}_{lm}\qty[\hat{\bm{\psi}}^K(x),\hat{\bm{\psi}}^K(a)]}}=0,\quad\forall l,m=1,2.\end{equation}
 也就是说，系数矩阵$\vb{M}$的每个分量的算符均值为零，这个结论可以通过反证法得到。于是我们得到四个方程
@@ -14081,7 +14081,7 @@ $$\begin{aligned}\Lambda^{}_{qed}\qty(\overline{\bm{\psi}},\bm{\psi},\vb{A}^A)&=
 这里又看到$\vb{A}^A$的二次型，于是由式(\ref{Cewq4f})直接写出耦合作用量
 \begin{equation}S^{}_{\textit{eff}}\qty[\overline{\bm{\psi}},\bm{\psi}]-S^{}_{Dirac}\qty[\overline{\bm{\psi}},\bm{\psi}]=-\frac{e^2}{2}J^{}_\mu \circledast D^{\mu\nu}_P\circledast J^{}_\nu.\end{equation}
 可以看到，由于动能项是线性的，因此\textsl{QED}比标量电动力学要简洁的多。带入电流$J^\mu=\overline{\bm{\psi}}\gamma^\mu\bm{\psi}$，并对\textsl{Dirac}场积分，我们就得到完整的路径积分
-\begin{equation}Z=\int\exp(iS^{}_{\textit{eff}}\qty[\overline{\bm{\psi}},\bm{\psi}])\D\overline{\bm{\psi}}\D\bm{\psi}=\bigintsss\exp{iS^{}_{Dirac}-\frac{ie^2}{2}\qty(\overline{\bm{\psi}}\gamma^{}_\mu\bm{\psi})\circledast D^{\mu\nu}_P\circledast\qty(\overline{\bm{\psi}}\gamma^{}_\nu\bm{\psi})}\D\overline{\bm{\psi}}\D\bm{\psi}\end{equation}
+\begin{equation}Z=\int\exp(iS^{}_{\textit{eff}}\qty[\overline{\bm{\psi}},\bm{\psi}])\D\overline{\bm{\psi}}\D\bm{\psi}=\bigintsss\exp{iS^{}_{Dirac}-\frac{ie^2}{2}\qty(\overline{\bm{\psi}}\gamma^{}_\mu\bm{\psi})\circledast D^{\mu\nu}_P\circledast\qty(\overline{\bm{\psi}}\gamma^{}_\nu\bm{\psi})}\D\overline{\bm{\psi}}\D\bm{\psi}.\end{equation}
 做微扰展开，我们得到路径积分的偶数级修正，比如二级修正是一个日落图，四级修正是操场图和盒图等等。打开\textsl{Dirac}传播子并连到外点，我们就得到圈图和树状图等，对高级修正我们在形式上回到标量场的耦合，只是将\textsl{Feynman}传播子替换为光子传播子。\\
 \\
 在此基础上，我们来讨论多点函数的修正，从圈图引入外部腿的操作这里就不重复介绍了。对于传播子，其二级修正是
@@ -14155,7 +14155,7 @@ $$\tr\qty[i\ln(\hat{\slashed{\DD}}-m)]=\int_0^\infty \frac{\dd s}{s}\int\mel**{x
 
 \subsubsection{热场中的耦合}\label{Cqwr3g}
 
-\subsubsection{热场动力学引入}
+\subsubsection{平衡热场动力学引入}
 \noindent 上面我们分析了目标场和热场的耦合，并看到热场在处理耦合时较为复杂，这是由于热态本质是混合态，我们需要同时处理量子均值和热统计均值。一个非常直接想法就是，既然零温场理论是完备的，且热\textsl{Wick}定理是\textsl{Wick}定理的热统计推广，那么不妨直接考察两个真空态之间的关系，并以此建立平衡热场理论。这就是\textbf{热场动力学 \textit{Thermo Field Dynamics}， \textit{TFD}}。(高橋康，梅澤博臣，1996)\\
 \\
 我们从耦合场开始，将热场的相互作用真空态记为$\ket{\Omega,\beta}$，称为\textbf{相互作用热真空}。虽然这是真空态，但热统计效应依旧存在，也就是说它依旧是混合态，表现为零温相互作用占有数态$\ket{n}$的线性组合
@@ -14204,12 +14204,14 @@ $$\mel**{\Omega,\beta}{\hat{A}}{\Omega,\beta}=\sum_{mn}f^*_m(\beta)f^{}_n(\beta)
 \begin{equation}\delta^{}_{mn}f^*_m(\beta)f^{}_n(\beta)=\frac{1}{Z(\beta)}\mel**{n}{\exp(-\beta\hat{H})}{m}=\mel**{n}{\hat{\vb{w}}}{m}.\end{equation}
 或者我们直接取$n=m$的对角元，并令系数$f^{}_n(\beta)\in\R$为实数，这样就得到
 \begin{equation}f^*_m(\beta)=f^{}_n(\beta)=\sqrt{\abs{\mel**{n}{\hat{\vb{w}}}{n}}},\quad \ket{\Omega,\beta}=\sum_n\frac{\sqrt{\abs{\mel**{n}{\hat{\vb{w}}}{n}}}}{\braket{n,\tilde{n}}{n,\tilde{n}}}\ket{n,\tilde{n}}.\label{CVBergva}\end{equation}
-这样我们就完成了对热真空态的零温占有数态表示，可以看到系数是由统计矩阵在$\mathscr H$中的对角元确定的，而$\tilde{\mathscr H}$的态被孤立了。需要强调的是，上述理论是针对平衡场的，虽然是“动力学”，但此术语是代数层面的，而绝非代表演化，因为容易看到热真空是静止的。\\
+这样我们就完成了对热真空态的零温占有数态表示，可以看到系数是由统计矩阵在$\mathscr H$中的对角元确定的，而$\tilde{\mathscr H}$的态被单独求和了。这个结论可以用另一种方式写出，对于态$\ket{\Omega,\beta}$的统计算符，我们得到
+\begin{equation}\hat{\vb{w}}=\widetilde{\mathrm{tr}}\dyad{\Omega,\beta}{\Omega,\beta}.\end{equation}
+也就是说，统计矩阵本身就是对$\tilde{\mathscr H}$态求迹的结果，这是匹配密度矩阵定义的，因此双态的引入就是将系统拆成两个子系统。需要强调的是，上述理论是针对平衡场的，虽然是“动力学”，但此术语是代数层面的，而绝非代表演化，因为容易看到热真空是静止的。\\
 \\
 虽然目前来看，$\tilde{\mathscr H}$只是为了弥补代数层面的缺陷，或者说是对应\textsl{CTP}形式的正反支才引入的一个额外态，但通过前面的推导，我们已经可以窥见其物理意义：一个系统中，子系统的热统计来自于另一半子系统的屏蔽效应，或者从第\ref{Cqwr3g}节和热浴的耦合角度来讲，这是将另一半子系统整体看作热浴，则我们自然处于正则系综。这是一个非常实用的观点，事实上这就是匀加速系中粒子的产生机制，比如\textsl{Unruh}效应和\textsl{Hawking}辐射等，具体参见第\ref{Cd23f3rf084}节。下面，我们就以非相对论性场为例，来考察\textsl{TFD}的二次量子化表述。\\
 \\
-先从自由费米场开始，假设系统只有一个费米子，则自由双态共有四个，我们假设它们是单位正交的
-\begin{equation}\ket{0,\tilde{0}},\quad\ket{0,\tilde{1}},\quad\ket{1,\tilde{0}},\quad\ket{1,\tilde{1}},\quad \braket{i,\tilde{m}}{j,\tilde{n}}=\delta^{}_{ij}\delta^{}_{mn}.\end{equation}
+先从自由费米子开始，假设系统只有一个费米子，则自由双态共有四个，我们假设它们是单位正交的
+\begin{equation}\ket{0,\tilde{0}},\quad\ket{0,\tilde{1}},\quad\ket{1,\tilde{0}},\quad\ket{1,\tilde{1}},\quad \braket{i,\tilde{m}}{j,\tilde{n}}=\delta^{}_{ij}\delta^{}_{mn}.\label{Raf35h0}\end{equation}
 这样自由热真空由式(\ref{Cwqed840'})给出
 \begin{equation}\ket{0,\beta}=\sum_nf^{}_n(\beta)\ket{n,\tilde{n}}=f^{}_0(\beta)\ket{0,\tilde{0}}+f^{}_1(\beta)\ket{1,\tilde{1}},\quad f^{}_0(\beta),f^{}_1(\beta)\in\mathbb R.\end{equation}
 于是，热自由真空的归一化给出
@@ -14218,7 +14220,6 @@ $$\mel**{\Omega,\beta}{\hat{A}}{\Omega,\beta}=\sum_{mn}f^*_m(\beta)f^{}_n(\beta)
 \begin{equation}\hat{\tilde{a}}^\dagger\ket{m,\tilde{n}}=\sqrt{n+1}\ket{m,\widetilde{n+1}},\quad\hat{\tilde{a}}\ket{m,\tilde{n}}=\sqrt{n}\ket{m,\widetilde{n-1}},\end{equation}
 并满足
 \begin{equation}\comm{\hat{\tilde{a}}}{\hat{\tilde{a}}^\dagger}^{}_+=1,\quad \comm{\hat{\tilde{a}}}{\hat{\tilde{b}}}^{}_+=\comm{\hat{\tilde{a}}^\dagger}{\hat{\tilde{b}}^\dagger}^{}_+=0.\end{equation}
-
 对于自由场，我们选择最简单的谐振子模型，按式(\ref{osci})取重整化后引入，它是已对角化的，注意现在有两个\textit{Hamiltonian}算符
 \begin{equation}\hat{H}=\omega\hat{a}^\dagger\hat{a},\quad \hat{\tilde{H}}=\omega\hat{\tilde{a}}^\dagger\hat{\tilde{a}}.\end{equation}
 当然频率$\omega$是相同的，这是系统的固有特性。现在计算占有数$\hat{n}$，对于单个费米子我们希望其在真空中给出\textsl{FD}分布，无相互作用使得化学势$\mu=0$，我们写出
@@ -14232,7 +14233,7 @@ $$\frac{1}{\exp(\beta\omega)+1}=\mel**{0,\beta}{\hat{a}^\dagger\hat{a}}{0,\beta}
 这和式(\ref{CVBergva})是匹配的，于是自由热真空写为
 \begin{equation}\ket{0,\beta}=\frac{1}{\sqrt{\exp(\beta\omega)+1}}\qty(\exp(\beta\omega/2)\ket{0,\tilde{0}}+\ket{1,\tilde{1}}).\label{Cqed2de==f}\end{equation}
 由于归一化(\ref{qDGgtt})是三角式，因此不妨令系数为
-\begin{equation}f^{}_0(\beta)=\cos(\theta(\beta))=\frac{\exp(-\beta\omega/2)}{\sqrt{\exp(-\beta\omega)+1}},\quad f^{}_1(\beta)=\sin(\theta(\beta))=\frac{1}{\sqrt{\exp(-\beta\omega)+1}}\label{VBTYUJI40},\end{equation}
+\begin{equation}f^{}_0(\beta)=\cos\theta(\beta)=\frac{1}{\sqrt{\exp(-\beta\omega)+1}},\quad f^{}_1(\beta)=\sin\theta(\beta)=\frac{\exp(-\beta\omega/2)}{\sqrt{\exp(-\beta\omega)+1}}\label{VBTYUJI40},\end{equation}
 其中角度$\theta(\beta)$依赖于温度。注意到$\ket{1,\tilde{1}}=\hat{a}^\dagger\hat{\tilde{a}}^\dagger\ket{0,\tilde{0}}$，以及关系
 $$\hat{\tilde{a}}\hat{a}\hat{a}^\dagger\hat{\tilde{a}}^\dagger\ket{0,\tilde{0}}=\hat{\tilde{a}}\hat{a}\ket{1,\tilde{1}}=-\ket{0,\tilde{0}},\quad \qty(\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^{n+1}\ket{0,\tilde{0}}=0,\quad \cdots,$$
 我们可以得到以下关系
@@ -14240,34 +14241,70 @@ $$\hat{\tilde{a}}\hat{a}\hat{a}^\dagger\hat{\tilde{a}}^\dagger\ket{0,\tilde{0}}=
 这是容易证明的，请读者自行补全。同时对于三角函数我们展开
 $$\cos(x)=\sum_{n=0}^\infty\frac{(-1)^nx^{2n}}{(2n)!},\quad \sin(x)=\sum_{n=0}^\infty\frac{(-1)^nx^{2n+1}}{(2n+1)!},$$
 代入式(\ref{Cqed2de==f})，并将三角函数中的$(-1)^n\ket{0,\tilde{0}}$和$(-1)^{n+1}\ket{1,\tilde{1}}$以关系(\ref{Jiadfge})替换，我们得到
-$$\begin{aligned}&\ket{0,\beta}=\cos(\theta(\beta))\ket{0,\tilde{0}}+\sin(\theta(\beta))\ket{1,\tilde{1}}=\sum_{n=0}^\infty\qty[\frac{\theta^{2n}(-1)^n\ket{0,\tilde{0}}}{(2n)!}-\frac{\theta^{2n+1}(-1)^{n+1}\ket{1,\tilde{1}}}{(2n+1)!}]\\&=\sum_{n=0}^\infty\qty[\frac{\theta^{2n}\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^{2n}}{(2n)!}-\frac{\theta^{2n+1}\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^{2n+1}}{(2n+1)!}]\ket{0,\tilde{0}}=\sum_{n=0}^\infty(-1)^n\frac{\theta^n\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^n}{n!}\ket{0,\tilde{0}},\end{aligned}$$
+$$\begin{aligned}&\ket{0,\beta}=\cos\theta(\beta)\ket{0,\tilde{0}}+\sin\theta(\beta)\ket{1,\tilde{1}}=\sum_{n=0}^\infty\qty[\frac{\theta^{2n}(-1)^n\ket{0,\tilde{0}}}{(2n)!}-\frac{\theta^{2n+1}(-1)^{n+1}\ket{1,\tilde{1}}}{(2n+1)!}]\\&=\sum_{n=0}^\infty\qty[\frac{\theta^{2n}\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^{2n}}{(2n)!}-\frac{\theta^{2n+1}\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^{2n+1}}{(2n+1)!}]\ket{0,\tilde{0}}=\sum_{n=0}^\infty(-1)^n\frac{\theta^n\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^n}{n!}\ket{0,\tilde{0}},\end{aligned}$$
 此求和给出指数算符
 \begin{equation}\sum_{n=0}^\infty(-1)^n\frac{\theta^n\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^n}{n!}=\exp[-\theta(\beta)\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)].\end{equation}
 这个级数的收敛性此处不证明，读者可以参考\cite{xURFgmm}。当然目前这是指数衰减的，为了得到一个幺正算符，我们引入一个\textit{Hermitian}算符
-\begin{equation}\hat{X}(\theta)=i\theta(\beta)\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger),\end{equation}
+\begin{equation}\hat{X}(\theta)=-i\theta(\beta)\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)=\hat{X}^\dagger(\theta),\end{equation}
 则我们就得到自由热真空和零温双真空的转换
-\begin{equation}\ket{0,\beta}=\hat{U}(\beta)\ket{0,\tilde{0}},\quad \hat{U}(\beta)=\exp(i\hat{X}(\theta)).\end{equation}
-其中$\theta(\beta)$由式(\ref{VBTYUJI40})确定，称$\hat{U}(\beta)$为\textbf{热转换算符}。这样，我们就确定了以自由零温双真空表示的自由热真空，它使得我们可以直接从已知的零温自由场，通过加倍真空态并作用$\hat{U}(\beta)$直接得到热场。并且由于零温自由场是时空演化的，因此\textsl{TFD}也直接给出非平衡的演化热场，这比\textsl{CTP}形式要直接的多。\\
+\begin{equation}\ket{0,\beta}=\hat{U}(\beta)\ket{0,\tilde{0}},\quad \hat{U}(\beta)=\exp(-i\hat{X}(\theta)).\end{equation}
+其中$\theta(\beta)$由式(\ref{VBTYUJI40})确定，称$\hat{U}(\beta)$为\textbf{热转换算符}，这是幺正的
+$$\hat{U}^\dagger=\exp(i\hat{X}^\dagger)=\exp(i\hat{X})=\hat{U}^{-1}.$$
+这样，我们就确定了以自由零温双真空表示的自由热真空，它使得我们可以直接从已知的零温自由场，通过加倍真空态并作用$\hat{U}(\beta)$直接得到热场。并且由于零温自由场是时空演化的，因此\textsl{TFD}也直接给出非平衡的演化热场，这比\textsl{CTP}形式要直接的多。\\
 \\
 既然零温态可以通过$\hat{U}(\beta)$给出热态，那自然算符也可以变换。参考绘景变换，我们将$\hat{U}(\beta)$类比演化算符，对于$\mathscr H$上的任意算符$\hat{A}$做变换
-\begin{equation}\hat{A}(\beta)=\hat{U}^{-1}(\beta)\hat{A}\hat{U}(\beta).\end{equation}
-对于湮灭算符$\hat{a}$，考虑到式(\ref{Fcegebb})，我们得到
-$$\qty(\hat{\tilde{a}}\hat{a}-\hat{a}^\dagger\hat{\tilde{a}}^\dagger)^n\hat{a}=,$$
-从而我们得到
-$$\hat{a}(\beta)=\exp(-i\hat{X}(\theta))\hat{a}\exp(i\hat{X}(\theta))=$$
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{equation}\hat{A}(\beta)=\hat{U}^\dagger(\beta)\hat{A}\hat{U}(\beta),\end{equation}
+满足均值的变换
+\begin{equation}\mel**{0,\beta}{\hat{A}}{0,\beta}=\mel**{0,\tilde{0}}{\hat{A}(\beta)}{0,\tilde{0}}.\end{equation}
+不妨称之为\textbf{热动力学绘景}。对于湮灭算符$\hat{a}$，我们展开绘景变换
+$$\hat{a}(\beta)=\qty(1+i\hat{X}-\frac{1}{2}\hat{X}^2+\cdots)\hat{a}\qty(1-i\hat{X}-\frac{1}{2}\hat{X}^2+\cdots).$$
+对于零级近似，我们得到$\hat{a}^{(0)}(\beta)=\hat{a}$，一级修正作用到$\ket{0,\tilde{0}}$上给出
+$$\hat{a}^{(1)}(\beta)\ket{0,\tilde{0}}=i\qty(\hat{X}\hat{a}-\hat{a}\hat{X})\ket{0,\tilde{0}}=i\hat{a}\hat{X}\ket{0,\tilde{0}}=-\theta(\beta)\hat{a}\ket{1,\tilde{1}}=-\theta(\beta)\hat{\tilde{a}}^\dagger\ket{0,\tilde{0}},$$
+其中我们用到式(\ref{Jiadfge})，给出$\hat{X}\ket{0,\tilde{0}}=i\theta(\beta)\ket{1,\tilde{1}}$，于是得到$\hat{a}^{(1)}(\beta)=-\theta(\beta)\hat{\tilde{a}}^\dagger$。对于二级修正，考虑到式(\ref{Fcegebb})，我们得到
+$$\hat{a}^{(2)}(\beta)\ket{0,\tilde{0}}=\qty(\hat{X}\hat{a}\hat{X}-\frac{1}{2}\hat{X}^2\hat{a}-\frac{1}{2}\hat{a}\hat{X}^2)\ket{0,\tilde{0}}=-\frac{1}{2}\theta^2(\beta)\hat{a}\ket{0,\tilde{0}},$$
+则二级近似得到
+\begin{equation}\hat{a}(\beta)=\hat{a}-\theta(\beta)\hat{\tilde{a}}^\dagger-\frac{1}{2}\theta^2(\beta)\hat{a}+\cdots.\end{equation}
+对于高级修正请读者自行计算，最终我们得到
+\begin{equation}\hat{a}(\beta)=\hat{a}\cos\theta(\beta)-\hat{\tilde{a}}^\dagger\sin\theta(\beta).\end{equation}
+类似的，我们计算其余三个占有数算符的变换
+\begin{equation}\begin{aligned}&\hat{\tilde{a}}(\beta)=\hat{\tilde{a}}\cos\theta(\beta)+\hat{a}^\dagger\sin\theta(\beta);\\&\hat{a}^\dagger(\beta)=\hat{a}^\dagger\cos\theta(\beta)-\hat{\tilde{a}}\sin\theta(\beta);\\&\hat{\tilde{a}}^\dagger(\beta)=\hat{\tilde{a}}^\dagger\cos\theta(\beta)+\hat{a}\sin\theta(\beta).\end{aligned}\end{equation}
+这就是\textsl{TFD}的\textsl{Bogoliubov}变换，不妨称为\textbf{热\textsl{Bogoliubov}变换}，因为这些是针对占有数算符的变换，请读者自行验证它们满足费米反对易性，并且容易证明$\ket{0,\beta}$是热动力学绘景的真空
+\begin{equation}\hat{\tilde{a}}(\beta)\ket{0,\beta}=0,\quad \hat{a}(\beta)\ket{0,\beta}=0.\end{equation}
+但需要强调的是，这和我们前文中的\textsl{Bogoliubov}变换均不同。因为前文是为了对角化\textit{Hermitian}算符，而此处则是态变换诱导的算符变换，两者共享一个数学结构，但物理含义不同。进一步考虑矩阵形式，参考式(\ref{namnpp1})引入\textsl{Nambu}基，这里我们将$\tilde{\mathscr H}$类比$-\vb{k}$表象算符
+\begin{equation}\bm{\Psi}=\mqty(\hat{a}\\ \hat{\tilde{a}}^\dagger),\quad \widetilde{\bm{\Psi}}=\mqty(\hat{\tilde{a}}^\dagger\\ \hat{a})\implies \widetilde{\bm{\Psi}}^\dagger=\mqty(\hat{\tilde{a}}& \hat{a}^\dagger),\quad i\hat{X}(\beta)=\theta(\beta)\widetilde{\bm{\Psi}}^\dagger\mqty(\dmat{1,-1})\bm{\Psi},\end{equation}
+其中在形式上定义$\tilde{\mathscr H}$的双重作用为
+\begin{equation}\hat{\tilde{\tilde{a}}}=\hat{a},\label{Frghk}\end{equation}
+则我们得到
+\begin{equation}\bm{\Psi}(\beta)=\mqty(\hat{a}(\beta)\\ \hat{\tilde{a}}^\dagger(\beta))=\mqty(\cos\theta(\beta)&-\sin\theta(\beta)\\ \sin\theta(\beta)&\cos\theta(\beta))\mqty(\hat{a}\\ \hat{\tilde{a}}^\dagger)=\vb{R}(\theta)\bm{\Psi},\quad \widetilde{\bm{\Psi}}(\beta)=\vb{R}^{-1}(\theta)\widetilde{\bm{\Psi}}.\end{equation}
+其中$\vb{R}(\theta)=\displaystyle\mqty(\cos\theta(\beta)&-\sin\theta(\beta)\\ \sin\theta(\beta)&\cos\theta(\beta))$就是通常的旋转矩阵，对比\textsl{Keyldsh}旋转(\ref{haRT455++64sFFG})可以看到，这是热角度$\theta(\beta)=\pi/4$的特殊情形，所以\textsl{CTP}形式形如\textsl{TFD}但不完全一致。我们也可以解释式(\ref{Frghk})的来源，双重$\tilde{\tilde{\cdot}}$可以看作从正分支到反分支再回到正分支，因而相同。\\
+\\
+这样，我们事实上就得到自由热态空间$\mathscr H(\beta)$，通过热动力学绘景的占有数算符可以构造基
+\begin{equation}\tilde{\mathscr H}(\beta)=\text{Span}\qty{\ket{0,\beta},\hat{a}^\dagger(\beta)\ket{0,\beta},\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta},\hat{a}^\dagger(\beta)\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}}.\end{equation}
+其中四个基对应四个自由真空双态(\ref{Raf35h0})，不难看到$\hat{a}^\dagger(\beta)\ket{0,\beta}$就是其中的激发态。对于双态，不难注意到我们有
+\begin{equation}\hat{a}\ket{1,\tilde{1}}=\hat{\tilde{a}}^\dagger\ket{0,\tilde{0}},\quad \hat{a}^\dagger\ket{0,\tilde{0}}=\hat{\tilde{a}}\ket{1,\tilde{1}},\end{equation}
+也就是说湮灭一个处于$\mathscr H$中的粒子，等价与产生一个在$\tilde{\mathscr H}$中的粒子，反之亦然。类似的对于热动力学绘景我们也有
+\begin{equation}\hat{a}(\beta)\hat{a}^\dagger(\beta)\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}=\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta},\quad \hat{a}^\dagger(\beta)\ket{0,\beta}=\hat{\tilde{a}}(\beta)\hat{a}^\dagger(\beta)\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}.\end{equation}
+这是不难验证的，比如第一式
+$$\hat{a}(\beta)\hat{a}^\dagger(\beta)\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}=\qty[1-\hat{a}^\dagger(\beta)\hat{a}(\beta)]\hat{\tilde{a}}^\dagger(\beta)=\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}+\hat{a}^\dagger(\beta)\hat{\tilde{a}}^\dagger(\beta)\hat{a}(\beta)\ket{0,\beta}=\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}.$$
+这说明在自由热态空间$\mathscr H(\beta)$中，粒子的湮灭与产生，和真空双态$\mathscr H\otimes\tilde{\mathscr H}$的情形一样。现在来计算占有数，类似零温场，我们引入自由热态空间的占有数算符
+\begin{equation}\hat{N}(\beta)=\hat{a}^\dagger(\beta)\hat{a}(\beta),\quad \hat{\tilde{N}}(\beta)=\hat{\tilde{a}}^\dagger(\beta)\hat{\tilde{a}}(\beta).\end{equation}
+不难看到
+\begin{equation}\mel**{0,\beta}{\hat{N}(\beta)}{0,\beta}=\mel**{0,\beta}{\hat{\tilde{N}}(\beta)}{0,\beta}=0,\end{equation}
+这是合理的，因为$\ket{0,\beta}$是空间的真空态。为了恢复\textsl{FD}分布，我们考虑将$\hat{N}(\beta)$和$\hat{\tilde{N}}(\beta)$打开回到$\mathscr H$，得到
+$$\begin{aligned}&\hat{N}(\beta)=\hat{n}\cos^2\theta(\beta)+\qty(1-\hat{\tilde{n}})\sin^2\theta(\beta)-\qty(\hat{a}^\dagger\hat{\tilde{a}}^\dagger+\hat{\tilde{a}}\hat{a})\cos\theta(\beta)\sin\theta(\beta),\\& \hat{\tilde{N}}(\beta)=\hat{\tilde{n}}\cos^2\theta(\beta)+\qty(1-\hat{n})\sin^2\theta(\beta)-\qty(\hat{a}^\dagger\hat{\tilde{a}}^\dagger+\hat{\tilde{a}}\hat{a})\cos\theta(\beta)\sin\theta(\beta).\end{aligned}$$
+两式相减，得到
+\begin{equation}\hat{N}(\beta)-\hat{\tilde{N}}(\beta)=\hat{n}-\hat{\tilde{n}},\end{equation}
+从而我们立马得到$\mel**{0,\beta}{\hat{n}}{0,\beta}=\mel**{0,\beta}{\hat{\tilde{n}}}{0,\beta}$。同时还能注意到，$\mathscr H(\beta)$中的\textit{Hamiltonian}可以写作
+\begin{equation}\hat{H}(\beta)=\omega\qty[\hat{N}(\beta)-\hat{\tilde{N}}(\beta)]=\hat{H}-\hat{\tilde{H}},\end{equation}
+容易验证$\tilde{\mathscr H}(\beta)$中的热态是$\hat{H}(\beta)$的本征态，若只用$\hat{N}(\beta)$则$\hat{\tilde{a}}^\dagger(\beta)\ket{0,\beta}$不能顾及到，反之亦然。再计算额外项$\hat{a}^\dagger\hat{\tilde{a}}^\dagger+\hat{\tilde{a}}\hat{a}$的热真空均值
+$$\begin{aligned}\mel**{0,\beta}{\hat{a}^\dagger\hat{\tilde{a}}^\dagger+\hat{\tilde{a}}\hat{a}}{0,\beta}&=\mel**{0,\tilde{0}}{\hat{U}^\dagger(\theta)\qty(\hat{a}^\dagger\hat{\tilde{a}}^\dagger+\hat{\tilde{a}}\hat{a})\hat{U}(\theta)}{0,\tilde{0}}\\&=\mel**{0,\tilde{0}}{\widetilde{\bm{\Psi}}^\dagger(\beta)\bm{\Psi}(\beta)}{0,\tilde{0}}=2\cos\theta(\beta)\sin\theta(\beta),\end{aligned}$$
+简记$\mel**{0,\beta}{\hat{n}(\beta)}{0,\beta}=n(\beta)$，则$\hat{N}(\beta)$的真空均值给出
+$$\mel**{0,\beta}{\hat{N}(\beta)}{0,\beta}=n(\beta)\cos^2\theta(\beta)+\qty(1-n(\beta))\sin^2\theta(\beta)-2\cos^2\theta(\beta)\sin^2\theta(\beta)=0.$$
+这样最终我们得到
+\begin{equation}n(\beta)=\frac{2\cos^2\theta(\beta)\sin^2\theta(\beta)-\sin^2\theta(\beta)}{\cos^2\theta(\beta)-\sin^2\theta(\beta)}=\sin^2\theta(\beta),\end{equation}
+其中正弦值由式(\ref{VBTYUJI40})确定，也就是\textsl{FD}分布。因此通过热\textsl{Bogoliubov}变换，我们可以从热态空间出发，通过真空反推场的热统计性质，并且我们看到热激发态是独立于统计出现的，因此可以自然的将\textsl{TFD}推广到非平衡情形。关于玻色子请参见第\ref{DFR4feg}节，非平衡参见第\ref{DrtR4feeg}节，这里就不介绍了。\\
+\\
+下面我们考察，相互作用费米子的\textsl{TFD}表述。
 
 
 
@@ -14430,8 +14467,9 @@ $$h^{}_\omega=\varphi^{}_\omega x^{}_\omega=\varphi^{}_\omega \alpha^{}_\omega h
 \subsection{耗散的统计性质}\label{Vnh.,.,789}
 \subsection{零温场的响应}
 \subsection{热场的响应与耗散}
+\subsubsection{玻色子的热场动力学}\label{DFR4feg}
 \subsubsection{波函数场的热场动力学}
-\subsubsection{非平衡热场动力学和耗散}
+\subsubsection{非平衡热场动力学和耗散}\label{DrtR4feeg}
 \subsection{线性响应下的输运系数}
 \subsection{临界点附近的响应发散}
 \clearpage
